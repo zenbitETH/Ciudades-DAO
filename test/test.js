@@ -1,11 +1,8 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
-const { abi: abiDai } = require("../artifacts/contracts/Dai.sol/Dai.json");
+const { abi: abiComp } = require("../artifacts/contracts/Comp.sol/Comp.json");
+const { abi: abiGov } = require("../artifacts/contracts/GovernorBravoDelegate.sol/GovernorBravoDelegate.json");
 const fs = require("fs"); 
-
-function mnemonic() {
-  return fs.readFileSync("./test/mnemonic.txt").toString().trim();
-}
 
 //make sure you've switched defaultnetwork to Kovan and put a mnemonic.txt file in the test folder
 describe("Cities-Protocol Governance v1", function () {
@@ -16,18 +13,19 @@ describe("Cities-Protocol Governance v1", function () {
     overrides = {
         gasLimit: ethers.BigNumber.from("10000000"),
       };
+    
+    // Define Variables
+    const privateKey = '0x2c9aac9e06153f0507f60f8f138adc2af20d4035dff44c597decceff3998466d';
 
-    provider = new ethers.providers.InfuraProvider("kovan", {
-        projectId: "faefe1dcd6094fb388019173d2328d8f",
-        projectSecret: "dffad28934914b97a5365fa0c2eb9de6"
-      });
+    // Define Provider
+    const provider = new ethers.providers.JsonRpcProvider('http://eth-global-10.skalenodes.com:10323/');
 
-    main = ethers.Wallet.fromMnemonic(mnemonic()); 
-    main = await main.connect(provider);
+    // Create Wallet
+    main = new ethers.Wallet(privateKey, provider);
     
     taro = new ethers.Contract(
         "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD", //set on deploy
-        abiDai,
+        abiComp,
         main) 
     
     governance = new ethers.Contract(
@@ -37,21 +35,25 @@ describe("Cities-Protocol Governance v1", function () {
   })
 
   it("deploy governance and taro", async () => {
-    const Dai = await ethers.getContractFactory(
-       "Dai"
+    const Taro = await ethers.getContractFactory(
+       "Comp"
      );
-     taro = await Dai.connect(main).deploy(ethers.BigNumber.from((10**24).toLocaleString('fullwide', {useGrouping:false}))); //1,000,000 taro, with 18 decimals. 
-     await taro.deployed()
-     console.log("taro Address: ", taro.address)
-     taroAddress=taro.address
-
+    taro = await Taro.connect(main).deploy(main.getAddress()); //mints full supply to deployer
+    await taro.deployed()
+    console.log("taro Address: ", taro.address)
+    taroAddress=taro.address
+  
     const Governance = await ethers.getContractFactory(
-      "Dai"
+      "GovernorBravoDelegate"
     );
     governance = await Governance.connect(main).deploy();  
     await governance.deployed()
     console.log("governance Address: ", governance.address)
     governanceAddress=governance.address
   });
-  
-}
+
+  xit("initialize governance",async () => {
+    init_tx = governance.connect(main).init(0,taroAddress,ethers.BigNumber.from(80640),ethers.BigNumber.from(40320),ethers.BigNumber.from(100000e18))
+    await init_tx.wait(1)
+  })
+});
