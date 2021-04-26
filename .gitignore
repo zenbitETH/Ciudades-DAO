@@ -1,0 +1,6 @@
+node_modules
+mnemonic.txt
+
+#Hardhat files
+cache
+artifacts
