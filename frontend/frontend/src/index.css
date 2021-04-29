@@ -59,11 +59,12 @@ button:disabled {
   width:100%;
   max-width: 450px;
   margin: 3% auto;
-  background-image: linear-gradient(#eee, #ccc);
+  background-image: linear-gradient(#3d386b, #3d386b);
   justify-content: center !important;
   align-content: center !important;
   align-items: center !important;
-  color: #3d386b !important;
+  color: #ffffff !important;
+  text-align: left !important;
 }
 
 .leaderboard {
@@ -79,7 +80,7 @@ align-items: center !important;
 
 .list-group-item {
   color: white;
-  background-image: linear-gradient(#3d386b, #000000)!important;
+  background-image: linear-gradient(#3d386b, #242044)!important;
   width:100%;
   max-width: 450px;
   margin: 0% auto;
@@ -112,5 +113,11 @@ align-items: center !important;
 
 .orange{
   color: #FF9400;
+  
+}
+
+.white{
+  color: #ffffff !important;
+  text-align: center !important;
   
 }
