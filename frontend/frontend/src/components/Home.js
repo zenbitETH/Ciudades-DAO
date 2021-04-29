@@ -153,10 +153,10 @@ function Home() {
           </Card>
                 <Card className="gray">
                 <Card.Title className="text-large">Locked</Card.Title>
-                  <Card.Body className="item3">
+                  <Card.Body>
                     <div>
-                      <Card.Text className="text-large">-</Card.Text>
                       <Card.Text>Proposals</Card.Text>
+                      <Card.Text className="text-large">-</Card.Text>
                     </div> 
                      <Button disabled block>Vote</Button>
                   </Card.Body>
@@ -165,11 +165,21 @@ function Home() {
                     <ListGroup.Item className="title">TARO Leadeboard</ListGroup.Item>
                     <div className="item">
                       <ListGroup.Item >0xabc...1234</ListGroup.Item>
+                      <ListGroup.Item className="orange">2100 TARO</ListGroup.Item>
+                    </div>
+                    <div className="item">
+                      <ListGroup.Item >0xcba...4321</ListGroup.Item>
+                      <ListGroup.Item className="orange">1300 TARO</ListGroup.Item>
+                    </div>
+                    <div className="item">
+                      <ListGroup.Item >0xazb...9876</ListGroup.Item>
                       <ListGroup.Item className="orange">300 TARO</ListGroup.Item>
                     </div>
-                    <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                    <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                    <div className="item">
+                      <ListGroup.Item >0xbaz...3895</ListGroup.Item>
+                      <ListGroup.Item className="orange">100 TARO</ListGroup.Item>
+                    </div>
+                    <ListGroup.Item className="title2">View All</ListGroup.Item>
                   </ListGroup>
       </div>
 
