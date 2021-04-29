@@ -153,19 +153,13 @@ function Home() {
           </Card>
                 <Card className="gray">
                 <Card.Title className="text-large">Locked</Card.Title>
-                
-                   <Card.Body className="item2">
-                    <div><Card.Text className="text-large">
-                     -
-                    </Card.Text>
-                   
-                    <Card.Text>
-                      Proposals
-                    </Card.Text>
+                  <Card.Body className="item3">
+                    <div>
+                      <Card.Text className="text-large">-</Card.Text>
+                      <Card.Text>Proposals</Card.Text>
                     </div> 
                      <Button disabled block>Vote</Button>
                   </Card.Body>
-                 
                 </Card>
                   <ListGroup className="leaderboard">
                     <ListGroup.Item className="title">TARO Leadeboard</ListGroup.Item>
