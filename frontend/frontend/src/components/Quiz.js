@@ -105,7 +105,7 @@ const Quiz = () => {
     <div className="App" >
       
       <div className="gray2">
-      <text>Quiz</text>
+      <text className="white">Quiz</text>
         <div>
           <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
           <div>{questions}</div>
