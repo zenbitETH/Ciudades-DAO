@@ -104,8 +104,9 @@ const Quiz = () => {
   return (
     <div className="App" >
       <div className="gray">
+        <title>Quizz</title>
         <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
-        <div className="">{questions}</div>
+        <div>{questions}</div>
         </QuizContext.Provider>
       </div>
       <Button className="Wallet" onSubmit={handleOnSubmitAnswers}>Submit your answers</Button>
