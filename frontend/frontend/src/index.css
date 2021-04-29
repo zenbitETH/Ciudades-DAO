@@ -54,6 +54,18 @@ button:disabled {
   color: #3d386b !important;
 }
 
+.gray2 {
+  border-radius: 25px;
+  width:100%;
+  max-width: 450px;
+  margin: 3% auto;
+  background-image: linear-gradient(#eee, #ccc);
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  color: #3d386b !important;
+}
+
 .leaderboard {
 border-radius: 25px;
 width:100%;
