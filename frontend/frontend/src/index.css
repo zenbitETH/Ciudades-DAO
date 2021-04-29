@@ -63,7 +63,6 @@ display: flex !important;
 justify-content: center !important;
 align-content: center !important;
 align-items: center !important;
-
 }
 
 .list-group-item {
@@ -101,4 +100,5 @@ align-items: center !important;
 
 .orange{
   color: #FF9400;
+  
 }

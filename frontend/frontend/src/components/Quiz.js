@@ -77,7 +77,7 @@ const Quiz = () => {
   };
 
   const questions = quizQuestions.map((q, i) => (
-    <Question
+    <Question 
       key={q.question.toString()}
       question={q.question}
       answers={q.answers}
@@ -102,13 +102,13 @@ const Quiz = () => {
   };
 
   return (
-    <div className="app">
+    <div className="App" >
       <div className="gray">
         <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
-        <div>{questions}</div>
+        <div className="">{questions}</div>
         </QuizContext.Provider>
       </div>
-      <Button onSubmit={handleOnSubmitAnswers}>Submit your answers</Button>
+      <Button className="Wallet" onSubmit={handleOnSubmitAnswers}>Submit your answers</Button>
       <QuizFailureModal
         show={failureModalShow}
         onHide={handleOnFailure}
