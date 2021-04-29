@@ -130,9 +130,13 @@ function Home() {
         </div>
           <Card className="gray">
           <Card.Title className="text-large">Locked</Card.Title>
-              <Card.Body>
+              <div className="item2">
+                <Card.Body>
                 <Card.Text>
                   TARO in wallet
+                </Card.Text>
+                <Card.Text className="text-large">
+                  -
                 </Card.Text>
                 <Button disabled block>Get Tokens</Button>
               </Card.Body>
@@ -140,21 +144,35 @@ function Home() {
                 <Card.Text>
                   Delegated TARO
                 </Card.Text>
+                <Card.Text className="text-large">
+                  -
+                </Card.Text>
                 <Button disabled block>Delegate Tokens</Button>
               </Card.Body>
+              </div>
           </Card>
-                <Card className="gray ">
-                  <Card.Body>
+                <Card className="gray">
+                <Card.Title className="text-large">Locked</Card.Title>
+                
+                   <Card.Body className="item2">
+                    <div><Card.Text className="text-large">
+                     -
+                    </Card.Text>
+                   
                     <Card.Text>
                       Proposals
                     </Card.Text>
-                    <Card.Title className="text-large">Locked</Card.Title>
-                    <Button disabled block>Vote</Button>
+                    </div> 
+                     <Button disabled block>Vote</Button>
                   </Card.Body>
+                 
                 </Card>
-                  <ListGroup>
-                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                  <ListGroup className="leaderboard">
+                    <ListGroup.Item className="title">TARO Leadeboard</ListGroup.Item>
+                    <div className="item">
+                      <ListGroup.Item >0xabc...1234</ListGroup.Item>
+                      <ListGroup.Item className="orange">300 TARO</ListGroup.Item>
+                    </div>
                     <ListGroup.Item>Morbi leo risus</ListGroup.Item>
                     <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
                     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>

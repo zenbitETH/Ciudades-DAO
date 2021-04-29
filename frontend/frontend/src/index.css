@@ -39,6 +39,7 @@ button:disabled {
 .text-large {
   font-size: 2rem !important;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 .gray {
   border-radius: 25px;
@@ -68,4 +69,31 @@ align-items: center !important;
 .list-group-item {
   color: white;
   background-image: linear-gradient(#3d386b, #000000)!important;
+  width:100%;
+  max-width: 450px;
+  margin: 0% auto;
+}
+
+.title {
+  color: #3d386b;
+  font-size: 2rem !important;
+  background-image: linear-gradient(#FF9400, #FAC91A)!important;
+}
+
+.item {
+  display: flex;
+  overflow: auto;
+  width:100%;
+}
+
+.item2 {
+  display: flex;
+  overflow: auto;
+  margin-top: 5% auto;
+  width:100%;
+  min-height: 150px;
+}
+
+.orange{
+  color: #FF9400;
 }
