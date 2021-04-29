@@ -97,7 +97,6 @@ align-items: center !important;
 .item3 {
   display: flex;
   overflow: auto;
-  margin-left: 4% auto;
   width: 50%;
   justify-content: center !important;
   align-content: center !important;
