@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+.App {
+  background-color: #ffffff;
+  font-family: 'Lexend Deca', sans-serif;
+  text-align: center;
+  color: #FF9400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar { 
+  background-color: #F2F2F2;
+  font-family: 'Lexend Deca', sans-serif;
+  color: #3d386b;
+}
+
+main {
+  margin: 2em;
+}
+
+Button {
+  background-color: #FF9400  !important;
+  border: none !important;
+}
+
+button:disabled {
+  background-color: #ccc !important;
+  color: #777 !important;
+}
+
+.text-large {
+  font-size: 2rem !important;
+}
+.gray {
+  background-color: #eee !important;
+}
+
+.list-group-item {
+  background-color: #3D386B !important;
+  color: white;
+}
