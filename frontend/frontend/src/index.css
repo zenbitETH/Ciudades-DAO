@@ -7,7 +7,6 @@
   color: #FF9400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 50px;
 }
 
 .navbar { 
@@ -37,16 +36,15 @@ button:disabled {
   color: #cac9c9 !important;
 }
 
-
 .text-large {
   font-size: 2rem !important;
   margin-top: 5%;
 }
 .gray {
   border-radius: 25px;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-bottom: 3%;
+  width:100%;
+  max-width: 450px;
+  margin: 3% auto;
   background-image: linear-gradient(#eee, #ccc);
   display: flex !important;
   justify-content: center !important;
@@ -55,7 +53,19 @@ button:disabled {
   color: #3d386b !important;
 }
 
+.leaderboard {
+border-radius: 25px;
+width:100%;
+max-width: 450px;
+margin: 3% auto;
+display: flex !important;
+justify-content: center !important;
+align-content: center !important;
+align-items: center !important;
+
+}
+
 .list-group-item {
-  background-color: #3D386B !important;
   color: white;
+  background-image: linear-gradient(#3d386b, #000000)!important;
 }
