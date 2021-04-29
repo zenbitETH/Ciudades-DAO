@@ -80,6 +80,11 @@ align-items: center !important;
   background-image: linear-gradient(#FF9400, #FAC91A)!important;
 }
 
+.title2 {
+  color: #3d386b;
+  background-image: linear-gradient(#FAC91a, #FF9400)!important;
+}
+
 .item {
   display: flex;
   overflow: auto;
