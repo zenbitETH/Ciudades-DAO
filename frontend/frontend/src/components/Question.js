@@ -24,9 +24,9 @@ const Question = ({question, answers, number}) => {
 ))
 
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card>
       <Card.Body>
-        <Card.Title>{question}</Card.Title>
+        <Card.Title className="orange">{question}</Card.Title>
         {answer}
       </Card.Body>
     </Card>
