@@ -102,12 +102,12 @@ const Quiz = () => {
   };
 
   return (
-    <div className="gray">
-      <QuizContext.Provider value={{userAnswers, setUserAnswers}}>
-        <div>
-          {questions}
-        </div>
-      </QuizContext.Provider>
+    <div>
+      <div className="gray">
+        <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
+        <div>{questions}</div>
+        </QuizContext.Provider>
+      </div>
       <Button onSubmit={handleOnSubmitAnswers}>Submit your answers</Button>
       <QuizFailureModal
         show={failureModalShow}
@@ -126,6 +126,9 @@ const Quiz = () => {
         onHide={handleOnLoadingModal}
       />
     </div>
+    
+      
+
   );
 };
 
