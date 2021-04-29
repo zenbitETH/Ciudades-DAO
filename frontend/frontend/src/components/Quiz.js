@@ -102,7 +102,7 @@ const Quiz = () => {
   };
 
   return (
-    <div>
+    <div className="app">
       <div className="gray">
         <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
         <div>{questions}</div>
