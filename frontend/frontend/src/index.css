@@ -19,9 +19,15 @@ main {
   margin: 2em;
 }
 
+.Wallet {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 Button {
   background-color: #FF9400  !important;
   border: none !important;
+  color: #3d386b ;
 }
 
 button:disabled {
@@ -29,11 +35,14 @@ button:disabled {
   color: #777 !important;
 }
 
+
 .text-large {
   font-size: 2rem !important;
 }
 .gray {
   background-color: #eee !important;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .list-group-item {
