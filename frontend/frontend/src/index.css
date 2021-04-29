@@ -119,5 +119,7 @@ align-items: center !important;
 .white{
   color: #ffffff !important;
   text-align: center !important;
-  
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
 }
