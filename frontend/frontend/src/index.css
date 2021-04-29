@@ -94,6 +94,17 @@ align-items: center !important;
   min-height: 150px;
 }
 
+.item3 {
+  display: flex;
+  overflow: auto;
+  margin-left: 4% auto;
+  width: 50%;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  min-height: auto;
+}
+
 .orange{
   color: #FF9400;
 }
