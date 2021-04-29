@@ -128,19 +128,22 @@ function Home() {
               : <ConnectButton handleOnConnect={handleOnConnect}/>
         }
         </div>
-          <Card className="gray mb-4">
-                  <Card.Body>
-                    <Card.Text>
-                      TARO in wallet
-                    </Card.Text>
-                    <Card.Title className="text-large">Locked</Card.Title>
-                    <Card.Text>
-                      TARO to harvest
-                    </Card.Text>
-                    <Button disabled block>Claim Tokens</Button>
-                  </Card.Body>
-                </Card>
-                <Card className="gray mb-4">
+          <Card className="gray">
+          <Card.Title className="text-large">Locked</Card.Title>
+              <Card.Body>
+                <Card.Text>
+                  TARO in wallet
+                </Card.Text>
+                <Button disabled block>Get Tokens</Button>
+              </Card.Body>
+              <Card.Body>
+                <Card.Text>
+                  Delegated TARO
+                </Card.Text>
+                <Button disabled block>Delegate Tokens</Button>
+              </Card.Body>
+          </Card>
+                <Card className="gray ">
                   <Card.Body>
                     <Card.Text>
                       Proposals
