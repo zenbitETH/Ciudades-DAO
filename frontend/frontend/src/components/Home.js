@@ -117,7 +117,7 @@ function Home() {
 
   return (
       <div className="App">
-        {!isMetamastInstalled
+        <div className="Wallet">{!isMetamastInstalled
           ?
             <InstallMetamaskAlert />
           :
@@ -127,7 +127,7 @@ function Home() {
               ? <ConnectingButton />
               : <ConnectButton handleOnConnect={handleOnConnect}/>
         }
-
+        </div>
           <Card className="gray mb-4">
                   <Card.Body>
                     <Card.Text>
