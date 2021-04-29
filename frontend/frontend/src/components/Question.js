@@ -24,7 +24,7 @@ const Question = ({question, answers, number}) => {
 ))
 
   return (
-    <Card>
+    <Card className="list-group-item">
       <Card.Body>
         <Card.Title className="orange">{question}</Card.Title>
         {answer}
