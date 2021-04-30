@@ -11,11 +11,11 @@ import IsLoadingModal from '../modals/IsLoadingModal';
 const Quiz = () => {
   let [userAnswers, setUserAnswers] = useState([]);
   let [checkedAnswers, setCheckedAnswers] = useState([]);
-  let [failureModalShow, setFailureModalShow] = useState(false);
-  let [successModalShow, setSuccessModalShow] = useState(false);
-  let [loadingModalShow, setLoadingModalShow] = useState();
-  let [alreadySubmittedModal, setAlreadSubmittedModal] = useState(false);
-  let [hasSubmitted, setHasSubmitted] = useState(false);
+  let [failureModalShow, setFailureModalShow] = useState(true);
+  let [successModalShow, setSuccessModalShow] = useState(true);
+  let [loadingModalShow, setLoadingModalShow] = useState(true);
+  let [alreadySubmittedModal, setAlreadSubmittedModal] = useState(true);
+  let [hasSubmitted, setHasSubmitted] = useState();
 
   const handleOnSubmitAnswers = async e => {
     e.preventDefault();
@@ -130,9 +130,6 @@ const Quiz = () => {
         onHide={handleOnLoadingModal}
       />
     </div>
-    
-      
-
   );
 };
 
