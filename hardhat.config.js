@@ -1,5 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
+require('dotenv').config()
 const fs = require("fs");
 
 const defaultNetwork = "kovan"; 
@@ -84,10 +85,12 @@ module.exports = {
     tests: "./test",
     cache: "./cache",
     artifacts: "./artifacts"
+  
   },
   mocha: {
     timeout: 10000000
   }
+  
 };
 
 
