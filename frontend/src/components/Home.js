@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { ethers } from 'ethers';
 import {Card, Button, ListGroup} from 'react-bootstrap';
@@ -6,6 +6,9 @@ import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import InstallMetamaskAlert from './InstallMetamaskAlert';
 import '../styles/Home.css';
+import { TaroSimpleContext } from '../contexts/TaroSimpleContext';
+import TaroSimple from '../contracts/contracts/TaroSimple.sol/TaroSimple.json';
+import LeaderBoard from './LeaderBoard';
 
 
 function Home() {
@@ -16,6 +19,8 @@ function Home() {
   let [isConnecting, setIsConnecting] = useState();
   let [isMetamastInstalled, setIsMetamaskInstalled] = useState();
   let [currentMetaMaskAccount, setCurrentMetaMaskAccount] = useState(null);
+
+  let {setTaroSimple} = useContext(TaroSimpleContext);
 
   useEffect(() => {
     const init = async () => {
@@ -66,6 +71,15 @@ function Home() {
 
           let signer = await _ethersProvider.getSigner();
           setEthersSigner(signer);
+
+          let taroSimple = new ethers.Contract(
+            '0xC7b3af5cfB93B9f7E669cB5a98B609645c3A6186',
+            TaroSimple.abi,
+            signer
+          );
+          setTaroSimple(taroSimple);
+
+          console.log(taroSimple);
         } catch (error) {
           console.error(error);
         };
@@ -159,26 +173,7 @@ function Home() {
                      <Button disabled block>Vote</Button>
                   </Card.Body>
                 </Card>
-                  <ListGroup className="leaderboard">
-                    <ListGroup.Item className="title">TARO Leadeboard</ListGroup.Item>
-                    <div className="item">
-                      <ListGroup.Item >0xabc...1234</ListGroup.Item>
-                      <ListGroup.Item className="orange">2100 TARO</ListGroup.Item>
-                    </div>
-                    <div className="item">
-                      <ListGroup.Item >0xcba...4321</ListGroup.Item>
-                      <ListGroup.Item className="orange">1300 TARO</ListGroup.Item>
-                    </div>
-                    <div className="item">
-                      <ListGroup.Item >0xazb...9876</ListGroup.Item>
-                      <ListGroup.Item className="orange">300 TARO</ListGroup.Item>
-                    </div>
-                    <div className="item">
-                      <ListGroup.Item >0xbaz...3895</ListGroup.Item>
-                      <ListGroup.Item className="orange">100 TARO</ListGroup.Item>
-                    </div>
-                    <ListGroup.Item className="title2">View All</ListGroup.Item>
-                  </ListGroup>
+                <LeaderBoard className="leaderboard"/>
       </div>
 
   );
