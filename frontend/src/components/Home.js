@@ -124,8 +124,7 @@ function Home() {
             ? ''
             : isConnecting
               ? <ConnectingButton />
-              : <ConnectButton handleOnConnect={handleOnConnect}/>
-        }
+              : <ConnectButton handleOnConnect={handleOnConnect}/>}
         </div>
           <Card className="gray">
           <Card.Title className="text-large">Locked</Card.Title>
