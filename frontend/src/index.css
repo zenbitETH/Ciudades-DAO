@@ -23,8 +23,6 @@ main {
   border-radius: 25px !important;
   margin-top: 1%;
   margin-bottom: 1%;
-  border: none !important;
-  background-color: #FF9400 !important;
 }
 
 Button {
