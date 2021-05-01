@@ -7,7 +7,8 @@ contract GovernorAlpha {
 
     /// @notice The number of votes in support of a proposal required in order for a quorum to be reached and for a vote to succeed
     function quorumVotes() public pure returns (uint256) {
-        return 400000e18;
+        return 1e18;
+        // return 400000e18;
     } // 400,000 = 4% of Comp
 
     /// @notice The number of votes required in order for a voter to become a proposer
@@ -27,7 +28,8 @@ contract GovernorAlpha {
 
     /// @notice The duration of voting on a proposal, in blocks
     function votingPeriod() public pure returns (uint256) {
-        return 17280;
+        return 3; //3 blocks
+        // return 17280;
     } // ~3 days in blocks (assuming 15s blocks)
 
     /// @notice The address of the Compound Protocol Timelock
@@ -158,11 +160,11 @@ contract GovernorAlpha {
         bytes[] memory calldatas,
         string memory description
     ) public returns (uint256) {
-        require(
-            comp.getPriorVotes(msg.sender, sub256(block.number, 1)) >
-                proposalThreshold(),
-            "GovernorAlpha::propose: proposer votes below proposal threshold"
-        );
+        // require(
+        //     comp.getPriorVotes(msg.sender, sub256(block.number, 1)) >
+        //         proposalThreshold(),
+        //     "GovernorAlpha::propose: proposer votes below proposal threshold"
+        // );
         require(
             targets.length == values.length &&
                 targets.length == signatures.length &&
