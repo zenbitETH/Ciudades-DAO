@@ -11,13 +11,13 @@ const About = () => {
         <div className="main">
           Protocolo para digitalizar la gobernanza urbana mediante interacciones con la moneda digital de la ciudad de Querétaro: TARO.
         </div>
-        <div className="text-large">
+        <div className="purple">
           1 ✋ Propon 
         </div>
-        <div className="text-large">
+        <div className="purple">
           2 🗳️ Vota
         </div>
-        <div className="text-large">
+        <div className="purple">
           3 🥇 Obtén TARO
         </div>
         <div className="main">
@@ -75,12 +75,12 @@ const About = () => {
       </div>
       <div className="gray3">    
         <div className="orange">
-          ¿Vives en Querétaro? Compruebalo y obtén TARO 
+          ¿Vives en Querétaro? pruebalo y obtén 100 TARO 
         </div>
-        <div>
+        <div className="main">
           Contesta este cuestionario para verififcar que eres queretano y recibe hasta 100 TARO para votar por las propuestas.
         </div>
-        <Button className="Quiz" href="/quiz" >Take the Queretaro quiz</Button>
+        <Button className="Quiz" href="/quiz" >Verificar Queretan@</Button>
       </div> 
     </div>
   );
