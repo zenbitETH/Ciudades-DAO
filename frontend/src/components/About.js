@@ -6,9 +6,9 @@ const About = () => {
     <div className="App2">
       <div className="gray3">
         <div>
-          <img className="app" src={logo} alt="VoTARO" width="250px" />
+          <img className="text-large" src={logo} alt="VoTARO" width="250px" />
         </div>
-        <div className="app">
+        <div className="App">
           Protocolo para digitalizar la gobernanza urbana mediante interacciones gamificadas en blockchain.
         </div>
         <div className="text-large-left">
