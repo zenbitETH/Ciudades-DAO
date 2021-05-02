@@ -25,10 +25,6 @@
 
 main {
   margin: 2em;
-  text-align: center;
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
 }
 
 .Wallet {
@@ -65,7 +61,7 @@ button:disabled {
 
 .text-large-left {
   font-size: 2rem !important;
-  justify-self: left !important;
+  text-align: left !important;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -102,9 +98,9 @@ button:disabled {
   max-width: 450px;
   margin: 3% auto;
   background-image: linear-gradient(#eee, #ccc);
-  justify-content: left !important;
-  align-content: left !important;
-  align-items: left !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
   color: #3d386b !important;
 }
 
@@ -153,8 +149,8 @@ align-items: center !important;
 }
 
 .orange{
+  font-size: 2rem !important;
   color: #FF9400;
-  
 }
 
 .white{
