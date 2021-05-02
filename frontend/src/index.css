@@ -3,7 +3,7 @@
 .App {
   background-color: #ffffff;
   font-family: 'Lexend Deca', sans-serif;
-  text-align: center !important;
+  text-align: center;
   color: #FF9400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,6 +25,10 @@
 
 main {
   margin: 2em;
+  text-align: center;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
 }
 
 .Wallet {
@@ -55,9 +59,6 @@ button:disabled {
 
 .text-large {
   font-size: 2rem !important;
-  text-align: center !important;
-  justify-content: center !important;
-  align-content: center !important;
   margin-top: 5%;
   margin-bottom: 5%;
 }
