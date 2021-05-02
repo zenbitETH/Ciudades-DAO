@@ -19,7 +19,7 @@
   text-align: justify;
   text-justify: inter-word;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 15px;
 }
 
 .Wallet {
@@ -104,6 +104,7 @@ button:disabled {
   max-width: 450px;
   margin: 3% auto;
   padding-top: 1%;
+  padding-bottom: 1%;
   background-image: linear-gradient(#eee, #ccc);
   justify-content: center !important;
   align-content: center !important;
@@ -156,7 +157,7 @@ align-items: center !important;
 }
 
 .orange {
-  margin-top: 3%;
+  margin-top: 1%;
   font-size: 2rem !important;
   color: #FF9400;
 }
