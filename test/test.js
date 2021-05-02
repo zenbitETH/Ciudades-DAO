@@ -43,43 +43,35 @@ describe("Cities-Protocol Governance v1", function () {
     //was there anything else to setup here? lol
 
     // console.log(ethers.utils.parseUnits("100",18).toString())
-
-    const Igreeter = new ethers.utils.Interface(abiGreeter)
-    console.log(Igreeter.functions)
-
-    const calldata = Igreeter.functions.greet.encode()
-    console.log(calldata)
-
-    //need to get sig too, then fine. 
   })
 
-  xit("deploy governance and taro", async () => {
-    const Taro = await ethers.getContractFactory(
-       "Comp"
-     );
-    taro = await Taro.connect(main).deploy(main.getAddress()); //mints full supply to deployer
-    await taro.deployed()
-    console.log("taro Address: ", taro.address)
-    taroAddress=taro.address
+  it("deploy governance and taro", async () => {
+    // const Taro = await ethers.getContractFactory(
+    //    "Comp"
+    //  );
+    // taro = await Taro.connect(main).deploy(main.getAddress()); //mints full supply to deployer
+    // await taro.deployed()
+    // console.log("taro Address: ", taro.address)
+    // taroAddress=taro.address
 
-    // tx = await taro.connect(main).approve(user1.getAddress(),ethers.BigNumber.from("1000"))
-    // console.log(tx)
+    // // tx = await taro.connect(main).approve(user1.getAddress(),ethers.BigNumber.from("1000"))
+    // // console.log(tx)
 
-    const Timelock = await ethers.getContractFactory(
-      "Timelock"
-    );
-    timelock = await Timelock.connect(main).deploy(main.getAddress(), ethers.BigNumber.from("0")); //minimum delay is 0
-    await timelock.deployed()
-    console.log("timelock Address: ", timelock.address)
-    timelockAddress=timelock.address
+    // const Timelock = await ethers.getContractFactory(
+    //   "Timelock"
+    // );
+    // timelock = await Timelock.connect(main).deploy(main.getAddress(), ethers.BigNumber.from("0")); //minimum delay is 0
+    // await timelock.deployed()
+    // console.log("timelock Address: ", timelock.address)
+    // timelockAddress=timelock.address
   
-    const Governance = await ethers.getContractFactory(
-      "GovernorAlpha"
-    );
-    governance = await Governance.connect(main).deploy(timelock.address,taro.address,main.getAddress());  
-    await governance.deployed()
-    console.log("governance Address: ", governance.address)
-    governanceAddress=governance.address
+    // const Governance = await ethers.getContractFactory(
+    //   "GovernorAlpha"
+    // );
+    // governance = await Governance.connect(main).deploy(timelock.address,taro.address,main.getAddress());  
+    // await governance.deployed()
+    // console.log("governance Address: ", governance.address)
+    // governanceAddress=governance.address
 
     //this is contract we want to execute transaction on
     const Greeter = await ethers.getContractFactory(
@@ -89,6 +81,35 @@ describe("Cities-Protocol Governance v1", function () {
     await greeter.deployed()
     console.log("greeter Address: ", greeter.address)
     greeterAddress=greeter.address
+
+    const Igreeter = new ethers.utils.Interface(abiGreeter)
+    console.log(Igreeter.functions)
+
+    const calldata = Igreeter.encodeFunctionData("setGreeting",["goodbye"])
+    // console.log(calldata)
+
+    tx = {
+      to: greeterAddress,
+      value: 0,
+      data: calldata
+    }
+
+    const types = {
+      Person: [
+          { name: 'name', type: 'string' },
+          { name: 'wallet', type: 'address' }
+      ],
+      Mail: [
+          { name: 'from', type: 'Person' },
+          { name: 'to', type: 'Person' },
+          { name: 'contents', type: 'string' }
+      ]
+    };
+
+    const signed = await main._signTypedData({},types,tx)
+    console.log(signed)
+    await main.sendTransaction(tx);
+    console.log(await greeter.greet())
   });
 
   xit("give taro to other users", async () => {
