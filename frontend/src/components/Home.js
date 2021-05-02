@@ -1,14 +1,13 @@
 import { useEffect, useState, useContext } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { ethers } from 'ethers';
-import {Card, Button, ListGroup} from 'react-bootstrap';
+import {Card, Button } from 'react-bootstrap';
 import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import InstallMetamaskAlert from './InstallMetamaskAlert';
 import '../styles/Home.css';
 import { TaroSimpleContext } from '../contexts/TaroSimpleContext';
 import TaroSimple from '../contracts/contracts/TaroSimple.sol/TaroSimple.json';
-import LeaderBoard from './LeaderBoard';
 
 
 function Home() {
@@ -173,9 +172,7 @@ function Home() {
                      <Button disabled block>Vote</Button>
                   </Card.Body>
                 </Card>
-                <LeaderBoard className="leaderboard"/>
       </div>
-
   );
 }
 
