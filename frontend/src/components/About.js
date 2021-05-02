@@ -50,13 +50,14 @@ const About = () => {
          🧬 Economía y Desarrollo Urbano Predictivos.
         </div>
         </div>
-        
-
-        <div>
-          The last step for the user to begin earning TARO is to validate their account.  This is done by taking a quiz about Queretaro.  This helps to keep the TARO tokens among people who care about their city.
+        <div className="orange">
+          ¿Vives en Querétaro? Compruebalo y obtén TARO 
         </div>
+        <div>
+          Contesta este cuestionario para verififcar que eres queretano y recibe hasta 100 TARO para votar por las propuestas.
+        </div>
+        <Button className="Quiz" href="/quiz" >Take the Queretaro quiz</Button>
       </div>
-      <Button className="Quiz" href="/quiz" >Take the Queretaro quiz</Button>
     </div>
   );
 };
