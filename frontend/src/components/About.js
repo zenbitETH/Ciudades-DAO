@@ -3,7 +3,7 @@ import logo from '../assets/Logo.svg';
 
 const About = () => {
   return (
-    <div className="App">
+    <div className="App2">
       <div className="gray3">
         <div>
           <img className="text-large" src={logo} alt="VoTARO" width="250px" />
