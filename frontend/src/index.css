@@ -23,7 +23,7 @@
 }
 
 .main2 {
-  font-size: 20px !important;
+  font-size: 18px !important;
   text-align: left;
   text-justify: inter-word;
   box-sizing: border-box;
@@ -152,7 +152,7 @@ align-items: center !important;
 }
 
 .space {
-  margin-top: 1%;
+  margin-top: 3%;
 }
 
 .item {
