@@ -1,16 +1,24 @@
-import {Link} from "react-router-dom";
 import {Button} from 'react-bootstrap';
+import logo from '../assets/Logo.svg';
 
 const About = () => {
   return (
     <div className="App">
       <div className="gray3">
         <div>
-          this page will 
-          1. describe what TARO is, 
-          2. explain the proposal system
-          3. walk users through the process of getting metamask,connecting to metamask and getting validated the link to install metamask
-          https://metamask.io/download.html
+          <img src={logo} alt="VoTARO" width="150px" />
+        </div>
+        <div>
+          Protocolo para digitalizar la gobernanza urbana mediante interacciones gamificadas en blockchain.
+        </div>
+        <div className="text-large">
+          ✋ 1 Propon 
+        </div>
+        <div className="text-large">
+          🗳️ 2 Vota
+        </div>
+        <div className="text-large">
+          🥇 3 Obtén recompensas
         </div>
         <div>
           The last step for the user to begin earning TARO is to validate their account.  This is done by taking a quiz about Queretaro.  This helps to keep the TARO tokens among people who care about their city.
@@ -22,3 +30,6 @@ const About = () => {
 };
 
 export default About;
+
+
+
