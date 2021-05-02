@@ -1,5 +1,5 @@
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
-import logo from '../assets/Logo.png';
+import logo from '../assets/Logo.svg';
 
 const Header = () => {
   return (
