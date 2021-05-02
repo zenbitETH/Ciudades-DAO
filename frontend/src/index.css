@@ -9,22 +9,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App2 {
-  background-color: #ffffff;
-  font-family: 'Lexend Deca', sans-serif;
-  color: #FF9400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .navbar { 
   background-color: #F2F2F2;
   font-family: 'Lexend Deca', sans-serif;
   color: #3d386b;
 }
 
-main {
-  margin: 2em;
+.main {
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .Wallet {
