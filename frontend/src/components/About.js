@@ -11,22 +11,27 @@ const About = () => {
         <div>
           Protocolo para digitalizar la gobernanza urbana mediante interacciones gamificadas en blockchain.
         </div>
-        <div className="text-large-left">
-          ✋ 1 Propon 
+        <div className="text-large">
+          1 ✋ Propon 
         </div>
-        <div className="text-large-left">
-          🗳️ 2 Vota
+        <div className="text-large">
+          2 🗳️ Vota
         </div>
-        <div className="text-large-left">
-          🥇 3 Obtén TARO
+        <div className="text-large">
+          3 🥇 Obtén TARO
         </div>
         <div className="orange">
           Objetivo
         </div>
-        <div>
+        <div className="main">
           Convertir a la ciudad de Querétaro en una Organización Autónoma Descentralizada que existen de manera automatizada en internet pero que dependen fuertemente del 
           talento humano para desarrollar tareas que el protocolo no puede por si mismo.
         </div>
+      </div>
+      <div className="gray3">    
+       
+      </div>
+      <div className="gray3">    
         <div className="orange">
           Beneficios para la ciudad
         </div>
@@ -57,7 +62,7 @@ const About = () => {
           Contesta este cuestionario para verififcar que eres queretano y recibe hasta 100 TARO para votar por las propuestas.
         </div>
         <Button className="Quiz" href="/quiz" >Take the Queretaro quiz</Button>
-      </div>
+      </div> 
     </div>
   );
 };
