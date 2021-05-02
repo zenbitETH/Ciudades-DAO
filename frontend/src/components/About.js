@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="App">
       <div className="gray3">
-        <div className="text-large">
+        <div className="purple">
           ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?
         </div>
         <div className="main">
@@ -49,15 +49,6 @@ const About = () => {
           <p>3. Después de distribuir el 30% en verificaciones y participaciones de gobernanza,el token podrá ser convertido a pesos (TARO/ETH/PESO) y viceversa a través de un protocolo 
           de liquidez descentralizada (uniswap). TARO no podrá ser adquirirido en ninguna de nuestras utilizando pesos.</p>
         </div>
-
-        
-      </div>
-      <div className="gray3">    
-      </div>
-      <div className="gray3">    
-       
-      </div>
-      <div className="gray3">    
         <div className="orange">
           Beneficios para la ciudad
         </div>
@@ -65,7 +56,7 @@ const About = () => {
         <div >
            ⛓️ Registro transparente e inmutable en blockchain.
         </div>
-          <div >
+        <div >
           🏙️ Procesos urbanos en Contratos Inteligentes. 
         </div>
         <div>
@@ -80,7 +71,9 @@ const About = () => {
         <div>
          🧬 Economía y Desarrollo Urbano Predictivos.
         </div>
-        </div>
+        </div>       
+      </div>
+      <div className="gray3">    
         <div className="orange">
           ¿Vives en Querétaro? Compruebalo y obtén TARO 
         </div>
