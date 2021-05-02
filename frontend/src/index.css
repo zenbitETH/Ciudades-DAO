@@ -53,7 +53,7 @@ button:disabled {
 
 .text-large-left {
   font-size: 2rem !important;
-  justify-content: left !important;
+  justify-self: left !important;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -65,7 +65,7 @@ button:disabled {
   margin: 3% auto;
   background-image: linear-gradient(#eee, #ccc);
   display: flex !important;
-  justify-content: center !important;
+  justify-content: center ;
   align-content: center !important;
   align-items: center !important;
   color: #3d386b !important;
@@ -90,9 +90,9 @@ button:disabled {
   max-width: 450px;
   margin: 3% auto;
   background-image: linear-gradient(#eee, #ccc);
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
+  justify-content: left !important;
+  align-content: left !important;
+  align-items: left !important;
   color: #3d386b !important;
 }
 
