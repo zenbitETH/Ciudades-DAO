@@ -3,7 +3,7 @@
 .App {
   background-color: #ffffff;
   font-family: 'Lexend Deca', sans-serif;
-  text-align: center;
+  text-align: center !important;
   color: #FF9400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -56,6 +56,8 @@ button:disabled {
 .text-large {
   font-size: 2rem !important;
   text-align: center !important;
+  justify-content: center !important;
+  align-content: center !important;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -74,7 +76,7 @@ button:disabled {
   margin: 3% auto;
   background-image: linear-gradient(#eee, #ccc);
   display: flex !important;
-  justify-content: center ;
+  justify-content: center !important;
   align-content: center !important;
   align-items: center !important;
   color: #3d386b !important;
