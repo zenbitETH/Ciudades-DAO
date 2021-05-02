@@ -1,5 +1,6 @@
 pragma solidity ^0.5.16;
 pragma experimental ABIEncoderV2;
+import "hardhat/console.sol";
 
 contract GovernorAlpha {
     /// @notice The name of this contract
@@ -28,8 +29,7 @@ contract GovernorAlpha {
 
     /// @notice The duration of voting on a proposal, in blocks
     function votingPeriod() public pure returns (uint256) {
-        return 3; //3 blocks
-        // return 17280;
+        return 17280;
     } // ~3 days in blocks (assuming 15s blocks)
 
     /// @notice The address of the Compound Protocol Timelock
@@ -369,6 +369,7 @@ contract GovernorAlpha {
     }
 
     function castVote(uint256 proposalId, bool support) public {
+        console.log("proposer: ", proposals[proposalId].proposer);
         return _castVote(msg.sender, proposalId, support);
     }
 

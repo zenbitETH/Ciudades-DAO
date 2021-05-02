@@ -9,9 +9,7 @@ const fs = require("fs");
 describe("Cities-Protocol Governance v1", function () {
   let governance, taro, timelock, governanceAddress, taroAddress, timelockAddress
   let main, user1, user2;
-
-  //temp
-  let greeter,greeterAddress
+  let greeter,greeterAddress,calldata,sighash
 
   xit("setup SKALE", async () => {
     overrides = {
@@ -40,38 +38,36 @@ describe("Cities-Protocol Governance v1", function () {
 
   it("setup localhost", async () => {
     [main, user1, user2] = await ethers.getSigners(); //jsonrpc signers from default 20 accounts with 10000 ETH each
-    //was there anything else to setup here? lol
-
     // console.log(ethers.utils.parseUnits("100",18).toString())
   })
 
   it("deploy governance and taro", async () => {
-    // const Taro = await ethers.getContractFactory(
-    //    "Comp"
-    //  );
-    // taro = await Taro.connect(main).deploy(main.getAddress()); //mints full supply to deployer
-    // await taro.deployed()
-    // console.log("taro Address: ", taro.address)
-    // taroAddress=taro.address
+    const Taro = await ethers.getContractFactory(
+       "Comp"
+     );
+    taro = await Taro.connect(main).deploy(main.getAddress()); //mints full supply to deployer
+    await taro.deployed()
+    console.log("taro Address: ", taro.address)
+    taroAddress=taro.address
 
-    // // tx = await taro.connect(main).approve(user1.getAddress(),ethers.BigNumber.from("1000"))
-    // // console.log(tx)
+    // tx = await taro.connect(main).approve(user1.getAddress(),ethers.BigNumber.from("1000"))
+    // console.log(tx)
 
-    // const Timelock = await ethers.getContractFactory(
-    //   "Timelock"
-    // );
-    // timelock = await Timelock.connect(main).deploy(main.getAddress(), ethers.BigNumber.from("0")); //minimum delay is 0
-    // await timelock.deployed()
-    // console.log("timelock Address: ", timelock.address)
-    // timelockAddress=timelock.address
+    const Timelock = await ethers.getContractFactory(
+      "Timelock"
+    );
+    timelock = await Timelock.connect(main).deploy(main.getAddress(), ethers.BigNumber.from("0")); //minimum delay is 0
+    await timelock.deployed()
+    console.log("timelock Address: ", timelock.address)
+    timelockAddress=timelock.address
   
-    // const Governance = await ethers.getContractFactory(
-    //   "GovernorAlpha"
-    // );
-    // governance = await Governance.connect(main).deploy(timelock.address,taro.address,main.getAddress());  
-    // await governance.deployed()
-    // console.log("governance Address: ", governance.address)
-    // governanceAddress=governance.address
+    const Governance = await ethers.getContractFactory(
+      "GovernorAlpha"
+    );
+    governance = await Governance.connect(main).deploy(timelock.address,taro.address,main.getAddress());  
+    await governance.deployed()
+    console.log("governance Address: ", governance.address)
+    governanceAddress=governance.address
 
     //this is contract we want to execute transaction on
     const Greeter = await ethers.getContractFactory(
@@ -83,65 +79,70 @@ describe("Cities-Protocol Governance v1", function () {
     greeterAddress=greeter.address
 
     const Igreeter = new ethers.utils.Interface(abiGreeter)
-    console.log(Igreeter.functions)
+    // console.log(Igreeter.functions)
 
-    const calldata = Igreeter.encodeFunctionData("setGreeting",["goodbye"])
-    // console.log(calldata)
+    calldata = Igreeter.encodeFunctionData("setGreeting",["goodbye"])
+    sighash = Igreeter.getSighash("setGreeting")
+    // tx = {
+    //   to: greeterAddress,
+    //   value: 0,
+    //   data: calldata,
+    // }
 
-    tx = {
-      to: greeterAddress,
-      value: 0,
-      data: calldata
-    }
+    // await main.sendTransaction(tx);
+    // console.log(await greeter.greet())
 
-    const types = {
-      Person: [
-          { name: 'name', type: 'string' },
-          { name: 'wallet', type: 'address' }
-      ],
-      Mail: [
-          { name: 'from', type: 'Person' },
-          { name: 'to', type: 'Person' },
-          { name: 'contents', type: 'string' }
-      ]
-    };
+    // const types = {
+    //   Person: [
+    //       { name: 'name', type: 'string' },
+    //       { name: 'wallet', type: 'address' }
+    //   ],
+    //   Mail: [
+    //       { name: 'from', type: 'Person' },
+    //       { name: 'to', type: 'Person' },
+    //       { name: 'contents', type: 'string' }
+    //   ]
+    // };
 
-    const signed = await main._signTypedData({},types,tx)
-    console.log(signed)
-    await main.sendTransaction(tx);
-    console.log(await greeter.greet())
+    // const signed = await main._signTypedData({},types,tx)
+    // console.log(signed)
   });
 
-  xit("give taro to other users", async () => {
+  it("give taro to other users", async () => {
     await taro.connect(main).transfer(user1.getAddress(),ethers.utils.parseUnits("10",18))
     await taro.connect(main).transfer(user2.getAddress(),ethers.utils.parseUnits("10",18))
 
     const balance = await taro.balanceOf(user1.getAddress())
     console.log("user1 balance: ", balance.toString())
   })
-  
 
-  xit("propose greeter change",async () => {
-    console.log(abiGreeter["abi"])
-    const Igreeter = new ethers.utils.Interface(abiGreeter["abi"])
-    const calldata = Igreeter.functions.setGreeting.encode(["goodbye world"])
-    console.log(calldata)
+  it("propose greeter change",async () => {
+    const count_before = await governance.proposalCount()
+    console.log("count before: ",count_before.toString())
+    // console.log(greeter.address)
+    // console.log(ethers.BigNumber.from("0"))
+    // console.log(sighash)
+    // console.log(calldata)
+    await governance.connect(main).propose(
+      [greeter.address],
+      [0],
+      ["setGreeting(string)"],
+      [calldata],
+      "change greeter function to say goodbye world");
+    // may need to push forward by 1 block after
+    const count = await governance.proposalCount()
+    console.log("count after: ", count.toString())
 
-    // await governance.connect(user1).propose(
-    //   greeter.address,
-    //   ethers.BigNumber.from("0"),
-    //   sig,
-    //   calldata,
-    //   "change greeter function to say 'goodbye world'");
-    //may need to push forward by 1 block after
+    //require manipulation of blocktime to test, but the following works.
   })
 
   xit("user 2 and user 1 vote", async () => {
+    console.log(await governance.proposals(0))
     //understand how taro is used for votes
     await governance.connect(user2).castVote(ethers.BigNumber.from("0"),"true");
 
     //need to move time forward 3 blocks
-    //understand governance.queue(ethers.BigNumber.from("1"))
+    await governance.queue(ethers.BigNumber.from("0"))
   })
 
   xit("execute proposal to change greeter",async () => {
