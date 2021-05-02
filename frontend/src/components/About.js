@@ -5,8 +5,8 @@ const About = () => {
   return (
     <div className="App2">
       <div className="gray3">
-        <div>
-          <img className="text-large" src={logo} alt="VoTARO" width="250px" />
+        <div className="main">
+          ¿Qué es <img  src={logo} alt="VoTARO" width="250px" />?
         </div>
         <div className="App">
           Protocolo para digitalizar la gobernanza urbana mediante interacciones gamificadas en blockchain.
