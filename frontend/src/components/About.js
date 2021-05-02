@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="App">
       <div className="gray3">
-        <div className="purple">
+        <div className="text-large">
           ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?
         </div>
         <div className="main">
