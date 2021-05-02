@@ -151,6 +151,10 @@ align-items: center !important;
   background-image: linear-gradient(#FAC91a, #FF9400)!important;
 }
 
+.space {
+  margin-top: 1%;
+}
+
 .item {
   display: flex;
   overflow: auto;
