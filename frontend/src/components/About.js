@@ -28,11 +28,11 @@ const About = () => {
           talento humano para desarrollar tareas que el protocolo no puede por si mismo.
         </div>
         <div className="orange">
-          Beneficiios 
+          Beneficios para la ciudad
         </div>
         <div className="text-medium-left" >
         <div >
-          ⛓️ Registro transparente e inmutable en blockchain.
+           ⛓️ Registro transparente e inmutable en blockchain.
         </div>
           <div >
           🏙️ Procesos urbanos en Contratos Inteligentes. 
@@ -41,7 +41,7 @@ const About = () => {
           🤖 Automatización y Descentralización de servicios.
         </div>
         <div >
-           🧙‍♂️ Desarrollo de habilidades digitales.
+           🧙‍♂️ Ciudadanos desarrollan habilidades digitales.
         </div>
           <div >
           🤝 Procesos urbanos en Contratos Inteligentes.

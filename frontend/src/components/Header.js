@@ -10,7 +10,7 @@ const Header = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav>
-          <Nav.Link href="/About">How do I get TARO</Nav.Link>
+          <Nav.Link href="/About">Get TARO</Nav.Link>
           <Nav.Link href="/proposallist">🥇 0</Nav.Link>
           <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
           <NavDropdown title="🌐Eng" id="basic-nav-dropdown">
