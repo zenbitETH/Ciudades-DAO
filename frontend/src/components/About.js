@@ -6,7 +6,7 @@ const About = () => {
     <div className="App">
       <div className="gray3">
         <div>
-          <img src={logo} alt="VoTARO" width="150px" />
+          <img className="text-large" src={logo} alt="VoTARO" width="250px" />
         </div>
         <div>
           Protocolo para digitalizar la gobernanza urbana mediante interacciones gamificadas en blockchain.
