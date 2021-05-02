@@ -50,6 +50,14 @@ button:disabled {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
+.text-large-left {
+  font-size: 2rem !important;
+  justify-content: left !important;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .gray {
   border-radius: 25px;
   width:100%;

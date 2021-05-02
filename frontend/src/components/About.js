@@ -11,13 +11,13 @@ const About = () => {
         <div>
           Protocolo para digitalizar la gobernanza urbana mediante interacciones gamificadas en blockchain.
         </div>
-        <div className="text-large">
+        <div className="text-large-left">
           ✋ 1 Propon 
         </div>
-        <div className="text-large">
+        <div className="text-large-left">
           🗳️ 2 Vota
         </div>
-        <div className="text-large">
+        <div className="text-large-left">
           🥇 3 Obtén recompensas
         </div>
         <div>
