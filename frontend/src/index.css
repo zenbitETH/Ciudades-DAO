@@ -53,6 +53,13 @@ button:disabled {
   color: #cac9c9 !important;
 }
 
+.text-medium-left {
+  font-size: 1rem !important;
+  text-align: left !important;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .text-large {
   font-size: 2rem !important;
   margin-top: 5%;
@@ -149,6 +156,7 @@ align-items: center !important;
 }
 
 .orange{
+  margin-top: 3%;
   font-size: 2rem !important;
   color: #FF9400;
 }

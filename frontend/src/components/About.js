@@ -24,16 +24,30 @@ const About = () => {
           Objetivo
         </div>
         <div>
-          Convertir Queretaro en una Organización Autónoma Descentralizada que existen de manera automatizada en internet pero que dependen fuertemente del 
+          Convertir a la ciudad de Querétaro en una Organización Autónoma Descentralizada que existen de manera automatizada en internet pero que dependen fuertemente del 
           talento humano para desarrollar tareas que el protocolo no puede por si mismo.
         </div>
+        <div className="orange">
+          Beneficiios 
+        </div>
+        <div className="text-medium-left" >
         <div >
-          ⛓️ Registro en blockchain de Ethereum.
+          ⛓️ Registro transparente e inmutable en blockchain.
+        </div>
           <div >
-          🏙️ Procesos urbanos en Contratos Inteligentes 
+          🏙️ Procesos urbanos en Contratos Inteligentes. 
         </div>
         <div>
-          🤖 Automatización y Descentralización de servicios urbanos
+          🤖 Automatización y Descentralización de servicios.
+        </div>
+        <div >
+           🧙‍♂️ Desarrollo de habilidades digitales.
+        </div>
+          <div >
+          🤝 Procesos urbanos en Contratos Inteligentes.
+        </div>
+        <div>
+         🧬 Economía y Desarrollo Urbano Predictivos.
         </div>
         </div>
         
