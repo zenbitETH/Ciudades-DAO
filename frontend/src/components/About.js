@@ -27,19 +27,16 @@ const About = () => {
           Convertir Queretaro en una Organización Autónoma Descentralizada que existen de manera automatizada en internet pero que dependen fuertemente del 
           talento humano para desarrollar tareas que el protocolo no puede por si mismo.
         </div>
-        <div className="text-large-left">
+        <div >
           ⛓️ Registro en blockchain de Ethereum.
-          <div className="text-large-left">
+          <div >
           🏙️ Procesos urbanos en Contratos Inteligentes 
         </div>
-        <div className="text-large-left">
+        <div>
           🤖 Automatización y Descentralización de servicios urbanos
         </div>
         </div>
         
-        <div className="text-large-left">
-          🤖 Automatización y Descentralización de servicios urbanos
-        </div>
 
         <div>
           The last step for the user to begin earning TARO is to validate their account.  This is done by taking a quiz about Queretaro.  This helps to keep the TARO tokens among people who care about their city.
