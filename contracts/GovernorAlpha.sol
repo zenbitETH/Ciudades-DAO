@@ -1,5 +1,6 @@
 pragma solidity ^0.5.16;
 pragma experimental ABIEncoderV2;
+import "hardhat/console.sol";
 
 contract GovernorAlpha {
     /// @notice The name of this contract
@@ -7,7 +8,8 @@ contract GovernorAlpha {
 
     /// @notice The number of votes in support of a proposal required in order for a quorum to be reached and for a vote to succeed
     function quorumVotes() public pure returns (uint256) {
-        return 400000e18;
+        return 1e18;
+        // return 400000e18;
     } // 400,000 = 4% of Comp
 
     /// @notice The number of votes required in order for a voter to become a proposer
@@ -158,11 +160,11 @@ contract GovernorAlpha {
         bytes[] memory calldatas,
         string memory description
     ) public returns (uint256) {
-        require(
-            comp.getPriorVotes(msg.sender, sub256(block.number, 1)) >
-                proposalThreshold(),
-            "GovernorAlpha::propose: proposer votes below proposal threshold"
-        );
+        // require(
+        //     comp.getPriorVotes(msg.sender, sub256(block.number, 1)) >
+        //         proposalThreshold(),
+        //     "GovernorAlpha::propose: proposer votes below proposal threshold"
+        // );
         require(
             targets.length == values.length &&
                 targets.length == signatures.length &&
@@ -367,6 +369,7 @@ contract GovernorAlpha {
     }
 
     function castVote(uint256 proposalId, bool support) public {
+        console.log("proposer: ", proposals[proposalId].proposer);
         return _castVote(msg.sender, proposalId, support);
     }
 

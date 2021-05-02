@@ -3,7 +3,7 @@ require("@nomiclabs/hardhat-etherscan");
 require('dotenv').config()
 const fs = require("fs");
 
-const defaultNetwork = "kovan"; 
+const defaultNetwork = "localhost";
 
 function mnemonic() {
   try {
@@ -21,6 +21,9 @@ module.exports = {
   networks: {
     localhost: {
       url: "http://localhost:8545",
+    },
+    mySkaleChain: {
+      url: "http://eth-global-10.skalenodes.com:10323"
     },
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/faefe1dcd6094fb388019173d2328d8f",
@@ -63,13 +66,13 @@ module.exports = {
         version: "0.6.0"
       },
       {
-        version:"0.5.8"
+        version: "0.5.8"
       },
       {
-        version:"0.6.12"
+        version: "0.6.12"
       },
       {
-        version:"0.7.0"
+        version: "0.7.0"
       }],
     optimizer: {
       enabled: true,
@@ -85,12 +88,12 @@ module.exports = {
     tests: "./test",
     cache: "./cache",
     artifacts: "./artifacts"
-  
+
   },
   mocha: {
     timeout: 10000000
   }
-  
+
 };
 
 
