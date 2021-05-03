@@ -26,7 +26,7 @@ function Home() {
 
   let {setIsValidated} = useContext(ValidationRequiredContext);
   let {taro, setTaro} = useContext(TaroContext);
-  let {isSpanish} = useContext(LanguageContext);
+  let {isEnglish} = useContext(LanguageContext);
 
    // remove for production
    const Taro = Comp;
@@ -153,8 +153,16 @@ function Home() {
 
   return (
     <div>
-      {isSpanish ?
+      {isEnglish ?
           <div className="App">
+            <Card.Text>Uraban GovernanceProtocolo para digitalizar la gobernanza urbana de la ciudad de Querétaro</Card.Text>
+          <div className="Wallet">
+          
+            {!isMetamastInstalled ?
+            <InstallMetamaskAlert />:isConnected ? '' : isConnecting? 
+            <ConnectingButton />: 
+            <ConnectButton handleOnConnect={handleOnConnect}/>}
+          </div>
             <Card className="gray">
           <Card.Title className="text-large">Bloqueado</Card.Title>
             <div className="item2">
@@ -188,15 +196,7 @@ function Home() {
           </div>
      :
           <div className="App">
-            <Card.Text>Uraban GovernanceProtocolo para digitalizar la gobernanza urbana de la ciudad de Querétaro</Card.Text>
-          <div className="Wallet">
-          
-            {!isMetamastInstalled ?
-            <InstallMetamaskAlert />:isConnected ? '' : isConnecting? 
-            <ConnectingButton />: 
-            <ConnectButton handleOnConnect={handleOnConnect}/>}
-          </div>
-         
+                
           <Card.Text>Urban governance protocol for Queretaro City DAO</Card.Text>
           <div className="Wallet">
           
