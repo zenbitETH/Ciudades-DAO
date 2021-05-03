@@ -131,7 +131,7 @@ function Home() {
           <div className="App">
             <Card.Text>Protocolo para digitalizar la gobernanza urbana de la ciudad de Querétaro</Card.Text>
           <div className="Wallet">
-            <Card.Text className="purple2">Necesitas una wallet de Metamask para usar VoTARO</Card.Text>
+          
             {!isMetamastInstalled ?
             <InstallMetamaskAlert />:isConnected ? '' : isConnecting? 
             <ConnectingButton />: 
