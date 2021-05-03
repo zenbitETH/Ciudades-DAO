@@ -4,9 +4,9 @@ import {Link} from "react-router-dom";
 const InstallMetamaskAlert = () => {
   return (
     <Alert variant="primary">
-      <Alert.Heading>It appears you don't have MetaMask installed</Alert.Heading>
+      <Alert.Heading>Parece que no tienes una wallet de Metamask</Alert.Heading>
       <p>
-      <Link to="/createproposal">Get started so you can start earning TARO</Link>
+      <Link to="/about">Conoce más</Link>
       </p>
     </Alert>
   );

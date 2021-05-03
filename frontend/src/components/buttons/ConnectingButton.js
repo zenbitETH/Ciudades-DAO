@@ -10,7 +10,7 @@ const ConnectingButton = () => {
         role="status"
         aria-hidden="true"
       />
-      Connecting...
+      Conectando...
     </Button>
   );
 };
