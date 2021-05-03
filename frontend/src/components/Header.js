@@ -22,7 +22,7 @@ const Header = () => {
             <Nav.Link href="/About">What is VoTARO?</Nav.Link>
             <Nav.Link href="/proposallist">🥇 0</Nav.Link>
             <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
-            <NavDropdown title="🌐Idioma" id="basic-nav-dropdown">
+            <NavDropdown title="🌐" id="basic-nav-dropdown">
              <NavDropdown.Item onSelect={handleOnSelect}>Español</NavDropdown.Item>
             </NavDropdown>
           </Nav>
@@ -42,7 +42,7 @@ const Header = () => {
             <Nav.Link href="/About">¿Qué es VoTARO?</Nav.Link>
             <Nav.Link href="/proposallist">🥇 0</Nav.Link>
             <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
-            <NavDropdown title="🌐Language" id="basic-nav-dropdown">
+            <NavDropdown title="🌐" id="basic-nav-dropdown">
             <NavDropdown.Item onSelect={handleOnSelect}>English</NavDropdown.Item>
             </NavDropdown>
           </Nav>
