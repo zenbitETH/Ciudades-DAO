@@ -1,13 +1,14 @@
+import { useContext } from 'react';
 import {Button} from 'react-bootstrap';
 import logo from '../assets/Logo.svg';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const About = () => {
-  let {isEnglish} = useContext(LanguageContext);
+  let {isEspañol} = useContext(LanguageContext);
 
   return (   
   <div className="App">
-  {isEnglish ?
+  {isEspañol ?
     <div>
       <div className="gray3">
         <div className="text-large">1. ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?</div>
@@ -50,9 +51,7 @@ const About = () => {
       </div> 
       </div> 
     </div>
-
-        :
-
+    :
         <div>
            <div className="App">
             <div className="gray3">
