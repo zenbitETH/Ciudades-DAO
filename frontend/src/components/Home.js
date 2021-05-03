@@ -9,10 +9,10 @@ import '../styles/Home.css';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { TaroContext } from '../contexts/TaroContext';
 import { LanguageContext } from '../contexts/LanguageContext';
-import LeaderBoard from './LeaderBoard';
+
 
 //remove for production
-import Comp from '../contracts/contracts/Comp.sol/Comp.json';
+import Comp from '../../contracts/contracts/Comp.sol/Comp.json';
 
 function Home() {
   let [provider, setProvider] = useState();
