@@ -26,7 +26,7 @@ function Home() {
 
   let {setIsValidated} = useContext(ValidationRequiredContext);
   let {taro, setTaro} = useContext(TaroContext);
-  let {isEnglish} = useContext(LanguageContext);
+  let {isSpanish} = useContext(LanguageContext);
 
    // remove for production
    const Taro = Comp;
@@ -153,7 +153,7 @@ function Home() {
 
   return (
     <div>
-      {isEnglish ?
+      {isSpanish ?
           <div className="App">
             <Card className="gray">
           <Card.Title className="text-large">Bloqueado</Card.Title>

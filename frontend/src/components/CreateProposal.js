@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import IsLoadingModal from '../modals/IsLoadingModal';
-import { TaroContext } from '../contexts/TaroContext';
+import { TaroContext } from '../contexts/TaroSimpleContext';
 
 const CreateProposal = () => {
   let [form, setForm] = useState();

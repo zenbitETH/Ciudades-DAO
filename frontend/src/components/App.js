@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
-import { TaroContext } from '../contexts/TaroContext';
+import { TaroContext } from '../contexts/TaroSimpleContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 import Home from './Home';
