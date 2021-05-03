@@ -9,23 +9,51 @@ const Header = () => {
     setIsSpanish(!isSpanish);
   };
   return (
-    <Navbar className="navbar">
+  <div>   
+      {isSpanish ?
+      <div>
+        <Navbar className="navbar">
+        <Navbar.Brand href="/Home">
+        <img src={logo} alt="Procotol Cities" width="150px" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+          <Nav>
+            <Nav.Link href="/About">¿Qué es TARO?</Nav.Link>
+            <Nav.Link href="/proposallist">🥇 0</Nav.Link>
+            <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
+            <NavDropdown title="🌐Idioma" id="basic-nav-dropdown">
+            <NavDropdown.Item onSelect={handleOnSelect}>English</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      </div>
+
+      :
+
+      <div>
+<Navbar className="navbar">
       <Navbar.Brand href="/Home">
       <img src={logo} alt="Procotol Cities" width="150px" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav>
-          <Nav.Link href="/About">¿Qué es TARO?</Nav.Link>
+          <Nav.Link href="/About">What is VoTARO?</Nav.Link>
           <Nav.Link href="/proposallist">🥇 0</Nav.Link>
           <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
-          <NavDropdown title="Language" id="basic-nav-dropdown">
-          <NavDropdown.Item onSelect={handleOnSelect}>English</NavDropdown.Item>
+          <NavDropdown title="🌐Language" id="basic-nav-dropdown">
+           <NavDropdown.Item onSelect={handleOnSelect}>Spanish</NavDropdown.Item>>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+      </div>
+    }
+    </div>
   );
 };
+
 
 export default Header;
