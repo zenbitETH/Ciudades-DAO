@@ -4,13 +4,13 @@ import logo from '../assets/Logo.svg';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const Header = () => {
-  let {isSpanish, setIsSpanish} = useContext(LanguageContext);
+  let {isEnglish, setIsEnglish} = useContext(LanguageContext);
   const handleOnSelect = () => {
-    setIsSpanish(!isSpanish);
+    setIsEnglish(!isEnglish);
   };
   return (
   <div>   
-      {isSpanish ?
+      {isEnglish ?
       <div>
         <Navbar className="navbar">
         <Navbar.Brand href="/Home">
@@ -44,7 +44,7 @@ const Header = () => {
           <Nav.Link href="/proposallist">🥇 0</Nav.Link>
           <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
           <NavDropdown title="🌐Language" id="basic-nav-dropdown">
-           <NavDropdown.Item onSelect={handleOnSelect}>Spanish</NavDropdown.Item>>
+           <NavDropdown.Item onSelect={handleOnSelect}>Spanish</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
