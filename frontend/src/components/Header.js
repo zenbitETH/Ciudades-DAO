@@ -1,4 +1,4 @@
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import {Navbar, Nav, NavDropdown,navba} from 'react-bootstrap';
 import logo from '../assets/Logo.svg';
 
 const Header = () => {
@@ -10,10 +10,16 @@ const Header = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav>
+          <Nav className="Wallet">
+            {!isMetamastInstalled ?
+            <InstallMetamaskAlert />:isConnected ? '' : isConnecting? 
+            <ConnectingButton />: 
+            <ConnectButton handleOnConnect={handleOnConnect}/>}
+          </Nav> 
           <Nav.Link href="/About">¿Qué es TARO?</Nav.Link>
           <Nav.Link href="/proposallist">🥇 0</Nav.Link>
           <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
-          <NavDropdown title="🌐Español" id="basic-nav-dropdown">
+          <NavDropdown title="🌐 Español" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">English</NavDropdown.Item>
           </NavDropdown>
         </Nav>
