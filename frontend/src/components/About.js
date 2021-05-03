@@ -4,7 +4,6 @@ import logo from '../assets/Logo.svg';
 const About = () => {
   return (
     <div className="App">
-      <div>{isEnglish ? English : Spanish}</div>
       <div className="gray3">
         <div className="text-large">
           1. ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?
