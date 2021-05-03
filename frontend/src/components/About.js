@@ -6,7 +6,7 @@ const About = () => {
     <div className="App">
       <div className="gray3">
         <div className="text-large">
-          ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?
+          1. ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?
         </div>
         <div className="main">
           Protocolo para digitalizar la gobernanza urbana mediante interacciones con la moneda digital de la ciudad de Querétaro: TARO.
@@ -22,17 +22,17 @@ const About = () => {
         </div>
         <div className="main">
           VoTARO aprovecha las carteras de la Web3.0, los contratos inteligentes del protocolo Compound y tokens con los estandares de el blockchain de ethereum para  gestionar 
-          la gobernanza de eventos o necesidades urbanas de manaera automatizada, transparente y descentralizada.
+          la gobernanza de eventos o necesidades urbanas de manera automatizada, transparente y descentralizada.
         </div>
         <div className="orange">
-          Objetivo
+         2. Objetivo
         </div>
         <div className="main">
           Convertir a la ciudad de Querétaro en una Organización Autónoma Descentralizada que exista de manera automatizada en internet pero que dependa fuertemente del 
           talento humano para ejecutar tareas urbanas o virtuales que el protocolo no pueda completar por si mismo .
         </div>
         <div className="orange">
-          ¿Qué es $TARO?
+          3. ¿Qué es $TARO?
         </div>
         <div className="main">
           Es un token ERC20 que funciona como moneda digital de la ciudad de Querétaro, cada moneda te da poder de voto en el sistema de gobernanza VoTARO, donde puedes proponer
@@ -40,17 +40,18 @@ const About = () => {
         </div>
         
         <div className="orange">
-          ¿Cómo obtengo $TARO?
+          4. ¿Cómo obtengo $TARO?
         </div>
         <div className="main">
-          <p>1. Para obener TARO necesitas una cartera web 3 como Metamask, puedes descargar una al dar en el zorro 🦊.</p>
+          <p>1. Para obener TARO necesitas una cartera web 3 como Metamask, puedes descargar una al dar click en el botón.</p>
+          <Button className="Quiz" href="https://metamask.io" >Descargar Cartera</Button>
           <p>2. El token TARO solo se puede obtener como recompensa 🥇 al:</p> 
           <p className="main2">✔️Verificar que eres ciudadan@ queretan@ al final de esta pantalla.<p className="space">🗳️ Participar en la gobernanza de la ciudad.</p></p>
           <p>3. Después de distribuir el 30% en verificaciones y participaciones de gobernanza,el token podrá ser convertido a pesos (TARO/ETH/PESO) y viceversa a través de un protocolo 
           de liquidez descentralizada (uniswap). TARO no podrá ser adquirirido en ninguna de nuestras utilizando pesos.</p>
         </div>
         <div className="orange">
-          Beneficios para la ciudad
+          5. Beneficios para la ciudad
         </div>
         <div className="text-medium-left" >
         <div >
@@ -87,6 +88,3 @@ const About = () => {
 };
 
 export default About;
-
-
-
