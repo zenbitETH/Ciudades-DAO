@@ -39,9 +39,11 @@
 
 .Quiz {
   border-radius: 25px !important;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   border: none !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
   background-color: #FF9400 !important;
 }
 
