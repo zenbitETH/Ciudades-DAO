@@ -6,7 +6,7 @@ import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import InstallMetamaskAlert from './InstallMetamaskAlert';
 import '../styles/Home.css';
-import { TaroSimpleContext } from '../contexts/TaroSimpleContext';
+import { TaroSimpleContext } from '../contexts/TaroContext';
 import TaroSimple from '../contracts/contracts/TaroSimple.sol/TaroSimple.json';
 
 
