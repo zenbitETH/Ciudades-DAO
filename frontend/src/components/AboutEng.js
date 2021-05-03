@@ -4,13 +4,12 @@ import logo from '../assets/Logo.svg';
 const About = () => {
   return (
     <div className="App">
-      <div>{isEnglish ? English : Spanish}</div>
       <div className="gray3">
         <div className="text-large">
-          1. ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?
+          1. What's <img src={logo} alt="VoTARO" width="250px" />?
         </div>
         <div className="main">
-          Protocolo de gobernanza urbana para proponer, votar y ejectuar tareas y recompensarlas con la moneda digital de la ciudad de QueréTARO.
+          Urban Governance Protocol with recompensarlas con la moneda digital de la ciudad de QueréTARO.
         </div>
         <div className="purple">
           1 ✋ Propon 
