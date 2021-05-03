@@ -15,11 +15,11 @@ import CreateProposal from './CreateProposal';
 function App() {
   let [isValidated, setIsValidated] = useState();
   let [taro, setTaro] = useState();
-  let [isEnglish, setIsEnglish] = useState();
+  let [isSpanish, setIsSpanish] = useState();
 
   return (
     <div>
-      <LanguageContext.Provider value={{isEnglish, setIsEnglish}}>
+      <LanguageContext.Provider value={{isSpanish, setIsSpanish}}>
       <TaroContext.Provider value={{taro, setTaro}}>
       <ValidationRequiredContext.Provider value={{isValidated, setIsValidated}}>
         <Router>

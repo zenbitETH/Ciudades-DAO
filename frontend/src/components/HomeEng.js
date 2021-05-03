@@ -6,7 +6,7 @@ import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import InstallMetamaskAlert from './InstallMetamaskAlert';
 import '../styles/Home.css';
-import { TaroSimpleContext } from '../contexts/TaroSimpleContext';
+import { TaroContext } from '../contexts/TaroContext';
 import TaroSimple from '../contracts/contracts/TaroSimple.sol/TaroSimple.json';
 
 
@@ -19,7 +19,7 @@ function Home() {
   let [isMetamastInstalled, setIsMetamaskInstalled] = useState();
   let [currentMetaMaskAccount, setCurrentMetaMaskAccount] = useState(null);
 
-  let {setTaroSimple} = useContext(TaroSimpleContext);
+  let {setTaroSimple} = useContext(TaroContext);
 
   useEffect(() => {
     const init = async () => {

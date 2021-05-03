@@ -1,7 +1,13 @@
-import {Navbar, Nav, NavDropdown,navba} from 'react-bootstrap';
+import { useContext } from 'react'
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import logo from '../assets/Logo.svg';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const Header = () => {
+  let {isSpanish, setIsSpanish} = useContext(LanguageContext);
+  const handleOnSelect = () => {
+    setIsSpanish(!isSpanish);
+  };
   return (
     <Navbar className="navbar">
       <Navbar.Brand href="/Home">
@@ -13,8 +19,8 @@ const Header = () => {
           <Nav.Link href="/About">¿Qué es TARO?</Nav.Link>
           <Nav.Link href="/proposallist">🥇 0</Nav.Link>
           <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
-          <NavDropdown title="🌐 Español" id="basic-nav-dropdown">
-           <NavDropdown.Item href="#action/3.1">English</NavDropdown.Item>
+          <NavDropdown title="Language" id="basic-nav-dropdown">
+          <NavDropdown.Item onSelect={handleOnSelect}>English</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>

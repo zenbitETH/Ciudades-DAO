@@ -1,12 +1,12 @@
 import { useState, useContext } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import IsLoadingModal from '../modals/IsLoadingModal';
-import { TaroSimpleContext } from '../contexts/TaroContext';
+import { TaroContext } from '../contexts/TaroContext';
 
 const CreateProposal = () => {
   let [form, setForm] = useState();
   let [loadingModalShow, setLoadingModalShow] = useState();
-  let {taroSimple} = useContext(TaroSimpleContext);
+  let {taroSimple} = useContext(TaroContext);
 
   //Delay function is only for development
   const delay = () => new Promise(res => setTimeout(res, 2000));
