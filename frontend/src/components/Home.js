@@ -11,9 +11,6 @@ import { TaroContext } from '../contexts/TaroContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 
-//remove for production
-import Comp from '../../contracts/contracts/Comp.sol/Comp.json';
-
 function Home() {
   let [provider, setProvider] = useState();
   let [ethersProvider, setEthersProvider] = useState();
@@ -28,8 +25,6 @@ function Home() {
   let {taro, setTaro} = useContext(TaroContext);
   let {isEnglish} = useContext(LanguageContext);
 
-   // remove for production
-   const Taro = Comp;
 
    useEffect(() => {
      const init = async () => {
