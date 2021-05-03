@@ -9,7 +9,7 @@ const About = () => {
           1. ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?
         </div>
         <div className="main">
-          Protocolo para digitalizar la gobernanza urbana mediante interacciones con la moneda digital de la ciudad de Querétaro: TARO.
+          Protocolo de gobernanza urbana para proponer, votar y ejectuar tareas y recompensarlas con la moneda digital de la ciudad de QueréTARO.
         </div>
         <div className="purple">
           1 ✋ Propon 
@@ -21,7 +21,7 @@ const About = () => {
           3 🥇 Obtén TARO
         </div>
         <div className="main">
-          VoTARO aprovecha las carteras de la Web3.0, los contratos inteligentes del protocolo Compound y tokens con los estandares de el blockchain de ethereum para  gestionar 
+          VoTARO es una aplicación descentralizada desarrollada con herramientas de la Web3.0, los contratos inteligentes del protocolo Compound y tokens de ethereum para gestionar 
           la gobernanza de eventos o necesidades urbanas de manera automatizada, transparente y descentralizada.
         </div>
         <div className="orange">
@@ -49,8 +49,6 @@ const About = () => {
         <div className="main">
           <p>2. El token TARO solo se puede obtener como recompensa 🥇 al:</p> 
           <p className="main2">✔️ Verificar que eres ciudadan@ queretan@ al final de esta pantalla.<p className="space">🗳️ Participar en la gobernanza de la ciudad.</p></p>
-          <p>3. Después de distribuir el 30% en verificaciones y participaciones de gobernanza,el token podrá ser convertido a pesos (TARO/ETH/PESO) y viceversa a través de un protocolo 
-          de liquidez descentralizada (uniswap). TARO no podrá ser adquirirido en ninguna de nuestras utilizando pesos.</p>
         </div>
         <div className="orange">
           5. Beneficios para la ciudad
