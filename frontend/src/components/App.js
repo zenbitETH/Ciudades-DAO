@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
-import { TaroContext } from '../contexts/TaroSimpleContext';
+import { TaroContext } from '../contexts/TaroContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 import Home from './Home';
@@ -15,11 +15,11 @@ import CreateProposal from './CreateProposal';
 function App() {
   let [isValidated, setIsValidated] = useState();
   let [taro, setTaro] = useState();
-  let [isSpanish, setIsSpanish] = useState();
+  let [isEnglish, setIsEnglish] = useState();
 
   return (
     <div>
-      <LanguageContext.Provider value={{isSpanish, setIsSpanish}}>
+      <LanguageContext.Provider value={{isEnglish, setIsEnglish}}>
       <TaroContext.Provider value={{taro, setTaro}}>
       <ValidationRequiredContext.Provider value={{isValidated, setIsValidated}}>
         <Router>

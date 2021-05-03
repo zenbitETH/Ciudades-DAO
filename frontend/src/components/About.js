@@ -4,11 +4,11 @@ import logo from '../assets/Logo.svg';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const About = () => {
-  let {isSpanish} = useContext(LanguageContext);
+  let {isEnglish} = useContext(LanguageContext);
 
   return (   
   <div className="App">
-  {isSpanish ?
+  {isEnglish ?
     <div>
       <div className="gray3">
         <div className="text-large">1. ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?</div>
