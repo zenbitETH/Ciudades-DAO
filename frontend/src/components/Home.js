@@ -155,48 +155,6 @@ function Home() {
     <div>
       {isEnglish ?
           <div className="App">
-            <Card.Text>Uraban GovernanceProtocolo para digitalizar la gobernanza urbana de la ciudad de Querétaro</Card.Text>
-          <div className="Wallet">
-          
-            {!isMetamastInstalled ?
-            <InstallMetamaskAlert />:isConnected ? '' : isConnecting? 
-            <ConnectingButton />: 
-            <ConnectButton handleOnConnect={handleOnConnect}/>}
-          </div>
-            <Card className="gray">
-          <Card.Title className="text-large">Bloqueado</Card.Title>
-            <div className="item2">
-             <Card.Body>
-               <Card.Text>TARO en la cartera</Card.Text>
-               <Card.Text className="text-large">-</Card.Text>
-               <Button disabled block>Obtén TARO</Button>
-             </Card.Body>
-              <Card.Body>
-                <Card.Text>TARO para votar</Card.Text>
-                <Card.Text className="text-large">-</Card.Text>
-                <Button disabled block>Delegar TARO</Button>
-              </Card.Body>
-            </div>
-            </Card>
-              <Card className="gray">
-                <Card.Title className="text-large">Bloqueado</Card.Title>
-                <div className="item2">
-                  <Card.Body>
-                    <Card.Text>Propuestas por votar</Card.Text>
-                    <Card.Text className="text-large">-</Card.Text>
-                    <Button disabled block>Votar</Button>
-                  </Card.Body> 
-                  <Card.Body>
-                    <Card.Text>Propuestas generadas</Card.Text>
-                    <Card.Text className="text-large">-</Card.Text>
-                    <Button disabled block>Generar propuestas</Button>
-                  </Card.Body>
-                </div>
-              </Card>
-          </div>
-     :
-          <div className="App">
-                
           <Card.Text>Urban governance protocol for Queretaro City DAO</Card.Text>
           <div className="Wallet">
           
@@ -236,6 +194,50 @@ function Home() {
                 </div>
               </Card>
           </div>
+
+     :
+
+        <div className="App">
+            <Card.Text>Protocolo para digitalizar la gobernanza urbana de la ciudad de Querétaro</Card.Text>
+          <div className="Wallet">
+          
+            {!isMetamastInstalled ?
+            <InstallMetamaskAlert />:isConnected ? '' : isConnecting? 
+            <ConnectingButton />: 
+            <ConnectButton handleOnConnect={handleOnConnect}/>}
+          </div>
+            <Card className="gray">
+          <Card.Title className="text-large">Bloqueado</Card.Title>
+            <div className="item2">
+             <Card.Body>
+               <Card.Text>TARO en la cartera</Card.Text>
+               <Card.Text className="text-large">-</Card.Text>
+               <Button disabled block>Obtén TARO</Button>
+             </Card.Body>
+              <Card.Body>
+                <Card.Text>TARO para votar</Card.Text>
+                <Card.Text className="text-large">-</Card.Text>
+                <Button disabled block>Delegar TARO</Button>
+              </Card.Body>
+            </div>
+            </Card>
+              <Card className="gray">
+                <Card.Title className="text-large">Bloqueado</Card.Title>
+                <div className="item2">
+                  <Card.Body>
+                    <Card.Text>Propuestas por votar</Card.Text>
+                    <Card.Text className="text-large">-</Card.Text>
+                    <Button disabled block>Votar</Button>
+                  </Card.Body> 
+                  <Card.Body>
+                    <Card.Text>Propuestas generadas</Card.Text>
+                    <Card.Text className="text-large">-</Card.Text>
+                    <Button disabled block>Generar propuestas</Button>
+                  </Card.Body>
+                </div>
+              </Card>
+          </div>
+          
             }
       </div>
         );
