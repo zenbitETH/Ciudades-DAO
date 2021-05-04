@@ -22,7 +22,7 @@ const Header = () => {
             <Nav.Link href="/About">What is VoTARO?</Nav.Link>
             <Nav.Link href="/proposallist">🥇 0</Nav.Link>
             <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
-            <NavDropdown className="lan" title="🌐" id="basic-nav-dropdown">
+            <NavDropdown title="🌐" id="basic-nav-dropdown">
              <NavDropdown.Item className="lan" onSelect={handleOnSelect}>Español</NavDropdown.Item>
             </NavDropdown>
           </Nav>
