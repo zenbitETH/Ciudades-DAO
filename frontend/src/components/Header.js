@@ -12,7 +12,7 @@ const Header = () => {
   return (
   <div>   
       {isEnglish ?
-      <div>
+      <div className="Nav">
       <Navbar>
         <Navbar.Brand href="/Home">
         <img src={logo} alt="Procotol Cities" width="150px" />
@@ -39,7 +39,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
-            <Nav.Link href="/About">¿Qué es VoTARO?</Nav.Link>
+            <Nav.Link style={{color: '#FF9400'}} activeStyle={{color: '#FAC91A'}} href="/About">¿Qué es VoTARO?</Nav.Link>
             <Nav.Link href="/proposallist">🥇 0</Nav.Link>
             <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
             <NavDropdown title="🌐Idioma" id="basic-nav-dropdown">
