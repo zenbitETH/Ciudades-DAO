@@ -9,7 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.Navbar { 
+Nav { 
   background-color: #3d386b !important;
   font-family: 'Lexend Deca', sans-serif;
   color: #FF9400 !important;
@@ -47,7 +47,7 @@
   background-color: #FF9400 !important;
 }
 
-Nav.Link {
+Nav.Link li {
     color: #FAC91A !important;
 }
 
