@@ -25,11 +25,12 @@ a:hover {
 }
 
 Nav, Nav.Link {
-  background-color: #3d386b !important;
-  position: sticky;
-  display: inline;
-  font-family: 'Lexend Deca', sans-serif;
   color: #FF9400 !important;
+  background-color: #3d386b !important;
+  position: sticky !important;
+  display: inline !important;
+  font-family: 'Lexend Deca', sans-serif;
+  
 }
 
 .main  {
@@ -45,7 +46,6 @@ Nav, Nav.Link {
   text-justify: inter-word;
   box-sizing: border-box;
   padding: 15px;
-
 }
 
 .Wallet {
