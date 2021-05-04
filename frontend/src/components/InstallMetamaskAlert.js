@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import {Alert} from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import { LanguageContext } from '../contexts/LanguageContext';
+import '../styles/Home.css';
 
 
 const InstallMetamaskAlert = () => {

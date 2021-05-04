@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 import {ListGroup} from 'react-bootstrap';
 import Proposal from './Proposal';
 import { proposalArray } from '../DELETEBEFOREPRODUCTION/proposalArray.js';
+import '../styles/Home.css';
 
 const ProposalList = () => {
   const list = proposalArray.map((proposal, i) => (

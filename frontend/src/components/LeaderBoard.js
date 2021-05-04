@@ -1,4 +1,5 @@
 import Leader from './Leader';
+import '../styles/Home.css';
 
 const leaderArray = ['person A', 'person B', 'person C'];
 

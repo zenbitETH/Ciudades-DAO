@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import { QuizContext } from '../contexts/QuizContext';
+import '../styles/Home.css';
 
 const Question = ({question, answers, number}) => {
   let { userAnswers, setUserAnswers } = useContext(QuizContext);

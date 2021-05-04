@@ -1,5 +1,6 @@
 import { Modal } from 'react-bootstrap';
 import {Link} from "react-router-dom";
+import '../styles/Home.css';
 
 const QuizFailureModal = (props) => {
   return (

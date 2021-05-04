@@ -1,4 +1,5 @@
 import { Modal, Spinner } from 'react-bootstrap';
+import '../styles/Home.css';
 
 const IsLoadingModal = (props) => {
   return (

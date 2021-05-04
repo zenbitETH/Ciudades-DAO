@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import IsLoadingModal from '../modals/IsLoadingModal';
 import { TaroContext } from '../contexts/TaroContext';
+import '../styles/Home.css';
 
 const CreateProposal = () => {
   let [form, setForm] = useState();

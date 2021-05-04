@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import {Button} from 'react-bootstrap';
 import logo from '../assets/Logo.svg';
 import { LanguageContext } from '../contexts/LanguageContext';
+import '../styles/Home.css';
 
 const About = () => {
   let {isEnglish} = useContext(LanguageContext);

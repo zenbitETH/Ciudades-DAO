@@ -1,4 +1,5 @@
 import { Card } from 'react-bootstrap';
+import '../styles/Home.css';
 
 const Leader = ({person}) => {
   return (

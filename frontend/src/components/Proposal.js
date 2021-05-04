@@ -1,4 +1,5 @@
 import { Card, Button } from 'react-bootstrap';
+import '../styles/Home.css';
 
 const Proposal = ({title, typeOfAction, neighborhood, personInCharge, description, expiration, budget, requiredTaroToVote}) => {
   return (

@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { TaroContext } from '../contexts/TaroContext';
 import { LanguageContext } from '../contexts/LanguageContext';
+import '../styles/Home.css';
 
 import Home from './Home';
 import About from './About';
