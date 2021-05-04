@@ -43,19 +43,20 @@ const About = () => {
           <p className="main2">✔️ You verify that you are a Queretaro citizen at the end of this screen.
           <p className="main2">🗳️ You participate in TARO urban governance.</p></p></div>
         <div className="orange">4. Benefits for the City</div>
-        <div className="text-medium-left" ></div>       
-         <div> ⛓️  Urban governance registration on blockchain</div>
-         <div> 🏙️ Urban processes tracked on Smart Contracts. </div>
-         <div> 🤖 Automation and Decentralization of services. </div>
-         <div> 🧙‍♂️ Citizens develop digital skills.</div>
-         <div> 🤝 Transparent and decentralized urban consensus</div>
-         <div> 🧬 Predictive Economy and Urban Development. </div>
-      </div>
+        <div className="text-medium-left" >       
+          <div> ⛓️  Urban governance registration on blockchain</div>
+          <div> 🏙️ Urban processes tracked on Smart Contracts. </div>
+          <div> 🤖 Automation and Decentralization of services. </div>
+          <div> 🧙‍♂️ Citizens develop digital skills.</div>
+          <div> 🤝 Transparent and decentralized urban consensus</div>
+          <div> 🧬 Predictive Economy and Urban Development. </div>
+        </div>
       <div className="gray3">    
         <div className="orange">Do you live in Querétaro? Prove it and get 100 TARO</div>
         <div className="main">Answer this questionnaire to verify that you are from Queretaro and receive up to 100 TAROs to vote for the proposals.</div>
         <Button className="Quiz" href="/quiz" >Verify Queretaro citizenship</Button>
       </div>
+      </div> 
   </div> 
 </div>
     :
@@ -84,7 +85,7 @@ const About = () => {
       <div className="main">
         <p>2. El token TARO solo se puede obtener como recompensa 🥇 al:</p>
         <p className="main2">✔️ Verificar que eres ciudadan@ queretan@ al final de esta pantalla.
-        <p className="space">🗳️ Participar en la gobernanza de la ciudad.</p></p></div>
+        <p className="main2">🗳️ Participar en la gobernanza de la ciudad.</p></p></div>
       <div className="orange">5. Beneficios para la ciudad</div>
       <div className="text-medium-left">
         <div >⛓️ Registro de gobernanza urbana en blockchain.</div>
@@ -93,6 +94,7 @@ const About = () => {
         <div >🧙‍♂️ Ciudadanos desarrollan habilidades digitales.</div>
         <div >🤝 Consenso urbano transparente y descentralizado.</div>
         <div>🧬 Economía y Desarrollo Urbano Predictivos.</div>
+      </div>
     </div>
     <div className="gray3">    
       <div className="orange">¿Vives en Querétaro? pruebalo y obtén 100 TARO</div>
@@ -100,7 +102,6 @@ const About = () => {
       <Button className="Quiz" href="/quiz" >Verificar Queretan@</Button>
     </div> 
     </div> 
-  </div>
       }
     </div>
   );
