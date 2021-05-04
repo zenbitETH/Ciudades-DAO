@@ -1,5 +1,5 @@
 import { Button, Spinner } from 'react-bootstrap';
-import { LanguageContext } from '../contexts/LanguageContext';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 
 const ConnectingButton = () => {
