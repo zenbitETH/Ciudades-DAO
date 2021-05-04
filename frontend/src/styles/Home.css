@@ -10,18 +10,18 @@
 }
 
 a:link {
-  color: #FFff;
+  color: #FFff!important;
 }
 
 a:active{
-  color: #FFff;
+  color: #FAC91A!important;
 }
 a:visited {
-  color: #FAC91A;
+  color: #FAC91A!important;
 }
 
 a:hover {
-  color: #FF9400;
+  color: #FF9400!important;
 }
 
 Nav {
@@ -29,6 +29,10 @@ Nav {
   position: sticky !important;
   font-family: 'Lexend Deca', sans-serif;
   color: #FF9400;
+}
+
+.basic-nav-dropdown {
+  color: #FF9400 !important;
 }
 
 .main  {
