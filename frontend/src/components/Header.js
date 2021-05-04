@@ -13,7 +13,7 @@ const Header = () => {
   <div>   
       {isEnglish ?
       <div>
-      <Navbar className="Navbar">
+      <Navbar>
         <Navbar.Brand href="/Home">
         <img src={logo} alt="Procotol Cities" width="150px" />
         </Navbar.Brand>
