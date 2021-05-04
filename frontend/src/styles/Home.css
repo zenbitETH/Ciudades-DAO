@@ -25,7 +25,6 @@ a:hover {
 }
 
 Nav, Nav.Link {
-  color: #FF9400 !important;
   background-color: #3d386b !important;
   position: sticky !important;
   display: inline !important;
