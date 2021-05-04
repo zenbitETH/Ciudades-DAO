@@ -24,12 +24,10 @@ a:hover {
   color: #FF9400;
 }
 
-Nav, Nav.Link {
+Nav {
   background-color: #3d386b !important;
   position: sticky !important;
-  display: inline !important;
   font-family: 'Lexend Deca', sans-serif;
-  
 }
 
 .main  {
