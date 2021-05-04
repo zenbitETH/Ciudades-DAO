@@ -22,7 +22,7 @@ const Header = () => {
             <Nav.Link href="/About">What is VoTARO?</Nav.Link>
             <Nav.Link href="/proposallist">🥇 0</Nav.Link>
             <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
-            <NavDropdown title="🌐" id="basic-nav-dropdown">
+            <NavDropdown title="🌐Language" id="basic-nav-dropdown">
              <NavDropdown.Item className="lan" onSelect={handleOnSelect}>Español</NavDropdown.Item>
             </NavDropdown>
           </Nav>
@@ -41,8 +41,8 @@ const Header = () => {
             <Nav.Link href="/About">¿Qué es VoTARO?</Nav.Link>
             <Nav.Link href="/proposallist">🥇 0</Nav.Link>
             <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
-            <NavDropdown title="🌐" id="basic-nav-dropdown">
-            <NavDropdown.Item className="lan" onSelect={handleOnSelect}>English</NavDropdown.Item>
+            <NavDropdown title="🌐Idioma" id="basic-nav-dropdown">
+            <NavDropdown.Item className="lan" menuAlign={{ lg: 'left'}} onSelect={handleOnSelect}>English</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
