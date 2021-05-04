@@ -9,26 +9,26 @@ const ConnectingButton = () => {
     <div>
     {isEnglish ?    
     <Button variant="secondary" disabled>
-      <Spinner
-        as="span"
-        animation="border"
-        size="sm"
-        role="status"
-        aria-hidden="true"
-      />
-      Conectando...
-    </Button>
+    <Spinner
+      as="span"
+      animation="border"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+    />
+    Connecting...
+  </Button>
     :
     <Button variant="secondary" disabled>
-      <Spinner
-        as="span"
-        animation="border"
-        size="sm"
-        role="status"
-        aria-hidden="true"
-      />
-      Connecting...
-    </Button>
+    <Spinner
+      as="span"
+      animation="border"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+    />
+    Conectando...
+  </Button>
     }
     </div>
 
