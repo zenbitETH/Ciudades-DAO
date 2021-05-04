@@ -164,7 +164,7 @@ function Home() {
             <ConnectButton handleOnConnect={handleOnConnect}/>}
           </div>
           <Card className="gray">
-          <Card.Title className="orange">TARO Balance</Card.Title>
+          <Card.Title className="orange2">TARO Balance</Card.Title>
           <Card.Text className="text-large">Locked</Card.Text>
             <div className="item2">
              <Card.Body>
@@ -180,7 +180,7 @@ function Home() {
             </div>
             </Card>
               <Card className="gray">
-              <Card.Title className="orange">Balance de TARO</Card.Title>
+                <Card.Title className="orange2">Urban Governance</Card.Title>
                 <Card.Text className="text-large">Locked</Card.Text>
                 <div className="item2">
                   <Card.Body>
@@ -202,14 +202,15 @@ function Home() {
         <div className="App">
             <Card.Text>Protocolo para digitalizar la gobernanza urbana de la ciudad de Querétaro</Card.Text>
           <div className="Wallet">
-          
             {!isMetamastInstalled ?
             <InstallMetamaskAlert />:isConnected ? '' : isConnecting? 
             <ConnectingButton />: 
             <ConnectButton handleOnConnect={handleOnConnect}/>}
           </div>
             <Card className="gray">
-          <Card.Title className="text-large">Bloqueado</Card.Title>
+            <Card.Title className="orange2">Balance de TARO</Card.Title>
+            <Card.Text className="text-large">Bloqueado</Card.Text>
+         
             <div className="item2">
              <Card.Body>
                <Card.Text>TARO en la cartera</Card.Text>
@@ -224,7 +225,8 @@ function Home() {
             </div>
             </Card>
               <Card className="gray">
-                <Card.Title className="text-large">Bloqueado</Card.Title>
+                <Card.Title className="orange2">Balance de TARO</Card.Title>
+                <Card.Text className="text-large">Bloqueado</Card.Text>
                 <div className="item2">
                   <Card.Body>
                     <Card.Text>Propuestas por votar</Card.Text>
