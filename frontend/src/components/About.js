@@ -39,10 +39,10 @@ const About = () => {
           </p></div>
         <Button className="Quiz" href="https://metamask.io" >Download Wallet</Button>
         <div className="main">
-          <p>El token TARO solo se puede obtener como recompensa 🥇 when:</p> 
+          <p>$TARO token can only be obtained as a reward🥇 when:</p> 
           <p className="main2">✔️ You verify that you are a Queretaro citizen at the end of this screen.
           <p className="space">🗳️ You participate in TARO urban governance.</p></p></div>
-        <div className="orange">5. Beneficios para la ciudad</div>
+        <div className="orange">4. Benefits for the City</div>
         <div className="text-medium-left" ></div>       
          <div> ⛓️  Urban governance registration on blockchain</div>
          <div> 🏙️ Urban processes tracked on Smart Contracts. </div>
