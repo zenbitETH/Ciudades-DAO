@@ -1,7 +1,7 @@
 import {Card, Button } from 'react-bootstrap';
 import { useContext } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
-import '../styles/Home.css';
+import '../../styles/Home.css';
 
 
 const ConnectButton = ({handleOnConnect}) => {
