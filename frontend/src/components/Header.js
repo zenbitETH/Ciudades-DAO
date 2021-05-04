@@ -40,8 +40,8 @@ const Header = () => {
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
             <Nav.Link href="/About">¿Qué es VoTARO?</Nav.Link>
-            <Nav.Link href="/proposallist">🥇 0</Nav.Link>
-            <Nav.Link  href="/CreateProposal">🗳️ 0</Nav.Link>
+            <Nav.Link style={{color: 'white'}} href="/proposallist">🥇 0</Nav.Link>
+            <Nav.Link style={{color: 'white'}} href="/CreateProposal">🗳️ 0</Nav.Link>
             <NavDropdown style={{color: '#fff'}} title="🌐Idioma"id="basic-nav-dropdown">
             <NavDropdown.Item onSelect={handleOnSelect}>English</NavDropdown.Item>
             </NavDropdown>
