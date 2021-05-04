@@ -47,6 +47,10 @@
   background-color: #FF9400 !important;
 }
 
+Nav.Link {
+    color: #FAC91A !important;
+}
+
 Button {
   border-radius: 25px !important;
   background-color: #FF9400 !important;
@@ -205,11 +209,9 @@ align-items: center !important;
 }
 
 .lan {
-  right: 0; 
-  left: auto;
+  color: #FAC91A !important;
 }
 
 .lan2 {
-  background-color: #FAC91A;
-  color: #3d386b !important;
+  color: #FAC91A !important;
 }
