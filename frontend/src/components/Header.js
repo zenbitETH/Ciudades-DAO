@@ -20,9 +20,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
-            <Nav.Link href="/About">What is VoTARO?</Nav.Link>
-            <Nav.Link href="/proposallist">🥇 0</Nav.Link>
-            <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
+            <Nav.Link  style={{color: 'Orange'}} activeStyle={{color: 'White'}} href="/About">What is VoTARO?</Nav.Link>
+            <Nav.Link  style={{color: 'Orange'}} activeStyle={{color: 'White'}} href="/proposallist">🥇 0</Nav.Link>
+            <Nav.Link  style={{color: 'Orange'}} activeStyle={{color: 'White'}} href="/CreateProposal">🗳️ 0</Nav.Link>
             <NavDropdown  title="🌐Language" id="basic-nav-dropdown">
              <NavDropdown.Item className="lan2" onSelect={handleOnSelect}>Español</NavDropdown.Item>
             </NavDropdown>
@@ -39,10 +39,10 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
-            <Nav.Link style={{color: 'Orange'}} activeStyle={{color: 'White'}}style_href="/About">¿Qué es VoTARO?</Nav.Link>
-            <Nav.Link style={{color: 'Orange'}} activeStyle={{color: 'White'}} href="/proposallist">🥇 0</Nav.Link>
-            <Nav.Link style={{color: 'Orange'}} activeStyle={{color: 'White'}}href="/CreateProposal">🗳️ 0</Nav.Link>
-            <NavDropdown style={{color: 'Orange'}} activeStyle={{color: 'Orange'}} title="🌐Idioma">
+            <Nav.Link style={{color: 'Orange'}} activeStyle={{color: 'White'}} style_href="/About">¿Qué es VoTARO?</Nav.Link>
+            <Nav.Link style={{color: 'White'}} activeStyle={{color: 'White'}} href="/proposallist">🥇 0</Nav.Link>
+            <Nav.Link style={{color: 'White'}} activeStyle={{color: 'White'}} href="/CreateProposal">🗳️ 0</Nav.Link>
+            <NavDropdown style={{color: '#fff'}} title="🌐Idioma"id="basic-nav-dropdown">
             <NavDropdown.Item onSelect={handleOnSelect}>English</NavDropdown.Item>
             </NavDropdown>
           </Nav>
