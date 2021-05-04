@@ -205,8 +205,10 @@ align-items: center !important;
 }
 
 .lan {
-  margin-top: 3%;
-  display: flex !important;
+  left: inherit !important;
+  border: none!important;
+  right: 0;
+  left: auto;
   background-color: #FAC91A;
-  color: #3d386b;
+  color: #3d386b !important;
 }
