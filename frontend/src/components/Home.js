@@ -164,8 +164,8 @@ function Home() {
             <ConnectButton handleOnConnect={handleOnConnect}/>}
           </div>
           <Card className="gray">
-          <Card.Text className="orange">TARO Balance</Card.Text>
-          <Card.Title className="text-large">Locked</Card.Title>
+          <Card.Title className="orange">TARO Balance</Card.Title>
+          <Card.Text className="text-large">Locked</Card.Text>
             <div className="item2">
              <Card.Body>
                <Card.Text>TARO on wallet</Card.Text>
@@ -180,8 +180,8 @@ function Home() {
             </div>
             </Card>
               <Card className="gray">
-              <Card.Text className="orange">Balance de TARO</Card.Text>
-                <Card.Title className="text-large">Locked</Card.Title>
+              <Card.Title className="orange">Balance de TARO</Card.Title>
+                <Card.Text className="text-large">Locked</Card.Text>
                 <div className="item2">
                   <Card.Body>
                     <Card.Text>Proposals to vote</Card.Text>
