@@ -9,24 +9,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-link {
+a:link {
   color: #FFff;
 }
-:visited {
+
+a:active{
+  color: #FFff;
+}
+a:visited {
   color: #FAC91A;
 }
 
-:hover {
+a:hover {
   color: #FF9400;
 }
 
 Nav { 
   background-color: #3d386b !important;
+  position: sticky;
+  display: inline;
   font-family: 'Lexend Deca', sans-serif;
   color: #FF9400 !important;
 }
 
-.main {
+.main  {
   text-align: justify;
   text-justify: inter-word;
   box-sizing: border-box;
@@ -58,7 +64,7 @@ Nav {
   background-color: #FF9400 !important;
 }
 
-Nav.Link li {
+Nav.Link {
     color: #FAC91A !important;
 }
 
