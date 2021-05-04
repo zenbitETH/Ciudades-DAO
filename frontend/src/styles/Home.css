@@ -9,6 +9,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+link {
+  color: #FFff;
+}
+:visited {
+  color: #FAC91A;
+}
+
+:hover {
+  color: #FF9400;
+}
+
 Nav { 
   background-color: #3d386b !important;
   font-family: 'Lexend Deca', sans-serif;
