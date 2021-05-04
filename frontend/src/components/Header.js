@@ -24,7 +24,7 @@ const Header = () => {
             <Nav.Link  href="/proposallist">🥇 0</Nav.Link>
             <Nav.Link  href="/CreateProposal">🗳️ 0</Nav.Link>
             <NavDropdown  title="🌐Language" id="basic-nav-dropdown">
-             <NavDropdown.Item className="lan2" onSelect={handleOnSelect}>Español</NavDropdown.Item>
+             <NavDropdown.Item className="lan" onSelect={handleOnSelect}>Español</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -43,7 +43,7 @@ const Header = () => {
             <Nav.Link style={{color: 'white'}} href="/proposallist">🥇 0</Nav.Link>
             <Nav.Link style={{color: 'white'}} href="/CreateProposal">🗳️ 0</Nav.Link>
             <NavDropdown style={{color: '#fff'}} title="🌐Idioma"id="basic-nav-dropdown">
-            <NavDropdown.Item onSelect={handleOnSelect}>English</NavDropdown.Item>
+            <NavDropdown.Item className="lan" onSelect={handleOnSelect}>English</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
