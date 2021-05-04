@@ -24,7 +24,7 @@ a:hover {
   color: #FF9400;
 }
 
-Nav { 
+Nav, Nav.Link {
   background-color: #3d386b !important;
   position: sticky;
   display: inline;
@@ -64,9 +64,7 @@ Nav {
   background-color: #FF9400 !important;
 }
 
-Nav.Link {
-    color: #FAC91A !important;
-}
+
 
 Button {
   border-radius: 25px !important;
