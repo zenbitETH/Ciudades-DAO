@@ -83,10 +83,11 @@ button:disabled {
 .text-medium-left {
   font-size: 1rem !important;
   text-align: left !important;
-  text-justify: inter-word !important;
-  box-sizing: border-box !important;
+  display: flex !important;
+  justify-content: left !important;
+  align-content: left !important;
+  align-items: left !important;
   padding: 10px;
-  margin-top: 5%;
   margin-bottom: 5%;
 }
 

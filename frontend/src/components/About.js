@@ -41,7 +41,7 @@ const About = () => {
         <div className="main">
           <p>$TARO token can only be obtained as a reward🥇 when:</p> 
           <p className="main2">✔️ You verify that you are a Queretaro citizen at the end of this screen.
-          <p className="space">🗳️ You participate in TARO urban governance.</p></p></div>
+          <p className="main2">🗳️ You participate in TARO urban governance.</p></p></div>
         <div className="orange">4. Benefits for the City</div>
         <div className="text-medium-left" ></div>       
          <div> ⛓️  Urban governance registration on blockchain</div>
