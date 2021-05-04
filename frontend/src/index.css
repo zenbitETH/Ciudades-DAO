@@ -9,10 +9,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.navbar { 
-  background-color: linear-gradient(to right #ffffff, #FAC91A) !important;
+.Navbar { 
+  background-color: #3d386b !important;
   font-family: 'Lexend Deca', sans-serif;
-  color: #3d386b !important;
+  color: #FF9400 !important;
 }
 
 .main {
