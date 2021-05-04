@@ -10,7 +10,7 @@
 }
 
 .navbar { 
-  background-color: linear-gradient(to right #ffffff, #FAC91A)!important;
+  background-color: linear-gradient(to right #ffffff, #FAC91A) !important;
   font-family: 'Lexend Deca', sans-serif;
   color: #3d386b !important;
 }
@@ -205,6 +205,11 @@ align-items: center !important;
 }
 
 .lan {
+  right: 0; 
+  left: auto;
+}
+
+.lan2 {
   background-color: #FAC91A;
   color: #3d386b !important;
 }
