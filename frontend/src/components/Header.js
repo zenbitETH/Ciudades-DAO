@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import logo from '../assets/Logo.svg';
+import '../styles/Home.css';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
   <div>   
       {isEnglish ?
       <div>
-      <Navbar>
+      <Navbar className="Navbar">
         <Navbar.Brand href="/Home">
         <img src={logo} alt="Procotol Cities" width="150px" />
         </Navbar.Brand>
@@ -31,7 +32,7 @@ const Header = () => {
         </div>
       :
         <div>
-        <Navbar className="navbar">
+        <Navbar className="Navbar">
         <Navbar.Brand href="/Home">
         <img src={logo} alt="Procotol Cities" width="150px" />
         </Navbar.Brand>
