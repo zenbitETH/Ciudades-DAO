@@ -10,9 +10,9 @@
 }
 
 .navbar { 
-  background-color:  linear-gradient(to right #ffffff, #FAC91A);
+  background-color: linear-gradient(to right #ffffff, #FAC91A)!important;
   font-family: 'Lexend Deca', sans-serif;
-  color: #3d386b;
+  color: #3d386b!important;
 }
 
 .main {
