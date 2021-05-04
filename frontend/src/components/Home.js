@@ -164,6 +164,7 @@ function Home() {
             <ConnectButton handleOnConnect={handleOnConnect}/>}
           </div>
           <Card className="gray">
+          <Card.Text className="orange">TARO Balance</Card.Text>
           <Card.Title className="text-large">Locked</Card.Title>
             <div className="item2">
              <Card.Body>
@@ -179,6 +180,7 @@ function Home() {
             </div>
             </Card>
               <Card className="gray">
+              <Card.Text className="orange">Balance de TARO</Card.Text>
                 <Card.Title className="text-large">Locked</Card.Title>
                 <div className="item2">
                   <Card.Body>
