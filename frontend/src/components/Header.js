@@ -39,9 +39,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
-            <Nav.Link style={{color: '#FF9400'}} activeStyle={{color: '#FAC91A'}} href="/About">¿Qué es VoTARO?</Nav.Link>
-            <Nav.Link href="/proposallist">🥇 0</Nav.Link>
-            <Nav.Link href="/CreateProposal">🗳️ 0</Nav.Link>
+            <Nav.Link style={{color: 'orange'}} href="/About">¿Qué es VoTARO?</Nav.Link>
+            <Nav.Link style={{color: 'orange'}} href="/proposallist">🥇 0</Nav.Link>
+            <Nav.Link style={{color: 'orange'}} href="/CreateProposal">🗳️ 0</Nav.Link>
             <NavDropdown title="🌐Idioma" id="basic-nav-dropdown">
             <NavDropdown.Item className="lan" menuAlign={{ lg: 'left'}} onSelect={handleOnSelect}>English</NavDropdown.Item>
             </NavDropdown>
