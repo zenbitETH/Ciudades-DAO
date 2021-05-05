@@ -81,7 +81,7 @@ const About = () => {
       <div className="orange">4. ¿Cómo obtengo $TARO?</div>
       <div className="main">
        <p>1. Para obener TARO necesitas una cartera web 3 como Metamask, puedes descargar una al dar click en el botón.</p></div>
-      <Button className="Quiz" href="https://metamask.io" >Descargar Cartera</Button>
+      <Button className="a.alt" href="https://metamask.io" >Descargar Cartera</Button>
       <div className="main">
         <p>2. El token TARO solo se puede obtener como recompensa 🥇 al:</p>
         <p className="main2">✔️ Verificar que eres ciudadan@ queretan@ al final de esta pantalla.
