@@ -83,9 +83,10 @@ const About = () => {
        <p>1. Para obener TARO necesitas una cartera web 3 como Metamask, puedes descargar una al dar click en el botón.</p></div>
       <Button  a className="alt" href="https://metamask.io" >Descargar Cartera</Button>
       <div className="main">
-        <p>2. El token TARO solo se puede obtener como recompensa 🥇 al:</p>
+        <p>2. El token TARO solo se puede obtener como recompensa 🥇 al:
         <p className="main2">✔️ Verificar que eres ciudadan@ queretan@ al final de esta pantalla.
-        <p className="main2">🗳️ Participar en la gobernanza de la ciudad.</p></p></div>
+        <p className="main2">🗳️ Participar en la gobernanza de la ciudad.</p></p></p>
+      </div>
       <div className="orange">5. Beneficios para la ciudad</div>
       <div className="text-medium-left">
         <div >⛓️ Registro de gobernanza urbana en blockchain.</div>
