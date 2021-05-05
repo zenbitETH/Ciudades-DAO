@@ -225,7 +225,7 @@ function Home() {
             </div>
             </Card>
               <Card className="gray">
-                <Card.Title className="orange2">Governanza Urbana</Card.Title>
+                <Card.Title className="orange2">Gobernanza Urbana</Card.Title>
                 <Card.Text className="text-large">Bloqueado</Card.Text>
                 <div className="item2">
                   <Card.Body>

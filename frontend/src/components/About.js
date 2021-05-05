@@ -69,7 +69,7 @@ const About = () => {
       <div className="purple">3 🥇 Obtén TARO</div>
       <div className="main">
       VoTaro es una aplicación de Ethereum que utiliza un sistema de recompensas para alentar a los residentes de la ciudad de Querétaro a proponer y participar en 
-      actividades que mejorar su comunidad.</div>
+      actividades que mejoran su comunidad.</div>
       <div className="orange">2. Objetivo</div>
       <div className="main">
         Convertir a la ciudad de Querétaro en una Organización Autónoma Descentralizada que exista de manera automatizada en internet pero que 
