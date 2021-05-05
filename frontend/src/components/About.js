@@ -37,7 +37,7 @@ const About = () => {
           Proposals are voted upon, and if passed and the proposed activity is carried out, the proposer is receives TARO. One TARO token is worth one vote. Anyone with TARO 
           can delegate their voting power to another TARO holder. After the first five proposals, a user must have received one percent of the total voting power to make a proposal.
           </p></div>
-        <Button className="Quiz" href="https://metamask.io" >Download Wallet</Button>
+        <Button className="alt" href="https://metamask.io" >Download Wallet</Button>
         <div className="main">
           <p>$TARO token can only be obtained as a reward🥇 when:</p> 
           <p className="main2">✔️ You verify that you are a Queretaro citizen at the end of this screen.
@@ -55,7 +55,7 @@ const About = () => {
       <div className="gray3">    
         <div className="orange">Do you live in Querétaro? Prove it and get 100 TARO</div>
         <div className="main">Answer this questionnaire to verify that you are from Queretaro and receive up to 100 TAROs to vote for the proposals.</div>
-        <Button className="Quiz" href="/quiz" >Verify Queretaro citizenship</Button>
+        <Button className="alt" href="/quiz" >Verify Queretaro citizenship</Button>
       </div>
   </div> 
 </div>
@@ -81,7 +81,7 @@ const About = () => {
       <div className="orange">4. ¿Cómo obtengo $TARO?</div>
       <div className="main">
        <p>1. Para obener TARO necesitas una cartera web 3 como Metamask, puedes descargar una al dar click en el botón.</p></div>
-      <Button className="Quiz" a className="alt" href="https://metamask.io" >Descargar Cartera</Button>
+      <Button  a className="alt" href="https://metamask.io" >Descargar Cartera</Button>
       <div className="main">
         <p>2. El token TARO solo se puede obtener como recompensa 🥇 al:</p>
         <p className="main2">✔️ Verificar que eres ciudadan@ queretan@ al final de esta pantalla.
@@ -99,7 +99,7 @@ const About = () => {
     <div className="gray3">    
       <div className="orange">¿Vives en Querétaro? pruebalo y obtén 100 TARO</div>
       <div className="main">Contesta este cuestionario para verififcar que eres queretano y recibe hasta 100 TARO para votar por las propuestas.</div>
-      <Button className="Quiz" href="/quiz" >Verificar Queretan@</Button>
+      <Button className="alt" href="/quiz" >Verificar Queretan@</Button>
     </div> 
     </div> 
       }
