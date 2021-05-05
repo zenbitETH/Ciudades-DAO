@@ -73,7 +73,7 @@ const About = () => {
       <div className="orange">2. Objetivo</div>
       <div className="main">
         Convertir a la ciudad de Querétaro en una Organización Autónoma Descentralizada que exista de manera automatizada en internet pero que 
-        dependa fuertemente del talento humano para ejecutar tareas urbanas o virtuales que el protocolo no pueda completar por si mismo.</div>
+        dependa fuertemente del talento humano para ejecutar tareas urbanas o virtuales que el algoritmo no pueda completar por si mismo.</div>
       <div className="orange">3. ¿Qué es $TARO?</div>
       <div className="main">
         TARO es una versión modificada del contrato inteligente COMP de Compound. Funciona como moneda digital de la ciudad de Querétaro, cada moneda te da poder de 
