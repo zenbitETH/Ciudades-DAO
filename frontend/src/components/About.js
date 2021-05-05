@@ -40,8 +40,8 @@ const About = () => {
         <Button className="alt" href="https://metamask.io" >Download Wallet</Button>
         <div className="main">
           <p>$TARO token can only be obtained as a reward🥇 when:
-          <p className="main2">✔️ You verify that you are a Queretaro citizen at the end of this screen.
-          <p className="main2">🗳️ You participate in TARO urban governance.</p></p></p></div>
+          <p className="main2">✔️ You verify that you are a Queretaro citizen at the end of this screen.</p>
+          <p className="main2">🗳️ You participate in TARO urban governance.</p></p></div>
         <div className="orange">4. Benefits for the City</div>
         <div className="text-medium-left" >       
           <div> ⛓️  Urban governance registration on blockchain</div>
