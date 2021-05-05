@@ -51,12 +51,12 @@ const About = () => {
           <div> 🤝 Transparent and decentralized urban consensus</div>
           <div> 🧬 Predictive Economy and Urban Development. </div>
         </div>
+        </div>
       <div className="gray3">    
         <div className="orange">Do you live in Querétaro? Prove it and get 100 TARO</div>
         <div className="main">Answer this questionnaire to verify that you are from Queretaro and receive up to 100 TAROs to vote for the proposals.</div>
         <Button className="Quiz" href="/quiz" >Verify Queretaro citizenship</Button>
       </div>
-      </div> 
   </div> 
 </div>
     :
