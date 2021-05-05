@@ -9,20 +9,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a:link {
-  color: #FFff!important;
-}
+a:link {color: #FFff!important;}
+a:active{color: #FAC91A!important;}
+a:visited {color: #FFff!important;}
+a:hover {color: #FF9400!important;}
 
-a:active{
-  color: #FAC91A!important;
-}
-a:visited {
-  color: #FFff!important;
-}
-
-a:hover {
-  color: #FF9400!important;
-}
+a.alt:link {color: #FFff!important;}
+a.alt:active{color: #FAC91A!important;}
+a.alt:visited {color: #FFff!important;}
+a.alt:hover {color: #3d386b!important;}
 
 Nav {
   background-color: #3d386b !important;
