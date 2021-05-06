@@ -75,7 +75,7 @@ let {isEnglish} = useContext(LanguageContext);
           <Form.Label>
             Title
           </Form.Label>
-           <Form.Control type="text" placeholder="title" onChange={handleOnChangeTitle}/>
+           <Form.Control sm={10} type="text" placeholder="title" onChange={handleOnChangeTitle}/>
          
         </Form.Group>
 
