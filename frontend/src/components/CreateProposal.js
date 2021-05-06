@@ -1,8 +1,8 @@
 import { useState, useContext } from 'react';
+import { LanguageContext } from '../contexts/LanguageContext';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import IsLoadingModal from '../modals/IsLoadingModal';
 import { TaroContext } from '../contexts/TaroContext';
-import '../styles/Home.css';
 
 const CreateProposal = () => {
   let [form, setForm] = useState();
@@ -65,10 +65,12 @@ const CreateProposal = () => {
   const handleOnLoadingModal = () => {
     setLoadingModalShow(false);
   };
-
+let {isEnglish} = useContext(LanguageContext);
   return (
     <div>
-      <Form>
+      {isEnglish ?
+    <div>
+      <Form className="gray">
         <Form.Group as={Row} controlId="formTitle">
           <Form.Label column sm={2}>
             Title
@@ -154,6 +156,12 @@ const CreateProposal = () => {
         onHide={handleOnLoadingModal}
       />
     </div>
+    :
+    <div>
+
+    </div>
+    }
+  </div>
   );
 };
 

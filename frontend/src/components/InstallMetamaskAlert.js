@@ -1,8 +1,8 @@
 import { useContext } from 'react';
+import { LanguageContext } from '../contexts/LanguageContext';
 import {Alert} from 'react-bootstrap';
 import {Link} from "react-router-dom";
-import { LanguageContext } from '../contexts/LanguageContext';
-import '../styles/Home.css';
+
 
 
 const InstallMetamaskAlert = () => {
