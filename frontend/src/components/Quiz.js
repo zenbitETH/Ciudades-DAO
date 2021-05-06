@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { QuizContext } from '../contexts/QuizContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { Button } from 'react-bootstrap';
