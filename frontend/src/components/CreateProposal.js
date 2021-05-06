@@ -75,9 +75,7 @@ let {isEnglish} = useContext(LanguageContext);
           <Form.Label column sm={2}>
             Title
           </Form.Label>
-          <Col sm={2}>
             <Form.Control type="text" placeholder="title" onChange={handleOnChangeTitle}/>
-          </Col>
         </Form.Group>
 
         <Form.Group as={Row} controlId="formTypeOfAction">
