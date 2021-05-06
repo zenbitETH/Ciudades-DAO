@@ -109,7 +109,7 @@ const Quiz = () => {
   const handleOnLoadingModal = () => {
     setLoadingModalShow(false);
   };
-
+  let {isEnglish} = useContext(LanguageContext);
   return (
     <div>
     {isEnglish ?
