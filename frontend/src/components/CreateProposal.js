@@ -69,73 +69,73 @@ let {isEnglish} = useContext(LanguageContext);
   return (
     <div>
       {isEnglish ?
-    <div className="gray">
+      <div>
       <text>Create new urban governance proposal</text>
-      <Form>
-        <Form.Group as={Row} controlId="formTitle">
-          <Form.Label>
-            Title
-          </Form.Label>
-          <Form.Control type="text" placeholder="title" onChange={handleOnChangeTitle}/>
-        </Form.Group>
+        <Form className="gray">
+          <Form.Group as={Row} controlId="formTitle">
+            <Form.Label>
+              Title
+            </Form.Label>
+            <Form.Control type="text" placeholder="title" onChange={handleOnChangeTitle}/>
+          </Form.Group>
 
-        <Form.Group as={Row} controlId="formTypeOfAction">
-          <Form.Label  >
-            Type of action
-          </Form.Label>
-          <Form.Control type="text" placeholder="type" onChange={handleOnChangeTypeOfAction}/>
-        </Form.Group>
+          <Form.Group as={Row} controlId="formTypeOfAction">
+            <Form.Label  >
+              Type of action
+            </Form.Label>
+            <Form.Control type="text" placeholder="type" onChange={handleOnChangeTypeOfAction}/>
+          </Form.Group>
 
-        <Form.Group as={Row} controlId="formNeighborhood">
-          <Form.Label  >
-            Neighborhood
-          </Form.Label>
-          <Form.Control type="text" placeholder="neighborhood" onChange={handleOnChangeNeighborhood}/>
-        </Form.Group>
+          <Form.Group as={Row} controlId="formNeighborhood">
+            <Form.Label  >
+              Neighborhood
+            </Form.Label>
+            <Form.Control type="text" placeholder="neighborhood" onChange={handleOnChangeNeighborhood}/>
+          </Form.Group>
 
-        <Form.Group as={Row} controlId="formPersonInCharge">
-          <Form.Label  >
-            Person in charge
+          <Form.Group as={Row} controlId="formPersonInCharge">
+            <Form.Label  >
+              Person in charge
+            </Form.Label>        
+          <Form.Control type="text" placeholder="Person in charge" onChange={handleOnChangePersonInCharge}/>
+            
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
+            <Form.Label  >
+              Description
+          </Form.Label>
+          
+            <Form.Control as="textarea" type="text" rows={3} placeholder="description" onChange={handleOnChangeDescription}/>
+            
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formExpiration">
+            <Form.Label  >
+              Expiration
+          </Form.Label>
+          
+            <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
+            
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formBudget">
+            <Form.Label  >
+              Budget
+          </Form.Label>
+          
+            <Form.Control type="text" placeholder="budget" onChange={handleOnChangeBudget}/>
+            
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formRequiredTaroToVote">
+            <Form.Label  >
+              Required TARO to vote
           </Form.Label>        
-        <Form.Control type="text" placeholder="Person in charge" onChange={handleOnChangePersonInCharge}/>
-          
-        </Form.Group>
-
-        <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
-          <Form.Label  >
-            Description
-        </Form.Label>
-        
-          <Form.Control as="textarea" type="text" rows={3} placeholder="description" onChange={handleOnChangeDescription}/>
-          
-        </Form.Group>
-
-        <Form.Group as={Row} controlId="formExpiration">
-          <Form.Label  >
-            Expiration
-         </Form.Label>
-        
-          <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
-          
-        </Form.Group>
-
-        <Form.Group as={Row} controlId="formBudget">
-          <Form.Label  >
-            Budget
-         </Form.Label>
-        
-          <Form.Control type="text" placeholder="budget" onChange={handleOnChangeBudget}/>
-          
-        </Form.Group>
-
-        <Form.Group as={Row} controlId="formRequiredTaroToVote">
-          <Form.Label  >
-            Required TARO to vote
-        </Form.Label>        
-          <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>          
-        </Form.Group>
-        <Button className="submitbutton"classNtype="submit" onClick={handleOnSubmit}>Submit proposal</Button>
-      </Form>
+            <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>          
+          </Form.Group>
+          <Button className="submitbutton"classNtype="submit" onClick={handleOnSubmit}>Submit proposal</Button>
+        </Form>
 
       <IsLoadingModal
         show={loadingModalShow}
