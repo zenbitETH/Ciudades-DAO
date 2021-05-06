@@ -30,6 +30,13 @@ a.alt:hover {color: #3d386b!important;}
   color: #ffffff !important;
 }
 
+.form {
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+}
+
 Nav {
   background-color: #3d386b !important;
   position: sticky !important;
