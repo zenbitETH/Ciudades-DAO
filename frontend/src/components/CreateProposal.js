@@ -90,42 +90,47 @@ let {isEnglish} = useContext(LanguageContext);
             <Form.Label  >
               Neighborhood
             </Form.Label>
-            <Form.Control type="text" placeholder="neighborhood" onChange={handleOnChangeNeighborhood}/>
+            <Form.Control as="select" onChange={handleOnChangeNeighborhood}>
+              <option>Santa Mónica 2</option>
+              <option>Santa Mónica</option>
+              <option>Progreso</option>
+              <option>Ex-Hacienda El Tintero</option>
+              <option>El Tintero</option>
+              <option>El Mirador</option>
+              <option>Otra (mencionar en propuesta)</option>
+            </Form.Control>
           </Form.Group>
 
           <Form.Group as={Row} controlId="formPersonInCharge">
             <Form.Label  >
               Person in charge
             </Form.Label>        
-          <Form.Control type="text" placeholder="Person in charge" onChange={handleOnChangePersonInCharge}/>
-            
+            <Form.Control as="select" onChange={handleOnChangeTypeOfAction}>
+              <option>Actividad</option>
+              <option>Acuerdo</option>
+              <option>Obra o servicio público</option>
+            </Form.Control>            
           </Form.Group>
 
           <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
             <Form.Label  >
               Description
-          </Form.Label>
-          
-            <Form.Control as="textarea" type="text" rows={3} placeholder="description" onChange={handleOnChangeDescription}/>
-            
+          </Form.Label>          
+          <Form.Control as="textarea" type="text" rows={3} placeholder="description" onChange={handleOnChangeDescription}/>            
           </Form.Group>
 
           <Form.Group as={Row} controlId="formExpiration">
             <Form.Label  >
               Expiration
-          </Form.Label>
-          
-            <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
-            
+            </Form.Label>          
+            <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>            
           </Form.Group>
 
           <Form.Group as={Row} controlId="formBudget">
             <Form.Label  >
               Budget
-          </Form.Label>
-          
-            <Form.Control type="text" placeholder="budget" onChange={handleOnChangeBudget}/>
-            
+            </Form.Label>          
+            <Form.Control type="text" placeholder="budget" onChange={handleOnChangeBudget}/>            
           </Form.Group>
 
           <Form.Group as={Row} controlId="formRequiredTaroToVote">
@@ -143,8 +148,84 @@ let {isEnglish} = useContext(LanguageContext);
       />
     </div>
     :
-    <div>
+    <div className="gray">
+      <Form >
+        <text className="orange2">Crear nueva propuesta de gobernanza urbana</text>
+          <Form.Group as={Row} controlId="formTitle">
+            <Form.Label>
+              Título
+            </Form.Label>
+            <Form.Control type="text" placeholder="Título" onChange={handleOnChangeTitle}/>
+          </Form.Group>
 
+          <Form.Group as={Row} controlId="formTypeOfAction">
+            <Form.Label  >
+              Tipo de acción
+            </Form.Label>
+            <Form.Control as="select" onChange={handleOnChangeTypeOfAction}>
+              <option>Actividad</option>
+              <option>Acuerdo</option>
+              <option>Obra o servicio público</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formNeighborhood">
+            <Form.Label  >
+              Colonia
+            </Form.Label>
+            <Form.Control as="select" onChange={handleOnChangeNeighborhood}>
+              <option>Santa Mónica 2</option>
+              <option>Santa Mónica</option>
+              <option>Progreso</option>
+              <option>Ex-Hacienda El Tintero</option>
+              <option>El Tintero</option>
+              <option>El Mirador</option>
+              <option>Otra (mencionar en propuesta)</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formPersonInCharge">
+            <Form.Label  >
+              Persona o entidad a cargo
+            </Form.Label>        
+          <Form.Control type="text" placeholder="Vecinos, Gobierno" onChange={handleOnChangePersonInCharge}/>            
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
+            <Form.Label  >
+              Descripción
+          </Form.Label>          
+            <Form.Control as="textarea" type="text" rows={3} placeholder="Describe tu propuesta" onChange={handleOnChangeDescription}/>            
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formExpiration">
+            <Form.Label>
+              Expiración
+          </Form.Label>
+            <Form.Control as="select" onChange={handleOnChangeTypeOfAction}>
+              <option>1 semana</option>
+              <option>1 mes</option>
+              <option>Hasta que se cumpla</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formBudget">
+            <Form.Label  >
+              Presupuesto
+          </Form.Label>
+          
+            <Form.Control type="text" placeholder="Presupuesto" onChange={handleOnChangeBudget}/>
+            
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formRequiredTaroToVote">
+            <Form.Label  >
+              TARO delegado minimo
+          </Form.Label>        
+            <Form.Control type="text" placeholder="Establece el TARO minimo para votar" onChange={handleOnChangeRequiredTaroToVote}/>          
+          </Form.Group>
+          <Button className="submitbutton"classNtype="submit" onClick={handleOnSubmit}>Enviar propuesta</Button>
+        </Form>
     </div>
     }
   </div>
