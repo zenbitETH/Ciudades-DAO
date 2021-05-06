@@ -69,8 +69,8 @@ let {isEnglish} = useContext(LanguageContext);
   return (
     <div>
       {isEnglish ?
-    <div>
-      <Form className="gray">
+    <div className="gray">
+      <Form >
         <Form.Group as={Row} controlId="formTitle">
           <Form.Label column sm={2}>
             Title
