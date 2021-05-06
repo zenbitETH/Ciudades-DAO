@@ -49,7 +49,7 @@ const Header = () => {
         </Navbar.Collapse>
         </Navbar>
         </div>
-    }
+      }
     </div>
   );
 };
