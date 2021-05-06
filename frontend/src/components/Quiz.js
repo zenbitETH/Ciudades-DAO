@@ -1,14 +1,14 @@
 import { useState } from 'react';
+import { QuizContext } from '../contexts/QuizContext';
+import { LanguageContext } from '../contexts/LanguageContext';
 import { Button } from 'react-bootstrap';
 import Question from './Question';
 import { quizQuestions } from '../quizQuestions/quizQuestions';
 import { quizPreguntas } from '../quizQuestions/quizPreguntas';
-import { QuizContext } from '../contexts/QuizContext';
 import QuizFailureModal from '../modals/QuizFailureModal';
 import QuizSuccessModal from '../modals/QuizSuccessModal';
 import QuizAlreadySubmittedModal from '../modals/QuizAlreadySubmittedModal';
 import IsLoadingModal from '../modals/IsLoadingModal';
-import '../styles/Home.css';
 
 const Quiz = () => {
   let [userAnswers, setUserAnswers] = useState([]);
