@@ -103,6 +103,7 @@ button:disabled {
   border-radius: 25px;
   width:100%;
   max-width: 50%;
+  min-width: 450px !important;
   margin: 3% auto;
   background-image: linear-gradient(#eee, #ccc);
   font-family: 'Lexend Deca', sans-serif;
