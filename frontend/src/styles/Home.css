@@ -30,8 +30,9 @@ a.alt:hover {color: #3d386b!important;}
   color: #ffffff !important;
 }
 
-.form {
+.submit {
   width: 100% !important;
+  margin-left: 25%;
   display: flex !important;
   justify-content: center !important;
   align-content: center !important;
