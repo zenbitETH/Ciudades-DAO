@@ -72,11 +72,12 @@ let {isEnglish} = useContext(LanguageContext);
     <div className="gray">
       <Form >
         <Form.Group as={Row} controlId="formTitle">
-          <Form.Label>
+          <Form.Label column sm={2}>
             Title
           </Form.Label>
-           <Form.Control sm={10} type="text" placeholder="title" onChange={handleOnChangeTitle}/>
-         
+          <Col sm={10}>
+            <Form.Control type="text" placeholder="title" onChange={handleOnChangeTitle}/>
+          </Col>
         </Form.Group>
 
         <Form.Group as={Row} controlId="formTypeOfAction">
