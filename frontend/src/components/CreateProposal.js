@@ -72,80 +72,81 @@ let {isEnglish} = useContext(LanguageContext);
     <div className="gray">
       <Form >
         <Form.Group as={Row} controlId="formTitle">
-          <Form.Label sm={1}>
+          <Form.Label column sm={2}>
             Title
           </Form.Label>
+        
             <Form.Control type="text" placeholder="title" onChange={handleOnChangeTitle}/>
+          
         </Form.Group>
 
         <Form.Group as={Row} controlId="formTypeOfAction">
           <Form.Label column sm={2}>
             Type of action
           </Form.Label>
-           
+        
             <Form.Control type="text" placeholder="type" onChange={handleOnChangeTypeOfAction}/>
-         
+          
         </Form.Group>
 
         <Form.Group as={Row} controlId="formNeighborhood">
           <Form.Label column sm={2}>
             Neighborhood
           </Form.Label>
-           
+        
             <Form.Control type="text" placeholder="neighborhood" onChange={handleOnChangeNeighborhood}/>
-         
+          
         </Form.Group>
 
         <Form.Group as={Row} controlId="formPersonInCharge">
           <Form.Label column sm={2}>
             Person in charge
           </Form.Label>
-           
+        
             <Form.Control type="text" placeholder="Person in charge" onChange={handleOnChangePersonInCharge}/>
-         
+          
         </Form.Group>
 
         <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
           <Form.Label column sm={2}>
             Description
           </Form.Label>
-           
+        
             <Form.Control as="textarea" type="text" rows={3} placeholder="description" onChange={handleOnChangeDescription}/>
-         
+          
         </Form.Group>
 
         <Form.Group as={Row} controlId="formExpiration">
           <Form.Label column sm={2}>
             Expiration
           </Form.Label>
-           
+        
             <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
-         
+          
         </Form.Group>
 
         <Form.Group as={Row} controlId="formBudget">
           <Form.Label column sm={2}>
             Budget
           </Form.Label>
-           
+        
             <Form.Control type="text" placeholder="budget" onChange={handleOnChangeBudget}/>
-         
+          
         </Form.Group>
 
         <Form.Group as={Row} controlId="formRequiredTaroToVote">
           <Form.Label column sm={2}>
             Required TARO to vote
           </Form.Label>
-           
+        
             <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
-         
+          
         </Form.Group>
 
-
         <Form.Group as={Row}>
-           sm={{ span: 10, offset: 2 }}>
+          <Col sm={{ span: 10, offset: 2 }}>
             <Button type="submit" onClick={handleOnSubmit}>Submit proposal</Button>
-         
+          </Col>
         </Form.Group>
       </Form>
 
