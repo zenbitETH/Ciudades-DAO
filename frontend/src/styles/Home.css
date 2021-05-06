@@ -105,6 +105,7 @@ button:disabled {
   max-width: 450px;
   margin: 3% auto;
   background-image: linear-gradient(#eee, #ccc);
+  font-family: 'Lexend Deca', sans-serif;
   display: flex !important;
   justify-content: center !important;
   align-content: center !important;

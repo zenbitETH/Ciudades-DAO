@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import logo from '../assets/Logo.svg';
-import '../styles/Home.css';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const Header = () => {
