@@ -126,7 +126,7 @@ button:disabled {
   border-radius: 25px;
   width:100%;
   max-width: 50%;
-  min-width: 450px !important;
+  min-width: 720px !important;
   margin: 3% auto;
   background-image: linear-gradient(#3d386b, #3d386b);
   justify-content: center !important;
