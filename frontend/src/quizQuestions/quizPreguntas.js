@@ -1,7 +1,7 @@
 export const quizPreguntas = [
   {
     number: 1,
-    question: 'La estatua de Conin da la bienvenida a la ciuadad al llegar en carretara desde:',
+    question: 'La estatua de Conin te da la bienvenida a la ciuadad al llegar en carretara desde:',
     answers: [
       'Celaya',
       'San Luis Potosí',
