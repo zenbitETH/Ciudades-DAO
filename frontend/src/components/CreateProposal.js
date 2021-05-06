@@ -84,7 +84,7 @@ let {isEnglish} = useContext(LanguageContext);
           </Form.Label>
           <Form.Control type="text" placeholder="type" onChange={handleOnChangeTypeOfAction}/>
         </Form.Group>
-        
+
         <Form.Group as={Row} controlId="formNeighborhood">
           <Form.Label  >
             Neighborhood
@@ -135,12 +135,7 @@ let {isEnglish} = useContext(LanguageContext);
           <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
           
         </Form.Group>
-
-        <Form.Group as={Row}>
-          <Col sm={{ span: 10, offset: 2 }}>
-            <Button type="submit" onClick={handleOnSubmit}>Submit proposal</Button>
-          </Col>
-        </Form.Group>
+        <Button type="submit" onClick={handleOnSubmit}>Submit proposal</Button>
       </Form>
 
       <IsLoadingModal
