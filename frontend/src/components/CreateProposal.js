@@ -72,7 +72,7 @@ let {isEnglish} = useContext(LanguageContext);
     <div className="gray">
       <Form >
         <Form.Group as={Row} controlId="formTitle">
-          <Form.Label column sm={2}>
+          <Form.Label  >
             Title
           </Form.Label>
         
@@ -81,7 +81,7 @@ let {isEnglish} = useContext(LanguageContext);
         </Form.Group>
 
         <Form.Group as={Row} controlId="formTypeOfAction">
-          <Form.Label column sm={2}>
+          <Form.Label  >
             Type of action
           </Form.Label>
         
@@ -90,7 +90,7 @@ let {isEnglish} = useContext(LanguageContext);
         </Form.Group>
 
         <Form.Group as={Row} controlId="formNeighborhood">
-          <Form.Label column sm={2}>
+          <Form.Label  >
             Neighborhood
           </Form.Label>
         
@@ -99,7 +99,7 @@ let {isEnglish} = useContext(LanguageContext);
         </Form.Group>
 
         <Form.Group as={Row} controlId="formPersonInCharge">
-          <Form.Label column sm={2}>
+          <Form.Label  >
             Person in charge
           </Form.Label>
         
@@ -108,7 +108,7 @@ let {isEnglish} = useContext(LanguageContext);
         </Form.Group>
 
         <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
-          <Form.Label column sm={2}>
+          <Form.Label  >
             Description
           </Form.Label>
         
@@ -117,7 +117,7 @@ let {isEnglish} = useContext(LanguageContext);
         </Form.Group>
 
         <Form.Group as={Row} controlId="formExpiration">
-          <Form.Label column sm={2}>
+          <Form.Label  >
             Expiration
           </Form.Label>
         
@@ -126,7 +126,7 @@ let {isEnglish} = useContext(LanguageContext);
         </Form.Group>
 
         <Form.Group as={Row} controlId="formBudget">
-          <Form.Label column sm={2}>
+          <Form.Label  >
             Budget
           </Form.Label>
         
@@ -135,7 +135,7 @@ let {isEnglish} = useContext(LanguageContext);
         </Form.Group>
 
         <Form.Group as={Row} controlId="formRequiredTaroToVote">
-          <Form.Label column sm={2}>
+          <Form.Label  >
             Required TARO to vote
           </Form.Label>
         
