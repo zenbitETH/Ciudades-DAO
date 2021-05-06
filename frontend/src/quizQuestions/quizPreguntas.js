@@ -1,54 +1,54 @@
 export const quizPreguntas = [
   {
     number: 1,
-    question: 'The big statue of Queretaro foundation icon Conin, welcomes you when came on the highway from:',
+    question: 'La estatua de Conin da la bienvenida a la ciuadad al llegar en carretara desde:',
     answers: [
       'Celaya',
       'San Luis Potosí',
       'Ciudad de México',
     ],
-    correctAnswer: 'Ciudad de México'
+    correctAnswer: 'x'
   },
   {
     number: 2,
-    question: 'Mark the municipalities in conurbation with Querétaro city:',
+    question: 'Marca los municipios conurbados de la ciudad de Querétaro',
     answers: [
-      'Corregidora & El Marques',
       'Huimilpan & Amealco',
+      'Corregidora & El Marques',
       'Tequisquiapan & San Juan del Rio',
 
     ],
-    correctAnswer: 'Corregidora & El Marques'
+    correctAnswer: 'x'
   },
   {
     number: 3,
-    question: 'Traditional church where Concheros dance in the eve of Santiago party:',
+    question: 'Iglesia donde los concheros bailan en la vispera de la fiesta de Santiago:',
     answers: [
       'Templo de la cruz',
       'La congregacion',
       'Iglesia del Carmen',
     ],
-    correctAnswer: 'Templo de la cruz'
+    correctAnswer: 'x'
   },
   {
     number: 4,
-    question: 'Name of the stadium where the soccer team of the City of Querétaro plays:',
+    question: 'Nombre del estadio de soccer de la ciudad',
     answers: [
       'Azteca',
       'La Corregidora',
       'Nou Camp',
     ],
-    correctAnswer: 'La Corregidora'
+    correctAnswer: 'x'
   },
   {
     number: 5,
-    question: 'Name the Queretaro City main boulevard:',
+    question: 'Principal boulevard de la ciudad de Querétaro:',
     answers: [
-      'Bernardo Quintana',
       'De la Nación',
       'Fray Junipero', 
+      'Bernardo Quintana',
     ],
-    correctAnswer: 'Bernardo Quintana'
+    correctAnswer: 'x'
   },
   {
     number: 6,
@@ -58,7 +58,7 @@ export const quizPreguntas = [
       'Ezequiel Montes',
       'Cadereyta',
     ],
-    correctAnswer: 'Ezequiel Montes'
+    correctAnswer: 'x'
   },
   {
     number: 7,
@@ -68,38 +68,37 @@ export const quizPreguntas = [
       'Queretaro’s decentralization',
       'Queretaro’s conspiracy',
     ],
-    correctAnswer: 'Queretaro’s conspiracy'
+    correctAnswer: 'x'
   },
   {
     number: 8,
-    question: 'Near at the end of los Arcos you will find the road that leads to',
+    question: 'Cerca del final de los Arcos encontrarás el camino hacia:',
     answers: [
-      'La Cañada & Hércules',
       'Jurica & Juriquilla',
+      'La Cañada & Hércules',
       'Candiles $ El Pueblito',
     ],
-    correctAnswer: 'La Cañada & Hércules'
+    correctAnswer: 'x'
   },
   {
     number: 9,
-    question: 'Mark the biggest Delegation founded by 1900 revolutionary railroad men',
+    question: 'Delegación más grande de la ciudad',
     answers: [
-      'Centro Historico',
       'Felipe Carrillo Puerto',
+      'Centro Historico',
       'Josefa Vergara',
-      
     ],
-    correctAnswer: 'Felipe Carrillo Puerto'
+    correctAnswer: 'x'
   },
   {
     number: 10,
-    question: 'How is Queretaro’s name in otomí?',
+    question: 'Nombre de Querétaro en Otomí?',
     answers: [
       'Chichimecalco', 
       'Querendaro',
       'Maxei',
     ],
-    correctAnswer: 'Maxei'
+    correctAnswer: 'x'
   }
 ];
 
