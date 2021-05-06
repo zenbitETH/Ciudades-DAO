@@ -1,105 +1,113 @@
 export const quizQuestions = [
   {
     number: 1,
-    question: 'The big statue of Queretaro foundation icon Conin, welcomes you when came on the highway from:',
+    question: 'Why did Vitalik cross the road?',
     answers: [
-      'Celaya',
-      'San Luis Potosí',
-      'Ciudad de México',
+      'He was bored',
+      'A tiger was chasing him',
+      'To get to the other side',
+      'This question makes no sense in the multi-verse in which Vitalik lives'
     ],
-    correctAnswer: 'Ciudad de México'
+    correctAnswer: 'To get to the other side'
   },
   {
     number: 2,
-    question: 'Mark the municipalities in conurbation with Querétaro city:',
+    question: '4 - 2 = __',
     answers: [
-      'Corregidora & El Marques',
-      'Huimilpan & Amealco',
-      'Tequisquiapan & San Juan del Rio',
-
+      0,
+      1,
+      2,
+      3
     ],
-    correctAnswer: 'Corregidora & El Marques'
+    correctAnswer: 2
   },
   {
     number: 3,
-    question: 'Traditional church where Concheros dance in the eve of Santiago party:',
+    question: 'Satoshi _______',
     answers: [
-      'Templo de la cruz',
-      'La congregacion',
-      'Iglesia del Carmen',
+      'Koskinen',
+      'Abadi',
+      'Ganbaatar',
+      'Nakamoto'
     ],
-    correctAnswer: 'Templo de la cruz'
+    correctAnswer: 'Nakamoto'
   },
   {
     number: 4,
-    question: 'Name of the stadium where the soccer team of the City of Querétaro plays:',
+    question: 'Why did you cross the road?',
     answers: [
-      'Azteca',
-      'La Corregidora',
-      'Nou Camp',
+      'He was bored',
+      'A tiger was chasing him',
+      'To get to the other side of the street',
+      'This question makes no sense in the multi-verse in which Vitalik lives'
     ],
-    correctAnswer: 'La Corregidora'
+    correctAnswer: 'To get to the other side of the street'
   },
   {
     number: 5,
-    question: 'Name the Queretaro City main boulevard:',
+    question: '4 - 1 = __',
     answers: [
-      'Bernardo Quintana',
-      'De la Nación',
-      'Fray Junipero', 
+      0,
+      1,
+      2,
+      3
     ],
-    correctAnswer: 'Bernardo Quintana'
+    correctAnswer: 3
   },
   {
     number: 6,
-    question: 'The Peña of Bernal is located in:',
+    question: 'Vitalik _______',
     answers: [
-      'Tequisquiapan',
-      'Ezequiel Montes',
-      'Cadereyta',
+      'Koskinen',
+      'Abadi',
+      'Ganbaatar',
+      'Buterin'
     ],
-    correctAnswer: 'Ezequiel Montes'
+    correctAnswer: 'Buterin'
   },
   {
     number: 7,
-    question: 'Mark the underground Queretaro movement from 1800’s that detonated the independence of Mexico:',
+    question: 'Why did the cat cross the road?',
     answers: [
-      'Queretaro´s revolution',
-      'Queretaro’s decentralization',
-      'Queretaro’s conspiracy',
+      'He was bored',
+      'A tiger was chasing him',
+      'this is the correct answer',
+      'This question makes no sense in the multi-verse in which Vitalik lives'
     ],
-    correctAnswer: 'Queretaro’s conspiracy'
+    correctAnswer: 'this is the correct answer'
   },
   {
     number: 8,
-    question: 'Near at the end of los Arcos you will find the road that leads to',
+    question: '4 - 3 = __',
     answers: [
-      'La Cañada & Hércules',
-      'Jurica & Juriquilla',
-      'Candiles $ El Pueblito',
+      0,
+      1,
+      2,
+      3
     ],
-    correctAnswer: 'La Cañada & Hércules'
+    correctAnswer: 1
   },
   {
     number: 9,
-    question: 'Mark the biggest Delegation founded by 1900 revolutionary railroad men',
+    question: 'one, two,  _______',
     answers: [
-      'Centro Historico',
-      'Felipe Carrillo Puerto',
-      'Josefa Vergara',
-      
+      'Koskinen',
+      'Abadi',
+      'Ganbaatar',
+      'three'
     ],
-    correctAnswer: 'Felipe Carrillo Puerto'
+    correctAnswer: 'three'
   },
   {
     number: 10,
-    question: 'How is Queretaro’s name in otomí?',
+    question: 'four, five, _______',
     answers: [
-      'Chichimecalco', 
-      'Querendaro',
-      'Maxei',
+      'Koskinen',
+      'Abadi',
+      'Ganbaatar',
+      'six'
     ],
-    correctAnswer: 'Maxei'
+    correctAnswer: 'six'
   }
 ];
 

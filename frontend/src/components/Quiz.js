@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Question from './Question';
 import { quizQuestions } from '../quizQuestions/quizQuestions';
+import { quizPreguntas } from '../quizQuestions/quizPreguntas';
 import { QuizContext } from '../contexts/QuizContext';
 import QuizFailureModal from '../modals/QuizFailureModal';
 import QuizSuccessModal from '../modals/QuizSuccessModal';
@@ -76,7 +77,6 @@ const Quiz = () => {
       setAlreadSubmittedModal(true);
     };
   };
-
   const questions = quizQuestions.map((q, i) => (
     <Question 
       key={q.question.toString()}
@@ -84,7 +84,15 @@ const Quiz = () => {
       answers={q.answers}
       number={q.number}
     />
-  ))
+    ))
+  const preguntas = quizPreguntas.map((q, i) => (
+    <Question 
+      key={q.question.toString()}
+      question={q.question}
+      answers={q.answers}
+      number={q.number}
+    />
+    ))
 
   const handleOnFailure = () => {
     setFailureModalShow(false);
@@ -103,34 +111,65 @@ const Quiz = () => {
   };
 
   return (
-    <div className="App" >
-      
-      <div className="gray2">
-      <text className="white">Quiz</text>
-        <div>
-          <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
-          <div>{questions}</div>
-          </QuizContext.Provider>
+    <div>
+    {isEnglish ?
+      <div className="App" >
+        <div className="gray2">
+        <text className="white">Quiz</text>
+          <div>
+            <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
+            <div>{questions}</div>
+            </QuizContext.Provider>
+          </div>
         </div>
+        <Button className="Wallet" onSubmit={handleOnSubmitAnswers}>Submit your answers</Button>
+        <QuizFailureModal
+          show={failureModalShow}
+          onHide={handleOnFailure}
+        />
+        <QuizSuccessModal
+          show={successModalShow}
+          onHide={handleOnSuccess}
+        />
+        <QuizAlreadySubmittedModal
+          show={alreadySubmittedModal}
+          onHide={handleOnAlreadySubmitted}
+        />
+        <IsLoadingModal
+          show={loadingModalShow}
+          onHide={handleOnLoadingModal}
+        />
       </div>
-      <Button className="Wallet" onSubmit={handleOnSubmitAnswers}>Submit your answers</Button>
-      <QuizFailureModal
-        show={failureModalShow}
-        onHide={handleOnFailure}
-      />
-      <QuizSuccessModal
-        show={successModalShow}
-        onHide={handleOnSuccess}
-      />
-      <QuizAlreadySubmittedModal
-        show={alreadySubmittedModal}
-        onHide={handleOnAlreadySubmitted}
-      />
-      <IsLoadingModal
-        show={loadingModalShow}
-        onHide={handleOnLoadingModal}
-      />
-    </div>
+    :
+      <div className="App" >
+        <div className="gray2">
+        <text className="white">Validar que soy de Querétaro</text>
+          <div>
+            <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
+            <div>{preguntas}</div>
+            </QuizContext.Provider>
+          </div>
+        </div>
+        <Button className="Wallet" onSubmit={handleOnSubmitAnswers}>Verificar respuestas</Button>
+        <QuizFailureModal
+          show={failureModalShow}
+          onHide={handleOnFailure}
+        />
+        <QuizSuccessModal
+          show={successModalShow}
+          onHide={handleOnSuccess}
+        />
+        <QuizAlreadySubmittedModal
+          show={alreadySubmittedModal}
+          onHide={handleOnAlreadySubmitted}
+        />
+        <IsLoadingModal
+          show={loadingModalShow}
+          onHide={handleOnLoadingModal}
+        />
+      </div>
+    } 
+  </div>
   );
 };
 
