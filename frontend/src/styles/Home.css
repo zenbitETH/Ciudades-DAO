@@ -102,7 +102,7 @@ button:disabled {
 .gray {
   border-radius: 25px;
   width:100%;
-  max-width: 450px;
+  max-width: auto;
   margin: 3% auto;
   background-image: linear-gradient(#eee, #ccc);
   font-family: 'Lexend Deca', sans-serif;
