@@ -130,12 +130,10 @@ let {isEnglish} = useContext(LanguageContext);
         <Form.Group as={Row} controlId="formRequiredTaroToVote">
           <Form.Label  >
             Required TARO to vote
-        </Form.Label>
-        
-          <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
-          
+        </Form.Label>        
+          <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>          
         </Form.Group>
-        <Button type="submit" onClick={handleOnSubmit}>Submit proposal</Button>
+        <Button className="alt" classNtype="submit" onClick={handleOnSubmit}>Submit proposal</Button>
       </Form>
 
       <IsLoadingModal
