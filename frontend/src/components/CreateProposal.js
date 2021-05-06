@@ -72,7 +72,7 @@ let {isEnglish} = useContext(LanguageContext);
     <div className="gray">
       <Form >
         <Form.Group as={Row} controlId="formTitle">
-          <Form.Label column sm={2}>
+          <Form.Label column sm={1}>
             Title
           </Form.Label>
             <Form.Control type="text" placeholder="title" onChange={handleOnChangeTitle}/>
