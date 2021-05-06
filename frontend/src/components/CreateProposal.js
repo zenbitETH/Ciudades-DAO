@@ -71,7 +71,7 @@ let {isEnglish} = useContext(LanguageContext);
       {isEnglish ?
       <div className="gray">
         <Form >
-        <text className="orange">Create new urban governance proposal</text>
+        <text className="orange2">Create new urban governance proposal</text>
           <Form.Group as={Row} controlId="formTitle">
             <Form.Label>
               Title
