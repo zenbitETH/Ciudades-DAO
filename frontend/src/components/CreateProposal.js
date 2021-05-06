@@ -71,13 +71,11 @@ let {isEnglish} = useContext(LanguageContext);
       {isEnglish ?
     <div className="gray">
       <Form >
-        <Form.Group as={Row} controlId="formTitle">
-          <Form.Label  >
+        <Form.Group as={} controlId="formTitle">
+          <Form.Label>
             Title
           </Form.Label>
-        
-            <Form.Control type="text" placeholder="title" onChange={handleOnChangeTitle}/>
-          
+          <Form.Control type="text" placeholder="title" onChange={handleOnChangeTitle}/>
         </Form.Group>
 
         <Form.Group as={Row} controlId="formTypeOfAction">
@@ -85,8 +83,7 @@ let {isEnglish} = useContext(LanguageContext);
             Type of action
           </Form.Label>
         
-            <Form.Control type="text" placeholder="type" onChange={handleOnChangeTypeOfAction}/>
-          
+          <Form.Control type="text" placeholder="type" onChange={handleOnChangeTypeOfAction}/>
         </Form.Group>
 
         <Form.Group as={Row} controlId="formNeighborhood">
@@ -94,7 +91,7 @@ let {isEnglish} = useContext(LanguageContext);
             Neighborhood
           </Form.Label>
         
-            <Form.Control type="text" placeholder="neighborhood" onChange={handleOnChangeNeighborhood}/>
+          <Form.Control type="text" placeholder="neighborhood" onChange={handleOnChangeNeighborhood}/>
           
         </Form.Group>
 
@@ -103,7 +100,7 @@ let {isEnglish} = useContext(LanguageContext);
             Person in charge
           </Form.Label>
         
-            <Form.Control type="text" placeholder="Person in charge" onChange={handleOnChangePersonInCharge}/>
+          <Form.Control type="text" placeholder="Person in charge" onChange={handleOnChangePersonInCharge}/>
           
         </Form.Group>
 
@@ -112,7 +109,7 @@ let {isEnglish} = useContext(LanguageContext);
             Description
           </Form.Label>
         
-            <Form.Control as="textarea" type="text" rows={3} placeholder="description" onChange={handleOnChangeDescription}/>
+          <Form.Control as="textarea" type="text" rows={3} placeholder="description" onChange={handleOnChangeDescription}/>
           
         </Form.Group>
 
@@ -121,7 +118,7 @@ let {isEnglish} = useContext(LanguageContext);
             Expiration
           </Form.Label>
         
-            <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
+          <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
           
         </Form.Group>
 
@@ -130,7 +127,7 @@ let {isEnglish} = useContext(LanguageContext);
             Budget
           </Form.Label>
         
-            <Form.Control type="text" placeholder="budget" onChange={handleOnChangeBudget}/>
+          <Form.Control type="text" placeholder="budget" onChange={handleOnChangeBudget}/>
           
         </Form.Group>
 
@@ -139,7 +136,7 @@ let {isEnglish} = useContext(LanguageContext);
             Required TARO to vote
           </Form.Label>
         
-            <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
+          <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
           
         </Form.Group>
 
