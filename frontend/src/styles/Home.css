@@ -212,13 +212,6 @@ align-items: center !important;
 }
 
 
-<Form.Group as={Row}>
-          <Col sm={{ span: 10, offset: 2 }}>
-            <Button type="submit" onClick={handleOnSubmit}>Submit proposal</Button>
-          </Col>
-        </Form.Group>
-      </Form>
-
 .purple2 {
   margin-top: 1%;
   color: #3d386b;
