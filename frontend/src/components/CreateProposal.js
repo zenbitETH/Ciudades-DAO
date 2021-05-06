@@ -72,7 +72,7 @@ let {isEnglish} = useContext(LanguageContext);
     <div className="gray">
       <Form >
         <Form.Group as={Row} controlId="formTitle">
-          <Form.Label column sm={2}>
+          <Form.Label>
             Title
           </Form.Label>
           <Col sm={10}>
