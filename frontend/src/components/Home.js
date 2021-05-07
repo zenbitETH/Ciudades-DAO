@@ -2,7 +2,6 @@ import { useEffect, useState, useContext } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { ethers } from 'ethers';
 import {Card, Button} from 'react-bootstrap';
-import {Link} from "react-router-dom";
 import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import InstallMetamaskAlert from './InstallMetamaskAlert';
@@ -12,7 +11,6 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import LeaderBoard from './LeaderBoard';
-import '../styles/Home.css';
 
 //remove for production
 import Comp from '../contracts/contracts/Comp.sol/Comp.json';
