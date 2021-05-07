@@ -23,9 +23,7 @@ a.alt:hover {color: #3d386b!important;}
   border-radius: 25px !important;
   margin-bottom: 3%;
   border: none !important;
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
+  justify-content: left !important;
   background-color: #FF9400 !important;
   color: #ffffff !important;
 }
@@ -58,11 +56,7 @@ Nav {
 
 .main2 {
   font-size: 18px !important;
-  text-align: left;
-  text-justify: inter-word;
-  box-sizing: border-box;
-  padding: 15px;
-  margin-bottom: -3%;
+  text-align: left !important;
 }
 
 .Wallet {
@@ -85,11 +79,11 @@ button:disabled {
 
 .text-medium-left {
   font-size: 1rem !important;
-  text-align: left !important;
-  justify-content: left !important;
-  align-content: left !important;
-  align-items: left !important;
-  padding: 10px;
+  text-align: center !important;
+  display: inline-block !important;
+  justify-content: center !important;
+  align-content: center !important;
+  position: relative !important;
   margin-bottom: 5%;
 }
 
@@ -213,15 +207,20 @@ align-items: center !important;
 }
 
 .purple {
+  text-align: left !important;
   margin-top: 3%;
-  padding-left: 25%;
   font-size: 2rem !important;
-  text-align: left;
   color: #3d386b;
 }
 
 
 .purple2 {
+  margin-top: 1%;
+  color: #3d386b;
+}
+
+.purple3 {
+  text-align: left !important;
   margin-top: 1%;
   color: #3d386b;
 }

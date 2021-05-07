@@ -12,7 +12,7 @@ import { EthersContext } from '../contexts/EthersContext';
 
 import Home from './Home';
 import About from './About';
-import GetProposals from './GetProposals';
+import ProposalList from './ProposalList';
 import Quiz from './Quiz';
 import Header from './Header';
 import CreateProposal from './CreateProposal';
@@ -33,7 +33,7 @@ function App() {
           <Header />
           <Switch>
             <Route path="/about"><About /></Route>
-            <Route path="/getproposals"><GetProposals /></Route>
+            <Route path="/proposallist"><ProposalList /></Route>
             <Route path="/createproposal"><CreateProposal /></Route>
             <Route path="/quiz"><Quiz /></Route>
             <Route path="/"><Home /></Route>

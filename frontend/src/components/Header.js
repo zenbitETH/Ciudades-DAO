@@ -20,7 +20,7 @@ const Header = () => {
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
             <Nav.Link  href="/About">What is VoTARO?</Nav.Link>
-            <Nav.Link  href="/GetProposals">🥇 0</Nav.Link>
+            <Nav.Link  href="/ProposalList">🥇 0</Nav.Link>
             <Nav.Link  href="/CreateProposal">🗳️ 0</Nav.Link>
             <NavDropdown  title="🌐Language" id="basic-nav-dropdown">
              <NavDropdown.Item className="lan" onSelect={handleOnSelect}>Español</NavDropdown.Item>
@@ -39,7 +39,7 @@ const Header = () => {
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
             <Nav.Link href="/About">¿Qué es VoTARO?</Nav.Link>
-            <Nav.Link style={{color: 'white'}} href="/GetProposals">🥇 0</Nav.Link>
+            <Nav.Link style={{color: 'white'}} href="/ProposalList">🥇 0</Nav.Link>
             <Nav.Link style={{color: 'white'}} href="/CreateProposal">🗳️ 0</Nav.Link>
             <NavDropdown style={{color: '#fff'}} title="🌐Idioma"id="basic-nav-dropdown">
             <NavDropdown.Item className="lan" onSelect={handleOnSelect}>English</NavDropdown.Item>

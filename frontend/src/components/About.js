@@ -15,9 +15,11 @@ const About = () => {
       <div className="gray3">
         <div className="text-large">1. What's <img src={logo} alt="VoTARO" width="250px" />?</div>
         <div className="main">Urban governance protocol for Queretaro City DAO</div>
-        <div className="purple">1 ✋ Propose</div>
-        <div className="purple">2 🗳️ Vote</div>
-        <div className="purple">3 🥇 Get $TARO</div>
+          <div className="text-medium-left">
+            <div className="purple">1 ✋ Propose</div>
+            <div className="purple">2 🗳️ Vote</div>
+            <div className="purple">3 🥇 Get $TARO</div>
+          </div>
         <div className="main">
            VoTaro is an Ethereum application that uses a reward system to encourage residents of Queretaro City to propose and participate in activities that will
            improve their community.</div>
@@ -39,17 +41,19 @@ const About = () => {
           </p></div>
         <Button className="alt" href="https://metamask.io" >Download Wallet</Button>
         <div className="main">
-          <p>$TARO token can only be obtained as a reward🥇 when:
+          <p>$TARO token can only be obtained as a reward🥇 when:</p>
+          </div>
+          <div className="text-medium-left">
           <p className="main2">✔️ You verify that you are a Queretaro citizen at the end of this screen.</p>
-          <p className="main2">🗳️ You participate in TARO urban governance.</p></p></div>
+          <p className="main2">🗳️ You participate in TARO urban governance.</p></div>
         <div className="orange">4. Benefits for the City</div>
         <div className="text-medium-left" >       
-          <div> ⛓️  Urban governance registration on blockchain</div>
-          <div> 🏙️ Urban processes tracked on Smart Contracts. </div>
-          <div> 🤖 Automation and Decentralization of services. </div>
-          <div> 🧙‍♂️ Citizens develop digital skills.</div>
-          <div> 🤝 Transparent and decentralized urban consensus</div>
-          <div> 🧬 Predictive Economy and Urban Development. </div>
+          <div className="purple3"> ⛓️  Urban governance registration on blockchain</div>
+          <div className="purple3"> 🏙️ Urban processes tracked on Smart Contracts. </div>
+          <div className="purple3"> 🤖 Automation and Decentralization of services. </div>
+          <div className="purple3"> 🧙‍♂️ Citizens develop digital skills.</div>
+          <div className="purple3"> 🤝 Transparent and decentralized urban consensus</div>
+          <div className="purple3"> 🧬 Predictive Economy and Urban Development. </div>
         </div>
         </div>
       <div className="gray3">    
@@ -64,9 +68,11 @@ const About = () => {
     <div className="gray3">
       <div className="text-large">1. ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?</div>
       <div className="main">Protocolo de gobernanza urbana para proponer, votar y ejectuar tareas y recompensarlas con la moneda digital de la ciudad de QueréTARO.</div>
-      <div className="purple">1 ✋ Propon</div>
-      <div className="purple">2 🗳️ Vota</div>
-      <div className="purple">3 🥇 Obtén TARO</div>
+        <div className="text-medium-left">
+            <div className="purple">1 ✋ Propon</div>
+            <div className="purple">2 🗳️ Vota</div>
+            <div className="purple">3 🥇 Obtén $TARO</div>
+        </div>
       <div className="main">
       VoTaro es una aplicación de Ethereum que utiliza un sistema de recompensas para alentar a los residentes de la ciudad de Querétaro a proponer y participar en 
       actividades que mejoran su comunidad.</div>
@@ -83,18 +89,20 @@ const About = () => {
        <p>1. Para obener TARO necesitas una cartera web 3 como Metamask, puedes descargar una al dar click en el botón.</p></div>
       <Button  a className="alt" href="https://metamask.io" >Descargar Cartera</Button>
       <div className="main">
-        <p>2. El token TARO solo se puede obtener como recompensa 🥇 al:
-        <p className="main2">✔️ Verificar que eres ciudadan@ queretan@ al final de esta pantalla.</p>
-        <p className="main2">🗳️ Participar en la gobernanza de la ciudad.</p></p>
+        <p>2. El token TARO solo se puede obtener como recompensa 🥇 al:</p>        
       </div>
+      <div className="text-medium-left">
+          <p className="main2">✔️ Verificar que eres ciudadan@ queretan@ al final de esta pantalla.</p>
+          <p className="main2">🗳️ Participar en la gobernanza de la ciudad.</p>
+        </div>
       <div className="orange">5. Beneficios para la ciudad</div>
       <div className="text-medium-left">
-        <div >⛓️ Registro de gobernanza urbana en blockchain.</div>
-        <div >🏙️ Procesos urbanos en Contratos Inteligentes.</div>
-        <div>🤖 Automatización y Descentralización de servicios.</div>
-        <div >🧙‍♂️ Ciudadanos desarrollan habilidades digitales.</div>
-        <div >🤝 Consenso urbano transparente y descentralizado.</div>
-        <div>🧬 Economía y Desarrollo Urbano Predictivos.</div>
+        <div className="purple3">⛓️ Registro de gobernanza urbana en blockchain.</div>
+        <div className="purple3" >🏙️ Procesos urbanos en Contratos Inteligentes.</div>
+        <div className="purple3">🤖 Automatización y Descentralización de servicios.</div>
+        <div className="purple3" >🧙‍♂️ Ciudadanos desarrollan habilidades digitales.</div>
+        <div className="purple3" >🤝 Consenso urbano transparente y descentralizado.</div>
+        <div className="purple3">🧬 Economía y Desarrollo Urbano Predictivos.</div>
       </div>
     </div>
     <div className="gray3">    

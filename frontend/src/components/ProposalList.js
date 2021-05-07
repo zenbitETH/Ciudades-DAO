@@ -9,8 +9,8 @@ import ValidationRequired from '../alerts/ValidationRequired';
 
 import { proposalArray } from '../DELETEBEFOREPRODUCTION/proposalArray.js';
 
-const GetProposals = () => {
-  let [getProposals, setGetProposals] = useState(null);
+const ProposalList = () => {
+  let [getProposals, setProposalList] = useState(null);
 
   let {isValidated} = useContext(ValidationRequiredContext);
   let {isEnglish} = useContext(LanguageContext);
@@ -49,7 +49,7 @@ const GetProposals = () => {
 //        p.for_votes = (parseFloat(p.forVotes) / 1e18).toFixed(2);
 //        p.against_votes = (parseFloat(p.againstVotes) / 1e18).toFixed(2);
 //      });
-//      setGetProposals(_getProposals);
+//      setProposalList(_getProposals);
 //    };
 //    main();
 //  }, []);
@@ -104,4 +104,4 @@ const GetProposals = () => {
    );
  };
  
- export default GetProposals;
+ export default ProposalList;
