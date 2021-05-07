@@ -1,22 +1,28 @@
 import { useContext, useState } from 'react';
-import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { TaroContext } from '../contexts/TaroContext';
+import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { LanguageContext } from '../contexts/LanguageContext';
-import '../styles/Home.css';
+import { EthersContext } from '../contexts/EthersContext';
 
 import Home from './Home';
 import About from './About';
-import ProposalList from './ProposalList';
+import GetProposals from './GetProposals';
 import Quiz from './Quiz';
 import Header from './Header';
 import CreateProposal from './CreateProposal';
-
 
 function App() {
   let [isValidated, setIsValidated] = useState();
   let [taro, setTaro] = useState();
   let [isEnglish, setIsEnglish] = useState();
+  let [governorAlpha, setGovernorAlpha] = useState();
+  let [ethersSigner, setEthersSigner] = useState();
 
   return (
     <div>
@@ -27,7 +33,7 @@ function App() {
           <Header />
           <Switch>
             <Route path="/about"><About /></Route>
-            <Route path="/proposallist"><ProposalList /></Route>
+            <Route path="/getproposals"><GetProposals /></Route>
             <Route path="/createproposal"><CreateProposal /></Route>
             <Route path="/quiz"><Quiz /></Route>
             <Route path="/"><Home /></Route>
