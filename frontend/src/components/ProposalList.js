@@ -1,76 +1,167 @@
 import { useContext, useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
 import {ListGroup} from 'react-bootstrap';
+import { ethers } from 'ethers';
+import detectEthereumProvider from '@metamask/detect-provider'
 import Proposal from './Proposal';
 import { LanguageContext } from '../contexts/LanguageContext';
-import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
+import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import ValidationRequired from '../alerts/ValidationRequired';
+import { EthersContext } from '../contexts/EthersContext';
+
+import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
+import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
 import { proposalArray } from '../DELETEBEFOREPRODUCTION/proposalArray.js';
 
 const ProposalList = () => {
-  let [getProposals, setProposalList] = useState(null);
+  let [retrievedProposals, setRetrievedProposals] = useState([]);
 
   let {isValidated} = useContext(ValidationRequiredContext);
   let {isEnglish} = useContext(LanguageContext);
   let {governorAlpha} = useContext(GovernorAlphaContext);
+  let {provider} = useContext(EthersContext);
 
-//  const main = async () => {
-//    const proposalCount = await governorAlpha.proposalCount();
-//    useEffect(() => {
-//      const proposalGets = []; 
-//      const proposalStateGets=[];
-//      for (const i of Array.from(Array(parseInt(proposalCount)),(n,i) => i+1)) {
-//        proposalGets.push(await governorAlpha.proposals(i));
-//        proposalStateGets.push(await governorAlpha.state(i));
-//      };
-//
-//      const proposals = await Promise.all(proposalGets);
-//      const proposalStates = await Promise.all(proposalStateGets);
-//      //This query might need to be changed.  One problem is that ethers.js has a limit of 10000 events, which could eventually be a problem if all events must be retrieved before being filtered locally since the query would include all past events that are no longer active.
-//      const proposalCreatedEvents = await governorAlpha.queryFilter('ProposalCreated', 0, 'latest')
-//
-//      proposals.reverse();
-//      proposalStates.reverse();
-//      proposalCreatedEvents.reverse();
-//
-//      const enumerateProposalState = (state) => {
-//        const proposalStates = ['Pending', 'Active', 'Canceled', 'Defeated', 'Succeeded', 'Queued', 'Expired', 'Executed'];
-//        return proposalStates[state];
-//      };
-//
-//      //Will this work?  It is taken directly from the Compound github, so it probably needs to be modified
-//      let _getProposals = proposal.map((p, i) => {
-//        const { description } = proposalCreatedEvents[i].returnValues;
-//        p.title = description.split(/# |\n/g)[1] || 'Untitled';
-//        p.description = description.split(/# |\n/g)[2] || 'No description.';
-//        p.state = enumerateProposalState(proposalStates[i]);
-//        p.for_votes = (parseFloat(p.forVotes) / 1e18).toFixed(2);
-//        p.against_votes = (parseFloat(p.againstVotes) / 1e18).toFixed(2);
-//      });
-//      setProposalList(_getProposals);
-//    };
-//    main();
-//  }, []);
-//
-  //This needs to be re-worked so that it handles the data that is received from the smart contract
-  // Change proposalArray for getProposals
-  const list = proposalArray.map((proposal, i) => (
-    <div key={i}>
-      <Proposal
-        title={proposal.title}
-        typeOfAction={proposal.typeOfAction}
-        neighborhood={proposal.neighborhood}
-        personInCharge={proposal.personInCharge}
-        description={proposal.description}
-        expiration={proposal.expiration}
-        budget={proposal.budget}
-        taroToVote={proposal.taroToVote}
-      />
-    </div>
-  )); 
+  useEffect(() => {
+    const main = async () => {
+      // setIsMetamaskInstalled(true);
+      // setIsConnected(false);
+      try {
+        //detect whether the browser is connected to a provider
+        let ethereumProvider = await detectEthereumProvider();
+        if (ethereumProvider) {
+          // setProvider(ethereumProvider);
+          startApp(ethereumProvider);
+        } else {
+          // setIsMetamaskInstalled(false);
+          return;
+        };
+      } catch (error) {
+        console.error(error);
+      };
 
+      async function startApp(_ethereumProvider) {
+        try {
+          //The provider detected by detectEthereumProvider() must be the same as window.ethereum
+          if (_ethereumProvider !== window.ethereum) {
+            // setIsMetamaskInstalled(false);
+            return;
+          };
+
+          //Check if a MetaMask account has permission to connect to app
+          let metamaskAccount;
+          let accounts = await _ethereumProvider.request({ method: 'eth_accounts' });
+            if (accounts.length > 0) {
+              metamaskAccount = accounts[0];
+              // setCurrentMetaMaskAccount(accounts[0]);
+              // setIsMetamaskInstalled(true);
+              // setIsConnected(true);
+            };
+          console.log(`metamaskAccount ${metamaskAccount}`);
+
+          //Force the browser to refresh whenever the network chain is changed
+          // let chainId = await _ethereumProvider.request({ method: 'eth_chainId' });
+          // _ethereumProvider.on('chainChanged', handleChainChanged);
+          // console.log('chainId: ', chainId);
+
+          //Create the Ethers.js provider and set it in state
+          let _ethersProvider = await new ethers.providers.Web3Provider(_ethereumProvider);
+          // setEthersProvider(_ethersProvider);
+          console.log('_ethersProvider: ', _ethersProvider)
+          // make call to contract to check if current user is validated.
+          // this may need to be done inside handleOnConnect as well
+          // if user is validated, then set isValidated(true)
+
+          if(accounts.length !== 0) {
+            let signer = await _ethersProvider.getSigner();
+            // setEthersSigner(signer);
+
+            // const _taro = new ethers.Contract(
+            //   taroAddress.Taro,
+            //   Taro.abi,
+            //   signer
+            // );
+            // setTaro(_taro);
+
+            // let signerAddress = await signer.getAddress();
+            // console.log("signerAddress: ", signerAddress);
+
+            // let _userBalance = await _taro.balanceOf(signerAddress);
+            // console.log('_userBalance in useEffect: ', _userBalance.toString());
+            // if(_userBalance) {
+            //   setUserBalance(_userBalance.toString());
+            // };
+
+            const _governorAlpha = new ethers.Contract(
+              governorAlphaAddress.GovernorAlpha,
+              GovernorAlpha.abi,
+              signer
+            );
+            // setGovernorAlpha(_governorAlpha);
+
+            let proposalCount = await _governorAlpha.proposalCount();
+            proposalCount = +proposalCount;
+
+            if(proposalCount > 0) {
+              let activeProposals = [];
+              let proposal, currentBlockNumber;
+              for(let i = 1; i <= proposalCount; i++) {
+                proposal = await _governorAlpha.proposals(ethers.BigNumber.from(i));
+                currentBlockNumber = await _ethersProvider.getBlockNumber();
+                // console.log('block number: ', currentBlockNumber)
+                // console.log('proposal:', proposal.endBlock.toNumber());
+                console.log('forVotes: ', proposal.forVotes.toString());
+                console.log('againstVotes: ', proposal.againstVotes.toString());
+                console.log('proposal: ', proposal);
+
+                if(proposal.endBlock.toNumber() > currentBlockNumber) {
+                  activeProposals.push({
+                    title: proposal[9][0],
+                    typeOfAction: proposal[9][1],
+                    neighborhood: proposal[9][2],
+                    personInCharge: proposal[9][3],
+                    description: proposal[9][4],
+                    expiration: proposal[9][5].toString(),
+                    budget: proposal[9][6].toString(),
+                    requiredTaroToVote: proposal[9][7].toString(),
+                    forVotes: proposal.forVotes.toString(),
+                    againstVotes: proposal.againstVotes.toString()
+                  });
+                };
+              };
+              // console.log('activeProposals: ', activeProposals)
+              setRetrievedProposals(activeProposals);
+            };
+
+
+          };
+        } catch (error) {
+          console.error(error);
+        };
+      };
+    };
+    main();
+  }, []);
+
+  const list = retrievedProposals.map((proposal, i) => {
+    return (
+      <div key={i}>
+        <Proposal
+          title={proposal.title}
+          typeOfAction={proposal.typeOfAction}
+          neighborhood={proposal.neighborhood}
+          personInCharge={proposal.personInCharge}
+          description={proposal.description}
+          expiration={proposal.expiration}
+          budget={proposal.budget}
+          taroToVote={proposal.taroToVote}
+          forVotes={proposal.forVotes}
+          againstVotes={proposal.againstVotes}
+        />
+      </div>
+    )
+  });
   return (
     <div>
       {isEnglish

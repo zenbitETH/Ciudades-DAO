@@ -1,9 +1,10 @@
+//from zenbitMX/Cities-Protocol
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 const { abi: abiComp } = require("../artifacts/contracts/Comp.sol/Comp.json");
 const { abi: abiGov } = require("../artifacts/contracts/GovernorAlpha.sol/GovernorAlpha.json");
 const { abi: abiGreeter } = require("../artifacts/contracts/Greeter.sol/Greeter.json");
-const fs = require("fs"); 
+const fs = require("fs");
 
 //make sure you've switched defaultnetwork to Kovan and put a mnemonic.txt file in the test folder
 describe("Cities-Protocol Governance v1", function () {
@@ -15,7 +16,7 @@ describe("Cities-Protocol Governance v1", function () {
     overrides = {
         gasLimit: ethers.BigNumber.from("10000000"),
       };
-    
+
     // Define Variables
     const privateKey = '0x2c9aac9e06153f0507f60f8f138adc2af20d4035dff44c597decceff3998466d';
 
@@ -24,16 +25,16 @@ describe("Cities-Protocol Governance v1", function () {
 
     // Create Wallet
     main = new ethers.Wallet(privateKey, provider);
-    
+
     taro = new ethers.Contract(
         "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD", //set on deploy
         abiComp,
-        main) 
-    
+        main)
+
     governance = new ethers.Contract(
       "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD", //set on deploy
       abiComp,
-      main) 
+      main)
   })
 
   it("setup localhost", async () => {
@@ -60,11 +61,11 @@ describe("Cities-Protocol Governance v1", function () {
     await timelock.deployed()
     console.log("timelock Address: ", timelock.address)
     timelockAddress=timelock.address
-  
+
     const Governance = await ethers.getContractFactory(
       "GovernorAlpha"
     );
-    governance = await Governance.connect(main).deploy(timelock.address,taro.address,main.getAddress());  
+    governance = await Governance.connect(main).deploy(timelock.address,taro.address,main.getAddress());
     await governance.deployed()
     console.log("governance Address: ", governance.address)
     governanceAddress=governance.address

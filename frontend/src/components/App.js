@@ -9,6 +9,7 @@ import { TaroContext } from '../contexts/TaroContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
+import { ConnectedContext } from '../contexts/ConnectedContext';
 
 import Home from './Home';
 import About from './About';
@@ -23,28 +24,36 @@ function App() {
   let [isEnglish, setIsEnglish] = useState();
   let [governorAlpha, setGovernorAlpha] = useState();
   let [ethersSigner, setEthersSigner] = useState();
+  let [isConnected, setIsConnected] = useState();
+  let [provider, setProvider] = useState();
 
-  return (
+
+    return (
     <div>
       <LanguageContext.Provider value={{isEnglish, setIsEnglish}}>
-      <TaroContext.Provider value={{taro, setTaro}}>
-      <ValidationRequiredContext.Provider value={{isValidated, setIsValidated}}>
-        <Router>
-          <Header />
-          <Switch>
-            <Route path="/about"><About /></Route>
-            <Route path="/proposallist"><ProposalList /></Route>
-            <Route path="/createproposal"><CreateProposal /></Route>
-            <Route path="/quiz"><Quiz /></Route>
-            <Route path="/"><Home /></Route>
-          </Switch>
-        </Router>
-      </ValidationRequiredContext.Provider>
-      </TaroContext.Provider>
+        <GovernorAlphaContext.Provider value={{governorAlpha, setGovernorAlpha}}>
+          <TaroContext.Provider value={{taro, setTaro}}>
+            <EthersContext.Provider value={{ethersSigner, setEthersSigner, provider, setProvider}}>
+              <ValidationRequiredContext.Provider value={{isValidated, setIsValidated}}>
+                <ConnectedContext.Provider value={{isConnected, setIsConnected}}>
+                  <Router>
+                    <Header />
+                    <Switch>
+                      <Route path="/about"><About /></Route>
+                      <Route path="/proposallist"><ProposalList /></Route>
+                      <Route path="/createproposal"><CreateProposal /></Route>
+                      <Route path="/quiz"><Quiz /></Route>
+                      <Route path="/"><Home /></Route>
+                    </Switch>
+                  </Router>
+                </ConnectedContext.Provider>
+              </ValidationRequiredContext.Provider>
+            </EthersContext.Provider>
+          </TaroContext.Provider>
+        </GovernorAlphaContext.Provider>
       </LanguageContext.Provider>
     </div>
   );
 }
-
 
 export default App;
