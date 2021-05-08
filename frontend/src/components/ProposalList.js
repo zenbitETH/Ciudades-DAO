@@ -92,7 +92,7 @@ const ProposalList = () => {
       <div>
         {isValidated ? "" : <ValidationRequired />}
         <div>
-          <Link to="/createproposal">Create a proposal</Link>
+          <Link to="/createproposal">Crear propuesta</Link>
         </div>
 
         <main className="m-4">

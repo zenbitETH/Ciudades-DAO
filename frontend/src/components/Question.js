@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import { QuizContext } from '../contexts/QuizContext';
-import '../styles/Home.css';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const Question = ({question, answers, number}) => {
   let { userAnswers, setUserAnswers } = useContext(QuizContext);
+  let {isEnglish} = useContext(LanguageContext);
 
   const handleOnAnswer = e => {
     userAnswers.push(e.target.value);
@@ -25,12 +26,26 @@ const Question = ({question, answers, number}) => {
 ))
 
   return (
-    <Card className="list-group-item">
-      <Card.Body>
-        <Card.Title className="orange">{question}</Card.Title>
-        {answer}
-      </Card.Body>
-    </Card>
+    <div>
+      {isEnglish?
+
+      <Card style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Title>{question}</Card.Title>
+          {answer}
+        </Card.Body>
+      </Card>
+      :
+      <Card style={{ width: '18rem' }}>
+        <Card.Body>
+          ESP ESP ESP ESP ESP ESP ESP ESP ESP ESP ESP ESP
+          <Card.Title>{question}</Card.Title>
+          {answer}
+        </Card.Body>
+      </Card>
+    }
+    </div>
+
   );
 };
 

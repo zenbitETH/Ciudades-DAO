@@ -228,9 +228,7 @@ function Home() {
                 </div>
               </Card>
           </div>
-
      :
-
         <div className="App">
             <Card.Text>Protocolo para digitalizar la gobernanza urbana de la ciudad de Querétaro</Card.Text>
           <div className="Wallet">
@@ -242,7 +240,7 @@ function Home() {
             <Card className="gray">
             <Card.Title className="orange2">Balance de TARO</Card.Title>
             <Card.Text className="text-large">Bloqueado</Card.Text>
-         
+
             <div className="item2">
              <Card.Body>
                <Card.Text>TARO en la cartera</Card.Text>

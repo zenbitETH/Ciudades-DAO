@@ -24,7 +24,6 @@ const InstallMetamaskAlert = () => {
       </p>
     </Alert>
     }</div>
-
   );
 };
 
