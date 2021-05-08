@@ -24,7 +24,7 @@ import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-
 
 function Home() {
   let [ethersProvider, setEthersProvider] = useState();
-  let [isConnecting, setIsConnecting] = useState();
+  let [isConnecting, setIsConnecting] = useState(); 
   let [isMetamastInstalled, setIsMetamaskInstalled] = useState();
   let [currentMetaMaskAccount, setCurrentMetaMaskAccount] = useState(null);
   let [userBalance, setUserBalance] = useState();
