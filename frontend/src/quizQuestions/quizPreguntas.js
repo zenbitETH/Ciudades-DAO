@@ -13,9 +13,9 @@ export const quizPreguntas = [
     number: 2,
     question: 'Marca los municipios conurbados de la ciudad de Querétaro',
     answers: [
-      'Huimilpan & Amealco',
-      'Corregidora & El Marques',
-      'Tequisquiapan & San Juan del Rio',
+      'Huimilpan y Amealco',
+      'Corregidora y El Marques',
+      'Tequisquiapan y San Juan del Rio',
 
     ],
     correctAnswer: 'x'
@@ -52,7 +52,7 @@ export const quizPreguntas = [
   },
   {
     number: 6,
-    question: 'The Peña of Bernal is located in:',
+    question: 'La Peña de Bernal se ubica en el municipio de:',
     answers: [
       'Tequisquiapan',
       'Ezequiel Montes',
@@ -62,11 +62,11 @@ export const quizPreguntas = [
   },
   {
     number: 7,
-    question: 'Mark the underground Queretaro movement from 1800’s that detonated the independence of Mexico:',
+    question: 'Movimiento clandestino formado en la ciudad de Querétaro que detonó la Independencia de México',
     answers: [
-      'Queretaro´s revolution',
-      'Queretaro’s decentralization',
-      'Queretaro’s conspiracy',
+      'La Revolución de Querétaro',
+      'La Decentrazlización de Querétaro',
+      'La Conspiración de Querétaro',
     ],
     correctAnswer: 'x'
   },
@@ -74,9 +74,9 @@ export const quizPreguntas = [
     number: 8,
     question: 'Cerca del final de los Arcos encontrarás el camino hacia:',
     answers: [
-      'Jurica & Juriquilla',
-      'La Cañada & Hércules',
-      'Candiles $ El Pueblito',
+      'Jurica y Juriquilla',
+      'La Cañada y Hércules',
+      'Candiles y El Pueblito',
     ],
     correctAnswer: 'x'
   },
