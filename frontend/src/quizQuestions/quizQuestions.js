@@ -110,12 +110,3 @@ export const quizQuestions = [
     correctAnswer: 'six'
   }
 ];
-
-
-
-// {
-//   number:
-//   question:
-//   answers: [],
-//   correctAnswer:
-// }

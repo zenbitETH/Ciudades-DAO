@@ -1,98 +1,130 @@
-import { useContext, useState } from 'react';
-import { QuizContext } from '../contexts/QuizContext';
-import { LanguageContext } from '../contexts/LanguageContext';
+import { useState, useContext } from 'react';
 import { Button } from 'react-bootstrap';
+import { ethers } from 'ethers';
+import {Link} from "react-router-dom";
 import Question from './Question';
-import { quizQuestions } from '../quizQuestions/quizQuestions';
-import { quizPreguntas } from '../quizQuestions/quizPreguntas';
+import { englishQuiz } from '../REALQUIZ/englishQuiz';
+import { spanishQuiz } from '../REALQUIZ/spanishQuiz';
+import { QuizContext } from '../contexts/QuizContext';
 import QuizFailureModal from '../modals/QuizFailureModal';
 import QuizSuccessModal from '../modals/QuizSuccessModal';
 import QuizAlreadySubmittedModal from '../modals/QuizAlreadySubmittedModal';
 import IsLoadingModal from '../modals/IsLoadingModal';
+import { LanguageContext } from '../contexts/LanguageContext';
+import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
+import { ConnectedContext } from '../contexts/ConnectedContext';
+import { EthersContext } from '../contexts/EthersContext';
+import { TaroContext } from '../contexts/TaroContext';
 
 const Quiz = () => {
   let [userAnswers, setUserAnswers] = useState([]);
   let [checkedAnswers, setCheckedAnswers] = useState([]);
   let [failureModalShow, setFailureModalShow] = useState(false);
   let [successModalShow, setSuccessModalShow] = useState(false);
-  let [loadingModalShow, setLoadingModalShow] = useState(false);
+  let [loadingModalShow, setLoadingModalShow] = useState();
   let [alreadySubmittedModal, setAlreadSubmittedModal] = useState(false);
-  let [hasSubmitted, setHasSubmitted] = useState();
+  let [hasSubmitted, setHasSubmitted] = useState(false);
+
+  let {isEnglish} = useContext(LanguageContext);
+  let {governorAlpha} = useContext(GovernorAlphaContext);
+  let {taro} = useContext(TaroContext);
+  let {isConnected} = useContext(ConnectedContext);
+  let {ethersSigner} = useContext(EthersContext);
 
   const handleOnSubmitAnswers = async e => {
     e.preventDefault();
+    let quizQuestions;
+    let _checkedAnswers = [];
+    if(isEnglish) {
+      quizQuestions = englishQuiz;
+    } else {
+      quizQuestions = spanishQuiz;
+    };
     if(!hasSubmitted) {
       setHasSubmitted(true);
-      console.log(userAnswers);
-      console.log(quizQuestions);
+      console.log("userAnswers: ", userAnswers);
+      console.log('quizQuestions: ', quizQuestions);
       for (let i = 0; i < quizQuestions.length; i++) {
         for (let j = 0; j < userAnswers.length; j++) {
           if (quizQuestions[i].correctAnswer.toString().toLowerCase().trim() === userAnswers[j].toString().toLowerCase().trim()) {
-            setCheckedAnswers(checkedAnswers.push(quizQuestions[i].correctAnswer));
+            _checkedAnswers.push(quizQuestions[i].correctAnswer);
           };
         };
       };
-      console.log(checkedAnswers);
-
+      console.log('_checkedAnswers: ', _checkedAnswers);
       //Delay function is only for development
-      const delay = () => new Promise(res => setTimeout(res, 2000));
+      // const delay = () => new Promise(res => setTimeout(res, 2000));
 
-      if(checkedAnswers.length === 10) {
-        setLoadingModalShow(true);
+      if(_checkedAnswers.length === 10) {
+        // setLoadingModalShow(true);
         //Make network call to receive 100 tokens
-        await delay();
-        handleOnLoadingModal();
+        let submitAnswers = await governorAlpha.validate(ethers.BigNumber.from('100'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log('submitAnswersReceipt: ', submitAnswersReceipt);
+        // handleOnLoadingModal();
 
-        console.log('length: ', checkedAnswers.length);
-        setSuccessModalShow(true);
-        setCheckedAnswers([]);
-      } else if(checkedAnswers.length >= 8) {
-        setLoadingModalShow(true);
-        //Make network call to receive 80 tokens
-        await delay();
-        handleOnLoadingModal();
+        let signerAddress = await ethersSigner.getAddress();
+        console.log("signerAddress in Quiz: ", signerAddress);
 
-        console.log('length: ', checkedAnswers.length);
-        setSuccessModalShow(true);
-        setCheckedAnswers([]);
-      } else if(checkedAnswers.length >= 6) {
-        setLoadingModalShow(true);
-        //Make network call to receive 20 tokens
-        await delay();
-        handleOnLoadingModal();
+        let _userBalance = await taro.balanceOf(signerAddress);
+        console.log('_userBalance in Quiz: ', _userBalance.toString());
 
-        console.log('length: ', checkedAnswers.length)
-        setSuccessModalShow(true);
-        setCheckedAnswers([]);
+
+        // console.log('length: ', checkedAnswers.length);
+        // setSuccessModalShow(true);
+        // setCheckedAnswers([]);
+      } else if(_checkedAnswers.length >= 8) {
+        let submitAnswers = await governorAlpha.validate(ethers.BigNumber.from('80'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log(submitAnswersReceipt);
+        // setLoadingModalShow(true);
+        // //Make network call to receive 80 tokens
+        // handleOnLoadingModal();
+        //
+        // console.log('length: ', checkedAnswers.length);
+        // setSuccessModalShow(true);
+        // setCheckedAnswers([]);
+      } else if(_checkedAnswers.length >= 6) {
+        let submitAnswers = await governorAlpha.validate(ethers.BigNumber.from('20'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log(submitAnswersReceipt);
+        // setLoadingModalShow(true);
+        // //Make network call to receive 20 tokens
+        // handleOnLoadingModal();
+        //
+        // console.log('length: ', checkedAnswers.length)
+        // setSuccessModalShow(true);
+        // setCheckedAnswers([]);
       } else {
-        setLoadingModalShow(true);
-        await delay();
-        handleOnLoadingModal();
-
-        console.log('length: ', checkedAnswers.length)
-        setFailureModalShow(true);
-        setCheckedAnswers([]);
+        // setLoadingModalShow(true);
+        // handleOnLoadingModal();
+        //
+        console.log('length: ', _checkedAnswers.length)
+        // setFailureModalShow(true);
+        // setCheckedAnswers([]);
       };
     } else {
       setAlreadSubmittedModal(true);
     };
   };
-  const questions = quizQuestions.map((q, i) => (
-    <Question 
+
+  const englishQuestions = englishQuiz.map((q, i) => (
+    <Question
       key={q.question.toString()}
       question={q.question}
       answers={q.answers}
       number={q.number}
     />
-    ))
-  const preguntas = quizPreguntas.map((q, i) => (
-    <Question 
+  ))
+
+  const spanishQuestions = spanishQuiz.map((q, i) => (
+    <Question
       key={q.question.toString()}
       question={q.question}
       answers={q.answers}
       number={q.number}
     />
-    ))
+  ))
 
   const handleOnFailure = () => {
     setFailureModalShow(false);
@@ -109,67 +141,92 @@ const Quiz = () => {
   const handleOnLoadingModal = () => {
     setLoadingModalShow(false);
   };
-  let {isEnglish} = useContext(LanguageContext);
+
   return (
     <div>
-    {isEnglish ?
-      <div className="App" >
-        <div className="gray2">
-        <text className="white">Quiz</text>
+      {isEnglish?
+        <div>
+          {isConnected
+
+          ?
+
           <div>
-            <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
-            <div>{questions}</div>
+            <QuizContext.Provider value={{userAnswers, setUserAnswers}}>
+              <div>
+                {englishQuestions}
+              </div>
             </QuizContext.Provider>
+            <Button onClick={handleOnSubmitAnswers}>Submit your answers</Button>
+            <QuizFailureModal
+              show={failureModalShow}
+              onHide={handleOnFailure}
+            />
+            <QuizSuccessModal
+              show={successModalShow}
+              onHide={handleOnSuccess}
+            />
+            <QuizAlreadySubmittedModal
+              show={alreadySubmittedModal}
+              onHide={handleOnAlreadySubmitted}
+            />
+            <IsLoadingModal
+              show={loadingModalShow}
+              onHide={handleOnLoadingModal}
+            />
           </div>
-        </div>
-        <Button className="Wallet" onSubmit={handleOnSubmitAnswers}>Submit your answers</Button>
-        <QuizFailureModal
-          show={failureModalShow}
-          onHide={handleOnFailure}
-        />
-        <QuizSuccessModal
-          show={successModalShow}
-          onHide={handleOnSuccess}
-        />
-        <QuizAlreadySubmittedModal
-          show={alreadySubmittedModal}
-          onHide={handleOnAlreadySubmitted}
-        />
-        <IsLoadingModal
-          show={loadingModalShow}
-          onHide={handleOnLoadingModal}
-        />
-      </div>
-    :
-      <div className="App" >
-        <div className="gray2">
-        <text className="white">Validar que soy de Querétaro</text>
+
+          :
+
           <div>
-            <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
-            <div>{preguntas}</div>
-            </QuizContext.Provider>
+            <div>
+              To take the quiz and start earning Taro, you first need to get connected to the Ethereum network
+            </div>
+            <Link to="/">Return home and click on "Connect Wallet to Unlock"</Link>
           </div>
+          }
         </div>
-        <Button className="Wallet" onSubmit={handleOnSubmitAnswers}>Verificar respuestas</Button>
-        <QuizFailureModal
-          show={failureModalShow}
-          onHide={handleOnFailure}
-        />
-        <QuizSuccessModal
-          show={successModalShow}
-          onHide={handleOnSuccess}
-        />
-        <QuizAlreadySubmittedModal
-          show={alreadySubmittedModal}
-          onHide={handleOnAlreadySubmitted}
-        />
-        <IsLoadingModal
-          show={loadingModalShow}
-          onHide={handleOnLoadingModal}
-        />
-      </div>
-    } 
-  </div>
+
+        :
+        <div>
+          {isConnected ?
+              <div className="gray2">
+                <text className="white">Validar que soy de Querétaro</text>
+                <div>
+                  <div>
+                    <QuizContext.Provider className="item" value={{userAnswers, setUserAnswers}}>
+                    <div>{spanishQuestions}</div>
+                    </QuizContext.Provider>
+                  </div>
+                  <Button className="Wallet" onClick={handleOnSubmitAnswers}>Verificar respuestas</Button>
+                  <QuizFailureModal
+                    show={failureModalShow}
+                    onHide={handleOnFailure}
+                  />
+                  <QuizSuccessModal
+                    show={successModalShow}
+                    onHide={handleOnSuccess}
+                  />
+                  <QuizAlreadySubmittedModal
+                    show={alreadySubmittedModal}
+                    onHide={handleOnAlreadySubmitted}
+                  />
+                    <IsLoadingModal
+                      show={loadingModalShow}
+                      onHide={handleOnLoadingModal}
+                    />
+                </div>
+              </div>
+              : 
+              <div>
+                <div>
+                  Necesitas conectarte con una wallet de Metamask a la red de Ethereum para poder contestar el cuestionario
+                </div>
+                <Link to="/">Regresa al inicio para conectar tu cartera a la Dapp</Link>
+              </div>
+          }
+        </div>
+      }
+    </div>
   );
 };
 

@@ -29,21 +29,20 @@ const Question = ({question, answers, number}) => {
     <div>
       {isEnglish?
 
-      <Card style={{ width: '18rem' }}>
+      <Card className="list-group-item">
         <Card.Body>
-          <Card.Title>{question}</Card.Title>
+          <Card.Title className="orange">{question}</Card.Title>
           {answer}
         </Card.Body>
       </Card>
       :
-      <Card style={{ width: '18rem' }}>
-        <Card.Body>
-          ESP ESP ESP ESP ESP ESP ESP ESP ESP ESP ESP ESP
-          <Card.Title>{question}</Card.Title>
-          {answer}
-        </Card.Body>
-      </Card>
-    }
+      <Card className="list-group-item">
+      <Card.Body> 
+        <Card.Title className="orange">{question}</Card.Title>
+        {answer}
+      </Card.Body>
+    </Card>
+    } 
     </div>
 
   );
