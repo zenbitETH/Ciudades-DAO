@@ -83,5 +83,3 @@ function App() {
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
 
-
-https://expedition.dev/?network=SKALE&rpcUrl=https://dev-testnet-v1-1.skalelabs.com                      skETH                           344435                   https://dev-testnet-v1-1.skalelabs.com                    SKALE Network Testnet

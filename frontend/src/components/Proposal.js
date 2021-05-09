@@ -108,11 +108,6 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
   }, []);
 
 
-  const handleOnClickDelegate = async () => {
-    let delegate = await taro.delegate(signerAddress);
-    let delegateReceipt = await delegate.wait(1);
-    console.log('delegateReceipt: ', delegateReceipt);
-  };
 
   const handleOnClickFor = async () => {
     // console.log('signer address in handle for: ', signerAddress);
@@ -167,7 +162,6 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
             <div>
               Against: {againstVotes}
             </div>
-            <Button block onClick={handleOnClickDelegate}>Delegate so you can vote</Button>
             <Button block onClick={handleOnClickFor}>Vote for this proposal</Button>
             <Button block onClick={handleOnClickAgainst}>Vote against this proposal</Button>
         </Card.Body>
@@ -210,7 +204,6 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
             <div>
               Against: {againstVotes}
             </div>
-            <Button block onClick={handleOnClickDelegate}>Delegate so you can vote</Button>
             <Button block onClick={handleOnClickFor}>Vote for this proposal</Button>
             <Button block onClick={handleOnClickAgainst}>Vote against this proposal</Button>
         </Card.Body>
