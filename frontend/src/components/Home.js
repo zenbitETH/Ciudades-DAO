@@ -335,6 +335,7 @@ function Home() {
                 </Card.Body> 
               </div>
             </Card>
+            
           </div>
           }
         </div> 
