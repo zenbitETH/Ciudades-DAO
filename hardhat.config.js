@@ -19,11 +19,15 @@ module.exports = {
   defaultNetwork,
 
   networks: {
+    hardhat: {
+      chainId: 1337
+    },
     localhost: {
       url: "http://localhost:8545",
     },
-    mySkaleChain: {
-      url: "http://eth-global-10.skalenodes.com:10323"
+    skale: {
+      url: "https://eth-global-10.skalenodes.com:10200",
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
     },
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/faefe1dcd6094fb388019173d2328d8f",
@@ -87,7 +91,7 @@ module.exports = {
     sources: "./contracts",
     tests: "./test",
     cache: "./cache",
-    artifacts: "./artifacts"
+    artifacts: './frontend/src/contracts'
 
   },
   mocha: {
@@ -95,5 +99,3 @@ module.exports = {
   }
 
 };
-
-

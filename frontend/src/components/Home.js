@@ -236,6 +236,7 @@ function Home() {
             :<ConnectButton handleOnConnect={handleOnConnect}/>
             }
           </div>
+          <Button onClick={listSkaleInMetamask}>Select SKALE in MetaMask</Button>
           {isConnected ?
           <div>
           <Card className="orange-unlock">
@@ -291,6 +292,7 @@ function Home() {
             :<ConnectButton handleOnConnect={handleOnConnect}/>
             }
           </div>
+          <Button onClick={listSkaleInMetamask}>selecciona la red SKALE in MetaMask</Button>
           {isConnected ?
           <div>
             <Card className="orange-unlock">
