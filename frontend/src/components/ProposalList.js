@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
+import {ListGroup} from 'react-bootstrap';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import Proposal from './Proposal';
@@ -165,7 +166,7 @@ const ProposalList = () => {
   });
 
   return (
-    <div>
+<div>
       {isEnglish
 
       ?
@@ -176,25 +177,81 @@ const ProposalList = () => {
           <Link to="/createproposal">Create a proposal</Link>
         </div>
 
-        <main className="m-4">
-          {list}
-        </main>
-      </div>
-       :
-
-      <div>
-        {isValidated ? "" : <ValidationRequired />}
         <div>
-          <Link to="/createproposal">Crear propuesta</Link>
+          {list.length > 0
+
+          ?
+
+          <div>
+            {list}
+          </div>
+
+          :
+
+          <div>
+            <div>
+              <Link to="/">Please return to the home page</Link>
+            </div>
+            <div>
+              There are no proposals right now.
+            </div>
+          </div>
+          }
         </div>
 
-        <main className="m-4">
-          {list}
-        </main>  
+        <ListGroup>
+          <ListGroup.Item>Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+          <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        </ListGroup>
       </div>
-     }
-     </div>
-   );
- };
+
+      :
+
+      <div>
+        <div>
+          ESP ESP ESP ESP
+        </div>
+        {isValidated ? "" : <ValidationRequired />}
+        <div>
+          <Link to="/createproposal">Create a proposal</Link>
+        </div>
+
+        <div>
+          {list.length > 0
+
+          ?
+
+          <div>
+            {list}
+          </div>
+
+          :
+
+          <div>
+            <div>
+              <Link to="/">Please return to the home page</Link>
+            </div>
+            <div>
+              There are no proposals right now.
+            </div>
+          </div>
+          }
+        </div>
+
+        <ListGroup>
+          <ListGroup.Item>Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+          <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        </ListGroup>
+      </div>
+    }
+    </div>
+  );
+};
  
  export default ProposalList;

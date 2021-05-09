@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
+
 .App {
   background-color: #ffffff;
   font-family: 'Lexend Deca', sans-serif;
@@ -29,6 +30,16 @@ a.alt:hover {color: #3d386b!important;}
 }
 
 .submitbutton {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+}
+
+.TARO-button {
+  border-radius: 25px !important;
+  background-color: #3d386b;
   width: 100% !important;
   display: flex !important;
   justify-content: center !important;
@@ -108,6 +119,36 @@ button:disabled {
   min-width: 450px !important;
   margin: 3% auto;
   background-image: linear-gradient(#eee, #ccc);
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  color: #3d386b !important;
+}
+
+.orange-unlock {
+  border-radius: 25px;
+  width:100%;
+  max-width: 50%;
+  min-width: 450px !important;
+  margin: 3% auto;
+  background-image: linear-gradient(#FF9400, #ffc16b);
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  color: #3d386b !important;
+}
+
+.yellow-unlock {
+  border-radius: 25px;
+  width:100%;
+  max-width: 50%;
+  min-width: 450px !important;
+  margin: 3% auto;
+  background-image: linear-gradient(#FAC91A, #fde17c);
   font-family: 'Lexend Deca', sans-serif;
   display: flex !important;
   justify-content: center !important;
@@ -206,6 +247,18 @@ align-items: center !important;
   color: #FF9400 !important;
 }
 
+.purple-unlock {
+  margin-top: 3% !important;
+  margin-bottom: 3% !important;
+  font-size: 18px !important;
+  color: #3d386b !important;
+}
+
+.big-icon {
+  font-size: 75px !important;
+  color: #3d386b;
+}
+
 .purple {
   text-align: left !important;
   margin-top: 3%;
@@ -238,4 +291,42 @@ align-items: center !important;
   border: none !important;
 }
 
+
+/* Proposal
+
+ <Card.Body>
+            <div className="proposal-table">
+              <div className="proposal-main">
+                <div className="proposal-title"> Clases de baile en el parque {}</div>
+                <div className="proposal-action">type of action: {}</div>
+              </div>
+            </div>
+            
+*/
+
+.proposal-table {
+  width: 100%;
+  display: table !important;
+
+}
+
+.proposal-main {
+  display: table-row !important;
+}
+
+
+.proposal-title {
+  width: 75%;
+  display: table-cell;
+  text-align: left !important;
+  font-size: 20px !important;
+  color: #FF9400 !important;
+}
+
+.proposal-action {
+  display: table-cell;
+  text-align: right !important;
+  font-size: 15px !important;
+  color: #FF9400 !important;
+}
 
