@@ -254,7 +254,7 @@ function Home() {
             <Card.Title className="big-icon">🗳️</Card.Title>
             <div>
               <Card.Body>
-                <Button className="TARO-button" href="/About">🙋🏻‍♀️ Vote 🙋🏽‍♂️</Button>
+                <Button className="TARO-button" href="/proposallist">🙋🏻‍♀️ Vote 🙋🏽‍♂️</Button>
               </Card.Body> 
             </div>
           </Card>
