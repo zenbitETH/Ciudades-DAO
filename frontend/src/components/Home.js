@@ -13,7 +13,6 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
-import LeaderBoard from './LeaderBoard';
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
@@ -231,7 +230,7 @@ function Home() {
           <Card.Text>Urban governance protocol for Queretaro City DAO</Card.Text>
           <div className="Wallet">
             {!isMetamastInstalled ?
-            <InstallMetamaskAlert />:isConnected ? '' : isConnecting? 
+            <InstallMetamaskAlert />:isConnected ? '' : isConnecting?
             <ConnectingButton />
             :<ConnectButton handleOnConnect={handleOnConnect}/>
             }
@@ -255,7 +254,7 @@ function Home() {
             <div>
               <Card.Body>
                 <Button className="TARO-button" href="/proposallist">🙋🏻‍♀️ Vote 🙋🏽‍♂️</Button>
-              </Card.Body> 
+              </Card.Body>
             </div>
           </Card>
         </div>
@@ -276,18 +275,18 @@ function Home() {
             <div>
               <Card.Body>
                 <Button disabled block>🙋🏻‍♀️ Vote 🙋🏽‍♂️</Button>
-              </Card.Body> 
+              </Card.Body>
             </div>
           </Card>
         </div>
         }
-      </div> 
+      </div>
       :
         <div className="App">
           <Card.Text>Protocolo para digitalizar la gobernanza urbana de la ciudad de Querétaro</Card.Text>
           <div className="Wallet">
             {!isMetamastInstalled ?
-            <InstallMetamaskAlert />:isConnected ? '' : isConnecting? 
+            <InstallMetamaskAlert />:isConnected ? '' : isConnecting?
             <ConnectingButton />
             :<ConnectButton handleOnConnect={handleOnConnect}/>
             }
@@ -311,7 +310,7 @@ function Home() {
               <div>
                 <Card.Body>
                   <Button className="TARO-button" href="/ProposalList">🙋🏻‍♀️ Vota 🙋🏽‍♂️</Button>
-                </Card.Body> 
+                </Card.Body>
               </div>
             </Card>
           </div>
@@ -332,16 +331,16 @@ function Home() {
               <div>
                 <Card.Body>
                   <Button disabled block>🙋🏻‍♀️ Vota 🙋🏽‍♂️</Button>
-                </Card.Body> 
+                </Card.Body>
               </div>
             </Card>
-            
+
           </div>
           }
-        </div> 
+        </div>
       }
     </div>
   );
-} 
+}
 
 export default Home;

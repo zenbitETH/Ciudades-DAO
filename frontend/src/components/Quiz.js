@@ -36,7 +36,7 @@ const Quiz = () => {
   let [isConnected, setIsConnected] = useState();
 
 
-  let {isEnglish} = useContext(LanguageContext);
+  let [isEnglish] = useContext(LanguageContext);
   let {governorAlpha, setGovernorAlpha} = useContext(GovernorAlphaContext);
   let {taro, setTaro} = useContext(TaroContext);
   let {ethersSigner, setEthersSigner, provider, setProvider} = useContext(EthersContext);
@@ -239,7 +239,7 @@ const Quiz = () => {
 
   return (
     <div>
-      {isEnglish?
+      {isEnglish === 'english' ?
         <div>
           {isConnected
 
@@ -311,7 +311,7 @@ const Quiz = () => {
                     />
                 </div>
               </div>
-              : 
+              :
               <div>
                 <div>
                   Necesitas conectarte con una wallet de Metamask a la red de Ethereum para poder contestar el cuestionario

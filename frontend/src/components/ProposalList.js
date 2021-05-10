@@ -24,7 +24,7 @@ const ProposalList = () => {
   let [signerAddress, setSignerAddress] = useState();
 
   let {isValidated} = useContext(ValidationRequiredContext);
-  let {isEnglish} = useContext(LanguageContext);
+  let [isEnglish] = useContext(LanguageContext);
   let {governorAlpha} = useContext(GovernorAlphaContext);
   let {provider} = useContext(EthersContext);
 
@@ -179,38 +179,24 @@ const ProposalList = () => {
 
   return (
 <div>
-      {isEnglish
+      {isEnglish === 'english'
       ?
 
       <div>
         <div className= "app">
-          <div className= "valert">
+          <div className= "gray">
             {isValidated ? "" : <ValidationRequired />}
           </div>
-          <div className= "yellowB">
-              <div className="title2">Delegate TARO to Vote.</div>
-              <div className="big-icon">🗳️</div>
-              <div className="main">In order to create or vote on proposals, you need to delegate your TARO tokens
-              to tell the contracts that you want to use your TARO as voting power.
-              </div>
-              <div className="text-large-fit">1 TARO = 1 Vote
-              </div>
+            <div className= "yellowB">
+              <div className="main">Delegate TARO to vote. Note that you can only vote on proposals that are made after you have delegated.  You cannot delegate and then vote on existing proposals.</div>
                <div className ="floating">
-                <Button className="alt2" onClick={handleOnClickDelegate}>Delega TARO</Button>
-              </div>
-            </div >
-            <div className= "orangeB">
-              <div className="title2">Make a new proposal</div>
-              <div className="big-icon">🦸🦸‍♂️</div>
-              <div className="main">
-                The city needs you! generate proposals for activities, public works or needs that you have identified in your community
-                Make proposals, vote for them and make them come true to get more TARO.
+                <Button className="alt2" onClick={handleOnClickDelegate}>Delegate TARO</Button>
               </div>
               <div className="floating">
-                <Button className="alt2" to="/createproposal">Make a proposal</Button>
+                <Link className="alt" to="/createproposal">Create a proposal</Link>
               </div>
-            </div >
-            <div>
+              </div >
+              <div>
                 {list.length > 0
                 ?
                 <div className = "app">
@@ -222,12 +208,12 @@ const ProposalList = () => {
                    <div className="purple">There are no proposals right now.</div>
                   </div>
                   <div className ="floating">
-                    <Button className="alt2" to="/">Return to home</Button>
+                    <Link className="alt2" to="/">Return to home</Link>
                   </div>
                 </div>
           }
         </div>
-        
+
       </div>
 
       </div>
@@ -259,7 +245,7 @@ const ProposalList = () => {
                 Realiza propuestas, vota por ellas y hazlas realidad para obtener más TARO.
               </div>
               <div className="floating">
-                <Button className="alt2" to="/createproposal">Crea una propuesta</Button>
+                <Link className="alt2" to="/createproposal">Crea una propuesta</Link>
               </div>
             </div >
             <div>
@@ -274,12 +260,12 @@ const ProposalList = () => {
                    <div className="purple">No hay propuestas aún.</div>
                   </div>
                   <div className ="floating">
-                    <Button className="alt2" to="/">Regresar al inicio</Button>
+                    <Link className="alt2" to="/">Regresar al inicio</Link>
                   </div>
                 </div>
           }
         </div>
-        
+
       </div>
 
       </div>
@@ -287,5 +273,5 @@ const ProposalList = () => {
     </div>
   );
 };
- 
+
  export default ProposalList;

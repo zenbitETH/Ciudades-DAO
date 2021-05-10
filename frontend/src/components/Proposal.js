@@ -17,7 +17,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
   let [taro, setTaro] = useState();
   let [signerAddress, setSignerAddress] = useState();
 
-  let {isEnglish} = useContext(LanguageContext);
+  let [isEnglish] = useContext(LanguageContext);
   // let {governorAlpha} = useContext(GovernorAlphaContext);
   let {provider} = useContext(EthersContext);
 
@@ -126,7 +126,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
 
   return (
     <div>
-      {isEnglish
+      {isEnglish === 'english'
 
       ?
 
@@ -136,23 +136,23 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
           <div className="proposal-title"> Clases de baile en el parque {title}</div>
           <div className="proposal-action">type of action: {typeOfAction}</div>
         </div>
-      
+
         <div className="proposal-main">
           <div className="proposal-sub">Where: {neighborhood}</div>
           <div className="proposal-subaction"> Person in charge: {personInCharge}</div>
         </div>
-        
-    
+
+
         <div className ="proposal-main">
           <div className="proposal-sub">description: {description}</div>
           <div className="proposal-action">expiration:{expiration}</div>
         </div>
-        
+
         <div className ="proposal-main">
           <div className="proposal-sub">cost: {budget}</div>
           <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
         </div>
-    
+
         <div className="proposal-main">
           <div className="proposal-sub">For:{forVotes}</div>
           <div className="proposal-action">Against: {againstVotes}</div>
@@ -172,18 +172,18 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
       <div className="proposal-title">{title}</div>
       <div className="proposal-action">Tipo de acción: {typeOfAction}</div>
     </div>
-  
+
     <div className="proposal-main">
       <div className="proposal-sub">Donde: {neighborhood}</div>
       <div className="proposal-subaction"> Persona a cargo: {personInCharge}</div>
     </div>
-    
+
 
     <div className ="proposal-main">
       <div className="proposal-sub">Descripción: {description}</div>
       <div className="proposal-action">Expiración:{expiration}</div>
     </div>
-    
+
     <div className ="proposal-main">
       <div className="proposal-sub">Costo: {budget}</div>
       <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>

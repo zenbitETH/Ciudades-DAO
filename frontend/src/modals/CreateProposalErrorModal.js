@@ -4,11 +4,11 @@ import {Link} from "react-router-dom";
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const CreateProposalErrorModal = (props) => {
-  let {isEnglish} = useContext(LanguageContext);
+  let [isEnglish] = useContext(LanguageContext);
 
   return (
     <div>
-      {isEnglish
+      {isEnglish === 'english'
 
       ?
 
@@ -21,6 +21,9 @@ const CreateProposalErrorModal = (props) => {
         <Modal.Body>
           <div>
             Your form was not submitted.  Please be sure you are connected to MetaMask and that you entered your information correctly.
+          </div>
+          <div>
+            Also, make sure you have passed the quiz so that you are validated to make proposals.
           </div>
           <div>
             <Link to="/">VoTaro</Link>
@@ -38,10 +41,10 @@ const CreateProposalErrorModal = (props) => {
       >
         <Modal.Body>
           <div>
-            ESP ESP ESP ESP ESP ESP ESP ESP ESP ESP ESP ESP
+            Your form was not submitted.  Please be sure you are connected to MetaMask and that you entered your information correctly.
           </div>
           <div>
-            Your form was not submitted.  Please be sure you are connected to MetaMask and that you entered your information correctly.
+            Also, make sure you have passed the quiz so that you are validated to make proposals.
           </div>
           <div>
             <Link to="/">VoTaro</Link>
