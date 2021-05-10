@@ -184,19 +184,33 @@ const ProposalList = () => {
 
       <div>
         <div className= "app">
-          <div className= "gray">
+          <div className= "valert">
             {isValidated ? "" : <ValidationRequired />}
           </div>
-            <div className= "yellowB">
-              <div className="main">Delegate TARO to vote. Note that you can only vote on proposals that are made after you have delegated.  You cannot delegate and then vote on existing proposals.</div>
+          <div className= "yellowB">
+              <div className="title2">Delegate TARO to Vote.</div>
+              <div className="big-icon">🗳️</div>
+              <div className="main">In order to create or vote on proposals, you need to delegate your TARO tokens
+              to tell the contracts that you want to use your TARO as voting power.
+              </div>
+              <div className="text-large-fit">1 TARO = 1 Vote
+              </div>
                <div className ="floating">
-                <Button className="alt2" onClick={handleOnClickDelegate}>Delegate TARO</Button>
+                <Button className="alt2" onClick={handleOnClickDelegate}>Delega TARO</Button>
+              </div>
+            </div >
+            <div className= "orangeB">
+              <div className="title2">Make a new proposal</div>
+              <div className="big-icon">🦸🦸‍♂️</div>
+              <div className="main">
+                The city needs you! generate proposals for activities, public works or needs that you have identified in your community
+                Make proposals, vote for them and make them come true to get more TARO.
               </div>
               <div className="floating">
-                <Button className="alt" to="/createproposal">Create a proposal</Button>
+                <Button className="alt2" to="/createproposal">Make a proposal</Button>
               </div>
-              </div >
-              <div>
+            </div >
+            <div>
                 {list.length > 0
                 ?
                 <div className = "app">

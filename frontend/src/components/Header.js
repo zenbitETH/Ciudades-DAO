@@ -19,7 +19,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
-            <Nav.Link  href="/About">What is VoTARO?</Nav.Link>
+            <Nav.Link className = "nohover"  href="/About">What is VoTARO?</Nav.Link>
             <Nav.Link  href="/ProposalList">🥇 0</Nav.Link>
             <Nav.Link  href="/CreateProposal">🗳️ 0</Nav.Link>
             <NavDropdown  title="🌐Language" id="basic-nav-dropdown">
