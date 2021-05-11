@@ -608,3 +608,20 @@ align-items: center !important;
   margin-bottom: 1%;
 }
 
+.modal {
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  color: #3d386b !important;
+  text-align: center !important;
+  font-family: 'Lexend Deca', sans-serif !important; 
+  border: none !important;
+}
+
+.orange-modal {  
+  background-color: #FF9400 !important;
+  border-radius: 25px !important;
+  background-image: linear-gradient(#FF9400, #ffc16b);
+  font-family: 'Lexend Deca', sans-serif !important; 
+  color: #3d386b !important;
+}
