@@ -302,35 +302,34 @@ const CreateProposal = () => {
                 <Form.Label>
                   Título
                 </Form.Label>
-                <Form.Control type="text" placeholder="Título" onChange={handleOnChangeTitle}/>
+                <Form.Control type="text" placeholder="Nombra tu propuesta en un enunciado" onChange={handleOnChangeTitle}/>
               </Form.Group>
 
               <Form.Group as={Row} controlId="formTypeOfAction">
                 <Form.Label  >
                   Tipo de acción
                 </Form.Label>
-                <Form.Control type="text" placeholder="type" onChange={handleOnChangeTypeOfAction}/>
+                <Form.Control type="text" placeholder="Obra pública, actividad, servicio" onChange={handleOnChangeTypeOfAction}/>
               </Form.Group>
 
               <Form.Group as={Row} controlId="formNeighborhood">
                 <Form.Label  >
                   Colonia
                 </Form.Label>
-                  <Form.Control type="text" placeholder="neighborhood" onChange={handleOnChangeNeighborhood}/>
+                  <Form.Control type="text" placeholder="En que colonia es tu propuesta" onChange={handleOnChangeNeighborhood}/>
               </Form.Group>
 
               <Form.Group as={Row} controlId="formPersonInCharge">
                 <Form.Label  >
                   Persona o entidad a cargo
                 </Form.Label>
-              <Form.Control type="text" placeholder="Vecinos, Gobierno" onChange={handleOnChangePersonInCharge}/>
+              <Form.Control type="text" placeholder="¿Quien tiene que hacerlo?" onChange={handleOnChangePersonInCharge}/>
               </Form.Group>
-
               <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
                 <Form.Label  >
                   Descripción
               </Form.Label>
-                <Form.Control as="textarea" type="text" rows={3} placeholder="Describe tu propuesta" onChange={handleOnChangeDescription}/>
+                <Form.Control as="textarea" type="Describe a detalle tu propuesta, ¡mientras más información mejor!" rows={3} placeholder="Describe tu propuesta" onChange={handleOnChangeDescription}/>
               </Form.Group>
               {/*}
               <Form.Group as={Row} controlId="formExpiration">
@@ -344,7 +343,7 @@ const CreateProposal = () => {
                 <Form.Label  >
                   Presupuesto
               </Form.Label>
-                <Form.Control type="text" placeholder="Presupuesto" onChange={handleOnChangeBudget}/>
+                <Form.Control type="text" placeholder="¿Cuanto cuesta en pesos realizar esta propuesta" onChange={handleOnChangeBudget}/>
               </Form.Group>
               {/*}
               <Form.Group as={Row} controlId="formRequiredTaroToVote">
