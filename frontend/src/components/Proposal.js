@@ -135,7 +135,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
   <div className="proposal-main"></div>
     <div className="proposal-main">
       <div className="proposal-title">🎯{title}
-      <div className="proposal-sub"><div className="orange-card"><div className="orange3">🦸🦸‍♂️In charge:</div><p className="orange3">{personInCharge}</p></div></div>
+      <div className="proposal-sub"><div className="orange-card2"><div className="orange3">🦸🦸‍♂️In charge:</div><p className="orange3">{personInCharge}</p></div></div>
       <div className="proposal-action"><div className="yellow-card"><div className="yellow">⚙️Type of work:</div><p className="yellow">{typeOfAction}</p></div></div>
     </div>     
       <div className="proposal-subaction">
@@ -169,7 +169,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
   <div className="proposal-main"></div>
     <div className="proposal-main">
       <div className="proposal-title">🎯{title}
-      <div className="proposal-sub"><div className="orange-card"><div className="orange3">🦸🦸‍♂️Responsable:</div><p className="orange3">{personInCharge}</p></div></div>
+      <div className="proposal-sub"><div className="orange-card2"><div className="orange3">🦸🦸‍♂️Responsable:</div><p className="orange3">{personInCharge}</p></div></div>
       <div className="proposal-action"><div className="yellow-card"><div className="yellow">⚙️Tipo de trabajo:</div><p className="yellow">{typeOfAction}</p></div></div>
     </div>     
       <div className="proposal-subaction">
