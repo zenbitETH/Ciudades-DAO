@@ -203,8 +203,9 @@ const CreateProposal = () => {
         ?
 
         <div className="gray">
-          <Form >
+          <Form className="create">
           <p className="orange2">Create new urban governance proposal</p>
+          <p className="purple3">⚠️All fields need to be filled out⚠️</p>
             <Form.Group as={Row} controlId="formTitle">
               <Form.Label>
                 Title
@@ -296,8 +297,9 @@ const CreateProposal = () => {
         :
 
         <div className="gray">
-          <Form >
+          <Form className="create" >
             <p className="orange2">Crear nueva propuesta de gobernanza urbana</p>
+            <p className="purple3">⚠️Debes llenar todos los campos⚠️</p>
               <Form.Group as={Row} controlId="formTitle">
                 <Form.Label>
                   Título
@@ -329,7 +331,7 @@ const CreateProposal = () => {
                 <Form.Label  >
                   Descripción
               </Form.Label>
-                <Form.Control as="textarea" type="Describe a detalle tu propuesta, ¡mientras más información mejor!" rows={3} placeholder="Describe tu propuesta" onChange={handleOnChangeDescription}/>
+                <Form.Control as="textarea" type="field" rows={3} placeholder="Describe a detalle tu propuesta, ¡mientras más información mejor!" onChange={handleOnChangeDescription}/>
               </Form.Group>
               {/*}
               <Form.Group as={Row} controlId="formExpiration">

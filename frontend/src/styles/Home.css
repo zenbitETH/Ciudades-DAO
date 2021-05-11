@@ -78,6 +78,8 @@ a.alt:hover {
 
 
 .submitbutton {
+  margin-top: 3%;
+  margin-bottom: 5%;
   width: 100% !important;
   display: flex !important;
   justify-content: center !important;
@@ -358,6 +360,11 @@ align-items: center !important;
 
 .space {
   margin-top: 3%;
+}
+
+.create {
+  text-align: center;
+  width:90% !important;
 }
 
 .item {
