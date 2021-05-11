@@ -245,7 +245,7 @@ const Quiz = () => {
 
           ?
 
-          <div>
+          <div className="gray2">
             <QuizContext.Provider value={{userAnswers, setUserAnswers}}>
               <div>
                 {englishQuestions}
@@ -293,7 +293,8 @@ const Quiz = () => {
                     </QuizContext.Provider>
                   </div>
                   <Button className="Wallet" onClick={handleOnSubmitAnswers}>Verificar respuestas</Button>
-                  <QuizFailureModal
+                  
+                  <QuizFailureModal 
                     show={failureModalShow}
                     onHide={handleOnFailure}
                   />
