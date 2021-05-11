@@ -48,7 +48,7 @@ const Header = () => {
               <Nav.Link className="alt3" href="/About">🤔 ¿Qué es VoTARO?</Nav.Link>
               <Nav.Link className="alt3" href="/ProposalList">🥇 Usa TARO</Nav.Link>
               <Nav.Link className="alt3" href="/CreateProposal">🗳️ Nueva Propuesta</Nav.Link>
-            </Nav> 
+            </Nav>
           </Navbar.Collapse>
           </Navbar>
         </div>
