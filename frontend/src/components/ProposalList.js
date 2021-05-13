@@ -227,6 +227,7 @@ const ProposalList = () => {
               </div>
             </div >
             <div>
+
                 {list.length > 0
                 ?
                 <div className = "app">
@@ -279,6 +280,7 @@ const ProposalList = () => {
               </div>
             </div >
             <div>
+            
                 {list.length > 0
                 ?
                 <div className = "app">

@@ -18,11 +18,11 @@ a:hover {
   color: #3d386b!important;
   background-color: #FAC91A !important;}
 
-a.alt:link {color: #FFff!important;}
-a.alt:active{color: #FAC91A!important;}
-a.alt:visited {color: #FFff!important;}
+a.alt:link {color: #FF9400 !important;}
+a.alt:visited {color: #FF9400 !important;}
 a.alt:hover {
-  color: #3d386b !important;}
+  background-color: transparent !important;
+  color: #FAC91A !important;}
 
 .nohover {
   background-color: #3d386b!important;
@@ -34,8 +34,6 @@ a.alt:hover {
   margin-bottom: 3%;
   border: none !important;
   justify-content: left !important;
-  background-color: #FF9400 !important;
-  color: #ffffff !important;
 }
 
 .alt2 {
@@ -49,6 +47,23 @@ a.alt:hover {
   align-items: center !important;
   color: #ffffff !important;
   background-color: #3d386b !important;
+}
+
+.aboutbutton {
+  border-radius: 25px !important;
+  margin-top: 3%;
+  padding: 2%;
+  border: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  color: #ffffff !important;
+  background-color: #FF9400 !important;
+}
+
+.aboutlink {
+  color: #FF9400 !important;
 }
 
 .alt3 {
@@ -279,7 +294,7 @@ button:disabled {
   text-align: left !important;
 }
 
-.gray3 {
+.about {
   border-radius: 25px;
   width:100%;
   max-width: 50%;
@@ -287,11 +302,11 @@ button:disabled {
   margin: 3% auto;
   padding-top: 1%;
   padding-bottom: 1%;
-  background-image: linear-gradient(#eee, #cecece);
+  background-image: linear-gradient(#3d386b, #726baf);
   justify-content: center !important;
   align-content: center !important;
   align-items: center !important;
-  color: #3d386b !important;
+  color: #ffffff !important;
 }
 
 .yellowB {
@@ -452,11 +467,23 @@ align-items: center !important;
   
 }
 
+.aboutC {
+  text-align: left !important;
+  font-size: 20px !important;
+  color: #ffffff;
+}
+.aboutCo {
+  text-align: left !important;
+  margin-bottom: 2%;
+  font-size: 20px !important;
+  color: #FF9400;
+}
+
 .purple {
   text-align: left !important;
   margin-top: 3%;
   font-size: 2rem !important;
-  color: #3d386b;
+  color: #ffffff;
 }
 
 
