@@ -231,6 +231,7 @@ const ProposalList = () => {
                 {list.length > 0
                 ?
                 <div className = "app">
+                  <div className="text-large">Available proposals</div>
                   {list}
                 </div>
                 :
@@ -284,12 +285,13 @@ const ProposalList = () => {
                 {list.length > 0
                 ?
                 <div className = "app">
+                  <div className="text-large">Propuestas disponibles</div>
                   {list}
                 </div>
                 :
                 <div>
                   <div className ="floating">
-                   <div className="purple">No hay propuestas aún.</div>
+                   <div className="text-large">No hay propuestas aún.</div>
                   </div>
                   <div className ="floating">
                     <Link className="alt2" to="/">Regresar al inicio</Link>
