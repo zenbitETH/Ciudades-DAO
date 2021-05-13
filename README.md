@@ -11,6 +11,7 @@ Proposals are registered and managed in an automated way by the smart contract G
 
 VoTARO implements SKALE Network, an ethereum layer 2 solution that reduces gas charges to 0 and increases the speed of transactions without compromising security.
 
+
 ## 🧰 What do I need to get $ TARO? 
 You need to do 5 activities to get TARO.  
 1. 🦊 Download Metamask  
