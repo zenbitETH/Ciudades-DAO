@@ -2,6 +2,7 @@
 
 
 .App {
+  margin-top: 100px;
   background-color: #ffffff;
   font-family: 'Lexend Deca', sans-serif !important;
   text-align: center;
@@ -10,7 +11,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a:link {color: #FFff!important;}
+a:link {color: #FFff!important;
+        border: none;}
 a:active{color: #FAC91A!important;}
 a:visited {color: #FFff!important;}
 a:hover {
@@ -28,10 +30,12 @@ a.alt:hover {
   background-color: #3d386b!important;
 }
 
+a.alt3:link {color: #ffffff !important;}
+
 .alt {
   font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
   border-radius: 25px !important;
-  margin-bottom: 3%;
   border: none !important;
   justify-content: left !important;
 }
@@ -67,10 +71,8 @@ a.alt:hover {
 }
 
 .alt3 {
-  
   border-radius: 25px !important;
   border: none !important;
-  display: flex !important;
   text-align: left;
   color: #ffffff !important;
   background-color: #3d386b !important;
@@ -113,8 +115,9 @@ a.alt:hover {
 }
 
 Nav {
+  margin-bottom: 25px !important;
   background-color: #3d386b !important;
-  position: sticky !important;
+  position: fixed !important;
   font-family: 'Lexend Deca', sans-serif;
   color: #FF9400;
 }
@@ -233,6 +236,10 @@ button:disabled {
   align-content: center !important;
   align-items: center !important;
   color: #3d386b !important;
+}
+
+.top {
+  position: fixed top;
 }
 
 .orange-unlock {
@@ -431,6 +438,16 @@ align-items: center !important;
   margin-top: 3% !important;
   margin-bottom: 3% !important;
   color: #FAC91a !important;
+}
+
+.Vo {
+  font-size: 30px !important;
+  color: #FAC91a !important;
+}
+
+.TARO {
+  font-size: 30px;
+  color: #FF9400 !important;
 }
 .purple-unlock {
   margin-top: 3% !important;

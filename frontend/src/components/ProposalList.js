@@ -194,12 +194,12 @@ const ProposalList = () => {
   };
 
   return (
-<div>
+<div className= "App">
       {isEnglish === 'english'
       ?
 
       <div>
-        <div className= "app">
+        <div >
           <div className= "valert">
             {isValidated ? "" : <ValidationRequired />}
             </div>

@@ -22,7 +22,7 @@ const About = () => {
       <div className="main">
         <p>VoTaro is an Ethereum application that uses a reward system to encourage residents of Queretaro City to propose and participate
            in activities that will improve their community. It was developed on the <a className="alt" href="https://showcase.ethglobal.co/scaling/cities-protocol">Scaling Ethereum Hackathon 2021.</a></p>   
-        <p><ReactPlayer classname="youtube" url="https://www.youtube.com/embed/6xgTw1FEuIA"/></p>
+        <div><ReactPlayer width="100%"  url="https://www.youtube.com/embed/6xgTw1FEuIA"/></div>
         <p>The citizens of Querétaro who use VoTARO to propose, vote and solve the needs of their neighborhood in Queretaro City, will be rewarded with
          <a className="alt" href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> $TARO, an ERC20 token </a>
           which gives users voting power on these proposals and will work as an instrument to fund the costs necessary to solve them.</p>
@@ -110,7 +110,7 @@ const About = () => {
       <div className="main">
         <p>VoTaro es una DApp de Ethereum para digitalizar la gobernanza de la ciudad de Querétaro, utilizando contratos inteligentes
           y herramientas descentralizadas de la web 3.0, desarrollada en el  <a className="alt" href="https://showcase.ethglobal.co/scaling/cities-protocol">Scaling Ethereum Hackathon 2021.</a></p>   
-        <p><ReactPlayer classname="youtube" url="https://www.youtube.com/embed/6xgTw1FEuIA"/></p>
+        <p><ReactPlayer width="100%"  url="https://www.youtube.com/embed/6xgTw1FEuIA"/></p>
         <p>Los ciudadan@s de Querétaro que utilicen VoTARO para proponer, votar y resolver necesidades de sus colonias, serán recompensados con  
          <a className="alt" href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> $TARO, un token ERC20 </a>
          que sirve para votar estas propuestas y como instrumento para fondear los costos necesarios para resolverlas.</p>
