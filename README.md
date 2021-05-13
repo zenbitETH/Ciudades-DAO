@@ -22,7 +22,7 @@ You need to do 5 activities to get TARO.
 4. 🗳️ Delegate TARO  
 5. 🦸🦸‍♂️ Create and Vote on proposals  
 
-## Benefits for the city
+# Benefits for the city
 ⛓️ Urban governance on blockchain.  
 🏙️ Urban processes tracked in Smart Contracts.  
 🤖 Automation and Decentralization of services.  

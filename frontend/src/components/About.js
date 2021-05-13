@@ -25,7 +25,7 @@ const About = () => {
         <p><ReactPlayer classname="youtube" url="https://www.youtube.com/embed/6xgTw1FEuIA"/></p>
         <p>The citizens of Querétaro who use VoTARO to propose, vote and solve the needs of their neighborhood in Queretaro City, will be rewarded with
          <a className="alt" href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> $TARO, an ERC20 token </a>
-          which give users voting power on these proposals and will work as an instrument to fund the costs necessary to solve them.</p>
+          which gives users voting power on these proposals and will work as an instrument to fund the costs necessary to solve them.</p>
         <p>Proposals are registered and managed in an automated way by the smart contract
         <a className="alt" href="https://github.com/onionpeel/cities_protocol/blob/main/contracts/GovernorAlpha.sol"> Governor Alpha </a> 
          a version of <a className="alt" href="https://compound.finance/docs/governance?ref=github&user=ajb413&repo=compound-governance-examples"> Compound's contract </a>  
