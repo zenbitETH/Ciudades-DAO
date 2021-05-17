@@ -25,7 +25,7 @@ const Header = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
              <NavDropdown drop="left"  className="language" title="🌐" >
-                 <NavDropdown.Item  onSelect={handleOnSelect}>Español</NavDropdown.Item>
+                 <NavDropdown.Item onSelect={handleOnSelect}>Español</NavDropdown.Item>
                 </NavDropdown>
               <Nav >
                 <NavLink className="NavLink" to="/About">🤔 About </NavLink> 
@@ -44,7 +44,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
           <NavDropdown drop="left" className="language" title="🌐">
-              <NavDropdown.Item className="alt" onSelect={handleOnSelect}>English</NavDropdown.Item>
+              <NavDropdown.Item onSelect={handleOnSelect}>English</NavDropdown.Item>
               </NavDropdown>
             <Nav>
               <NavLink className="NavLink" to="/About">🤔 ¿Qué es VoTARO?</NavLink>

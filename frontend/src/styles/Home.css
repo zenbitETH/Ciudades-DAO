@@ -406,7 +406,7 @@ align-items: center !important;
 }
 
 div.dropdown-menu.show {
-
+  margin-bottom: 5px !important;
   text-align: center;
   background-color: #FF9400;
   border-radius: 25px !important;
