@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
-import {Link} from "react-router-dom";
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const CreateProposalErrorModal = (props) => {
@@ -48,7 +47,7 @@ const CreateProposalErrorModal = (props) => {
         </Modal.Header>
         <Modal.Body>
           <div className="main">
-          Asegúrese de estar conectado a MetaMask y de haber ingresado su información correctamente. 
+          Asegúrese de estar conectado a MetaMask y de haber ingresado su información correctamente.
           </div>
           <div className="main">
           Además, asegurate de haber validado tu cuenta y haber llenado todos los campos.

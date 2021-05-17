@@ -13,7 +13,6 @@ import QuizAlreadySubmittedModal from '../modals/QuizAlreadySubmittedModal';
 import IsLoadingModal from '../modals/IsLoadingModal';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
-import { ConnectedContext } from '../contexts/ConnectedContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { TaroContext } from '../contexts/TaroContext';
 
@@ -292,13 +291,13 @@ const Quiz = () => {
                     <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
                     <div className="orange-card2">{spanishQuestions}</div>
                     </QuizContext.Provider>
-                    
+
                     <div className="main"><Button className="alt2" onClick={handleOnSubmitAnswers}>Verificar respuestas</Button>
                     </div>
                   </div>
-                  
-                  
-                  <QuizFailureModal 
+
+
+                  <QuizFailureModal
                     show={failureModalShow}
                     onHide={handleOnFailure}
                   />
@@ -323,7 +322,7 @@ const Quiz = () => {
               <div className="white">Necesitas conectarte con una wallet de Metamask a la red de Ethereum para poder contestar el cuestionario</div>
               <Link className="alt2" to="/">Regresa al inicio para conectar Wallet</Link>
             </div>
-          </div>      
+          </div>
           }
         </div>
       }

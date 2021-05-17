@@ -16,8 +16,6 @@ import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-// import { proposalArray } from '../DELETEBEFOREPRODUCTION/proposalArray.js';
-
 const ProposalList = () => {
   let [retrievedProposals, setRetrievedProposals] = useState([]);
   let [taro, setTaro] = useState();
@@ -127,17 +125,21 @@ const ProposalList = () => {
 
             if(proposalCount > 0) {
               let activeProposals = [];
-              let proposal, currentBlockNumber;
+              let proposal, currentBlockNumber, _hasVoted;
               for(let i = 1; i <= proposalCount; i++) {
                 proposal = await _governorAlpha.proposals(ethers.BigNumber.from(i));
+                _hasVoted = await _governorAlpha.checkHasVoted(_signerAddress, ethers.BigNumber.from(i));
                 currentBlockNumber = await _ethersProvider.getBlockNumber();
                 // console.log('block number: ', currentBlockNumber)
                 // console.log('proposal:', proposal.endBlock.toNumber());
                 // console.log('forVotes: ', proposal.forVotes.toString());
                 // console.log('againstVotes: ', proposal.againstVotes.toString());
-                // console.log('proposal: ', proposal);
+                console.log('proposal: ', proposal);
+                console.log('hasVoted: ', _hasVoted);
 
                 if(proposal.endBlock.toNumber() > currentBlockNumber) {
+                  let blocksToExpiration = proposal.endBlock.toNumber() - currentBlockNumber;
+
                   activeProposals.push({
                     title: proposal[9][0],
                     typeOfAction: proposal[9][1],
@@ -149,11 +151,16 @@ const ProposalList = () => {
                     requiredTaroToVote: proposal[9][7].toString(),
                     forVotes: proposal.forVotes.toString(),
                     againstVotes: proposal.againstVotes.toString(),
-                    id: proposal.id.toString()
+                    id: proposal.id.toString(),
+                    proposer: proposal.proposer.toString(),
+                    proposalTime: proposal[9].proposalTime.toNumber(),
+                    hasVoted: _hasVoted,
+                    blocksToExpiration
                   });
                 };
               };
               // console.log('activeProposals: ', activeProposals)
+              activeProposals.reverse();
               setRetrievedProposals(activeProposals);
             };
 
@@ -182,6 +189,10 @@ const ProposalList = () => {
           forVotes={proposal.forVotes}
           againstVotes={proposal.againstVotes}
           id={proposal.id}
+          proposer={proposal.proposer}
+          proposalTime={proposal.proposalTime}
+          hasVoted={proposal.hasVoted}
+          blocksToExpiration={proposal.blocksToExpiration}
         />
       </div>
     )
@@ -195,6 +206,11 @@ const ProposalList = () => {
 
   return (
 <div className= "App">
+
+      <div>
+        <Link className="alt2" to="/pastproposals">See all past proposals</Link>
+      </div>
+
       {isEnglish === 'english'
       ?
 
@@ -281,7 +297,7 @@ const ProposalList = () => {
               </div>
             </div >
             <div>
-            
+
                 {list.length > 0
                 ?
                 <div className = "app">

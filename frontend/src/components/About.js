@@ -14,21 +14,21 @@ const About = () => {
     <div className="about">
       <div className="text-large">🤔 What's <img src={logo} alt="VoTARO" width="250px" />?</div>
       <div className="main">A voting DApp that rewards users with $TARO when the propose or vote on cities' public needs.</div>
-        <div className="text-medium-left">          
+        <div className="text-medium-left">
             <div className="purple">✋ Propose</div>
             <div className="purple">🗳️ Vote</div>
             <div className="purple">🥇 Get $TARO</div>
         </div>
       <div className="main">
         <p>VoTaro is an Ethereum application that uses a reward system to encourage residents of Queretaro City to propose and participate
-           in activities that will improve their community. It was developed on the <a className="alt" href="https://showcase.ethglobal.co/scaling/cities-protocol">Scaling Ethereum Hackathon 2021.</a></p>   
+           in activities that will improve their community. It was developed on the <a className="alt" href="https://showcase.ethglobal.co/scaling/cities-protocol">Scaling Ethereum Hackathon 2021.</a></p>
         <div><ReactPlayer width="100%"  url="https://www.youtube.com/embed/6xgTw1FEuIA"/></div>
         <p>The citizens of Querétaro who use VoTARO to propose, vote and solve the needs of their neighborhood in Queretaro City, will be rewarded with
          <a className="alt" href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> $TARO, an ERC20 token </a>
           which gives users voting power on these proposals and will work as an instrument to fund the costs necessary to solve them.</p>
         <p>Proposals are registered and managed in an automated way by the smart contract
-        <a className="alt" href="https://github.com/onionpeel/cities_protocol/blob/main/contracts/GovernorAlpha.sol"> Governor Alpha </a> 
-         a version of <a className="alt" href="https://compound.finance/docs/governance?ref=github&user=ajb413&repo=compound-governance-examples"> Compound's contract </a>  
+        <a className="alt" href="https://github.com/onionpeel/cities_protocol/blob/main/contracts/GovernorAlpha.sol"> Governor Alpha </a>
+         a version of <a className="alt" href="https://compound.finance/docs/governance?ref=github&user=ajb413&repo=compound-governance-examples"> Compound's contract </a>
          adapted to real-world interactions.</p>
         <p>VoTARO implements <a className="alt" href="https://skale.network/">SKALE Network,</a> an ethereum layer 2 solution that reduces gas charges to 0 and increases the speed of transactions without compromising security.</p>
       </div>
@@ -37,14 +37,14 @@ const About = () => {
       Transform Querétaro City into a Decentralized Autonomous Organization that exists in an automated way on the internet but that relies heavily on human talent to carry out urban or virtual tasks that the smart contracts cannot complete by itself.
         </div>
       <div className="orange">🧰 What do I need to get $ TARO?</div>
-      <div className="main">You need to do 5 activities to get TARO.</div> 
+      <div className="main">You need to do 5 activities to get TARO.</div>
        <div className="text-medium-left">
           <div className="aboutC">1. 🦊 Download Metamask</div>
           <div className="aboutC" >2. 🧅 Switch to Skale Network</div>
           <div className="aboutC">3. ✔️ Get Validated</div>
           <div className="aboutC" >4. 🗳️ Delegate TARO</div>
           <div className="aboutC" >5. 🦸🦸‍♂️ Create and Vote on proposals </div>
-        </div> 
+        </div>
       <div className="main">
       <div className="aboutCo">1. 🦊 Downlad Wallet</div>
       <p> VoTARO uses web 3.0 tools so that people can interact with smart contracts
@@ -52,11 +52,11 @@ const About = () => {
        <p> An ethereum web 3.0 wallet such as Metamask, will allow you to use VoTARO contracts and obtain TARO by proposing the needs of your neighborhood.
          If you don't have a Metamask Wallet yet, you can download it from this button </p>
         <div className ="submitbutton"><Button className="aboutbutton" href="https://metamask.io" > 🦊 Download Cartera</Button></div>
-      
+
       <div className="aboutCo">2. 🧅 Switch to SKALE network</div>
        <p>
        To use decentralized Ethereum applications, you need to pay the "gas fees" for smart contracts. These are usually expensive
-          and restrictive for new users. VoTARO implements SKALE, a second layer solution on Ethereum that reduces gas costs to 0. 
+          and restrictive for new users. VoTARO implements SKALE, a second layer solution on Ethereum that reduces gas costs to 0.
           <p>This allows that new users can interact with VoTARO contracts without having to pay gas fees, allowing implementations of this technology
           on a large scale as in a city. Go to Home to configure your wallet with a signle click.</p>
        </p>
@@ -82,9 +82,9 @@ const About = () => {
           vote for them and make them come true to get more TARO. Proposals will be available for 3 days to be voted on. </p>
          <p> You will receive 20 TAROs for each proposal you make, but the reward will only be valid for the first 5 proposals. Then you can create proposals
            but you will not receive TARO for new proposals.
-         </p>  
+         </p>
        <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🦸🦸‍♂️ Create Proposal</Button></div>
-    </div>    
+    </div>
       <div className="orange"> Benefits for the city</div>
       <div className="text-medium-left">
       <div className = "aboutC"> ⛓️  Urban governance on blockchain. </div>
@@ -102,21 +102,21 @@ const About = () => {
     <div className="about">
       <div className="text-large">🤔 ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?</div>
       <div className="main">Una Aplicación Descentralizada que recompenza con $TARO por proponer, votar y resolver necesidades públicas.</div>
-        <div className="text-medium-left">          
+        <div className="text-medium-left">
             <div className="purple">✋ Propón</div>
             <div className="purple">🗳️ Vota</div>
             <div className="purple">🥇 Obtén $TARO</div>
         </div>
       <div className="main">
         <p>VoTaro es una DApp de Ethereum para digitalizar la gobernanza de la ciudad de Querétaro, utilizando contratos inteligentes
-          y herramientas descentralizadas de la web 3.0, desarrollada en el  <a className="alt" href="https://showcase.ethglobal.co/scaling/cities-protocol">Scaling Ethereum Hackathon 2021.</a></p>   
+          y herramientas descentralizadas de la web 3.0, desarrollada en el  <a className="alt" href="https://showcase.ethglobal.co/scaling/cities-protocol">Scaling Ethereum Hackathon 2021.</a></p>
         <p><ReactPlayer width="100%"  url="https://www.youtube.com/embed/6xgTw1FEuIA"/></p>
-        <p>Los ciudadan@s de Querétaro que utilicen VoTARO para proponer, votar y resolver necesidades de sus colonias, serán recompensados con  
+        <p>Los ciudadan@s de Querétaro que utilicen VoTARO para proponer, votar y resolver necesidades de sus colonias, serán recompensados con
          <a className="alt" href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> $TARO, un token ERC20 </a>
          que sirve para votar estas propuestas y como instrumento para fondear los costos necesarios para resolverlas.</p>
-        <p>Las propuestas se registran y gestionan de manera automatizada por el contrato inteligente 
-        <a className="alt" href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> Gobernador Alfa </a> 
-          una versión del contrato  <a className="alt" href="https://compound.finance/docs/governance?ref=github&user=ajb413&repo=compound-governance-examples"> GovernorAlpha de Compound </a>  
+        <p>Las propuestas se registran y gestionan de manera automatizada por el contrato inteligente
+        <a className="alt" href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> Gobernador Alfa </a>
+          una versión del contrato  <a className="alt" href="https://compound.finance/docs/governance?ref=github&user=ajb413&repo=compound-governance-examples"> GovernorAlpha de Compound </a>
           adaptado para gestionar la gobernanza de problemas urbanos.</p>
         <p>Implementa <a className="alt" href="https://skale.network/">SKALE Network,</a> una solución de segunda capa en Ethereum que reduce a 0 las cuotas de gas e incrementa la rapidez de las transacciones sin comprometer la seguridad</p>
       </div>
@@ -125,22 +125,22 @@ const About = () => {
         Convertir a la ciudad de Querétaro en una Organización Autónoma Descentralizada que exista de manera automatizada en internet pero que
         dependa fuertemente del talento humano para ejecutar tareas urbanas o virtuales que los contratos inteligentes no puedan completar por si mismo.</div>
       <div className="orange">🧰 ¿Qué necesito para obtener $TARO?</div>
-      <div className="main">Necesitas realizar 5 actividades para obtener TARO.</div> 
+      <div className="main">Necesitas realizar 5 actividades para obtener TARO.</div>
        <div className="text-medium-left">
           <div className="aboutC">1. 🦊 Descargar Metamask</div>
           <div className="aboutC" >2. 🧅 Cambiar wallet a red Skale </div>
           <div className="aboutC">3. ✔️ Validar cuenta</div>
           <div className="aboutC" >4. 🗳️ Delegar TARO para votar</div>
           <div className="aboutC" >5. 🦸🦸‍♂️ Crear y votar propuestas </div>
-        </div> 
+        </div>
       <div className="main">
       <div className="aboutCo">1. 🦊 Descargar Metamask</div>
-       <p>VoTARO utiliza herramientas de la web 3.0 para que las personas puedan interactuar con contratos inteligentes 
+       <p>VoTARO utiliza herramientas de la web 3.0 para que las personas puedan interactuar con contratos inteligentes
          y algoritmos de manera segura, dandoles control completo sobre tus tokens TARO.</p>
-      <p>Una wallet web 3.0 de ethereum cómo Metamask, te permitirá usar los contratos de VoTARO y obtener TARO al proponer necesidades de tu colonia. 
+      <p>Una wallet web 3.0 de ethereum cómo Metamask, te permitirá usar los contratos de VoTARO y obtener TARO al proponer necesidades de tu colonia.
         Si aún no tienes una Wallet de Metamask, puedes descargarla en este botón</p>
         <div className ="submitbutton"><Button className="aboutbutton" href="https://metamask.io" > 🦊 Descargar Cartera</Button></div>
-      
+
       <div className="aboutCo">2. 🧅 Cambiar wallet a red Skale</div>
        <p>
          Para usar aplicaciones descentralizadas de Ethereum, necesitas pagar las "cuotas de gas" de los contratos inteligentes. Estas suelen caras
@@ -166,13 +166,13 @@ const About = () => {
        </p>
        <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🗳️ Delegar TARO para votar</Button></div>
        <div className="aboutCo">5. 🦸🦸‍♂️ Realizar y votar propuestas</div>
-       <p>¡La ciudad te necesita! genera propuestas de actividades, obras públicas o necesidades que hayas identificado en tu comunidad Realiza propuestas, 
+       <p>¡La ciudad te necesita! genera propuestas de actividades, obras públicas o necesidades que hayas identificado en tu comunidad Realiza propuestas,
          vota por ellas y hazlas realidad para obtener más TARO. Las propuestas estarán disponibles por 3 días para ser votadas.</p>
         <p>Recibirás 20 TARO por cada propuesta que realices, pero la recompensa solo será valida por las primeras 5 propuestas. Después puedes crear propuestas
           pero no recibirás TARO por crearlas.
         </p>
        <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🦸🦸‍♂️ Crear propuestas</Button></div>
-    </div>    
+    </div>
       <div className="orange"> Beneficios para la ciudad</div>
       <div className="text-medium-left">
         <div className="aboutC">⛓️ Registro de gobernanza urbana en blockchain.</div>

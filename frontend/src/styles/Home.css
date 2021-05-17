@@ -16,21 +16,16 @@ a:link {color: #FFff!important;
 a:active{color: #FAC91A!important;}
 a:visited {color: #FFff!important;}
 a:hover {
+  border-radius: 25px;
   text-decoration: none;
   color: #3d386b!important;
-  background-color: #FAC91A !important;}
+  }
 
-a.alt:link {color: #FF9400 !important;}
-a.alt:visited {color: #FF9400 !important;}
+a.alt:link {color: #3d386b !important;}
+a.alt:visited {color: #3d386b !important;}
 a.alt:hover {
-  background-color: transparent !important;
-  color: #FAC91A !important;}
-
-.nohover {
-  background-color: #3d386b!important;
-}
-
-a.alt3:link {color: #ffffff !important;}
+  background-color: none !important;
+  color: #ffffff !important;}
 
 .alt {
   font-family: 'Lexend Deca', sans-serif;
@@ -62,8 +57,8 @@ a.alt3:link {color: #ffffff !important;}
   justify-content: center !important;
   align-content: center !important;
   align-items: center !important;
-  color: #ffffff !important;
-  background-color: #FF9400 !important;
+  color: #3d386b !important;
+  background-color: #FAC91a !important;
 }
 
 .aboutlink {
@@ -78,19 +73,21 @@ a.alt3:link {color: #ffffff !important;}
   background-color: #3d386b !important;
 }
 
-.NavDropdown.Item {
-  
-  right: 0 !important;
-  left: 50%  !important;
+.language {
+  vertical-align: middle !important;
   border-radius: 25px !important;
   border: none !important;
-  text-align: left;
-  display: flex !important;
-  justify-content: left !important;
-  align-content: left !important;
-  align-items: left !important;
+  text-align: left !important;
+  display: inline-block !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
   color: #ffffff !important;
-  background-color: #3d386b !important;
+}
+
+.justify-content-end {
+  vertical-align: middle !important;
+  text-align: right;
 }
 
 
@@ -116,14 +113,27 @@ a.alt3:link {color: #ffffff !important;}
 
 Nav {
   margin-bottom: 25px !important;
-  background-color: #3d386b !important;
+  background-image: linear-gradient(#3d386b, #716ba3);
   position: fixed !important;
   font-family: 'Lexend Deca', sans-serif;
   color: #FF9400;
 }
 
-.basic-nav-dropdown {
+.NavLink {
+  margin-left: 15px;
+  text-align: right;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+}
+
+.NavLink:hover {
   color: #FF9400 !important;
+  margin-left: 15px;
+  text-align: right;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
 }
 
 .main  {
@@ -147,14 +157,14 @@ Nav {
 
 Button {
   border-radius: 25px !important;
-  background-color: #3d386b !important;
+  background-color: #FF9400 !important;
   border: none !important;
-  color: #3d386b ;
+  color: #ffffff ;
 }
 
 Button:hover {
   border-radius: 25px !important;
-  background-color: #FF9400 !important;
+  background-color: #FAC91A !important;
   border: none !important;
   color: #3d386b !important;
 }
@@ -395,10 +405,20 @@ align-items: center !important;
   width:90% !important;
 }
 
-.item {
-  display: flex;
-  overflow: auto;
-  width:100%;
+div.dropdown-menu.show {
+
+  text-align: center;
+  background-color: #FF9400;
+  border-radius: 25px !important;
+}
+div.dropdown-menu.show:hover {
+  text-align: center;
+  background-color: #FAC91A;
+  border-radius: 25px !important;
+}
+
+a.dropdown-item:hover {
+  background-color: #FAC91A;   
 }
 
 .item2 {

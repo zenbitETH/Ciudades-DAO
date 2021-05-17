@@ -30,7 +30,7 @@ const QuizSuccessModal = (props) => {
       </Modal>
       :
       <div className="modal">
-      <Modal 
+      <Modal
         className="orange-modal"
         {...props}
         centered

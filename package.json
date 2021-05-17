@@ -19,7 +19,6 @@
     "hardhat": "^2.2.1"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "react-player": "^2.9.0"
+    "dotenv": "^8.2.0"
   }
 }

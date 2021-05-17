@@ -44,7 +44,7 @@ const QuizFailureModal = (props) => {
           </p>
           <Link className="alt2" to="/home">TARO</Link>
         </Modal.Body>
-        
+
       </Modal>
       </div>
     }
