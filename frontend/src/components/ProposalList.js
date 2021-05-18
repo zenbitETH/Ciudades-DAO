@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
+import {Button} from "react-bootstrap"
 import {Link} from "react-router-dom";
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
@@ -238,21 +239,28 @@ const ProposalList = () => {
               </div >           
             </div>
           :
-            <div>
-              <div className ="floating">
-                <div className="purple">There are no proposals yet.</div>
-              </div>
-              <div className ="floating">
-                <Link className="alt2" to="/">Return to home</Link>
-              </div>
+            <div className="space">
+              <div className= "yellowB">
+                <div className="text-large"> Proposals to vote </div>
+                <div className="big-icon">🗳️</div>
+                <div className="text-large">1 TARO = 1 Vote</div>
+                <div className="main">Use your TARO to vote for or against available proposals. Your voting power depends on how many TARO tokens you hold in your wallet.</div>
+                <div className="floating">
+                <div className="title2">⛔There are no proposals yet.⛔</div>
+                </div>
+                <div className="floating">
+                  <Link className="alt2" to="/pastproposals">📅 See past proposals</Link>
+                </div>
+              </div > 
+              <div className="floating">
+                  <Link className="alt2" to="/">Return to home</Link>
+                </div>       
             </div>
           }
         </div>
       </div>
     </div>
-
-      :
-
+    :
       <div>
         <div>
           <div className= "valert">
@@ -276,7 +284,7 @@ const ProposalList = () => {
                 <div className="big-icon">🗳️</div>
                 <div className="text-large">1 TARO = 1 Voto</div>
                 <div className="main">Usa tu taro TARO para votar a favor o en contra de las propuestas disponibles. Tu poder de voto depende de la cantidad de tokens TARO que tengas en tu wallet.
-</div>
+                </div>
                 {list}
                 <div className="floating">
                 <Link className="alt2" to="/pastproposals">📅 Propestas pasadas</Link>
@@ -284,14 +292,23 @@ const ProposalList = () => {
               </div >           
             </div>
           :
-            <div>
-              <div className ="floating">
-                <div className="purple">Aún no hay propuestas.</div>
-              </div>
-              <div className ="floating">
-                <Link className="alt2" to="/">Regresar al inicio</Link>
-              </div>
+          <div className="space">
+          <div className= "yellowB">
+            <div className="text-large"> Propuestas para votar </div>
+            <div className="big-icon">🗳️</div>
+            <div className="text-large">1 TARO = 1 Voto</div>
+            <div className="main">Usa tu taro TARO para votar a favor o en contra de las propuestas disponibles. Tu poder de voto depende de la cantidad de tokens TARO que tengas en tu wallet.</div>
+            <div className="floating">
+            <div className="title2">⛔Aún no hay propuestas.⛔</div>
             </div>
+            <div className="floating">
+              <Link className="alt2" to="/pastproposals">📅 Ver propuestas pasadas</Link>
+            </div>
+          </div > 
+          <div className="floating">
+              <Link className="alt2" to="/">Regresar al inicio</Link>
+            </div>       
+        </div>
           }
         </div>
       </div>

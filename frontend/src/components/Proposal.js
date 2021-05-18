@@ -149,6 +149,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
       </div>
     </Card.Body>
       <div className="proposal-description"><div className="white2">📑 Description:</div><p>{description}</p></div>
+      <div className="white-cost">💸 Cost: {budget} pesos</div>
     {/*}
     <div className ="proposal-main">
       <div className="proposal-sub">Costo: {budget}</div>
@@ -212,6 +213,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
           </div>
         </Card.Body>
           <div className="proposal-description"><div className="white2">📑 Descripción:</div><p>{description}</p></div>
+          <div className="white-cost">💸 Costo: {budget} pesos</div>
         {/*}
         <div className ="proposal-main">
           <div className="proposal-sub">Costo: {budget}</div>
