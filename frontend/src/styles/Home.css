@@ -60,7 +60,7 @@
   width:100%;
   max-width: 50%;
   min-width: 450px !important;
-  margin: 3% auto;
+  margin: 1% auto;
   background-image: linear-gradient(#dc3840, #e26c72);
   font-family: 'Lexend Deca', sans-serif;
   display: flex !important;
@@ -105,8 +105,8 @@
   width:100%;
   max-width: 50%;
   min-width: 450px !important;
-  margin: 3% auto;
-  padding-top: 3%;
+  margin: auto;
+  padding-top: 1%;
   padding-bottom: 1%;
   background-image: linear-gradient(#FAC91a,#fcd95c);
   justify-content: center !important;
@@ -120,8 +120,8 @@
   width:100%;
   max-width: 50%;
   min-width: 450px !important;
-  margin: 3% auto;
-  padding-top: 3%;
+  margin: auto;
+  padding-top: 1%;
   padding-bottom: 1%;
   background-image: linear-gradient(#FF9400,#fab759);
   justify-content: center !important;
@@ -355,6 +355,11 @@ a.dropdown-item:hover {
 }
 
 /* Text and Elements */
+.space {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  color: #ffffff !important;
+}
 .main  {
   font-family: 'Lexend Deca', sans-serif;
   text-align: justify !important;
@@ -377,8 +382,8 @@ a.dropdown-item:hover {
   font-family: 'Lexend Deca', sans-serif !important;
   text-align: center;
   font-size: 2rem !important;
-  margin-top: 5% !important;
-  margin-bottom: 5%;
+  margin-top: 1% !important;
+  margin-bottom: 2%;
 }
 
 .text-large-quiz {
@@ -515,7 +520,7 @@ a.dropdown-item:hover {
 .proposal {
   border-radius: 25px;
   width:100%;
-  max-width: 50%;
+
   min-width: 450px !important;
   margin: 3% auto;
   background-image: linear-gradient(#3d386b , #7770b4);
