@@ -94,7 +94,7 @@ const About = () => {
          <div className = "aboutC"> 🤝 Transparent and decentralized urban consensus. </div>
          <div className = "aboutC"> 🧬 Predictive Economy and Urban Development. </div>
       </div>
-      <div className ="submitbutton"><Button className="alt2" href="/" >Return to Home</Button></div>
+      <div className ="submitbutton"><Button className="alt2" href="/" > 🏠 Return to Home</Button></div>
     </div>
   </div>
     :
@@ -182,7 +182,7 @@ const About = () => {
         <div className="aboutC" >🤝 Consenso urbano transparente y descentralizado.</div>
         <div className="aboutC">🧬 Economía y Desarrollo Urbano Predictivos.</div>
       </div>
-      <div className ="submitbutton"><Button className="alt2" href="/" >Regresar al inicio</Button></div>
+      <div className ="submitbutton"><Button className="alt2" href="/" > 🏠 Regresar al inicio</Button></div>
     </div>
   </div>
       }
