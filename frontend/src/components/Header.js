@@ -21,7 +21,6 @@ const Header = () => {
           <Navbar collapseOnSelect fixed="top" expand="sm">
             <Navbar.Brand href="/Home"><img src={logo} alt="VoTARO" width="150px" />
             </Navbar.Brand>
-
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
              <NavDropdown drop="left"  className="language" title="🌐" >
