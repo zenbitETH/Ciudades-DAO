@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
-import {ListGroup, Button} from 'react-bootstrap';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import Proposal from './Proposal';
@@ -197,12 +196,11 @@ const ProposalList = () => {
       </div>
     )
   });
-
-  const handleOnClickDelegate = async () => {
-    let delegate = await taro.delegate(signerAddress);
-    let delegateReceipt = await delegate.wait(1);
-    console.log('delegateReceipt: ', delegateReceipt);
-  };
+  //const handleOnClickDelegate = async () => {
+  //  let delegate = await taro.delegate(signerAddress);
+  //  let delegateReceipt = await delegate.wait(1);
+  //  console.log('delegateReceipt: ', delegateReceipt);
+  //};
 
   return (
   <div className= "App">
