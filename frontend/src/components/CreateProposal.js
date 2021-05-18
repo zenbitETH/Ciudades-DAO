@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Form, Button, Row} from 'react-bootstrap';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import IsLoadingModal from '../modals/IsLoadingModal';
