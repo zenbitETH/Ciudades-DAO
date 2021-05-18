@@ -37,13 +37,12 @@ const About = () => {
       Transform Querétaro City into a Decentralized Autonomous Organization that exists in an automated way on the internet but that relies heavily on human talent to carry out urban or virtual tasks that the smart contracts cannot complete by itself.
         </div>
       <div className="orange">🧰 What do I need to get $ TARO?</div>
-      <div className="main">You need to do 5 activities to get TARO.</div>
+      <div className="main">You need to do 4 activities to get TARO.</div>
        <div className="text-medium-left">
           <div className="aboutC">1. 🦊 Download Metamask</div>
           <div className="aboutC" >2. 🧅 Switch to Skale Network</div>
           <div className="aboutC">3. ✔️ Get Validated</div>
-          <div className="aboutC" >4. 🗳️ Delegate TARO</div>
-          <div className="aboutC" >5. 🦸🦸‍♂️ Create and Vote on proposals </div>
+          <div className="aboutC" >4. 🗳️ Create and Vote on proposals </div>
         </div>
       <div className="main">
       <div className="aboutCo">1. 🦊 Downlad Wallet</div>
@@ -69,21 +68,13 @@ const About = () => {
          correct.
        </p>
        <div className ="submitbutton"><Button className="aboutbutton" href="Quiz" >✔️ Validate address</Button></div>
-       <div className="aboutCo">4. 🗳️ Delegate TARO</div>
-       <p>
-        The TARO tokens you receive will help you create or vote on urban governance proposals, but first
-        You must indicate to the Governor Alpha contract that you want to delegate your TARO tokens to use them as voting power </p>
-        <p> Once you delegate you will be able to create new proposals or vote on those that are available. Go to the governance module
-          to delegate your TARO.
-        </p>
-       <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🗳️ Go to Urban Governance</Button></div>
-       <div className="aboutCo">5. 🦸🦸‍♂️ Create and Vote on proposals</div>
+       <div className="aboutCo">4. 🗳️ Create and Vote on proposals</div>
        <p> The city needs you! generate proposals for activities, public works or needs that you have identified in your community Make proposals,
           vote for them and make them come true to get more TARO. Proposals will be available for 3 days to be voted on. </p>
          <p> You will receive 20 TAROs for each proposal you make, but the reward will only be valid for the first 5 proposals. Then you can create proposals
            but you will not receive TARO for new proposals.
          </p>
-       <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🦸🦸‍♂️ Create Proposal</Button></div>
+       <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🗳️ See proposals</Button></div>
     </div>
       <div className="orange"> Benefits for the city</div>
       <div className="text-medium-left">
@@ -124,14 +115,13 @@ const About = () => {
       <div className="main">
         Convertir a la ciudad de Querétaro en una Organización Autónoma Descentralizada que exista de manera automatizada en internet pero que
         dependa fuertemente del talento humano para ejecutar tareas urbanas o virtuales que los contratos inteligentes no puedan completar por si mismo.</div>
-      <div className="orange">🧰 ¿Qué necesito para obtener $TARO?</div>
-      <div className="main">Necesitas realizar 5 actividades para obtener TARO.</div>
+      <div className="orange">🧰 ¿Cómo obtengo $TARO?</div>
+      <div className="main">Necesitas realizar 4 actividades para obtener TARO.</div>
        <div className="text-medium-left">
           <div className="aboutC">1. 🦊 Descargar Metamask</div>
           <div className="aboutC" >2. 🧅 Cambiar wallet a red Skale </div>
           <div className="aboutC">3. ✔️ Validar cuenta</div>
-          <div className="aboutC" >4. 🗳️ Delegar TARO para votar</div>
-          <div className="aboutC" >5. 🦸🦸‍♂️ Crear y votar propuestas </div>
+          <div className="aboutC" >4. 🗳️ Crear y votar propuestas </div>
         </div>
       <div className="main">
       <div className="aboutCo">1. 🦊 Descargar Metamask</div>
@@ -157,21 +147,13 @@ const About = () => {
         correctas.
        </p>
        <div className ="submitbutton"><Button className="aboutbutton" href="Quiz" >✔️ Validar cuenta</Button></div>
-       <div className="aboutCo">4. 🗳️ Delegar TARO para votar</div>
-       <p>
-       Los tokens TARO que recibas te servirán para crear o votar propuestas de gobernanza urbana, pero primero
-       debes indicarle al contrato Gobernador Alpha, que deseas delegar tus tokens TARO para usarlos como poder de voto</p>
-       <p>Una vez que los delegues podrás crear nuevas propuestas o votar en las que estén disponibles. Ve al modulo de gobernanza
-         para delegar tus TARO.
-       </p>
-       <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🗳️ Delegar TARO para votar</Button></div>
-       <div className="aboutCo">5. 🦸🦸‍♂️ Realizar y votar propuestas</div>
+       <div className="aboutCo">4. 🗳️ Crear y votar propuestas</div>
        <p>¡La ciudad te necesita! genera propuestas de actividades, obras públicas o necesidades que hayas identificado en tu comunidad Realiza propuestas,
          vota por ellas y hazlas realidad para obtener más TARO. Las propuestas estarán disponibles por 3 días para ser votadas.</p>
         <p>Recibirás 20 TARO por cada propuesta que realices, pero la recompensa solo será valida por las primeras 5 propuestas. Después puedes crear propuestas
           pero no recibirás TARO por crearlas.
         </p>
-       <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🦸🦸‍♂️ Crear propuestas</Button></div>
+       <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🗳️ Ver propuestas</Button></div>
     </div>
       <div className="orange"> Beneficios para la ciudad</div>
       <div className="text-medium-left">
