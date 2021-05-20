@@ -125,7 +125,8 @@ const CreateProposal = () => {
     console.log('form: ', form);
 
     try {
-      // console.log('gov: ', governorAlpha)
+      form.budget = ethers.BigNumber.from(form.budget);
+
       let tx = await governorAlpha.propose(form);
       let txReceipt = await tx.wait(1);
       console.log('form tx: ', txReceipt);
@@ -172,23 +173,17 @@ const CreateProposal = () => {
     setField('description', (e.target.value).toString());
   };
 
-  const handleOnChangeExpiration = e => {
-    setField('expiration', ethers.BigNumber.from(e.target.value));
-  };
+  // const handleOnChangeExpiration = e => {
+  //   setField('expiration', ethers.BigNumber.from(e.target.value));
+  // };
 
   const handleOnChangeBudget = e => {
-    if(e.target.value === '') {
-      return;
-    };
-    if(isNaN(e.target.value)) {
-      return;
-    };
-    setField('budget', ethers.BigNumber.from(e.target.value));
+    setField('budget', e.target.value);
   };
 
-  const handleOnChangeRequiredTaroToVote = e => {
-    setField('requiredTaroToVote', ethers.BigNumber.from(e.target.value));
-  };
+  // const handleOnChangeRequiredTaroToVote = e => {
+  //   setField('requiredTaroToVote', ethers.BigNumber.from(e.target.value));
+  // };
 
   const handleOnLoadingModal = () => {
     setLoadingModalShow(false);
@@ -196,6 +191,7 @@ const CreateProposal = () => {
 
   const handleOnErrorModal = () => {
     setErrorModalShow(false);
+    window.location.reload();
   };
 
   const handleOnAlreadySubmitted = () => {
@@ -212,7 +208,7 @@ const CreateProposal = () => {
           <Form className="create">
           <p className="orange">Create new proposal</p>
           <div className="big-icon">✍🏼</div>
-          <div className="main">You will receive 20 TAROs for each proposal you make, but the reward will only be valid for the first 5 proposals. Then you can create proposals but you will not receive TARO for new proposals.</div>
+          <div className="main">You will receive 20 TARO tokens for each of your first five proposals. After that can continue to create proposals but you will not receive any more TARO for subsequent new proposals.</div>
           <p className="purple3">⚠️All fields need to be filled out⚠️</p>
             <Form.Group as={Row} controlId="formTitle">
               <Form.Label>

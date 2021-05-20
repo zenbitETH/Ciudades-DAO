@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import detectEthereumProvider from '@metamask/detect-provider';
 import { ethers } from 'ethers';
-import NewCountdownClock from './NewCountdownClock';
+import CountdownClock from './CountdownClock';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
@@ -13,7 +13,7 @@ import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-const Proposal = ({title, typeOfAction, neighborhood, personInCharge, description, expiration, budget, requiredTaroToVote, forVotes, againstVotes, id, proposer, proposalTime, hasVoted, blocksToExpiration}) => {
+const Proposal = ({title, typeOfAction, neighborhood, personInCharge, description, expiration, budget, requiredTaroToVote, forVotes, againstVotes, id, proposer, proposalTime, hasVoted, timeToExpiration}) => {
   let [governorAlpha, setGovernorAlpha] = useState();
   let [taro, setTaro] = useState();
   let [signerAddress, setSignerAddress] = useState();
@@ -145,7 +145,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
     </div>
     <div className="proposal-main">
         <div className="proposal-titles">⚙️Type of work: {typeOfAction}</div>
-        <div className="yellow-card">⏳ Expiration: <NewCountdownClock blocksToExpiration={blocksToExpiration}></NewCountdownClock></div>      
+        <div className="yellow-card">⏳ Expiration: <CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></div>
       </div>
     </Card.Body>
       <div className="proposal-description"><div className="white2">📑 Description:</div><p>{description}</p></div>
@@ -167,7 +167,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
           {!hasVoted
             ?
             <Button className="favor" block onClick={handleOnClickFor}>
-              ✔️ Vote for 
+              ✔️ Vote for
             </Button>
             :
             ''
@@ -209,7 +209,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
         </div>
         <div className="proposal-main">
             <div className="proposal-titles">⚙️Tipo de trabajo: {typeOfAction}</div>
-            <div className="yellow-card">⏳ Expiración: <NewCountdownClock blocksToExpiration={blocksToExpiration}></NewCountdownClock></div>      
+            <div className="yellow-card">⏳ Expiración: <CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></div>
           </div>
         </Card.Body>
           <div className="proposal-description"><div className="white2">📑 Descripción:</div><p>{description}</p></div>
@@ -220,7 +220,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
           <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
         </div>
         */}
-    
+
       <Card.Body className="proposal-table">
         <div className="proposal-main">
           <div className="proposal-favor">
