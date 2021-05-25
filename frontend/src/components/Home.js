@@ -246,15 +246,21 @@ function Home() {
     <div>
       {isEnglish === 'english' ?
         <div className="App">
-          <Card.Text>Urban governance protocol for Queretaro City DAO</Card.Text>
           <div className="Wallet">
             {!isMetamastInstalled ?
             <InstallMetamaskAlert />:isConnected ? '' : isConnecting?
             <ConnectingButton />
             :<ConnectButton handleOnConnect={handleOnConnect}/>
             }
+
+         {!isSkaleSwitched ?
+            <SkaleButton handleOnConnect={listSkaleInMetamask}/>:isConnected ? '' : isConnecting?
+            <SkaleSwitch />
+            : <div>Now you are on Skale Network</div>
+            }
+     
           </div>
-          <Button onClick={listSkaleInMetamask}>🧅 Switch to SKALE network</Button>
+
           {isConnected ?
           <div>
           <Card className="orange-unlock">
@@ -303,9 +309,7 @@ function Home() {
         }
       </div>
       :
-        <div className="App">
-          <Card.Text>Una DApp que recompenza por proponer, votar y resolver necesidades públicas en la ciudad de Querétaro.</Card.Text>
-         
+        <div className="App">         
             <div className="Wallet">
               {!isMetamastInstalled ?
               <InstallMetamaskAlert />:isConnected ? '' : isConnecting?
@@ -318,9 +322,7 @@ function Home() {
               <SkaleSwitch />
               : <div>ahora estas conectado</div>
               }
-              
-
-
+       
           </div>
           {isConnected ?
           <div>
