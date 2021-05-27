@@ -5,9 +5,9 @@ A voting DApp that rewards users with $TARO when the propose or vote on cities' 
 ### 🗳️ Vote  
 ### 🥇 Get $TARO  
   
-VoTaro is an Ethereum application that uses a reward system to encourage residents of Queretaro City to propose and participate in activities that will improve their community. It was developed on the [Scaling Ethereum Hackathon 2021.](https://showcase.ethglobal.co/scaling/cities-protocol)  
+VoTaro is an Ethereum application that uses a reward system to encourage residents of Querétaro City to propose and participate in activities that will improve their community. It was developed on the [Scaling Ethereum Hackathon 2021.](https://showcase.ethglobal.co/scaling/cities-protocol)  
 
-The citizens of Querétaro who use VoTARO to propose, vote and solve the needs of their neighborhood in Queretaro City, will be rewarded with $TARO, an ERC20 token which give users voting power on these proposals and will work as an instrument to fund the costs necessary to solve them.  
+The citizens of Querétaro who use VoTARO to propose, vote and solve the needs of their neighborhood in Querétaro City, will be rewarded with $TARO, an ERC20 token which give users voting power on these proposals and will work as an instrument to fund the costs necessary to solve them.  
 
 Proposals are registered and managed in an automated way by the smart contract Governor Alpha a version of Compound's contract adapted to real-world interactions.  
 

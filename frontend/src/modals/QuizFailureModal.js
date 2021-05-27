@@ -21,7 +21,7 @@ const QuizFailureModal = (props) => {
       <div className="big-icon">😅<div className="modalheader">
         You didn't pass the quiz</div>
             </div>
-            <p className="white">Please learn more about Queretaro and take the quiz again</p>
+            <p className="white">Please learn more about Querétaro and take the quiz again</p>
           <Modal.Body>
             <Link className="alt2" to="/home">Return to home</Link>
           </Modal.Body>

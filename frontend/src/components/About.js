@@ -20,10 +20,10 @@ const About = () => {
             <div className="purple">🥇 Get $TARO</div>
         </div>
       <div className="main">
-        <p>VoTaro is an Ethereum application that uses a reward system to encourage residents of Queretaro City to propose and participate
+        <p>VoTaro is an Ethereum application that uses a reward system to encourage residents of Querétaro City to propose and participate
            in activities that will improve their community. It was developed on the <a className="alt" href="https://showcase.ethglobal.co/scaling/cities-protocol">Scaling Ethereum Hackathon 2021.</a></p>
         <div><ReactPlayer width="100%"  url="https://www.youtube.com/embed/6xgTw1FEuIA"/></div>
-        <p>The citizens of Querétaro who use VoTARO to propose, vote and solve the needs of their neighborhood in Queretaro City, will be rewarded with
+        <p>The citizens of Querétaro who use VoTARO to propose, vote and solve the needs of their neighborhood in Querétaro City, will be rewarded with
          <a className="alt" href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> $TARO, an ERC20 token </a>
           which gives users voting power on these proposals and will work as an instrument to fund the costs necessary to solve them.</p>
         <p>Proposals are registered and managed in an automated way by the smart contract

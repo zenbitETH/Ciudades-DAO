@@ -262,7 +262,7 @@ function Home() {
     <div>
       {isEnglish === 'english' ?
         <div className="App">
-          <Card.Text>Urban governance protocol for Queretaro City DAO</Card.Text>
+          <Card.Text>Urban governance protocol for Querétaro City DAO</Card.Text>
           <div className="Wallet">
             {!isMetamastInstalled
               ?
