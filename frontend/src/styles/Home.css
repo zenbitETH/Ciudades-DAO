@@ -44,7 +44,7 @@
 .gray2 {
   border-radius: 25px;
   width:100%;
-  max-width: 50%;
+  max-width: 40%;
   min-width: 425px !important;
   margin: 3% auto;
   background-image: linear-gradient(#3d386b, #554c9c);
@@ -103,7 +103,7 @@
 .yellowB {
   border-radius: 25px;
   width:100%;
-  max-width: 50%;
+  max-width: 40%;
   min-width: 425px !important;
   margin: auto;
   padding-top: 1%;
@@ -133,7 +133,7 @@
 .orangeB {
   border-radius: 25px;
   width:100%;
-  max-width: 50%;
+  max-width: 40%;
   min-width: 425px !important;
   margin: auto;
   padding-top: 1%;
