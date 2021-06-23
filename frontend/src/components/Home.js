@@ -66,13 +66,13 @@ function Home() {
           };
 
           //Force the browser to refresh whenever the network chain is changed
-          let chainId = await _ethereumProvider.request({ method: 'eth_chainId' });
-          _ethereumProvider.on('chainChanged', handleChainChanged);
-          console.log('chainId: ', chainId);
-
-          if (chainId === '0x3ad0e149d0bf5') {
-            setIsSkaleSwitched(true);
-          };
+         // let chainId = await _ethereumProvider.request({ method: 'eth_chainId' });
+         // _ethereumProvider.on('chainChanged', handleChainChanged);
+         // console.log('chainId: ', chainId);
+//
+         // if (chainId === '0x3ad0e149d0bf5') {
+         //   setIsSkaleSwitched(true);
+         // };
 
           //Check if a MetaMask account has permission to connect to app
           let metamaskAccount;
@@ -148,52 +148,52 @@ function Home() {
   }, []);
 
   //Enable app to have SKALE among listed networks
-  const listSkaleInMetamask = async () => {
-    setIsConnectingToSkale(true);
-    let endpoint = "http://eth-global-11.skalenodes.com:10323";
-    let chainId = "0x3ad0e149d0bf5";
-
-    let switchToSKALE = {
-      chainId: chainId,
-      chainName: "SKALE Network Testnet",
-      rpcUrls: [endpoint],
-      nativeCurrency: {
-        name: "SKALE ETH",
-        symbol: "skETH",
-        decimals: 18
-      },
-      blockExplorerUrls: [
-        "https://expedition.dev/?network=SKALE&rpcUrl=" + endpoint
-      ]
-    };
-    //Request current account selected in Metamask
-    let metamaskAccount;
-    let accounts = await provider.request({ method: 'eth_requestAccounts' });
-      if (accounts.length > 0) {
-        metamaskAccount = accounts[0];
-        setCurrentMetaMaskAccount(accounts[0]);
-        setIsMetamaskInstalled(true);
-        setIsConnected(true);
-      } else {
-      };
-    console.log(`metamaskAccount in Skale function: ${metamaskAccount}`);
-
-    //Request change to SKALE network
-    try {
-      await provider.request({
-        method: "wallet_addEthereumChain",
-        params: [switchToSKALE, accounts[0]]
-      });
-
-      setIsConnectingToSkale(false);
-      setIsSkaleSwitched(true);
-
-      window.location.reload();
-    }catch (error) {
-      console.log(error);
-      window.location.reload();
-    };
-  };
+  //const listSkaleInMetamask = async () => {
+  //  setIsConnectingToSkale(true);
+  //  let endpoint = "http://eth-global-11.skalenodes.com:10323";
+  //  let chainId = "0x3ad0e149d0bf5";
+//
+  //  let switchToSKALE = {
+  //    chainId: chainId,
+  //    chainName: "SKALE Network Testnet",
+  //    rpcUrls: [endpoint],
+  //    nativeCurrency: {
+  //      name: "SKALE ETH",
+  //      symbol: "skETH",
+  //      decimals: 18
+  //    },
+  //    blockExplorerUrls: [
+  //      "https://expedition.dev/?network=SKALE&rpcUrl=" + endpoint
+  //    ]
+  //  };
+  //  //Request current account selected in Metamask
+  //  let metamaskAccount;
+  //  let accounts = await provider.request({ method: 'eth_requestAccounts' });
+  //    if (accounts.length > 0) {
+  //      metamaskAccount = accounts[0];
+  //      setCurrentMetaMaskAccount(accounts[0]);
+  //      setIsMetamaskInstalled(true);
+  //      setIsConnected(true);
+  //    } else {
+  //    };
+  //  console.log(`metamaskAccount in Skale function: ${metamaskAccount}`);
+//
+  //  //Request change to SKALE network
+  //  try {
+  //    await provider.request({
+  //      method: "wallet_addEthereumChain",
+  //      params: [switchToSKALE, accounts[0]]
+  //    });
+//
+  //    setIsConnectingToSkale(false);
+  //    setIsSkaleSwitched(true);
+//
+  //    window.location.reload();
+  //  }catch (error) {
+  //    console.log(error);
+  //    window.location.reload();
+  //  };
+  //};
 
   const getAccounts = async () => {
     try {
@@ -216,9 +216,9 @@ function Home() {
     }
   };
 
-  function handleChainChanged(_chainId) {
-    window.location.reload();
-  };
+ // function handleChainChanged(_chainId) {
+ //   window.location.reload();
+ // };
 
   //Give a MetaMask account permission to interact with the app
   const handleOnConnect = async () => {
@@ -263,34 +263,6 @@ function Home() {
       {isEnglish === 'english' ?
         <div className="App">
           <Card.Text>Urban governance protocol for Querétaro City DAO</Card.Text>
-          <div className="Wallet">
-            {!isMetamastInstalled
-              ?
-                <InstallMetamaskAlert />
-              :
-                isConnected
-                ?
-                  ''
-                :
-                  isConnecting
-                  ?
-                    <ConnectingButton />
-                  :
-                    <ConnectButton handleOnConnect={handleOnConnect}/>
-            }
-
-            {isSkaleSwitched
-              ?
-                ''
-              :
-                isConnectingToSkale
-                ?
-                  <SkaleSwitch />
-                :
-                  <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-            }
-
-          </div>
           {isConnected ?
           <div>
           <Card className="orange-unlock">
@@ -316,49 +288,16 @@ function Home() {
         :
         <div>
           <Card className="gray">
-            <Card.Title className="orange2">TARO Balance</Card.Title>
+            <Card.Title className="purple-unlock">TARO Balance</Card.Title>
             <Card.Title className="big-icon">🥇</Card.Title>
             <Card.Text className="text-large">Locked</Card.Text>
-            <div>
-              <Card.Body>
-                <Button disabled block>Get TARO</Button>
-              </Card.Body>
-            </div>
-          </Card>
-          <Card className="gray">
-            <Card.Title className="orange2">Urban governance</Card.Title>
-            <Card.Title className="big-icon">🗳️</Card.Title>
-            <Card.Text className="text-large">Locked</Card.Text>
-            <div>
-              <Card.Body>
-                <Button disabled block>🙋🏻‍♀️ Vote 🙋🏽‍♂️</Button>
-              </Card.Body>
-            </div>
-          </Card>
-        </div>
-        }
-      </div>
-      :
-        <div className="App">
-          <Card.Text>Una DApp que recompenza por proponer, votar y resolver necesidades públicas en la ciudad de Querétaro.</Card.Text>
-
             <div className="Wallet">
-              {!isMetamastInstalled
-                ?
-                  <InstallMetamaskAlert />
-                :
-                  isConnected
-                  ?
-                    ''
-                  :
-                    isConnecting
-                    ?
-                      <ConnectingButton />
-                    :
-                      <ConnectButton handleOnConnect={handleOnConnect}/>
+              {!isMetamastInstalled ?
+                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
               }
 
-              {isSkaleSwitched
+              {/*isSkaleSwitched
                 ?
                   ''
                 :
@@ -367,9 +306,36 @@ function Home() {
                     <SkaleSwitch />
                   :
                     <SkaleButton handleOnConnect={listSkaleInMetamask}/>
+              */}
+            </div>
+          </Card>
+          <Card className="gray">
+            <Card.Title className="purple-unlock">Urban governance</Card.Title>
+            <Card.Title className="big-icon">🗳️</Card.Title>
+            <Card.Text className="text-large">Locked</Card.Text>              
+              <div className="Wallet">
+              {!isMetamastInstalled ?
+                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
               }
-
-          </div>
+              {/*isSkaleSwitched
+                ?
+                  ''
+                :
+                  isConnectingToSkale
+                  ?
+                    <SkaleSwitch />
+                  :
+                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
+              */}
+              </div>
+          </Card>
+        </div>
+        }
+      </div>
+      :
+        <div className="App">
+          <Card.Text>Una DApp de Gobernanza Urbana para la ciudad de Querétaro.</Card.Text>
           {isConnected ?
           <div>
             <Card className="orange-unlock">
@@ -395,24 +361,52 @@ function Home() {
           :
           <div>
             <Card className="gray">
-              <Card.Title className="orange2">Balance de TARO</Card.Title>
+              <Card.Title className="purple-unlock">Balance de TARO</Card.Title>
               <Card.Title className="big-icon">🥇</Card.Title>
               <Card.Text className="text-large">Bloqueado</Card.Text>
               <div>
-                <Card.Body>
-                  <Button disabled block>Obtén TARO</Button>
-                </Card.Body>
+              <div className="Wallet">
+              {!isMetamastInstalled ?
+                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+              }
+
+              {/*isSkaleSwitched
+                ?
+                  ''
+                :
+                  isConnectingToSkale
+                  ?
+                    <SkaleSwitch />
+                  :
+                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
+              */}
+
+          </div>
               </div>
             </Card>
             <Card className="gray">
-              <Card.Title className="orange2">Gobernanza Urbana</Card.Title>
+              <Card.Title className="purple-unlock">Gobernanza Urbana</Card.Title>
               <Card.Title className="big-icon">🗳️</Card.Title>
               <Card.Text className="text-large">Bloqueado</Card.Text>
-              <div>
-                <Card.Body>
-                  <Button disabled block>🙋🏻‍♀️ Vota 🙋🏽‍♂️</Button>
-                </Card.Body>
-              </div>
+              <div className="Wallet">
+              {!isMetamastInstalled ?
+                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+              }
+
+              {/*isSkaleSwitched
+                ?
+                  ''
+                :
+                  isConnectingToSkale
+                  ?
+                    <SkaleSwitch />
+                  :
+                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
+              */}
+
+          </div>
             </Card>
 
           </div>
