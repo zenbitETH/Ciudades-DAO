@@ -12,16 +12,19 @@ const ConnectButton = ({handleOnConnect}) => {
       {isEnglish === 'english' ?
       
     <div>
-      <div className="purple2">
-        <Card.Text >You need a Metamask wallet to use VoTARO</Card.Text>
-        <Button onClick={handleOnConnect}>🔌 Connect Wallet</Button>
+      <div>
+        <Button onClick={handleOnConnect}>Connect Wallet</Button>
+        <Card.Text>You need a Metamask wallet to use VoTARO</Card.Text>
       </div>
+      
     </div>
     :
     <div>
-      <Card.Text className="purple2">Necesitas una wallet de Metamask para usar VoTARO</Card.Text>
-      <Button onClick={handleOnConnect}> 🔌Conectar Wallet</Button>
-
+      <div>
+        <Button onClick={handleOnConnect}>Conectar Wallet</Button>
+        <Card.Text>Necesitas una wallet de Metamask para usar VoTARO</Card.Text>
+      </div>
+      
     </div>
 }</div>
   );
