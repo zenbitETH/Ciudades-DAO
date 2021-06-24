@@ -167,8 +167,6 @@ const ProposalList = () => {
               activeProposals.reverse();
               setRetrievedProposals(activeProposals);
             };
-
-
           };
         } catch (error) {
           console.error(error);
