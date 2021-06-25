@@ -39,36 +39,36 @@ const About = () => {
       <div className="orange">🧰 What do I need to get $ TARO?</div>
       <div className="main">You need to do 4 activities to get TARO.</div>
        <div className="text-medium-left">
-          <div className="aboutC">1. 🦊 Download Metamask</div>
-          <div className="aboutC" >2. 🧅 Switch to Skale Network</div>
-          <div className="aboutC">3. ✔️ Get Validated</div>
-          <div className="aboutC" >4. 🗳️ Create and Vote on proposals </div>
+          <div className="aboutB">1. 🦊 Download Metamask</div>
+          {/*<div className="aboutC" >2. 🧅 Switch to Skale Network</div>*/}
+          <div className="aboutB">2. ✔️ Get Validated</div>
+          <div className="aboutB" >3. 🗳️ Create and Vote on proposals </div>
         </div>
       <div className="main">
-      <div className="aboutCo">1. 🦊 Downlad Wallet</div>
+      <div className="aboutCo">1. 🦊 Download Wallet</div>
       <p> VoTARO uses web 3.0 tools so that people can interact with smart contracts
           and algorithms safely, giving them complete control over their TARO tokens. </p>
        <p> An ethereum web 3.0 wallet such as Metamask, will allow you to use VoTARO contracts and obtain TARO by proposing the needs of your neighborhood.
          If you don't have a Metamask Wallet yet, you can download it from this button </p>
         <div className ="submitbutton"><Button className="aboutbutton" href="https://metamask.io" > 🦊 Download Cartera</Button></div>
 
-      <div className="aboutCo">2. 🧅 Switch to SKALE network</div>
+      {/*<div className="aboutCo">2. 🧅 Switch to SKALE network</div>
        <p>
        To use decentralized Ethereum applications, you need to pay the "gas fees" for smart contracts. These are usually expensive
           and restrictive for new users. VoTARO implements SKALE, a second layer solution on Ethereum that reduces gas costs to 0.
           <p>This allows that new users can interact with VoTARO contracts without having to pay gas fees, allowing implementations of this technology
           on a large scale as in a city. Go to Home to configure your wallet with a signle click.</p>
        </p>
-       <div className ="submitbutton"><Button className="aboutbutton" href="/" > 🧅 Switcht to SKALE on home</Button></div>
-       <div className="aboutCo">3. ✔️ Get validated</div>
+      <div className ="submitbutton"><Button className="aboutbutton" href="/" > 🧅 Switcht to SKALE on home</Button></div>}*/}
+       <div className="aboutCo">2. ✔️ Get validated</div>
        <p>
-          VoTARO focuses on the governance of Querétaro City, so you must validate that you are a citizen of Queréaro
+          VoTARO focuses on the governance of Querétaro City, so you must validate that you are a citizen of Querétaro
           to be able to create proposals or vote the governance module. To validate your account, it is necessary to answer this quiz. </p>
         <p> When you answer it correctly, the contract will validate your address and you will receive from 20 to 100 TARO, depending on the answers
          correct.
        </p>
        <div className ="submitbutton"><Button className="aboutbutton" href="Quiz" >✔️ Validate address</Button></div>
-       <div className="aboutCo">4. 🗳️ Create and Vote on proposals</div>
+       <div className="aboutCo">3. 🗳️ Create and Vote on proposals</div>
        <p> The city needs you! generate proposals for activities, public works or needs that you have identified in your community Make proposals,
           vote for them and make them come true to get more TARO. Proposals will be available for 3 days to be voted on. </p>
          <p> You will receive 20 TAROs for each proposal you make, but the reward will only be valid for the first 5 proposals. Then you can create proposals
@@ -118,10 +118,10 @@ const About = () => {
       <div className="orange">🧰 ¿Cómo obtengo $TARO?</div>
       <div className="main">Necesitas realizar 4 actividades para obtener TARO.</div>
        <div className="text-medium-left">
-          <div className="aboutC">1. 🦊 Descargar Metamask</div>
-          <div className="aboutC" >2. 🧅 Cambiar wallet a red Skale </div>
-          <div className="aboutC">3. ✔️ Validar cuenta</div>
-          <div className="aboutC" >4. 🗳️ Crear y votar propuestas </div>
+          <div className="aboutB">1. 🦊 Descargar Metamask</div>
+          {/*<div className="aboutC" >2. 🧅 Cambiar wallet a red Skale </div>*/}
+          <div className="aboutB">2. ✔️ Validar cuenta</div>
+          <div className="aboutB" >3. 🗳️ Crear y votar propuestas </div>
         </div>
       <div className="main">
       <div className="aboutCo">1. 🦊 Descargar Metamask</div>
@@ -130,24 +130,25 @@ const About = () => {
       <p>Una wallet web 3.0 de ethereum cómo Metamask, te permitirá usar los contratos de VoTARO y obtener TARO al proponer necesidades de tu colonia.
         Si aún no tienes una Wallet de Metamask, puedes descargarla en este botón</p>
         <div className ="submitbutton"><Button className="aboutbutton" href="https://metamask.io" > 🦊 Descargar Cartera</Button></div>
+        
 
-      <div className="aboutCo">2. 🧅 Cambiar wallet a red Skale</div>
+      {/*<div className="aboutCo">2. 🧅 Cambiar wallet a red Skale</div>
        <p>
          Para usar aplicaciones descentralizadas de Ethereum, necesitas pagar las "cuotas de gas" de los contratos inteligentes. Estas suelen caras
          y restrictivas para nuevos usuarios. VoTARO implementa SKALE, una solución de segunda capa en Ethereum que reduce los costos de gas a 0. Esto permite
          que nuevos usuarios puedan interactuar con los contratos de VoTARO sin necesidad de pagar cuotas de gas, permitiendo implementaciones de esta tecnología
          a gran escala como en una ciudad. Ve al Inicio para confirgurar tu cartera con solo presionar un boton.
        </p>
-       <div className ="submitbutton"><Button className="aboutbutton" href="/" > 🧅 Cambiar a Skale en Inicio</Button></div>
-       <div className="aboutCo">3. ✔️ Validar que eres queretan@</div>
+       <div className ="submitbutton"><Button className="aboutbutton" href="/" > 🧅 Cambiar a Skale en Inicio</Button></div>*/}
+       <div className="aboutCo">2. ✔️ Validar que eres queretan@</div>
        <p>
-         VoTARO se enfoca en la gobernanza de la ciudad de Querétaro, por lo que deberas validar que eres ciudadan@ de Queréaro.
+         VoTARO se enfoca en la gobernanza de la ciudad de Querétaro, por lo que deberas validar que eres ciudadan@ de Querétaro.
          para poder crear propuestas o votar el módulo de gobernanza. Para validar tu cuenta, es necesario contestar este cuestionario</p>
        <p>Al contestarlo coorrectamente el contrato validará tu dirección y recibiras de 20 a 100 TARO, dependiendo de las respuestas
         correctas.
        </p>
        <div className ="submitbutton"><Button className="aboutbutton" href="Quiz" >✔️ Validar cuenta</Button></div>
-       <div className="aboutCo">4. 🗳️ Crear y votar propuestas</div>
+       <div className="aboutCo">3. 🗳️ Crear y votar propuestas</div>
        <p>¡La ciudad te necesita! genera propuestas de actividades, obras públicas o necesidades que hayas identificado en tu comunidad Realiza propuestas,
          vota por ellas y hazlas realidad para obtener más TARO. Las propuestas estarán disponibles por 3 días para ser votadas.</p>
         <p>Recibirás 20 TARO por cada propuesta que realices, pero la recompensa solo será valida por las primeras 5 propuestas. Después puedes crear propuestas
