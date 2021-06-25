@@ -5,9 +5,9 @@ import {Card, Button} from 'react-bootstrap';
 import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import InstallMetamaskAlert from './InstallMetamaskAlert';
-import SkaleButton from './buttons/SkaleButton';
-import SkaleSwitch from './buttons/SkaleSwitch';
-import SwitchSkaleAlert from './SwitchSkaleAlert';
+//import SkaleButton from './buttons/SkaleButton';
+//import SkaleSwitch from './buttons/SkaleSwitch';
+//import SwitchSkaleAlert from './SwitchSkaleAlert';
 import '../styles/Home.css';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { TaroContext } from '../contexts/TaroContext';
@@ -27,10 +27,10 @@ function Home() {
   let [ethersProvider, setEthersProvider] = useState();
   let [isConnecting, setIsConnecting] = useState();
   let [isMetamastInstalled, setIsMetamaskInstalled] = useState();
-  let [isSkaleSwitched, setIsSkaleSwitched] = useState();
+//let [isSkaleSwitched, setIsSkaleSwitched] = useState();
   let [currentMetaMaskAccount, setCurrentMetaMaskAccount] = useState(null);
   let [userBalance, setUserBalance] = useState();
-  let [isConnectingToSkale, setIsConnectingToSkale] = useState();
+//let [isConnectingToSkale, setIsConnectingToSkale] = useState();
 
   let {setIsValidated} = useContext(ValidationRequiredContext);
   let {setTaro} = useContext(TaroContext);
@@ -69,7 +69,7 @@ function Home() {
          // let chainId = await _ethereumProvider.request({ method: 'eth_chainId' });
          // _ethereumProvider.on('chainChanged', handleChainChanged);
          // console.log('chainId: ', chainId);
-//
+         //
          // if (chainId === '0x3ad0e149d0bf5') {
          //   setIsSkaleSwitched(true);
          // };
@@ -109,7 +109,8 @@ function Home() {
             console.log("signerAddress: ", signerAddress);
 
             let _userBalance = await _taro.balanceOf(signerAddress);
-            console.log('_userBalance in useEffect: ', _userBalance.toString());
+                _userBalance = _userBalance.div(Math.pow(10,18).toString());
+              console.log('_userBalance in useEffect: ', _userBalance.toString());
             if(_userBalance) {
               setUserBalance(_userBalance.toString());
             };
@@ -241,11 +242,12 @@ function Home() {
       let signerAddress = await signer.getAddress();
       console.log("signerAddress in handleOnConnect: ", signerAddress);
 
-      let _userBalance = await _taro.balanceOf(signerAddress.toString());
-      _userBalance = _userBalance.toString();
-      if(_userBalance) {
-        setUserBalance(_userBalance);
-      };
+      let _userBalance = await _taro.balanceOf(signerAddress);
+          _userBalance = _userBalance.div(Math.pow(10,18).toString());
+          console.log('_userBalance in useEffect: ', _userBalance.toString());
+        if(_userBalance) {
+          setUserBalance(_userBalance.toString());
+        };
 
       const _governorAlpha = new ethers.Contract(
         governorAlphaAddress.GovernorAlpha,
