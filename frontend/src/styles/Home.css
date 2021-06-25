@@ -403,10 +403,33 @@ a.dropdown-item:hover {
   padding: 15px;
 }
 
-.placeholder {
-  font-size: 14px !important;
-
+::placeholder {
+  font-size: 1em !important;
+  color: #9e9e9e !important;
 }
+
+input {
+  font-size: 1em !important;
+  color: #FF9400 !important;
+}
+
+.options {
+  font-size: 1em !important;
+  color: #9e9e9e !important;
+}
+
+option:disabled { color: #9e9e9e !important;  }
+
+select { color: #FF9400 !important;  }
+select:disabled {
+  color: #9e9e9e !important;
+}
+
+option {
+  color: #FF9400;
+}
+
+
 
 .text-medium-left {
   font-size: 1rem !important;

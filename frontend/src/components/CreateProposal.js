@@ -214,27 +214,39 @@ const CreateProposal = () => {
               <Form.Label>
               🎯 Title
               </Form.Label>
-              <Form.Control className="placeholder" type="text"
+              <Form.Control type="text"
                 placeholder="Give your proposal a name or objective"
                 onChange={handleOnChangeTitle}/>
             </Form.Group>
 
             <Form.Group as={Row} controlId="formTypeOfAction">
-              <Form.Label  >
+              <Form.Label>
               ⚙️ Type of action
               </Form.Label>
-              <Form.Control className="placeholder" type="text"
-                placeholder="Modify VoTARO, Public Work, Activity, etc"
-                onChange={handleOnChangeTypeOfAction}/>
+              <Form.Control as="select"
+                onChange={handleOnChangeTypeOfAction}>
+                  <option disabled selected>Select the type of action</option>
+                  <option>Public work (Requires City Government) </option>
+                  <option>Single event</option>
+                  <option>Recurrent event</option>
+              </Form.Control>
             </Form.Group>
 
             <Form.Group as={Row} controlId="formNeighborhood">
               <Form.Label  >
               📍 Neighborhood
               </Form.Label>
-                <Form.Control className="placeholder" type="text"
-                  placeholder="Where will it take place?"
-                  onChange={handleOnChangeNeighborhood}/>
+                <Form.Control as="select"
+                  onChange={handleOnChangeNeighborhood}>
+                  <option disabled selected>Where the proposal will take place?</option>
+                  <option>Santa Mónica 2</option>
+                  <option>Santa Mónica</option>
+                  <option>El Tintero</option>
+                  <option>Ex-Hacienda el Tintero</option>
+                  <option>Solidaridad</option>
+                  <option>El Progreso</option>
+                  <option>El Mirador</option>
+                </Form.Control>
             </Form.Group>
 
             <Form.Group as={Row} controlId="formPersonInCharge">
@@ -265,11 +277,16 @@ const CreateProposal = () => {
             */}
             <Form.Group as={Row} controlId="formBudget">
               <Form.Label  >
-              💸 Cost of the proposal:
+              💸 How much will it cost? (in Pesos)
               </Form.Label>
-              <Form.Control className="placeholder" type="text"
-                placeholder="How much will it cost? (In Pesos)"
-                onChange={handleOnChangeBudget}/>
+              <Form.Control className="placeholder" as="select"
+                  onChange={handleOnChangeBudget}>
+                  <option disabled selected>Give details in Description</option>
+                  <option value="0">O, volunteer or unknown</option>
+                  <option value="1000">Up to 1,000 pesos</option>  
+                  <option value="10000">Up to 10,0000 pesos</option>
+                  <option value="100000">Up to 100,000 pesos</option>
+                </Form.Control>
             </Form.Group>
             {/*
             <Form.Group as={Row} controlId="formRequiredTaroToVote">
@@ -317,7 +334,7 @@ const CreateProposal = () => {
                 <Form.Label  >
                 ⚙️ Tipo de acción:
                 </Form.Label>
-                <Form.Control className="placeholder" type="text" placeholder="Cambio en VoTARO, Obra pública, Actividad, Servicio" onChange={handleOnChangeTypeOfAction}/>
+                <Form.Control className="placeholder" type="text" placeholder="Elige solo una: Obra Pública, Evento Único o Evento Recurrente" onChange={handleOnChangeTypeOfAction}/>
               </Form.Group>
 
               <Form.Group as={Row} controlId="formNeighborhood">
