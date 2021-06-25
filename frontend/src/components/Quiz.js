@@ -154,7 +154,7 @@ const Quiz = () => {
       if(_checkedAnswers.length === 10) {
         setLoadingModalShow(true);
         //Make network call to receive 100 tokens
-        let submitAnswers = await governorAlpha.validate(ethers.BigNumber.from('100'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('100'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log('submitAnswersReceipt: ', submitAnswersReceipt);
         handleOnLoadingModal();
@@ -171,7 +171,7 @@ const Quiz = () => {
         setCheckedAnswers([]);
       } else if(_checkedAnswers.length >= 8) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.BigNumber.from('80'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('80'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
@@ -181,7 +181,7 @@ const Quiz = () => {
         setCheckedAnswers([]);
       } else if(_checkedAnswers.length >= 6) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.BigNumber.from('20'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('20'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
