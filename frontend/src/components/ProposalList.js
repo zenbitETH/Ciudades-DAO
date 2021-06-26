@@ -144,6 +144,11 @@ const ProposalList = () => {
                   console.log('endBlock: ', proposal.endBlock.toNumber());
                   console.log('currentTimeInSeconds: ', currentTimeInSeconds);
 
+                  let fVotes = proposal.forVotes.toString();
+                  let tempForVotes = fVotes.slice(0, -18);
+                  console.log('tempForVotes: ', tempForVotes);
+                  
+
                   activeProposals.push({
                     title: proposal[9][0],
                     typeOfAction: proposal[9][1],
@@ -153,7 +158,7 @@ const ProposalList = () => {
                     expiration: proposal[9][5].toString(),
                     budget: proposal[9][6].toString(),
                     requiredTaroToVote: proposal[9][7].toString(),
-                    forVotes: proposal.forVotes.toString(),
+                    forVotes: proposal.forVotes.toString().slice(0, -18),
                     againstVotes: proposal.againstVotes.toString(),
                     id: proposal.id.toString(),
                     proposer: proposal.proposer.toString(),
