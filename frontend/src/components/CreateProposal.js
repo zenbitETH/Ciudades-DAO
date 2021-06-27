@@ -318,84 +318,115 @@ const CreateProposal = () => {
         :
 
         <div className="gray">
-          <Form className="create" >
-            <p className="orange">Crear nueva propuesta</p>
-            <div className="big-icon">✍🏼</div>
-            <div className="main">Recibirás 20 TARO por cada propuesta que realices, pero la recompensa solo será valida por las primeras 5 propuestas. Después puedes crear propuestas pero no recibirás TARO por crearlas.</div>
-            <p className="orange2">⚠️Debes llenar todos los campos⚠️</p>
-              <Form.Group as={Row} controlId="formTitle">
-                <Form.Label>
-                🎯 Título:
-                </Form.Label>
-                <Form.Control className="placeholder" type="text" placeholder="Nombra el objetivo de tu propuesta" onChange={handleOnChangeTitle}/>
-              </Form.Group>
+        <Form className="create">
+        <p className="orange">Create new proposal</p>
+        <div className="big-icon">✍🏼</div>
+        <div className="main">Recibirás 20 TARO por cada propuesta que realices, pero la recompensa solo será valida por las primeras 5 propuestas. Después puedes crear propuestas pero no recibirás TARO por crearlas.</div>
+        <p className="orange2">⚠️Debes llenar todos los campos⚠️</p>
+          <Form.Group as={Row} controlId="formTitle">
+            <Form.Label>
+            🎯 Título
+            </Form.Label>
+            <Form.Control type="text"
+              placeholder="Nombra el objetivo de tu propuesta"
+              onChange={handleOnChangeTitle}/>
+          </Form.Group>
 
-              <Form.Group as={Row} controlId="formTypeOfAction">
-                <Form.Label  >
-                ⚙️ Tipo de acción:
-                </Form.Label>
-                <Form.Control className="placeholder" type="text" placeholder="Elige solo una: Obra Pública, Evento Único o Evento Recurrente" onChange={handleOnChangeTypeOfAction}/>
-              </Form.Group>
+          <Form.Group as={Row} controlId="formTypeOfAction">
+            <Form.Label>
+            ⚙️ Tipo de acción
+            </Form.Label>
+            <Form.Control as="select"
+              onChange={handleOnChangeTypeOfAction}>
+                <option disabled selected>¿Qué tipo de actividad es?</option>
+                <option>Obra Pública (require del Gobierno) </option>
+                <option>Evento único</option>
+                <option>Evento recurrente</option>
+            </Form.Control>
+          </Form.Group>
 
-              <Form.Group as={Row} controlId="formNeighborhood">
-                <Form.Label  >
-                📍 Colonia:
-                </Form.Label>
-                  <Form.Control className="placeholder" type="text" placeholder="En qué colonia es tu propuesta" onChange={handleOnChangeNeighborhood}/>
-              </Form.Group>
+          <Form.Group as={Row} controlId="formNeighborhood">
+            <Form.Label  >
+            📍 Colonia
+            </Form.Label>
+              <Form.Control as="select"
+                onChange={handleOnChangeNeighborhood}>
+                <option disabled selected>¿Dónde se lleva a cabo la propuesta?</option>
+                <option>Santa Mónica 2</option>
+                <option>Santa Mónica</option>
+                <option>El Tintero</option>
+                <option>Ex-Hacienda el Tintero</option>
+                <option>Solidaridad</option>
+                <option>El Progreso</option>
+                <option>El Mirador</option>
+              </Form.Control>
+          </Form.Group>
 
-              <Form.Group as={Row} controlId="formPersonInCharge">
-                <Form.Label  >
-                🦸🦸‍♂️ Responsable:
-                </Form.Label>
-              <Form.Control className="placeholder" type="text" placeholder="¿Quien tiene que hacerlo?" onChange={handleOnChangePersonInCharge}/>
-              </Form.Group>
-              <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
-                <Form.Label  >
-                📑 Descripción:
-              </Form.Label>
-                <Form.Control className="placeholder" as="textarea" type="field" rows={3} placeholder="Describe a detalle tu propuesta, ¡mientras más información mejor!" onChange={handleOnChangeDescription}/>
-              </Form.Group>
-              {/*}
-              <Form.Group as={Row} controlId="formExpiration">
-                <Form.Label  >
-                  Expiración
-                </Form.Label>
-                <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
-              </Form.Group>
-              */}
-              <Form.Group as={Row} controlId="formBudget">
-                <Form.Label  >
-                💸 Costo de la propuesta:
-              </Form.Label>
-                <Form.Control className="placeholder" type="text" placeholder="¿Cuánto cuesta en pesos realizar esta propuesta?" onChange={handleOnChangeBudget}/>
-              </Form.Group>
-              {/*}
-              <Form.Group as={Row} controlId="formRequiredTaroToVote">
-                <Form.Label  >
-                  TARO delegado minimo
-              </Form.Label>
-                <Form.Control type="text" placeholder="Establece el TARO minimo para votar" onChange={handleOnChangeRequiredTaroToVote}/>
-              </Form.Group>
-              */}
-              <Button className="submitbutton"classntype="submit" onClick={handleOnSubmit}>Enviar propuesta</Button>
-            </Form>
+          <Form.Group as={Row} controlId="formPersonInCharge">
+            <Form.Label  >
+            🦸🦸‍♂️ Responsable
+            </Form.Label>
+              <Form.Control className="placeholder" type="text"
+                placeholder="¿Quien tiene que hacerlo??"
+                onChange={handleOnChangePersonInCharge}/>
+          </Form.Group>
 
-            <IsLoadingModal
-              show={loadingModalShow}
-              onHide={handleOnLoadingModal}
-            />
+          <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
+            <Form.Label  >
+            📑 Descripción
+          </Form.Label>
+          <Form.Control className="placeholder" as="textarea"
+            type="text" rows={3}
+            placeholder="Describe a detalle tu propuesta, ¡mientras más información mejor!"
+            onChange={handleOnChangeDescription}/>
+          </Form.Group>
+          {/*
+          <Form.Group as={Row} controlId="formExpiration">
+            <Form.Label  >
+              Expiration
+            </Form.Label>
+            <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
+          </Form.Group>
+          */}
+          <Form.Group as={Row} controlId="formBudget">
+            <Form.Label  >
+            💸 Costo aproximado de la propuesta (en pesos)
+            </Form.Label>
+            <Form.Control className="placeholder" as="select"
+                onChange={handleOnChangeBudget}>
+                <option disabled selected>Agrega un presupuesto en tu propuesta</option>
+                <option value="0">O, voluntario o desconocido</option>
+                <option value="1000">hasta 1,000 pesos</option>  
+                <option value="10000">hasta 10,0000 pesos</option>
+                <option value="100000">hasta 100,000 pesos</option>
+              </Form.Control>
+          </Form.Group>
+          {/*
+          <Form.Group as={Row} controlId="formRequiredTaroToVote">
+            <Form.Label  >
+              Required TARO to vote
+          </Form.Label>
+            <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
+          </Form.Group>
+          */}
 
-            <CreateProposalErrorModal
-              show={errorModalShow}
-              onHide={handleOnErrorModal}
-            />
+          <Button className="submitbutton"classntype="submit" onClick={handleOnSubmit}>Submit proposal</Button>
+          </Form>
+        <IsLoadingModal
+          show={loadingModalShow}
+          onHide={handleOnLoadingModal}
+        />
 
-            <CreateProposalSuccessModal
-              show={successModalShow}
-              onHide={handleOnAlreadySubmitted}
-            />
-        </div>
+        <CreateProposalErrorModal
+          show={errorModalShow}
+          onHide={handleOnErrorModal}
+        />
+
+        <CreateProposalSuccessModal
+          show={successModalShow}
+          onHide={handleOnAlreadySubmitted}
+        />
+      </div>
         }
       </div>
       );
