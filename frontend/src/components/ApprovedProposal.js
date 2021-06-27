@@ -129,9 +129,9 @@ const ApprovedProposal = ({title,
       ?
 
       <Card className="proposala">
-       <div className="proposal-id">💡 Proposal #{id} 
+       <div className="proposal-id">💡 Proposal # {id} 
        <span className="proposal-date"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
-      <div className="proposal-author">by {proposer}</div>
+      <div className="proposal-authorpast">by {proposer}</div>
     </div>
     <div className="proposal-title">🎯{title}</div>
     <div className="proposal-details">🔍 Details:</div>
@@ -173,9 +173,9 @@ const ApprovedProposal = ({title,
 
       :
       <Card className="proposala">
-      <div className="proposal-id">💡 Propuesta #{id} 
+      <div className="proposal-id">💡 Propuesta # {id} 
       <span className="proposal-date"> hecha el día {proposalDay}/{proposalMonth}/{proposalYear}</span> 
-      <div className="proposal-author">por {proposer}</div>
+      <div className="proposal-authorpast">por {proposer}</div>
     </div>
     <div className="proposal-title">🎯{title}</div>
     <div className="proposal-details">🔍 Detalles:</div>

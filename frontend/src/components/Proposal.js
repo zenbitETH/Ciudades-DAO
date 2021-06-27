@@ -132,7 +132,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
       ?
 
   <Card className="proposal">
-    <div className="proposal-id">💡 Proposal #{id} 
+    <div className="proposal-id">💡 Proposal # {id} 
       <div className="proposal-author">by {proposer}</div>
     </div>
     <div className="proposal-title">🎯{title}</div>
@@ -196,7 +196,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
       :
 
 <Card className="proposal">
-    <div className="proposal-id">💡 Propuesta #{id} 
+    <div className="proposal-id">💡 Propuesta # {id} 
       <div className="proposal-author">por {proposer}</div>
     </div>
     <div className="proposal-title">🎯{title}</div>
