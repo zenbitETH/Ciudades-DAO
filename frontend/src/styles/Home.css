@@ -765,6 +765,11 @@ option {
   color: #FF9400;
 }
 
+.proposal-authorpast {
+  font-size: 0.85em;
+  color: #3d386b;
+}
+
 .proposal-date {
   color: #ffffff;
   padding-right: 3%;
