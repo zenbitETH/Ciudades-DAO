@@ -226,7 +226,7 @@ const CreateProposal = () => {
               <Form.Control as="select"
                 onChange={handleOnChangeTypeOfAction}>
                   <option disabled selected>Select the type of action</option>
-                  <option>Public work (Requires City Government) </option>
+                  <option>Public work</option>
                   <option>Single event</option>
                   <option>Recurrent event</option>
               </Form.Control>
@@ -339,7 +339,8 @@ const CreateProposal = () => {
             <Form.Control as="select"
               onChange={handleOnChangeTypeOfAction}>
                 <option disabled selected>¿Qué tipo de actividad es?</option>
-                <option>Obra Pública (require del Gobierno) </option>
+                <option>Obra Pública Municipal</option>
+                <option>Obra Pública Estatal</option>
                 <option>Evento único</option>
                 <option>Evento recurrente</option>
             </Form.Control>
