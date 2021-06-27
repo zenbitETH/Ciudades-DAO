@@ -37,7 +37,7 @@ const About = () => {
       Transform Querétaro City into a Decentralized Autonomous Organization that exists in an automated way on the internet but that relies heavily on human talent to carry out urban or virtual tasks that the smart contracts cannot complete by itself.
         </div>
       <div className="orange">🧰 What do I need to get $ TARO?</div>
-      <div className="main">You need to do 4 activities to get TARO.</div>
+      <div className="main">You need to do 3 activities to get TARO.</div>
        <div className="text-medium-left">
           <div className="aboutB">1. 🦊 Download Metamask</div>
           {/*<div className="aboutC" >2. 🧅 Switch to Skale Network</div>*/}
@@ -116,7 +116,7 @@ const About = () => {
         Convertir a la ciudad de Querétaro en una Organización Autónoma Descentralizada que exista de manera automatizada en internet pero que
         dependa fuertemente del talento humano para ejecutar tareas urbanas o virtuales que los contratos inteligentes no puedan completar por si mismo.</div>
       <div className="orange">🧰 ¿Cómo obtengo $TARO?</div>
-      <div className="main">Necesitas realizar 4 actividades para obtener TARO.</div>
+      <div className="main">Necesitas realizar 3 actividades para obtener TARO.</div>
        <div className="text-medium-left">
           <div className="aboutB">1. 🦊 Descargar Metamask</div>
           {/*<div className="aboutC" >2. 🧅 Cambiar wallet a red Skale </div>*/}
