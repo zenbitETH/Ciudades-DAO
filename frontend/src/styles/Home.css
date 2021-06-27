@@ -683,6 +683,7 @@ option {
 
 
 
+
 .proposal-details {
   width: 100%;
   text-align: left;
@@ -761,7 +762,14 @@ option {
 }
 .proposal-author {
   font-size: 0.85em;
-  color: #FF9400;
+  color: #3d386b;
+}
+
+.proposal-date {
+  color: #ffffff;
+  padding-right: 3%;
+  text-align: right;
+  font-size: 0.85em;
 }
 
 .proposal-title {
@@ -813,7 +821,6 @@ option {
   width: 50%;
   display: table-cell;
   text-align: left !important;
-  font-size: 20px !important;
   color: #ffffff !important;
 }
 
@@ -821,7 +828,6 @@ option {
   width: 50%;
   display: table-cell;
   text-align: right !important;
-  font-size: 20px !important;
   color: #ffffff !important;
 }
 
@@ -923,13 +929,13 @@ option {
   border-radius: 20px;
   background-image: linear-gradient(#36a74e, #82bb8e)!important;
   margin-right: 2% ;
-  font-size: 65px !important;
+  font-size: 3em !important;
   text-align: center;
   color: #ffffff;
 }
 
 .big-icona {
-  font-size: 65px !important;
+  font-size: 3em !important;
   margin-left: 2%;
   text-align: center;
   color: #ffffff;
