@@ -246,6 +246,7 @@ const CreateProposal = () => {
                   <option>Solidaridad</option>
                   <option>El Progreso</option>
                   <option>El Mirador</option>
+                  <option>Other (Especify in details)</option>
                 </Form.Control>
             </Form.Group>
 
@@ -319,7 +320,7 @@ const CreateProposal = () => {
 
         <div className="gray">
         <Form className="create">
-        <p className="orange">Create new proposal</p>
+        <p className="orange">Crear una propuesta</p>
         <div className="big-icon">✍🏼</div>
         <div className="main">Recibirás 20 TARO por cada propuesta que realices, pero la recompensa solo será valida por las primeras 5 propuestas. Después puedes crear propuestas pero no recibirás TARO por crearlas.</div>
         <p className="orange2">⚠️Debes llenar todos los campos⚠️</p>
@@ -360,6 +361,7 @@ const CreateProposal = () => {
                 <option>Solidaridad</option>
                 <option>El Progreso</option>
                 <option>El Mirador</option>
+                <option>Otra (especifica en descripción)</option>
               </Form.Control>
           </Form.Group>
 
@@ -411,7 +413,7 @@ const CreateProposal = () => {
           </Form.Group>
           */}
 
-          <Button className="submitbutton"classntype="submit" onClick={handleOnSubmit}>Submit proposal</Button>
+          <Button className="submitbutton"classntype="submit" onClick={handleOnSubmit}>Enviar propuesta</Button>
           </Form>
         <IsLoadingModal
           show={loadingModalShow}
