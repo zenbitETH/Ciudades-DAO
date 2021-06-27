@@ -12,7 +12,21 @@ import { LanguageContext } from '../contexts/LanguageContext';
 // import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 // import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-const ApprovedProposal = ({title, typeOfAction, neighborhood, personInCharge, description, expiration, budget, requiredTaroToVote, forVotes, againstVotes, id, proposer, proposalYear, proposalMonth, proposalDay}) => {
+const ApprovedProposal = ({title, 
+                          typeOfAction, 
+                          neighborhood, 
+                          personInCharge, 
+                          description, 
+                          expiration, 
+                          budget, 
+                          requiredTaroToVote, 
+                          forVotes, 
+                          againstVotes, 
+                          id, 
+                          proposer, 
+                          proposalYear, 
+                          proposalMonth, 
+                          proposalDay}) => {
   // let [governorAlpha, setGovernorAlpha] = useState();
   // let [taro, setTaro] = useState();
   // let [signerAddress, setSignerAddress] = useState();
@@ -116,6 +130,7 @@ const ApprovedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
 
       <Card className="proposala">
        <div className="proposal-id">💡 Proposal #{id} 
+       <span className="proposal-date"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
       <div className="proposal-author">by {proposer}</div>
     </div>
     <div className="proposal-title">🎯{title}</div>
@@ -141,16 +156,16 @@ const ApprovedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
     <Card.Body className="proposal-table">
       <div className="proposal-main">
       <div className="proposal-favor">
+      <div>
+          ✔️ Approved by:
+        </div>
+        <p className="big-iconf">{forVotes} <p>TARO</p></p>
+        </div>
         <div>
-          ✔️ Votes for:
-        </div>
-        <p className="big-iconf">{forVotes}</p>
-        </div>
-        <div >
         <div className="proposal-against">
-          ❌ Votes against:
+          ❌ Against:
         </div>
-           <p className="big-icona">{againstVotes}</p>
+           <p className="big-icona">{againstVotes} <p>TARO</p></p>
         </div>
       </div>
     </Card.Body>
@@ -159,6 +174,7 @@ const ApprovedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
       :
       <Card className="proposala">
       <div className="proposal-id">💡 Propuesta #{id} 
+      <span className="proposal-date"> hecha el día {proposalDay}/{proposalMonth}/{proposalYear}</span> 
       <div className="proposal-author">por {proposer}</div>
     </div>
     <div className="proposal-title">🎯{title}</div>
@@ -186,15 +202,15 @@ const ApprovedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
       <div className="proposal-main">
       <div className="proposal-favor">
         <div>
-          ✔️ Votos a favor:
+          ✔️ Aprobada por:
         </div>
-        <p className="big-iconf">{forVotes}</p>
+        <p className="big-iconf">{forVotes} <p>TARO</p></p>
         </div>
         <div>
         <div className="proposal-against">
-          ❌ Votos en contra:
+          ❌ En contra:
         </div>
-           <p className="big-icona">{againstVotes}</p>
+           <p className="big-icona">{againstVotes} <p>TARO</p></p>
         </div>
       </div>
     </Card.Body>

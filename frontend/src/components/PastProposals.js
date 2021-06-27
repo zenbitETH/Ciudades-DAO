@@ -346,9 +346,11 @@ const PastProposals = () => {
                         </div>
                         :
                         <div>
-                          <Button onClick={handleOnApprove}>
-                          Ver propuestas rechazadas
-                          </Button>
+                          <div className="floating">
+                            <Button className="alt2" onClick={handleOnApprove}>
+                              Ver propuestas rechazadas
+                            </Button>
+                          </div>
                           <div className ="main">
                            <div className="title2">⛔Aún no hay propuestas aprobadas⛔</div>
                           </div>
@@ -365,7 +367,7 @@ const PastProposals = () => {
                         <div className="space">
                           <div className="floating">
                           <Button className="alt2" onClick={handleOnApprove}>
-                            Ver propuestas aceptadas
+                            Ver propuestas aprobadas
                           </Button>
                           </div>
                           <div className="title2">❌ Propuestas Rechazadas</div>
@@ -376,9 +378,11 @@ const PastProposals = () => {
                         </div>
                         :
                         <div>
-                          <Button onClick={handleOnApprove}>
+                         <div className="floating">
+                          <Button className="alt2" onClick={handleOnApprove}>
                             Ver propuestas aprobadas
                           </Button>
+                          </div>
                           <div className ="main">
                            <div className="title2">⛔Aún no hay propuestas rechazadas⛔</div>
                           </div>
@@ -392,7 +396,7 @@ const PastProposals = () => {
                 </div>
               </div>
               <div className="floating">
-                  <Link className="alt2" to="/">Regresar al inicio</Link>
+                <Link className="alt2" to="/">Regresar al inicio</Link>
               </div>
           </div>
 

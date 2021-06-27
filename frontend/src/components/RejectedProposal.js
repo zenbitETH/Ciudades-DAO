@@ -117,6 +117,7 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
 
       <Card className="proposalr">
      <div className="proposal-id">💡 Proposal #{id} 
+     <span className="proposal-date"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
       <div className="proposal-author">by {proposer}</div>
     </div>
     <div className="proposal-title">🎯{title}</div>
@@ -142,23 +143,24 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
       <div className="proposal-main">
       <div className="proposal-favor">
         <div>
-          ✔️ Votes for:
+            ✔️ Supported by:
+          </div>
+          <p className="big-iconf">{forVotes}<p>TARO</p></p>
+          </div>
+          <div>
+          <div className="proposal-against">
+            ❌ Rejected by:
+          </div>
+            <p className="big-icona">{againstVotes} <p>TARO</p></p>
+          </div>
         </div>
-        <p className="big-iconf">{forVotes}</p>
-        </div>
-        <div>
-        <div className="proposal-against">
-          ❌ Votes against:
-        </div>
-           <p className="big-icona">{againstVotes}</p>
-        </div>
-      </div>
     </Card.Body>
   </Card>
 
         :
         <Card className="proposalr">
         <div className="proposal-id">💡 Propuesta #{id} 
+      <span className="proposal-date"> hecha el día {proposalDay}/{proposalMonth}/{proposalYear}</span> 
       <div className="proposal-author">por {proposer}</div>
     </div>
     <div className="proposal-title">🎯{title}</div>
@@ -186,15 +188,15 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
         <div className="proposal-main">
         <div className="proposal-favor">
           <div>
-            ✔️ Votos a favor:
+            ✔️ A favor:
           </div>
-          <p className="big-iconf">{forVotes}</p>
+          <p className="big-iconf">{forVotes}<p>TARO</p></p>
           </div>
           <div>
           <div className="proposal-against">
-            ❌ Votos en contra:
+            ❌ Rachazada por:
           </div>
-             <p className="big-icona">{againstVotes}</p>
+             <p className="big-icona">{againstVotes} <p>TARO</p></p>
           </div>
         </div>
       </Card.Body>
