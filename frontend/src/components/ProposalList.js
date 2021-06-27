@@ -251,7 +251,7 @@ const ProposalList = () => {
                 <div className="text-large">1 TARO = 1 Vote</div>
                 <div className="main">Use your TARO to vote for or against available proposals. Your voting power depends on how many TARO tokens you hold in your wallet.</div>
                 <div className="floating">
-                <div className="title2">⛔There are no current proposals.⛔</div>
+                <div className="title2">⛔There are no open proposals.⛔</div>
                 </div>
                 <div className="floating">
                   <Link className="alt2" to="/pastproposals">📅 See past proposals</Link>
@@ -304,7 +304,7 @@ const ProposalList = () => {
             <div className="text-large">1 TARO = 1 Voto</div>
             <div className="main">Usa tu taro TARO para votar a favor o en contra de las propuestas disponibles. Tu poder de voto depende de la cantidad de tokens TARO que tengas en tu wallet.</div>
             <div className="floating">
-            <div className="title2">⛔Aún no hay propuestas.⛔</div>
+            <div className="title2">⛔No hay propuestas activas.⛔</div>
             </div>
             <div className="floating">
               <Link className="alt2" to="/pastproposals">📅 Ver propuestas pasadas</Link>

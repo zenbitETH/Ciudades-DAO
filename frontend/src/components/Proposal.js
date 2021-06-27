@@ -228,7 +228,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
         <div>
           ✔️ A favor:
         </div>
-        <p className="big-iconf">{forVotes}
+        <p className="big-iconf">{forVotes}<p>TARO</p>
           {!hasVoted
             ?
             <Button className="favor" block onClick={handleOnClickFor}>
@@ -243,7 +243,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
         <div className="proposal-against">
           ❌ En contra:
         </div>
-        <p className="big-icona">{againstVotes}
+        <p className="big-icona">{againstVotes}<p>TARO</p>
           {!hasVoted
             ?
             <Button className="against" block onClick={handleOnClickAgainst}>
