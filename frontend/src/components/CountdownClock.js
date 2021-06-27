@@ -63,12 +63,12 @@ const CountdownClock = ({timeToExpiration}) => {
         {isEnglish === 'english' ?
         <div>
           <div>
-             {days} days, {hours}:{minutes}:{seconds} left
+             {days} days, {hours}:{minutes}:{seconds} 
           </div>
         </div>
         :
           <div>
-            {days} días, {hours}:{minutes}:{seconds} restantes
+            {days} días, {hours}:{minutes}:{seconds}
           </div>
         }
       </div>

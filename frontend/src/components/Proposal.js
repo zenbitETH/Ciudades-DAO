@@ -132,24 +132,23 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
       ?
 
   <Card className="proposal">
-  <Card.Body className="proposal-table">
-    <div className="proposal-main">
-      <div className="proposal-title">🎯{title}</div>
-      <div className="proposal-subaction">
-        <div className="white-card">📍 Where:<p className="purple4">{neighborhood}</p></div>
-      </div>
+    <div className="proposal-id">💡 Proposal #{id} 
+      <div className="proposal-author">by {proposer}</div>
     </div>
-    <div className="proposal-main">
-      <div className="proposal-title3">✍🏼 Author: {proposer}<div className="proposal-titles">🦸🦸‍♂️In charge: {personInCharge}</div></div>
-      <div className="orange-card2">⚙️ Type: <p>{typeOfAction}</p></div>
-    </div>
-    <div className="proposal-main">
-        <div className="proposal-titles"></div>
-        <div className="yellow-card">⏳ Expiration: <CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></div>
+    <div className="proposal-title">🎯{title}</div>
+    <div className="proposal-details">🔍 Details:</div>
+    <div className="proposal-container">
+      <div className="proposal-hero">🦸🦸‍♂️In charge: <div className="table-text">{personInCharge}</div></div>
+      <div className="proposal-table">
+          <div className="proposal-action">⚙️ Action: <div className="table-text">{typeOfAction}</div></div>
+          <div className="proposal-location"> 📍 Where: <div className="table-text">{neighborhood}</div></div>
+          <div className="proposal-cost">💸 Cost: <div className="table-text">{budget} pesos</div> </div>
       </div>
-    </Card.Body>
-      <div className="proposal-description"><div className="white2">📑 Description:</div><p>{description}</p></div>
-      <div className="white-cost">💸 Cost: {budget} pesos</div>
+      
+      <div className="proposal-description">📑 Description: <div className="table-text">{description}</div></div>
+    </div>
+    
+      <div className="proposal-expiration">⏳ Time left to vote: <CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></div>
     {/*}
     <div className ="proposal-main">
       <div className="proposal-sub">Costo: {budget}</div>
@@ -157,7 +156,8 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
     </div>
     */}
 
-  <Card.Body className="proposal-table">
+  <Card.Body className="proposal-votes">
+  <div className="yellow-card"></div>
     <div className="proposal-main">
       <div className="proposal-favor">
         <div>
@@ -174,7 +174,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
           }
         </p>
       </div>
-      <div className="proposal-action">
+      <div >
         <div className="proposal-against">
           ❌ Against:
         </div>
@@ -195,67 +195,68 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
 
       :
 
-      <Card className="proposal">
-      <Card.Body className="proposal-table">
-        <div className="proposal-main">
-          <div className="proposal-title">🎯{title}</div>
-          <div className="proposal-subaction">
-            <div className="white-card">📍 Donde:<p className="purple4">{neighborhood}</p></div>
-          </div>
-        </div>
-        <div className="proposal-main">
-          <div className="proposal-title3">✍🏼 Autor: {proposer}<div className="proposal-titles">🦸🦸‍♂️ Responsable: {personInCharge}</div></div>
-          <div className="orange-card2">⚙️Tipo de trabajo: <p>{typeOfAction}</p></div>
-        </div>
-        <div className="proposal-main">
-            <div className="proposal-titles"></div>
-            <div className="yellow-card">⏳ Expiración: <CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></div>
-          </div>
-        </Card.Body>
-          <div className="proposal-description"><div className="white2">📑 Descripción:</div><p>{description}</p></div>
-          <div className="white-cost">💸 Costo: {budget} pesos</div>
-        {/*}
-        <div className ="proposal-main">
-          <div className="proposal-sub">Costo: {budget}</div>
-          <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
-        </div>
-        */}
+<Card className="proposal">
+    <div className="proposal-id">💡 Propuesta #{id} 
+      <div className="proposal-author">por {proposer}</div>
+    </div>
+    <div className="proposal-title">🎯{title}</div>
+    <div className="proposal-details">🔍 Detalles:</div>
+    <div className="proposal-container">
+      <div className="proposal-hero">🦸 Responsable de la actividad🦸‍♂️ <div className="table-text">{personInCharge}</div></div>
+      <div className="proposal-table">
+          <div className="proposal-action">⚙️ Tipo: <div className="table-text">{typeOfAction}</div></div>
+          <div className="proposal-location">📍 Dónde: <div className="table-text">{neighborhood}</div></div>
+          <div className="proposal-cost">💸 Costo: <div className="table-text">{budget} pesos</div></div>
+      </div>
+      
+      
+      <div className="proposal-description" >📑 Descripción: <div className="table-text">{description}</div></div>
+    </div>
+    
+      <div className="proposal-expiration">⏳ Tiempo restante para votar ⌛  <CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></div>
+    {/*}
+    <div className ="proposal-main">
+      <div className="proposal-sub">Costo: {budget}</div>
+      <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+    </div>
+    */}
 
-      <Card.Body className="proposal-table">
-        <div className="proposal-main">
-          <div className="proposal-favor">
-            <div>
-              ✔️ A favor:
-            </div>
-            <p className="big-iconf">{forVotes}
-              {!hasVoted
-                ?
-                <Button className="favor" block onClick={handleOnClickFor}>
-                  ✔️ Votar a favor
-                </Button>
-                :
-                ''
-              }
-            </p>
-          </div>
-          <div className="proposal-action">
-            <div className="proposal-against">
-              ❌ En contra:
-            </div>
-            <p className="big-icona">{againstVotes}
-              {!hasVoted
-                ?
-                <Button className="against" block onClick={handleOnClickAgainst}>
-                  ❌ Votar en contra
-                </Button>
-                :
-                ''
-              }
-            </p>
-          </div>
+  <Card.Body className="proposal-votes">
+  <div className="yellow-card"></div>
+    <div className="proposal-main">
+      <div className="proposal-favor">
+        <div>
+          ✔️ A favor:
         </div>
-      </Card.Body>
-    </Card>
+        <p className="big-iconf">{forVotes}
+          {!hasVoted
+            ?
+            <Button className="favor" block onClick={handleOnClickFor}>
+              ✔️ Votar a favor
+            </Button>
+            :
+            ''
+          }
+        </p>
+      </div>
+      <div>
+        <div className="proposal-against">
+          ❌ En contra:
+        </div>
+        <p className="big-icona">{againstVotes}
+          {!hasVoted
+            ?
+            <Button className="against" block onClick={handleOnClickAgainst}>
+              ❌ Votar en contra
+            </Button>
+            :
+            ''
+          }
+        </p>
+      </div>
+    </div>
+  </Card.Body>
+</Card>
       }
     </div>
   );

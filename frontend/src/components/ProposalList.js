@@ -159,7 +159,7 @@ const ProposalList = () => {
                     budget: proposal[9][6].toString(),
                     requiredTaroToVote: proposal[9][7].toString(),
                     forVotes: proposal.forVotes.toString().slice(0, -18),
-                    againstVotes: proposal.againstVotes.toString(),
+                    againstVotes: proposal.againstVotes.toString().slice(0, -18), 
                     id: proposal.id.toString(),
                     proposer: proposal.proposer.toString(),
                     proposalTime: proposal[9].proposalTime.toNumber(),

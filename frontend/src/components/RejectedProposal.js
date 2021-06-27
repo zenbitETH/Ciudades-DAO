@@ -116,24 +116,21 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
       ?
 
       <Card className="proposalr">
-      <Card.Body className="proposal-table">
-        <div className="proposal-main">
-          <div className="proposal-title">🎯{title}</div>
-          <div className="proposal-subaction">
-            <div className="white-card">📍 Where:<p className="purple4">{neighborhood}</p></div>
-          </div>
-        </div>
-        <div className="proposal-main">
-          <div className="proposal-title3">✍🏼 Author: {proposer}</div>
-          <div className="orange-card2">🦸🦸‍♂️In charge: <p>{personInCharge}</p></div>
-        </div>
-        <div className="proposal-main">
-            <div className="proposal-titles">⚙️Type of work: {typeOfAction}</div>
-            <div className="yellow-card">📅 Proposal time: <div>{proposalYear}/{proposalMonth}/{proposalDay}</div></div>
-          </div>
-        </Card.Body>
-          <div className="proposal-description"><div className="white2">📑 Description:</div><p>{description}</p></div>
-          <div className="white-cost">💸 Cost: {budget} pesos</div>
+     <div className="proposal-id">💡 Proposal #{id} 
+      <div className="proposal-author">by {proposer}</div>
+    </div>
+    <div className="proposal-title">🎯{title}</div>
+    <div className="proposal-details">🔍 Details:</div>
+    <div className="proposal-container">
+      <div className="proposal-hero">🦸🦸‍♂️In charge: <div className="table-text">{personInCharge}</div></div>
+      <div className="proposal-table">
+          <div className="proposal-action">⚙️ Action: <div className="table-text">{typeOfAction}</div></div>
+          <div className="proposal-location"> 📍 Where: <div className="table-text">{neighborhood}</div></div>
+          <div className="proposal-cost">💸 Cost: <div className="table-text">{budget} pesos</div> </div>
+      </div>
+      
+      <div className="proposal-description">📑 Description: <div className="table-text">{description}</div></div>
+    </div>
           {/*}
           <div className ="proposal-main">
             <div className="proposal-sub">Costo: {budget}</div>
@@ -149,7 +146,7 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
         </div>
         <p className="big-iconf">{forVotes}</p>
         </div>
-        <div className="proposal-action">
+        <div>
         <div className="proposal-against">
           ❌ Votes against:
         </div>
@@ -161,25 +158,23 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
 
         :
         <Card className="proposalr">
-        <Card.Body className="proposal-table">
-          <div className="proposal-main">
-            <div className="proposal-title">🎯{title}</div>
-            <div className="proposal-subaction">
-              <div className="white-card">📍 Donde:<p className="purple4">{neighborhood}</p></div>
-            </div>
-          </div>
-          <div className="proposal-main">
-            <div className="proposal-title3">✍🏼 Autor: {proposer}</div>
-            <div className="orange-card2">🦸🦸‍♂️Responsable: <p>{personInCharge}</p></div>
-          </div>
-          <div className="proposal-main">
-              <div className="proposal-titles">⚙️Tipo de trabajo: {typeOfAction}</div>
-              <div className="yellow-card">📅 Fecha de la propuesta: <div>{proposalYear}/{proposalMonth}/{proposalDay}</div></div>
-            </div>
-          </Card.Body>
-            <div className="proposal-description"><div className="white2">📑 Descripción:</div><p>{description}</p></div>
-            <div className="white-cost">💸 Costo: {budget} pesos</div>
-
+        <div className="proposal-id">💡 Propuesta #{id} 
+      <div className="proposal-author">por {proposer}</div>
+    </div>
+    <div className="proposal-title">🎯{title}</div>
+    <div className="proposal-details">🔍 Detalles:</div>
+    <div className="proposal-container">
+      <div className="proposal-hero">🦸 Responsable de la actividad🦸‍♂️ <div className="table-text">{personInCharge}</div></div>
+      <div className="proposal-table">
+          <div className="proposal-action">⚙️ Tipo: <div className="table-text">{typeOfAction}</div></div>
+          <div className="proposal-location">📍 Dónde: <div className="table-text">{neighborhood}</div></div>
+          <div className="proposal-cost">💸 Costo: <div className="table-text">{budget} pesos</div></div>
+      </div>
+      
+      
+      <div className="proposal-description" >📑 Descripción: <div className="table-text">{description}</div></div>
+    </div>
+    
             {/*}
             <div className ="proposal-main">
               <div className="proposal-sub">Costo: {budget}</div>
@@ -195,7 +190,7 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
           </div>
           <p className="big-iconf">{forVotes}</p>
           </div>
-          <div className="proposal-action">
+          <div>
           <div className="proposal-against">
             ❌ Votos en contra:
           </div>
