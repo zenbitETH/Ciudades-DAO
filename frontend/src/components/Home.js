@@ -264,36 +264,37 @@ function Home() {
     <div>
       {isEnglish === 'english' ?
         <div className="App">
-          <Card.Text>Urban governance protocol for Querétaro City DAO</Card.Text>
+          <div className="cv">
+            <div className="headline">
+              <h1>Querétaro City DAO</h1>
+              <p className="headline-p">Urban governance protocol on ethereum blockchain
+              </p>
+              <Button className="aboutbutton" href="/about"> 📖 About VoTARO </Button>
+            </div>
+          </div>
           {isConnected ?
+          <Card className="unlocked">
+             <div className="title-un">Your TARO account</div>
           <div>
-          <Card className="orange-unlock">
-            <Card.Title className="purple-unlock">TARO balance</Card.Title>
-            <Card.Title className="big-icon">🥇</Card.Title>
-            <div>
-              <Card.Body>
-                <Card.Text className="text-large">{userBalance} TARO</Card.Text>
-                <Button className="TARO-button" href="/About"> Get TARO </Button>
-              </Card.Body>
+            <div className="main-table">
+              <div className="main-taroun">TARO Balance<div className="big-icon">🥇</div></div>
+              <div className="taro-balance">{userBalance} TARO</div>
             </div>
-          </Card>
-          <Card className="yellow-unlock">
-            <Card.Title className="purple-unlock">Urban governance</Card.Title>
-            <Card.Title className="big-icon">🗳️</Card.Title>
-            <div>
-              <Card.Body>
-                <Button className="TARO-button" href="/proposallist">🙋🏻‍♀️ Vote 🙋🏽‍♂️</Button>
-              </Card.Body>
+            <div className="main-table">
+              <div className="main-taroun">I know Querétaro <div className="big-icon">✔️</div></div>
+              <div className="main-button"><Button className="TARO-button" href="/Quiz">Verify account</Button></div>
             </div>
+            <div className="main-table">
+              <div className="main-taroun">Urban Governance <div className="big-icon">🗳️</div></div>
+              <div className="main-button"><Button  className="TARO-button" href="/proposallist"> Vote </Button></div>
+            </div>
+          </div>
           </Card>
-        </div>
         :
         <div>
-          <Card className="gray">
-            <Card.Title className="purple-unlock">TARO Balance</Card.Title>
-            <Card.Title className="big-icon">🥇</Card.Title>
-            <Card.Text className="text-large">Locked</Card.Text>
-            <div className="Wallet">
+          <Card className="locked">
+            <div className="title">Your TARO account</div>
+          <div className="Wallet">
               {!isMetamastInstalled ?
                   <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
                   <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
@@ -310,28 +311,21 @@ function Home() {
                     <SkaleButton handleOnConnect={listSkaleInMetamask}/>
               */}
             </div>
+            <div className="main-table">
+              <div className="main-taro">TARO Balance <div className="big-icon">🥇</div></div>
+              <div className="taro-balance">Locked</div>
+            </div>
+            <div className="main-table">
+              <div className="main-taro">I know Querétaro <div className="big-icon">✔️</div></div>
+              <div className="main-button"><Button disabled className="TARO-button" >Verify account</Button></div>
+            </div>
+            <div className="main-table">
+              <div className="main-taro">Urban Governance <div className="big-icon">🗳️</div></div>
+              <div className="main-button"><Button disabled className="TARO-button" >🙋🏻‍♀️ Vote 🙋🏽‍♂️</Button></div>
+            </div>
           </Card>
-          <Card className="gray">
-            <Card.Title className="purple-unlock">Urban governance</Card.Title>
-            <Card.Title className="big-icon">🗳️</Card.Title>
-            <Card.Text className="text-large">Locked</Card.Text>              
-              <div className="Wallet">
-              {!isMetamastInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
-              {/*isSkaleSwitched
-                ?
-                  ''
-                :
-                  isConnectingToSkale
-                  ?
-                    <SkaleSwitch />
-                  :
-                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-              */}
-              </div>
-          </Card>
+           
+        
         </div>
         }
       </div>

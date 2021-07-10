@@ -1,25 +1,331 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
-/* Cards and Holders */
-.App {
-  margin-top: 100px;
-  background-color: #ffffff;
-  font-family: 'Lexend Deca', sans-serif !important;
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(-45deg, #ffc16b, #FF9400, #3d386b, #3d386b);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.headline {
+  font-size: clamp(1em, -0.875rem + 8.333vw, 3rem);
+  font-weight: 300;
+  line-height: 111%;
+  color: #ffffff;
+  margin: 1.1em;
+  position: relative;
+}
+
+.headline-un {
+  font-size: clamp(1em, -0.875rem + 8.333vw, 3rem);
+  font-weight: 300;
+  line-height: 111%;
+  color: #211e40;
+  margin: 1.1em;
+
+}
+
+.headline-p {
+font-size: clamp(0.6em, -0.675em + 8.333vw, 1.5rem);
+line-height: 111%;
+margin-top: 0.5em;
+animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+h1 {
+  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 89%;
+}
+
+.cv {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative; 
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  background-color: #211e40;
+  border-radius: 25px;
+  
+}
+
+.cv::before {
+  border-radius: 25px;
+  content:'';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: url('../assets/bg.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 25%;
+}
+
+.aboutbutton {
+  border-radius: 25px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  color: #3d386b !important;
+  background-color: transparent !important;
+  border: 1px solid !important;
+  border-color: #ffffff !important;
+  padding: 1em;
+  max-width: 70%;
+  margin-left: 15%;
+  }
+  
+
+.aboutbutton:hover {
+  background-color: #FAC91A !important;
+  border: 1px solid !important;
+}
+
+.aboutbutton:active {
+  background-color: #3d386b !important;
+  color: #ffffff !important;
+  border: 1px solid !important;
+}
+
+.aboutbutton:focus {
+  box-shadow: none;
+  background-color: #3d386b !important;
+  color: #ffffff !important;
+  border: 1px solid !important;
+}
+
+.Wallet {
+  border-radius: 25px !important;
   text-align: center;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  color: #ffffff;
+}
+
+Button {
+  border-radius: 25px !important;
+  margin-bottom: 3%;
+  background-image: linear-gradient(to right, #d27c04, #FAC91A);
+    background-size: 150% 150%;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+  border: none !important;
+  color: #3d386b ;
+}
+
+Button:hover {
+  border-radius: 25px !important;
+  border: none !important;
+  color: #3d386b !important;
+  -webkit-animation: gradient 3s ease infinite;
+  -moz-animation: gradient 3s ease infinite;
+  animation: gradient 3s ease infinite;
+}
+
+Button:active {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+Button:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+Button:disabled {
+  border: none !important;
+  background-color: #5f5f5f !important;
+  color: #cac9c9 !important;
+}
+
+.spinner-grow {
+  height: 10px !important;
+  width: 10px !important;
+  vertical-align: baseline;
+}
+/* Cards and Holders */
+
+
+.App {
+  border-radius: 25px;
+  margin-top: 5em !important;
+  width:90%;
+  margin: 2em ;
+  font-family: 'Lexend Deca', sans-serif !important;
   color: #FF9400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.gray {
-  border-radius: 25px;
-  width:100%;
-  max-width: 40%;
-  min-width: 425px !important;
-  margin: 3% auto;
-  background-image: linear-gradient(#eee, rgb(204, 200, 200));
+.valert {
+  width: 100% !important;
+  background-image: linear-gradient(#dc3840, #e26c72);
   font-family: 'Lexend Deca', sans-serif;
   display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  color: #3d386b !important;
+  border-radius: 25px;
+}
+
+.locked {
+  background-image: linear-gradient(#211e40, #3d386b);
+  border-radius: 25px;
+  padding-bottom: 2em;
+  margin-top: 3em;
+  border: none;
+  display: block;
+}
+
+.title {
+  color: #FF9400 !important; 
+  font-size: 2rem !important;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+}
+
+.title-un {
+  color: #3d386b !important; 
+  font-size: 2rem !important;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+}
+
+.unlocked {
+  background-image: linear-gradient(#cf7800, #FAC91a);
+    border-radius: 25px;
+    border: none;
+    padding-bottom: 1em;
+    margin-top: 3em;
+  }
+
+.main-table {
+  width: 100%;
+  display: table;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #0000002e;
+
+}
+
+.main-taro {
+  width: 40%;
+  display: table-cell;
+  text-align: center;
+}
+
+.main-taroun {
+  width: 40%;
+  display: table-cell;
+  text-align: center;
+  color: #ffffff;
+}
+
+.taro-balance {
+  width: auto;
+  display: table-cell;
+  color: #ffffff;
+  font-size: 3em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.main-button {
+  padding-left: .5em !important;
+  padding-right: .5em !important;
+  display: table-cell;
+  color: #ffffff;
+  font-size: 3em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.taro {
+  font-size: 0.5em !important;
+  vertical-align: baseline;
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .App {
+    border-radius: 25px;
+    width:100%;
+    height: 100%;
+    display: flex;
+    padding-top:5em;
+    margin: 0em;
+    justify-content: center;
+  }
+  .cv {
+    width: 40%;
+    height: auto;
+    padding: none;
+    margin-bottom: none !important;
+    margin-right: 0.5em;
+    justify-content: center;
+  }
+
+  .unlocked {
+    display: flex;
+    margin-top: 0em;
+    width: 28% !important;
+    height: 100% !important;
+    margin-left: 0.5em;
+    justify-content: center;
+  }
+  
+  .locked {
+    display: flex;
+    margin-top: 0em;
+    width: 100% !important;
+    height: 100% !important;
+    margin-left: 0.5em;
+  }
+  .aboutbutton{
+    max-width: 50%;
+    margin-left: 25%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .TARO-button{
+    max-width: 70%;
+    margin-left: 25%;
+  }
+}
+
+.gray {
+  width:100%;
+  border: none;
+  background-color: transparent;
+  font-family: 'Lexend Deca', sans-serif;
   justify-content: center !important;
   align-content: center !important;
   align-items: center !important;
@@ -55,20 +361,6 @@
   text-align: left !important;
 }
 
-.valert {
-  border-radius: 25px;
-  width:100%;
-  max-width: 40%;
-  min-width: 425px !important;
-  margin: 1% auto;
-  background-image: linear-gradient(#dc3840, #e26c72);
-  font-family: 'Lexend Deca', sans-serif;
-  display: flex !important;
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
-  color: #3d386b !important;
-}
 
 .yellow-unlock {
   border-radius: 25px;
@@ -166,6 +458,7 @@ a.alt:hover {
   background-color: none !important;
   color: #FAC91A !important;}
 
+
 .alt {
   font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
@@ -191,35 +484,7 @@ a.alt:hover {
   background-color: #FF9400 !important;
 }
 
-.aboutbutton {
-  border-radius: 25px !important;
-  margin-bottom: 10%;
-  border: none !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
-  color: #3d386b !important;
-  background-color: #FF9400 !important;
-}
 
-.aboutbutton:hover {
-  background-color: #FAC91A !important;
-  border: none !important;
-}
-
-.aboutbutton:active {
-  background-color: #3d386b !important;
-  color: #ffffff !important;
-  border: none !important;
-}
-
-.aboutbutton:focus {
-  box-shadow: none;
-  background-color: #3d386b !important;
-  color: #ffffff !important;
-  border: none !important;
-}
 
 .aboutlink {
   color: #FF9400 !important;
@@ -236,25 +501,19 @@ a.alt:hover {
 }
 
 .TARO-button {
- 
   border-radius: 25px !important;
   background-color: #3d386b;
   width: 100% !important;
-  display: flex !important;
+  padding: 1em;
   justify-content: center !important;
   align-content: center !important;
   align-items: center !important;
+  max-width: 75%;
+  margin-left: 25%;
 }
 
 .TARO-button:hover {
-  
-  border-radius: 25px !important;
   background-color: #FAC91a;
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
 }
 
 .TARO-button:active {
@@ -280,51 +539,10 @@ a.alt:hover {
   border: none !important;
 }
 
-.Wallet {
-  border-radius: 25px !important;
-  margin-top: 3%;
-  margin-bottom: 3%;
-}
 
-button:disabled {
-  background-color: #5f5f5f !important;
-  color: #cac9c9 !important;
-}
 
-Button {
-  border-radius: 25px !important;
-  margin-bottom: 3%;
-  background-color: #FF9400 !important;
-  border: none !important;
-  color: #ffffff ;
-}
 
-Button:hover {
-  border-radius: 25px !important;
-  background-color: #FAC91A !important;
-  border: none !important;
-  color: #3d386b !important;
-}
 
-Button:active {
-  box-shadow: none !important;
-  border: none !important;
-}
-
-Button:focus {
-  box-shadow: none !important;
-  border: none !important;
-}
-
-Button:disabled {
-  border: none !important;
-}
-
-.spinner-grow {
-  height: 10px !important;
-  width: 10px !important;
-  vertical-align: baseline;
-}
 
 
 /* Header */
@@ -335,8 +553,7 @@ Button:disabled {
 }
 
 Nav {
-  margin-bottom: 25px !important;
-  background-image: linear-gradient(#3d386b, #716ba3);
+  margin-bottom: 3em !important;
   position: fixed !important;
   font-family: 'Lexend Deca', sans-serif;
   color: #FF9400;
@@ -475,11 +692,7 @@ option {
   color: #3d386b !important;
 }
 
-.title {
-  color: #3d386b;
-  font-size: 2rem !important;
-  ;
-}
+
 
 .title2 {
   width: 100%;
@@ -542,15 +755,14 @@ option {
 }
 
 .purple-unlock {
-  margin-top: 3% !important;
-  margin-bottom: 3% !important;
+  margin-left: 1.5em !important;
   font-size: 18px !important;
-  color: #3d386b !important;
+  text-align: left;
+  color: #ffffff !important;
 }
 
 .big-icon {
   font-size: 75px !important;
-  text-align: center !important;
   color: #ffffff;
 }
 
