@@ -43,7 +43,10 @@ module.exports = {
     },
     ropsten: {
       url: "https://ropsten.infura.io/v3/faefe1dcd6094fb388019173d2328d8f",
-      accounts: [`0x${process.env.PRIVATE_KEY}`]
+      //accounts: [`0x${process.env.PRIVATE_KEY}`]
+      accounts: {
+        mnemonic: mnemonic(),
+      },
     },
     kovan: {
       url: "https://kovan.infura.io/v3/faefe1dcd6094fb388019173d2328d8f",
