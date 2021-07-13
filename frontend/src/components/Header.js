@@ -2,7 +2,7 @@ import { useContext} from 'react'
 import {NavLink} from 'react-router-dom'
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import { LanguageContext } from '../contexts/LanguageContext';
-import logo from '../assets/Logo.svg';
+import logo from '../assets/Logow.png';
 
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
 
         <div >
           <Navbar collapseOnSelect fixed="top" expand="sm">
-            <Navbar.Brand href="/Home"><img src={logo} alt="VoTARO" width="150px" />
+            <Navbar.Brand href="/Home"><img src={logo} alt="VoTARO" width="200px" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">

@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import {Button} from 'react-bootstrap';
-import logo from '../assets/Logo.svg';
+import logo from '../assets/Logow.png';
+import bg1 from '../assets/bg1.png'
+import bg2 from '../assets/bg2.svg'
 import { LanguageContext } from '../contexts/LanguageContext';
 import ReactPlayer from "react-player";
 
@@ -8,49 +10,157 @@ const About = () => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-  <div className="App">
+  <div>
   {isEnglish === 'english' ?
-    <div>
-    <div className="about">
-      <div className="text-large">🤔 What's <img src={logo} alt="VoTARO" width="250px" />?</div>
-      <div className="main">A voting DApp that rewards users with $TARO when the propose or vote on cities' public needs.</div>
-        <div className="text-medium-left">
-            <div className="purple">✋ Propose</div>
-            <div className="purple">🗳️ Vote</div>
-            <div className="purple">🥇 Get $TARO</div>
-        </div>
-      <div className="main">
-        <p>VoTaro is an Ethereum application that uses a reward system to encourage residents of Querétaro City to propose and participate
-           in activities that will improve their community. It was developed on the <a className="alt" href="https://showcase.ethglobal.co/scaling/cities-protocol">Scaling Ethereum Hackathon 2021.</a></p>
-        <div><ReactPlayer width="100%"  url="https://www.youtube.com/embed/6xgTw1FEuIA"/></div>
-        <p>The citizens of Querétaro who use VoTARO to propose, vote and solve the needs of their neighborhood in Querétaro City, will be rewarded with
-         <a className="alt" href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> $TARO, an ERC20 token </a>
-          which gives users voting power on these proposals and will work as an instrument to fund the costs necessary to solve them.</p>
-        <p>Proposals are registered and managed in an automated way by the smart contract
-        <a className="alt" href="https://github.com/onionpeel/cities_protocol/blob/main/contracts/GovernorAlpha.sol"> Governor Alpha </a>
-         a version of <a className="alt" href="https://compound.finance/docs/governance?ref=github&user=ajb413&repo=compound-governance-examples"> Compound's contract </a>
-         adapted to real-world interactions.</p>
-        <p>VoTARO implements <a className="alt" href="https://skale.network/">SKALE Network,</a> an ethereum layer 2 solution that reduces gas charges to 0 and increases the speed of transactions without compromising security.</p>
+  <div>
+    <div class="App">
+      <div class="about-ct">
+        <div class="about-txbl">
+          <div class="about-hlbl">About </div>  
+          <img src={logo} alt="VoTARO" class="logo"/> 
+          <div className="about-tx">Is a voting DApp that rewards users with $TARO when they propose or vote on cities' public needs. It was developed on the Scaling Ethereum Hackathon 2021.</div>
+        </div>  
+        <img src={bg1} alt="VoTARO" class="bg1"/> 
       </div>
-      <div className="orange">🎯 Objective</div>
-      <div className="main">
-      Transform Querétaro City into a Decentralized Autonomous Organization that exists in an automated way on the internet but that relies heavily on human talent to carry out urban or virtual tasks that the smart contracts cannot complete by itself.
+      <div class="about-ct">
+        <div class="about-hlbl">Let's start!</div>  
+        <div class="about-txbl">Depending on your experience using blockchain or ethereum tools, choose if you want to know the basics and what you need to use VoTARO
+        or jump directly to the advanced path to know the dapp details.</div>
+        <div class="about-us">
+          <a href="#new" class="us-new"><div class="shake">🥚</div>New user <span class="ustext">I don't have a Metamask wallet</span></a>
+          <a href="#mod" class="us-mod"><div class="shake">🐣</div>Casual user<span class="ustext">I'm ready for VoTARO</span></a>
+          <a href="#exp" class="us-exp"><div class="shake">🐓</div>Advanced user<span class="ustext">Show me the contract!</span></a>
+        </div>   
+      </div>
+    </div>
+    <div class="App">
+        <div class="about-ct1">
+          <div class="about-hl"><a id="new" class="big-icon">🥚</a><br/>New user</div>
+          <div class="ct1-text">
+            Bienvenid@ a VoTARO, seguro tienes muchas dudas sobre el impacto que tiene blockchain en nuestras vidas y te resulta dificil identificar
+            la utilidad de <span class="orange">digitalizar la gobernanza de una ciudad en un registro público, transparente, seguro e inmutable.</span>
+            <br/><br/>
+              Para resolver todas esas dudas, primero viajaremos en el tiempo y entenderemos porque la <span class="orange">Web 3.0 es un esfuerzo global para resolver
+              las problemáticas actuales del internet.</span> 
+            <div class="center"><img src={bg2} alt="Web2 problems" class="web2p"/></div>
+              <br/>
+            Como su nombre lo indica, la Web 3.0 es la tercera versión del internet y se concentra en empoderar a los usuarios a través de la criptografía y la verificación del valor;
+            a diferencia de la <span class="yellow">Web 2.0 que depende de la centralización de servicios</span> donde los beneficios de estas empresas sobre la recopilación de datos de usuarios ha justificado la continuidad de sus fallas. La centralización de nuestros datos y el delegarle la responsabilidad de su uso a un intermediario genera estos problemas:
+          <div class="new-list">
+            <li>Punto singular de falla.</li>
+            <li>Costos por intermediarios "de confianza".</li>
+            <li>Vulnerabilidades de seguridad cibernética.</li>
+            <li>Robo de datos personales.</li>
+            <li>Robo de fondos bancarios.</li>
+          </div>
+         </div>
+        <div class="timeline">
+      <div class="timetl">
+        <h3>Evolución del Internet</h3>
+        <label> de 1989 a 2020</label>
+      </div>
+      <div>
+        <div class="container">
+          <div class="lines">
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="cards">
+            <div class="web1">
+              <h4 class="">Web 1.0 🔗<div class="timesub"> 1989 - 1998</div></h4>
+              <li class="timetx">Basada en hipervínculos HTML</li>
+              <li class="timetx">Redes Fijas y Unilaterales</li>
+              <li class="timetx">Alcance limitado</li>
+            </div>
+            <div class="web2">
+              <h4 class="">Web 2.0 🌎<div class="timesub"> 1998 - actualidad</div></h4>
+              <li class="timetx">Basada en redes sociales y contenido</li>
+              <li class="timetx">Redes centralizadas para crear y consumir</li>
+              <li class="timetx">Alcance global</li>
+            </div>
+            <div class="web3">
+              <h4 class="">Web 3.0 ☀️<div class="timesub"> 2010 - actualidad</div></h4>
+              <li class="timetx">Basada en contextos y consenso</li>
+              <li class="timetx">Redes descentralizadas para verificar y presevar</li>
+              <li class="timetx">Alcance interplanetario</li>
+            </div>
+            <div class="web4">
+              <h4>? 🌌<div class="timesub">20XX - ? </div></h4>
+              <li class="timetx">Basada en tiempo y espacio</li>
+              <li class="timetx">Redes cuánticas</li>
+              <li class="timetx">Infraestructura con alcance desconocido</li>
+            </div>
+          </div>
         </div>
-      <div className="orange">🧰 What do I need to get $ TARO?</div>
-      <div className="main">You need to do 3 activities to get TARO.</div>
-       <div className="text-medium-left">
-          <div className="aboutB">1. 🦊 Download Metamask</div>
-          {/*<div className="aboutC" >2. 🧅 Switch to Skale Network</div>*/}
-          <div className="aboutB">2. ✔️ Get Validated</div>
-          <div className="aboutB" >3. 🗳️ Create and Vote on proposals </div>
+        <div class="timetl">
+          <div>Toca las caracteristicas para conocer las diferencias entre:</div>
         </div>
+        <div class="webvs">
+          <div class="yellow">Web 2.0</div>
+          <div class="orange">Web 3.0</div>
+          <div class="web2vs">
+            <div class="vs">🤴 Centralizado</div>
+            <div class="vs">👁️ Invasivo</div>
+            <div class="vs">🔒 Restrictivo</div>
+            <div class="vs">🚫 Censurable</div>
+            <div class="vs">📊 Mercado limitado</div>
+            <div class="vs">👎 Navegas con tus datos</div>
+          </div>
+          <div class="web3vs">
+            <div class="vs">🌐 Descentralizado</div>
+            <div class="vs">🙅‍♀️ No invasivos</div>
+            <div class="vs">🔓 Sin restricciones</div>
+            <div class="vs">⛰️ Incensurable</div>
+            <div class="vs">🚀 Sin fronteras</div>
+            <div class="vs">👍 Navegas con una wallet</div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <div class="aboutwr">
+          <div class="big-icon">⚠️</div>
+          <h3>Atención</h3>
+          <div class="ct1-text"><span class="yellow">VoTARO es una aplicación de la Web 3.0</span>, por lo tanto <span class="orange">necesitas una wallet descentralizada</span> para interactuar. 
+          <br/><br/>
+          Para obtenerla no necesitas dar tus datos personales, solo necesitas <span class="yellow">guardar muy bien la llave privada de tu cuenta</span>, pues <span class="red">solo tu la conocerás y 
+          es la única forma de recuperar tu cuenta</span> o usarla en un dispositivo diferente.
+          </div>
+          <Button class="" > <a href="https://metamask.io">🦊 Descargar Cartera</a></Button>          
+        </div>    
+
+        </div>
+        <div class="about-ct2">
+          <div class="about-hlbl"><a id="mod" class="big-icon">🐣</a><br/>Casual User</div>
+          <div className="text-medium-left">
+            <div className="purple">✋ Propón</div>
+            <div className="purple">🗳️ Vota</div>
+            <div className="purple">🥇 Obtén $TARO</div>
+          </div>    
+        </div>
+        <div class="about-ct3">
+          <div class="about-hlbl"><a id="exp" class="big-icon">🐓</a><br/>Advanced User</div>
+          <div className="text-medium-left">
+            <div className="purple">Ropsten contract</div>
+            <div className="purple">Tokenomics</div>
+            <div className="purple">Github </div>
+          </div>    
+        </div>
+      </div>
+      
+    </div>
+  :
+  <div>
+  <div class="about-tx">There are basic concepts you should know to
+      discover why VoTARO is needed to empower Queretaro citizens and how it can create value to our city.</div>
+
       <div className="main">
       <div className="aboutCo">1. 🦊 Download Wallet</div>
-      <p> VoTARO uses web 3.0 tools so that people can interact with smart contracts
-          and algorithms safely, giving them complete control over their TARO tokens. </p>
-       <p> An ethereum web 3.0 wallet such as Metamask, will allow you to use VoTARO contracts and obtain TARO by proposing the needs of your neighborhood.
-         If you don't have a Metamask Wallet yet, you can download it from this button </p>
-        <div className ="submitbutton"><Button className="aboutbutton" href="https://metamask.io" > 🦊 Download Cartera</Button></div>
+     
 
       {/*<div className="aboutCo">2. 🧅 Switch to SKALE network</div>
        <p>
@@ -86,10 +196,9 @@ const About = () => {
          <div className = "aboutC"> 🧬 Predictive Economy and Urban Development. </div>
       </div>
       <div className ="submitbutton"><Button className="alt2" href="/" > 🏠 Return to Home</Button></div>
-    </div>
-  </div>
-    :
-  <div>
+
+
+
     <div className="about">
       <div className="text-large">🤔 ¿Qué es <img src={logo} alt="VoTARO" width="250px" />?</div>
       <div className="main">Una Aplicación Descentralizada que recompenza con $TARO por proponer, votar y resolver necesidades públicas.</div>
