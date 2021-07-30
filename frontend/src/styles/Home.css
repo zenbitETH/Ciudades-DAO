@@ -1,6 +1,7 @@
 /* General */
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -10,6 +11,28 @@ body {
 	background: linear-gradient(-45deg, #ffc16b, #FF9400, #3d386b, #3d386b);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
+}
+
+
+.rewards {
+  background-color: #9b989f53 ;
+  border-radius: 25px;
+  color: #3d386b;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+
+.reward1 {
+  background: linear-gradient(-15deg, #00adbe, #00adbe,#5b5a5f, #5b5a5f);
+  background-size: 400% 400%;
+	animation: gradient 1s ease-in-out infinite;
+  color: #ffffff;
+  padding-top:4em;
+  width: 10em;
+  height: 10em;
+  border-radius: 100%;
+  text-align: center;
+  margin: auto;
 }
 
 @keyframes gradient {
@@ -35,9 +58,36 @@ body {
   color: #fb4c38;
 }
 
+.gray {
+  color: #5b5a5f;
+}
+
+.gray2 {
+  color: #9b989f;
+}
+
+.subt {
+  text-align: justify !important;
+  color: #FF9400;
+  
+}
+
 .center {
   text-align: center;
+  align-items: center;
 }
+
+.justify {
+  text-align: justify;
+}
+
+.nexus {
+  color: #00adbe;
+}
+
+.oneem {
+  font-size: 0.5em !important;
+  }
 /* Home */
 
 .headline {
@@ -69,6 +119,13 @@ h1 {
   font-weight: 800;
   text-transform: uppercase;
   line-height: 89%;
+}
+
+.timeyr {
+  padding: 1em;
+  margin-bottom: 1em;
+  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 4rem);
+  line-height: 110%;
 }
 
 .cv {
@@ -197,7 +254,7 @@ h1 {
   position: relative; 
   margin: 1em auto;
   padding: 2em;
-  background-image: linear-gradient(#ffffff99, #ffffff94);
+  background-image: linear-gradient(#0d0b20, #564bb5);
   color: #ffffff;
   text-align: center;
 }
@@ -208,7 +265,7 @@ h1 {
   position: relative; 
   margin: 3% auto;
   padding: 1em;
-  background-image: linear-gradient(#0d0b20, #564bb5);
+  background-image: linear-gradient(#FAC91a,#fcd95c);
   color: #ffffff;
   text-align: center;
 }
@@ -219,7 +276,7 @@ h1 {
   position: relative; 
   margin: 3% auto;
   padding: 1em;
-  background-image: linear-gradient(#FAC91a,#fcd95c);
+
   color: #ffffff;
   text-align: center;
 }
@@ -245,14 +302,15 @@ h1 {
 }
 
  .about-hl {
-  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 4rem);
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 0.25em;
+  text-align: center;
  }
 
  .about-hlbl {
-  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 4rem);
   font-weight: 800;
   color: #3d386b;
   margin-bottom: 0.25em;
@@ -266,51 +324,58 @@ h1 {
 
 .ct1-text {
   text-align: justify;
-  padding: 1em;
+  font-family: 'Josefin Sans';
+  font-size: 1.1em;
 }
- .bg1 {
-   width: 80%;
+ .walletct {
+   margin-top: 1em;
+   width: 60%;
    height: auto;
+   border-radius: 10px;
  }
 
  .about-tx {
+   font-family: 'Josefin Sans';
    text-align: justify;
-   font-size: clamp(1em, -0.85rem + 6.333vw, 1.5rem);
+   font-size: clamp(1.2em, -0.85rem + 6.333vw, 1.5rem);
  }
 
  .about-txbl {
+  font-weight: 500;
+  font-family: 'Josefin Sans';
   text-align: justify;
   color: #3d386b;
-  font-size: clamp(1em, -0.85rem + 6.333vw, 1.5rem);
-  
-}
+  font-size: clamp(1.2em, -0.85rem + 6.333vw, 1.5rem);
 
+}
  .about-us {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 1em;
-    color: #3d386b !important;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 1em;
+  color: #3d386b !important;
+  text-align: start;
 }
 
 .us-new {
   position: relative;
   display: inline-block;
-  color: #3d386b !important;
+  font-size: 1.2em;
+  width: 100%;
 }
 
 .us-new .ustext {
   visibility: hidden;
   width: auto;
   bottom: 100%;
-  left: 50%;
-  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  left: 0%;
+  font-family: 'Josefin Sans';
   background-color: white;
   color: #211e40 !important;
   text-align: center;
   border-radius: 20px;
   padding: 5px;
   margin-bottom: 0.3em;
-  font-size: 0.8em;
+  font-size: 0.9em;
   position: absolute;
   z-index: 1;
 }
@@ -330,30 +395,30 @@ h1 {
 }
 
 .us-new:hover {
-  background-image: linear-gradient(#0d0b20, #564bb5);
+  background-image: radial-gradient(#6655ff00, #564bb5);
   border-radius: 20px;
-  color: #ffffff !important;
+  color: #FF9400 !important;
 }
 
 .us-mod {
   position: relative;
   display: inline-block;
-  color: #3d386b !important;
+  font-size: 1.2em;
 }
 
 .us-mod .ustext {
   visibility: hidden;
+  font-family: 'Josefin Sans';
   width: auto;
   bottom: 100%;
-  left: 50%;
-  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  left: 0%;
   background-color: white;
   color: #211e40;
   text-align: center;
   border-radius: 20px;
   padding: 5px;
   margin-bottom: 0.3em;
-  font-size: 0.8em;
+  font-size: 0.9em;
   position: absolute;
   z-index: 1;
 }
@@ -373,31 +438,30 @@ h1 {
 }
 
 .us-mod:hover {
-  background-image: linear-gradient(#FAC91a,#fcd95c);
+  background-image: radial-gradient(#FAC91a,#fcd95c);
   border-radius: 20px;
-  color: #ffffff !important;
-}
-
-
-.us-exp {
-  position: relative;
-  display: inline-block;
   color: #3d386b !important;
 }
 
+.us-exp {
+  font-size: 1.2em;
+  position: relative;
+  display: inline-block;
+}
+
 .us-exp .ustext {
+  font-family: 'Josefin Sans';
   visibility: hidden;
   width: auto;
   bottom: 100%;
-  left: 50%;
-  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  left: 0%;
   background-color: white;
   color: #211e40;
   text-align: center;
   border-radius: 20px;
   padding: 5px;
   margin-bottom: 0.3em;
-  font-size: 0.8em;
+  font-size: 0.9em;
   position: absolute;
   z-index: 1;
 }
@@ -412,18 +476,19 @@ h1 {
   border-style: solid;
   border-color: rgb(255, 255, 255) transparent transparent transparent;
 }
+
 .us-exp:hover .ustext {
   visibility: visible;
 }
 
 .us-exp:hover {
-  background-image: linear-gradient(#FF9400 , #febf66);
+  background-image: radial-gradient(#FF9400 , #febf66);
   border-radius: 20px;
-  color: #ffffff !important;
+  color: #3d386b !important;
 }
 
 .shake {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .shake:hover {
@@ -458,7 +523,6 @@ h1 {
 }
 
 .timetl {
-  padding: 1em;
   font-size: 1.5em;
 }
 
@@ -489,6 +553,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 1.2em;
+  margin-top: 1em;
 }
 
 .web2vs {
@@ -505,11 +570,49 @@ label {
   color: #FF9400;
 }
 
+
 .vs {
-  padding: 1em 2em;
+  position: relative;
+  padding: 1em 1em;
   vertical-align: middle;
   text-align: left;
-  font-size: 0.8em;
+  font-size: 0.7em;
+  }
+
+  .vs .ustext {
+    visibility: hidden;
+    width: auto;
+    bottom: 100%;
+    left: 0%;
+    background-color: white;
+    color: #211e40;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 0.3em;
+    font-size: 1.2em;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .vs .ustext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  
+  .vs:hover .ustext {
+    visibility: visible;
+  }
+  
+  .vs:hover {
+    background-image: radial-gradient(#33115d12 , #ffffff24);
+    color: #3d386b !important;
   }
 
 .container {
@@ -541,6 +644,8 @@ label {
 }
 
 
+
+
 /* Animations */
 
 @keyframes shake {
@@ -566,12 +671,6 @@ label {
   }
 }
 
-.logo:hover {
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: jump;
-  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-}
 
 .jump:hover{
   animation-duration: 2s;
@@ -629,6 +728,7 @@ label {
   border: 1px solid !important;
 }
 
+
 .Wallet {
   border-radius: 20px ;
   text-align: center;
@@ -641,7 +741,7 @@ label {
 Button {
   border-radius: 20px !important;
   margin-bottom: 3%;
-  background-image: linear-gradient(to right, #d27c04, #FAC91A);
+  background-image: linear-gradient(to right, #FF9400, #d27c04);
   background-size: 150% 150%;
   border-radius: 20px;
   transition: all 0.4s ease;
@@ -653,8 +753,7 @@ Button:hover {
   border-radius: 20px !important;
   border: none !important;
   color: #3d386b !important;
-  
-  background-image: linear-gradient(to left, #d27c04, #FAC91A);
+  background-image: linear-gradient(to left, #c9a111, #FAC91a);
 }
 
 Button:active {
@@ -702,7 +801,6 @@ Button:visited {
 color: #211e40;
 }
 
-
 .TARO-button:hover {
 background-color: #211e40 !important;
 }
@@ -727,21 +825,30 @@ display: flex !important;
 justify-content: center !important;
 align-content: center !important;
 align-items: center !important;
-border: none !important;}
-
-
-
-
-a:link {color: #ffffff;
-        border: none;}
-a:active{
-box-shadow: none !important;
-color: #FAC91A!important;
+border: none !important;
 }
-a:visited {color: #211e40}
+
+a.alt {
+  color: #5b5a5f !important;
+  font-size: 1em;
+}
+
+a.alt:hover{
+  color: #ffffff !important;
+  font-size: 1em;
+}
+
+a:link {
+  color: #ffffff;
+  border: none;
+}
+a:active{
+color: #211e40;
+}
+a:visited {color: #ffffff}
 a:hover {
 text-decoration: none;
-color: #ffffff;
+color: #FAC91A;
 }
 
 /* Alerts */
@@ -804,10 +911,8 @@ color: #ffffff;
   }
   
 }
-  
 
 /* Scaling Hack version */
-
 .gray {
   width:100%;
   border: none;
@@ -837,8 +942,6 @@ color: #ffffff;
 .gray2 {
   border-radius: 20px;
   width:100%;
-
-  
   margin: 3% auto;
   background-image: linear-gradient(#3d386b, #554c9c);
   justify-content: center !important;
@@ -852,8 +955,6 @@ color: #ffffff;
 .yellow-unlock {
   border-radius: 20px;
   width:100%;
-
-  
   margin: 3% auto;
   background-image: linear-gradient(#FAC91A, #fde17c);
   font-family: 'Lexend Deca', sans-serif;
@@ -869,8 +970,6 @@ color: #ffffff;
 .yellowB {
   border-radius: 20px;
   width:100%;
-
-  
   margin: auto;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -884,8 +983,6 @@ color: #ffffff;
 .past {
   border-radius: 20px;
   width:100%;
-
-  
   margin: auto;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -899,8 +996,6 @@ color: #ffffff;
 .orangeB {
   border-radius: 20px;
   width:100%;
-
-  
   margin: auto;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -1089,8 +1184,6 @@ option {
 .floating {
   border-radius: 20px;
   width:100%;
-
-  
   margin: 3% auto;
   font-family: 'Lexend Deca', sans-serif;
   display: flex !important;
@@ -1291,9 +1384,6 @@ option {
   border-radius: 20px;
   background-color: #00000048;
 }
-
-
-
 
 
 .proposal-details {

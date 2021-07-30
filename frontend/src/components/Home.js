@@ -293,7 +293,7 @@ function Home() {
         :
         <div>
           <Card className="locked">
-            <div className="title">Your TARO account</div>
+            <div className="title">Tu cuenta TARO</div>
           <div className="Wallet">
               {!isMetamastInstalled ?
                   <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
@@ -312,7 +312,7 @@ function Home() {
               */}
             </div>
             <div className="main-table">
-              <div className="main-taro">TARO Balance <div className="big-icon">🥇</div></div>
+              <div className="main-taro">Balance de TARO <div className="big-icon">🥇</div></div>
               <div className="taro-balance">Locked</div>
             </div>
             <div className="main-table">
