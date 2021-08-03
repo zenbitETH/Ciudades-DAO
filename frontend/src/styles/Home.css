@@ -8,10 +8,11 @@
 }
 
 body {
-	background: linear-gradient(-45deg, #ffc16b, #FF9400, #3d386b, #3d386b);
+	background: linear-gradient(-45deg, #2b284a, #2b284a, #764808, #2b284a);
 	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	animation: gradient 5s ease infinite;
 }
+
 
 
 .rewards {
@@ -47,6 +48,10 @@ body {
 	}
 }
 
+.purple {
+  color: #3d386b;
+}
+
 .orange {
   color: #FF9400;
 }
@@ -54,6 +59,7 @@ body {
 .yellow {
   color: #FAC91a !important;
 }
+
 .red {
   color: #fb4c38;
 }
@@ -69,12 +75,12 @@ body {
 .subt {
   text-align: justify !important;
   color: #FF9400;
-  
 }
 
 .center {
-  text-align: center;
+  text-align: center ;
   align-items: center;
+  justify-content: center;
 }
 
 .justify {
@@ -88,37 +94,56 @@ body {
 .oneem {
   font-size: 0.5em !important;
   }
+
 /* Home */
 
 .headline {
-  font-size: clamp(1em, -0.875rem + 8.333vw, 3rem);
   font-weight: 300;
-  line-height: 111%;
+  line-height: 150%;
   color: #ffffff;
-  margin: 1.1em;
+  margin: 1em;
   position: relative;
 }
 
-.headline-un {
-  font-size: clamp(1em, -0.875rem + 8.333vw, 3rem);
-  font-weight: 300;
-  line-height: 111%;
-  color: #211e40;
-  margin: 1.1em;
-
-}
-
 .headline-p {
-font-size: clamp(0.6em, -0.675em + 8.333vw, 1.5rem);
+font-size: clamp(1em, -0.975rem + 6.5vw, 1.6rem);
 line-height: 111%;
 margin-top: 0.5em;
+font-weight: 500;
+font-family: "Josefin Sans";
+color: #FF9400;
+}
+
+.main-grid {
+font-size: clamp(.9em, -0.975rem + 6.5vw, 1.6rem);
+text-align: center;
+display: grid;
+grid-template-columns: 1fr ;
+padding: 1em;
+row-gap: 1em;
+height: max-content;
+}
+
+.account-bg {
+  padding: 1em;
+  background-color: #00000068;
+  border-radius: 25px;
+  height: 100%;
+}
+
+.account-bgu {
+  color: #3d386b;
+  padding: 1em;
+  background-color: #ffffffac;
+  border-radius: 25px;
+  height: 100%;
 }
 
 h1 {
-  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
+  font-size: clamp(2.77em, -0.875rem + 8.333vw, 5.18rem);
   font-weight: 800;
-  text-transform: uppercase;
-  line-height: 89%;
+  line-height: 115%;
+  text-align: center;
 }
 
 .timeyr {
@@ -131,18 +156,28 @@ h1 {
 .cv {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 50vh;
   position: relative; 
   align-items: center;
   justify-content: center;
-  padding: 1em;
-  background-color: #211e40;
   border-radius: 20px;
-  
 }
 
-.cv::before {
+.App {
+  background: linear-gradient(-45deg, #2b284a, #2b284a, #764808, #2b284a);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
   border-radius: 20px;
+  margin-top: 8em;
+  width: 100%;
+  height: fit-content;
+  font-family: 'Lexend Deca', sans-serif !important;
+  color: #FF9400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App::before {
   content:'';
   position: absolute;
   top: 0px;
@@ -153,34 +188,22 @@ h1 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  opacity: 25%;
+  opacity: 15%;
 }
 
-.App {
-  border-radius: 20px;
-  margin-top: 5em !important;
-  width:100%;
-
-  font-family: 'Lexend Deca', sans-serif !important;
-  color: #FF9400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 .locked {
-  background-image: linear-gradient(#211e40, #3d386b);
+  background-color: transparent;
   border-radius: 20px;
-  padding-bottom: 2em;
-  margin-top: 3em;
+  margin-top: 5em;
   border: none;
-  display: block;
 }
 
 .title {
-  color: #FF9400 !important; 
+  color: #ffffff !important; 
   font-size: 2rem !important;
   text-align: center;
   vertical-align: middle;
-  padding: 0.5em;
+  font-family: "Josefin Sans";
 }
 
 .title-un {
@@ -192,52 +215,31 @@ h1 {
 }
 
 .unlocked {
-  background-image: linear-gradient(#cf7800, #FAC91a);
-    border-radius: 20px;
-    border: none;
-    padding-bottom: 1em;
-    margin-top: 3em;
+  background-color: transparent;
+  border-radius: 20px;
+  margin-top: 4em;
+  border: none;
   }
-
-.main-table {
-  width: 100%;
-  display: table;
-  margin-bottom: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  background-color: #0000002e;
-
-}
-
-.main-taro {
-  width: 40%;
-  display: table-cell;
-  text-align: center;
-}
-
-.main-taroun {
-  width: 40%;
-  display: table-cell;
-  text-align: center;
-  color: #ffffff;
-}
 
 .taro-balance {
   width: auto;
-  display: table-cell;
-  color: #ffffff;
-  font-size: 3em;
-  vertical-align: middle;
+  color: #2b284a;
+  font-size: 2em;
   text-align: center;
+  vertical-align: bottom;
+}
+
+.taro-locked {
+  width: auto;
+  color: #ffffff;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: bottom;
 }
 
 .main-button {
-  padding-left: .5em !important;
-  padding-right: .5em !important;
-  display: table-cell;
   color: #ffffff;
   font-size: 3em;
-  vertical-align: middle;
   text-align: center;
 }
 
@@ -251,10 +253,10 @@ h1 {
 .about-ct {
   border-radius: 20px;
   width:100%;
+  height: 150%;
   position: relative; 
   margin: 1em auto;
   padding: 2em;
-  background-image: linear-gradient(#0d0b20, #564bb5);
   color: #ffffff;
   text-align: center;
 }
@@ -488,7 +490,8 @@ h1 {
 }
 
 .shake {
-  font-size: 2em;
+  font-size: 3em;
+  margin: 0.5em;
 }
 
 .shake:hover {
@@ -570,7 +573,6 @@ label {
   color: #FF9400;
 }
 
-
 .vs {
   position: relative;
   padding: 1em 1em;
@@ -643,9 +645,6 @@ label {
   text-align: left;
 }
 
-
-
-
 /* Animations */
 
 @keyframes shake {
@@ -692,18 +691,13 @@ label {
 /* Buttons */
 
 .aboutbutton {
-  border-radius: 20px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
-  color: #3d386b !important;
-  background-color: transparent !important;
+  font-size: clamp(1em, -0.975rem + 6.5vw, 1.3rem);
+  border-radius: 25px;
+  justify-content: center;
+  background-color: transparent;
   border: 1px solid !important;
-  border-color: #ffffff !important;
-  padding: 1em;
-  max-width: 70%;
-  margin-left: 15%;
+  border-color: #ffffff !important; 
+  margin: 0.5em;
   }
 
 .aboutbutton:hover {
@@ -712,11 +706,11 @@ label {
   color: #3d386b !important;
 }
 .aboutbutton:visited {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .aboutbutton:active {
-  background-color: #3d386b !important;
+  background-color: #3d386b ;
   color: #3d386b !important;
   border: 1px solid !important;
 }
@@ -728,29 +722,23 @@ label {
   border: 1px solid !important;
 }
 
-
 .Wallet {
-  border-radius: 20px ;
-  text-align: center;
-  justify-content: center ;
-  align-content: center ;
-  align-items: center ;
-  color: #ffffff;
+  font-size: clamp (1em, -0.975rem + 6.5vw, 2.5rem);
 }
 
 Button {
-  border-radius: 20px !important;
-  margin-bottom: 3%;
-  background-image: linear-gradient(to right, #FF9400, #d27c04);
-  background-size: 150% 150%;
-  border-radius: 20px;
+  font-size: 1em !important;
+  border-radius: 25px !important;
+  background-image: linear-gradient(to right, #FF9400, #d27c04) !important;
+  background-size: 400% 400%;
+  border-radius: 25px;
   transition: all 0.4s ease;
   border: none !important;
-  color: #3d386b ;
+  color: #3d386b ; 
 }
 
 Button:hover {
-  border-radius: 20px !important;
+  border-radius: 25px !important;
   border: none !important;
   color: #3d386b !important;
   background-image: linear-gradient(to left, #c9a111, #FAC91a);
@@ -783,81 +771,37 @@ Button:visited {
   vertical-align: baseline;
 }
 
-.TARO-button {
-  max-width: 70%;
-  margin-left: 25%;
-  background-image: linear-gradient(to right, #d27c04, #de9631) !important;
-  background-size: 150% 150%;
-  border-radius: 20px;
-  transition: all 0.4s ease;
-  border: none !important;
-  color: #211e40 !important;
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
-}
-
-.TARO-button:visited {
-color: #211e40;
-}
-
-.TARO-button:hover {
-background-color: #211e40 !important;
-}
-
-.TARO-button:active {
-box-shadow: none !important;
-border-radius: 20px !important;
-background-color: #211e40 !important;
-width: 100% !important;
-display: flex !important;
-justify-content: center !important;
-align-content: center !important;
-align-items: center !important;
-border: none !important;
-}
-
-.TARO-button:focus {
-box-shadow: none !important;
-background-color: #FF9400 !important;
-width: 100% !important;
-display: flex !important;
-justify-content: center !important;
-align-content: center !important;
-align-items: center !important;
-border: none !important;
-}
-
-a.alt {
-  color: #5b5a5f !important;
-  font-size: 1em;
-}
-
-a.alt:hover{
-  color: #ffffff !important;
-  font-size: 1em;
+a {
+  font-size: clamp(1em, -0.975rem + 6.5vw, 1.3rem);
 }
 
 a:link {
   color: #ffffff;
   border: none;
 }
+
 a:active{
-color: #211e40;
+  color: #211e40;
 }
-a:visited {color: #ffffff}
+
+a:visited {
+  color: #ffffff
+}
+
 a:hover {
-text-decoration: none;
-color: #FAC91A;
+  text-decoration: none;
+  color: #FAC91A;
 }
 
 /* Alerts */
 
 .valert {
   width: 100% !important;
+  height: 100% !important;
+  margin-top: 2em;
+  margin-bottom: 2em;
   background-image: linear-gradient(#dc3840, #e26c72);
   font-family: 'Lexend Deca', sans-serif;
-  display: flex !important;
   justify-content: center !important;
   align-content: center !important;
   align-items: center !important;
@@ -869,47 +813,48 @@ color: #FAC91A;
 
 @media only screen and (min-width: 1200px) {
   .App {
-    border-radius: 20px;
     width:100%;
     height: 100%;
-    display: flex;
-    padding-top:5em;
-    margin: 0em;
+    margin-top: 5em;
     justify-content: center;
   }
   .cv {
-    width: 40%;
-    height: auto;
+    height: 50vh;
     padding: none;
-    margin-bottom: none !important;
-    margin-right: 0.5em;
+    margin-bottom: none;
     justify-content: center;
   }
 
   .unlocked {
     display: flex;
     margin-top: 0em;
-    width: 28% !important;
     height: 100% !important;
-    margin-left: 0.5em;
     justify-content: center;
   }
   
   .locked {
-    display: flex;
     margin-top: 0em;
     width: 100% !important;
-    height: 100% !important;
-    margin-left: 0.5em;
   }
-  .aboutbutton{
-    max-width: 50%;
-    margin-left: 25%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1em;
+    column-gap: 1em;
   }
+
+  .headline {
+    margin: 40vh;
+  }
+
+  .headline-grid {
+    font-size: 1.2em;
+    }
   
+  Button {
+   font-size: 1.3rem !important;
+  }
 }
 
 /* Scaling Hack version */
@@ -1280,13 +1225,6 @@ option {
   margin-bottom: 2%;
   font-size: 1.5em !important;
   color: #FF9400;
-}
-
-.purple {
-  text-align: left !important;
-  margin-top: 3%;
-  font-size: 2rem !important;
-  color: #ffffff;
 }
 
 .purple2 {

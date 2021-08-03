@@ -263,153 +263,150 @@ function Home() {
   return (
     <div>
       {isEnglish === 'english' ?
-        <div className="App">
-          <div className="cv">
-            <div className="headline">
-              <h1>Querétaro City DAO</h1>
-              <p className="headline-p">Urban governance protocol on ethereum blockchain
-              </p>
-              <Button className="aboutbutton" href="/about"> 📖 About VoTARO </Button>
+        <div class="App">
+          <div class="cv">
+            <div class="headline">
+              <h1>Querétaro City DAO </h1>
+              
+              <div class="center">
+              <p class="headline-p">Urban Governance on Ethereum Blockchain.</p>
+                <span>
+                  {!isMetamastInstalled ?
+                      <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                      <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+                  }
+                  {/*isSkaleSwitched ? '' : isConnectingToSkale ?
+                    <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
+                  */}
+                </span>
+                <Button className="aboutbutton" href="/about"> 📖 About VoTARO</Button>
+              </div>
             </div>
-          </div>
-          {isConnected ?
-          <Card className="unlocked">
-             <div className="title-un">Your TARO account</div>
-          <div>
-            <div className="main-table">
-              <div className="main-taroun">TARO Balance<div className="big-icon">🥇</div></div>
-              <div className="taro-balance">{userBalance} TARO</div>
-            </div>
-            <div className="main-table">
-              <div className="main-taroun">I know Querétaro <div className="big-icon">✔️</div></div>
-              <div className="main-button"><Button className="TARO-button" href="/Quiz">Verify account</Button></div>
-            </div>
-            <div className="main-table">
-              <div className="main-taroun">Urban Governance <div className="big-icon">🗳️</div></div>
-              <div className="main-button"><Button  className="TARO-button" href="/proposallist"> Vote </Button></div>
-            </div>
-          </div>
-          </Card>
-        :
-        <div>
-          <Card className="locked">
-            <div className="title">Tu cuenta TARO</div>
-          <div className="Wallet">
-              {!isMetamastInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
-
-              {/*isSkaleSwitched
-                ?
-                  ''
-                :
-                  isConnectingToSkale
-                  ?
-                    <SkaleSwitch />
-                  :
-                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-              */}
-            </div>
-            <div className="main-table">
-              <div className="main-taro">Balance de TARO <div className="big-icon">🥇</div></div>
-              <div className="taro-balance">Locked</div>
-            </div>
-            <div className="main-table">
-              <div className="main-taro">I know Querétaro <div className="big-icon">✔️</div></div>
-              <div className="main-button"><Button disabled className="TARO-button" >Verify account</Button></div>
-            </div>
-            <div className="main-table">
-              <div className="main-taro">Urban Governance <div className="big-icon">🗳️</div></div>
-              <div className="main-button"><Button disabled className="TARO-button" >🙋🏻‍♀️ Vote 🙋🏽‍♂️</Button></div>
-            </div>
-          </Card>
-           
-        
         </div>
+        {isConnected ?
+        <Card className="unlocked">
+            <div class="title">Your TARO account</div>
+          <div class="main-grid">
+            <div class="account-bgu">
+              <div >TARO Balance <div class="big-icon">☀️</div> </div>
+              <div class="main-taroun">You have </div>
+            <span class="taro-balance"> {userBalance} TARO</span>
+            </div>
+            <div class="account-bgu">
+              <div class="">Get your first reward <div class="big-icon">✔️</div></div>
+              <br/>
+              <Button class="Wallet" ><a href="/Quiz">Validate account </a></Button>
+            </div>
+            <div class="account-bgu">
+              <div class="">Create proposals <div class="big-icon">💡</div></div>
+              <br/>
+              <Button class="Wallet" ><a href="/Quiz"> Create new proposal</a></Button>
+            </div>
+            <div class="account-bgu">
+              <div class="">Vote for proposals <div class="big-icon">🗳️</div></div>
+              <br/>
+              <Button class="Wallet" ><a href="/Quiz">Vote</a></Button>
+            </div>
+          </div>
+        </Card>
+        :
+        <Card className="locked">
+          <div class="title">Your TARO account</div>
+          <div class="main-grid">
+            <div class="account-bg">
+              <div >TARO Balance <div class="big-icon">🔐</div> </div>
+              <div class="taro-locked">Locked</div>
+            </div>
+            <div class="account-bg">
+              <div>Get your first reward <div class="big-icon">✔️</div></div>
+              <div class="taro-locked">Locked</div>
+            </div>
+            <div class="account-bg">
+              <div>Create proposals <div class="big-icon">💡</div></div>
+              <div class="taro-locked">Locked</div>
+            </div>
+            <div class="account-bg">
+              <div>Vote for proposals <div class="big-icon">🗳️</div></div>
+              <div class="taro-locked">Locked</div>
+            </div>
+          </div>
+        </Card>
         }
       </div>
       :
-        <div className="App">
-          <Card.Text>Una DApp de Gobernanza Urbana para la ciudad de Querétaro.</Card.Text>
-          {isConnected ?
-          <div>
-            <Card className="orange-unlock">
-              <Card.Title className="purple-unlock">Balance de TARO</Card.Title>
-              <Card.Title className="big-icon">🥇</Card.Title>
-              <div>
-                <Card.Body>
-                  <Card.Text className="text-large">{userBalance} TARO</Card.Text>
-                  <Button className="TARO-button" href="/About"> Obtén TARO </Button>
-                </Card.Body>
-              </div>
-            </Card>
-            <Card className="yellow-unlock">
-              <Card.Title className="purple-unlock">Gobernanza Urbana</Card.Title>
-              <Card.Title className="big-icon">🗳️</Card.Title>
-              <div>
-                <Card.Body>
-                  <Button className="TARO-button" href="/ProposalList">🙋🏻‍♀️ Vota 🙋🏽‍♂️</Button>
-                </Card.Body>
-              </div>
-            </Card>
-          </div>
-          :
-          <div>
-            <Card className="gray">
-              <Card.Title className="purple-unlock">Balance de TARO</Card.Title>
-              <Card.Title className="big-icon">🥇</Card.Title>
-              <Card.Text className="text-large">Bloqueado</Card.Text>
-              <div>
-              <div className="Wallet">
+      <div class="App">
+      <div class="cv">
+        <div class="headline">
+          <h1>Crea y vota propuestas en la ciudad de Querétaro </h1>
+          <div class="center">
+          <p class="headline-p">Obtén recompensas por usar tus habilidades digitales en VoTARO.</p>
+            <span>
               {!isMetamastInstalled ?
                   <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
                   <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
               }
-
-              {/*isSkaleSwitched
-                ?
-                  ''
-                :
-                  isConnectingToSkale
-                  ?
-                    <SkaleSwitch />
-                  :
-                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
+              {/*isSkaleSwitched ? '' : isConnectingToSkale ?
+                <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
               */}
-
+            </span>
+            <Button className="aboutbutton" href="/about"> 📖 Conoce VoTARO</Button>
           </div>
-              </div>
-            </Card>
-            <Card className="gray">
-              <Card.Title className="purple-unlock">Gobernanza Urbana</Card.Title>
-              <Card.Title className="big-icon">🗳️</Card.Title>
-              <Card.Text className="text-large">Bloqueado</Card.Text>
-              <div className="Wallet">
-              {!isMetamastInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
-
-              {/*isSkaleSwitched
-                ?
-                  ''
-                :
-                  isConnectingToSkale
-                  ?
-                    <SkaleSwitch />
-                  :
-                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-              */}
-
-          </div>
-            </Card>
-
-          </div>
-          }
         </div>
-      }
+      
     </div>
+    {isConnected ?
+    <Card className="unlocked">
+        <div class="title">Tu cuenta VoTARO</div>
+      <div class="main-grid">
+        <div class="account-bgu">
+          <div >Balance de TARO <div class="big-icon">☀️</div> </div>
+          <div class="main-taroun">Tienes</div>
+        <span class="taro-balance"> {userBalance} TARO</span>
+        </div>
+        <div class="account-bgu">
+          <div class="">Obtén tu primer recompensa <div class="big-icon">✔️</div></div>
+          <br/>
+          <Button class="Wallet" ><a href="/Quiz">Verificar cuenta </a></Button>
+        </div>
+        <div class="account-bgu">
+          <div class="">Crea propuestas <div class="big-icon">💡</div></div>
+          <br/>          
+          <Button class="Wallet" ><a href="/Createproposal">Crear nueva propuesta </a></Button>
+        </div>
+        <div class="account-bgu">
+          <div class="">Vota propuestas <div class="big-icon">🗳️</div></div>
+          <br/>
+          <Button class="Wallet" ><a href="/ProposalList">Votar</a></Button>
+        </div>
+      </div>
+    </Card>
+    :
+    <Card className="locked">
+      <div class="title">Tu cuenta VoTARO</div>
+      <div class="main-grid">
+        <div class="account-bg">
+          <div >Balance de TARO <div class="big-icon">🔐</div> </div>
+          <div class="taro-locked">Bloqueado</div>
+        </div>
+        <div class="account-bg">
+          <div class="">Valida tu cuenta <div class="big-icon">✔️</div></div>
+          <div class="taro-locked">Bloqueado</div>
+        </div>
+        <div class="account-bg">
+          <div class="">Crea propuestas <div class="big-icon">💡</div></div>
+          <div class="taro-locked">Bloqueado</div>
+        </div>
+        <div class="account-bg">
+          <div class="">Vota propuestas <div class="big-icon">🗳️</div></div>
+          <div class="taro-locked">Bloqueado</div>
+        </div>
+      </div>
+    </Card>
+    }
+  </div>
+  }
+</div>
+    
   );
 }
 

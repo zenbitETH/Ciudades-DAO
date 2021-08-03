@@ -8,26 +8,12 @@ const ConnectButton = ({handleOnConnect}) => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div>
-      {isEnglish === 'english' ?
-      
-    <div>
-      <div>
-      <Card.Text>Necesitas una 🔑 Dirección Cripto para usar VoTARO</Card.Text>
-        <Button onClick={handleOnConnect}>🔐 Conectar Dirección Cripto</Button>
-       
-      </div>
-      
-    </div>
+    <span>
+    {isEnglish === 'english' ?
+    <Button class="Wallet" onClick={handleOnConnect}>🔑 Connect wallet</Button>
     :
-    <div>
-      <div>
-        <Button onClick={handleOnConnect}>Conectar Wallet</Button>
-        <Card.Text>Necesitas una wallet de Metamask para usar VoTARO</Card.Text>
-      </div>
-      
-    </div>
-}</div>
+    <Button class="Wallet" onClick={handleOnConnect}>🔑 Conectar dirección</Button>
+}</span>
   );
 };
 

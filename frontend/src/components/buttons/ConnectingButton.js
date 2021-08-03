@@ -9,26 +9,16 @@ const ConnectingButton = () => {
 
   return (
     <div>
-    {isEnglish === 'english' ?    
-    <div>
-      <div>
-        <Button disabled>
-        Connecting... 
-        <span className="spinner-grow" role="status"></span>
-        </Button>
-        <Card.Text>You need a Metamask wallet to use VoTARO</Card.Text>      
-      </div>
-      
-    </div>
+    {isEnglish === 'english' ?
+    <Button disabled>
+    Connecting... 
+    <span className="spinner-grow" role="status"></span>
+    </Button>
     :
-    <div>
-        <Button disabled>
-        <span className="spinner-grow" role="status" aria-hidden="true"></span>
-        <span> Conectando...</span>
-        </Button>
-        <Card.Text>Necesitas una wallet de Metamask para usar VoTARO</Card.Text>      
-      
-    </div>
+    <Button disabled>
+    Conectando...
+    <span className="spinner-grow" role="status" aria-hidden="true"> </span>
+    </Button>    
     }
     </div>
   );

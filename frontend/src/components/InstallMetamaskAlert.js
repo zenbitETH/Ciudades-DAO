@@ -12,24 +12,22 @@ const InstallMetamaskAlert = () => {
       {isEnglish === 'english' ?
 
     <Alert className= "valert">
-      <div >
-        <div className="big-icon">⚠️</div>
-        <div className="title3">It appears you don't have MetaMask installed</div>
+        <h1 class="">⚠️</h1>
+        <div class="title3">It appears you don't have a crypto address</div>
 
         <div className ="floating">
-          <Button className="alt2" to="https://metamask.io/">Download Wallet</Button>
+          <Button class="alt2" href="https://www.metamask.io/">Download Wallet</Button>
         </div>
-      </div>
 
    </Alert>
     :
     <Alert className= "valert">
         <div >
-          <div className="big-icon">⚠️</div>
-          <div className="title3">Parece que no tienes una wallet de Metamask</div>
+          <h1 class="">⚠️</h1>
+          <div class="title3">Parece que no tienes una dirección cripto</div>
 
-          <div className ="floating">
-            <Button className="alt2" to="https://metamask.io/">Descargar Wallet</Button>
+          <div class ="floating">
+            <Button className="alt2" href="https://metamask.io/"> 🔑 Obtén una dirección cripto</Button>
           </div>
         </div>
 
