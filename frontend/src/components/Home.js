@@ -268,7 +268,6 @@ function Home() {
           <div class="cv">
             <div class="headline">
               <h1>Querétaro City DAO </h1>
-              
               <div class="center">
               <p class="headline-p">Urban Governance on Ethereum Blockchain.</p>
                 <span>
@@ -294,7 +293,7 @@ function Home() {
             <div class="account-reward">
               <div>Get your first reward </div>
               <span class="reward-un" >
-                <Button className="main-reward" href="/Quiz"><div class="big-icon">✔️</div><div class="un-reward">Verifica tu cuenta <span class="ustext">Verifica tus habilidades digitales y gana hasta 100 TARO </span></div></Button>
+                <Button className="main-reward" href="/Quiz"><div class="big-icon">✔️</div><div class="un-reward">Validate your account <span class="ustext">Validate your digital skills and get up to 100 TARO</span></div></Button>
               </span>
             </div>
             <div class="account-bgu">
@@ -318,12 +317,12 @@ function Home() {
             <div class="account-reward">
               <div>Get your first reward </div>
               <span class="reward-grid">
-                <div class="main-reward"><div class="big-icon">🔑</div>1. Descarga <span class="ustext">Descarga una wallet y crea una dirección cripto</span></div>
-                <div class="main-reward"> <div class="big-icon">🔐</div>2. Conecta <span class="ustext">Conecta tu dirección cripto para usar VoTARO</span></div>
-                <div class="main-reward"><div class="big-icon">✔️</div>3. Verifica <span class="ustext">Verifica tus habilidades digitales y gana hasta 100 TARO </span></div>
-                <Button className="about-bt" href="https://metamask.io"> Ir </Button>
-                <Button className="about-bt" href="/Home"> Ir </Button>
-                <Button className="about-bt" href="/Quiz"> Ir </Button>
+                <div class="main-reward"><div class="big-icon">🔑</div>1. Download <span class="ustext">Download a wallet and create a crypto address</span></div>
+                <div class="main-reward"> <div class="big-icon">🔐</div>2. Connect <span class="ustext">Connect your crypto address to use VoTARO</span></div>
+                <div class="main-reward"><div class="big-icon">✔️</div>3. Validate <span class="ustext">Validate your digital skills and earn up to 100 TARO</span></div>
+                <Button className="about-bt" href="https://metamask.io"> Go </Button>
+                <Button className="about-bt" href="/Home"> Go </Button>
+                <Button className="about-bt" href="/Quiz"> Go </Button>
               </span>
             </div>
             <div class="account-bg">
@@ -338,31 +337,31 @@ function Home() {
           <br/>
         </section>
         }
-       <section class="about-topics">
-      <div class="about-hl1">Conoce más sobre VoTARO</div>
-      <div class="about-grid">
-        <div class="about-bg"><a href="/about#step0">
-          <img src={corner} class="ribbon"/> 
-          <div class="big-icon">🔑</div>
-          <h2>A. Tu dirección cripto</h2>
-        </a></div>
-        <div class="about-bg"><a href="/about#step1">
-        <img src={corner} class="ribbon"/> 
-        <div class="big-icon" >☀️</div>
-          <h2>B. Las recompensas TARO</h2>
-        </a></div>
-        <div class="about-bg"><a href="/about#step2">
-          <img src={corner} class="ribbon"/> 
-          <div class="big-icon" >🗳️</div>
-          <h2>C. Propón y vota en Querétaro</h2>
-        </a></div>
-        <div class="about-bg"><a href="/about#step3">
-          <img src={corner} class="ribbon"/> 
-          <div class="big-icon" >🌌</div>
-          <h2>D. Un nuevo Internet</h2>
-        </a></div>
-      </div>
-    </section>      
+        <section class="about-topics">
+          <div class="about-hl1">About VoTARO</div>
+          <div class="about-grid">
+            <div class="about-bg"><a href="/about#step0">
+              <img src={corner} class="ribbon"/> 
+              <div class="big-icon">🔑</div>
+              <h2>A. Your crypto address</h2>
+            </a></div>
+            <div class="about-bg"><a href="/about#step1">
+            <img src={corner} class="ribbon"/> 
+            <div class="big-icon" >☀️</div>
+              <h2>B. The TARO rewards</h2>
+            </a></div>
+            <div class="about-bg"><a href="/about#step2">
+              <img src={corner} class="ribbon"/> 
+              <div class="big-icon" >🗳️</div>
+              <h2>C. Querétaro Urban Governance</h2>
+            </a></div>
+            <div class="about-bg"><a href="/about#step3">
+              <img src={corner} class="ribbon"/> 
+              <div class="big-icon" >🌌</div>
+              <h2>D. The new Internet</h2>
+            </a></div>
+          </div>
+        </section>      
       </div>
       :
       <div class="App">
@@ -391,10 +390,11 @@ function Home() {
           <div >Tienes <div class="big-icon">☀️</div> </div>
         <span class="taro-balance"> {userBalance} TARO</span>
         </div>
-        <div class="account-bgu">
-          <div>Obtén tu primer recompensa <div class="big-icon">✔️</div></div>
-          <br/>
-          <Button className="account-bt" href="/Quiz">Verificar cuenta</Button>
+        <div class="account-reward">
+          <div>Tu primer recompensa</div>
+          <span class="reward-un" >
+            <Button className="main-reward" href="/Quiz"><div class="big-icon">✔️</div><div class="un-reward">Valida tu cuenta <span class="ustext">Valida tus habilidades digitales y gana hasta 100 TARO </span></div></Button>
+          </span>
         </div>
         <div class="account-bgu">
           <div>Crea propuestas <div class="big-icon">💡</div></div>
@@ -409,29 +409,63 @@ function Home() {
       </div>
     </Card>
     :
-    <Card className="locked">
-      <div class="main-grid">
-        <div class="account-bg">
-          <div >Balance de TARO <div class="big-icon">🔐</div> </div>
-          <div class="taro-locked">Bloqueado</div>
-        </div>
-        <div class="account-bg">
-          <div class="">Valida tu cuenta <div class="big-icon">✔️</div></div>
-          <div class="taro-locked">Bloqueado</div>
-        </div>
-        <div class="account-bg">
-          <div class="">Crea propuestas <div class="big-icon">💡</div></div>
-          <div class="taro-locked">Bloqueado</div>
-        </div>
-        <div class="account-bg">
-          <div class="">Vota propuestas <div class="big-icon">🗳️</div></div>
-          <div class="taro-locked">Bloqueado</div>
-        </div>
+    <section className="locked">
+    <div class="main-grid">
+      <div class="account-bg">
+        <div >Balance de TARO <div class="big-icon">🔐</div> </div>
+        <div class="taro-locked">Bloqueado</div>
       </div>
-    </Card>
+      <div class="account-reward">
+        <div>Tu primer recompensa</div>
+        <span class="reward-grid">
+          <div class="main-reward"><div class="big-icon">🔑</div>1. Descarga <span class="ustext">Descarga una wallet y crea una dirección cripto</span></div>
+          <div class="main-reward"> <div class="big-icon">🔐</div>2. Conecta <span class="ustext">Conecta tu dirección cripto para usar VoTARO</span></div>
+          <div class="main-reward"><div class="big-icon">✔️</div>3. Valida <span class="ustext">Valida tus habilidades digitales y gana hasta 100 TARO </span></div>
+          <Button className="about-bt" href="https://metamask.io"> Ir </Button>
+          <Button className="about-bt" href="/Home"> Ir </Button>
+          <Button className="about-bt" href="/Quiz"> Ir </Button>
+        </span>
+      </div>
+      <div class="account-bg">
+        <div>Crea propuestas <div class="big-icon">💡</div></div>
+        <div class="taro-locked">Bloqueado</div>
+      </div>
+      <div class="account-bg">
+        <div>Vota propuestas <div class="big-icon">🗳️</div></div>
+        <div class="taro-locked">Bloqueado</div>
+      </div>
+    </div>
+    <br/>
+  </section>
     }
+     <section class="about-topics">
+    <div class="about-hl1">Conoce más sobre VoTARO</div>
+    <div class="about-grid">
+      <div class="about-bg"><a href="/about#step0">
+        <img src={corner} class="ribbon"/> 
+        <div class="big-icon">🔑</div>
+        <h2>A. Tu dirección cripto</h2>
+      </a></div>
+      <div class="about-bg"><a href="/about#step1">
+      <img src={corner} class="ribbon"/> 
+      <div class="big-icon" >☀️</div>
+        <h2>B. Las recompensas TARO</h2>
+      </a></div>
+      <div class="about-bg"><a href="/about#step2">
+        <img src={corner} class="ribbon"/> 
+        <div class="big-icon" >🗳️</div>
+        <h2>C. Propón y vota en Querétaro</h2>
+      </a></div>
+      <div class="about-bg"><a href="/about#step3">
+        <img src={corner} class="ribbon"/> 
+        <div class="big-icon" >🌌</div>
+        <h2>D. Un nuevo Internet</h2>
+      </a></div>
+    </div>
+  </section>      
   </div>
   }
+ 
 </div>
     
   );
