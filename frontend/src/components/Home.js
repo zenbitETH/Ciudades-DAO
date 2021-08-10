@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { ethers } from 'ethers';
 import {Card, Button} from 'react-bootstrap';
+import corner from '../assets/corner.svg';
 import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import InstallMetamaskAlert from './InstallMetamaskAlert';
@@ -284,42 +285,46 @@ function Home() {
             </div>
         </div>
         {isConnected ?
-        <Card className="unlocked">
-            <div class="title">Your TARO account</div>
+        <section className="unlocked">
           <div class="main-grid">
             <div class="account-bgu">
-              <div >TARO Balance <div class="big-icon">☀️</div> </div>
-              <div class="main-taroun">You have </div>
-            <span class="taro-balance"> {userBalance} TARO</span>
+              <div >You have <div class="big-icon">☀️</div> </div>
+              <span class="taro-balance"> {userBalance} TARO</span>
+            </div>
+            <div class="account-reward">
+              <div>Get your first reward </div>
+              <span class="reward-un" >
+                <Button className="main-reward" href="/Quiz"><div class="big-icon">✔️</div><div class="un-reward">Verifica tu cuenta <span class="ustext">Verifica tus habilidades digitales y gana hasta 100 TARO </span></div></Button>
+              </span>
             </div>
             <div class="account-bgu">
-              <div class="">Get your first reward <div class="big-icon">✔️</div></div>
-              <br/>
-              <Button class="Wallet" ><a href="/Quiz">Validate account </a></Button>
+              <div>Create proposals <div class="big-icon">💡</div></div>
+              <Button className="account-bt" href="/CreateProposal" > New proposal</Button>
             </div>
             <div class="account-bgu">
-              <div class="">Create proposals <div class="big-icon">💡</div></div>
-              <br/>
-              <Button class="Wallet" ><a href="/Quiz"> Create new proposal</a></Button>
-            </div>
-            <div class="account-bgu">
-              <div class="">Vote for proposals <div class="big-icon">🗳️</div></div>
-              <br/>
-              <Button class="Wallet" ><a href="/Quiz">Vote</a></Button>
+              <div>Vote for proposals <div class="big-icon">🗳️</div></div>
+              <Button className="account-bt" href="/ProposalList" >Vote</Button>
             </div>
           </div>
-        </Card>
+          <br/>
+        </section>
         :
-        <Card className="locked">
-          <div class="title">Your TARO account</div>
+        <section className="locked">
           <div class="main-grid">
             <div class="account-bg">
               <div >TARO Balance <div class="big-icon">🔐</div> </div>
               <div class="taro-locked">Locked</div>
             </div>
-            <div class="account-bg">
-              <div>Get your first reward <div class="big-icon">✔️</div></div>
-              <div class="taro-locked">Locked</div>
+            <div class="account-reward">
+              <div>Get your first reward </div>
+              <span class="reward-grid">
+                <div class="main-reward"><div class="big-icon">🔑</div>1. Descarga <span class="ustext">Descarga una wallet y crea una dirección cripto</span></div>
+                <div class="main-reward"> <div class="big-icon">🔐</div>2. Conecta <span class="ustext">Conecta tu dirección cripto para usar VoTARO</span></div>
+                <div class="main-reward"><div class="big-icon">✔️</div>3. Verifica <span class="ustext">Verifica tus habilidades digitales y gana hasta 100 TARO </span></div>
+                <Button className="about-bt" href="https://metamask.io"> Ir </Button>
+                <Button className="about-bt" href="/Home"> Ir </Button>
+                <Button className="about-bt" href="/Quiz"> Ir </Button>
+              </span>
             </div>
             <div class="account-bg">
               <div>Create proposals <div class="big-icon">💡</div></div>
@@ -330,8 +335,34 @@ function Home() {
               <div class="taro-locked">Locked</div>
             </div>
           </div>
-        </Card>
+          <br/>
+        </section>
         }
+       <section class="about-topics">
+      <div class="about-hl1">Conoce más sobre VoTARO</div>
+      <div class="about-grid">
+        <div class="about-bg"><a href="/about#step0">
+          <img src={corner} class="ribbon"/> 
+          <div class="big-icon">🔑</div>
+          <h2>A. Tu dirección cripto</h2>
+        </a></div>
+        <div class="about-bg"><a href="/about#step1">
+        <img src={corner} class="ribbon"/> 
+        <div class="big-icon" >☀️</div>
+          <h2>B. Las recompensas TARO</h2>
+        </a></div>
+        <div class="about-bg"><a href="/about#step2">
+          <img src={corner} class="ribbon"/> 
+          <div class="big-icon" >🗳️</div>
+          <h2>C. Propón y vota en Querétaro</h2>
+        </a></div>
+        <div class="about-bg"><a href="/about#step3">
+          <img src={corner} class="ribbon"/> 
+          <div class="big-icon" >🌌</div>
+          <h2>D. Un nuevo Internet</h2>
+        </a></div>
+      </div>
+    </section>      
       </div>
       :
       <div class="App">
@@ -340,7 +371,7 @@ function Home() {
           <h1>Crea y vota propuestas en la ciudad de Querétaro </h1>
           <div class="center">
           <p class="headline-p">Obtén recompensas por usar tus habilidades digitales en VoTARO.</p>
-            <span>
+            <span class="center">
               {!isMetamastInstalled ?
                   <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
                   <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
@@ -352,37 +383,33 @@ function Home() {
             <Button className="aboutbutton" href="/about"> 📖 Conoce VoTARO</Button>
           </div>
         </div>
-      
     </div>
     {isConnected ?
     <Card className="unlocked">
-        <div class="title">Tu cuenta VoTARO</div>
       <div class="main-grid">
         <div class="account-bgu">
-          <div >Balance de TARO <div class="big-icon">☀️</div> </div>
-          <div class="main-taroun">Tienes</div>
+          <div >Tienes <div class="big-icon">☀️</div> </div>
         <span class="taro-balance"> {userBalance} TARO</span>
         </div>
         <div class="account-bgu">
-          <div class="">Obtén tu primer recompensa <div class="big-icon">✔️</div></div>
+          <div>Obtén tu primer recompensa <div class="big-icon">✔️</div></div>
           <br/>
-          <Button class="Wallet" ><a href="/Quiz">Verificar cuenta </a></Button>
+          <Button className="account-bt" href="/Quiz">Verificar cuenta</Button>
         </div>
         <div class="account-bgu">
-          <div class="">Crea propuestas <div class="big-icon">💡</div></div>
+          <div>Crea propuestas <div class="big-icon">💡</div></div>
           <br/>          
-          <Button class="Wallet" ><a href="/Createproposal">Crear nueva propuesta </a></Button>
+          <Button className="account-bt" href="/Createproposal">Crear nueva propuesta</Button>
         </div>
         <div class="account-bgu">
-          <div class="">Vota propuestas <div class="big-icon">🗳️</div></div>
+          <div>Vota propuestas <div class="big-icon">🗳️</div></div>
           <br/>
-          <Button class="Wallet" ><a href="/ProposalList">Votar</a></Button>
+          <Button className="account-bt" href="/ProposalList">Votar</Button>
         </div>
       </div>
     </Card>
     :
     <Card className="locked">
-      <div class="title">Tu cuenta VoTARO</div>
       <div class="main-grid">
         <div class="account-bg">
           <div >Balance de TARO <div class="big-icon">🔐</div> </div>
