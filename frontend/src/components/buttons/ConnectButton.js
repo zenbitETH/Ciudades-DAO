@@ -10,9 +10,9 @@ const ConnectButton = ({handleOnConnect}) => {
   return (
     <span>
     {isEnglish === 'english' ?
-    <Button class="Wallet" onClick={handleOnConnect}>🔑 Connect wallet</Button>
+    <Button className="Wallet" onClick={handleOnConnect}>🔑 Connect wallet</Button>
     :
-    <Button class="Wallet" onClick={handleOnConnect}>🔑 Conectar dirección</Button>
+    <Button className="Wallet" onClick={handleOnConnect}>🔑 Conectar dirección</Button>
 }</span>
   );
 };
