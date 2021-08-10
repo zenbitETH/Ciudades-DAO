@@ -47,8 +47,8 @@ const Header = () => {
               <NavLink className="NavLink" to="/CreateProposal">💡 Proponer</NavLink>
               <NavLink className="NavLink" to="/ProposalList">🗳️ Votar</NavLink>
             </Nav>
-            <NavDropdown drop="down" className="language" title="🌐 Idioma">
-              <NavDropdown.Item onSelect={handleOnSelect}>Inglés</NavDropdown.Item>
+            <NavDropdown drop="down"  title="🌐 Idioma">
+              <NavDropdown.Item className="language" onSelect={handleOnSelect}>Inglés</NavDropdown.Item>
             </NavDropdown>
           </Navbar.Collapse>
           </Navbar>
