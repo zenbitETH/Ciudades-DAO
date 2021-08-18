@@ -7,13 +7,20 @@ import img2 from '../assets/about-img2.png';
 import img3 from '../assets/about-img3.png';
 import img4 from '../assets/about-img4.svg';
 import wallet from '../assets/wallet.gif'
+import TAROcon from '../assets/TAROcon.png';
+import TAROtok from '../assets/TAROtok.png';
+import TAROrew from '../assets/TAROrew.png';
 import www from '../assets/www.svg'
 import corner from '../assets/corner.svg'
 import { LanguageContext } from '../contexts/LanguageContext';
 import ReactPlayer from "react-player";
+import table from "charts.css";
+
+
 
 const About = () => {
   let [isEnglish] = useContext(LanguageContext);
+  
   return (
   <body id="about">
   {isEnglish === 'english' ?
@@ -75,7 +82,7 @@ const About = () => {
       <div class="about-bg1">
         <div class="about-hl1"><a id="step0" class="big-icon">🔑</a><br/> A. Tu llave cripto</div>
         <div class="about-tx2">
-          Para usar VoTARO ocupas descargar una cartera de ethereum en tu computadora o móvil y crear una llave cripto. 
+          Para usar VoTARO y guardar tus recompensas ocupas descargar una cartera de ethereum en tu computadora o móvil y crear una llave cripto. 
           Con ella podrás acceder aplicaciones web 3 como VoTARO de manera segura, privada y sin restricciones.
         <br/><br/>
          <span class="orange">Toca o coloca el cursor encima de las imágenes</span> para conocer más sobre tu llave cripto:
@@ -90,7 +97,7 @@ const About = () => {
           </div>
           <div class="address-img"><h2 class="yellow-lex">Dos llaves para cuidar tu cuenta</h2><img src={img} alt="Private Key" class="about-img"/>
             <span class="ustext"> La web 3 sustituye con llaves cripto a los correos y datos personales utilizados para crear cuentas en la web 2.
-            <div class="center"><div class="lex"><span class="oneem">Tu llave cripto se forma con:</span></div></div>
+            <div class="center"><div class="lex"><span class="em">Tu llave cripto se forma con:</span></div></div>
               <div class="keys">
                 <div class="center"><div class="p-key"><h2>🔐</h2><span class="lex">Llave privada</span></div></div>
                 <div class="pu-key"><h2>📬</h2> <span class="lex">Llave pública</span></div>
@@ -106,7 +113,7 @@ const About = () => {
             <span class="ustext">
             Tu llave cripto se vincula con <span class="yollow-text">12 palabras secretas</span>, las cuales decodifican tu cartera y son la <span class="red">única
               forma de acceder a tu cartera</span> o recuperarla en caso de que extravíes tu equipo.
-              <div class="center"><div class="yollow-lex"><span class="oneem">12 palabras secretas</span></div></div>
+              <div class="center"><div class="yollow-lex"><span class="em">12 palabras secretas</span></div></div>
               <div class="words">
                 <div class="cword">1</div>
                 <div class="cword">2</div>
@@ -133,7 +140,7 @@ const About = () => {
             <span class="ustext"> <span class="orange">La llave pública es similar a tu número de telefono</span>: un seudónimo que compartes con tus contactos para poder interactuar en diferentes aplicaciones. 
             <div class="e-pkey">
               <div class="pu-key2"><span class="lex">📬 <br/>Llave pública</span></div>  
-              <div class="center"><span class="orange-lex"><span class="oneem">Empiezan con 0x</span></span></div>
+              <div class="center"><span class="orange-lex"><span class="em">Empiezan con 0x</span></span></div>
             </div>
             En la web3 tu llave pública te identifica
             ante otros usuarios, te permite interactuar con contratos inteligentes y <span class="orange">recibir activos digitales.</span>
@@ -159,13 +166,135 @@ const About = () => {
 
       <div class="about-bg1">
         <div class="about-hl1"><a id="step1" class="big-icon">☀️</a><br/>B. Las recompensas TARO</div>
+        <div class="about-tx2">
+          Usamos un <span class="yellow-text">contrato ERC20 para crear los tokens TARO (TARO.sol) </span>y un <span class="orange">contrato de gobernanza descentralizada para gestionar los votos y recompensas de VoTARO (GovernorAlpha.sol) 
+          </span> con el objetivo digitalizar el valor inherente de la ciudad de Querétaro al crear un registro público de las necesidades 
+          de la ciudad y usar el token TARO como un incentivo para resolver, fondear y validar la resolución de estas necesidades.<br/><br/>
+          Esta primer versión de los contratos de VoTARO se emitió en una red de pruebas en la que podrás familiarizarte con las herramientas y desarrollar tus habilidades digitales 
+          a la par de las funciones que añadiremos para facilitar el cumplimiento de las propuestas.<br/><br/>
+          <div class="center"><h2 class="yellow-lex">TARO es un contrato inteligente<img src={TAROcon} alt="TARO ERC20 contract" class="about-img"/></h2></div><br/>
+          <span class="yellow-text">Un contrato inteligente es un programa procesado por un blockchain </span> o computadora global
+          en lugar de tu equipo. Al usar una computadora global, <span class="yellow-text">todas las interacciones se registran y validan de manera pública </span>
+          por lo que una vez emitido es resistente a cambios sin consenso, siendo <span class="orange">útil evitar que información y transacciones de interés público
+          sean censuradas o manipuladas.</span><br/> Los contratos inteligentes de VoTARO descentralizan la gestión de la gobernanza y las recompensas para que las descisiones se tomen con el consenso
+          de sus usuarios.<br/><br/>
+          <a href="https://github.com/zenbitMX/VoTARO/blob/main/contracts/Taro.sol"> Aquí</a> puedes consultar la redacción completa del contrato pero en resumen <span class="orange">
+          el contrato TARO estipula:</span>
+          <ol class="oneem">
+            <li>Los datos públicos del token TARO para identificarlo en el blockchain.</li><br/>
+            <li>La creación de 10,000,000 tokens TARO.</li><br/>
+            <li>El registro permanente de las llaves públicas que interactuan con el token TARO.</li><br/>
+            <li>La función de los tokens para votar en la gobernanza urbana de VoTARO.</li>          
+          </ol>
+          
+          <div class="address-img">
+          
+          </div>
+          <div class="address-img"><h2 class="orange-lex">Recompensas TARO disponibles <img src={TAROrew} alt="TARO rewards" class="about-img"/></h2>
+            asdasdas
+          </div>
+        </div>
+        
       </div>
 
         <div class="about-bg1">
           <div class="about-hl1"><a id="step2" class="big-icon">🗳️</a><br/>C. Propón y vota en Querétaro</div>
+
+          <h2 class="yellow-lex">¿Cuantos TAROs existen? <img src={TAROtok} alt="TARO tokenomics" class="about-img"/></h2>
+
+          <div class="address-img"><h2 class="lex">¿Cómo es la votación con TARO?</h2>
+          <span class="yellow-text">Cada TARO equivale a un voto y podrás usarlo en la gobernanza de las propuestas</span> que realicen los ciudadanos de Querétaro.<br/><br/>
+            asdasdas
+          </div>
+          <div class="address-img"><h2 class="lex">¿Cómo creo propuestas?</h2>
+            asdasdas
+          </div>
+          <div class="address-img"><h2 class="lex">¿Cómo voto las propuestas?</h2>
+            asdasdas
+          </div>
+         
+              
         </div>
 
       <div class="about-bg1">
+
+
+      <div class="donut-chart-block block"> 
+          <h2 class="titular">OS AUDIENCE STATS</h2>
+          <div class="donut-chart">
+            <div id="porcion1" class="recorte"><div class="quesito ios" data-rel="21"></div></div>
+            <div id="porcion2" class="recorte"><div class="quesito mac" data-rel="39"></div></div>
+            <div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
+            <div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
+            <p class="center-date">JUNE<br/><span>2013</span></p>
+          </div>
+          <ul class="os-percentages horizontal-list">
+              <li>
+                  <p class="ios os scnd-font-color">iOS</p>
+                  <p class="os-percentage">21<sup>%</sup></p>
+              </li>
+              <li>
+                  <p class="mac os scnd-font-color">Mac</p>
+                  <p class="os-percentage">39<sup>%</sup></p>
+              </li>
+              <li>
+                  <p class="linux os scnd-font-color">Linux</p>
+                  <p class="os-percentage">9<sup>%</sup></p>
+              </li>
+              <li>
+                  <p class="win os scnd-font-color">Win</p>
+                  <p class="os-percentage">31<sup>%</sup></p>
+              </li>
+          </ul>
+        </div>
+----------------------------------------------------------------------
+        <table id="stacked-example-4" class="charts-css column hide-data show-heading show-labels show-primary-axis show-3-secondary-axes data-spacing-10 multiple stacked">
+            <caption> Percentage Stacked Columns </caption> 
+            <thead>
+              <tr>
+                <th scope="col"> Continent </th> 
+                <th scope="col"> #1 </th> 
+                <th scope="col"> #2 </th> 
+                <th scope="col"> #3 </th> 
+                <th scope="col"> #4 </th>
+              </tr>
+            </thead> 
+            
+            <tbody>
+              <tr>
+                <th scope="row"> America </th>
+                 <td styles="--size:calc(50 / (50 + 50 + 30 + 20));"><span class="data"> 50$ </span></td> 
+                 <td styles="--size:calc(50 / (50 + 50 + 30 + 20));"><span class="data"> 50$ </span></td> 
+                 <td styles="--size:calc(30 / (50 + 50 + 30 + 20));"><span class="data"> 30$ </span></td> 
+                 <td styles="--size:calc(20 / (50 + 50 + 30 + 20));"><span class="data"> 20$ </span></td>
+              </tr> 
+              <tr>
+                <th scope="row"> Asia </th> 
+                <td styles="--size:calc(30 / (30 + 30 + 30 + 30));"><span class="data"> 30$ </span></td> 
+                <td styles="--size:calc(30 / (30 + 30 + 30 + 30));"><span class="data"> 30$ </span></td> 
+                <td styles="--size:calc(30 / (30 + 30 + 30 + 30));"><span class="data"> 30$ </span></td>
+                <td styles="--size:calc(30 / (30 + 30 + 30 + 30));"><span class="data"> 30$ </span></td>
+              </tr> 
+              <tr>
+                <th scope="row"> Europe </th> 
+                <td styles="--size:calc(40 / (40 + 25 + 45 + 30));"><span class="data"> 40$ </span></td> 
+                <td styles="--size:calc(25 / (40 + 25 + 45 + 30));"><span class="data"> 25$ </span></td> 
+                <td styles="--size:calc(45 / (40 + 25 + 45 + 30));"><span class="data"> 45$ </span></td>
+                <td styles="--size:calc(30 / (40 + 25 + 45 + 30));"><span class="data"> 30$ </span></td>
+              </tr> 
+              <tr>
+                <th scope="row"> Africa </th> 
+                <td styles="--size:calc(20 / (20 + 20 + 20 + 20));"><span class="data"> 20$ </span></td> 
+                <td styles="--size:calc(20 / (20 + 20 + 20 + 20));"><span class="data"> 20$ </span></td> 
+                <td styles="--size:calc(20 / (20 + 20 + 20 + 20));"><span class="data"> 20$ </span></td> 
+                <td styles="--size:calc(20 / (20 + 20 + 20 + 20));"><span class="data"> 20$ </span></td>
+              </tr>
+            </tbody>
+            </table>
+
+
+
+
         <div class="about-hl1"><a id="step3" class="big-icon">🌌</a><br/>D. Un nuevo Internet</div>
         <div class="about-tx2">VoTARO es una aplicación descentralizada desarrollada con herramientas de la web 3 como Blockchain, Contratos Inteligentes y llave cripto. <br/><br/> Si te quedaste así 😵 no te preocupes, continua leyendo para conocer como <span class="orange">obtener recompensas por aprender a usar estas herramientas</span> y participar en la gobernanza de la ciudad.
           <div class="center"><img src={www} alt="Web2 problems" class="web2p"/></div>
