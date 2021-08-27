@@ -123,6 +123,12 @@ option:disabled {
   width: 0%;
 }
 
+.progress-bar2 {
+  height: 5px;
+  background: #00aebe92;
+  width: 0%;
+}
+
 /* Proposal List */
 
 .proplist {

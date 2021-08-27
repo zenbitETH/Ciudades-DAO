@@ -18,6 +18,7 @@ import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-
 import prop from '../assets/prop.png';
 import reward from '../assets/TAROrew.png';
 import vote from '../assets/vote.png';
+import vote2 from '../assets/vote2.svg';
 import past from '../assets/past.png';
 import verify from '../assets/verify.png';
 
@@ -236,7 +237,7 @@ const ProposalList = () => {
           <div class="progress-bar" id="myBar"></div>
         </div>
       </div>
-          <div id="CityDAO"class="big-icon">🗳️</div>
+          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
           <h1><span class="orange">Gobernanza Urbana</span></h1><br/>
           <div className= "propgrid">
             <div class="prop-bg"><a href="/createProposal">
@@ -245,7 +246,7 @@ const ProposalList = () => {
               <div class="propopt">Proponer</div>
             </a></div>
             <div class="prop-bg2"><a href="#vote">
-              <img src={vote} class="ribbons"/> 
+              <img src={vote2} class="ribbons"/> 
               <div class="propsub">Propuestas disponibles</div>
               <div class="propopt">Por votar</div>
             </a></div>
@@ -261,11 +262,11 @@ const ProposalList = () => {
             </a></div>
           </div>
         <div><br/>
-        <div className= "valert2">{isValidated ? "" : <ValidationRequired />}</div>
+        <div>{isValidated ? "" : <ValidationRequired />}</div>
           {list.length > 0 ?
             <div className ="props">
               <h1><span id="vote">Propuestas por votar</span></h1><br/>
-              <img src={vote} alt="Alert about key" class="prop-img"/>
+              <img src={vote2} alt="Alert about key" class="prop-img"/>
                 <div class="floating">
                 <div class="about-tx2">Usa el TARO que has ganado para 
                 votar por propuestas de gobernanza en la ciudad de Querétaro.</div>
@@ -274,6 +275,7 @@ const ProposalList = () => {
             </div>
           :
             <div className="void">                
+              <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
               <h1><span id="vote" class="red">Propuestas por votar</span></h1><br/>
               
                 <div class="floating">

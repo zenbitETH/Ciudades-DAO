@@ -67,7 +67,7 @@
 }
 
 .red {
-  color: #fb4c38;
+  color: #  ;
 }
 
 .red-lex {
@@ -471,6 +471,21 @@ h2 {
   width: auto !important;
   padding: 1em;
   background-image: linear-gradient(#dc3840, #e26c72);
+  color: #fff !important;
+}
+
+.valert4 {
+  background-size: cover;
+  font-size: clamp(1em, -0.975rem + 6.5vw, 1.8rem);
+  margin-left: -1.1em;
+  margin-right: -1.1em;
+  margin-top: -1.15em;
+  margin-bottom: -1.1em;
+  width: auto !important;
+  padding: 1em;
+  background: linear-gradient(45deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
+  background-size: 500% 500%;
+  animation: gradient 2s ease infinite;
   color: #fff !important;
 }
 

@@ -10,6 +10,7 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { TaroContext } from '../contexts/TaroContext';
 
+import prop from '../assets/prop.png';
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
@@ -220,7 +221,7 @@ function myFunction() {
           <div class="progress-bar" id="myBar"></div>
         </div>
       </div>
-        <div id="proposal"class="big-icon">💡</div>
+        <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
         <h1><span class="orange">Nueva propuesta</span></h1><br/><br/>
       
         

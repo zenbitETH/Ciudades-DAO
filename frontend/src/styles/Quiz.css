@@ -1,0 +1,10 @@
+#quiz {
+    margin-top: 3%;
+    color: #ffffff;
+    background: linear-gradient(#ff950000,#00aebe4e, #00aebe92);
+    font-size: 0.9em;
+    background-size: 200% 150%;
+    margin-top: -1em;
+    padding-top: 5em;
+    font-family: 'Lexend Deca', sans-serif
+}
