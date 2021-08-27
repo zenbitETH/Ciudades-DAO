@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { Component, useContext, useEffect, useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import detectEthereumProvider from '@metamask/detect-provider';
 import { ethers } from 'ethers';
@@ -6,6 +6,9 @@ import CountdownClock from './CountdownClock';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
+import Chart from 'react-apexcharts'
+import Charts from './Chart';
+
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
@@ -123,6 +126,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
     let voteTxReceipt = await voteTx.wait(1);
     console.log(voteTxReceipt);
   };
+  
 
 
   return (
@@ -131,30 +135,35 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
 
       ?
 
-  <Card className="proposal">
-    <div className="proposal-id">💡 Proposal # {id} 
-      <div className="proposal-author">by {proposer}</div>
+  <div className="proposal">
+    
+    <div class="proposal-expiration">
+      <h2 class="orange">💡 Propuesta # {id} </h2>
+      <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
     </div>
-    <div className="proposal-title">🎯{title}</div>
-    <div className="proposal-details">🔍 Details:</div>
-    <div className="proposal-container">
-      <div className="proposal-hero">🦸🦸‍♂️In charge: <div className="table-text">{personInCharge}</div></div>
-      <div className="proposal-table">
-          <div className="proposal-action">⚙️ Action: <div className="table-text">{typeOfAction}</div></div>
-          <div className="proposal-location"> 📍 Where: <div className="table-text">{neighborhood}</div></div>
-          <div className="proposal-cost">💸 Cost: <div className="table-text">{budget} pesos</div> </div>
-      </div>
+    <div class="mini-title">🎯 Objetive:</div>
+    <div class="prop-hl"> {title}</div><br/><br/>
+    
       
-      <div className="proposal-description">📑 Description: <div className="table-text">{description}</div></div>
+    <div class="grid-prop">      
+
+      <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
+      <div class="minit-bg">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
+      <div class="minit-bg"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
+      <div class="minit-bg">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
+
     </div>
     
-      <div className="proposal-expiration">⏳ Time left to vote: <CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></div>
+    <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
     {/*}
     <div className ="proposal-main">
       <div className="proposal-sub">Costo: {budget}</div>
       <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
     </div>
     */}
+<div class="yellow">made by {proposer}</div><br/>
+
+
 
   <Card.Body className="proposal-votes">
   <div className="yellow-card"></div>
@@ -188,10 +197,12 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
             ''
           }
         </p>
+        
       </div>
+      
     </div>
   </Card.Body>
-</Card>
+</div>
 
       :
 
