@@ -14,7 +14,7 @@ contract GovernorAlpha {
     function votingDelay() public pure returns (uint) { return 1; } // 1 block
     //
     // /// @notice The duration of voting on a proposal, in blocks
-    function votingPeriod() public pure returns (uint) { return 1296000; } // ~15 days in blocks (assuming 15s blocks; 86400 blocks per day)
+    function votingPeriod() public pure returns (uint) { return 3600; } // ~15 days in blocks (assuming 15s blocks 1296000 blocks; 86400 blocks per day; 3600 per hour)
     // 
     // /// @notice The address of the Taro Protocol Timelock
     // TimelockInterface public timelock;
@@ -127,7 +127,7 @@ contract GovernorAlpha {
 
     function propose(UserInputFields memory _userInputFields) public checkValidity returns (uint) {
         //A user recieves 50 Taro for each of their first ten proposals
-        if(userProposals[msg.sender].count < 10) {
+        if(userProposals[msg.sender].count < 20) {
           bool transferred = taro.transferFrom(address(this), msg.sender, 50e18);
           require(transferred, "Tokens not transferred to msg.sender");
           userProposals[msg.sender].count++;
