@@ -6,6 +6,7 @@ import './styles/Buttons.css'
 import './styles/Charts.css'
 import './styles/Old.css'
 import './styles/Proposals.css'
+import './styles/Quiz.css'
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 

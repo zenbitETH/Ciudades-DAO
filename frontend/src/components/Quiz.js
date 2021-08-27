@@ -16,6 +16,9 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { TaroContext } from '../contexts/TaroContext';
 
+import img4 from '../assets/about-img4.svg';
+import verify from '../assets/verify.png';
+
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 
@@ -153,8 +156,8 @@ const Quiz = () => {
 
       if(_checkedAnswers.length === 10) {
         setLoadingModalShow(true);
-        //Make network call to receive 100 tokens
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('100'));
+        //Make network call to receive 500 tokens
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('500'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log('submitAnswersReceipt: ', submitAnswersReceipt);
         handleOnLoadingModal();
@@ -169,23 +172,36 @@ const Quiz = () => {
         // console.log('length: ', checkedAnswers.length);
         setSuccessModalShow(true);
         setCheckedAnswers([]);
-      } else if(_checkedAnswers.length >= 8) {
+      } else if(_checkedAnswers.length >= 9) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('80'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('400'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
         //
+
         // console.log('length: ', checkedAnswers.length);
         setSuccessModalShow(true);
         setCheckedAnswers([]);
-      } else if(_checkedAnswers.length >= 6) {
+      } else if(_checkedAnswers.length >= 8) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('20'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('300'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
         //
+
+        // console.log('length: ', checkedAnswers.length);
+        setSuccessModalShow(true);
+        setCheckedAnswers([]);
+      } else if(_checkedAnswers.length >= 7) {
+        setLoadingModalShow(true);
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('200'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log(submitAnswersReceipt);
+        handleOnLoadingModal();
+        //
+
         // console.log('length: ', checkedAnswers.length)
         setSuccessModalShow(true);
         setCheckedAnswers([]);
@@ -236,20 +252,30 @@ const Quiz = () => {
     setLoadingModalShow(false);
   };
 
+  window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
   return (
-    <div className="App">
+    <body id="quiz">
       {isEnglish === 'english' ?
-        <div className="app">
+        <div className="">
+                <div class="progress-holder">
+        <div class="progress-container">
+          <div class="progress-bar2" id="myBar"></div>
+        </div>
+      </div>
         {isConnected ?
-            <div className="gray2">
             <div>
-              <div className="main">      
-              <div className="text-large"> Validate your account</div>
-              <div className="big-icon">✔️</div>
-              <div>
-              <p> VoTARO focuses on the governance of the city of Querétaro, so you must <span className = "yellow"> validate that you are a citizen of Queréaro. to be able to create proposals or vote the governance module. </span> </p>
-                <p> To validate your account, it is necessary to answer this Quiz. By answering it correctly, the contract will validate your address and you will receive <span className = "orange3"> 20 to 100 TARO </span>, depending on the correct answers. </ p>
-              </div>
+            <div>
+              <div>      
+              <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+              <h1><span>Valida tu cuenta </span></h1>
                 <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
                 {englishQuestions}
                 </QuizContext.Provider>
@@ -277,19 +303,17 @@ const Quiz = () => {
                   />
               </div>
             </div>
-
           :
-
-          <div className="valert">
+          <div className="valert4">
             <div className="main">
-              <div className="big-icon">⚠️</div>
+            <h1><span id="vote">Connect your wallet</span></h1><br/>
+            <img src={img4} alt="Alert about key" class="prop-img"/>
               <div className="white">To take the quiz and start earning TARO, you first need to get connected to the Ethereum network</div>
               <Link className="alt2" to="/">Return home and click on "Connect Wallet to Unlock"</Link>
             </div>
           </div>
           }
         </div>
-
         :
         <div className="app">
           {isConnected ?
@@ -341,7 +365,7 @@ const Quiz = () => {
           }
         </div>
       }
-    </div>
+    </body>
   );
 };
 
