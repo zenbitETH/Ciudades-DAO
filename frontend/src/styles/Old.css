@@ -25,7 +25,6 @@
     text-align: left !important;
   }
   
-  
   .yellow-unlock {
     border-radius: 20px;
     width:100%;
@@ -38,8 +37,6 @@
     align-items: center !important;
     color: #3d386b !important;
   }
-  
-  
   
   .yellowB {
     border-radius: 20px;
@@ -104,13 +101,8 @@
     align-items: center !important;
   }
   
-  
   /* Text and Elements */
-  .space {
-    margin-top: 3%;
-    margin-bottom: 3%;
-    color: #ffffff !important;
-  }
+
   .main  {
     width: 100%;
     font-family: 'Lexend Deca', sans-serif;
@@ -119,32 +111,6 @@
     text-justify: inter-word !important;
     box-sizing: border-box !important;
     padding: 15px;
-  }
-  
-  ::placeholder {
-    font-size: 1em !important;
-    color: #9e9e9e !important;
-  }
-  
-  input {
-    font-size: 1em !important;
-    color: #FF9400 !important;
-  }
-  
-  .options {
-    font-size: 1em !important;
-    color: #9e9e9e !important;
-  }
-  
-  option:disabled { color: #9e9e9e !important;  }
-  
-  select { color: #FF9400 !important;  }
-  select:disabled {
-    color: #9e9e9e !important;
-  }
-  
-  option {
-    color: #FF9400;
   }
   
   .text-medium-left {
@@ -189,8 +155,6 @@
     color: #3d386b !important;
   }
   
-  
-  
   .title2 {
     width: 100%;
     font-family: 'Lexend Deca', sans-serif;
@@ -207,10 +171,8 @@
     color: #3d386b;
   }
   
-  
   .create {
     text-align: center;
-    width:90% !important;
   }
   
   .white2 {
@@ -219,8 +181,6 @@
     font-size: 18px !important;
     color: #ffffff !important;
   }
-  
-  
   
   .orange2 {
     margin-bottom: 3% !important;
@@ -234,9 +194,7 @@
     margin-bottom: 3% !important;
     color: #FF9400 !important;
   }
-  
-  
-  
+
   .purple-unlock {
     margin-left: 1.5em !important;
     font-size: 18px !important;
@@ -292,20 +250,6 @@
   
   /* Proposal */
   
-  .proposal {
-    border-radius: 20px;
-    width:auto;
-    min-width: 400px !important;
-    margin: 3% auto;
-    background-image: linear-gradient(#3d386b , #7770b4);
-    font-family: 'Lexend Deca', sans-serif;
-    display: flex !important;
-    justify-content: center !important;
-    align-content: center !important;
-    align-items: center !important;
-    color: #3d386b !important;
-  }
-  
   .proposala {
     border-radius: 20px;
     width:100%;
@@ -345,10 +289,6 @@
     border-radius: 20px;
   } 
   
-  .table-text {
-    font-size: 0.8em;
-    color: #ffffff;
-  }
   
   .proposal-container {
     width: 94%;
@@ -362,7 +302,6 @@
     border-radius: 20px;
     background-color: #00000048;
   }
-  
   
   .proposal-details {
     width: 100%;
@@ -421,29 +360,6 @@
   }
   
   
-  .proposal-expiration{
-    width: 94%;
-    border-radius: 20px;
-    background-color: #fac91ad0;
-    margin-top: 3% !important;;
-    font-size: 1em !important;
-    text-align: center !important;
-    color: #3d386b !important;
-  }
-  
-  .proposal-id {
-    width: 100%;
-    margin-top: 2%;
-    padding-left: 3%;
-    margin-bottom: 2%;
-    font-size: 1em;
-    text-align: left !important;
-    color: #FAC91A !important;
-  }
-  .proposal-author {
-    font-size: 0.85em;
-    color: #FF9400;
-  }
   
   .proposal-authorpast {
     font-size: 0.85em;
@@ -457,15 +373,7 @@
     font-size: 0.85em;
   }
   
-  .proposal-title {
-    width: 100%;
-    padding-left: 3%;
-    padding-right: 3%;
-    margin-bottom: 3%;
-    text-align: justify !important;
-    font-size: 1em !important;
-    color: #ffffff !important;
-  }
+  
   
   .proposal-hero {
     text-align: center;
@@ -517,13 +425,11 @@
   }
   
   .proposal-action {
-    margin: 3% auto;
-    display: table-cell;
-    text-align: center !important;
-    font-size: 1em !important;
-    color: #FAC91A !important;
-     background-image: linear-gradient(#ffffff51, #ffffff2c)!important;
+    text-align: left;
+    color: #ffffff;
     border-radius: 20px;
+    padding: 0.5em;
+    font-family: 'Josefin Sans';
   }
   
   
