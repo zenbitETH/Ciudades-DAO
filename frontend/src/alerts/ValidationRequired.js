@@ -1,7 +1,6 @@
 import { useContext } from 'react';
-import { Alert } from 'react-bootstrap';
-import {Link} from "react-router-dom";
 import { LanguageContext } from '../contexts/LanguageContext';
+import verify from '../assets/verify.png';
 
 const ValidationRequired = () => {
   let [isEnglish] = useContext(LanguageContext);
@@ -10,20 +9,20 @@ const ValidationRequired = () => {
     <div>
       {isEnglish === 'english'
       ?
-      <Alert>
+      <a href="/quiz">
         <div className="main">
-          <div className="title3">Get validated to vote</div>
-          <div className="big-icon">⚠️</div>
-          <div className="white">
-            Only validated Querétaro citizens can create new proposals or vote on the available proposals
+        <h1><span id="vote" class="orange">Validate Account</span></h1><br/>
+          <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+          <div class="white-jos">
+            Only validated Querétaro citizens can create new proposals or vote on the available proposals. <br/><br/>
+            <div class="center">Touch to validate your account.</div>
           </div>
         </div>
         <div className ="floating">
-          <Link className="alt2" to="/quiz">Validate account</Link>
         </div>
-      </Alert>
+      </a>
       :
-      <Alert>
+      <a>
         <div className="main">
           <div className="title3">Valida tu cuenta</div>
           <div className="big-icon">⚠️</div>
@@ -32,9 +31,8 @@ const ValidationRequired = () => {
           </div>
         </div>
         <div className ="floating">
-          <Link className="alt2" to="/quiz">Validar que soy Queretan@</Link>
         </div>
-      </Alert>
+      </a>
       }
     </div>
   );
