@@ -15,6 +15,12 @@ import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
+import prop from '../assets/prop.png';
+import reward from '../assets/TAROrew.png';
+import vote from '../assets/vote.png';
+import past from '../assets/past.png';
+import verify from '../assets/verify.png';
+
 const ProposalList = () => {
   let [retrievedProposals, setRetrievedProposals] = useState([]);
   let [taro, setTaro] = useState();
@@ -208,63 +214,100 @@ const ProposalList = () => {
   //  let delegate = await taro.delegate(signerAddress);
   //  let delegateReceipt = await delegate.wait(1);
   //  console.log('delegateReceipt: ', delegateReceipt);
-  //};
+  //}
+
+
+  window.onscroll = function() {myFunction()}
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
+  
 
   return (
-  <div className= "App">
+  <div>
       {isEnglish === 'english'
       ?
-      <div>
-        <div>
-          <div className= "valert">
-            {isValidated ? "" : <ValidationRequired />}
+        <div class="proplist">
+          <div class="progress-holder">
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
+      </div>
+          <div id="CityDAO"class="big-icon">🗳️</div>
+          <h1><span class="orange">Gobernanza Urbana</span></h1><br/>
+          <div className= "propgrid">
+            <div class="prop-bg"><a href="/createProposal">
+              <img src={prop} class="ribbons"/> 
+              <div class="propsub">Crea una propuesta</div>
+              <div class="propopt">Proponer</div>
+            </a></div>
+            <div class="prop-bg2"><a href="#vote">
+              <img src={vote} class="ribbons"/> 
+              <div class="propsub">Propuestas disponibles</div>
+              <div class="propopt">Por votar</div>
+            </a></div>
+            <div class="prop-bgh"><a href="/PastProposals">
+              <img src={past} class="ribbons"/> 
+              <div class="propsub">Propuestas pasadas</div>
+              <div class="propopt">Historial</div>
+            </a></div>
+            <div class="prop-bgr"><a href="/PastrProposal">
+              <img src={reward} class="ribbons"/>
+              <div class="propsub">Crea propuestas, gana TARO</div>
+              <div class="propopt">Recompensas</div>
+            </a></div>
           </div>
-          <div className= "orangeB">
-            <div className="text-large">Make a new proposal</div>
-            <div className="big-icon">🦸🦸‍♂️</div>
-            <div className="main">The city needs you! Generate proposals for activities, public works or needs that you have identified in your community
-                Make proposals, vote for them and make them come true to get more TARO.
-            </div>
-            <div className ="floating">
-              <Link className="alt2" to="/createproposal"> ✍🏼 Create proposal</Link>
-            </div>
-          </div >
-        <div>
+        <div><br/>
+        <div className= "valert2">{isValidated ? "" : <ValidationRequired />}</div>
           {list.length > 0 ?
-            <div className ="space">
-              <div className= "yellowB">
-                <div className="text-large"> Vote on Proposals </div>
-                <div className="big-icon">🗳️</div>
-                <div className="text-large">1 TARO = 1 Vote</div>
-                <div className="main">Use your TARO to vote for or against available proposals. Your voting power depends on how many TARO tokens you hold in your wallet.</div>
+            <div className ="props">
+              <h1><span id="vote">Propuestas por votar</span></h1><br/>
+              <img src={vote} alt="Alert about key" class="prop-img"/>
+                <div class="floating">
+                <div class="about-tx2">Usa el TARO que has ganado para 
+                votar por propuestas de gobernanza en la ciudad de Querétaro.</div>
+                </div><h1>1 TARO = 1 Voto</h1><br/>
                 {list}
-                <div className="floating">
-                <Link className="alt2" to="/pastproposals">📅 Past proposals</Link>
-                </div>
-              </div >
             </div>
           :
-            <div className="space">
-              <div className= "yellowB">
-                <div className="text-large"> Vote on Proposals </div>
-                <div className="big-icon">🗳️</div>
-                <div className="text-large">1 TARO = 1 Vote</div>
-                <div className="main">Use your TARO to vote for or against available proposals. Your voting power depends on how many TARO tokens you hold in your wallet.</div>
-                <div className="floating">
-                <div className="title2">⛔There are no open proposals.⛔</div>
-                </div>
-                <div className="floating">
-                  <Link className="alt2" to="/pastproposals">📅 See past proposals</Link>
-                </div>
-              </div >
-              <div className="floating">
-                  <Link className="alt2" to="/">Return to home</Link>
+            <div className="void">                
+              <h1><span id="vote" class="red">Propuestas por votar</span></h1><br/>
+              
+                <div class="floating">
+                <div class="about-tx2"><span class="red">No hay propuestas por votar</span>, crea una propuesta o 
+              , consulta las propuestas pasadas o valida tu cuenta para participar.</div>
+                </div><h1>1 TARO = 1 Voto</h1><br/><br/>
+                <div class="void-link">
+                  <div class="prop-bg"><a href="/createProposal">
+                    <img src={prop} class="ribvan"/> 
+                    <div class="propsub">Crea una propuesta</div>
+                    <div class="propopt">Proponer</div>
+                  </a></div>
+                  <div class="prop-bgh"><a href="/PastProposals">
+                    <img src={past} class="ribvan"/> 
+                    <div class="propsub">Propuestas pasadas</div>
+                    <div class="propopt">Historial</div>
+                  </a></div>
+                  <div class="prop-bgv"><a href="/Quiz">
+                    <img src={verify} class="ribvan"/>
+                    <div class="propsub">Antes de empezar</div>
+                    <div class="propopt">Validar</div>
+                  </a></div>
+                  <div class="prop-bgr"><a href="/Pastrroposal">
+                    <img src={reward} class="ribvan"/>
+                    <div class="propsub">Ver documentación</div>
+                    <div class="propopt">Conoce +</div>
+                  </a></div>
                 </div>
             </div>
+
           }
         </div>
       </div>
-    </div>
+
     :
       <div>
         <div>
@@ -285,6 +328,7 @@ const ProposalList = () => {
           {list.length > 0 ?
             <div className ="space">
               <div className= "yellowB">
+    
                 <div className="text-large"> Propuestas para votar </div>
                 <div className="big-icon">🗳️</div>
                 <div className="text-large">1 TARO = 1 Voto</div>
@@ -292,7 +336,7 @@ const ProposalList = () => {
                 </div>
                 {list}
                 <div className="floating">
-                <Link className="alt2" to="/pastproposals">📅 Propestas pasadas</Link>
+                <Link className="alt2" to="/PastProposals">📅 Propestas pasadas</Link>
                 </div>
               </div >
             </div>
@@ -307,7 +351,7 @@ const ProposalList = () => {
             <div className="title2">⛔No hay propuestas activas.⛔</div>
             </div>
             <div className="floating">
-              <Link className="alt2" to="/pastproposals">📅 Ver propuestas pasadas</Link>
+              <Link className="alt2" to="/PastProposals">📅 Ver propuestas pasadas</Link>
             </div>
           </div >
           <div className="floating">
