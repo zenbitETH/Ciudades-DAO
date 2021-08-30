@@ -17,7 +17,10 @@ import { EthersContext } from '../contexts/EthersContext';
 import { TaroContext } from '../contexts/TaroContext';
 
 import img4 from '../assets/about-img4.svg';
+import meta from '../assets/meta.svg';
+import connect from '../assets/about-img.svg';
 import verify from '../assets/verify.png';
+
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
@@ -154,10 +157,10 @@ const Quiz = () => {
       //Delay function is only for development
       // const delay = () => new Promise(res => setTimeout(res, 2000));
 
-      if(_checkedAnswers.length === 10) {
+      if(_checkedAnswers.length === 6) {
         setLoadingModalShow(true);
-        //Make network call to receive 500 tokens
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('500'));
+        //Make network call to receive 1000 tokens
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('1000'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log('submitAnswersReceipt: ', submitAnswersReceipt);
         handleOnLoadingModal();
@@ -172,7 +175,29 @@ const Quiz = () => {
         // console.log('length: ', checkedAnswers.length);
         setSuccessModalShow(true);
         setCheckedAnswers([]);
-      } else if(_checkedAnswers.length >= 9) {
+      } else if(_checkedAnswers.length >= 5) {
+        setLoadingModalShow(true);
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('800'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log(submitAnswersReceipt);
+        handleOnLoadingModal();
+        //
+
+        // console.log('length: ', checkedAnswers.length);
+        setSuccessModalShow(true);
+        setCheckedAnswers([]);
+      } else if(_checkedAnswers.length >= 4) {
+        setLoadingModalShow(true);
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('600'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log(submitAnswersReceipt);
+        handleOnLoadingModal();
+        //
+
+        // console.log('length: ', checkedAnswers.length);
+        setSuccessModalShow(true);
+        setCheckedAnswers([]);
+      } else if(_checkedAnswers.length >= 3) {
         setLoadingModalShow(true);
         let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('400'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
@@ -183,18 +208,7 @@ const Quiz = () => {
         // console.log('length: ', checkedAnswers.length);
         setSuccessModalShow(true);
         setCheckedAnswers([]);
-      } else if(_checkedAnswers.length >= 8) {
-        setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('300'));
-        let submitAnswersReceipt = await submitAnswers.wait(1);
-        console.log(submitAnswersReceipt);
-        handleOnLoadingModal();
-        //
-
-        // console.log('length: ', checkedAnswers.length);
-        setSuccessModalShow(true);
-        setCheckedAnswers([]);
-      } else if(_checkedAnswers.length >= 7) {
+      } else if(_checkedAnswers.length >= 2) {
         setLoadingModalShow(true);
         let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('200'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
@@ -264,53 +278,64 @@ function myFunction() {
   return (
     <body id="quiz">
       {isEnglish === 'english' ?
-        <div className="">
-                <div class="progress-holder">
+        <div class="">
+          <div class="progress-holder">
         <div class="progress-container">
           <div class="progress-bar2" id="myBar"></div>
         </div>
       </div>
         {isConnected ?
-            <div>
-            <div>
-              <div>      
-              <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
-              <h1><span>Valida tu cuenta </span></h1>
-                <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-                {englishQuestions}
-                </QuizContext.Provider>
-
-                <div className="floating">
-                      <Button className="alt" onClick={handleOnSubmitAnswers}> ✔️ Verify answers</Button>
-                    </div>
-                </div>
-
-                <QuizFailureModal
-                  show={failureModalShow}
-                  onHide={handleOnFailure}
-                />
-                <QuizSuccessModal
-                  show={successModalShow}
-                  onHide={handleOnSuccess}
-                />
-                <QuizAlreadySubmittedModal
-                  show={alreadySubmittedModal}
-                  onHide={handleOnAlreadySubmitted}
-                />
-                  <IsLoadingModal
-                    show={loadingModalShow}
-                    onHide={handleOnLoadingModal}
-                  />
-              </div>
+          <div>
+            <div> 
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            <h1><span id="vote">Validate your account</span></h1><br/>
+            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
+            {englishQuestions}
+            </QuizContext.Provider>
+            <div className="floating">
+              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Validate account</div>
             </div>
+            </div>
+            
+            <QuizFailureModal
+              show={failureModalShow}
+              onHide={handleOnFailure}
+            />
+            <QuizSuccessModal
+              show={successModalShow}
+              onHide={handleOnSuccess}
+            />
+            <QuizAlreadySubmittedModal
+              show={alreadySubmittedModal}
+              onHide={handleOnAlreadySubmitted}
+            />
+              <IsLoadingModal
+                show={loadingModalShow}
+                onHide={handleOnLoadingModal}
+              />
+
+          </div>
           :
-          <div className="valert4">
-            <div className="main">
-            <h1><span id="vote">Connect your wallet</span></h1><br/>
-            <img src={img4} alt="Alert about key" class="prop-img"/>
-              <div className="white">To take the quiz and start earning TARO, you first need to get connected to the Ethereum network</div>
-              <Link className="alt2" to="/">Return home and click on "Connect Wallet to Unlock"</Link>
-            </div>
+          <div class="valert4">
+              <h1><span id="vote">Connect your wallet</span></h1><br/>
+              <div class="center"><img src={img4} alt="Alert about key" class="prop-img"/></div><br/>
+                <div class="floating">
+                  <div class="about-tx">You need a Web 3 wallet to use VoTARO. 
+                  Get a wallet or connect an existing address in the home screen.
+                  <br/><br/></div>
+                </div>
+                <div class="void-link">
+                  <div class="about-bg"><a href="https://metamask.io">
+                    <img src={meta} class="ribvan"/> 
+                    <div class="propsub">Get a Web 3 wallet</div>
+                    <div class="propopt">Download</div>
+                  </a></div>
+                  <div class="about-bg"><a href="/Home">
+                    <img src={connect} class="ribvan"/>
+                    <div class="propsub">Use your address</div>
+                    <div class="propopt">Connect</div>
+                  </a></div>
+                </div>
           </div>
           }
         </div>
