@@ -3,6 +3,11 @@ import { Modal } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import { LanguageContext } from '../contexts/LanguageContext';
 
+import confirm from '../assets/confirm.svg';
+import prop from '../assets/prop.png';
+import vote2 from '../assets/vote2.svg';
+
+
 const QuizAlreadySubmittedModal = (props) => {
   let [isEnglish] = useContext(LanguageContext);
 
@@ -17,16 +22,23 @@ const QuizAlreadySubmittedModal = (props) => {
         centered
         className="modal-2"
       >
-
-<div className="big-icon">🚫<div className="modalheader">
-You have already submitted your quiz</div>
+      <div class="center"><div><img src={confirm} alt="Alert about verification" class="prop-img"/></div></div>
+      <h1><span>Account already validated </span></h1><br/>
+      <div class="about-tx"> Now you can create and vote on proposals on the urban governance page.</div>
+      <Modal.Body>
+        <div class="void-link">
+        <div class="prop-bg"><a href="/Createproposal">
+          <img src={prop} class="ribvan"/> 
+          <div class="propsub">Create a proposal</div>
+          <div class="propopt">Propose</div>
+        </a></div>
+        <div class="prop-bg2"><a href="/ProposalList">
+          <img src={vote2} class="ribvan"/>
+          <div class="propsub">Avalilable proposals</div>
+          <div class="propopt">Vote</div>
+        </a></div>
       </div>
-        
-        <Modal.Body>
-          <p>
-            Now you can create and vote on proposals on the urban governance page<Link className="alt2" to="/proposalList">🗳️ See proposals</Link>
-          </p>
-        </Modal.Body>
+      </Modal.Body>
       </Modal>
       :
       <Modal

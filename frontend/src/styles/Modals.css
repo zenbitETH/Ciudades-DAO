@@ -1,0 +1,37 @@
+.modal {
+    justify-content: center !important;
+    align-content: center !important;
+    align-items: center !important;
+    color: #3d386b !important;
+    text-align: center !important;
+    font-family: 'Lexend Deca', sans-serif !important; 
+    border: none !important;
+  }
+  
+  .orange-modal {  
+    background-color: #FF9400 !important;
+    border-radius: 20px !important;
+    background-image: linear-gradient(#FF9400, #ffc16b);
+    font-family: 'Lexend Deca', sans-serif !important; 
+    color: #ffffff !important;
+  }
+  
+  .modal-content {  
+    background-color: #00adbe !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    background-image: linear-gradient(#00000068, #68686821);
+    font-family: 'Lexend Deca', sans-serif !important; 
+    color: #ffffff !important;
+    padding: 1em;
+  }
+  
+  .modal-2 .modal-content {  
+    border-radius: 20px !important;
+    text-align: center !important;
+    background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
+    background-size: 500% 500%;
+    animation: gradient 2s ease infinite;
+    font-family: 'Lexend Deca', sans-serif !important; 
+    color: #ffffff !important;
+  }
