@@ -13,33 +13,33 @@ const Question = ({question, answers, number}) => {
   };
 
   const answer = answers.map((a, i) => (
-    <div key={i}>
+    <div class="container" key={i}>
       <input
+        class="quiz-bg"
         type='radio'
         id={a}
         value={a}
         name={number}
-        onClick={handleOnAnswer}
-      />
-    <label htmlFor={a}>{a}</label>
+        onClick={handleOnAnswer}>
+      </input>
+      <label class="checkmark" htmlFor={a}>{a}</label>
     </div>
 ))
 
   return (
     <div>
       {isEnglish === 'english' ?
-
       <Card className="question-card">
         <Card.Body className="main">
-          <Card.Title className="orange3">{question}</Card.Title>
-          <div className="text-large-quiz"> {answer} </div>
+          <h2 class="jos">{question}</h2><br/>
+          <div class="quiz-grid"> {answer} </div>
         </Card.Body>
       </Card>
       :
-      <Card className="question-card">
-      <Card.Body className="main">
-        <Card.Title className="orange3">{question}</Card.Title>
-        <div className="text-large-quiz">{answer}</div>
+      <Card class="question-card">
+      <Card.Body class="main">
+        <Card.Title class="orange3">{question}</Card.Title>
+        <div className="void-link">{answer}</div>
       </Card.Body>
     </Card>
     }
