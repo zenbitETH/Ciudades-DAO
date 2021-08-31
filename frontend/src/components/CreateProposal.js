@@ -221,10 +221,9 @@ function myFunction() {
           <div class="progress-bar" id="myBar"></div>
         </div>
       </div>
-        <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
-        <h1><span class="orange">Nueva propuesta</span></h1><br/><br/>
-      
-        
+      <h1><span class="orange">Nueva propuesta</span></h1><br/><br/>
+      <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
+
       <Form autocomplete="off">
           <Form.Group as={Row} controlId="formTitle">
           <Form.Label  >
