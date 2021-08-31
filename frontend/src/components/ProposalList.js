@@ -233,13 +233,13 @@ const ProposalList = () => {
       ?
         <div class="proplist">
           <div class="progress-holder">
-        <div class="progress-container">
-          <div class="progress-bar" id="myBar"></div>
-        </div>
-        </div>
-        <div>{isValidated ? "" : <ValidationRequired />}</div><br/>
-          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar"></div>
+            </div>
+          </div>
+          <span>{isValidated ? "" : <ValidationRequired />}</span>
           <h1><span class="orange">Gobernanza Urbana</span></h1>
+          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>          
           <div className= "propgrid">
             <div class="prop-bg"><a href="/createProposal">
               <img src={prop} class="ribbons"/> 
@@ -264,19 +264,19 @@ const ProposalList = () => {
           </div>
         <div><br/>
           {list.length > 0 ?
-            <div className ="props">
-              <h1><span id="vote">Propuestas por votar</span></h1><br/>
+            <div id="vote" className="props">
+              <h1><span >Propuestas por votar</span></h1><br/>
               <img src={vote2} alt="Alert about key" class="prop-img"/>
                 <div class="floating">
-                <div class="about-tx2">Usa el TARO que has ganado para 
-                votar por propuestas de gobernanza en la ciudad de Querétaro.</div>
-                </div><h1>1 TARO = 1 Voto</h1><br/>
+                  <div class="about-tx2">Usa el TARO que has ganado para 
+                  votar por propuestas de gobernanza en la ciudad de Querétaro.</div>
+                  </div><h1>1 TARO = 1 Voto</h1><br/>
                 {list}
             </div>
            :
-            <div className="void">                
+            <div id="vote" className="void">                
               <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-              <h1><span id="vote" class="red">No hay propuestas por votar</span></h1><br/>
+              <h1><span  class="red">No hay propuestas por votar</span></h1><br/>
                 <div class="floating">
                   <div class="about-tx2">Crea una propuesta o valida tu cuenta para participar. 
                     También puedes ver el historial de propuesta o conoce más antes de empezar.

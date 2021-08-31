@@ -127,24 +127,21 @@ const ApprovedProposal = ({title,
       {isEnglish === 'english'
 
       ?
-
-      <Card className="proposala">
-       <div className="proposal-id">💡 Proposal # {id} 
-       <span className="proposal-date"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
-      <div className="proposal-authorpast">by {proposer}</div>
-    </div>
-    <div className="proposal-title">🎯{title}</div>
-    <div className="proposal-details">🔍 Details:</div>
-    <div className="proposal-container">
-      <div className="proposal-hero">🦸🦸‍♂️In charge: <div className="table-text">{personInCharge}</div></div>
-      <div className="proposal-table">
-          <div className="proposal-action">⚙️ Action: <div className="table-text">{typeOfAction}</div></div>
-          <div className="proposal-location"> 📍 Where: <div className="table-text">{neighborhood}</div></div>
-          <div className="proposal-cost">💸 Cost: <div className="table-text">{budget} pesos</div> </div>
-      </div>
-      
-      <div className="proposal-description">📑 Description: <div className="table-text">{description}</div></div>
-    </div>  
+      <div class="proposal">
+        <div class="proposal-expiration">
+          <h2 class="prop-title">💡 Proposal # {id}</h2>
+          <span class="yellowr"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
+        </div>
+        <div class="aproposal">Approved by {forVotes} votes</div>
+        <div class="mini-title">🎯 Objetive:</div>
+        <div class="prop-hl"> {title}</div><br/><br/>
+        <div class="grid-prop">      
+          <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
+          <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
+          <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
+          <div class="minit-bg3">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
+        </div>
+        <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
 
       {/*}
       <div className ="proposal-main">
@@ -152,24 +149,12 @@ const ApprovedProposal = ({title,
         <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
       </div>
       */}
-
-    <Card.Body className="proposal-table">
-      <div className="proposal-main">
-      <div className="proposal-favor">
-      <div>
-          ✔️ Approved by:
-        </div>
-        <p className="big-iconf">{forVotes} <p>TARO</p></p>
-        </div>
-        <div>
-        <div className="proposal-against">
-          ❌ Against:
-        </div>
-           <p className="big-icona">{againstVotes} <p>TARO</p></p>
-        </div>
+    <div class="yellow">made by {proposer}</div><br/>
+    <div className="vote-grid">
+      <div class="prop-bgf2"><h2>✔️ Approved by:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
+      <div class="prop-bgw"><h2> Against:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
       </div>
-    </Card.Body>
-  </Card>
+  </div>
 
       :
       <Card className="proposala">

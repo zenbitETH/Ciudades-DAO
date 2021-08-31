@@ -135,23 +135,19 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
 
       ?
 
-  <div className="proposal">
+  <div class="proposal">
     
     <div class="proposal-expiration">
-      <h2 class="orange">💡 Propuesta # {id} </h2>
+      <h2 class="prop-title">💡 Propuesta # {id} </h2>
       <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
     </div>
     <div class="mini-title">🎯 Objetive:</div>
     <div class="prop-hl"> {title}</div><br/><br/>
-    
-      
     <div class="grid-prop">      
-
       <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
-      <div class="minit-bg">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
-      <div class="minit-bg"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
-      <div class="minit-bg">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
-
+      <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
+      <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
+      <div class="minit-bg3">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
     </div>
     
     <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
@@ -161,47 +157,25 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
       <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
     </div>
     */}
-<div class="yellow">made by {proposer}</div><br/>
+    <div class="yellow">made by {proposer}</div><br/>
 
+    <div class="vote-grid">
+      {!hasVoted?
+      <a class="prop-bgf" onClick={handleOnClickFor}>
+        <br/><h1 class="votef">Vote for</h1>
+      </a>
+      :
+      <div class="prop-bgf2"><h2>For:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
+      }
 
-
-  <Card.Body className="proposal-votes">
-  <div className="yellow-card"></div>
-    <div className="proposal-main">
-      <div className="proposal-favor">
-        <div>
-          ✔️ For:
-        </div>
-        <p className="big-iconf">{forVotes}
-          {!hasVoted
-            ?
-            <Button className="favor" block onClick={handleOnClickFor}>
-              ✔️ Vote for
-            </Button>
-            :
-            ''
-          }
-        </p>
-      </div>
-      <div >
-        <div className="proposal-against">
-          ❌ Against:
-        </div>
-        <p className="big-icona">{againstVotes}
-          {!hasVoted
-            ?
-            <Button className="against" block onClick={handleOnClickAgainst}>
-              ❌ Vote against
-            </Button>
-            :
-            ''
-          }
-        </p>
-        
-      </div>
-      
-    </div>
-  </Card.Body>
+      {!hasVoted ?
+      <a class="prop-bga" onClick={handleOnClickAgainst}>
+        <h1 class="votef">Vote against</h1>
+      </a>
+      : 
+      <div class="prop-bga2"><h2> Against:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
+      }
+    </div>    
 </div>
 
       :
