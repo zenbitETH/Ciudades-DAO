@@ -121,9 +121,9 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
         <div class="prop-hl"> {title}</div><br/><br/>
         <div class="grid-prop">
           <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
-          <div class="minit-bg">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
-          <div class="minit-bg"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
-          <div class="minit-bg">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
+          <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
+          <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
+          <div class="minit-bg3">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
         </div>
         <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
           {/*}

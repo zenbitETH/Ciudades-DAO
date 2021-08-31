@@ -431,7 +431,7 @@ grid-gap: 0.5em;
 
 .prop-bgw {
   padding: 1em;
-  background: linear-gradient(90deg,  #2b284a00,#b4b1b1ac, #b4b1b1ac,#2b284a00);
+  background-color: #b4b1b160;
   border-radius: 25px;
   height: 175px;
   width: 100%;
@@ -484,7 +484,7 @@ grid-gap: 0.5em;
   padding: 1em 1em;
   margin-left: -1em;
   margin-right: -1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   font-family: 'Lexend Deca', sans-serif;
 }
 
@@ -556,17 +556,26 @@ grid-gap: 0.5em;
   margin-bottom: 2em;
 }
 
+.proposal-description {
+  text-align: justify !important;
+  padding: 3%;
+  font-size: 1em !important;
+  color: #FAC91A !important;
+}
+
 .prop-hl {
   font-size: clamp(1.1rem, -0.65rem + 8.333vw, 1rem);
   font-weight: 300;
   color: #ffffff;
-  text-align: justify !important;
+  text-align: justify ;
   position: relative; 
   font-family: 'Lexend Deca';
-  text-align: left;
+  text-align: justify;
+  overflow-wrap: break-word;
  }
 
 .description-bg {
+  text-align: justify;
   color: #FF9400;
   font-family: "Josefin Sans"; 
   background-color: #ffffff26;
@@ -580,6 +589,7 @@ grid-gap: 0.5em;
 
  .prop-description {
   text-align: justify;
+  overflow-wrap: break-word;
   font-size: 1.15em;
   padding: 0.4em;
   font-family: 'Lexend Deca';
@@ -598,7 +608,7 @@ grid-gap: 0.5em;
 .mini-title {
   color: #FF9400;
   font-family: "Josefin Sans"; 
-  text-align: left;  
+  text-align: left; 
 }
 
 .minit-bg {
