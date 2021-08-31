@@ -6,11 +6,12 @@ const ValidationRequired = () => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div>
+    <div class="valert2">
       {isEnglish === 'english'
       ?
-      <a href="/quiz">
+      <a href="/quiz" >
         <div className="main">
+          <br/><br/>
         <h1><span id="vote" class="orange">Validate Account</span></h1><br/>
           <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
           <div class="white-jos">
