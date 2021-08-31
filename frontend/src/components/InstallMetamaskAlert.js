@@ -11,13 +11,15 @@ const InstallMetamaskAlert = () => {
   return (
     <div class="floating">
       {isEnglish === 'english' ?
-      <Alert className="valert">
-       <img src={img4} alt="Alert about key" class="prop-img"/>
-       <div class="white">It appears you don't have a crypto address</div>
-       <div class="floating">
-         <Button className="Wallet" href="https://www.metamask.io/">Download Wallet</Button>
-       </div>
-      </Alert>
+      <div class="full-width">
+        <Alert className="valert">
+         <div class="shake"><img src={img4} alt="Alert about key" class="prop-img"/></div>
+         <div class="white">It appears you don't have a crypto address</div>
+         <div class="floating">
+           <Button className="Wallet" href="https://www.metamask.io/">Download Wallet</Button>
+         </div>
+        </Alert>
+      </div>
     :
       <Alert className="valert">
         <h1 >⚠️</h1>
