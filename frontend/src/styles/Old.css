@@ -307,11 +307,7 @@
     padding-left: 3%;
     color: #ffffff;
   }
-  
-  .proposal-main {
-    font-size: 15px !important;
-    display: table-row !important;
-  }
+
   
   .question-card {
     background-color: transparent;
@@ -341,15 +337,7 @@
     color: #3d386b !important;
   }
   
-  .yellow-card {
-    width: 100%;
-    text-align: center;
-    margin-left: 2%;
-    border-radius: 10px;
-    font-size: 12px !important;
-    color: #3d386b !important;
-    background-image: linear-gradient(#1afa77,#FAC91A);
-  }
+  
   
   .white-card {
     width: 100%;
@@ -407,15 +395,11 @@
   }
   
   .proposal-favor {
-    width: 50%;
-    display: table-cell;
     text-align: left !important;
     color: #ffffff !important;
   }
   
   .proposal-against {
-    width: 50%;
-    display: table-cell;
     text-align: right !important;
     color: #ffffff !important;
   }
@@ -428,13 +412,7 @@
     font-family: 'Josefin Sans';
   }
   
-  
-  .proposal-votes {
-    width: 100%;
-    display: table !important;
-    text-align: justify;
-    border-radius: 15px;
-  }
+
   
   .proposal-location {
     margin: 3% auto;
