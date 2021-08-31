@@ -6,8 +6,6 @@ import CountdownClock from './CountdownClock';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
-import Chart from 'react-apexcharts'
-import Charts from './Chart';
 
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';

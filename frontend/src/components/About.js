@@ -14,7 +14,6 @@ import www from '../assets/www.svg'
 import corner from '../assets/corner.svg'
 import { LanguageContext } from '../contexts/LanguageContext';
 import ReactPlayer from "react-player";
-import table from "charts.css";
 
 
 
@@ -201,7 +200,6 @@ const About = () => {
           <div class="about-hl1"><a id="step2" class="big-icon">🗳️</a><br/>C. Propón y vota en Querétaro</div>
 
           <h2 class="yellow-lex">¿Cuantos TAROs existen? <img src={TAROtok} alt="TARO tokenomics" class="about-img"/></h2>
-
           <div class="address-img"><h2 class="lex">¿Cómo es la votación con TARO?</h2>
           <span class="yellow-text">Cada TARO equivale a un voto y podrás usarlo en la gobernanza de las propuestas</span> que realicen los ciudadanos de Querétaro.<br/><br/>
             asdasdas
@@ -212,42 +210,10 @@ const About = () => {
           <div class="address-img"><h2 class="lex">¿Cómo voto las propuestas?</h2>
             asdasdas
           </div>
-         
-              
         </div>
 
       <div class="about-bg1">
 
-
-      <div class="donut-chart-block block"> 
-          <h2 class="titular">OS AUDIENCE STATS</h2>
-          <div class="donut-chart">
-            <div id="porcion1" class="recorte"><div class="quesito ios" data-rel="21"></div></div>
-            <div id="porcion2" class="recorte"><div class="quesito mac" data-rel="39"></div></div>
-            <div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
-            <div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
-            <p class="center-date">JUNE<br/><span>2013</span></p>
-          </div>
-          <ul class="os-percentages horizontal-list">
-              <li>
-                  <p class="ios os scnd-font-color">iOS</p>
-                  <p class="os-percentage">21<sup>%</sup></p>
-              </li>
-              <li>
-                  <p class="mac os scnd-font-color">Mac</p>
-                  <p class="os-percentage">39<sup>%</sup></p>
-              </li>
-              <li>
-                  <p class="linux os scnd-font-color">Linux</p>
-                  <p class="os-percentage">9<sup>%</sup></p>
-              </li>
-              <li>
-                  <p class="win os scnd-font-color">Win</p>
-                  <p class="os-percentage">31<sup>%</sup></p>
-              </li>
-          </ul>
-        </div>
-----------------------------------------------------------------------
         <table id="stacked-example-4" class="charts-css column hide-data show-heading show-labels show-primary-axis show-3-secondary-axes data-spacing-10 multiple stacked">
             <caption> Percentage Stacked Columns </caption> 
             <thead>

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './styles/Home.css'
 import './styles/About.css'
 import './styles/Buttons.css'
-import './styles/Charts.css'
 import './styles/Old.css'
 import './styles/Proposals.css'
 import './styles/CreateProposal.css'
