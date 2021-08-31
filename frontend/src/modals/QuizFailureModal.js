@@ -26,17 +26,17 @@ const QuizFailureModal = (props) => {
       <div class="about-tx">You have failed the validation or some answer is missing, take a look to the about page and try again.</div>
           <Modal.Body>
           <div class="void-link">
-                  <div class="prop-bgr"><a href="/About">
-                    <img src={reward} class="ribvan"/> 
-                    <div class="propsub">Votaro documentation</div>
-                    <div class="propopt">About</div>
-                  </a></div>
-                  <div class="prop-bg2"><a href="/Quiz">
-                    <img src={verify} class="ribvan"/>
-                    <div class="propsub">Review your ansers</div>
-                    <div class="propopt">Try again</div>
-                  </a></div>
-                </div>
+            <div class="prop-bgr"><a href="/About">
+                <img src={reward} class="ribvan"/> 
+                <div class="propsub">Votaro documentation</div>
+                <div class="propopt">About</div>
+              </a></div>
+              <div class="prop-bg2"><a href="/Quiz">
+                <img src={verify} class="ribvan"/>
+                <div class="propsub">Review your ansers</div>
+                <div class="propopt">Try again</div>
+              </a></div>
+            </div>
           </Modal.Body>
         </Modal>
     
