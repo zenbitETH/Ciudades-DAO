@@ -1,14 +1,14 @@
 /* About */
 
 .logo {
-    width: 100%;
-    margin-bottom: 1em;
-    position: relative;
-   }
-  
-  #about {
-    background: linear-gradient(-180deg, #2b284a, #2b284a, #b08d0f6c, #FAC91a);
-  }
+ width: 100%;
+ margin-bottom: 1em;
+ position: relative;
+}
+
+#about {
+  background: linear-gradient(-180deg, #2b284a, #2b284a, #b08d0f6c, #FAC91a);
+}
   
   .about {
     border-radius: 20px;
@@ -218,9 +218,11 @@
   .about-bg img {
     content:'';
     position: absolute;
-    top: 0px;
-    right: 0px;
-    opacity: 20%;
+    bottom: 0px;
+    right:  10px;
+    opacity: 90%;
+    height: 120px;
+    border-radius: 25px;
   }
   
   .about-bg:hover img {
@@ -259,7 +261,7 @@
   .about-tx2 {
     font-family: 'Josefin Sans';
     text-align: justify;
-    margin-top: 0.5em;
+    margin: 0.5em;
     font-size: clamp(0.9em, -0.85rem + 6.333vw, 1.2rem);
     position: relative !important;
     color: #ffffff;

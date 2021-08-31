@@ -146,13 +146,13 @@
   .floating {
     border-radius: 20px;
     width:100%;
-    margin: 1% auto;
+    
     font-family: 'Lexend Deca', sans-serif;
     display: flex !important;
     justify-content: center !important;
     align-content: center !important;
     align-items: center !important;
-    color: #3d386b !important;
+    color: #ffffff !important;
   }
   
   .title2 {
@@ -266,7 +266,6 @@
   .proposalr {
     border-radius: 20px;
     width:100%;
-    
     margin: 3% auto;
     background-image: linear-gradient(#dc3840, #da898d)!important;
     font-family: 'Lexend Deca', sans-serif;
@@ -288,7 +287,6 @@
     color: #ffffff;
     border-radius: 20px;
   } 
-  
   
   .proposal-container {
     width: 94%;
@@ -316,7 +314,7 @@
   }
   
   .question-card {
-    background-color: transparent !important;
+    background-color: transparent;
     width: 100%;
     border: none;
     margin-top: 3% !important;
@@ -372,8 +370,6 @@
     text-align: right;
     font-size: 0.85em;
   }
-  
-  
   
   .proposal-hero {
     text-align: center;
@@ -479,40 +475,7 @@
     margin-bottom: 1%;
   }
   
-  .modal {
-    justify-content: center !important;
-    align-content: center !important;
-    align-items: center !important;
-    color: #3d386b !important;
-    text-align: center !important;
-    font-family: 'Lexend Deca', sans-serif !important; 
-    border: none !important;
-  }
-  
-  .orange-modal {  
-    background-color: #FF9400 !important;
-    border-radius: 20px !important;
-    background-image: linear-gradient(#FF9400, #ffc16b);
-    font-family: 'Lexend Deca', sans-serif !important; 
-    color: #ffffff !important;
-  }
-  
-  .modal-content {  
-    background-color: #FF9400 !important;
-    border-radius: 20px !important;
-    text-align: center !important;
-    background-image: linear-gradient(#FF9400, #ffc16b);
-    font-family: 'Lexend Deca', sans-serif !important; 
-    color: #3d386b !important;
-  }
-  
-  .modal-2 .modal-content {  
-    border-radius: 20px !important;
-    text-align: center !important;
-    background-image: linear-gradient(#dc3840, #e26c72);
-    font-family: 'Lexend Deca', sans-serif !important; 
-    color: #ffffff !important;
-  }
+ 
   
   .big-iconf {
     display: block;

@@ -23,7 +23,7 @@
 
 .orange-jos {
   color: #FF9400;
-  font-family: "Josefin Sans"; 
+  font-family: "Josefin Sans";
 }
 
 .purple {
@@ -67,7 +67,7 @@
 }
 
 .red {
-  color: #  ;
+  color: #fb4c38  ;
 }
 
 .red-lex {
@@ -374,12 +374,10 @@ h2 {
 
 .cv {
   display: flex;
-  width: 100%;
   height: 50vh;
   position: relative; 
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
 }
 
 .locked {
@@ -442,29 +440,29 @@ h2 {
 
 .valert {
   font-size: clamp(.9em, -0.975rem + 6.5vw, 1.6rem);
-  width: fit-content;
   color: #fff !important;
-  border-radius: 20px;  background: linear-gradient(45deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
+  border-radius: 10px;  
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
 }
 
 .valert2 {
-  font-size: clamp(.9em, -0.975rem + 6.5vw, 1.6rem);
-  margin-left: -1.1em;
-  margin-right: -1.1em;
+  font-size: clamp (.9em, -0.975rem + 6.5vw, 1.6rem);
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  margin-top: -10em;
   width: auto !important;
   padding: 1em;
-  background: linear-gradient(-45deg, #2b284a00, #00aebea0, #00aebea0, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #00aebea0, #00aebea0, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
+  border-radius: 0px 0px 25px 25px;
 }
 
 .valert3 {
   background-size: cover;
   font-size: clamp(1em, -0.975rem + 6.5vw, 1.8rem);
-  margin-left: -1.1em;
-  margin-right: -1.1em;
   margin-top: -1.15em;
   margin-bottom: -1.1em;
   border-radius: 20px;
@@ -477,13 +475,12 @@ h2 {
 .valert4 {
   background-size: cover;
   font-size: clamp(1em, -0.975rem + 6.5vw, 1.8rem);
-  margin-left: -1.1em;
-  margin-right: -1.1em;
-  margin-top: -1.15em;
+  margin-top: -3.7em;
   margin-bottom: -1.1em;
-  width: auto !important;
-  padding: 1em;
-  background: linear-gradient(45deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
+  height: 100vh;
+  padding: 25% 1em;
+  font-family: 'Lexend Deca';
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
   color: #fff !important;
@@ -494,14 +491,13 @@ h2 {
 .shake {
   font-size: 3em;
   margin: 0.5em;
-}
-
-.shake:hover {
-  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: shake 1s cubic-bezier(0.56, 0.47, .29, 0.77) both;
   transform: translate3d(0, 0, 0);
+  animation-iteration-count: infinite;
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
 
 @keyframes shake {
   10%,
@@ -526,7 +522,7 @@ h2 {
   }
 }
 
-.jump:hover{
+.jump{
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-name: jump;
