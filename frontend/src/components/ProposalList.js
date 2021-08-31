@@ -228,7 +228,7 @@ const ProposalList = () => {
   
 
   return (
-  <div>
+  <body id="create">
       {isEnglish === 'english'
       ?
         <div class="proplist">
@@ -236,9 +236,10 @@ const ProposalList = () => {
         <div class="progress-container">
           <div class="progress-bar" id="myBar"></div>
         </div>
-      </div>
+        </div>
+        <div>{isValidated ? "" : <ValidationRequired />}</div><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-          <h1><span class="orange">Gobernanza Urbana</span></h1><br/>
+          <h1><span class="orange">Gobernanza Urbana</span></h1>
           <div className= "propgrid">
             <div class="prop-bg"><a href="/createProposal">
               <img src={prop} class="ribbons"/> 
@@ -262,7 +263,6 @@ const ProposalList = () => {
             </a></div>
           </div>
         <div><br/>
-        <div>{isValidated ? "" : <ValidationRequired />}</div>
           {list.length > 0 ?
             <div className ="props">
               <h1><span id="vote">Propuestas por votar</span></h1><br/>
@@ -273,30 +273,30 @@ const ProposalList = () => {
                 </div><h1>1 TARO = 1 Voto</h1><br/>
                 {list}
             </div>
-          :
+           :
             <div className="void">                
               <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-              <h1><span id="vote" class="red">Propuestas por votar</span></h1><br/>
-              
+              <h1><span id="vote" class="red">No hay propuestas por votar</span></h1><br/>
                 <div class="floating">
-                <div class="about-tx2"><span class="red">No hay propuestas por votar</span>, crea una propuesta o 
-              , consulta las propuestas pasadas o valida tu cuenta para participar.</div>
-                </div><h1>1 TARO = 1 Voto</h1><br/><br/>
+                  <div class="about-tx2">Crea una propuesta o valida tu cuenta para participar. 
+                    También puedes ver el historial de propuesta o conoce más antes de empezar.
+                  </div>
+                </div>
                 <div class="void-link">
                   <div class="prop-bg"><a href="/createProposal">
                     <img src={prop} class="ribvan"/> 
                     <div class="propsub">Crea una propuesta</div>
                     <div class="propopt">Proponer</div>
                   </a></div>
-                  <div class="prop-bgh"><a href="/PastProposals">
-                    <img src={past} class="ribvan"/> 
-                    <div class="propsub">Propuestas pasadas</div>
-                    <div class="propopt">Historial</div>
-                  </a></div>
                   <div class="prop-bgv"><a href="/Quiz">
                     <img src={verify} class="ribvan"/>
                     <div class="propsub">Antes de empezar</div>
                     <div class="propopt">Validar</div>
+                  </a></div>
+                  <div class="prop-bgh"><a href="/PastProposals">
+                    <img src={past} class="ribvan"/> 
+                    <div class="propsub">Propuestas pasadas</div>
+                    <div class="propopt">Historial</div>
                   </a></div>
                   <div class="prop-bgr"><a href="/Pastrroposal">
                     <img src={reward} class="ribvan"/>
@@ -305,11 +305,9 @@ const ProposalList = () => {
                   </a></div>
                 </div>
             </div>
-
           }
         </div>
       </div>
-
     :
       <div>
         <div>
@@ -365,7 +363,7 @@ const ProposalList = () => {
       </div>
     </div>
     }
-    </div>
+    </body>
   );
 };
 
