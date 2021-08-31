@@ -19,7 +19,6 @@ const IsLoadingModal = (props) => {
           <div>
             Loading...
           </div>
-          <p/>
           <div>
             <span animation="border"className="spinner-grow" role="status"></span>
           </div>

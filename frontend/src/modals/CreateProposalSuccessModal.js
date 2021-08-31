@@ -2,6 +2,10 @@ import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import { LanguageContext } from '../contexts/LanguageContext';
+import prop from '../assets/prop.png';
+
+import send from '../assets/sended.svg';
+import vote2 from '../assets/vote2.svg';
 
 const CreateProposalSuccessModal = (props) => {
   let [isEnglish] = useContext(LanguageContext);
@@ -12,25 +16,30 @@ const CreateProposalSuccessModal = (props) => {
 
       <Modal
         {...props}
-        size="lg"
+        size="xl"
         aria-labelledby="contained-modal-title-vcenter"
         centered
         className="main"
       >
-      
-        <div className="big-icon">🎉<div className="modalheader">
-            Proposal created!</div>
-            </div>
-            <p className="white">You have successfully submitted your proposal!</p>      
-        <Modal.Body>
-             <p>
-            Create more proposals to increase your voting power.
-            The first 5 proposals will give you 20 TARO each!
-          </p>
-          <p>
-            <Link className="alt2" to="/ProposalList">Take a look at your proposal</Link>
-          </p>
-        </Modal.Body>
+      <div class="center"><div class="jump"><img src={send} alt="Alert about verification" class="prop-img"/></div></div>
+      <h1><div >Proposal sended! </div></h1><br/>
+      <div class="about-tx">You have successfully created a proposal!
+        Create more proposals to increase your voting power.
+        The first 20 proposals will give you 100 TARO each!
+      </div>
+        <div class="void-link">
+          <div class="prop-bgr"><a href="/ProposalList#vote">
+              <img src={vote2} class="ribvan"/> 
+              <div class="propsub">Avaliable proposals</div>
+              <div class="propopt">Vote</div>
+            </a></div>
+            <div class="prop-bg2"><a href="/CreateProposal">
+              <img src={prop} class="ribvan"/>
+              <div class="propsub">New proposal</div>
+              <div class="propopt">Create </div>
+            </a></div>
+          </div>
+        
       </Modal>
       :
       <Modal

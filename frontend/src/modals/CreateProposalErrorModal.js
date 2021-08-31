@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import { LanguageContext } from '../contexts/LanguageContext';
+import voidz from '../assets/void.png';
+import prop from '../assets/prop.png';
 
 const CreateProposalErrorModal = (props) => {
   let [isEnglish] = useContext(LanguageContext);
@@ -13,16 +15,17 @@ const CreateProposalErrorModal = (props) => {
 
       <Modal
       {...props}
-      size="md"
+      size="xl"
       aria-labelledby="contained-modal-title-vcenter"
       centered
       className="modal-2"
     >
+      <div class="center"><div><img src={voidz} alt="Alert about verification" class="prop-img"/></div></div>
+      <h1><span>Proposal was not submitted </span></h1><br/>
+      <div class="about-tx"> </div>
 
-      <div className="big-icon">🚫<div className="modalheader">
-        Your proposal was not submitted</div>
-      </div>
-      <Modal.Body className="main">
+      
+      <Modal.Body class="about-tx">
         <div>
         ⚠️ 1. Please be sure you are connected to MetaMask and that you entered your information correctly.
         </div>
@@ -32,12 +35,16 @@ const CreateProposalErrorModal = (props) => {
         </div>
         <p/>
         <div>
-        ⚠️ 3. The cost of the proposal must be a number.
+        ⚠️ 3. Review that all the fields are filled correctly.
         </div>
         <p/>
-        <div className="modalheader">
-         Verify and try again
-        </div>
+
+  
+          <div class="prop-bg"><a href="/CreateProposal">
+            <img src={prop} class="ribbons"/>
+            <div class="propsub">Review your proposal</div>
+            <div class="propopt">Try again</div>
+          </a></div>
       </Modal.Body>
     </Modal>
 
