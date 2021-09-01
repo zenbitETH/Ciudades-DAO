@@ -39,6 +39,15 @@
  padding: 2em;
 }
 
+.question-card {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  margin-top: 3% !important;
+  font-size: 15px !important;
+  color: #ffffff !important;
+}
+
 .container {
     display: block;
     position: relative;
@@ -51,6 +60,8 @@
     -ms-user-select: none;
     user-select: none;
   }
+
+  
   
   /* Hide the browser's default radio button */
   .container input {

@@ -145,7 +145,7 @@ option:disabled {
 
 .proplist {
   padding: 0.5em;
-  margin-top: 4em;
+  margin-top: 2.5em;
   text-align: center;
   font-family: 'Lexend Deca';
 }
@@ -170,11 +170,95 @@ grid-gap: 0.5em;
   width: auto;
 }
 
+
 .propopt {
   margin-top: -0.3em;
   text-align: left;
   font-size: 1.6em;
   color: #ffffff;
+}
+
+.propopt2 {
+  margin-top: -0.3em;
+  text-align: left;
+  font-size: 2.5em;
+  color: #ffffff;
+}
+
+.cw {
+  margin-top: -0.3em;
+  text-align: center;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.no-wallet {
+  padding: 1em;
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
+  background-size: 500% 500%;
+  animation: gradient 2s ease infinite;
+  border-radius: 25px;
+  height: 175px;
+  width: 100%;
+  position: relative;
+  margin: 0.1em;
+  border-width: 0em;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.no-wallet img {
+  content:'';
+  position: absolute;
+  bottom: -10%;
+  right: 25%;
+  opacity: 80%;
+  height:150px;
+  border-radius: 25px;
+  background-size:200% 200%;
+  z-index: -1;
+}
+
+.no-wallet:hover {
+  content:'';
+  cursor: pointer;
+  border-width: 0em;
+  border-style: solid;
+  
+}
+
+.prop-wallet {
+  padding: 1em;
+  background: linear-gradient(-90deg, #2b284a00, #FF940076, #FF940076, #2b284a00);
+  background-size: 200% 200%;
+  animation: gradient 2s ease infinite;
+  border-radius: 25px;
+  height: 175px;
+  width: 100%;
+  position: relative;
+  margin: 0.1em;
+  border-width: 0em;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.prop-wallet img {
+  content:'';
+  position: absolute;
+  right: 30%;
+  opacity: 80%;
+  height:150px;
+  border-radius: 25px;
+  background-size:200% 200%;
+}
+
+.prop-wallet:hover {
+  content:'';
+  cursor: pointer;
+  border-width: 0em;
+  border-style: solid;
+  background: linear-gradient(0deg, #FF940076, #FF940076, #ff9500ba, #ff9500d2);
+  animation: none;
 }
 
 .prop-bg {
@@ -198,7 +282,6 @@ grid-gap: 0.5em;
   height: 120px;
   border-radius: 25px;
 }
-
 
 .prop-bg:hover {
   cursor: pointer;
@@ -231,7 +314,6 @@ grid-gap: 0.5em;
   height: 120px;
   border-radius: 25px;
 }
-
 
 .prop-bg2:hover {
   cursor: pointer;
@@ -311,8 +393,6 @@ grid-gap: 0.5em;
   height: 175px;
   width: 100%;
   position: relative;
-  border-width: 0.1em;
-  border-style: solid;
   border-color: transparent;
 }
 
@@ -327,8 +407,6 @@ grid-gap: 0.5em;
 }
 
 .prop-bgr:hover {
-  border-width: 0.1em;
-  border-style: solid;
   border-color: transparent;
   background: linear-gradient(-45deg,  #ff9500d3, #ff9500d3,#2b284a8f, #2b284a8f);
   background-size: 200% 200%;

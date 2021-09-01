@@ -158,7 +158,6 @@ body {
   border-radius: 20px;
   margin-top: 8em;
   width: 100%;
-  height: fit-content;
   font-family: 'Lexend Deca', sans-serif !important;
   color: #FF9400;
   -webkit-font-smoothing: antialiased;
@@ -185,6 +184,7 @@ body {
 ol {
   padding: 1em;
 }
+
 
 @keyframes gradient {
 	0% {
@@ -255,8 +255,8 @@ a.dropdown-item:hover {
   font-weight: 300;
   line-height: 150%;
   color: #ffffff;
-  margin: 1em;
   text-align: center;
+  position: relative;
 }
 
 .headline-p {
@@ -272,6 +272,7 @@ font-size: clamp(.9em, -0.975rem + 6.5vw, 1.5rem);
 text-align: center;
 display: grid;
 grid-template-columns: 1fr ;
+grid-template-rows: auto auto ;
 padding: 1em;
 row-gap: 1em;
 margin-top: 1.5em;
@@ -503,15 +504,27 @@ h2 {
 }
 
 
+.shake2 {
+  margin: 0.5em;
+  animation: none;
+}
+
+.shake2:hover {
+  margin: 0.5em;
+  animation: shake 1s cubic-bezier(0.56, 0.47, .29, 0.77) both;
+  animation-iteration-count: infinite;
+}
+
+
 @keyframes shake {
   10%,
   90% {
-    transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-10px, auto, auto);
   }
 
   20%,
   80% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, auto, 0);
   }
 
   30%,

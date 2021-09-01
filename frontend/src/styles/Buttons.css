@@ -32,8 +32,9 @@ Button {
   }
   
   .spinner-grow {
-    height: 10px !important;
-    width: 10px !important;
+    color: #3d386b;
+    height: 100px !important;
+    width: 100px !important;
     vertical-align: baseline;
   }
   
