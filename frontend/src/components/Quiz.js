@@ -287,8 +287,10 @@ function myFunction() {
         {isConnected ?
           <div>
             <div> 
-            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            <br/><br/>
             <h1><span id="vote">Validate your account</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            
             <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
             {englishQuestions}
             </QuizContext.Provider>

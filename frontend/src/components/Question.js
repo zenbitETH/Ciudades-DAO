@@ -25,7 +25,6 @@ const Question = ({question, answers, number}) => {
       <label class="checkmark" htmlFor={a}>{a}</label>
     </div>
 ))
-
   return (
     <div>
       {isEnglish === 'english' ?

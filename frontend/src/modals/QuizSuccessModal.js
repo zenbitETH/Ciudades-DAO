@@ -32,7 +32,7 @@ const QuizSuccessModal = (props) => {
                 <div class="propsub">Crea una propuesta</div>
                 <div class="propopt">Proponer</div>
               </a></div>
-              <div class="prop-bg2"><a href="#vote">
+              <div class="prop-bg2"><a href="/ProposalList#vote">
               <img src={vote2} class="ribvan"/> 
               <div class="propsub">Propuestas</div>
               <div class="propopt">Por votar</div>
@@ -42,7 +42,7 @@ const QuizSuccessModal = (props) => {
                 <div class="propsub">Propuestas pasadas</div>
                 <div class="propopt">Historial</div>
               </a></div>
-              <div class="prop-bgr"><a href="/Pastrroposal">
+              <div class="prop-bgr"><a href="/About">
                 <img src={reward} class="ribvan"/>
                 <div class="propsub">Ver documentación</div>
                 <div class="propopt">Conoce +</div>
