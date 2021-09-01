@@ -21,6 +21,7 @@ import vote from '../assets/vote.png';
 import vote2 from '../assets/vote2.svg';
 import past from '../assets/past.png';
 import verify from '../assets/verify.png';
+import aprop from '../assets/aprop.png';
 
 const ProposalList = () => {
   let [retrievedProposals, setRetrievedProposals] = useState([]);
@@ -211,6 +212,7 @@ const ProposalList = () => {
       </div>
     )
   });
+  
   //const handleOnClickDelegate = async () => {
   //  let delegate = await taro.delegate(signerAddress);
   //  let delegateReceipt = await delegate.wait(1);
@@ -237,8 +239,8 @@ const ProposalList = () => {
               <div class="progress-bar" id="myBar"></div>
             </div>
           </div>
-          <span>{isValidated ? "" : <ValidationRequired />}</span>
-          <h1><span class="orange">Gobernanza Urbana</span></h1>
+            <span>{isValidated ? "" : <ValidationRequired />}</span>
+          <h1><span class="orange">Gobernanza DAO</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>          
           <div className= "propgrid">
             <div class="prop-bg"><a href="/createProposal">
@@ -272,6 +274,18 @@ const ProposalList = () => {
                   votar por propuestas de gobernanza en la ciudad de Querétaro.</div>
                   </div><h1>1 TARO = 1 Voto</h1><br/>
                 {list}
+                <div class="void-link">
+                  <div class="prop-bg"><a href="/PastProposals">
+                  <img src={past} class="ribvan"/> 
+                    <div class="propsub">Past proposals</div>
+                    <div class="propopt">Record</div>
+                  </a></div>
+                  <div class="prop-bg"><a href="/createProposal">
+                    <img src={prop} class="ribvan"/> 
+                    <div class="propsub">Crea una propuesta</div>
+                    <div class="propopt">Proponer</div>
+                  </a></div>
+                </div>
             </div>
            :
             <div id="vote" className="void">                

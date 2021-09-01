@@ -215,13 +215,13 @@ function myFunction() {
       {isEnglish === 'english'
         ?
         
-      <div class="newprop">
+      <div id="proposal" class="newprop">
       <div class="progress-holder">
         <div class="progress-container">
           <div class="progress-bar" id="myBar"></div>
         </div>
       </div>
-      <h1><span class="orange">Nueva propuesta</span></h1><br/><br/>
+      <h1><span  class="orange">Nueva propuesta</span></h1><br/><br/>
       <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
 
       <Form autocomplete="off">

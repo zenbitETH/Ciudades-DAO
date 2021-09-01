@@ -23,7 +23,6 @@ import aprop from '../assets/aprop.png';
 import vote from '../assets/vote.png';
 import vote2 from '../assets/vote2.svg';
 import reward from '../assets/TAROrew.png';
-import past from '../assets/past.png';
 import verify from '../assets/verify.png';
 
 
@@ -255,9 +254,12 @@ const PastProposals = () => {
             <div class="progress-container">
               <div class="progress-bar" id="myBar"></div>
             </div>
+          
           </div>
+          <br/><br/>
+          <h1><span class="orange">Past Proposals</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-          <h1><span class="orange">Past Proposals</span></h1>
+          
    
           <div className= "props">
             <div>

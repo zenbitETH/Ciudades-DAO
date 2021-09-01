@@ -160,7 +160,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
     <div class="vote-grid">
       {!hasVoted?
       <a class="prop-bgf" onClick={handleOnClickFor}>
-        <br/><h1 class="votef">Vote for</h1>
+        <h1 class="votef">Vote <br/>for</h1>
       </a>
       :
       <div class="prop-bgf2"><h2>For:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
