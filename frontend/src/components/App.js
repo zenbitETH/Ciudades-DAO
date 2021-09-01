@@ -43,7 +43,7 @@ function App() {
                     <Header />
                     <Switch>
                       <Route path="/about"><About /></Route>
-                      <Route path="/proposallist"><ProposalList /></Route>
+                      <Route path="/ProposalList"><ProposalList /></Route>
                       <Route path="/createproposal"><CreateProposal /></Route>
                       <Route path="/quiz"><Quiz /></Route>
                       <Route path="/pastproposals"><PastProposals /></Route>

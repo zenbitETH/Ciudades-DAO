@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import {Alert, Button} from 'react-bootstrap';
-import img4 from '../assets/about-img4.svg';
+import meta from '../assets/meta.svg';
 
 
 
@@ -9,16 +9,15 @@ const InstallMetamaskAlert = () => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div class="floating">
+    <span >
       {isEnglish === 'english' ?
-      <div class="full-width">
-        <Alert className="valert">
-         <div class="shake"><img src={img4} alt="Alert about key" class="prop-img"/></div>
-         <div class="white">It appears you don't have a crypto address</div>
-         <div class="floating">
-           <Button className="Wallet" href="https://www.metamask.io/">Download Wallet</Button>
-         </div>
-        </Alert>
+      <div class="no-wallet" >
+         <a href="https://www.metamask.io/">
+          <img src={meta} class="shake"/>
+          <br/>
+          <span class="center"><div class="cw">Touch to download a wallet</div></span>
+          <div class="jos"><span class="white">You don't have a crypto address</span></div>
+        </a>
       </div>
     :
       <Alert className="valert">
@@ -28,7 +27,7 @@ const InstallMetamaskAlert = () => {
           <Button className="Wallet" href="https://metamask.io/"> 🔑 Obtén una dirección cripto</Button>
         </span>
       </Alert>
-    }</div>
+    }</span>
   );
 };
 

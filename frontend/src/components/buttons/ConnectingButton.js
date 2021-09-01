@@ -8,19 +8,19 @@ const ConnectingButton = () => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div>
+    <span>
     {isEnglish === 'english' ?
-    <Button disabled>
-    Connecting... 
-    <span className="spinner-grow" role="status"></span>
-    </Button>
+    <div class="prop-wallet">
+      <div class="spinner-grow" role="status"></div>
+      <span class="center"><div class="cw">Connecting...</div></span>
+    </div>
     :
-    <Button disabled>
+    <div >
     Conectando...
     <span className="spinner-grow" role="status" aria-hidden="true"> </span>
-    </Button>    
+    </div>    
     }
-    </div>
+    </span>
   );
 };
 

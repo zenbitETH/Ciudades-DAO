@@ -1,7 +1,8 @@
-import {Card, Button } from 'react-bootstrap';
 import { useContext } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
 import '../../styles/Home.css';
+
+import meta from '../../assets/meta.svg';
 
 
 const ConnectButton = ({handleOnConnect}) => {
@@ -10,9 +11,14 @@ const ConnectButton = ({handleOnConnect}) => {
   return (
     <span>
     {isEnglish === 'english' ?
-    <Button className="Wallet" onClick={handleOnConnect}>🔑 Connect wallet</Button>
+    <div className="prop-wallet" onClick={handleOnConnect}>
+      <a>
+       <img src={meta} class="shake2"/>
+       
+      </a>
+    </div>
     :
-    <Button className="Wallet" onClick={handleOnConnect}>🔑 Conectar dirección</Button>
+    <div className="Wallet" onClick={handleOnConnect}>🔑 Conectar dirección</div>
 }</span>
   );
 };

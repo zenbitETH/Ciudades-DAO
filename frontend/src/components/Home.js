@@ -1,15 +1,12 @@
 import { useEffect, useState, useContext } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { ethers } from 'ethers';
-import {Card, Button} from 'react-bootstrap';
-import corner from '../assets/corner.svg';
 import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import InstallMetamaskAlert from './InstallMetamaskAlert';
 //import SkaleButton from './buttons/SkaleButton';
 //import SkaleSwitch from './buttons/SkaleSwitch';
 //import SwitchSkaleAlert from './SwitchSkaleAlert';
-import '../styles/Home.css';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { TaroContext } from '../contexts/TaroContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
@@ -17,11 +14,19 @@ import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
+
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
+
+import reward from '../assets/TAROrew.png';
+import TARO from '../assets/taro.png';
+import prop from '../assets/prop.png';
+import past from '../assets/past.png';
+import verify from '../assets/verify.png';
+import vote from '../assets/vote.png';
 
 
 function Home() {
@@ -249,6 +254,8 @@ function Home() {
         if(_userBalance) {
           setUserBalance(_userBalance.toString());
         };
+      
+        
 
       const _governorAlpha = new ethers.Contract(
         governorAlphaAddress.GovernorAlpha,
@@ -258,6 +265,7 @@ function Home() {
       setGovernorAlpha(_governorAlpha);
     } catch (error) {
       console.error(error);
+      
     };
   };
 
@@ -265,210 +273,157 @@ function Home() {
     <div>
       {isEnglish === 'english' ?
         <div class="App">
-          <div class="cv">
             <div class="headline">
               <h1>Querétaro City DAO </h1>
-              <div class="center">
               <p class="headline-p">Urban Governance on Ethereum Blockchain.</p>
-                <span>
-                  {!isMetamastInstalled ?
-                      <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                      <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-                  }
-                  {/*isSkaleSwitched ? '' : isConnectingToSkale ?
-                    <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-                  */}
-                </span>
-                <Button className="aboutbutton" href="/about"> 📖 About VoTARO</Button>
+            </div>
+            <div class="main-grid">
+              
+                {!isMetamastInstalled ?
+                    <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                    <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+                }
+                {/*isSkaleSwitched ? '' : isConnectingToSkale ?
+                  <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
+                */}
+              
+              <div>
+                {isConnected ?
+                <section>
+                  
+                    <div class="prop-bg2"><a href="/createProposal">
+                      <img src={TARO} class="ribbons"/> 
+                      <div class="propsub">Tienes</div>
+                      <div class="propopt2"> {userBalance} TARO</div>
+                      <div class="propsub">Obtén más creando propuestas</div>
+                    </a></div><br/>
+                  <div class="void-link">
+                    
+                      <div class="prop-bgv"><a href="/Quiz">
+                        <img src={verify} class="ribvan"/>
+                        <div class="propsub">Antes de empezar</div>
+                        <div class="propopt">Validar</div>
+                      </a></div>
+                      <div class="prop-bgh"><a href="/ProposalList">
+                        <img src={past} class="ribvan"/> 
+                        <div class="propsub">Ver propuestas</div>
+                        <div class="propopt">Gobernanza</div>
+                      </a></div>
+                      
+                      <div class="prop-bg"><a href="/createProposal">
+                        <img src={prop} class="ribvan"/> 
+                        <div class="propsub">Crea una propuesta</div>
+                        <div class="propopt">Proponer</div>
+                      </a></div>
+                      <div class="prop-bgr"><a href="/About">
+                        <img src={reward} class="ribvan"/>
+                        <div class="propsub">Ver documentación</div>
+                        <div class="propopt">Conoce +</div>
+                      </a></div>
+                    </div>
+                
+                </section>
+                :         
+                  <section>
+                    <div class="propgrid">
+                    <div class="prop-bgr"><a href="/About">
+                        <img src={prop} class="ribbons"/> 
+                        <div class="propsub">¿Qué es una wallet?</div>
+                        <div class="propopt">Empieza Aquí</div>
+                      </a></div>
+                      <div class="prop-bg"><a href="/About">
+                        <img src={reward} class="ribbons"/>
+                        <div class="propsub">Crea y vota propuestas por</div>
+                        <div class="propopt">Recompenzas</div>
+                      </a></div>
+                      <div class="prop-bgr"><a href="/About">
+                        <img src={vote} class="ribbons"/>
+                        <div class="propsub">Organización Autónoma Descentralizada</div>
+                        <div class="propopt">Somos una DAO</div>
+                      </a></div>
+                    </div>
+                </section>      
+                }
               </div>
             </div>
         </div>
-        {isConnected ?
-        <section className="unlocked">
-          <div class="main-grid">
-            <div class="account-bgu">
-              <div >You have <div class="big-icon">☀️</div> </div>
-              <span class="taro-balance"> {userBalance} TARO</span>
-            </div>
-            <div class="account-reward">
-              <div>Get your first reward </div>
-              <span class="reward-un" >
-                <Button className="main-reward" href="/Quiz"><div class="big-icon">✔️</div><div class="un-reward">Validate your account <span class="ustext">Validate your digital skills and get up to 100 TARO</span></div></Button>
-              </span>
-            </div>
-            <div class="account-bgu">
-              <div>Create proposals <div class="big-icon">💡</div></div>
-              <Button className="account-bt" href="/CreateProposal" > New proposal</Button>
-            </div>
-            <div class="account-bgu">
-              <div>Vote for proposals <div class="big-icon">🗳️</div></div>
-              <Button className="account-bt" href="/ProposalList" >Vote</Button>
-            </div>
-          </div>
-          <br/>
-        </section>
-        :
-        <section className="locked">
-          <div class="main-grid">
-            <div class="account-bg">
-              <div >TARO Balance <div class="big-icon">🔐</div> </div>
-              <div class="taro-locked">Locked</div>
-            </div>
-            <div class="account-reward">
-              <div>Get your first reward </div>
-              <span class="reward-grid">
-                <div class="main-reward"><div class="big-icon">🔑</div>1. Download <span class="ustext">Download a wallet and create a crypto address</span></div>
-                <div class="main-reward"> <div class="big-icon">🔐</div>2. Connect <span class="ustext">Connect your crypto address to use VoTARO</span></div>
-                <div class="main-reward"><div class="big-icon">✔️</div>3. Validate <span class="ustext">Validate your digital skills and earn up to 100 TARO</span></div>
-                <Button className="about-bt" href="https://metamask.io"> Go </Button>
-                <Button className="about-bt" href="/Home"> Go </Button>
-                <Button className="about-bt" href="/Quiz"> Go </Button>
-              </span>
-            </div>
-            <div class="account-bg">
-              <div>Create proposals <div class="big-icon">💡</div></div>
-              <div class="taro-locked">Locked</div>
-            </div>
-            <div class="account-bg">
-              <div>Vote for proposals <div class="big-icon">🗳️</div></div>
-              <div class="taro-locked">Locked</div>
-            </div>
-          </div>
-          <br/>
-        </section>
-        }
-        <section class="about-topics">
-          <div class="about-hl1">About VoTARO</div>
-          <div class="about-grid">
-            <div class="about-bg"><a href="/about#step0">
-              <img src={corner} class="ribbon"/> 
-              <div class="big-icon">🔑</div>
-              <h2>A. Your crypto address</h2>
-            </a></div>
-            <div class="about-bg"><a href="/about#step1">
-            <img src={corner} class="ribbon"/> 
-            <div class="big-icon" >☀️</div>
-              <h2>B. The TARO rewards</h2>
-            </a></div>
-            <div class="about-bg"><a href="/about#step2">
-              <img src={corner} class="ribbon"/> 
-              <div class="big-icon" >🗳️</div>
-              <h2>C. Querétaro Urban Governance</h2>
-            </a></div>
-            <div class="about-bg"><a href="/about#step3">
-              <img src={corner} class="ribbon"/> 
-              <div class="big-icon" >🌌</div>
-              <h2>D. The new Internet</h2>
-            </a></div>
-          </div>
-        </section>      
-      </div>
       :
       <div class="App">
-      <div class="cv">
-        <div class="headline">
-          <h1>Crea y vota propuestas en la ciudad de Querétaro </h1>
-          <div class="center">
-          <p class="headline-p">Obtén recompensas por usar tus habilidades digitales en VoTARO.</p>
-            <span class="center">
-              {!isMetamastInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
-              {/*isSkaleSwitched ? '' : isConnectingToSkale ?
-                <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-              */}
-            </span>
-            <Button className="aboutbutton" href="/about"> 📖 Conoce VoTARO</Button>
-          </div>
-        </div>
-    </div>
-    {isConnected ?
-    <Card className="unlocked">
+      <div class="headline">
+        <h1>Querétaro City DAO </h1>
+        <p class="headline-p">Urban Governance on Ethereum Blockchain.</p>
+      </div>
       <div class="main-grid">
-        <div class="account-bgu">
-          <div >Tienes <div class="big-icon">☀️</div> </div>
-        <span class="taro-balance"> {userBalance} TARO</span>
+        
+          {!isMetamastInstalled ?
+              <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+              <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+          }
+          {/*isSkaleSwitched ? '' : isConnectingToSkale ?
+            <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
+          */}
+        
+        <div>
+          {isConnected ?
+          <section>
+            
+              <div class="prop-bg"><a href="/createProposal">
+                <img src={prop} class="ribbons"/> 
+                <div class="propsub">Tienes</div>
+                <div class="propopt"> {userBalance} TARO</div>
+              </a></div><br/>
+            <div class="void-link">
+                <div class="prop-bgv"><a href="/Quiz">
+                  <img src={verify} class="ribvan"/>
+                  <div class="propsub">Antes de empezar</div>
+                  <div class="propopt">Validar</div>
+                </a></div>
+                <div class="prop-bgh"><a href="/PastProposals">
+                  <img src={past} class="ribvan"/> 
+                  <div class="propsub">Propuestas pasadas</div>
+                  <div class="propopt">Gobernanza</div>
+                </a></div>
+                <div class="prop-bg"><a href="/createProposal">
+                  <img src={prop} class="ribvan"/> 
+                  <div class="propsub">Crea una propuesta</div>
+                  <div class="propopt">Proponer</div>
+                </a></div>
+                <div class="prop-bgr"><a href="/Pastrroposal">
+                  <img src={reward} class="ribvan"/>
+                  <div class="propsub">Ver documentación</div>
+                  <div class="propopt">Conoce +</div>
+                </a></div>
+              </div>
+          </section>
+          :
+            <span>
+              <div class="propgrid">
+              <div class="prop-bgr"><a href="/Pastrroposal">
+                  <img src={prop} class="ribbons"/> 
+                  <div class="propsub">¿Qué es una wallet?</div>
+                  <div class="propopt">Empieza Aquí</div>
+                </a></div>
+                <div class="prop-bg"><a href="/createProposal">
+                  <img src={reward} class="ribbons"/>
+                  <div class="propsub">Crea y vota propuestas por</div>
+                  <div class="propopt">Recompenzas</div>
+                </a></div>
+                <div class="prop-bgr"><a href="/Pastrroposal">
+                  <img src={vote} class="ribbons"/>
+                  <div class="propsub">Organización Autónoma Descentralizada</div>
+                  <div class="propopt">Somos una DAO</div>
+                </a></div>
+              </div>
+          </span>      
+          }
         </div>
-        <div class="account-reward">
-          <div>Tu primer recompensa</div>
-          <span class="reward-un" >
-            <Button className="main-reward" href="/Quiz"><div class="big-icon">✔️</div><div class="un-reward">Valida tu cuenta <span class="ustext">Valida tus habilidades digitales y gana hasta 100 TARO </span></div></Button>
-          </span>
-        </div>
-        <div class="account-bgu">
-          <div>Crea propuestas <div class="big-icon">💡</div></div>
-          <br/>          
-          <Button className="account-bt" href="/Createproposal">Crear nueva propuesta</Button>
-        </div>
-        <div class="account-bgu">
-          <div>Vota propuestas <div class="big-icon">🗳️</div></div>
-          <br/>
-          <Button className="account-bt" href="/ProposalList">Votar</Button>
-        </div>
-      </div>
-    </Card>
-    :
-    <section className="locked">
-    <div class="main-grid">
-      <div class="account-bg">
-        <div >Balance de TARO <div class="big-icon">🔐</div> </div>
-        <div class="taro-locked">Bloqueado</div>
-      </div>
-      <div class="account-reward">
-        <div>Tu primer recompensa</div>
-        <span class="reward-grid">
-          <div class="main-reward"><div class="big-icon">🔑</div>1. Descarga <span class="ustext">Descarga una wallet y crea una dirección cripto</span></div>
-          <div class="main-reward"> <div class="big-icon">🔐</div>2. Conecta <span class="ustext">Conecta tu dirección cripto para usar VoTARO</span></div>
-          <div class="main-reward"><div class="big-icon">✔️</div>3. Valida <span class="ustext">Valida tus habilidades digitales y gana hasta 100 TARO </span></div>
-          <Button className="about-bt" href="https://metamask.io"> Ir </Button>
-          <Button className="about-bt" href="/Home"> Ir </Button>
-          <Button className="about-bt" href="/Quiz"> Ir </Button>
-        </span>
-      </div>
-      <div class="account-bg">
-        <div>Crea propuestas <div class="big-icon">💡</div></div>
-        <div class="taro-locked">Bloqueado</div>
-      </div>
-      <div class="account-bg">
-        <div>Vota propuestas <div class="big-icon">🗳️</div></div>
-        <div class="taro-locked">Bloqueado</div>
       </div>
     </div>
-    <br/>
-  </section>
-    }
-     <section class="about-topics">
-    <div class="about-hl1">Conoce más sobre VoTARO</div>
-    <div class="about-grid">
-      <div class="about-bg"><a href="/about#step0">
-        <img src={corner} class="ribbon"/> 
-        <div class="big-icon">🔑</div>
-        <h2>A. Tu dirección cripto</h2>
-      </a></div>
-      <div class="about-bg"><a href="/about#step1">
-      <img src={corner} class="ribbon"/> 
-      <div class="big-icon" >☀️</div>
-        <h2>B. Las recompensas TARO</h2>
-      </a></div>
-      <div class="about-bg"><a href="/about#step2">
-        <img src={corner} class="ribbon"/> 
-        <div class="big-icon" >🗳️</div>
-        <h2>C. Propón y vota en Querétaro</h2>
-      </a></div>
-      <div class="about-bg"><a href="/about#step3">
-        <img src={corner} class="ribbon"/> 
-        <div class="big-icon" >🌌</div>
-        <h2>D. Un nuevo Internet</h2>
-      </a></div>
-    </div>
-  </section>      
-  </div>
   }
- 
 </div>
     
   );
 }
+
 
 export default Home;
