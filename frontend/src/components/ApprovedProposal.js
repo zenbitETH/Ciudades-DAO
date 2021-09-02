@@ -123,8 +123,8 @@ const ApprovedProposal = ({title,
 
 
   return (
-    <div>
-      {isEnglish === 'english'
+      <div>
+        {isEnglish === 'english'
 
       ?
       <div class="proposal">
@@ -142,66 +142,47 @@ const ApprovedProposal = ({title,
           <div class="minit-bg3">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
         </div>
         <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
-
-      {/*}
-      <div className ="proposal-main">
-        <div className="proposal-sub">Costo: {budget} pesos</div>
-        <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+        {/*}
+        <div className ="proposal-main">
+          <div className="proposal-sub">Costo: {budget} pesos</div>
+          <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+        </div>
+        */}
+      <div class="yellow">made by {proposer}</div><br/>
+      <div className="vote-grid">
+        <div class="prop-bgf2"><h2>✔️ Approved by:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
+        <div class="prop-bgw"><h2> Against:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
       </div>
-      */}
-    <div class="yellow">made by {proposer}</div><br/>
-    <div className="vote-grid">
-      <div class="prop-bgf2"><h2>✔️ Approved by:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
-      <div class="prop-bgw"><h2> Against:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
-      </div>
-  </div>
+    </div>
 
       :
-      <Card className="proposala">
-      <div className="proposal-id">💡 Propuesta # {id} 
-      <span className="proposal-date"> hecha el día {proposalDay}/{proposalMonth}/{proposalYear}</span> 
-      <div className="proposal-authorpast">por {proposer}</div>
-    </div>
-    <div className="proposal-title">🎯{title}</div>
-    <div className="proposal-details">🔍 Detalles:</div>
-    <div className="proposal-container">
-      <div className="proposal-hero">🦸 Responsable de la actividad🦸‍♂️ <div className="table-text">{personInCharge}</div></div>
-      <div className="proposal-table">
-          <div className="proposal-action">⚙️ Tipo: <div className="table-text">{typeOfAction}</div></div>
-          <div className="proposal-location">📍 Dónde: <div className="table-text">{neighborhood}</div></div>
-          <div className="proposal-cost">💸 Costo: <div className="table-text">{budget} pesos</div></div>
-      </div>
-      
-      
-      <div className="proposal-description" >📑 Descripción: <div className="table-text">{description}</div></div>
-    </div>
-
-      {/*}
-      <div className ="proposal-main">
-        <div className="proposal-sub">Costo: {budget}</div>
-        <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
-      </div>
-      */}
-
-    <Card.Body className="proposal-table">
-      <div className="proposal-main">
-      <div className="proposal-favor">
-        <div>
-          ✔️ Aprobada por:
-        </div>
-        <p className="big-iconf">{forVotes} <p>TARO</p></p>
-        </div>
-        <div>
-        <div className="proposal-against">
-          ❌ En contra:
-        </div>
-           <p className="big-icona">{againstVotes} <p>TARO</p></p>
+      <div class="proposal">
+          <div class="proposal-expiration">
+            <h2 class="prop-title">💡 Prouesta # {id}</h2>
+            <span class="yellowr"> Hecha el {proposalDay}/{proposalMonth}/{proposalYear}</span> 
+          </div>
+          <div class="aproposal">Probada por  {forVotes} votos</div>
+          <div class="mini-title">🎯 Objetivo:</div>
+          <div class="prop-hl"> {title}</div><br/><br/>
+          <div class="grid-prop">      
+            <div class="minit-bg">⚙️ Actividad: <div class="prop-hl">{typeOfAction}</div></div>
+            <div class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></div>      
+            <div class="minit-bg3"> 📍 Lugar: <div className="prop-hl">{neighborhood}</div></div>
+            <div class="minit-bg3">💸 Costo: <div className="prop-hl">{budget} pesos</div> </div>
+          </div>
+          <div class="description-bg">📑 Descripción: <div class="prop-description">{description}</div></div>
+          {/*}
+          <div className ="proposal-main">
+            <div className="proposal-sub">Costo: {budget} pesos</div>
+            <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+          </div>
+          */}
+        <div class="yellow">made by {proposer}</div><br/>
+        <div className="vote-grid">
+          <div class="prop-bgf2"><h2>✔️ Aprobada con:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
+          <div class="prop-bgw"><h2>Estuvieron en contra:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
         </div>
       </div>
-    </Card.Body>
-  </Card>
-
-
       }
     </div>
   );

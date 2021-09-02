@@ -20,13 +20,14 @@ const InstallMetamaskAlert = () => {
         </a>
       </div>
     :
-      <Alert className="valert">
-        <h1 >⚠️</h1>
-        <span>Parece que no tienes una dirección cripto</span>
-        <span class="floating">
-          <Button className="Wallet" href="https://metamask.io/"> 🔑 Obtén una dirección cripto</Button>
-        </span>
-      </Alert>
+    <div class="no-wallet" >
+       <a href="https://www.metamask.io/">
+        <img src={meta} class="shake"/>
+        <br/>
+        <span class="center"><div class="cw">Toca para descargar una cartera web3</div></span>
+        <div class="jos"><span class="white">No tienes una dirección cripto</span></div>
+      </a>
+    </div>
     }</span>
   );
 };

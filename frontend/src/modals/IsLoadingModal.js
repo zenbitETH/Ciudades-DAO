@@ -33,17 +33,13 @@ const IsLoadingModal = (props) => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Body>
-        <div>
-        </div>
+        <Modal.Body className="text-large">
           <div>
             Cargando...
           </div>
-          <p/>
           <div>
             <span animation="border"className="spinner-grow" role="status"></span>
           </div>
-
         </Modal.Body>
       </Modal>
       }

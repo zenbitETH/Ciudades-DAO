@@ -21,9 +21,9 @@ const QuizFailureModal = (props) => {
           className="modal-2"
         >
 
-      <div class="center"><div><img src={voidz} alt="Alert about verification" class="prop-img"/></div></div>
-      <h1><span>Wrong answers </span></h1><br/>
-      <div class="about-tx">You have failed the validation or some answer is missing, take a look to the about page and try again.</div>
+          <div class="center"><div><img src={voidz} alt="Alert about verification" class="prop-img"/></div></div>
+          <h1><span>Wrong answers </span></h1><br/>
+          <div class="about-tx">You have failed the validation or some answer is missing, take a look to the about page and try again.</div>
           <Modal.Body>
           <div class="void-link">
             <div class="prop-bgr"><a href="/About">
@@ -45,17 +45,27 @@ const QuizFailureModal = (props) => {
 
       <Modal
       {...props}
-      size="md"
+      size="lg"
       centered
       className="modal-2"
     >
 
-  <div className="big-icon">😅<div className="modalheader">
-  No pasaste el cuestionario</div>
-        </div>
-        <p className="white">Aprende más sobre Querétaro e intentalo de nuevo</p>
+      <div class="center"><div><img src={voidz} alt="Alert about verification" class="prop-img"/></div></div>
+      <h1><span>Respuesta incorrecta </span></h1><br/>
+      <div class="about-tx">Fallaste la validación o falta alguna respuesta, echa un vistazo a la documentación o intenta nuevamente.</div>
       <Modal.Body>
-        <Link className="alt2" to="/home">Regresar al Inicio</Link>
+      <div class="void-link">
+        <div class="prop-bgr"><a href="/About">
+            <img src={reward} class="ribvan"/> 
+            <div class="propsub">Ver documentación</div>
+            <div class="propopt">Conoce +</div>
+          </a></div>
+          <div class="prop-bg2"><a href="/Quiz">
+            <img src={verify} class="ribvan"/>
+            <div class="propsub">Intentalo de nuevo </div>
+            <div class="propopt">Revisar</div>
+          </a></div>
+        </div>
       </Modal.Body>
     </Modal>
     }

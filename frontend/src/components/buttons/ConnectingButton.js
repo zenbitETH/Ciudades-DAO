@@ -15,10 +15,10 @@ const ConnectingButton = () => {
       <span class="center"><div class="cw">Connecting...</div></span>
     </div>
     :
-    <div >
-    Conectando...
-    <span className="spinner-grow" role="status" aria-hidden="true"> </span>
-    </div>    
+    <div class="prop-wallet">
+      <div class="spinner-grow" role="status"></div>
+      <span class="center"><div class="cw">Connecting...</div></span>
+    </div>
     }
     </span>
   );

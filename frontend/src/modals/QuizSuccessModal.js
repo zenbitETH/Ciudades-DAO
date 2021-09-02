@@ -29,23 +29,23 @@ const QuizSuccessModal = (props) => {
         <div class="void-link">
               <div class="prop-bg"><a href="/createProposal">
                 <img src={prop} class="ribvan"/> 
-                <div class="propsub">Crea una propuesta</div>
-                <div class="propopt">Proponer</div>
+                <div class="propsub">Create proposal</div>
+                <div class="propopt">Propose</div>
               </a></div>
               <div class="prop-bg2"><a href="/ProposalList#vote">
               <img src={vote2} class="ribvan"/> 
-              <div class="propsub">Propuestas</div>
-              <div class="propopt">Por votar</div>
+              <div class="propsub">Available proposals</div>
+              <div class="propopt">Vote</div>
             </a></div>
               <div class="prop-bgh"><a href="/PastProposals">
                 <img src={past} class="ribvan"/> 
-                <div class="propsub">Propuestas pasadas</div>
-                <div class="propopt">Historial</div>
+                <div class="propsub">Past proposals</div>
+                <div class="propopt">Record</div>
               </a></div>
               <div class="prop-bgr"><a href="/About">
                 <img src={reward} class="ribvan"/>
-                <div class="propsub">Ver documentación</div>
-                <div class="propopt">Conoce +</div>
+                <div class="propsub">Learn +</div>
+                <div class="propopt">Docs</div>
               </a></div>
             </div>
         </Modal.Body>
@@ -54,23 +54,41 @@ const QuizSuccessModal = (props) => {
 
 
       <Modal
-        {...props}
-        size="md"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <div className="big-icon">🎉<div className="modalheader">
-        !Felicidades! pasaste el cuestionario!</div>
-            </div>
-            <p className="main">Has ganado tokens TARO y ahora puedes participar en la gobernanza de la ciudad al crear o votar propuestas.</p>
-        <Modal.Header>
-          <Modal.Title id="contained-modal-title-vcenter">
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Link className="alt2" to="/ProposalList">🗳️ Crea o vota propuestas</Link>
-        </Modal.Body>
-      </Modal>
+      {...props}
+      class="modal-fullscreen-xxl-down"
+      size="xl"
+      centered
+    >
+      <h1><span id="vote" class="orange-jos">¡Felicidades! </span></h1><br/>
+        <div class="center"><div class="jump"><img src={reward} alt="Alert about verification" class="prop-img"/></div></div>
+        <h1><span> Ahora tienes TARO</span></h1>
+        <div class="about-tx2"> <span class="orange">Has validado cuenta por seis meses y tu recompensa en tokens TARO se han transferido a su cuenta. </span>
+         Ahora puedes crear o votar propuestas de gobernanza urbana. Toca una sección para comenzar a usar tu TARO.</div>
+      <Modal.Body>
+      <div class="void-link">
+            <div class="prop-bg"><a href="/createProposal">
+              <img src={prop} class="ribvan"/> 
+              <div class="propsub">Crea una propuesta</div>
+              <div class="propopt">Proponer</div>
+            </a></div>
+            <div class="prop-bg2"><a href="/ProposalList#vote">
+            <img src={vote2} class="ribvan"/> 
+            <div class="propsub">Propuestas</div>
+            <div class="propopt">Por votar</div>
+          </a></div>
+            <div class="prop-bgh"><a href="/PastProposals">
+              <img src={past} class="ribvan"/> 
+              <div class="propsub">Propuestas pasadas</div>
+              <div class="propopt">Historial</div>
+            </a></div>
+            <div class="prop-bgr"><a href="/About">
+              <img src={reward} class="ribvan"/>
+              <div class="propsub">Ver documentación</div>
+              <div class="propopt">Conoce +</div>
+            </a></div>
+          </div>
+      </Modal.Body>
+    </Modal>
     }
     </div>
   );

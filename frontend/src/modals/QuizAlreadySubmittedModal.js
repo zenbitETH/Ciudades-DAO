@@ -48,16 +48,23 @@ const QuizAlreadySubmittedModal = (props) => {
       centered
       className="modal-2"
     >
-
-<div className="big-icon">🚫<div className="modalheader">
-Ya has respondido el cuestionario</div>
+    <div class="center"><div><img src={confirm} alt="Alert about verification" class="prop-img"/></div></div>
+    <h1><span>Tu cuenta ya está validada </span></h1><br/>
+    <div class="about-tx"> Ahora puedes crear y votar por propuestas de gobernanza urbana en Querétaro.</div>
+    <Modal.Body>
+      <div class="void-link">
+      <div class="prop-bg"><a href="/Createproposal">
+        <img src={prop} class="ribvan"/> 
+        <div class="propsub">Crear propuesta</div>
+        <div class="propopt">Proponer</div>
+      </a></div>
+      <div class="prop-bg2"><a href="/ProposalList">
+        <img src={vote2} class="ribvan"/>
+        <div class="propsub">Propuestas por </div>
+        <div class="propopt">Votar</div>
+      </a></div>
     </div>
-      
-      <Modal.Body>
-        <p>
-         Ahora puedes crear y votar propuestas en la gobernanza urbana<Link className="alt2" to="/proposalList">🗳️ Ver propuestas</Link>
-        </p>
-      </Modal.Body>
+    </Modal.Body>
     </Modal>
     }
     </div>

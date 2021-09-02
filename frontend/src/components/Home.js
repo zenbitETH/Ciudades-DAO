@@ -293,32 +293,32 @@ function Home() {
                   
                     <div class="prop-bg2"><a href="/createProposal">
                       <img src={TARO} class="ribbons"/> 
-                      <div class="propsub">Tienes</div>
+                      <div class="propsub">You have</div>
                       <div class="propopt2"> {userBalance} TARO</div>
-                      <div class="propsub">Obtén más creando propuestas</div>
+                      <div class="propsub">Get more by creating proposals</div>
                     </a></div><br/>
                   <div class="void-link">
                     
                       <div class="prop-bgv"><a href="/Quiz">
                         <img src={verify} class="ribvan"/>
-                        <div class="propsub">Antes de empezar</div>
-                        <div class="propopt">Validar</div>
+                        <div class="propsub">Before you start</div>
+                        <div class="propopt">Validate</div>
                       </a></div>
                       <div class="prop-bgh"><a href="/ProposalList">
                         <img src={past} class="ribvan"/> 
-                        <div class="propsub">Ver propuestas</div>
-                        <div class="propopt">Gobernanza</div>
+                        <div class="propsub">See current proposals</div>
+                        <div class="propopt">Governance</div>
                       </a></div>
                       
                       <div class="prop-bg"><a href="/createProposal">
                         <img src={prop} class="ribvan"/> 
-                        <div class="propsub">Crea una propuesta</div>
-                        <div class="propopt">Proponer</div>
+                        <div class="propsub">Create a proposal</div>
+                        <div class="propopt">Propose</div>
                       </a></div>
                       <div class="prop-bgr"><a href="/About">
                         <img src={reward} class="ribvan"/>
-                        <div class="propsub">Ver documentación</div>
-                        <div class="propopt">Conoce +</div>
+                        <div class="propsub">Learn more about VoTARO</div>
+                        <div class="propopt">Docs</div>
                       </a></div>
                     </div>
                 
@@ -328,18 +328,18 @@ function Home() {
                     <div class="propgrid">
                     <div class="prop-bgr"><a href="/About">
                         <img src={prop} class="ribbons"/> 
-                        <div class="propsub">¿Qué es una wallet?</div>
-                        <div class="propopt">Empieza Aquí</div>
+                        <div class="propsub">What is a wallet?</div>
+                        <div class="propopt">Start here</div>
                       </a></div>
                       <div class="prop-bg"><a href="/About">
                         <img src={reward} class="ribbons"/>
-                        <div class="propsub">Crea y vota propuestas por</div>
-                        <div class="propopt">Recompenzas</div>
+                        <div class="propsub">Create and vote proposals for</div>
+                        <div class="propopt">Rewards</div>
                       </a></div>
                       <div class="prop-bgr"><a href="/About">
                         <img src={vote} class="ribbons"/>
-                        <div class="propsub">Organización Autónoma Descentralizada</div>
-                        <div class="propopt">Somos una DAO</div>
+                        <div class="propsub">Querétaro Urban Governance</div>
+                        <div class="propopt">City DAO</div>
                       </a></div>
                     </div>
                 </section>      
@@ -349,76 +349,80 @@ function Home() {
         </div>
       :
       <div class="App">
-      <div class="headline">
-        <h1>Querétaro City DAO </h1>
-        <p class="headline-p">Urban Governance on Ethereum Blockchain.</p>
-      </div>
-      <div class="main-grid">
-        
-          {!isMetamastInstalled ?
-              <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-              <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-          }
-          {/*isSkaleSwitched ? '' : isConnectingToSkale ?
-            <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-          */}
-        
-        <div>
-          {isConnected ?
-          <section>
+          <div class="headline">
+            <h1>Crea y vota propuestas en la ciudad de Querétaro </h1>
+            <p class="headline-p">Obtén recompensas por usar tus habilidades digitales en VoTARO.</p>
+          </div>
+          <div class="main-grid">
+                 
+              {!isMetamastInstalled ?
+                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+              }
+              {/*isSkaleSwitched ? '' : isConnectingToSkale ?
+                <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
+              */}
             
-              <div class="prop-bg"><a href="/createProposal">
-                <img src={prop} class="ribbons"/> 
-                <div class="propsub">Tienes</div>
-                <div class="propopt"> {userBalance} TARO</div>
-              </a></div><br/>
-            <div class="void-link">
-                <div class="prop-bgv"><a href="/Quiz">
-                  <img src={verify} class="ribvan"/>
-                  <div class="propsub">Antes de empezar</div>
-                  <div class="propopt">Validar</div>
-                </a></div>
-                <div class="prop-bgh"><a href="/PastProposals">
-                  <img src={past} class="ribvan"/> 
-                  <div class="propsub">Propuestas pasadas</div>
-                  <div class="propopt">Gobernanza</div>
-                </a></div>
-                <div class="prop-bg"><a href="/createProposal">
-                  <img src={prop} class="ribvan"/> 
-                  <div class="propsub">Crea una propuesta</div>
-                  <div class="propopt">Proponer</div>
-                </a></div>
-                <div class="prop-bgr"><a href="/Pastrroposal">
-                  <img src={reward} class="ribvan"/>
-                  <div class="propsub">Ver documentación</div>
-                  <div class="propopt">Conoce +</div>
-                </a></div>
-              </div>
-          </section>
-          :
-            <span>
-              <div class="propgrid">
-              <div class="prop-bgr"><a href="/Pastrroposal">
-                  <img src={prop} class="ribbons"/> 
-                  <div class="propsub">¿Qué es una wallet?</div>
-                  <div class="propopt">Empieza Aquí</div>
-                </a></div>
-                <div class="prop-bg"><a href="/createProposal">
-                  <img src={reward} class="ribbons"/>
-                  <div class="propsub">Crea y vota propuestas por</div>
-                  <div class="propopt">Recompenzas</div>
-                </a></div>
-                <div class="prop-bgr"><a href="/Pastrroposal">
-                  <img src={vote} class="ribbons"/>
-                  <div class="propsub">Organización Autónoma Descentralizada</div>
-                  <div class="propopt">Somos una DAO</div>
-                </a></div>
-              </div>
-          </span>      
-          }
-        </div>
+            <div>
+              {isConnected ?
+              <section>
+                
+                  <div class="prop-bg2"><a href="/createProposal">
+                    <img src={TARO} class="ribbons"/> 
+                    <div class="propsub">Tienes</div>
+                    <div class="propopt2"> {userBalance} TARO</div>
+                    <div class="propsub">Obtén más creando propuestas</div>
+                  </a></div><br/>
+                <div class="void-link">
+                  
+                    <div class="prop-bgv"><a href="/Quiz">
+                      <img src={verify} class="ribvan"/>
+                      <div class="propsub">Antes de empezar</div>
+                      <div class="propopt">Validar</div>
+                    </a></div>
+                    <div class="prop-bgh"><a href="/ProposalList">
+                      <img src={past} class="ribvan"/> 
+                      <div class="propsub">Ver propuestas</div>
+                      <div class="propopt">Gobernanza</div>
+                    </a></div>
+                    
+                    <div class="prop-bg"><a href="/createProposal">
+                      <img src={prop} class="ribvan"/> 
+                      <div class="propsub">Crea una propuesta</div>
+                      <div class="propopt">Proponer</div>
+                    </a></div>
+                    <div class="prop-bgr"><a href="/About">
+                      <img src={reward} class="ribvan"/>
+                      <div class="propsub">Ver documentación</div>
+                      <div class="propopt">Conoce +</div>
+                    </a></div>
+                  </div>
+             
+              </section>
+              :         
+                <section>
+                  <div class="propgrid">
+                  <div class="prop-bgr"><a href="/About">
+                      <img src={prop} class="ribbons"/> 
+                      <div class="propsub">¿Qué es una wallet?</div>
+                      <div class="propopt">Empieza Aquí</div>
+                    </a></div>
+                    <div class="prop-bg"><a href="/About">
+                      <img src={reward} class="ribbons"/>
+                      <div class="propsub">Crea y vota propuestas por</div>
+                      <div class="propopt">Recompenzas</div>
+                    </a></div>
+                    <div class="prop-bgr"><a href="/About">
+                      <img src={vote} class="ribbons"/>
+                      <div class="propsub">Organización Autónoma Descentralizada</div>
+                      <div class="propopt">Somos una DAO</div>
+                    </a></div>
+                  </div>
+              </section>      
+              }
+            </div>
+          </div>
       </div>
-    </div>
   }
 </div>
     

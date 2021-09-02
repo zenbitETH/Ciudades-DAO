@@ -213,34 +213,33 @@ function myFunction() {
   return (
     <div>
       {isEnglish === 'english'
-        ?
-        
+      ?
       <div id="proposal" class="newprop">
       <div class="progress-holder">
         <div class="progress-container">
           <div class="progress-bar" id="myBar"></div>
         </div>
       </div>
-      <h1><span  class="orange">Nueva propuesta</span></h1><br/><br/>
+      <h1><span  class="orange">New Proposal</span></h1><br/><br/>
       <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
 
       <Form autocomplete="off">
           <Form.Group as={Row} controlId="formTitle">
           <Form.Label  >
-            1. Nombre de la propuesta
+            1. Proposal Title
             </Form.Label>
             <Form.Control type="text"
-              placeholder="🎯 ¿Qué hay que hacer?"
+              placeholder="🎯 What is need to be done?"
               onChange={handleOnChangeTitle}/>
           </Form.Group>
 
           <Form.Group as={Row} controlId="formNeighborhood" >
             <Form.Label  >
-            2. Lugar
+            2. Location
             </Form.Label>
               <Form.Control as="select" data-live-search="true"
                 onChange={handleOnChangeNeighborhood}>
-                <option disabled selected>📍 ¿Dónde es la propuesta?</option>
+                <option disabled selected>📍 Where is the proposal</option>
                 <optgroup label="Del. Felipe Carrillo Puerto Región 7">
                   <option>Cerro Prieto</option>
                   <option>El Patol</option>
@@ -348,35 +347,35 @@ function myFunction() {
 
           <Form.Group as={Row} controlId="formTypeOfAction">
           <Form.Label >
-            3. Tipo de actividad 
+            3. Type of activity
             </Form.Label>
             <Form.Control as="select" data-live-search="true"
               onChange={handleOnChangeTypeOfAction}>
-                <option disabled selected>⚙️ Selecciona el tipo de actividad</option>
-                <option>Evento presencial</option>
-                <option>Evento en linea</option>
-                <option>Evento mixto</option>
-                <option>Obra Pública</option>
+                <option disabled selected>⚙️ Select the type of acitivity</option>
+                <option>Face-to-face event</option>
+                <option>Online event</option>
+                <option>Mix event</option>
+                <option>Public Work</option>
             </Form.Control>
           </Form.Group>
 
           <Form.Group as={Row} controlId="formPersonInCharge">    
             <Form.Label  >
-              4. Responsable
+              4. Person in charge
             </Form.Label>
             <Form.Control as="select" class="selectpicker show-tick form-control"
               onChange={handleOnChangePersonInCharge}>
-              <option disabled selected>🦸 ¿Quién tiene que hacerlo?</option>
-              <option>Ciudadanos</option>
-              <option>Gobierno</option>
-              <option>Organismo o asociación</option>
-              <option>Otro (especifica en descripción) </option>
+              <option disabled selected>🦸 Who will do the proposal?</option>
+              <option>Citizens</option>
+              <option>Government</option>
+              <option>Organizasmo u asociación</option>
+              <option>Other (especify in description)</option>
             </Form.Control>
           </Form.Group>
 
           <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
             <Form.Label>
-             5. Descripción
+             5. Description
           </Form.Label>
           <Form.Control className="description" as="textarea"
             type="text" rows={3}
@@ -395,15 +394,15 @@ function myFunction() {
 
           <Form.Group as={Row} controlId="formBudget">
             <Form.Label  >
-              6. Costo
+              6. Cost
             </Form.Label>
             <Form.Control as="select"
               onChange={handleOnChangeBudget}>
-              <option disabled selected>💸 Presupuesto de la propuesta</option>
-              <option value="0">0, voluntario o desconocido</option>
-              <option value="1000">hasta 1,000 pesos</option>  
-              <option value="10000">hasta 10,0000 pesos</option>
-              <option value="100000">hasta 100,000 pesos</option>
+              <option disabled selected>💸 Proposal budget range</option>
+              <option value="0">0, voluntary, unknown</option>
+              <option value="1000">Up to 1,000 pesos</option>  
+              <option value="10000">Up to 10,0000 pesos</option>
+              <option value="100000">Up to 100,000 pesos</option>
             </Form.Control>
           </Form.Group>
           {/*
@@ -414,8 +413,8 @@ function myFunction() {
             <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
           </Form.Group>
           */}
-          <a class="jos" href="#proposal">Revisa tu puesta antes de enviar</a>
-          <Button className="Wallet"classntype="submit" onClick={handleOnSubmit}><span class="oneem">🚀 Enviar propuesta</span></Button>
+          <a class="jos" href="#proposal">Check your post before sending</a>
+          <Button className="Wallet"classntype="submit" onClick={handleOnSubmit}><span class="oneem">🚀 Send proposal</span></Button>
           </Form>
         <IsLoadingModal
           show={loadingModalShow}
@@ -435,118 +434,223 @@ function myFunction() {
 
         :
 
-        <div className="gray">
-        <Form className="create">
-        <p className="orange">Crear una propuesta</p>
-        <div className="big-icon">✍🏼</div>
-        <div className="main">Recibirás 20 TARO por cada propuesta que realices, pero la recompensa solo será valida por las primeras 5 propuestas. Después puedes crear propuestas pero no recibirás TARO por crearlas.</div>
-        <p className="orange2">⚠️Debes llenar todos los campos⚠️</p>
-          <Form.Group as={Row} controlId="formTitle">
-            <Form.Label>
-            🎯 Título
-            </Form.Label>
-            <Form.Control type="text"
-              placeholder="Nombra el objetivo de tu propuesta"
-              onChange={handleOnChangeTitle}/>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="formTypeOfAction">
-            <Form.Label>
-            ⚙️ Tipo de acción
-            </Form.Label>
-            <Form.Control as="select"
-              onChange={handleOnChangeTypeOfAction}>
-                <option disabled selected>¿Qué tipo de actividad es?</option>
-                <option>Obra Pública Municipal</option>
-                <option>Obra Pública Estatal</option>
-                <option>Evento único</option>
-                <option>Evento recurrente</option>
-            </Form.Control>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="formNeighborhood">
+      <div id="proposal" class="newprop">
+        <div class="progress-holder">
+          <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+          </div>
+        </div>
+        <h1><span  class="orange">Nueva propuesta</span></h1><br/><br/>
+        <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
+          
+        <Form autocomplete="off">
+            <Form.Group as={Row} controlId="formTitle">
             <Form.Label  >
-            📍 Colonia
-            </Form.Label>
-              <Form.Control class="selectpicker" as="select"
-                onChange={handleOnChangeNeighborhood}>
-                <option disabled selected>¿Dónde se lleva a cabo la propuesta?</option>
-                <option>Santa Mónica 2</option>
-                <option>Santa Mónica</option>
-                <option>El Tintero</option>
-                <option>Ex-Hacienda el Tintero</option>
-                <option>Solidaridad</option>
-                <option>El Progreso</option>
-                <option>El Mirador</option>
-                <option>Otra (especifica en descripción)</option>
+              1. Nombre de la propuesta
+              </Form.Label>
+              <Form.Control type="text"
+                placeholder="🎯 ¿Qué hay que hacer?"
+                onChange={handleOnChangeTitle}/>
+            </Form.Group>
+          
+            <Form.Group as={Row} controlId="formNeighborhood" >
+              <Form.Label  >
+              2. Lugar
+              </Form.Label>
+                <Form.Control as="select" data-live-search="true"
+                  onChange={handleOnChangeNeighborhood}>
+                  <option disabled selected>📍 ¿Dónde es la propuesta?</option>
+                  <optgroup label="Del. Felipe Carrillo Puerto Región 7">
+                    <option>Cerro Prieto</option>
+                    <option>El Patol</option>
+                    <option>El Pie</option>
+                    <option>El Transito</option>
+                    <option>La Purisima</option>
+                    <option>La Tinaja de la Estancia</option>
+                    <option>San Isidro el Alto</option>
+                  </optgroup>
+          
+                  <optgroup label="Del. Felipe Carrillo Puerto Región 8">
+                    <option>El Nabo</option>
+                    <option>El Zapote</option>
+                    <option>Huertas La Joya</option>
+                    <option>Jardines de Azucenas</option>
+                    <option>La Palma</option>
+                    <option>Las Camelinas</option>
+                    <option>Laderas de San Pedro / Prados del Rincon</option>
+                    <option>Mompani</option>
+                    <option>Patria Nueva</option>
+                    <option>Puerta Navarra</option>
+                    <option>Puerta del Sol</option>
+                    <option>Puerta Verona</option>
+                    <option>Rancho San Pedro</option>
+                    <option>Santo Niño de Praga</option>
+                    <option>Tenochtitlan</option>
+                    <option>Tlacote el Alto</option>
+                    <option>Tlacote el Bajo</option>
+                    <option>Valle de Santiago</option>
+                    <option>Villa Real </option>
+                    <option>Viñedos</option>
+                  </optgroup>
+          
+                  <optgroup label="Del. Felipe Carrillo Puerto Región 9">
+                    <option>5 de Febrero</option>
+                    <option>Campo Militar</option>
+                    <option>Comisión Estatal de Aguas</option>
+                    <option>Demetrio Vallejo</option>
+                    <option>Desarrollo Especial</option>
+                    <option>Ejido Modelo</option>
+                    <option>Ensueño</option>
+                    <option>El Rosario</option>
+                    <option>Eucaliptos</option>
+                    <option>Fraccionamiento Carolina</option>
+                    <option>Ferrocarrileros</option>
+                    <option>Jardines del Valle</option>
+                    <option>José María Arteaga</option>
+                    <option>La Aurora</option>
+                    <option>La Carambada</option>
+                    <option>La Capilla</option>
+                    <option>Las Flores</option>
+                    <option>La Sierrita</option>
+                    <option>Parque La Gloria</option>
+                    <option>Prados de la Capilla</option>
+                    <option>Residencial Italia</option>
+                    <option>Residencial Galindas</option>
+                    <option>Residencial Gema</option>
+                    <option>Rayito</option>
+                    <option>Rinconada La Capilla</option>
+                    <option>Rinconada Santa Anita</option>
+                    <option>Santa Anita</option>
+                    <option>San Antonio del Maurel</option>
+                    <option>San Antonio de la Punta</option>
+                    <option>Santa María Magdalena</option>
+                    <option>Santiago</option>
+                    <option>Villas Las Arboledas</option>
+                    <option>Virreyes</option>
+                    <option>Zona Industrial</option>
+                    <option>Ampolletas</option>
+                  </optgroup>
+                  
+                  <optgroup label="Del. Felipe Carrillo Puerto Región 10">
+                    <option>Arcangel</option>
+                    <option>Aduana / Vías</option>
+                    <option>Alborada</option>
+                    <option>Bosques del Chamisal</option>
+                    <option>Bosques del Sol</option>
+                    <option>Carrillo</option>
+                    <option>El Tintero</option>
+                    <option>El Higo</option>
+                    <option>El Mirador</option>
+                    <option>El Sol</option>
+                    <option>El Progreso</option>
+                    <option>Ex-Hacienda "El Tintero"</option>
+                    <option>Felipe Carrillo Puerto</option>
+                    <option>Las Teresas</option>
+                    <option>Los Laureles</option>
+                    <option>La Luna</option>
+                    <option>Rancho Bellavista</option>
+                    <option>San Diego</option>
+                    <option>San Sebastián</option>
+                    <option>Santa Mónica</option>
+                    <option>Santa Mónica 2</option>
+                    <option>Solidaridad 90</option>
+                    <option>Tabachines</option>
+                    <option>Tonatiuh 1</option>
+                    <option>Tonatiuh Secc. 2</option>
+                    <option>Tonatiuh 3</option>
+                    <option>Tonatiuh Secc. 4</option>
+                    <option>Valle de San Pedro</option>
+                    <option>Valle el Mezquital</option>
+                  </optgroup> 
+                </Form.Control>
+            </Form.Group>
+          
+            <Form.Group as={Row} controlId="formTypeOfAction">
+            <Form.Label >
+              3. Tipo de actividad 
+              </Form.Label>
+              <Form.Control as="select" data-live-search="true"
+                onChange={handleOnChangeTypeOfAction}>
+                  <option disabled selected>⚙️ Selecciona el tipo de actividad</option>
+                  <option>Evento presencial</option>
+                  <option>Evento en linea</option>
+                  <option>Evento mixto</option>
+                  <option>Obra Pública</option>
               </Form.Control>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="formPersonInCharge">
-            <Form.Label  >
-            🦸🦸‍♂️ Responsable
+            </Form.Group>
+          
+            <Form.Group as={Row} controlId="formPersonInCharge">    
+              <Form.Label  >
+                4. Responsable
+              </Form.Label>
+              <Form.Control as="select" class="selectpicker show-tick form-control"
+                onChange={handleOnChangePersonInCharge}>
+                <option disabled selected>🦸 ¿Quién tiene que hacerlo?</option>
+                <option>Ciudadanos</option>
+                <option>Gobierno</option>
+                <option>Organismo o asociación</option>
+                <option>Otro (especifica en descripción) </option>
+              </Form.Control>
+            </Form.Group>
+          
+            <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
+              <Form.Label>
+               5. Descripción
             </Form.Label>
-              <Form.Control className="placeholder" type="text"
-                placeholder="¿Quien tiene que hacerlo??"
-                onChange={handleOnChangePersonInCharge}/>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
-            <Form.Label>
-            📑 Descripción
-          </Form.Label>
-          <Form.Control className="placeholder" as="textarea"
-            type="text" rows={5}
-            placeholder="Describe tu propuesta, ¡mientras más información mejor!"
-            onChange={handleOnChangeDescription}/>
-          </Form.Group>
-          {/*
-          <Form.Group as={Row} controlId="formExpiration">
-            <Form.Label  >
-              Expiration
-            </Form.Label>
-            <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
-          </Form.Group>
-          */}
-          <Form.Group as={Row} controlId="formBudget">
-            <Form.Label  >
-            💸 Costo aproximado de la propuesta (en pesos)
-            </Form.Label>
-            <Form.Control className="placeholder" as="select"
+            <Form.Control className="description" as="textarea"
+              type="text" rows={3}
+              placeholder="📑Describe a detalle tu propuesta"
+              onChange={handleOnChangeDescription}/>
+            </Form.Group>
+          
+            {/*
+            <Form.Group as={Row} controlId="formExpiration">
+              <Form.Label  >
+                Expiration
+              </Form.Label>
+              <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
+            </Form.Group>
+            */}
+ 
+            <Form.Group as={Row} controlId="formBudget">
+              <Form.Label  >
+                6. Costo
+              </Form.Label>
+              <Form.Control as="select"
                 onChange={handleOnChangeBudget}>
-                <option disabled selected>Agrega un presupuesto en tu propuesta</option>
-                <option value="0">O, voluntario o desconocido</option>
+                <option disabled selected>💸 Presupuesto de la propuesta</option>
+                <option value="0">0, voluntario o desconocido</option>
                 <option value="1000">hasta 1,000 pesos</option>  
                 <option value="10000">hasta 10,0000 pesos</option>
                 <option value="100000">hasta 100,000 pesos</option>
               </Form.Control>
-          </Form.Group>
-          {/*
-          <Form.Group as={Row} controlId="formRequiredTaroToVote">
-            <Form.Label  >
-              Required TARO to vote
-          </Form.Label>
-            <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
-          </Form.Group>
-          */}
-
-          <Button className="submitbutton"classntype="submit" onClick={handleOnSubmit}>Enviar propuesta</Button>
-          </Form>
-        <IsLoadingModal
-          show={loadingModalShow}
-          onHide={handleOnLoadingModal}
-        />
-
-        <CreateProposalErrorModal
-          show={errorModalShow}
-          onHide={handleOnErrorModal}
-        />
-
-        <CreateProposalSuccessModal
-          show={successModalShow}
-          onHide={handleOnAlreadySubmitted}
-        />
-      </div>
+            </Form.Group>
+            {/*
+            <Form.Group as={Row} controlId="formRequiredTaroToVote">
+              <Form.Label  >
+                Required TARO to vote
+            </Form.Label>
+              <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
+            </Form.Group>
+            */}
+            <a class="jos" href="#proposal">Revisa tu puesta antes de enviar</a>
+            <Button className="Wallet"classntype="submit" onClick={handleOnSubmit}><span class="oneem">🚀 Enviar propuesta</span></Button>
+            </Form>
+          <IsLoadingModal
+            show={loadingModalShow}
+            onHide={handleOnLoadingModal}
+          />
+ 
+          <CreateProposalErrorModal
+            show={errorModalShow}
+            onHide={handleOnErrorModal}
+          />
+ 
+          <CreateProposalSuccessModal
+            show={successModalShow}
+            onHide={handleOnAlreadySubmitted}
+          />
+        </div>
         }
       </div>
       );

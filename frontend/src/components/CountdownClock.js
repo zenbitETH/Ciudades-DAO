@@ -67,7 +67,7 @@ const CountdownClock = ({timeToExpiration}) => {
         </div>
         :
           <div>
-            {days} días, {hours}:{minutes}:{seconds}
+           Expira en {days} días, {hours}:{minutes}:{seconds}
           </div>
         }
       </div>

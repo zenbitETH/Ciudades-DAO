@@ -139,50 +139,35 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
       </div>
     </div>
 
-        :
-        <Card className="proposalr">
-        <div className="prop-title">💡 Propuesta # {id} 
-      <span className="proposal-date"> hecha el día {proposalDay}/{proposalMonth}/{proposalYear}</span> 
-      <div className="proposal-authorpast">por {proposer}</div>
-    </div>
-    <div className="proposal-title">🎯{title}</div>
-    <div className="proposal-details">🔍 Detalles:</div>
-    <div className="proposal-container">
-      <div className="proposal-hero">🦸 Responsable de la actividad🦸‍♂️ <div className="table-text">{personInCharge}</div></div>
-      <div className="proposal-table">
-        <div className="proposal-action">⚙️ Tipo: <div className="table-text">{typeOfAction}</div></div>
-        <div className="proposal-location">📍 Dónde: <div className="table-text">{neighborhood}</div></div>
-        <div className="proposal-cost">💸 Costo: <div className="table-text">{budget} pesos</div></div>
-      </div>
-      
-      
-      <div className="proposal-description" >📑 Descripción: <div className="table-text">{description}</div></div>
-    </div>
-    
-            {/*}
-            <div className ="proposal-main">
-              <div className="proposal-sub">Costo: {budget}</div>
-              <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
-            </div>
-            */}
+  :
 
-  <Card.Body className="proposal-table">
-        <div className="proposal-main">
-        <div className="proposal-favor">
-          <div>
-            ✔️ A favor:
-          </div>
-          <p className="big-iconf">{forVotes}<p>TARO</p></p>
-          </div>
-          <div>
-          <div className="proposal-against">
-            ❌ Rachazada por:
-          </div>
-             <p className="big-icona">{againstVotes} <p>TARO</p></p>
-          </div>
+    <div class="proposal">
+        <div class="proposal-expiration">
+          <h2 class="prop-title">💡 Propuesta # {id}</h2>
+          <span class="yellowr"> Hecha el {proposalDay}/{proposalMonth}/{proposalYear}</span> 
         </div>
-      </Card.Body>
-    </Card>
+        <div class="rproposal">Rechazada por {againstVotes} votes</div>
+        <div class="mini-title">🎯 Objetivo:</div>
+        <div class="prop-hl"> {title}</div><br/><br/>
+        <div class="grid-prop">
+          <div class="minit-bg">⚙️ Acción: <div class="prop-hl">{typeOfAction}</div></div>
+          <div class="minit-bg2">🦸 A cargo: <div className="prop-hl">{personInCharge}</div></div>      
+          <div class="minit-bg3"> 📍 Dónde: <div className="prop-hl">{neighborhood}</div></div>
+          <div class="minit-bg3">💸 Costo: <div className="prop-hl">{budget} pesos</div> </div>
+        </div>
+        <div class="description-bg">📑 Descripción: <div class="prop-description">{description}</div></div>
+          {/*}
+          <div className ="proposal-main">
+            <div className="proposal-sub">Costo: {budget}</div>
+            <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+          </div>
+          */}
+      <div class="yellow"> Hecha por {proposer}</div><br/>
+      <div className="vote-grid">
+        <div class="prop-bgw"><h2>Apoyada por<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
+        <div class="prop-bga2"><h2>Rechazada por:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
+      </div>
+    </div>
 
       }
     </div>

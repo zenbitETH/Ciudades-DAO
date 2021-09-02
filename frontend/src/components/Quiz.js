@@ -278,12 +278,12 @@ function myFunction() {
   return (
     <body id="quiz">
       {isEnglish === 'english' ?
-        <div class="">
+        <div>
           <div class="progress-holder">
-        <div class="progress-container">
-          <div class="progress-bar2" id="myBar"></div>
+            <div class="progress-container">
+            <div class="progress-bar2" id="myBar"></div>
+          </div>
         </div>
-      </div>
         {isConnected ?
           <div>
             <div> 
@@ -342,52 +342,66 @@ function myFunction() {
           }
         </div>
         :
-        <div className="app">
-          {isConnected ?
-              <div className="gray2">
-                <div>
-                  <div className="main">      
-                  <div className="text-large"> Valida tu cuenta</div>
-                  <div className="big-icon">✔️</div>
-                  <div>
-                    <p>VoTARO se enfoca en la gobernanza de la ciudad de Querétaro, por lo que deberas<span className="yellow"> validar que eres ciudadan@ de Queréaro. para poder crear propuestas o votar el módulo de gobernanza.</span></p>
-                    <p>Para validar tu cuenta, es necesario contestar este cuestionario Al contestarlo coorrectamente el contrato validará tu dirección y recibiras de <span className="orange3">20 a 100 TARO</span>, dependiendo de las respuestas correctas.</p>
-                  </div>
-                    <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-                    {spanishQuestions}
-                    </QuizContext.Provider>
-
-                    <div className="floating">
-                      <Button className="alt" onClick={handleOnSubmitAnswers}> ✔️ Verificar respuestas</Button>
-                    </div>
-                  </div>
-
-
-                  <QuizFailureModal
-                    show={failureModalShow}
-                    onHide={handleOnFailure}
-                  />
-                  <QuizSuccessModal
-                    show={successModalShow}
-                    onHide={handleOnSuccess}
-                  />
-                  <QuizAlreadySubmittedModal
-                    show={alreadySubmittedModal}
-                    onHide={handleOnAlreadySubmitted}
-                  />
-                    <IsLoadingModal
-                      show={loadingModalShow}
-                      onHide={handleOnLoadingModal}
-                    />
-                </div>
-              </div>
-              :
-              <div className="valert">
-            <div className="main">
-              <div className="big-icon">⚠️</div>
-              <div className="white">Necesitas conectarte con una wallet de Metamask a la red de Ethereum para poder contestar el cuestionario</div>
-              <Link className="alt2" to="/">Regresa al inicio para conectar Wallet</Link>
+        <div>
+          <div class="progress-holder">
+            <div class="progress-container">
+            <div class="progress-bar2" id="myBar"></div>
+          </div>
+        </div>
+        {isConnected ?
+          <div>
+            <div> 
+            <br/><br/>
+            <h1><span id="vote">Valida tu cuenta</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            
+            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
+            {englishQuestions}
+            </QuizContext.Provider>
+            <div className="floating">
+              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Valida tu cuenta</div>
             </div>
+            </div>
+            
+            <QuizFailureModal
+              show={failureModalShow}
+              onHide={handleOnFailure}
+            />
+            <QuizSuccessModal
+              show={successModalShow}
+              onHide={handleOnSuccess}
+            />
+            <QuizAlreadySubmittedModal
+              show={alreadySubmittedModal}
+              onHide={handleOnAlreadySubmitted}
+            />
+              <IsLoadingModal
+                show={loadingModalShow}
+                onHide={handleOnLoadingModal}
+              />
+
+          </div>
+          :
+          <div class="valert4">
+              <h1><span id="vote">Conecta tu cartera web 3</span></h1><br/>
+              <div class="center"><img src={img4} alt="Alert about key" class="prop-img"/></div><br/>
+                <div class="floating">
+                  <div class="about-tx">Necesitas una cartera Web 3 para usar VoTARO.
+                    Obten una cartera o conecte una dirección existente en la pantalla de inicio.
+                  <br/><br/></div>
+                </div>
+                <div class="void-link">
+                  <div class="about-bg"><a href="https://metamask.io">
+                    <img src={meta} class="ribvan"/> 
+                    <div class="propsub">Obtener wallet web 3</div>
+                    <div class="propopt">Descargar</div>
+                  </a></div>
+                  <div class="about-bg"><a href="/Home">
+                    <img src={connect} class="ribvan"/>
+                    <div class="propsub">Dirección existente</div>
+                    <div class="propopt">Conectar</div>
+                  </a></div>
+                </div>
           </div>
           }
         </div>

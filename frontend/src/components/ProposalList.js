@@ -240,39 +240,39 @@ const ProposalList = () => {
             </div>
           </div>
             <span>{isValidated ? "" : <ValidationRequired />}</span>
-          <h1><span class="orange">Gobernanza DAO</span></h1><br/><br/>
+          <h1><span class="orange">Querétaro City DAO</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>          
           <div className= "propgrid">
             <div class="prop-bg"><a href="/createProposal">
               <img src={prop} class="ribbons"/> 
-              <div class="propsub">Crea una propuesta</div>
-              <div class="propopt">Proponer</div>
+              <div class="propsub">Create a proposal</div>
+              <div class="propopt">Propose</div>
             </a></div>
             <div class="prop-bg2"><a href="#vote">
               <img src={vote2} class="ribbons"/> 
-              <div class="propsub">Propuestas disponibles</div>
-              <div class="propopt">Por votar</div>
+              <div class="propsub">Available proposals</div>
+              <div class="propopt">Vote</div>
             </a></div>
             <div class="prop-bgh"><a href="/PastProposals">
               <img src={past} class="ribbons"/> 
-              <div class="propsub">Propuestas pasadas</div>
-              <div class="propopt">Historial</div>
+              <div class="propsub">Past proposals</div>
+              <div class="propopt">Record</div>
             </a></div>
-            <div class="prop-bgr"><a href="/PastrProposal">
+            <div class="prop-bgr"><a href="/About">
               <img src={reward} class="ribbons"/>
-              <div class="propsub">Crea propuestas, gana TARO</div>
-              <div class="propopt">Recompensas</div>
+              <div class="propsub">Create proposals, get TARO</div>
+              <div class="propopt">Rewards</div>
             </a></div>
           </div>
         <div><br/>
           {list.length > 0 ?
             <div id="vote" className="props">
-              <h1><span >Propuestas por votar</span></h1><br/>
+              <h1><span >Proposals to vote</span></h1><br/>
               <img src={vote2} alt="Alert about key" class="prop-img"/>
                 <div class="floating">
-                  <div class="about-tx2">Usa el TARO que has ganado para 
-                  votar por propuestas de gobernanza en la ciudad de Querétaro.</div>
-                  </div><h1>1 TARO = 1 Voto</h1><br/>
+                  <div class="about-tx2">Use the TARO you have earned to
+                   vote for governance proposals in the city of Querétaro.</div>
+                  </div><h1>1 TARO = 1 Vote</h1><br/>
                 {list}
                 <div class="void-link">
                   <div class="prop-bg"><a href="/PastProposals">
@@ -282,100 +282,139 @@ const ProposalList = () => {
                   </a></div>
                   <div class="prop-bg"><a href="/createProposal">
                     <img src={prop} class="ribvan"/> 
-                    <div class="propsub">Crea una propuesta</div>
-                    <div class="propopt">Proponer</div>
+                    <div class="propsub">Create a proposal</div>
+                    <div class="propopt">Propose</div>
                   </a></div>
                 </div>
             </div>
            :
             <div id="vote" className="void">                
               <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-              <h1><span  class="red">No hay propuestas por votar</span></h1><br/>
+              <h1><span  class="red">There are no proposals to vote</span></h1><br/>
                 <div class="floating">
-                  <div class="about-tx2">Crea una propuesta o valida tu cuenta para participar. 
-                    También puedes ver el historial de propuesta o conoce más antes de empezar.
+                  <div class="about-tx2">
+                    Create a proposal or validate your account to participate.
+                     You can also view the proposal history or learn more before you start.
                   </div>
                 </div>
                 <div class="void-link">
                   <div class="prop-bg"><a href="/createProposal">
                     <img src={prop} class="ribvan"/> 
-                    <div class="propsub">Crea una propuesta</div>
-                    <div class="propopt">Proponer</div>
+                    <div class="propsub">Create a proposal</div>
+                    <div class="propopt">Propose</div>
                   </a></div>
                   <div class="prop-bgv"><a href="/Quiz">
                     <img src={verify} class="ribvan"/>
-                    <div class="propsub">Antes de empezar</div>
-                    <div class="propopt">Validar</div>
+                    <div class="propsub">Before you start</div>
+                    <div class="propopt">Validate</div>
                   </a></div>
                   <div class="prop-bgh"><a href="/PastProposals">
                     <img src={past} class="ribvan"/> 
-                    <div class="propsub">Propuestas pasadas</div>
-                    <div class="propopt">Historial</div>
+                    <div class="propsub">Past proposals</div>
+                    <div class="propopt">Record</div>
                   </a></div>
-                  <div class="prop-bgr"><a href="/Pastrroposal">
+                  <div class="prop-bgr"><a href="/About">
                     <img src={reward} class="ribvan"/>
-                    <div class="propsub">Ver documentación</div>
-                    <div class="propopt">Conoce +</div>
+                    <div class="propsub">Learn +</div>
+                    <div class="propopt">Docs</div>
                   </a></div>
                 </div>
             </div>
           }
         </div>
       </div>
+
     :
-      <div>
-        <div>
-          <div className= "valert">
-            {isValidated ? "" : <ValidationRequired />}
+
+      <div class="proplist">
+        <div class="progress-holder">
+          <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
           </div>
-          <div className= "orangeB">
-            <div className="text-large">Crea una nueva propuesta</div>
-            <div className="big-icon">🦸🦸‍♂️</div>
-            <div className="main">¡La ciudad te necesita! genera propuestas de actividades, obras públicas o necesidades que hayas identificado en tu comunidad
-              Realiza propuestas, vota por ellas y hazlas realidad para obtener más TARO.
-            </div>
-            <div className ="floating">
-              <Link className="alt2" to="/createproposal"> ✍🏼 Crear propuesta</Link>
-            </div>
-          </div >
-        <div>
-          {list.length > 0 ?
-            <div className ="space">
-              <div className= "yellowB">
-    
-                <div className="text-large"> Propuestas para votar </div>
-                <div className="big-icon">🗳️</div>
-                <div className="text-large">1 TARO = 1 Voto</div>
-                <div className="main">Usa tu taro TARO para votar a favor o en contra de las propuestas disponibles. Tu poder de voto depende de la cantidad de tokens TARO que tengas en tu wallet.
-                </div>
-                {list}
-                <div className="floating">
-                <Link className="alt2" to="/PastProposals">📅 Propestas pasadas</Link>
-                </div>
-              </div >
-            </div>
-          :
-          <div className="space">
-          <div className= "yellowB">
-            <div className="text-large"> Propuestas para votar </div>
-            <div className="big-icon">🗳️</div>
-            <div className="text-large">1 TARO = 1 Voto</div>
-            <div className="main">Usa tu taro TARO para votar a favor o en contra de las propuestas disponibles. Tu poder de voto depende de la cantidad de tokens TARO que tengas en tu wallet.</div>
-            <div className="floating">
-            <div className="title2">⛔No hay propuestas activas.⛔</div>
-            </div>
-            <div className="floating">
-              <Link className="alt2" to="/PastProposals">📅 Ver propuestas pasadas</Link>
-            </div>
-          </div >
-          <div className="floating">
-              <Link className="alt2" to="/">Regresar al inicio</Link>
-            </div>
         </div>
-          }
+          <span>{isValidated ? "" : <ValidationRequired />}</span>
+        <h1><span class="orange">Gobernanza DAO</span></h1><br/><br/>
+        <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>          
+        <div className= "propgrid">
+          <div class="prop-bg"><a href="/createProposal">
+            <img src={prop} class="ribbons"/> 
+            <div class="propsub">Crea una propuesta</div>
+            <div class="propopt">Proponer</div>
+          </a></div>
+          <div class="prop-bg2"><a href="#vote">
+            <img src={vote2} class="ribbons"/> 
+            <div class="propsub">Propuestas disponibles</div>
+            <div class="propopt">Por votar</div>
+          </a></div>
+          <div class="prop-bgh"><a href="/PastProposals">
+            <img src={past} class="ribbons"/> 
+            <div class="propsub">Propuestas pasadas</div>
+            <div class="propopt">Historial</div>
+          </a></div>
+          <div class="prop-bgr"><a href="/About">
+            <img src={reward} class="ribbons"/>
+            <div class="propsub">Crea propuestas, gana TARO</div>
+            <div class="propopt">Recompensas</div>
+          </a></div>
         </div>
-      </div>
-    </div>
+        <div><br/>
+        {list.length > 0 ?
+          <div id="vote" className="props">
+            <h1><span >Propuestas por votar</span></h1><br/>
+            <img src={vote2} alt="Alert about key" class="prop-img"/>
+              <div class="floating">
+                <div class="about-tx2">Usa el TARO que has ganado para 
+                votar por propuestas de gobernanza en la ciudad de Querétaro.</div>
+                </div><h1>1 TARO = 1 Voto</h1><br/>
+              {list}
+              <div class="void-link">
+                <div class="prop-bg"><a href="/PastProposals">
+                <img src={past} class="ribvan"/> 
+                  <div class="propsub">Propuestas pasads</div>
+                  <div class="propopt">Historial</div>
+                </a></div>
+                <div class="prop-bg"><a href="/createProposal">
+                  <img src={prop} class="ribvan"/> 
+                  <div class="propsub">Crea una propuesta</div>
+                  <div class="propopt">Proponer</div>
+                </a></div>
+              </div>
+          </div>
+         :
+          <div id="vote" className="void">                
+            <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+            <h1><span  class="red">No hay propuestas por votar</span></h1><br/>
+              <div class="floating">
+                <div class="about-tx2">Crea una propuesta o valida tu cuenta para participar. 
+                  También puedes ver el historial de propuesta o conoce más antes de empezar.
+                </div>
+              </div>
+              <div class="void-link">
+                <div class="prop-bg"><a href="/createProposal">
+                  <img src={prop} class="ribvan"/> 
+                  <div class="propsub">Crea una propuesta</div>
+                  <div class="propopt">Proponer</div>
+                </a></div>
+                <div class="prop-bgv"><a href="/Quiz">
+                  <img src={verify} class="ribvan"/>
+                  <div class="propsub">Antes de empezar</div>
+                  <div class="propopt">Validar</div>
+                </a></div>
+                <div class="prop-bgh"><a href="/PastProposals">
+                  <img src={past} class="ribvan"/> 
+                  <div class="propsub">Propuestas pasadas</div>
+                  <div class="propopt">Historial</div>
+                </a></div>
+                <div class="prop-bgr"><a href="/About">
+                  <img src={reward} class="ribvan"/>
+                  <div class="propsub">Ver documentación</div>
+                  <div class="propopt">Conoce +</div>
+                </a></div>
+              </div>
+          </div>
+    }
+  </div>
+</div>
     }
     </body>
   );
