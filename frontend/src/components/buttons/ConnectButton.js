@@ -9,18 +9,18 @@ const ConnectButton = ({handleOnConnect}) => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <span>
+  <span>
     {isEnglish === 'english' ?
     <div className="prop-wallet" onClick={handleOnConnect}>
       <a>
-      <span>Conect your wallet </span>
+      <div>Conect your wallet </div>
        <img src={meta} class="shake2"/>
       </a>
     </div>
     :
     <div className="prop-wallet" onClick={handleOnConnect}>
       <a>
-      <span>Conecta tu cartera web 3 </span>
+      <div>Conecta tu cartera web 3 </div>
        <img src={meta} class="shake2"/>
       </a>
     </div>

@@ -152,8 +152,8 @@ option:disabled {
 
 .propgrid {
 display: grid;
-grid-template-columns: 1fr;
 grid-gap: 0.5em;
+grid-template-columns: 1fr 1fr;
 }
 
 
@@ -174,7 +174,7 @@ grid-gap: 0.5em;
 .propopt {
   margin-top: -0.3em;
   text-align: left;
-  font-size: 1.6em;
+  font-size: 1.5em;
   color: #ffffff;
 }
 
@@ -186,10 +186,11 @@ grid-gap: 0.5em;
 }
 
 .cw {
-  margin-top: -0.3em;
+  top: -16vh;
   text-align: center;
   font-size: 1.2em;
   color: #ffffff;
+  position: relative;
 }
 
 .no-wallet {
@@ -197,11 +198,9 @@ grid-gap: 0.5em;
   background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
-  border-radius: 25px;
-  height: 175px;
+  height: 200px;
   width: 100%;
   position: relative;
-  margin: 0.1em;
   border-width: 0em;
   border-style: solid;
   border-color: transparent;
@@ -209,14 +208,13 @@ grid-gap: 0.5em;
 
 .no-wallet img {
   content:'';
-  position: absolute;
-  bottom: -10%;
-  right: 25%;
   opacity: 80%;
   height:150px;
   border-radius: 25px;
-  background-size:200% 200%;
+  background-size: 200% 200%;
   z-index: -1;
+  top: -10%;
+  position: relative;
 }
 
 .no-wallet:hover {
@@ -224,32 +222,33 @@ grid-gap: 0.5em;
   cursor: pointer;
   border-width: 0em;
   border-style: solid;
-  
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
+  animation: none;
 }
 
 .prop-wallet {
   padding: 1em;
-  background: linear-gradient(-90deg, #2b284a00, #FF940076, #FF940076, #2b284a00);
-  background-size: 200% 200%;
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #FF940076, #FF940076,#2b284a00, #2b284a00);
+  background-size: 500% 500%;
   animation: gradient 2s ease infinite;
-  border-radius: 25px;
-  height: 175px;
+  height: 200px;
   width: 100%;
   position: relative;
-  margin: 0.1em;
   border-width: 0em;
   border-style: solid;
   border-color: transparent;
+  text-align: center;
   color: #fff;
+  font-size: 1.5em;
 }
 
 .prop-wallet img {
   content:'';
-  position: absolute;
-  right: 30%;
+  align-self: center;
+  position: relative;
   opacity: 80%;
   height:150px;
-  border-radius: 25px;
+  top: -1em;
   background-size:200% 200%;
 }
 
@@ -258,7 +257,7 @@ grid-gap: 0.5em;
   cursor: pointer;
   border-width: 0em;
   border-style: solid;
-  background: linear-gradient(0deg, #FF940076, #FF940076, #ff9500ba, #ff9500d2);
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #FF940076, #FF940076,#2b284a00, #2b284a00);
   animation: none;
 }
 
@@ -317,6 +316,72 @@ grid-gap: 0.5em;
 }
 
 .prop-bg2:hover {
+  cursor: pointer;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color:linear-gradient(45deg, #ffffff, #ffffff);
+  background: linear-gradient(-45deg, #2b284a00, #FF940076, #FF940076, #2b284a00);
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+}
+
+.bg-grid {
+  padding: 1em;
+  background-color: #00000068;
+  border-radius: 25px;
+  height: 175px;
+  width: 100%;
+  position: relative;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: transparent;
+  grid-column: span 2;
+}
+
+.bg-grid img {
+  content:'';
+  position: absolute;
+  bottom: 0px;
+  right:  10px;
+  opacity: 90%;
+  height: 120px;
+  border-radius: 25px;
+}
+
+.bg-grid:hover {
+  cursor: pointer;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color:linear-gradient(45deg, #ffffff, #ffffff);
+  background: linear-gradient(-45deg, #2b284a00, #FF940076, #FF940076, #2b284a00);
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+}
+
+.bg-grid2 {
+  padding: 1em;
+  background-color: #00000068;
+  border-radius: 25px;
+  height: 225px;
+  width: 100%;
+  position: relative;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: transparent;
+  grid-row: span 2;
+}
+
+.bg-grid2 img {
+  content:'';
+  position: absolute;
+  bottom: 0px;
+  right:  10px;
+  opacity: 90%;
+  height: 120px;
+  border-radius: 25px;
+}
+
+.bg-grid2:hover {
   cursor: pointer;
   border-width: 0.1em;
   border-style: solid;
@@ -542,7 +607,7 @@ grid-gap: 0.5em;
   border-radius: 20px;
   font-family: 'Lexend Deca', sans-serif;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   grid-template-rows:  repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 0.75em;
   margin: 0em 0em 0em 0em;
@@ -706,6 +771,7 @@ grid-gap: 0.5em;
   border-radius: 0 20px 0 0;
   padding: 0.5em;
   text-align: left;
+  
 }
 
 .minit-bg3 {
@@ -735,4 +801,21 @@ grid-gap: 0.5em;
 .votef {
   color:#fff;
   font-size: 2em;
+}
+
+@media only screen and (min-width: 1200px) {
+  .propgrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .bg-grid {
+    grid-row: span 2;
+    grid-column: span 1;
+    height: auto;
+  }
+  
+  .prop-wallet{
+    font-size: 2em;
+    padding-top: 0.25em;
+  }
 }

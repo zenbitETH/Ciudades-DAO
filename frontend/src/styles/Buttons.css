@@ -35,7 +35,6 @@ Button {
     color: #FAC91a;
     height: 100px !important;
     width: 100px !important;
-    vertical-align: baseline;
   }
   
   a {

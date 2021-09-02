@@ -272,76 +272,76 @@ function Home() {
   return (
     <div>
       {isEnglish === 'english' ?
-        <div class="App">
+          <div class="App">
             <div class="headline">
               <h1>Querétaro City DAO </h1>
               <p class="headline-p">Urban Governance on Ethereum Blockchain.</p>
             </div>
-            <div class="main-grid">
-              
-                {!isMetamastInstalled ?
+            <div class="center">
+            {!isMetamastInstalled ?
                     <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
                     <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
                 }
                 {/*isSkaleSwitched ? '' : isConnectingToSkale ?
                   <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
                 */}
+            </div>
+            <div class="main-grid">
+              
+                
               
               <div>
                 {isConnected ?
                 <section>
-                  
-                    <div class="prop-bg2"><a href="/createProposal">
+                  <div class="propgrid">
+                    <div class="bg-grid"><a href="/createProposal">
                       <img src={TARO} class="ribbons"/> 
                       <div class="propsub">You have</div>
                       <div class="propopt2"> {userBalance} TARO</div>
                       <div class="propsub">Get more by creating proposals</div>
-                    </a></div><br/>
-                  <div class="void-link">
+                    </a></div>
+                    <div class="prop-bgv"><a href="/Quiz">
+                      <img src={verify} class="ribvan"/>
+                      <div class="propsub">Before you start</div>
+                      <div class="propopt">Validate</div>
+                    </a></div>
+                    <div class="prop-bgh"><a href="/ProposalList">
+                      <img src={past} class="ribvan"/> 
+                      <div class="propsub">Current proposals</div>
+                      <div class="propopt">City DAO</div>
+                    </a></div>
                     
-                      <div class="prop-bgv"><a href="/Quiz">
-                        <img src={verify} class="ribvan"/>
-                        <div class="propsub">Before you start</div>
-                        <div class="propopt">Validate</div>
-                      </a></div>
-                      <div class="prop-bgh"><a href="/ProposalList">
-                        <img src={past} class="ribvan"/> 
-                        <div class="propsub">See current proposals</div>
-                        <div class="propopt">Governance</div>
-                      </a></div>
-                      
-                      <div class="prop-bg"><a href="/createProposal">
-                        <img src={prop} class="ribvan"/> 
-                        <div class="propsub">Create a proposal</div>
-                        <div class="propopt">Propose</div>
-                      </a></div>
-                      <div class="prop-bgr"><a href="/About">
-                        <img src={reward} class="ribvan"/>
-                        <div class="propsub">Learn more about VoTARO</div>
-                        <div class="propopt">Docs</div>
-                      </a></div>
-                    </div>
-                
-                </section>
-                :         
-                  <section>
-                    <div class="propgrid">
+                    <div class="prop-bg"><a href="/createProposal">
+                      <img src={prop} class="ribvan"/> 
+                      <div class="propsub">Create a proposal</div>
+                      <div class="propopt">Propose</div>
+                    </a></div>
                     <div class="prop-bgr"><a href="/About">
-                        <img src={prop} class="ribbons"/> 
+                      <img src={reward} class="ribvan"/>
+                      <div class="propsub">Learn +</div>
+                      <div class="propopt">Docs</div>
+                    </a></div>
+                  </div>
+                </section>
+                :
+                <section>
+                  <div class="propgrid">
+                    <div class="bg-grid"><a href="/About">
+                        <img src={prop} class="rivban"/> 
                         <div class="propsub">What is a wallet?</div>
                         <div class="propopt">Start here</div>
                       </a></div>
-                      <div class="prop-bg"><a href="/About">
-                        <img src={reward} class="ribbons"/>
+                      <div class="bg-grid2"><a href="/About">
+                        <img src={reward} class="rivban"/>
                         <div class="propsub">Create and vote proposals for</div>
                         <div class="propopt">Rewards</div>
                       </a></div>
-                      <div class="prop-bgr"><a href="/About">
-                        <img src={vote} class="ribbons"/>
+                      <div class="bg-grid2"><a href="/About">
+                        <img src={vote} class="rivban"/>
                         <div class="propsub">Querétaro Urban Governance</div>
                         <div class="propopt">City DAO</div>
                       </a></div>
-                    </div>
+                  </div>  
                 </section>      
                 }
               </div>
@@ -350,11 +350,11 @@ function Home() {
       :
       <div class="App">
           <div class="headline">
-            <h1>Crea y vota propuestas en la ciudad de Querétaro </h1>
-            <p class="headline-p">Obtén recompensas por usar tus habilidades digitales en VoTARO.</p>
+            <h1>Querétaro en Ethereum </h1>
+            <p class="headline-p">Gana cripto con tu participación ciudadana</p>
           </div>
-          <div class="main-grid">
-                 
+          
+            <div class="center">     
               {!isMetamastInstalled ?
                   <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
                   <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
@@ -362,18 +362,22 @@ function Home() {
               {/*isSkaleSwitched ? '' : isConnectingToSkale ?
                 <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
               */}
+            </div>            
+            <div class="main-grid">
+            
             
             <div>
               {isConnected ?
               <section>
-                
-                  <div class="prop-bg2"><a href="/createProposal">
+                <div class="propgrid">
+
+                  <div class="bg-grid"><a href="/createProposal">
                     <img src={TARO} class="ribbons"/> 
                     <div class="propsub">Tienes</div>
                     <div class="propopt2"> {userBalance} TARO</div>
                     <div class="propsub">Obtén más creando propuestas</div>
-                  </a></div><br/>
-                <div class="void-link">
+                  </a></div>
+
                   
                     <div class="prop-bgv"><a href="/Quiz">
                       <img src={verify} class="ribvan"/>
@@ -401,20 +405,20 @@ function Home() {
               </section>
               :         
                 <section>
-                  <div class="propgrid">
-                  <div class="prop-bgr"><a href="/About">
-                      <img src={prop} class="ribbons"/> 
-                      <div class="propsub">¿Qué es una wallet?</div>
+                <div class="propgrid">
+                  <div class="bg-grid"><a href="/About">
+                      <img src={prop} class="rivban"/> 
+                      <div class="propsub">¿Qué es una cartera web 3?</div>
                       <div class="propopt">Empieza Aquí</div>
                     </a></div>
-                    <div class="prop-bg"><a href="/About">
-                      <img src={reward} class="ribbons"/>
-                      <div class="propsub">Crea y vota propuestas por</div>
-                      <div class="propopt">Recompenzas</div>
+                    <div class="bg-grid2"><a href="/About">
+                      <img src={reward} class="rivban"/>
+                      <div class="propsub">Crea y vota propuestas </div>
+                      <div class="propopt">Gana TARO</div>
                     </a></div>
-                    <div class="prop-bgr"><a href="/About">
-                      <img src={vote} class="ribbons"/>
-                      <div class="propsub">Organización Autónoma Descentralizada</div>
+                    <div class="bg-grid2"><a href="/About">
+                      <img src={vote} class="rivban"/>
+                      <div class="propsub">Gobernanza Urbana </div>
                       <div class="propopt">Somos una DAO</div>
                     </a></div>
                   </div>
