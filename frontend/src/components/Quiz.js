@@ -1,8 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
-import {Link} from "react-router-dom";
 import Question from './Question';
 import { englishQuiz } from '../REALQUIZ/englishQuiz';
 import { spanishQuiz } from '../REALQUIZ/spanishQuiz';
@@ -285,14 +283,15 @@ function myFunction() {
           </div>
         </div>
         {isConnected ?
-          <div>
-            <div> 
-            <br/><br/>
+          <div >
             <h1><span id="vote">Validate your account</span></h1><br/>
             <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            <div> 
+            <br/><br/>
+            
             
             <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-            {englishQuestions}
+            <div id="margin">{englishQuestions}</div>
             </QuizContext.Provider>
             <div className="floating">
               <div className="verify-bt" onClick={handleOnSubmitAnswers}> Validate account</div>
@@ -356,7 +355,7 @@ function myFunction() {
             <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
             
             <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-            {englishQuestions}
+            <div id="margin">{spanishQuestions}</div>
             </QuizContext.Provider>
             <div className="floating">
               <div className="verify-bt" onClick={handleOnSubmitAnswers}> Valida tu cuenta</div>
@@ -379,7 +378,6 @@ function myFunction() {
                 show={loadingModalShow}
                 onHide={handleOnLoadingModal}
               />
-
           </div>
           :
           <div class="valert4">

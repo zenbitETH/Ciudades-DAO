@@ -222,8 +222,8 @@ function myFunction() {
       </div>
       <h1><span  class="orange">New Proposal</span></h1><br/><br/>
       <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
-
-      <Form autocomplete="off">
+      
+      <Form autocomplete="off" id="margin">
           <Form.Group as={Row} controlId="formTitle">
           <Form.Label  >
             1. Proposal Title
@@ -443,7 +443,7 @@ function myFunction() {
         <h1><span  class="orange">Nueva propuesta</span></h1><br/><br/>
         <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
           
-        <Form autocomplete="off">
+        <Form autocomplete="off" id="margin">
             <Form.Group as={Row} controlId="formTitle">
             <Form.Label  >
               1. Nombre de la propuesta

@@ -261,7 +261,7 @@ const PastProposals = () => {
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
           
    
-          <div className= "props">
+          <div id="margin" className= "props">
             <div>
               {showApproved
                 ?
@@ -411,7 +411,7 @@ const PastProposals = () => {
           <br/><br/>
           <h1><span class="orange">Propuestas pasadas</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-          <div className= "props">
+          <div id="margin" className= "props" >
             <div>
               {showApproved
                 ?
@@ -419,6 +419,7 @@ const PastProposals = () => {
                   {approvedList.length > 0
                     ?
                     <div className="space">
+                        <div id="margin">
                         <div class="void-link">
                           <div class="prop-bgh"><a onClick={handleOnApprove}>
                             <img src={rprop} class="ribvan"/> 
@@ -430,9 +431,10 @@ const PastProposals = () => {
                             <div class="propsub">Propuestas disponibles</div>
                             <div class="propopt">Vota</div></a>
                           </div>
-                        </div><br/>
-                      <h1 class="aproposal1">Propuestas aprobadas</h1>
-                      {approvedList}
+                        </div>
+                        <br/>
+                      </div>
+                       <div id="margin"><h1 class="aproposal1">Propuestas aprobadas</h1>{approvedList}</div>
                       <div class="void-link">
                         <div class="prop-bgh"><a onClick={handleOnApprove}>
                           <img src={rprop} class="ribvan"/> 

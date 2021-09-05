@@ -286,46 +286,48 @@ function Home() {
                   <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
                 */}
             </div>
-            <div class="main-grid">
-              
-                
-              
+            <div class="grid-block">
               <div>
                 {isConnected ?
                 <section>
-                  <div class="propgrid">
+                  <div class="homegrid">
                     <div class="bg-grid"><a href="/createProposal">
                       <img src={TARO} class="ribbons"/> 
                       <div class="propsub">You have</div>
                       <div class="propopt2"> {userBalance} TARO</div>
-                      <div class="propsub">Get more by creating proposals</div>
+                    </a></div>
+                      <div class="prop-bgr"><a href="/About">
+                      <img src={reward} class="ribvan"/>
+                      <div class="propsub">1. Learn +</div>
+                      <div class="propopt">Docs</div>
                     </a></div>
                     <div class="prop-bgv"><a href="/Quiz">
                       <img src={verify} class="ribvan"/>
-                      <div class="propsub">Before you start</div>
+                      <div class="propsub">2. Before you start</div>
                       <div class="propopt">Validate</div>
                     </a></div>
-                    <div class="prop-bgh"><a href="/ProposalList">
-                      <img src={past} class="ribvan"/> 
-                      <div class="propsub">Current proposals</div>
-                      <div class="propopt">City DAO</div>
-                    </a></div>
-                    
                     <div class="prop-bg"><a href="/createProposal">
                       <img src={prop} class="ribvan"/> 
-                      <div class="propsub">Create a proposal</div>
+                      <div class="propsub">3. Create a proposal</div>
                       <div class="propopt">Propose</div>
                     </a></div>
-                    <div class="prop-bgr"><a href="/About">
-                      <img src={reward} class="ribvan"/>
-                      <div class="propsub">Learn +</div>
-                      <div class="propopt">Docs</div>
+                    
+                    
+                    <div class="prop-bgh"><a href="/ProposalList">
+                      <img src={past} class="ribvan"/> 
+                      <div class="propsub">4. Vote proposals</div>
+                      <div class="propopt">City DAO</div>
                     </a></div>
+                   
+                   
+                    
+                   
+                  
                   </div>
                 </section>
                 :
                 <section>
-                  <div class="propgrid">
+                  <div class="homegrid">
                     <div class="bg-grid"><a href="/About">
                         <img src={prop} class="rivban"/> 
                         <div class="propsub">What is a wallet?</div>
@@ -333,12 +335,12 @@ function Home() {
                       </a></div>
                       <div class="bg-grid2"><a href="/About">
                         <img src={reward} class="rivban"/>
-                        <div class="propsub">Create and vote proposals for</div>
+                        <div class="propsub">TARO token</div>
                         <div class="propopt">Rewards</div>
                       </a></div>
                       <div class="bg-grid2"><a href="/About">
                         <img src={vote} class="rivban"/>
-                        <div class="propsub">Querétaro Urban Governance</div>
+                        <div class="propsub">Urban Governance</div>
                         <div class="propopt">City DAO</div>
                       </a></div>
                   </div>  
@@ -363,49 +365,44 @@ function Home() {
                 <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
               */}
             </div>            
-            <div class="main-grid">
+            <div class="grid-block">
             
             
             <div>
               {isConnected ?
               <section>
-                <div class="propgrid">
-
+                <div class="homegrid">
                   <div class="bg-grid"><a href="/createProposal">
                     <img src={TARO} class="ribbons"/> 
                     <div class="propsub">Tienes</div>
                     <div class="propopt2"> {userBalance} TARO</div>
-                    <div class="propsub">Obtén más creando propuestas</div>
+                  </a></div>             
+                  <div class="prop-bgv"><a href="/Quiz">
+                    <img src={verify} class="ribvan"/>
+                    <div class="propsub">1. Valida tu cuenta</div>
+                    <div class="propopt">Validar</div>
                   </a></div>
-
-                  
-                    <div class="prop-bgv"><a href="/Quiz">
-                      <img src={verify} class="ribvan"/>
-                      <div class="propsub">Antes de empezar</div>
-                      <div class="propopt">Validar</div>
-                    </a></div>
-                    <div class="prop-bgh"><a href="/ProposalList">
-                      <img src={past} class="ribvan"/> 
-                      <div class="propsub">Ver propuestas</div>
-                      <div class="propopt">Gobernanza</div>
-                    </a></div>
-                    
-                    <div class="prop-bg"><a href="/createProposal">
-                      <img src={prop} class="ribvan"/> 
-                      <div class="propsub">Crea una propuesta</div>
-                      <div class="propopt">Proponer</div>
-                    </a></div>
-                    <div class="prop-bgr"><a href="/About">
-                      <img src={reward} class="ribvan"/>
-                      <div class="propsub">Ver documentación</div>
-                      <div class="propopt">Conoce +</div>
-                    </a></div>
-                  </div>
+                  <div class="prop-bg"><a href="/createProposal">
+                    <img src={prop} class="ribvan"/> 
+                    <div class="propsub">2. Crea una propuesta</div>
+                    <div class="propopt">Proponer</div>
+                  </a></div>
+                  <div class="prop-bgh"><a href="/ProposalList">
+                    <img src={past} class="ribvan"/> 
+                    <div class="propsub">3. Vota propuestas</div>
+                    <div class="propopt">Gobernanza</div>
+                  </a></div>
+                  <div class="prop-bgr"><a href="/About">
+                    <img src={reward} class="ribvan"/>
+                    <div class="propsub">4. Conoce más</div>
+                    <div class="propopt">Información</div>
+                  </a></div>
+                </div>
              
               </section>
               :         
                 <section>
-                <div class="propgrid">
+                <div class="homegrid">
                   <div class="bg-grid"><a href="/About">
                       <img src={prop} class="rivban"/> 
                       <div class="propsub">¿Qué es una cartera web 3?</div>
