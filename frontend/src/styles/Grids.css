@@ -1,0 +1,98 @@
+/* Grid */
+
+.grid-prop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6em 6em;
+    text-align: left;  
+    grid-gap: 0.5em;
+    justify-self: center;
+    align-self: center;
+    margin-left: -.5em;
+    margin-right: -.5em;
+    margin-bottom: 0.5em;
+}
+
+.homegrid {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: 1fr 1fr;
+  font-size: clamp(1em, -0.975rem + 2.2vw, 4.5rem);
+  }
+    
+.govgrid {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-gap: 0.5em;
+}
+
+.void-link {
+  border-radius: 20px;
+  font-family: 'Lexend Deca', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-rows:  repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 0.75em;
+  margin: 0em 0em 0em 0em;
+}
+
+
+/* Backgrounds */
+
+
+
+.propose-bg {
+    padding: 1em;
+    background-color: #00000068;
+    border-radius: 25px;
+    height: 175px;
+    width: 100%;
+    position: relative;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: transparent;
+    grid-column: span 2;
+  }
+  
+  .propose-bg img {
+    content:'';
+    position: absolute;
+    bottom: 0px;
+    right:  10px;
+    opacity: 90%;
+    height: 120px;
+    border-radius: 25px;
+  }
+  
+  .propose-bg:hover {
+    cursor: pointer;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color:linear-gradient(45deg, #ffffff, #ffffff);
+    background: linear-gradient(-45deg, #2b284a00, #FF940076, #FF940076, #2b284a00);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+  }
+
+
+
+@media only screen and (min-width: 1200px) {
+  .homegrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .bg-grid {
+    grid-row: span 2;
+    grid-column: span 1;
+    height: auto;
+  }
+  
+  .govgrid {
+
+  }
+
+  .prop-wallet{
+    font-size: 2em;
+    padding-top: 0.25em;
+  }
+}
