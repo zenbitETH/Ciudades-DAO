@@ -23,12 +23,16 @@ const ValidationRequired = () => {
         </div>
       </a>
       :
-      <a>
+      <a href="/quiz" >
         <div className="main">
-          <div className="title3">Valida tu cuenta</div>
-          <div className="big-icon">⚠️</div>
-          <div className="white">
-          Solo los usuarios que validen ser ciudadanos de Querétaro podran crear nuevas propuestas, presiona aquí para validarte
+          <br/><br/>
+        <h1><span id="vote" class="orange">Valida tu cuenta</span></h1><br/>
+          <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+          <div class="white-jos">
+            Solo las direcciones cripto que hayan sido validadas por VoTARO podrán crear y votar por las propuestas
+            disponibles.
+            <br/><br/>
+            <div class="center">Toca para validar tu cuenta.</div>
           </div>
         </div>
         <div className ="floating">
