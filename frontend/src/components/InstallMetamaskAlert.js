@@ -14,7 +14,7 @@ const InstallMetamaskAlert = () => {
       <div class="no-wallet" >
          <a href="https://www.metamask.io/">
           <img src={meta} class="shake"/>
-          <div class="cw">Touch to download a wallet
+          <div class="dw">Touch to download a wallet
             <div class="jos"><span class="white">You don't have a crypto address</span></div>
           </div>
           
@@ -24,8 +24,8 @@ const InstallMetamaskAlert = () => {
     <div class="no-wallet" >
        <a href="https://www.metamask.io/">
         <img src={meta} class="shake"/>
-        <div class="cw">Toca para descargar una cartera web3
-        <div class="jos"><span class="white">No tienes una dirección cripto</span></div>
+        <div class="dw">Toca y descarga una cartera web3
+          <div class="jos"><span class="white">No tienes una dirección cripto</span></div>
         </div>
         
       </a>
