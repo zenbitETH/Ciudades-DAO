@@ -262,7 +262,7 @@
     font-family: 'Josefin Sans';
     text-align: justify;
     margin: 0.5em;
-    font-size: clamp(0.9em, -0.85rem + 6.333vw, 1.2rem);
+    font-size: clamp(1.2em, -0.85rem + 6.333vw, 1.4em);
     position: relative !important;
     color: #ffffff;
   }
