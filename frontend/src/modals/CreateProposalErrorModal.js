@@ -14,6 +14,7 @@ const CreateProposalErrorModal = (props) => {
       ?
 
       <Modal
+      class="grid-block"
       {...props}
       size="xl"
       aria-labelledby="contained-modal-title-vcenter"
@@ -22,9 +23,8 @@ const CreateProposalErrorModal = (props) => {
     >
       <div class="center"><div><img src={voidz} alt="Alert about verification" class="prop-img"/></div></div>
       <h1><span>Proposal was not submitted </span></h1><br/>
-      <div class="about-tx"> </div>
 
-      <Modal.Body class="about-tx">
+      <div class="about-tx2">
         <div>
         ⚠️ 1. Please be sure you are connected to MetaMask and that you entered your information correctly.
         </div>
@@ -38,11 +38,12 @@ const CreateProposalErrorModal = (props) => {
             <div class="propsub">Review your proposal</div>
             <div class="propopt">Try again</div>
           </a></div>
-      </Modal.Body>
+      </div>
     </Modal>
 
       :
       <Modal
+      class="grid-block"
       {...props}
       size="xl"
       aria-labelledby="contained-modal-title-vcenter"
@@ -51,23 +52,16 @@ const CreateProposalErrorModal = (props) => {
     >
       <div class="center"><div><img src={voidz} alt="Alert about verification" class="prop-img"/></div></div>
       <h1><span>La propuesta no se envió </span></h1><br/>
-      <div class="about-tx"> </div>
 
-      <Modal.Body class="about-tx">
-      <div>
-      ⚠️ 1. Asegurate de estar conectado a MetaMask y de haber ingresado su información correctamente.
-      </div>
-      <p/>
-      <div>
-      ⚠️ 2. Además, asegurate de haber validado tu cuenta y haber llenado todos los campos.
-      </div>
-      <p/>
+      <div class="about-tx2">
+        ⚠️ 1. Asegurate de estar conectado a MetaMask y de haber ingresado su información correctamente.<br/><br/>
+        ⚠️ 2. Además, asegurate de haber validado tu cuenta y haber llenado todos los campos.<br/><br/>
       <div class="prop-bg"><a href="/CreateProposal">
         <img src={prop} class="ribbons"/>
-        <div class="propsub">Revisar propuesta</div>
+        <div class="propsub">Revisa propuesta</div>
         <div class="propopt">Intentarlo de nuevo</div>
       </a></div>
-      </Modal.Body>
+      </div>
     </Modal>
       }
     </div>

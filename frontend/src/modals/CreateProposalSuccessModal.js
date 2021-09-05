@@ -1,9 +1,8 @@
 import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
-import {Link} from "react-router-dom";
 import { LanguageContext } from '../contexts/LanguageContext';
-import prop from '../assets/prop.png';
 
+import prop from '../assets/prop.png';
 import send from '../assets/sended.svg';
 import vote2 from '../assets/vote2.svg';
 
@@ -11,10 +10,11 @@ const CreateProposalSuccessModal = (props) => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div>
+    <div >
       {isEnglish === 'english' ?
 
       <Modal
+        class="grid-block"
         {...props}
         size="xl"
         aria-labelledby="contained-modal-title-vcenter"
@@ -23,9 +23,15 @@ const CreateProposalSuccessModal = (props) => {
       >
       <div class="center"><div class="jump"><img src={send} alt="Alert about verification" class="prop-img"/></div></div>
       <h1><div >Proposal sended! </div></h1><br/>
-      <div class="about-tx">You have successfully created a proposal!
-        Create more proposals to increase your voting power.
-        The first 20 proposals will give you 50 TARO each!
+      <div class="about-tx2">
+        
+        <ul>
+          <li> Your proposal is ready to be voted, <span class="orange">use your TARO to vote.</span></li>
+          <li class="yellow"> The first 20 proposals will give you 50 TARO each!</li>
+          <li>Create more proposals to increase your voting power. </li>
+        </ul>
+        
+        
       </div>
         <div class="void-link">
           <div class="prop-bgr"><a href="/ProposalList#vote">
@@ -43,6 +49,7 @@ const CreateProposalSuccessModal = (props) => {
       </Modal>
       :
       <Modal
+      class="grid-block"
       {...props}
       size="xl"
       aria-labelledby="contained-modal-title-vcenter"
@@ -50,8 +57,8 @@ const CreateProposalSuccessModal = (props) => {
       className="main"
     >
     <div class="center"><div class="jump"><img src={send} alt="Alert about verification" class="prop-img"/></div></div>
-    <h1><div >Propuesta enviada! </div></h1><br/>
-    <div class="about-tx">Tu propuesta esta lista para ser votada
+    <h1><div >¡Propuesta enviada! </div></h1><br/>
+    <div class="about-tx2">Tu propuesta esta lista para ser votada
       Crea mas propuestas para incrementar tu poder de voto.
       Las primeras 20 propuestas te darán 50 TARO cada una
     </div>

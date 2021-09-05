@@ -23,8 +23,8 @@ const QuizAlreadySubmittedModal = (props) => {
         className="modal-2"
       >
       <div class="center"><div><img src={confirm} alt="Alert about verification" class="prop-img"/></div></div>
-      <h1><span>Account already validated </span></h1><br/>
-      <div class="about-tx"> Now you can create and vote on proposals on the urban governance page.</div>
+      <h1><span>Your account is ready </span></h1>
+      <span class="about-tx2"> You have completed the validation quiz and now you can create and vote on proposals on the urban governance page.</span>
       <Modal.Body>
         <div class="void-link">
         <div class="prop-bg"><a href="/Createproposal">
