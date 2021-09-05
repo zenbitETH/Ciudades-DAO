@@ -330,7 +330,7 @@ function Home() {
                   <div class="homegrid">
                     <div class="bg-grid"><a href="/About">
                         <img src={prop} class="rivban"/> 
-                        <div class="propsub">What is a wallet?</div>
+                        <div class="propsub">What is a VoRARO?</div>
                         <div class="propopt">Start here</div>
                       </a></div>
                       <div class="bg-grid2"><a href="/About">
@@ -376,29 +376,28 @@ function Home() {
                     <img src={TARO} class="ribbons"/> 
                     <div class="propsub">Tienes</div>
                     <div class="propopt2"> {userBalance} TARO</div>
-                  </a></div>             
+                  </a></div>    
+                  <div class="prop-bgr"><a href="/About">
+                    <img src={reward} class="ribvan"/>
+                    <div class="propsub">1. Recompensas cripto</div>
+                    <div class="propopt">Gana TARO</div>
+                  </a></div>         
                   <div class="prop-bgv"><a href="/Quiz">
                     <img src={verify} class="ribvan"/>
-                    <div class="propsub">1. Valida tu cuenta</div>
+                    <div class="propsub">2. Valida tu cuenta</div>
                     <div class="propopt">Validar</div>
                   </a></div>
                   <div class="prop-bg"><a href="/createProposal">
                     <img src={prop} class="ribvan"/> 
-                    <div class="propsub">2. Crea una propuesta</div>
+                    <div class="propsub">3. Crea una propuesta</div>
                     <div class="propopt">Proponer</div>
                   </a></div>
                   <div class="prop-bgh"><a href="/ProposalList">
                     <img src={past} class="ribvan"/> 
-                    <div class="propsub">3. Vota propuestas</div>
-                    <div class="propopt">Gobernanza</div>
-                  </a></div>
-                  <div class="prop-bgr"><a href="/About">
-                    <img src={reward} class="ribvan"/>
-                    <div class="propsub">4. Conoce más</div>
-                    <div class="propopt">Información</div>
+                    <div class="propsub">4. Vota propuestas</div>
+                    <div class="propopt">Ciudad DAO</div>
                   </a></div>
                 </div>
-             
               </section>
               :         
                 <section>
@@ -410,13 +409,13 @@ function Home() {
                     </a></div>
                     <div class="bg-grid2"><a href="/About">
                       <img src={reward} class="rivban"/>
-                      <div class="propsub">Crea y vota propuestas </div>
+                      <div class="propsub">Recompensas cripto </div>
                       <div class="propopt">Gana TARO</div>
                     </a></div>
                     <div class="bg-grid2"><a href="/About">
                       <img src={vote} class="rivban"/>
                       <div class="propsub">Gobernanza Urbana </div>
-                      <div class="propopt">Somos una DAO</div>
+                      <div class="propopt">Ciudad DAO</div>
                     </a></div>
                   </div>
               </section>      
