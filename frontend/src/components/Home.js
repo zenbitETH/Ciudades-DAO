@@ -289,56 +289,59 @@ function Home() {
             <div class="grid-block">
               <div>
                 {isConnected ?
-                <section>
+                <section id="">
                   <div class="homegrid">
                     <div class="bg-grid"><a href="/createProposal">
-                      <img src={TARO} class="ribbons"/> 
+                      <img src={reward} class="ribvan"/> 
                       <div class="propsub">You have</div>
                       <div class="propopt2"> {userBalance} TARO</div>
                     </a></div>
-                      <div class="prop-bgr"><a href="/About">
-                      <img src={reward} class="ribvan"/>
-                      <div class="propsub">1. Learn +</div>
-                      <div class="propopt">Docs</div>
-                    </a></div>
-                    <div class="prop-bgv"><a href="/Quiz">
+                    <div class="bg-reward"><a href="/Quiz">
                       <img src={verify} class="ribvan"/>
-                      <div class="propsub">2. Before you start</div>
+                      <div class="propsub">Get up to 1,000 TARO</div>
                       <div class="propopt">Validate</div>
                     </a></div>
-                    <div class="prop-bg"><a href="/createProposal">
-                      <img src={prop} class="ribvan"/> 
-                      <div class="propsub">3. Create a proposal</div>
-                      <div class="propopt">Propose</div>
-                    </a></div>
+                 
                     
-                    
-                    <div class="prop-bgh"><a href="/ProposalList">
+                    <div class="bg-grid"><a href="/ProposalList">
                       <img src={past} class="ribvan"/> 
-                      <div class="propsub">4. Vote proposals</div>
+                      <div class="propsub">Vote with your TARO</div>
                       <div class="propopt">City DAO</div>
                     </a></div>
+                     
+                    <div class="bg-reward"><a href="/createProposal">
+                      <img src={prop} class="ribvan"/> 
+                      <div class="propsub">Get 50 TARO per proposal</div>
+                      <div class="propopt">Propose</div>
+                    </a></div>
                    
+                    <div class="prop-bgr"><a href="/About">
+                      <img src={vote} class="ribvan"/>
+                      <div class="propsub">Learn +</div>
+                      <div class="propopt">Docs</div>
+                    </a></div>
+                
+                      
                    
                     
-                   
+                
+                    
+                
+                    
+                    
                   
+                    
                   </div>
                 </section>
                 :
                 <section>
-                  <div class="homegrid">
-                    <div class="bg-grid"><a href="/About">
+                  <div class="govgrid">
+                    <div class="prop-bgr"><a href="/About">
                         <img src={prop} class="rivban"/> 
-                        <div class="propsub">What is a VoRARO?</div>
+                        <div class="propsub">What is a VoTARO?</div>
                         <div class="propopt">Start here</div>
                       </a></div>
-                      <div class="bg-grid2"><a href="/About">
-                        <img src={reward} class="rivban"/>
-                        <div class="propsub">TARO token</div>
-                        <div class="propopt">Rewards</div>
-                      </a></div>
-                      <div class="bg-grid2"><a href="/About">
+                      <div class="prop-bgr"><a href="/About">
                         <img src={vote} class="rivban"/>
                         <div class="propsub">Urban Governance</div>
                         <div class="propopt">City DAO</div>
@@ -352,8 +355,8 @@ function Home() {
       :
       <div class="App">
           <div class="headline">
-            <h1>Querétaro en Ethereum </h1>
-            <p class="headline-p">Gana cripto con tu participación ciudadana</p>
+            <h1>La DAO de Querétaro </h1>
+            <p class="headline-p">Aplicación de consenso urbano para un presupuesto descentralizado</p>
           </div>
           
             <div class="center">     
@@ -373,51 +376,46 @@ function Home() {
               <section>
                 <div class="homegrid">
                   <div class="bg-grid"><a href="/createProposal">
-                    <img src={TARO} class="ribbons"/> 
+                    <img src={reward} class="ribvan"/> 
                     <div class="propsub">Tienes</div>
                     <div class="propopt2"> {userBalance} TARO</div>
                   </a></div>    
-                  <div class="prop-bgr"><a href="/About">
-                    <img src={reward} class="ribvan"/>
-                    <div class="propsub">1. Recompensas cripto</div>
-                    <div class="propopt">Gana TARO</div>
-                  </a></div>         
-                  <div class="prop-bgv"><a href="/Quiz">
+                  <div class="bg-reward"><a href="/Quiz">
                     <img src={verify} class="ribvan"/>
-                    <div class="propsub">2. Valida tu cuenta</div>
+                    <div class="propsub">Obtén hasta 1,000 TARO</div>
                     <div class="propopt">Validar</div>
                   </a></div>
-                  <div class="prop-bg"><a href="/createProposal">
+                  <div class="bg-grid"><a href="/ProposalList">
+                    <img src={past} class="ribvan"/> 
+                    <div class="propsub">Usa tu TARO para votar</div>
+                    <div class="propopt">Ciudad DAO</div>
+                  </a></div>
+                  <div class="bg-reward"><a href="/createProposal">
                     <img src={prop} class="ribvan"/> 
-                    <div class="propsub">3. Crea una propuesta</div>
+                    <div class="propsub">50 TARO por propuesta </div>
                     <div class="propopt">Proponer</div>
                   </a></div>
-                  <div class="prop-bgh"><a href="/ProposalList">
-                    <img src={past} class="ribvan"/> 
-                    <div class="propsub">4. Vota propuestas</div>
+                  <div class="prop-bgr"><a href="/About">
+                    <img src={reward} class="ribvan"/>
+                    <div class="propsub">Conoce la ciudad DAO</div>
+                    <div class="propopt">+ Info</div>
+                  </a></div>  
+                </div>
+              </section>
+              :
+              <section>
+              <div class="govgrid">
+                <div class="prop-bgr"><a href="/About">
+                    <img src={prop} class="rivban"/> 
+                    <div class="propsub">¿Qué es una cartera web 3?</div>
+                    <div class="propopt">Empieza Aquí</div>
+                  </a></div>
+                  <div class="prop-bgr"><a href="/About">
+                    <img src={vote} class="rivban"/>
+                    <div class="propsub">¿Qué es el presupuesto descentralizado? </div>
                     <div class="propopt">Ciudad DAO</div>
                   </a></div>
                 </div>
-              </section>
-              :         
-                <section>
-                <div class="homegrid">
-                  <div class="bg-grid"><a href="/About">
-                      <img src={prop} class="rivban"/> 
-                      <div class="propsub">¿Qué es una cartera web 3?</div>
-                      <div class="propopt">Empieza Aquí</div>
-                    </a></div>
-                    <div class="bg-grid2"><a href="/About">
-                      <img src={reward} class="rivban"/>
-                      <div class="propsub">Recompensas cripto </div>
-                      <div class="propopt">Gana TARO</div>
-                    </a></div>
-                    <div class="bg-grid2"><a href="/About">
-                      <img src={vote} class="rivban"/>
-                      <div class="propsub">Gobernanza Urbana </div>
-                      <div class="propopt">Ciudad DAO</div>
-                    </a></div>
-                  </div>
               </section>      
               }
             </div>
