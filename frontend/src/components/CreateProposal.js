@@ -211,7 +211,7 @@ function myFunction() {
 }
 
   return (
-    <div>
+    <body id="quiz">
       {isEnglish === 'english'
       ?
       <div id="proposal" class="newprop">
@@ -414,7 +414,7 @@ function myFunction() {
           </Form.Group>
           */}
           <a class="jos" href="#proposal">Check your post before sending</a>
-          <Button className="Wallet"classntype="submit" onClick={handleOnSubmit}><span class="oneem">🚀 Send proposal</span></Button>
+          <div className="verify-bt"classntype="submit" onClick={handleOnSubmit}><span class="oneem">🚀 Send proposal</span></div>
           </Form>
         <IsLoadingModal
           show={loadingModalShow}
@@ -634,7 +634,7 @@ function myFunction() {
             </Form.Group>
             */}
             <a class="jos" href="#proposal">Revisa tu puesta antes de enviar</a>
-            <Button className="Wallet"classntype="submit" onClick={handleOnSubmit}><span class="oneem">🚀 Enviar propuesta</span></Button>
+              <div class="verify-bt" classntype="submit" onClick={handleOnSubmit}>🚀 Enviar propuesta</div>
             </Form>
           <IsLoadingModal
             show={loadingModalShow}
@@ -652,7 +652,7 @@ function myFunction() {
           />
         </div>
         }
-      </div>
+      </body>
       );
     };
 export default CreateProposal;

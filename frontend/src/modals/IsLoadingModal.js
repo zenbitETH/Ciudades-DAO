@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Modal, Spinner } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const IsLoadingModal = (props) => {
@@ -11,7 +11,7 @@ const IsLoadingModal = (props) => {
 
       <Modal
         {...props}
-        size="sm"
+        size="md"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
@@ -20,7 +20,7 @@ const IsLoadingModal = (props) => {
             Loading...
           </div>
           <div>
-            <span animation="border"className="spinner-grow" role="status"></span>
+            <span animation="border" className="spinner-grow" role="status"></span>
           </div>
         </Modal.Body>
       </Modal>
@@ -29,7 +29,7 @@ const IsLoadingModal = (props) => {
 
       <Modal
         {...props}
-        size="sm"
+        size="md"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
@@ -38,7 +38,7 @@ const IsLoadingModal = (props) => {
             Cargando...
           </div>
           <div>
-            <span animation="border"className="spinner-grow" role="status"></span>
+            <span animation="border" className="spinner-grow" role="status"></span>
           </div>
         </Modal.Body>
       </Modal>

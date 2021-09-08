@@ -59,8 +59,8 @@ const QuizSuccessModal = (props) => {
       <h1><span id="vote" class="orange-jos">¡Felicidades! </span></h1><br/>
         <div class="center"><div class="jump"><img src={reward} alt="Alert about verification" class="prop-img"/></div></div>
         <h1><span> Ahora tienes TARO</span></h1>
-        <div class="about-tx2"> <span class="orange">Has validado cuenta por seis meses y tu recompensa en tokens TARO se han transferido a su cuenta. </span>
-         Ahora puedes crear o votar propuestas de gobernanza urbana. Toca una sección para comenzar a usar tu TARO.</div>
+        <h3> <span class="orange">Has validado cuenta por seis meses y tu recompensa en tokens TARO se han transferido a su cuenta. </span>
+         Ahora puedes crear o votar propuestas de gobernanza urbana. Toca una sección para comenzar a usar tu TARO.</h3>
       <Modal.Body>
       <div class="void-link">
             <div class="prop-bg"><a href="/createProposal">

@@ -317,13 +317,15 @@ function myFunction() {
 
           </div>
           :
-          <div class="valert4">
+          
+          <div class="valert2">
+              <br/><br/><br/><br/><br/><br/><br/>
               <h1><span id="vote">Connect your wallet</span></h1><br/>
               <div class="center"><img src={img4} alt="Alert about key" class="prop-img"/></div><br/>
                 <div class="floating">
-                  <div class="about-tx">You need a Web 3 wallet to use VoTARO. 
+                  <h3>You need a Web 3 wallet to use VoTARO. 
                   Get a wallet or connect an existing address in the home screen.
-                  <br/><br/></div>
+                  <br/><br/></h3>
                 </div>
                 <div class="void-link">
                   <div class="about-bg"><a href="https://metamask.io">
@@ -337,6 +339,7 @@ function myFunction() {
                     <div class="propopt">Connect</div>
                   </a></div>
                 </div>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/>
           </div>
           }
         </div>
@@ -358,7 +361,7 @@ function myFunction() {
             <div id="margin">{spanishQuestions}</div>
             </QuizContext.Provider>
             <div className="floating">
-              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Valida tu cuenta</div>
+              <div class="verify-bt" onClick={handleOnSubmitAnswers}> Valida tu cuenta</div>
             </div>
             </div>
             
@@ -380,26 +383,28 @@ function myFunction() {
               />
           </div>
           :
-          <div class="valert4">
+          <div class="valert2">
+            <br/><br/><br/><br/><br/><br/><br/><br/>
               <h1><span id="vote">Conecta tu cartera web 3</span></h1><br/>
               <div class="center"><img src={img4} alt="Alert about key" class="prop-img"/></div><br/>
                 <div class="floating">
-                  <div class="about-tx">Necesitas una cartera Web 3 para usar VoTARO.
+                  <h3>Necesitas una cartera Web 3 para usar VoTARO.
                     Obten una cartera o conecte una dirección existente en la pantalla de inicio.
-                  <br/><br/></div>
+                  <br/><br/></h3>
                 </div>
                 <div class="void-link">
-                  <div class="about-bg"><a href="https://metamask.io">
+                  <div class="bg-grid3"><a href="https://metamask.io">
                     <img src={meta} class="ribvan"/> 
                     <div class="propsub">Obtener wallet web 3</div>
                     <div class="propopt">Descargar</div>
                   </a></div>
-                  <div class="about-bg"><a href="/Home">
+                  <div class="bg-grid3"><a href="/Home">
                     <img src={connect} class="ribvan"/>
                     <div class="propsub">Dirección existente</div>
                     <div class="propopt">Conectar</div>
                   </a></div>
                 </div>
+                <br/>
           </div>
           }
         </div>

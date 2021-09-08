@@ -12,7 +12,7 @@ const Question = ({question, answers, number}) => {
   };
 
   const answer = answers.map((a, i) => (
-    <div class="container" key={i}>
+    <span class="container" key={i}>
       <input
         type='radio'
         id={a}
@@ -21,7 +21,7 @@ const Question = ({question, answers, number}) => {
         onClick={handleOnAnswer}>
       </input>
       <label class="checkmark" htmlFor={a}>{a}</label>
-    </div>
+    </span>
 ))
   return (
     <div>

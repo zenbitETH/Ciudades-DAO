@@ -23,16 +23,15 @@ const CreateProposalSuccessModal = (props) => {
       >
       <div class="center"><div class="jump"><img src={send} alt="Alert about verification" class="prop-img"/></div></div>
       <h1><div >Proposal sended! </div></h1><br/>
-      <div class="about-tx2">
+      
         
-        <ul>
-          <li> Your proposal is ready to be voted, <span class="orange">use your TARO to vote.</span></li>
-          <li class="yellow"> The first 20 proposals will give you 50 TARO each!</li>
-          <li>Create more proposals to increase your voting power. </li>
-        </ul>
+        <h3>
+           Your proposal is ready to be voted, <span class="orange">use your TARO to vote.</span>
+          <span class="yellow"> The first 20 proposals will give you 50 TARO each! </span>
+          Create more proposals to increase your voting power. 
+        </h3>
         
-        
-      </div>
+      
         <div class="void-link">
           <div class="prop-bgr"><a href="/ProposalList#vote">
               <img src={vote2} class="ribvan"/> 
@@ -58,10 +57,10 @@ const CreateProposalSuccessModal = (props) => {
     >
     <div class="center"><div class="jump"><img src={send} alt="Alert about verification" class="prop-img"/></div></div>
     <h1><div >¡Propuesta enviada! </div></h1><br/>
-    <div class="about-tx2">Tu propuesta esta lista para ser votada
-      Crea mas propuestas para incrementar tu poder de voto.
-      Las primeras 20 propuestas te darán 50 TARO cada una
-    </div>
+    <h3>Tu propuesta esta lista para ser votada<span class="orange"> usa tu TARO para votar. </span>
+      <span class="yellow">¡Las primeras 20 propuestas te darán 50 TARO cada una! </span>
+      Crea mas propuestas para incrementar tu poder de voto. 
+    </h3>
       <div class="void-link">
         <div class="prop-bgr"><a href="/ProposalList#vote">
             <img src={vote2} class="ribvan"/> 
