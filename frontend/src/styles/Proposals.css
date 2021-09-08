@@ -44,17 +44,17 @@ Form {
 }
 
 .form-label {
- font-size: 0.9em;
+ font-size: 1.2em;
  color: #ffffff62;
- font-family: "Josefin Sans";
+ font-family: "ABeeZee";
 }
 
 .description {
-  font-size: 1.3em !important;
+  font-size: 1.2em ;
 }
 
 input {
-  font-size: 1.3em !important;
+  font-size: 1.2em !important;
   box-shadow: none !important;
 }
 
@@ -87,7 +87,7 @@ optgroup {
 }
 
 select {
-  font-size: 1.3em !important;
+  font-size: 1.2em !important;
   box-shadow: none !important;
   -webkit-appearance:none !important;
   background-color: transparent !important;
@@ -125,7 +125,7 @@ option:disabled {
 
 .progress-bar2 {
   height: 5px;
-  background: #00aebe92;
+  background: #ff9500c7;
   width: 0%;
 }
 
@@ -151,9 +151,9 @@ option:disabled {
 
 .propsub {
   text-align: left;
-  font-size: 0.8em;
   color: #FF9400;
-  font-family: "Josefin Sans";
+  font-family: "ABeeZee";
+  font-weight: 300;
 }
 
 .prop-img {
@@ -165,14 +165,14 @@ option:disabled {
 .propopt {
   margin-top: -0.3em;
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1.7em;
   color: #ffffff;
 }
 
 .propopt2 {
   margin-top: -0.3em;
   text-align: left;
-  font-size: 2.2em;
+  font-size: 2.4em;
   color: #ffffff;
 }
 
@@ -185,14 +185,15 @@ option:disabled {
 }
 
 .dw {
-  top: -7em;
+  top: 1em;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.5em;
   color: #ffffff;
   position: relative;
 }
 
 .no-wallet {
+
   padding: 1em;
   background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
   background-size: 500% 500%;
@@ -207,12 +208,12 @@ option:disabled {
 
 .no-wallet img {
   content:'';
-  opacity: 80%;
+  opacity: 20%;
   height:150px;
   border-radius: 25px;
   background-size: 200% 200%;
   z-index: -1;
-  top: -10%;
+  top: -3em;
   position: relative;
 }
 
@@ -299,8 +300,6 @@ option:disabled {
   height: 175px;
   width: 100%;
   position: relative;
-  border-width: 0.1em;
-  border-style: solid;
   border-color: transparent;
 }
 
@@ -316,8 +315,6 @@ option:disabled {
 
 .prop-bg2:hover {
   cursor: pointer;
-  border-width: 0.1em;
-  border-style: solid;
   border-color:linear-gradient(45deg, #ffffff, #ffffff);
   background: linear-gradient(-45deg, #2b284a00, #FF940076, #FF940076, #2b284a00);
   background-size: 200% 200%;
@@ -334,7 +331,6 @@ option:disabled {
   border-width: 0.1em;
   border-style: solid;
   border-color: transparent;
-  grid-column: span 2;
   font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
 }
 
@@ -395,7 +391,7 @@ option:disabled {
   padding: 1em;
   background-color: #00000068;
   border-radius: 25px;
-  height: 175spx;
+  height: 225px;
   width: auto;
   position: relative;
   border-width: 0.1em;
@@ -628,13 +624,12 @@ option:disabled {
   padding: 1em;
   margin: -.5em -1em -1em -.5em;
   color: #ffffff !important;
-  background: linear-gradient(#ff950000,#5751a28f, #2b284a8f);
   font-size: 0.9em;
 }
 
 
 .ribvan {
-  opacity: 60% !important;
+  opacity: 80% !important;
 
   height: 50% !important;
 }
@@ -650,6 +645,7 @@ option:disabled {
   margin-right: -1em;
   margin-bottom: 2em;
   font-family: 'Lexend Deca', sans-serif;
+  
 }
 
 .rproposal {
@@ -708,12 +704,11 @@ option:disabled {
 .proposal-description {
   text-align: justify !important;
   padding: 3%;
-  font-size: 1em !important;
   color: #FAC91A !important;
 }
 
 .prop-hl {
-  font-size: clamp(1.1rem, -0.65rem + 8.333vw, 1rem);
+  font-size: clamp(0.9em, -0.875rem + 5.6vw, 1.3rem);
   font-weight: 300;
   color: #ffffff;
   text-align: justify ;
@@ -726,7 +721,7 @@ option:disabled {
 .description-bg {
   text-align: justify;
   color: #FF9400;
-  font-family: "Josefin Sans"; 
+  font-family: "ABeeZee"; 
   background-color: #ffffff26;
   border-radius: 0 0 20px 20px;
   padding: 0.5em;
@@ -734,12 +729,16 @@ option:disabled {
   margin-left: -.5em;
   margin-right: -.5em;
   margin-bottom: 0.5em;
+  line-height: 175%;
+  text-align: justify;
 }
 
  .prop-description {
   text-align: justify;
   overflow-wrap: break-word;
-  font-size: 1.15em;
+  font-size: clamp(1em, -0.875rem + 5.6vw, 1.3rem);
+  line-height: 175%;
+  text-align: justify;
   padding: 0.4em;
   font-family: 'Lexend Deca';
   color: #fff;
@@ -756,13 +755,13 @@ option:disabled {
 
 .mini-title {
   color: #FF9400;
-  font-family: "Josefin Sans"; 
+  font-family: "ABeeZee"; 
   text-align: left; 
 }
 
 .minit-bg {
   color: #FF9400;
-  font-family: "Josefin Sans"; 
+  font-family: "ABeeZee"; 
   background-color: #ffffff26;
   border-radius: 20px 0 0 0;
   padding: 0.5em;
@@ -771,7 +770,7 @@ option:disabled {
 
 .minit-bg2 {
   color: #FF9400;
-  font-family: "Josefin Sans"; 
+  font-family: "ABeeZee"; 
   background-color: #ffffff26;
   border-radius: 0 20px 0 0;
   padding: 0.5em;
@@ -781,7 +780,7 @@ option:disabled {
 
 .minit-bg3 {
   color: #FF9400;
-  font-family: "Josefin Sans"; 
+  font-family: "ABeeZee"; 
   background-color: #ffffff26;
   padding: 0.5em;
   text-align: left;
@@ -789,7 +788,7 @@ option:disabled {
 
 .minit-bg4 {
   color: #FF9400;
-  font-family: "Josefin Sans"; 
+  font-family: "ABeeZee"; 
   background-color: #ffffff26;
   border-radius: 0 20px 0 0;
   padding: 0.5em;
@@ -815,6 +814,20 @@ option:disabled {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
+  .form-label {
+    font-size: 1.5em;
+  }
 
+  .description {
+    font-size: 1.5em ;
+  }
+
+  input {
+    font-size: 1.5em !important;
+  }
+
+  select {
+    font-size: 1.5em !important;
+  }
 }

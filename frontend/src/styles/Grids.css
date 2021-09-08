@@ -1,27 +1,28 @@
-/* Grid */
+/* Grids */
 
 .grid-prop {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 6em 6em;
   text-align: left;  
-  grid-gap: 0.5em;
+  grid-gap: 0em;
   justify-self: center;
   align-self: center;
   margin-left: -.5em;
   margin-right: -.5em;
-  margin-bottom: 0.5em;
+  column-gap: 0.5em;
 }
 
 .homegrid {
   display: grid;
   grid-gap: 0.5em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
   font-size: clamp(1em, -1.1rem + 2.2vw, 4.5rem);
   }
     
 .govgrid {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   display: grid;
   grid-gap: 0.5em;
 }
@@ -30,12 +31,30 @@
   border-radius: 20px;
   font-family: 'Lexend Deca', sans-serif;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  grid-template-rows:  repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows:  repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 0.75em;
   margin: 0em 0em 0em 0em;
 }
 
+.about-grid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows:  repeat(minmax(150px, 200px));
+  grid-gap: 1em;
+  padding: 1em;
+}
+
+.aboutbg-grid {
+  background-color: #00000068;
+  padding: 1em;
+}
+
+.aboutbg-grid2 {
+  background-color: #00000068;
+  grid-template-columns: 1fr;
+}
 
 /* Backgrounds */
 
@@ -43,7 +62,7 @@
     padding: 1em;
     background-color: #00000068;
     border-radius: 25px;
-    height: 175px;
+    height: 225px;
     width: 100%;
     position: relative;
     border-width: 0.1em;
@@ -70,17 +89,22 @@
     background: linear-gradient(-45deg, #2b284a00, #FF940076, #FF940076, #2b284a00);
     background-size: 200% 200%;
     animation: gradient 5s ease infinite;
-  }
+}
+
+
+
 
 
 
 @media only screen and (min-width: 1200px) {
-  .homegrid {
-    grid-template-columns: 1fr 1fr 1fr;
+  .govgrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-
+  .about-grid{
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   .bg-grid {
-    grid-row: span 2;
+    grid-row: span 3;
     grid-column: span 1;
     height: auto;
   }
@@ -90,3 +114,5 @@
     padding-top: 0.25em;
   }
 }
+
+

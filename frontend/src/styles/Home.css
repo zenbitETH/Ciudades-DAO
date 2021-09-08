@@ -1,18 +1,18 @@
 /* Fonts and colors */
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
 .lex {
   font-family: "Lexend Deca";
 }
 
 .jos {
-  font-family: "Josefin Sans"; 
+  font-family: "ABeeZee"; 
 }
 
 .white-jos { 
-  font-family: "Josefin Sans"; 
+  font-family: "ABeeZee"; 
   color: #fff;
 }
 
@@ -23,7 +23,7 @@
 
 .orange-jos {
   color: #FF9400;
-  font-family: "Josefin Sans";
+  font-family: "ABeeZee";
 }
 
 .purple {
@@ -146,17 +146,14 @@ li {
 }
 
 body {
-	background: linear-gradient(45deg, #2b284a, #2b284a, #764808, #2b284a);
-	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+	background: #2b284a;
+	
   -webkit-appearance: none;
 }
 
 .App {
-	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
   border-radius: 20px;
-  margin-top: 8em;
+  margin-top: 4em;
   width: 100%;
   font-family: 'Lexend Deca', sans-serif !important;
   color: #FF9400;
@@ -164,22 +161,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App::before {
-  content:'';
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background: url('../assets/bg.png');
-  background-size: cover;
-  width: 100%;
-  height: 120%;
-  opacity: 100%;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 #margin {
   position: relative;
@@ -276,8 +257,8 @@ a.dropdown-item:hover {
 .headline-p {
 font-size: clamp(1em, -0.975rem + 6.5vw, 1.6rem);
 margin-top: 0.5em;
-font-weight: 500;
-font-family: "Josefin Sans";
+font-weight: 300;
+font-family: "ABeeZee";
 color: #FF9400;
 }
 
@@ -311,7 +292,7 @@ margin-top: 1.5em;
   width: 150%;
   bottom: 100%;
   left: -25%;
-  font-family: 'Josefin Sans';
+  font-family: 'ABeeZee';
   background-color: white;
   color: #211e40 !important;
   text-align: center;
@@ -376,7 +357,13 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1em, -0.875rem + 8.333vw, 1.3rem)
+  font-size: clamp(1em, -0.875rem + 6.6vw, 1.55rem)
+}
+
+h3 {
+  font-size: clamp(1em, -0.875rem + 6.6vw, 1.55rem);
+  line-height: 175%;
+  text-align: justify;
 }
 
 .timeyr {
@@ -414,7 +401,7 @@ h2 {
   margin-top: 1em;
   text-align: center;
   vertical-align: middle;
-  font-family: "Josefin Sans";
+  font-family: "ABeeZee";
 }
 
 .big-icon {
@@ -465,10 +452,10 @@ h2 {
   font-size: clamp (.9em, -0.975rem + 6.5vw, 1.6rem);
   margin-left: -0.5em;
   margin-right: -0.5em;
-  margin-top: -10em;
+  margin-top: -3em;
   width: auto !important;
   padding: 1em;
-  background: linear-gradient(90deg, #2b284a00, #00aebea0, #00aebea0, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00,#2b284a00, #ff950069, #ff950069, #2b284a00, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
   border-radius: 0px 0px 25px 25px;
@@ -503,13 +490,11 @@ h2 {
 /* Animations */
 
 .shake {
-  font-size: 3em;
-  margin: 0.5em;
   animation: shake 1s cubic-bezier(0.56, 0.47, .29, 0.77) both;
   transform: translate3d(0, 0, 0);
   animation-iteration-count: infinite;
   backface-visibility: hidden;
-  perspective: 1000px;
+  perspective: 900px;
 }
 
 
@@ -608,11 +593,16 @@ h2 {
   .grid-block {
     margin: 0 25vh 0 25vh;
   }
+
+  .valert2 {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .headline {
-    margin: 15vh 5vh 0 5vh;
+    margin: 0 5vh 0 5vh;
   }
 }
 

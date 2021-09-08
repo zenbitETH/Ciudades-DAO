@@ -1,11 +1,9 @@
 #quiz {
-    margin-top: 3%;
     color: #ffffff;
-    background: linear-gradient(#2b284a,#00aebe92, #00aebe92);
+    background: linear-gradient(#2b284a,#FF940092, #FF940092);
     font-size: 0.9em;
-    background-size: 200% 150%;
-    margin-top: -1em;
-    padding: 5em 0.5em 0.5em;
+    background-size: 200% 250%;
+    padding: 0em 0 0 0em;
     font-family: 'Lexend Deca', sans-serif;
 }
 
@@ -22,10 +20,9 @@
     font-family: 'Lexend Deca', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 0.75em;
-    margin: -2em auto 1em 0;
+    margin: -2em 0 1em 0;
     position: relative;
-    justify-content: space-evenly;
+    justify-content: space-evenly
 }
 
 .quiz-lb {
@@ -40,7 +37,7 @@
 .question-card {
   background-color: #ffffff26;
   
-  height: 250px;
+  height: 310px;
   border: none;
   font-size: 15px !important;
   color: #ffffff !important;
@@ -52,9 +49,8 @@
     display: grid;
     position: relative;
     justify-content: space-evenly;
-    margin-bottom: 2em;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 1.15em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -73,17 +69,17 @@
   
   /* Create a custom radio button */
   .checkmark {
-  position: relative;
-  height: 120px;
-  width: 120px;
-  background-color: #fff;
-  color: #3d386b;
+  top: 1.7em;
+  left: 0.5em;
+  position: absolute;
+  height: 140px;
+  width: 140px;
+  background-color: #85858569;
+  color: #fff;
   border-radius: 50%;
-  font-size: 0.6em;
   text-align: center;
   cursor: pointer;
-  padding-top: 3.5em;
-  align-self: center;
+  padding: 1.5em 0.5em 0.5em 0.5em;
   }
   
   /* On mouse-over, add a grey background color */
@@ -102,26 +98,13 @@
   /* Create the indicator (the dot/circle - hidden when not checked) */
   .checkmark:after {
     content: "";
-    position: relative;
+    position: absolute;
     display: none;
   }
   
-  /* Show the indicator (dot/circle) when checked */
-  .container input:checked ~ .checkmark:after {
-    display: block;
-    position: absolute;
-  }
+
   
-  /* Style the indicator (dot/circle) */
-  .container .checkmark:after {
-  top: 12.5%;
-  left: 12.5%;
-  width: 90px;  
-  height: 90px;
-  border-radius: 50%;
-  background: #7e7e7e;
-  opacity: 20%;
-  }
+
 
   .verify-bt {
     padding: 1em;
@@ -129,13 +112,9 @@
     background-color: #00000068;
     border-radius: 25px;
     height: 100%;
-    width: fit-content;
     position: relative;
-    border-width: 0.1em;
-    border-style: solid;
     border-color: transparent;
     font-size: 1.2em;
-    margin: 2em;
   }
 
   
@@ -145,4 +124,28 @@
     animation: gradient 2s ease infinite;
     cursor: pointer;
     
+  }
+  @media only screen and (min-width: 1000px) {
+    .checkmark {
+      top: 1em;
+      left: 1em;
+      height: 200px;
+      width: 200px;
+      padding: 3em 0.5em 0.5em 0.5em;
+    }
+
+    .verify-bt {
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+
+    .container {
+      font-size: 1.3em;
+    }
+  }
+  
+  @media only screen and (min-width: 1800px) {
+    .grid-block {
+      
+    }
   }
