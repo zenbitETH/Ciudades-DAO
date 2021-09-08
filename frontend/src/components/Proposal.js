@@ -172,16 +172,16 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
           <h2 class="prop-title">💡 Propuesta # {id} </h2>
           <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
         </div>
-        <div class="mini-title">🎯 Objetivo:</div>
+        <h2 class="mini-title">🎯 Objetivo:</h2>
         <div class="prop-hl"> {title}</div><br/><br/>
         <div class="grid-prop">      
-          <div class="minit-bg">⚙️ Acción: <div class="prop-hl">{typeOfAction}</div></div>
-          <div class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></div>      
-          <div class="minit-bg3"> 📍 Dónde: <div className="prop-hl">{neighborhood}</div></div>
-          <div class="minit-bg3">💸 Costo: <div className="prop-hl">{budget} pesos</div> </div>
+          <h2 class="minit-bg">⚙️ Acción: <div class="prop-hl">{typeOfAction}</div></h2>
+          <h2 class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></h2>      
+          <h2 class="minit-bg3"> 📍 Dónde: <div className="prop-hl">{neighborhood}</div></h2>
+          <h2 class="minit-bg3">💸 Costo: <div className="prop-hl">{budget} pesos</div> </h2>
         </div>
         
-        <div class="description-bg">📑 Descripción: <div class="prop-description">{description}</div></div>
+        <div class="description-bg"><h2>📑 Descripción:</h2> <div class="prop-description">{description}</div></div>
         {/*}
         <div className ="proposal-main">
           <div className="proposal-sub">Costo: {budget}</div>
