@@ -26,17 +26,17 @@ const QuizSuccessModal = (props) => {
           Now you can create or vote on urban governance proposals. Touch one section below to start using your TARO.</div>
         <Modal.Body>
         <div class="void-link">
-          <div class="prop-bg"><a href="/createProposal">
+          <div class="prop-bgr"><a href="/createProposal">
             <img src={prop} class="ribvan"/> 
             <div class="propsub">Create proposal</div>
             <div class="propopt">Propose</div>
           </a></div>
-          <div class="prop-bg2"><a href="/ProposalList#vote">
+          <div class="prop-bgr"><a href="/ProposalList#vote">
           <img src={vote2} class="ribvan"/> 
           <div class="propsub">Available proposals</div>
           <div class="propopt">Vote</div>
           </a></div>
-          <div class="prop-bgh"><a href="/PastProposals">
+          <div class="prop-bgr"><a href="/PastProposals">
             <img src={past} class="ribvan"/> 
             <div class="propsub">Past proposals</div>
             <div class="propopt">Record</div>
@@ -63,17 +63,17 @@ const QuizSuccessModal = (props) => {
          Ahora puedes crear o votar propuestas de gobernanza urbana. Toca una sección para comenzar a usar tu TARO.</h3>
       <Modal.Body>
       <div class="void-link">
-            <div class="prop-bg"><a href="/createProposal">
+            <div class="prop-bgr"><a href="/createProposal">
               <img src={prop} class="ribvan"/> 
               <div class="propsub">Crea una propuesta</div>
               <div class="propopt">Proponer</div>
             </a></div>
-            <div class="prop-bg2"><a href="/ProposalList#vote">
+            <div class="prop-bgr"><a href="/ProposalList#vote">
             <img src={vote2} class="ribvan"/> 
             <div class="propsub">Propuestas</div>
             <div class="propopt">Por votar</div>
           </a></div>
-            <div class="prop-bgh"><a href="/PastProposals">
+            <div class="prop-bgr"><a href="/PastProposals">
               <img src={past} class="ribvan"/> 
               <div class="propsub">Propuestas pasadas</div>
               <div class="propopt">Historial</div>

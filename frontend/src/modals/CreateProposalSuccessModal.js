@@ -67,7 +67,7 @@ const CreateProposalSuccessModal = (props) => {
             <div class="propsub">Propuestas por</div>
             <div class="propopt">Votar</div>
           </a></div>
-          <div class="prop-bg2"><a href="/CreateProposal">
+          <div class="prop-bgr"><a href="/CreateProposal">
             <img src={prop} class="ribvan"/>
             <div class="propsub">Nueva propuesta</div>
             <div class="propopt">Proponer </div>

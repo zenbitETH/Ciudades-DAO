@@ -23,7 +23,7 @@ const QuizFailureModal = (props) => {
 
           <div class="center"><div><img src={voidz} alt="Alert about verification" class="prop-img"/></div></div>
           <h1><span>Wrong answers </span></h1><br/>
-          <div class="about-tx">You have failed the validation or some answer is missing, take a look to the about page and try again.</div>
+          <h3 >You have failed the validation or some answer is missing, take a look to the about page and try again.</h3>
           <Modal.Body>
           <div class="void-link">
             <div class="prop-bgr"><a href="/About">
@@ -52,7 +52,7 @@ const QuizFailureModal = (props) => {
 
       <div class="center"><div><img src={voidz} alt="Alert about verification" class="prop-img"/></div></div>
       <h1><span>Respuesta incorrecta </span></h1><br/>
-      <div class="about-tx">Fallaste la validación o falta alguna respuesta, echa un vistazo a la documentación o intenta nuevamente.</div>
+      <h3>Fallaste la validación o falta alguna respuesta, echa un vistazo a la documentación o intenta nuevamente.</h3>
       <Modal.Body>
       <div class="void-link">
         <div class="prop-bgr"><a href="/About">
@@ -60,7 +60,7 @@ const QuizFailureModal = (props) => {
             <div class="propsub">Ver documentación</div>
             <div class="propopt">Conoce +</div>
           </a></div>
-          <div class="prop-bg2"><a href="/Quiz">
+          <div class="prop-bgr"><a href="/Quiz">
             <img src={verify} class="ribvan"/>
             <div class="propsub">Intentalo de nuevo </div>
             <div class="propopt">Revisar</div>

@@ -406,15 +406,15 @@ function Home() {
               <section>
               <div class="govgrid">
                 <div class="prop-bgr"><a href="/About">
-                    <img src={prop} class="rivban"/> 
-                    <div class="propsub">¿Qué es una cartera web 3?</div>
-                    <div class="propopt">Empieza Aquí</div>
-                  </a></div>
-                  <div class="prop-bgr"><a href="/About">
-                    <img src={vote} class="rivban"/>
-                    <div class="propsub">¿Qué es el presupuesto descentralizado? </div>
-                    <div class="propopt">Ciudad DAO</div>
-                  </a></div>
+                  <img src={prop} class="rivban"/> 
+                  <div class="propsub">¿Qué es una cartera web 3?</div>
+                  <div class="propopt">Empieza Aquí</div>
+                </a></div>
+                <div class="prop-bgr"><a href="/About">
+                  <img src={vote} class="rivban"/>
+                  <div class="propsub">¿Qué es el presupuesto descentralizado?</div>
+                  <div class="propopt">Ciudad DAO</div>
+                </a></div>
                 </div>
               </section>      
               }

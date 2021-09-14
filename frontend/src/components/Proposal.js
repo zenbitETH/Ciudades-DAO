@@ -188,7 +188,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
           <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
         </div>
         */}
-        <div class="yellow">Hecha por {proposer}</div><br/>
+        <div class="author">Hecha por {proposer}</div><br/>
         <div class="vote-grid">
           {!hasVoted?
           <a class="prop-bgf" onClick={handleOnClickFor}><h1 class="votef">Vota <br/>a favor</h1></a>
