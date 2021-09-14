@@ -12,17 +12,6 @@
     color: #3d386b !important;
   }
   
-  .gray2 {
-    border-radius: 20px;
-    width:100%;
-    margin: 3% auto;
-    background-image: linear-gradient(#3d386b, #554c9c);
-    justify-content: center !important;
-    align-content: center !important;
-    align-items: center !important;
-    color: #ffffff !important;
-    text-align: left !important;
-  }
   
   .yellow-unlock {
     border-radius: 20px;

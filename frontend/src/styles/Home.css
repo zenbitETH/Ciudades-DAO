@@ -97,9 +97,7 @@
 }
 
 .center {
-  text-align: center !important;
-  align-items: center !important;
-  justify-content: center !important;
+  text-align: center !important;  
 }
 
 .justify {
@@ -352,12 +350,11 @@ margin-top: 1.5em;
 h1 {
   font-size: clamp(2.5em, -0.875rem + 8.333vw, 4.5rem);
   font-weight: 400;
-  line-height: 115%;
   text-align: center;
 }
 
 h2 {
-  font-size: clamp(1em, -0.875rem + 6.6vw, 1.55rem)
+  font-size: clamp(1em, -0.875rem + 6.6vw, 2.55rem)
 }
 
 h3 {
@@ -464,8 +461,7 @@ h3 {
 .valert3 {
   background-size: cover;
   font-size: clamp(1em, -0.975rem + 6.5vw, 1.8rem);
-  margin-top: -1.15em;
-  margin-bottom: -1.1em;
+  margin: -0.75em -0.75em -0.75em -0.75em;
   border-radius: 20px;
   width: auto !important;
   padding: 1em;

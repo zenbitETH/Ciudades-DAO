@@ -4,6 +4,19 @@
   position: relative !important;
 }
 
+.ribbon2 {
+  position: relative !important;
+  width: 20em;
+}
+
+.about-img {
+  content:'' ;
+  position: relative !important;
+  bottom: 0px;
+  right:  0 !important;
+  height: 200px !important;
+}
+
 #about {
   background: linear-gradient(-180deg, #2b284a, #2b284a, #b08d0f6c, #FF9400);
 }
@@ -28,17 +41,7 @@
   align-items: center;
   justify-content: center;
   position: relative !important;
-}
-
-.about-ct::before {
-  content:'';
-  position: absolute;
-  top: -5em;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-size: cover;
-  opacity: 20%;
+  background-color: #2b284a;
 }
   
 .about-hl {
@@ -51,31 +54,20 @@
  background: none !important;
 }
 
-
-.bg-reward {
-  padding: 1em;
-  background: linear-gradient(-15deg, #FAC91a50, #FAC91a50,#FF940050, #FF940050);
-  background-size: 400% 400%;
-  animation: gradient 1s ease-in-out infinite;
-  border-radius: 25px;
-  height: 175px;
-  width: 100%;
+.about-hl2 {
+  font-size: clamp(1rem, -0.875rem + 7.633vw, 4rem);
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
   position: relative;
-  border-width: 0.1em;
-  border-style: solid;
-  border-color: transparent;
-  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
-}
+  margin: 1em 0em 1em 0em;
+  background: none !important;
+ }
 
-.bg-reward img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
+
+
+
+
 
 .bg-reward:hover   {
   border-color:linear-gradient(45deg, #ffffff, #ffffff);
@@ -86,6 +78,7 @@
 }
 
 .bg-reward:hover .about-hl  {
+  font-family: "ABeeZee";
   cursor: pointer;
   border-color:linear-gradient(45deg, #ffffff, #ffffff);
   background: linear-gradient(-15deg, #FAC91a, #FAC91a,#FF9400, #FF9400);
@@ -187,9 +180,11 @@
   font-size: clamp(.9em, -0.975rem + 6.5vw, 1.4rem);
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   padding: 1em;
   row-gap: 1em;
+  margin-left: -1em !important;
+  margin-right: -1em !important;
   height: max-content;
   position: relative !important;
 }
@@ -287,6 +282,7 @@
 }
 
 .bg-grid .ustext {
+  font-family: "ABeeZee";
   visibility: hidden;
   width: auto;
   bottom: 100%;
@@ -315,19 +311,30 @@
   border-width: 5px;
   border-style: solid;
   text-align: center;
-  border-color: rgb(255, 255, 255) transparent transparent transparent;
+  border-color: #ffffff transparent transparent transparent;
 }
 
 .bg-grid .ustext .valert3::after {
   
   content: " ";
-  position: absolute;
+  position: relative;
   top: 100%; /* At the bottom of the tooltip */
-  left: 50%;
-  margin-left: -5px !;
   border-width: 5px;
   border-style: solid;
   text-align: center;
+}
+
+.valert3::after{
+  z-index: 1;
+  content: " ";
+  position: relative;
+  left: 50%;
+  bottom: -2.57em;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  text-align: center;
+  
   border-color: #e26c72 transparent transparent transparent;
 }
 
@@ -493,27 +500,28 @@ padding-top: 0.5em;
 .webvs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: -0.8em;
-  margin-right: -0.8em;
   font-size: 1.2em;
+  text-align: center;
 }
 
 .web2vs {
-  background-color: #FAC91a;
-  color: #211e40;
+  background-color: #acacac9c;
+  color: #262626;
+  border-radius: 25px 0 0 25px;
 }
 
 .web3vs {
-  background-color: #FF9400;
-  color: #211e40;
+  background-color: #FF940090;
+  color: #fff;
+  border-radius: 0 25px 25px 0;
 }
 
 .vs {
   position: relative;
   padding: 1em 1em;
   vertical-align: middle;
-  text-align: left;
-  font-size: 0.7em;
+  text-align: center;
+  font-size: 0.8em;
   }
 
   .vs .ustext {
@@ -549,7 +557,7 @@ padding-top: 0.5em;
   
   .vs:hover {
     background-image: radial-gradient(#33115d12 , #ffffff24);
-    color: #3d386b !important;
+    border-radius: 25px;
   }
 
 .container {
@@ -578,6 +586,23 @@ padding-top: 0.5em;
   margin-bottom: 2em;
   width: 100%;
   text-align: left;
+}
+
+.fases {
+ width: 75%;
+ 
+}
+
+.fase {
+  width: 100%;
+}
+
+.fase23 {
+  height: 100%;
+}
+
+.margins {
+  margin: 0 0 0 30%;
 }
 @media only screen and (min-width: 1024px) {
   .about-ct {

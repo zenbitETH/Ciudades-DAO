@@ -325,11 +325,9 @@ option:disabled {
   padding: 1em;
   background-color: #00000068;
   border-radius: 25px;
-  height: 175px;
+  height: 250px;
   width: 100%;
   position: relative;
-  border-width: 0.1em;
-  border-style: solid;
   border-color: transparent;
   font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
 }
@@ -338,17 +336,14 @@ option:disabled {
   content:'';
   position: absolute;
   bottom: 0px;
-  right:  10px;
+  right:  0px;
   opacity: 90%;
   height: 120px;
-  border-radius: 25px;
+
 }
 
 .bg-grid:hover {
   cursor: pointer;
-  border-width: 0.1em;
-  border-style: solid;
-  border-color:linear-gradient(45deg, #ffffff, #ffffff);
   background: linear-gradient(-45deg, #2b284a00, #FF940076, #FF940076, #2b284a00);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
@@ -481,7 +476,7 @@ option:disabled {
   padding: 1em;
   background-color: #00000068;
   border-radius: 25px;
-  height: 175px;
+  height: 225px;
   width: 100%;
   position: relative;
   border-color: transparent;
@@ -499,7 +494,7 @@ option:disabled {
 
 .prop-bgr:hover {
   border-color: transparent;
-  background: linear-gradient(-45deg,  #ff9500d3, #ff9500d3,#2b284a8f, #2b284a8f);
+  backround: linear-gradient(-45deg,  #ff9500d3, #ff9500d3,#2b284a8f, #2b284a8f);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -795,6 +790,10 @@ option:disabled {
   text-align: left;
 }
 
+.author {
+  color: #FAC91A;
+}
+
 .vote-grid {
   display: grid;
   grid-gap: 1em;
@@ -811,6 +810,10 @@ option:disabled {
   .prop-wallet{
     font-size: 2em;
     padding-top: 0.25em;
+  }
+
+  .author {
+    font-size: 1.5em;
   }
 }
 

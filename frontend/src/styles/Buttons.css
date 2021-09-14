@@ -41,24 +41,25 @@ Button {
   
   a {
     font-size: clamp(1em, 6.5vw, 1.3rem);
+    color: #FFF;
   }
   
   a:link {
-    color: #FF9400;
+    color: #FFF;
     border: none;
   }
   
   a:active{
-    color: #211e40;
+    color: #211e40 !important;
   }
   
   a:visited {
-    color: #FF9400
+    color: #FFF;
   }
   
   a:hover {
     text-decoration: none;
-    color: #FAC91A;
+    color: #FFF;
   }
   
   .aboutbutton {
@@ -124,19 +125,85 @@ Button {
     box-shadow: none !important;
   }
   
-  .about-bt {
-    width: 100% ;
-    background-image: linear-gradient(#3d386b, #3d386bbc);
-    border-radius: 20px;
-    color: #ffffff !important;
-  
-  }
+
   
   .about-bt:hover {
-    background-image: linear-gradient(#3d386b, #3d386b) !important;
+    background-image: linear-gradient(to right, #FF9400, #f9a733) !important;
     color: #ffffff !important;
   }
   
   .about-bt:focus {
     box-shadow: none !important;
+  }
+
+  .about-bt {
+    margin-top: 1em;
+    padding: 0.5em;
+    color: white;
+    background-color: #3d386b;
+    border-radius: 25px;
+    width: 100%;
+    position: relative;
+    border-color: transparent;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .quiz-bt {
+    padding: 1em;
+    color: white;
+    background-color: #00000068;
+    border-radius: 25px;
+    width: 100%;
+    position: relative;
+    border-color: transparent;
+    font-size: 1.2em;
+
+  }
+
+  .quiz-bt:hover {
+    background: linear-gradient(75deg, #2b284a00, #ff9500d7, #ff9500d7, #ff950069, #2b284a00);
+    background-size: 500% 500%;
+    animation: gradient 2s ease infinite;
+    cursor: pointer;
+    
+  }
+
+  
+  .verify-bt {
+    padding: 1em;
+    color: white;
+    background-color: #00000068;
+    border-radius: 25px;
+    width: 100%;
+    position: relative;
+    border-color: transparent;
+    font-size: 1.2em;
+  }
+
+  
+  .verify-bt:hover {
+    background: linear-gradient(75deg, #2b284a00, #ff9500d7, #ff9500d7, #ff950069, #2b284a00);
+    background-size: 500% 500%;
+    animation: gradient 2s ease infinite;
+    cursor: pointer;
+    
+  }
+
+  @media only screen and (min-width: 1000px) {
+
+    .verify-bt {
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+  }
+  
+  @media only screen and (min-width: 1800px) {
+    .verify-bt {
+      margin-left: 40%;
+      margin-right: 40%;
+      margin-bottom: 5em;
+      text-align: center;
+    }
+
   }

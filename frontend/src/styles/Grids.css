@@ -3,7 +3,7 @@
 .grid-prop {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 6em 6em;
+  grid-template-rows: 8em 8em;
   text-align: left;  
   grid-gap: 0em;
   justify-self: center;
@@ -22,7 +22,7 @@
   }
     
 .govgrid {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   display: grid;
   grid-gap: 0.5em;
 }
@@ -41,22 +41,151 @@
   text-align: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows:  repeat(minmax(150px, 200px));
+  grid-template-rows:  repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1em;
   padding: 1em;
+}
+
+.about-grid2 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows:  repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1em;
+  padding: 1em;
+  margin: 0em 0 0em 0;
+}
+
+.usgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  text-align: left;  
+  grid-gap: 0em;
+  justify-self: center;
+  align-self: center;
+  column-gap: 0.5em;
 }
 
 .aboutbg-grid {
   background-color: #00000068;
   padding: 1em;
+  border-radius: 50px 0em 50px 0px;
+  color: #fff;
 }
 
 .aboutbg-grid2 {
   background-color: #00000068;
-  grid-template-columns: 1fr;
+  padding: 1em;
+  border-radius: 50px 50px 50px 50px;
+  color: #fff;
 }
 
+
+
 /* Backgrounds */
+
+.bg-reward {
+  padding: 1em;
+  background: linear-gradient(-15deg, #FAC91a50, #FAC91a50,#FF940050, #FF940050);
+  background-size: 400% 400%;
+  animation: gradient 1s ease-in-out infinite;
+  border-radius: 25px;
+  height: 175px;
+  width: 100%;
+  position: relative;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: transparent;
+  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
+}
+
+.bg-reward img {
+  content:'';
+  position: absolute;
+  bottom: 0px;
+  right:  10px;
+  opacity: 90%;
+  height: 120px;
+  border-radius: 25px;
+}
+
+.bg-reward2 {
+  padding: 1em;
+  background: linear-gradient(-15deg, #FAC91a70, #FAC91a70,#FF940070, #FF940070);
+  background-size: 400% 400%;
+  animation: gradient 1s ease-in-out infinite;
+  border-radius: 25px;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: transparent;
+  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
+}
+
+.bg-reward2:hover {
+  background: linear-gradient(-15deg, #fac91ac3, #FAC91ac3,#FF9400c3, #FF9400c3);
+  background-size: 400% 400%;
+  animation: gradient 1s ease-in-out infinite;
+}
+
+.bg-reward2 img {
+  content:'';
+  position: absolute;
+  bottom: 0px;
+  right:  10px;
+  opacity: 90%;
+  height: 120px;
+  border-radius: 25px;
+}
+
+.bg-reward2 .ustext {
+  font-family: "ABeeZee";
+  visibility: hidden;
+  width: auto;
+  bottom: 100%;
+  left: 0%;
+  background-color: #ffffff;
+  backdrop-filter: blur(15px);
+  color: #211e40;
+  justify-items: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 1em;
+  margin-bottom: 0.3em;
+  font-size: 0.9em;
+  position: absolute;
+  z-index: 1;
+  text-align: justify;
+}
+
+.bg-reward2:hover .ustext {
+  visibility: visible;
+}
+
+.bg-reward3 {
+  padding: 1em;
+  background: linear-gradient(-15deg, #FAC91a, #FAC91a,#FF9400, #FF9400);
+  color: #3d386b !important;
+  background-size: 400% 400%;
+  animation: gradient 1s ease-in-out infinite;
+  border-radius: 25px;
+  width: 100%;
+  position: relative;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: transparent;
+  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
+}
+
+ a.bg-reward3:hover {
+  color: #fff !important;
+  background: linear-gradient(-15deg, #FAC91a, #FAC91a,#FF9400, #FF9400);
+  animation: none;
+
+}
 
 .propose-bg {
     padding: 1em;
@@ -92,16 +221,15 @@
 }
 
 
-
-
-
-
 @media only screen and (min-width: 1200px) {
   .govgrid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   .about-grid{
    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .about-grid2 {
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
   .bg-grid {
     grid-row: span 3;
@@ -112,6 +240,21 @@
   .prop-wallet{
     font-size: 2em;
     padding-top: 0.25em;
+  }
+
+  .bg-reward2 {
+    grid-row: span 3;
+    grid-column: span 1;
+    height: auto;
+  }
+
+  .aboutbg-grid {
+    margin-left: 50.5vh;
+    margin-right: 50.5vh;
+  }
+  .aboutbg-grid2 {
+    margin-left: 50.5vh;
+    margin-right: 50.5vh;
   }
 }
 

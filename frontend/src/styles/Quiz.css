@@ -106,25 +106,6 @@
   
 
 
-  .verify-bt {
-    padding: 1em;
-    color: white;
-    background-color: #00000068;
-    border-radius: 25px;
-    height: 100%;
-    position: relative;
-    border-color: transparent;
-    font-size: 1.2em;
-  }
-
-  
-  .verify-bt:hover {
-    background: linear-gradient(75deg, #2b284a00, #ff9500d7, #ff9500d7, #ff950069, #2b284a00);
-    background-size: 500% 500%;
-    animation: gradient 2s ease infinite;
-    cursor: pointer;
-    
-  }
   @media only screen and (min-width: 1000px) {
     .checkmark {
       top: 1em;
@@ -134,10 +115,6 @@
       padding: 3em 0.5em 0.5em 0.5em;
     }
 
-    .verify-bt {
-      margin-left: 25%;
-      margin-right: 25%;
-    }
 
     .container {
       font-size: 1.3em;
@@ -145,7 +122,5 @@
   }
   
   @media only screen and (min-width: 1800px) {
-    .grid-block {
-      
-    }
+    
   }
