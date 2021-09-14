@@ -54,6 +54,41 @@ const About = () => {
             <li>Robo de fondos bancarios.</li>
           </div>
          </div>
+
+         <div class="timeline">
+        <div class="timeyr">  Evolución del Internet 
+          <div class="orange"> de 1989 a 2020</div>
+        </div>
+          <div class="container">
+           <div class="lines">
+             <div class="dot"></div>
+             <div class="line"></div>
+             <div class="dot"></div>
+             <div class="line"></div>
+             <div class="dot"></div>
+           </div>
+           <div class="cards">
+             <div class="web1">
+               <h4 class="">Web 1.0 🔗<div class="timesub"> 1989 - 1998</div></h4>
+               <li class="timetx">Basada en hipervínculos HTML</li>
+               <li class="timetx">Redes Fijas y Unilaterales</li>
+               <li class="timetx">Alcance limitado</li>
+             </div>
+             <div class="web2">
+               <h4 class="">Web 2.0 🌎<div class="timesub"> 1998 - actualidad</div></h4>
+               <li class="timetx">Basada en redes sociales y contenido</li>
+               <li class="timetx">Redes centralizadas para crear y consumir</li>
+               <li class="timetx">Alcance global</li>
+             </div>
+             <div class="web3">
+               <h4 class="">Web 3.0 ☀️<div class="timesub"> 2010 - actualidad</div></h4>
+               <li class="timetx">Basada en contextos y consenso</li>
+               <li class="timetx">Redes descentralizadas para verificar y presevar</li>
+               <li class="timetx">Alcance interplanetario</li>
+             </div>
+           </div>
+          </div>
+        </div>
         <div class="timeline">
       <div class="timetl">
         <h3>Evolución del Internet</h3>
