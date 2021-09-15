@@ -19,12 +19,19 @@ import www from '../assets/www.svg'
 import dk from '../assets/dk.png'
 import corner from '../assets/corner.svg'
 
+
 import DAO from '../assets/DAO.svg'
+import DAOeng from '../assets/DAOeng.svg'
 import voting from '../assets/voting.svg'
+import voting2 from '../assets/voting2.svg'
 import fases from '../assets/fases.svg'
+import phases from '../assets/phases.svg'
 import fase1 from '../assets/fase1.svg'
+import phase1 from '../assets/phase1.svg'
 import fase2 from '../assets/fase2.svg'
+import phase2 from '../assets/phase2.svg'
 import fase3 from '../assets/fase3.svg'
+import phase3 from '../assets/phase3.svg'
 import restrict from '../assets/restrict.svg'
 import moon from '../assets/moon.svg'
 import open from '../assets/open.svg'
@@ -124,7 +131,7 @@ const About = () => {
       </div><br/><br/>
       </div>
       <h1 class="white"><span class="jos">Implementation phases</span></h1>
-      <img src={fases} alt="Public Key" class="fases"/><br/><br/><br/><br/>
+      <img src={phases} alt="Public Key" class="fases"/><br/><br/><br/><br/>
       
     <section >
       <div class="aboutbg-grid2"><br/>
@@ -320,7 +327,7 @@ const About = () => {
            Upon expiration of the time to vote, it will be accepted if it has more votes in favor or it will be rejected if it has more votes against or if it does not receive any vote.
         </h3> <br/>
         <h2> Evolution of a proposal </h2>
-        <div class = "center"> <img src={voting} alt="Public Key" class ="fase"/> </div> <br/>
+        <div class = "center"> <img src={voting2} alt="Public Key" class ="fase"/> </div> <br/>
         <div class = "usgrid">
           <div class = "bg-grid"> <a href="/createProposal">
             <img src = {prop} class = "ribbons" />
@@ -368,13 +375,13 @@ const About = () => {
           </div>
           </div> <br/> <br/>
           <h2> Members of the DAO Citizen </h2>
-          <div class = "center"> <img src = {DAO} alt = "Public Key" class = "fase"/> </div> <br/>
+          <div class = "center"> <img src = {DAOeng} alt = "Public Key" class = "fase"/> </div> <br/>
           <h2> Phase 1: Pilot Test </h2>
-          <div class = "center"> <img src = {fase1} alt = "Public Key" class = "fase"/> </div> <br/>
+          <div class = "center"> <img src = {phase1} alt = "Public Key" class = "fase"/> </div> <br/>
           <h2> Phase 2: Integration </h2>
-          <div class = "center"> <img src = {fase2} alt = "Public Key" class = "fase23" /> </div> <br/>
+          <div class = "center"> <img src = {phase2} alt = "Public Key" class = "fase23" /> </div> <br/>
           <h2> Phase 3: Implementation </h2>
-          <div class = "center"> <img src = {fase3} alt = "Public Key" class = "fase23"/> </div> <br/>
+          <div class = "center"> <img src = {phase3} alt = "Public Key" class = "fase23"/> </div> <br/>
         </h3>
       </div>
     </section>
@@ -429,7 +436,7 @@ const About = () => {
          <div class="about-hl">3. Vota en la Ciudad DAO</div><br/>
         <img src={vote} class="about-img"/> 
         <span class="ustext"> <div class="center"><img src={past} class="ribbon"/></div><br/>VoTARO es una DAO (Organización Autónoma Descentralizada) 
-        con el objetivo de crear un presupuesto descentralizado y gestionar la toma de deciones de la ciudad de Querétaro mediante contratos inteligentes. <span class="orange">Cada TARO que obtengas equivale a un voto</span> y cada propuesta se podrá votar durante 15 días.
+        con el objetivo de crear un presupuesto descentralizado y gestionar la toma de decisiones de la ciudad de Querétaro mediante contratos inteligentes. <span class="orange">Cada TARO que obtengas equivale a un voto</span> y cada propuesta se podrá votar durante 15 días.
         <div class="usgrid">
           <a class="about-bt" href="/Quiz">Propuestas por votar </a>
           <a class="about-bt" href="/CreateProposal">Leer sobre la Ciudad DAO</a>
@@ -548,9 +555,9 @@ const About = () => {
         <img src={TAROrew} class="ribbon2"/>
         <h1 class="about-hl2">2. Participa y gana TARO</h1>
         <h3>
-          TARO es el token de VoTARO, la cripto que recibirás cómo recompensa al completar tareas en la plataforma y que podrás usar para votar por las propuestas
+          TARO es el token de VoTARO, la cripto que recibirás como recompensa al completar tareas en la plataforma y que podrás usar para votar por las propuestas
           de la ciudad DAO que definen el presupuesto descentralizado de Querétaro.<br/><br/>Para obtener tus primeros tokens TARO <span class="orange">ya debes tener instalada una
-          cartera web 3 y haber conectado tu llave cripto</span> desde el menu principal. Si ya lo hiciste, completa la prueba de conocimiento para obtener hasta 1,000 tokens TARO
+          cartera web 3 y haber conectado tu llave cripto</span> desde el menú principal. Si ya lo hiciste, completa la prueba de conocimiento para obtener hasta 1,000 tokens TARO
           al usar tus habilidades digitales para  validar tu cuenta con los contratos inteligentes de VoTARO.<br/><br/><span class="orange"> Una vez que valides tu cuenta podrás crear propuestas para la ciudad DAO </span>
           y obtendrás 50 TARO por cada una de las primeras 20 propuestas que hagas, por lo que podrás obtener otros 1,000 TARO por participar en la ciudad DAO. <br/><br/>
           <div class="usgrid">
@@ -570,7 +577,7 @@ const About = () => {
           <div class="about-grid2">  
           <div class="bg-grid"><h2>¿Qué es un contrato inteligente?</h2><div class="center"><img src={ticon} class="about-img"/></div>
             <span class="ustext">
-              Los contratos inteligentes son máquinas digitales que utilizan la información como materia prima para digitalizar el valor de algun elemento o actividad y al conectarlos a un blockchain (computadora global) son capaces de programar el comportamiento de activos digitales a lo largo del tiempo, permitiendo crear productos, empresas o sistemas nunca antes vistos. En VoTARO utilizamos 2 contratos inteligentes para <span class="orange"> crear una Organización Autónoma Descentralizada en la ciudad de Querétaro que:</span> 
+              Los contratos inteligentes son máquinas digitales que utilizan la información como materia prima para digitalizar el valor de algún elemento o actividad y al conectarlos a un blockchain (computadora global) son capaces de programar el comportamiento de activos digitales a lo largo del tiempo, permitiendo crear productos, empresas o sistemas nunca antes vistos. En VoTARO utilizamos 2 contratos inteligentes para <span class="orange"> crear una Organización Autónoma Descentralizada en la ciudad de Querétaro que:</span> 
               <ol>
                 <li>Registra las necesidades de los ciudadanos.</li>
                 <li>Recompensa el desarrollo de sus habilidades digitales.</li>
@@ -580,10 +587,10 @@ const About = () => {
             </span>
           </div>
           <div class="bg-grid"><h2>El contrato de los tokens TARO</h2><div class="center"><img src={TAROcon} class="about-img"/></div>
-            <span class="ustext"> El contrato del token TARO utiliza el estandard ERC20, lo que permite crear fichas digitales programadas para cumplir estas funciones:
+            <span class="ustext"> El contrato del token TARO utiliza el estándard ERC20, lo que permite crear fichas digitales programadas para cumplir estas funciones:
             <ol>
-              <li>Declarar publicamente el nombre del token.</li>
-              <li>Definir cuantos tokens hay en circulación y cómo se emiten.</li>
+              <li>Declarar públicamente el nombre del token.</li>
+              <li>Definir cuántos tokens hay en circulación y como se emiten.</li>
               <li>Poder fraccionar cada unidad hasta en 18 decimales.</li>
               <li>Registrar continuamente cuantos TARO hay en que llaves públicas. </li>
               <li>Poder transferir los tokens a otras llaves públicas.</li>
@@ -613,12 +620,12 @@ const About = () => {
                 <li>Dar vigencia para votar las propuestas por 15 días.</li>
                 <li>Aprobar o rechazar propuestas según el número de votos a favor y en contra.</li>
               </ol>
-              Estas funciones se definieron para la prueba piloto en la ciudad de Querétaro, pero serán sometidas a votación para definir cómo evolucionan para satisfacer las necesidades de los ciudadanos queretanos y los actores de interés de la ciudad.
+              Estas funciones se definieron para la prueba piloto en la ciudad de Querétaro, pero serán sometidas a votación para definir como evolucionan para satisfacer las necesidades de los ciudadanos queretanos y los actores de interés de la ciudad.
             </span>
           </div>
           <div class="bg-grid"><h2>Valida tu dirección cripto</h2><div class="center"><img src={verify} alt="Public Key" class="about-img"/></div>
             <span class="ustext">
-              La principal diferencia entre la web 2 y la web 3 es cómo se identifican a los usuarios. Mientras que en la web 2 es necesario dar tus datos personales para validar tu identidad, en la web 3 se utiliza pruebas de encriptación para validar la identidad lo que permite crear servicios que no solo funcionen con personas sino que sean capaces de interactuar con otros contratos inteligentes o entidades digitales. <br/><br/><span class="orange"> VoTARO esta hecho para residentes queretanos y require desarrollar habilidades digitales </span> sobre seguridad digital, comunicación y resolución de problemas para poder usarse. Por lo que aunque es abierto para todo el mundo y entidad, es necesario presentar una prueba de conocimiento que compruebe los conocimientos del usuario sobre la web 3, las llaves cripto y la ciudad DAO. Si presentas la prueba satisfactoriamente, el contrato Gobernador Alfa depositará 1,000 TARO en tu llave pública y validará tu cuenta para que puedas crear propuestas y votarlas durante 3 meses.
+              La principal diferencia entre la web 2 y la web 3 es como se identifican a los usuarios. Mientras que en la web 2 es necesario dar tus datos personales para validar tu identidad, en la web 3 se utiliza pruebas de encriptación para validar la identidad lo que permite crear servicios que no solo funcionen con personas sino que sean capaces de interactuar con otros contratos inteligentes o entidades digitales. <br/><br/><span class="orange"> VoTARO esta hecho para residentes queretanos y require desarrollar habilidades digitales </span> sobre seguridad digital, comunicación y resolución de problemas para poder usarse. Por lo que aunque es abierto para todo el mundo y entidad, es necesario presentar una prueba de conocimiento que compruebe los conocimientos del usuario sobre la web 3, las llaves cripto y la ciudad DAO. Si presentas la prueba satisfactoriamente, el contrato Gobernador Alfa depositará 1,000 TARO en tu llave pública y validará tu cuenta para que puedas crear propuestas y votarlas durante 3 meses.
             </span>
           </div>
         </div>
@@ -645,7 +652,7 @@ const About = () => {
             <li>📑 Descripción</li>
             <li>💸 Presupuesto </li>
           </ol>
-          Una vez que aceptes el envio de tu propuesta desde metamask, se registrará en el contrato Gobernador Alpha y <span class="orange">estará disponible para votar durante 15 días.</span> Durante los 15 días de vigencia, tu y otros usuarios podrán votarla, o puedes votar por las propuestas de otros usuarios si están disponibles.
+          Una vez que aceptes el envio de tu propuesta desde metamask, se registrará en el contrato Gobernador Alpha y <span class="orange">estará disponible para votar durante 15 días.</span> Durante los 15 días de vigencia, tú y otros usuarios podrán votarla, o puedes votar por las propuestas de otros usuarios si están disponibles.
           
           
            Al expirar el tiempo para votar se aceptará si tiene más votos a favor o será rechazada si tiene más votos en contra o si no recibe ningún voto.
@@ -677,8 +684,8 @@ const About = () => {
         <h3>
           VoTARO tiene el objetivo de formar una DAO (Organización Autónoma Descentralizada) en la ciudad de Querétaro para gestionar la creación de un presupuesto descentralizado, que aporte a la economía de los queretanos con recompensas por participación ciuddana y el desarrollo de habilidades digitales.  <br/><br/>
           <h2>Para empezar, ¿Qué es una DAO? </h2>
-          Una Organización Autónoma Descentralizada o DAO es un grupo organizado entorno a una misión que se coordina a través de un conjunto de normas aplicadas en un blockchain. Una de las principales ventajas de una DAO es que son más transparentes que las empresas tradicionales ya que todas las acciones y fondeo de actividades son visibles por cualquier persona, reduciendo significativamente el riesgo de corrupción y censura.  <br/><br/>
-          También dan accesibilidad a actores de interés de cualquier parte del mundo los cuales pueden aportar con desarrollo, talento o fondos. Estos modelos de organizaciónusan contratos inteligentes cómo los de VoTARO para descentralizar la gobernanza de su operación. VoTARO es un prototipo de DAO para ciudades, donde los usuarios obtienen derechos como participantes de la organización a través de los tokens digitales que obtienen cómo recompensa por desarrollar sus habilidades digitales.
+          Una Organización Autónoma Descentralizada o DAO es un grupo organizado en torno a una misión que se coordina a través de un conjunto de normas aplicadas en un blockchain. Una de las principales ventajas de una DAO es que son más transparentes que las empresas tradicionales ya que todas las acciones y fondeo de actividades son visibles por cualquier persona, reduciendo significativamente el riesgo de corrupción y censura.  <br/><br/>
+          También dan accesibilidad a actores de interés de cualquier parte del mundo, los cuales pueden aportar con desarrollo, talento o fondos. Estos modelos de organización usan contratos inteligentes como los de VoTARO para descentralizar la gobernanza de su operación. VoTARO es un prototipo de DAO para ciudades, donde los usuarios obtienen derechos como participantes de la organización a través de los tokens digitales que obtienen como recompensa por desarrollar sus habilidades digitales.
         
           <div class="webvs">
           <div class="gray2"><h1>▲ </h1>Compañias tradicionales </div>
