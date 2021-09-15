@@ -652,7 +652,7 @@ const About = () => {
             <li>📑 Descripción</li>
             <li>💸 Presupuesto </li>
           </ol>
-          Una vez que aceptes el envio de tu propuesta desde metamask, se registrará en el contrato Gobernador Alpha y <span class="orange">estará disponible para votar durante 15 días.</span> Durante los 15 días de vigencia, tú y otros usuarios podrán votarla, o puedes votar por las propuestas de otros usuarios si están disponibles.
+          Una vez que aceptes el envío de tu propuesta desde metamask, se registrará en el contrato Gobernador Alpha y <span class="orange">estará disponible para votar durante 15 días.</span> Durante los 15 días de vigencia, tú y otros usuarios podrán votarla, o puedes votar por las propuestas de otros usuarios si están disponibles.
           
           
            Al expirar el tiempo para votar se aceptará si tiene más votos a favor o será rechazada si tiene más votos en contra o si no recibe ningún voto.
@@ -682,7 +682,7 @@ const About = () => {
         <img src={route} class="ribbon2"/>
         <h1 class="about-hl2">4. Mapa de ruta</h1>
         <h3>
-          VoTARO tiene el objetivo de formar una DAO (Organización Autónoma Descentralizada) en la ciudad de Querétaro para gestionar la creación de un presupuesto descentralizado, que aporte a la economía de los queretanos con recompensas por participación ciuddana y el desarrollo de habilidades digitales.  <br/><br/>
+          VoTARO tiene el objetivo de formar una DAO (Organización Autónoma Descentralizada) en la ciudad de Querétaro para gestionar la creación de un presupuesto descentralizado, que aporte a la economía de los queretanos con recompensas por participación ciudadana y el desarrollo de habilidades digitales.  <br/><br/>
           <h2>Para empezar, ¿Qué es una DAO? </h2>
           Una Organización Autónoma Descentralizada o DAO es un grupo organizado en torno a una misión que se coordina a través de un conjunto de normas aplicadas en un blockchain. Una de las principales ventajas de una DAO es que son más transparentes que las empresas tradicionales ya que todas las acciones y fondeo de actividades son visibles por cualquier persona, reduciendo significativamente el riesgo de corrupción y censura.  <br/><br/>
           También dan accesibilidad a actores de interés de cualquier parte del mundo, los cuales pueden aportar con desarrollo, talento o fondos. Estos modelos de organización usan contratos inteligentes como los de VoTARO para descentralizar la gobernanza de su operación. VoTARO es un prototipo de DAO para ciudades, donde los usuarios obtienen derechos como participantes de la organización a través de los tokens digitales que obtienen como recompensa por desarrollar sus habilidades digitales.
