@@ -57,8 +57,9 @@
   vertical-align: middle;
   background-color: #FAC91a;
   padding: 1em;
-  margin: -1em -1em 0 0em;
+  margin: -.62em -.62em 0 0em;
   border-radius: 0px 20px 0px 20px;
+  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem)
 }
 
 .yellow-text {
@@ -145,8 +146,6 @@ li {
 
 body {
 	background: #2b284a;
-	
-  -webkit-appearance: none;
 }
 
 .App {
@@ -362,6 +361,7 @@ h3 {
   line-height: 175%;
   text-align: justify;
 }
+
 
 .timeyr {
   padding: 1em;

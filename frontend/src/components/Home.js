@@ -301,35 +301,21 @@ function Home() {
                       <div class="propsub">Get up to 1,000 TARO</div>
                       <div class="propopt">Validate</div>
                     </a></div>
-                 
-                    
                     <div class="bg-grid"><a href="/ProposalList">
                       <img src={past} class="ribvan"/> 
                       <div class="propsub">Vote with your TARO</div>
                       <div class="propopt">City DAO</div>
                     </a></div>
-                     
                     <div class="bg-reward"><a href="/createProposal">
                       <img src={prop} class="ribvan"/> 
                       <div class="propsub">Get 50 TARO per proposal</div>
                       <div class="propopt">Propose</div>
                     </a></div>
-                   
                     <div class="prop-bgr"><a href="/About">
                       <img src={vote} class="ribvan"/>
                       <div class="propsub">Learn +</div>
                       <div class="propopt">Docs</div>
                     </a></div>
-                
-                      
-                   
-                    
-                
-                    
-                
-                    
-                    
-                  
                     
                   </div>
                 </section>
