@@ -74,8 +74,8 @@ const About = () => {
       <div class = "about-grid">
         <div class = "bg-grid"> <a>
          <div class = "about-hl"> 1. Get a crypto key </div> <br/>
-        <img src = {img} class = "about-img" />
-        <span class = "ustext"> <div class = "center"> <img src = {meta} class = "ribbon" /> </div> <br/> Metamask is an ethereum wallet with which you can
+        <img src = {img} class ="about-img"/>
+        <span class = "ustext"> <div class = "center"> <img src = {meta} class="about-img"/> </div> <br/> Metamask is an ethereum wallet with which you can
         <span class = "orange"> create a crypto key. </span> This portfolio is decentralized, so only you will have access to it and full custody of the digital assets that are deposited. Download it from your site on a computer or mobile device:
 
         <div class = "usgrid">
@@ -89,7 +89,7 @@ const About = () => {
         <div class = "bg-reward2"> <a href="#step1">
          <div class = "about-hl"> 2. Participate and win TARO </div> <br/>
         <img src={TAROrew} class="about-img"/>
-        <span class = "ustext"> <div class = "center"> <img src = {TARO} class = "ribbon" /> </div> <br/> <span class = "orange"> Get 1,000 TARO </span> when obtaining your crypto key and validating it.
+        <span class = "ustext"> <div class = "center"> <img src = {TARO} class="about-img" /> </div> <br/> <span class = "orange"> Get 1,000 TARO </span> when obtaining your crypto key and validating it.
           Once you have your crypto key validated <span class = "orange"> you can get 50 TARO for each one </span> of the first 20 proposals you make. <br/> <br/>
         <div class = "usgrid">
           <a class="bg-reward3" href="/Quiz"> Validate <br/> (1000 TARO) </a>
@@ -104,7 +104,7 @@ const About = () => {
         <div class = "bg-grid"> <a href="#step2">
          <div class = "about-hl"> 3. Vote in DAO City </div> <br/>
         <img src = {vote} class = "about-img" />
-        <span class = "ustext"> <div class = "center"> <img src = {past} class = "ribbon" /> </div> <br/> VoTARO is a DAO (Decentralized Autonomous Organization)
+        <span class = "ustext"> <div class = "center"> <img src = {past} class = "about-img" /> </div> <br/> VoTARO is a DAO (Decentralized Autonomous Organization)
         with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "orange"> Each TARO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
         <div class = "usgrid">
           <a class="about-bt" href="/Quiz"> Proposals to vote </a>
@@ -116,7 +116,7 @@ const About = () => {
         <div class = "bg-grid"> <a href="#step3">
          <div class = "about-hl"> 4. Improve your digital skills </div>
         <img src = {dk} class = "about-img" />
-        <span class = "ustext"> <div class = "center"> <img src = {TAROtok} class = "ribbon" /> </div> <br/>
+        <span class = "ustext"> <div class = "center"> <img src = {TAROtok} class = "about-img" /> </div> <br/>
         To participate in a DAO it is necessary to have the digital skills necessary to interact with web tools 3 such as a crypto key or use your
         TARO tokens to vote. <span class = "orange"> Know what they are and the roadmap to improve them </span> with your participation in the DAO of the city of Querétaro.
         
@@ -231,12 +231,12 @@ const About = () => {
           and you will get 50 TARO for each of the first 20 proposals you make, so you can get another 1,000 TARO for participating in the DAO city. <br/> <br/>
           <div class = "usgrid">
           <div class = "bg-reward"> <a href="/Quiz">
-            <img src = {verify} class = "ribbons" />
+            <img src = {verify} class = "ribvan" />
             <div class = "propsub"> Get up to 1,000 TARO </div>
             <div class = "propopt"> 1. Validate </div>
           </a> </div>
           <div class = "bg-reward"> <a href="/createProposal">
-            <img src = {prop} class = "ribbons" />
+            <img src = {prop} class = "ribvan" />
             <div class = "propsub"> 50 TARO per proposal </div>
             <div class = "propopt"> 2. Propose </div>
           </a> </div>
@@ -330,13 +330,13 @@ const About = () => {
         <div class = "center"> <img src={voting2} alt="Public Key" class ="fase"/> </div> <br/>
         <div class = "usgrid">
           <div class = "bg-grid"> <a href="/createProposal">
-            <img src = {prop} class = "ribbons" />
+            <img src = {prop} class = "ribvan" />
             <div class = "propsub"> New proposal </div>
             <div class = "propopt"> Create </div>
           </a> </div>
           <div class = "bg-grid"> <a href="/Quiz">
             
-            <img src = {past} class = "ribbons" />
+            <img src = {past} class = "ribvan" />
             <div class = "propsub"> Proposals to vote </div>
             <div class = "propopt"> Vote </div>
           </a> </div>
@@ -406,7 +406,7 @@ const About = () => {
         <div class="bg-grid"><a>
          <div class="about-hl">1. Obtén una llave cripto</div><br/>
         <img src={img} class="about-img"/>
-        <span class="ustext"> <div class="center"><img src={meta} class="ribbon"/></div><br/>Metamask es una cartera de ethereum con la que podrás
+        <span class="ustext"> <div class="center"><img src={meta} class="ribvan"/></div><br/>Metamask es una cartera de ethereum con la que podrás
         <span class="orange"> crear una llave cripto. </span> Esta cartera es descentralizada, por lo que que solo tú tendrás acceso a ella y custodia total de los activos digitales que se depositen. Descárgala desde su sitio en una computadora o dispositivo móvil:
 
         <div class="usgrid">
@@ -420,7 +420,7 @@ const About = () => {
         <div class="bg-reward2"><a href="#step1">
          <div class="about-hl">2. Participa y gana TARO</div><br/>
         <img src={TAROrew} class="about-img"/> 
-        <span class="ustext"> <div class="center"><img src={TARO} class="ribbon"/></div><br/><span class="orange">Obtén 1,000 TARO </span> al obtener tu llave cripto y validarla. 
+        <span class="ustext"> <div class="center"><img src={TARO} class="ribvan"/></div><br/><span class="orange">Obtén 1,000 TARO </span> al obtener tu llave cripto y validarla. 
           Ya que tengas tu llave cripto validada <span class="orange">podrás obtener 50 TARO por cada una </span> de las primeras 20 propuestas que realices.<br/><br/>
         <div class="usgrid">
           <a class="bg-reward3" href="/Quiz">Validar <br/>(1000 TARO) </a>
@@ -435,7 +435,7 @@ const About = () => {
         <div class="bg-grid"><a href="#step2">
          <div class="about-hl">3. Vota en la Ciudad DAO</div><br/>
         <img src={vote} class="about-img"/> 
-        <span class="ustext"> <div class="center"><img src={past} class="ribbon"/></div><br/>VoTARO es una DAO (Organización Autónoma Descentralizada) 
+        <span class="ustext"> <div class="center"><img src={past} class="ribvan"/></div><br/>VoTARO es una DAO (Organización Autónoma Descentralizada) 
         con el objetivo de crear un presupuesto descentralizado y gestionar la toma de decisiones de la ciudad de Querétaro mediante contratos inteligentes. <span class="orange">Cada TARO que obtengas equivale a un voto</span> y cada propuesta se podrá votar durante 15 días.
         <div class="usgrid">
           <a class="about-bt" href="/Quiz">Propuestas por votar </a>
@@ -447,7 +447,7 @@ const About = () => {
         <div class="bg-grid"><a href="#step3">
          <div class="about-hl">4. Mejora tus habilidades digitales</div>
         <img src={dk} class="about-img"/> 
-        <span class="ustext"> <div class="center"><img src={TAROtok} class="ribbon"/></div><br/>
+        <span class="ustext"> <div class="center"><img src={TAROtok} class="ribvan"/></div><br/>
         Para participar en una DAO es necesario contar con las habilidades digitales necesarias para interactuar con las herramientas de la web 3 como una llave cripto o usar tus 
         tokens TARO para votar. <span class="orange">Conoce cuales son y el mapa de ruta para mejorarlas </span> con tu participación en la DAO de la ciudad de Querétaro.
         
@@ -562,12 +562,12 @@ const About = () => {
           y obtendrás 50 TARO por cada una de las primeras 20 propuestas que hagas, por lo que podrás obtener otros 1,000 TARO por participar en la ciudad DAO. <br/><br/>
           <div class="usgrid">
           <div class="bg-reward"><a href="/Quiz">
-            <img src={verify} class="ribbons"/>
+            <img src={verify} class="ribvan"/>
             <div class="propsub">Obtén hasta 1,000 TARO</div>
             <div class="propopt">1. Validar</div>
           </a></div>
           <div class="bg-reward"><a href="/createProposal">
-            <img src={prop} class="ribbons"/> 
+            <img src={prop} class="ribvan"/> 
             <div class="propsub">50 TARO por propuesta </div>
             <div class="propopt">2. Proponer</div>
           </a></div>
@@ -661,13 +661,13 @@ const About = () => {
         <div class="center"><img src={voting} alt="Public Key" class="fase"/></div><br/>
         <div class="usgrid">
           <div class="bg-grid"><a href="/createProposal">
-            <img src={prop} class="ribbons"/>
+            <img src={prop} class="ribvan"/>
             <div class="propsub">Nueva propuesta </div>
             <div class="propopt">Crear</div>
           </a></div>
           <div class="bg-grid"><a href="/Quiz">
             
-            <img src={past} class="ribbons"/>
+            <img src={past} class="ribvan"/>
             <div class="propsub">Propuestas por votar</div>
             <div class="propopt">Votar</div>
           </a></div>
