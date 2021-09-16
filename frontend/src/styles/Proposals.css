@@ -60,13 +60,12 @@ input {
 
 input:focus {
   box-shadow: none !important;
-  -webkit-appearance:none !important;
   border-color: #ffffff !important;
 }
 
 select option {
     background-color: #262341 !important;
-    -webkit-appearance:none !important;
+    
     border-color: transparent !important;
     border: 0 !important;
     border-width: 0 !important;
@@ -78,7 +77,6 @@ option {
 
 optgroup {
   background-color: #6e66b6 !important;
-  -webkit-appearance:none !important;
   border-color: transparent !important;
   border: 0 !important;
   border-width: 0 !important;;
@@ -89,7 +87,6 @@ optgroup {
 select {
   font-size: 1.2em !important;
   box-shadow: none !important;
-  -webkit-appearance:none !important;
   background-color: transparent !important;
 
 }
@@ -332,19 +329,9 @@ option:disabled {
   font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
 }
 
-.bg-grid img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  0px;
-  opacity: 90%;
-  height: 120px;
-
-}
-
 .bg-grid:hover {
   cursor: pointer;
-  background: linear-gradient(-45deg, #2b284a00, #FF940076, #FF940076, #2b284a00);
+  background: linear-gradient(-45deg,  #ff9500d3, #ff9500d3,#2b284a8f, #2b284a8f);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -494,7 +481,7 @@ option:disabled {
 
 .prop-bgr:hover {
   border-color: transparent;
-  backround: linear-gradient(-45deg,  #ff9500d3, #ff9500d3,#2b284a8f, #2b284a8f);
+  background: linear-gradient(-45deg,  #ff9500d3, #ff9500d3,#2b284a8f, #2b284a8f);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -525,6 +512,7 @@ option:disabled {
   border-style: solid;
   border-color: transparent;
   align-self: center;
+  font-size: clamp(2em, -1.2em + 2vw, 2.35rem);
 }
 
 .prop-bgf img {
@@ -572,6 +560,7 @@ option:disabled {
   border-style: solid;
   border-color: transparent;
   align-self: center;
+  font-size: clamp(2em, -1.2em + 2vw, 2.35rem);
 }
 
 .prop-bga img {
@@ -604,6 +593,7 @@ option:disabled {
   border-style: solid;
   border-color: transparent;
   align-self: center;
+  font-size: clamp(2em, -1.2em + 2vw, 2.35rem);
 }
 
 .props {
@@ -624,7 +614,11 @@ option:disabled {
 
 
 .ribvan {
-  opacity: 80% !important;
+  content:'';
+  position: absolute;
+  bottom: 0px;
+  right:  0px;
+  opacity: 90%;
 
   height: 50% !important;
 }
@@ -703,7 +697,7 @@ option:disabled {
 }
 
 .prop-hl {
-  font-size: clamp(0.9em, -0.875rem + 5.6vw, 1.3rem);
+  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
   font-weight: 300;
   color: #ffffff;
   text-align: justify ;
@@ -717,13 +711,12 @@ option:disabled {
   text-align: justify;
   color: #FF9400;
   font-family: "ABeeZee"; 
+  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
   background-color: #ffffff26;
   border-radius: 0 0 20px 20px;
   padding: 0.5em;
   text-align: left;
-  margin-left: -.5em;
-  margin-right: -.5em;
-  margin-bottom: 0.5em;
+  
   line-height: 175%;
   text-align: justify;
 }
@@ -743,15 +736,17 @@ option:disabled {
   color: #5b5a5f;
   text-align: left;  
   background-color: #FF9400;
-  padding: 0.5em;
+  padding: 1em;
   margin: -0.62em 0em 0 -.62em;
   border-radius: 20px 0 20px 0px;
+  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem)
 }
 
 .mini-title {
   color: #FF9400;
   font-family: "ABeeZee"; 
-  text-align: left; 
+  text-align: left;
+  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem); 
 }
 
 .minit-bg {
@@ -761,6 +756,7 @@ option:disabled {
   border-radius: 20px 0 0 0;
   padding: 0.5em;
   text-align: left;
+  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
 }
 
 .minit-bg2 {
@@ -770,7 +766,7 @@ option:disabled {
   border-radius: 0 20px 0 0;
   padding: 0.5em;
   text-align: left;
-  
+  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
 }
 
 .minit-bg3 {
@@ -779,6 +775,7 @@ option:disabled {
   background-color: #ffffff26;
   padding: 0.5em;
   text-align: left;
+  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
 }
 
 .minit-bg4 {
@@ -822,9 +819,6 @@ option:disabled {
     font-size: 1.5em;
   }
 
-  .description {
-    font-size: 1.5em ;
-  }
 
   input {
     font-size: 1.5em !important;

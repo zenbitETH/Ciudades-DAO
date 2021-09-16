@@ -113,7 +113,7 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
       ?
       <div class="proposal">
         <div class="proposal-expiration">
-          <h2 class="prop-title">💡 Proposal # {id}</h2>
+          <div class="prop-title">💡 Proposal # {id}</div>
           <span class="yellowr"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
         </div>
         <div class="rproposal">Rejected by {againstVotes} votes</div>
@@ -132,10 +132,10 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
             <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
           </div>
           */}
-      <div class="yellow">made by {proposer}</div><br/>
+      <div class="author">made by {proposer}</div><br/>
       <div className="vote-grid">
-        <div class="prop-bgw"><h2>Supported by:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
-        <div class="prop-bga2"><h2>Rejected by:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
+        <div class="prop-bgw">Supported by:<br/>{forVotes}<br/>TARO</div>    
+        <div class="prop-bga2">Rejected by:<br/>{againstVotes}<br/> TARO</div>
       </div>
     </div>
 
@@ -143,7 +143,7 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
 
     <div class="proposal">
         <div class="proposal-expiration">
-          <h2 class="prop-title">💡 Propuesta # {id}</h2>
+          <div class="prop-title">💡 Propuesta # {id}</div>
           <span class="yellowr"> Hecha el {proposalDay}/{proposalMonth}/{proposalYear}</span> 
         </div>
         <div class="rproposal">Rechazada por {againstVotes} votes</div>
@@ -162,10 +162,10 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
             <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
           </div>
           */}
-      <div class="yellow"> Hecha por {proposer}</div><br/>
+      <div class="author"> Hecha por {proposer}</div><br/>
       <div className="vote-grid">
-        <div class="prop-bgw"><h2>Apoyada por<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
-        <div class="prop-bga2"><h2>Rechazada por:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
+        <div class="prop-bgw">Apoyada por<br/>{forVotes}<br/>TARO</div>    
+        <div class="prop-bga2">Rechazada por:<br/>{againstVotes}<br/> TARO</div>
       </div>
     </div>
 

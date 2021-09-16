@@ -61,14 +61,14 @@ const CountdownClock = ({timeToExpiration}) => {
     return (
       <div>
         {isEnglish === 'english' ?
-        <h2>
+        <div>
           Expires in {days} days, {hours}:{minutes}:{seconds}
           
-        </h2>
+        </div>
         :
-          <h2>
+          <div>
            Expira en {days} días, {hours}:{minutes}:{seconds}
-          </h2>
+          </div>
         }
       </div>
     );

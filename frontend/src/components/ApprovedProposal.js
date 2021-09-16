@@ -129,7 +129,7 @@ const ApprovedProposal = ({title,
       ?
       <div class="proposal">
         <div class="proposal-expiration">
-          <h2 class="prop-title">💡 Proposal # {id}</h2>
+          <div class="prop-title">💡 Proposal # {id}</div>
           <span class="yellowr"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
         </div>
         <div class="aproposal">Approved by {forVotes} votes</div>
@@ -148,17 +148,17 @@ const ApprovedProposal = ({title,
           <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
         </div>
         */}
-      <div class="yellow">made by {proposer}</div><br/>
+      <div class="author">made by {proposer}</div><br/>
       <div className="vote-grid">
-        <div class="prop-bgf2"><h2>✔️ Approved by:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
-        <div class="prop-bgw"><h2> Against:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
+        <div class="prop-bgf2">Approved by:<br/>{forVotes}<br/>TARO</div>    
+        <div class="prop-bgw"> Against:<br/>{againstVotes}<br/> TARO</div>
       </div>
     </div>
 
       :
       <div class="proposal">
           <div class="proposal-expiration">
-            <h2 class="prop-title">💡 Prouesta # {id}</h2>
+            <div class="prop-title">💡 Prouesta # {id}</div>
             <span class="yellowr"> Hecha el {proposalDay}/{proposalMonth}/{proposalYear}</span> 
           </div>
           <div class="aproposal">Probada por  {forVotes} votos</div>
@@ -177,10 +177,10 @@ const ApprovedProposal = ({title,
             <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
           </div>
           */}
-        <div class="yellow">made by {proposer}</div><br/>
+        <div class="author">Hecha por by {proposer}</div><br/>
         <div className="vote-grid">
-          <div class="prop-bgf2"><h2>✔️ Aprobada con:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
-          <div class="prop-bgw"><h2>Estuvieron en contra:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
+          <div class="prop-bgf2">Aprobada con:<br/>{forVotes}<br/>TARO</div>    
+          <div class="prop-bgw">Estuvieron en contra:<br/>{againstVotes}<br/>TARO</div>
         </div>
       </div>
       }

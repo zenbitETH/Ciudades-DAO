@@ -133,7 +133,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
       ?
       <div class="proposal">    
          <div class="proposal-expiration">
-           <h2 class="prop-title">💡 Proposal # {id} </h2>
+           <h4 class="prop-title">💡 Proposal # {id} </h4>
            <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
          </div>
          <div class="mini-title">🎯 Objetive:</div>
@@ -169,19 +169,19 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
       :
       <div class="proposal">    
         <div class="proposal-expiration">
-          <h2 class="prop-title">💡 Propuesta # {id} </h2>
+          <div class="prop-title">💡 Propuesta # {id} </div>
           <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
         </div>
-        <h2 class="mini-title">🎯 Objetivo:</h2>
+        <div class="mini-title">🎯 Objetivo:</div>
         <div class="prop-hl"> {title}</div><br/><br/>
         <div class="grid-prop">      
-          <h2 class="minit-bg">⚙️ Acción: <div class="prop-hl">{typeOfAction}</div></h2>
-          <h2 class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></h2>      
-          <h2 class="minit-bg3"> 📍 Dónde: <div className="prop-hl">{neighborhood}</div></h2>
-          <h2 class="minit-bg3">💸 Costo: <div className="prop-hl">{budget} pesos</div> </h2>
+          <div class="minit-bg">⚙️ Acción: <div class="prop-hl">{typeOfAction}</div></div>
+          <div class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></div>      
+          <div class="minit-bg3"> 📍 Dónde: <div className="prop-hl">{neighborhood}</div></div>
+          <div class="minit-bg3">💸 Costo: <div className="prop-hl">{budget} pesos</div> </div>
         </div>
         
-        <div class="description-bg"><h2>📑 Descripción:</h2> <div class="prop-description">{description}</div></div>
+        <div class="description-bg"><div>📑 Descripción:</div> <div class="prop-description">{description}</div></div>
         {/*}
         <div className ="proposal-main">
           <div className="proposal-sub">Costo: {budget}</div>
@@ -193,12 +193,12 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
           {!hasVoted?
           <a class="prop-bgf" onClick={handleOnClickFor}><h1 class="votef">Vota <br/>a favor</h1></a>
           :
-          <div class="prop-bgf2"><h2>A favor:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
+          <div class="prop-bgf2">A favor:<br/>{forVotes}<br/>TARO</div>    
           }
           {!hasVoted ?
           <a class="prop-bga" onClick={handleOnClickAgainst}><h1 class="votef">Vota <br/>en contra</h1></a>
           : 
-          <div class="prop-bga2"><h2> En contra:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
+          <div class="prop-bga2"> En contra:<br/>{againstVotes}<br/> TARO</div>
           }
         </div>    
       </div>

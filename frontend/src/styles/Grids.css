@@ -5,18 +5,17 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 8em 8em;
   text-align: left;  
-  grid-gap: 0em;
+  grid-gap:0.5em;
   justify-self: center;
   align-self: center;
-  margin-left: -.5em;
-  margin-right: -.5em;
-  column-gap: 0.5em;
+  
+  margin-bottom: 0.5em;
 }
 
 .homegrid {
   display: grid;
   grid-gap: 0.5em;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
   font-size: clamp(1em, -1.1rem + 2.2vw, 4.5rem);
   }
@@ -100,15 +99,7 @@
   font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
 }
 
-.bg-reward img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
+
 
 .bg-reward2 {
   padding: 1em;
