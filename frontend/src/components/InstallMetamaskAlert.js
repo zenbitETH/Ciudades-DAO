@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
-import {Alert, Button} from 'react-bootstrap';
 import meta from '../assets/meta.svg';
 
 
@@ -23,7 +22,6 @@ const InstallMetamaskAlert = () => {
     :
     <div class="no-wallet" >
        <a href="https://www.metamask.io/">
-        
         <div class="dw">Toca y descarga una cartera web3
           <div class="jos"><span class="white">No tienes una dirección cripto</span></div>
           <img src={meta} class="shake"/>

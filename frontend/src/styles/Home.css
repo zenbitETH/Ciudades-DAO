@@ -491,12 +491,22 @@ h3 {
   animation-iteration-count: infinite;
   backface-visibility: hidden;
   perspective: 900px;
+  height: 200px;
+  top: -4.5em;
+  z-index: -1;
+  opacity: 50%;
+  position: relative;
 }
 
 
 .shake2 {
   margin: 0.5em;
   animation: none;
+  height: 200px;
+  top: -3em;
+  z-index: -1;
+  opacity: 50%;
+  position: relative;
 }
 
 .shake2:hover {

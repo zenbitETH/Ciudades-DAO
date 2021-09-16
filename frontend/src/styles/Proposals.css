@@ -154,8 +154,7 @@ option:disabled {
 }
 
 .prop-img {
-  height: 200px !important;
-  width: auto;
+  height: 300px !important;
 }
 
 
@@ -203,16 +202,6 @@ option:disabled {
   border-color: transparent;
 }
 
-.no-wallet img {
-  content:'';
-  opacity: 20%;
-  height:150px;
-  border-radius: 25px;
-  background-size: 200% 200%;
-  z-index: -1;
-  top: -3em;
-  position: relative;
-}
 
 .no-wallet:hover {
   content:'';
@@ -239,16 +228,6 @@ option:disabled {
   font-size: 1.5em;
 }
 
-.prop-wallet img {
-  content:'';
-  align-self: center;
-  position: relative;
-  opacity: 80%;
-  height:150px;
-  top: -1em;
-  background-size:200% 200%;
-}
-
 .prop-wallet:hover {
   content:'';
   cursor: pointer;
@@ -270,16 +249,6 @@ option:disabled {
   border-color: transparent;
 }
 
-.prop-bg img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
-
 .prop-bg:hover {
   cursor: pointer;
   border-width: 0.1em;
@@ -298,16 +267,6 @@ option:disabled {
   width: 100%;
   position: relative;
   border-color: transparent;
-}
-
-.prop-bg2 img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
 }
 
 .prop-bg2:hover {
@@ -349,15 +308,7 @@ option:disabled {
   grid-row: span 2;
 }
 
-.bg-grid2 img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
+
 
 .bg-grid2:hover {
   cursor: pointer;
@@ -380,17 +331,9 @@ option:disabled {
   border-style: solid;
   border-color: transparent;
   grid-column: span 1 !important;
+  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
 }
 
-.bg-grid3 img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
 
 .bg-grid3:hover {
   cursor: pointer;
@@ -412,16 +355,6 @@ option:disabled {
   border-color: transparent;
 }
 
-.prop-bgh img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
-
 .prop-bgh:hover {
   cursor: pointer;
   background: linear-gradient(-45deg, #b5342dac, #b5342dac, #395b2c, #395b2c);
@@ -439,16 +372,6 @@ option:disabled {
   border-width: 0.1em;
   border-style: solid;
   border-color: transparent;
-}
-
-.prop-bgv img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
 }
 
 .prop-bgv:hover {
@@ -469,15 +392,6 @@ option:disabled {
   border-color: transparent;
 }
 
-.prop-bgr img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
 
 .prop-bgr:hover {
   border-color: transparent;
@@ -515,15 +429,6 @@ option:disabled {
   font-size: clamp(2em, -1.2em + 2vw, 2.35rem);
 }
 
-.prop-bgf img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
 
 .prop-bgf:hover {
   cursor: pointer;
@@ -563,15 +468,7 @@ option:disabled {
   font-size: clamp(2em, -1.2em + 2vw, 2.35rem);
 }
 
-.prop-bga img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
+
 
 .prop-bga:hover {
   cursor: pointer;
@@ -613,14 +510,22 @@ option:disabled {
 }
 
 
+.homevan {
+  content:'';
+  position: absolute;
+  bottom: 0px;
+  right:  0px;
+  opacity: 90%;
+  height: 45% !important;
+}
+
 .ribvan {
   content:'';
   position: absolute;
   bottom: 0px;
   right:  0px;
   opacity: 90%;
-
-  height: 50% !important;
+  height: 60% !important;
 }
 
 /* Proposal */

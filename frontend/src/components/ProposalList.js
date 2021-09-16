@@ -244,17 +244,17 @@ const ProposalList = () => {
           <div id="margin">
            <div className= "govgrid" id="">
              <div class="propose-bg"><a href="/createProposal">
-               <img src={prop} class="ribbons"/> 
+               <img src={prop} class="ribvan"/> 
                <div class="propsub">Create a proposal</div>
                <div class="propopt">Propose</div>
              </a></div>
              <div class="bg-grid3"><a href="#vote">
-               <img src={vote2} class="ribbons"/> 
+               <img src={vote2} class="ribvan"/> 
                <div class="propsub">Available proposals</div>
                <div class="propopt">Vote</div>
              </a></div>
              <div class="bg-grid3"><a href="/PastProposals">
-               <img src={past} class="ribbons"/> 
+               <img src={past} class="ribvan"/> 
                <div class="propsub">Past proposals</div>
                <div class="propopt">Record</div>
              </a></div>
@@ -331,19 +331,19 @@ const ProposalList = () => {
         <div id="margin">
          <div className="govgrid">
           <div class="propose-bg"><a href="/createProposal">
-            <img src={prop} class="ribbons"/> 
+            <img src={prop} class="ribvan"/> 
             <div class="propsub">Crea una propuesta</div>
             <div class="propopt">Proponer</div>
           </a></div>
           <div class="bg-grid3"><a href="#vote">
-            <img src={vote2} class="ribbons"/> 
+            <img src={vote2} class="ribvan"/> 
             <div class="propsub">Ver propuestas</div>
             <div class="propopt">Por votar</div>
           </a></div>
           <div class="bg-grid3"><a href="/PastProposals">
-            <img src={past} class="ribbons"/> 
+            <img src={past} class="ribvan"/> 
             <div class="propsub">Ver propuestas </div>
-            <div class="propopt">Aneriores</div>
+            <div class="propopt">Anteriores</div>
           </a></div>
           </div>
         </div>

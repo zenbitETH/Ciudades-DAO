@@ -1,9 +1,5 @@
 /* About */
 
-.ribbon {
-  position: relative !important;
-}
-
 .ribbon2 {
   position: relative !important;
   width: 20em;
@@ -217,15 +213,6 @@
 
 }
 
-.about-bg img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 80%;
-  height: 120px;
-  border-radius: 25px;
-}
 
 .about-bg:hover img {
   opacity: 100%;

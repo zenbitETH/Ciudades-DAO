@@ -122,15 +122,6 @@
   animation: gradient 1s ease-in-out infinite;
 }
 
-.bg-reward2 img {
-  content:'';
-  position: absolute;
-  bottom: 0px;
-  right:  10px;
-  opacity: 90%;
-  height: 120px;
-  border-radius: 25px;
-}
 
 .bg-reward2 .ustext {
   font-family: "ABeeZee";
@@ -189,17 +180,9 @@
     border-style: solid;
     border-color: transparent;
     grid-column: span 2;
+    font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
   }
-  
-  .propose-bg img {
-    content:'';
-    position: absolute;
-    bottom: 0px;
-    right:  10px;
-    opacity: 90%;
-    height: 120px;
-    border-radius: 25px;
-  }
+
   
   .propose-bg:hover {
     cursor: pointer;

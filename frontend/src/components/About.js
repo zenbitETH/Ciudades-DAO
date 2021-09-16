@@ -80,20 +80,20 @@ const About = () => {
 
         <div class = "usgrid">
           <a class="about-bt" href="https://metamask.io"> Download Metamask </a>
-          <a class="about-bt" href="/CreateProposal"> Read about your crypto key </a>
+          <a class="about-bt" href="/CreateProposal"> Read about crypto keys </a>
         </div>
           
         </span>
          
         </a> </div>
         <div class = "bg-reward2"> <a href="#step1">
-         <div class = "about-hl"> 2. Participate and win TARO </div> <br/>
+         <div class = "about-hl"> 2. How te get TARO </div> <br/>
         <img src={TAROrew} class="about-img"/>
         <span class = "ustext"> <div class = "center"> <img src = {TARO} class="about-img" /> </div> <br/> <span class = "orange"> Get 1,000 TARO </span> when obtaining your crypto key and validating it.
           Once you have your crypto key validated <span class = "orange"> you can get 50 TARO for each one </span> of the first 20 proposals you make. <br/> <br/>
         <div class = "usgrid">
           <a class="bg-reward3" href="/Quiz"> Validate <br/> (1000 TARO) </a>
-          <a class="bg-reward3" href="/CreateProposal"> Propose <br/> (50 TARO x20) </a>
+          <a class="bg-reward3" href="/CreateProposal"> Propose <br/> (50 TARO) </a>
         </div>
         <br/>
         <div class = "center"> <a class="about-bt" href="/CreateProposal"> Read about TARO token </a> </div>
@@ -114,16 +114,13 @@ const About = () => {
          
         </a> </div>
         <div class = "bg-grid"> <a href="#step3">
-         <div class = "about-hl"> 4. Improve your digital skills </div>
-        <img src = {dk} class = "about-img" />
+         <div class = "about-hl"> 4. Roadmap </div>
+        <img src = {moon} class = "about-img" />
         <span class = "ustext"> <div class = "center"> <img src = {TAROtok} class = "about-img" /> </div> <br/>
         To participate in a DAO it is necessary to have the digital skills necessary to interact with web tools 3 such as a crypto key or use your
         TARO tokens to vote. <span class = "orange"> Know what they are and the roadmap to improve them </span> with your participation in the DAO of the city of Querétaro.
-        
-        <div class = "usgrid">
-          <a class="about-bt" href="/Quiz"> Digital Skills </a>
-          <a class="about-bt" href="/CreateProposal"> View roadmap </a>
-        </div>
+        <br/><br/>
+        <div class = "center"> <a class="about-bt" href="/CreateProposal"> View roadmap </a> </div>
         </span>
           
         </a></div>
@@ -292,7 +289,7 @@ const About = () => {
               These functions were defined for the pilot test in the city of Querétaro, but will be put to a vote to define how they evolve to meet the needs of Queretaro citizens and stakeholders of the city.
             </span>
           </div>
-          <div class = "bg-grid"> <h2> Validate your crypto address </h2> <div class = "center"> <img src = {verify} alt = "Public Key" class = "about-img" / > </div>
+          <div class = "bg-grid"> <h2> Validate your crypto address </h2> <div class = "center"> <img src = {verify} alt = "Public Key" class = "about-img"/> </div>
             <span class = "ustext">
               The main difference between web 2 and web 3 is how users are identified. While on web 2 it is necessary to give your personal data to validate your identity, on web 3 encryption tests are used to validate the identity which allows creating services that not only work with people but are also capable of interacting with other contracts smart or digital entities. <br/> <br/> <span class = "orange"> VoTARO is made for Queretaro residents and requires developing digital skills </span> on digital security, communication and problem solving in order to be used. Therefore, although it is open to everyone and entity, it is necessary to present a knowledge test that verifies the user's knowledge of the web 3, the crypto keys and the DAO city. If you submit the proof successfully, the Governor Alpha contract will deposit 1,000 TAROs in your public key and validate your account so that you can create proposals and vote on them for 3 months.
             </span>
@@ -406,7 +403,7 @@ const About = () => {
         <div class="bg-grid"><a>
          <div class="about-hl">1. Obtén una llave cripto</div><br/>
         <img src={img} class="about-img"/>
-        <span class="ustext"> <div class="center"><img src={meta} class="ribvan"/></div><br/>Metamask es una cartera de ethereum con la que podrás
+        <span class="ustext"> <div class="center"><img src={meta} class="about-img"/></div><br/>Metamask es una cartera de ethereum con la que podrás
         <span class="orange"> crear una llave cripto. </span> Esta cartera es descentralizada, por lo que que solo tú tendrás acceso a ella y custodia total de los activos digitales que se depositen. Descárgala desde su sitio en una computadora o dispositivo móvil:
 
         <div class="usgrid">
@@ -420,11 +417,11 @@ const About = () => {
         <div class="bg-reward2"><a href="#step1">
          <div class="about-hl">2. Participa y gana TARO</div><br/>
         <img src={TAROrew} class="about-img"/> 
-        <span class="ustext"> <div class="center"><img src={TARO} class="ribvan"/></div><br/><span class="orange">Obtén 1,000 TARO </span> al obtener tu llave cripto y validarla. 
+        <span class="ustext"> <div class="center"><img src={TARO} class="about-img"/></div><br/><span class="orange">Obtén 1,000 TARO </span> al obtener tu llave cripto y validarla. 
           Ya que tengas tu llave cripto validada <span class="orange">podrás obtener 50 TARO por cada una </span> de las primeras 20 propuestas que realices.<br/><br/>
         <div class="usgrid">
           <a class="bg-reward3" href="/Quiz">Validar <br/>(1000 TARO) </a>
-          <a class="bg-reward3" href="/CreateProposal">Proponer <br/>(50 TARO x20)</a>  
+          <a class="bg-reward3" href="/CreateProposal">Proponer <br/>(50 TARO)</a>  
         </div>
         <br/>
         <div class="center"><a class="about-bt" href="/CreateProposal">Lee sobre token TARO</a></div>
@@ -435,7 +432,7 @@ const About = () => {
         <div class="bg-grid"><a href="#step2">
          <div class="about-hl">3. Vota en la Ciudad DAO</div><br/>
         <img src={vote} class="about-img"/> 
-        <span class="ustext"> <div class="center"><img src={past} class="ribvan"/></div><br/>VoTARO es una DAO (Organización Autónoma Descentralizada) 
+        <span class="ustext"> <div class="center"><img src={past} class="about-img"/></div><br/>VoTARO es una DAO (Organización Autónoma Descentralizada) 
         con el objetivo de crear un presupuesto descentralizado y gestionar la toma de decisiones de la ciudad de Querétaro mediante contratos inteligentes. <span class="orange">Cada TARO que obtengas equivale a un voto</span> y cada propuesta se podrá votar durante 15 días.
         <div class="usgrid">
           <a class="about-bt" href="/Quiz">Propuestas por votar </a>
@@ -445,16 +442,13 @@ const About = () => {
          
         </a></div>
         <div class="bg-grid"><a href="#step3">
-         <div class="about-hl">4. Mejora tus habilidades digitales</div>
-        <img src={dk} class="about-img"/> 
-        <span class="ustext"> <div class="center"><img src={TAROtok} class="ribvan"/></div><br/>
+         <div class="about-hl">4. Mapa de ruta</div>
+        <img src={moon} class="about-img"/> 
+        <span class="ustext"> <div class="center"><img src={TAROtok} class="about-img"/></div><br/>
         Para participar en una DAO es necesario contar con las habilidades digitales necesarias para interactuar con las herramientas de la web 3 como una llave cripto o usar tus 
         tokens TARO para votar. <span class="orange">Conoce cuales son y el mapa de ruta para mejorarlas </span> con tu participación en la DAO de la ciudad de Querétaro.
-        
-        <div class="usgrid">
-          <a class="about-bt" href="/Quiz">Habilidades digitales </a>
-          <a class="about-bt" href="/CreateProposal">Ver mapa de ruta</a>
-        </div>
+        <br/><br/>
+        <div class="center"><a class="about-bt" href="/CreateProposal">Lee sobre token TARO</a></div>
         </span>
           
         </a></div>

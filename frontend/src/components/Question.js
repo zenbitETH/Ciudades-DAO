@@ -41,7 +41,6 @@ const Question = ({question, answers, number}) => {
       </Card>
     }
     </div>
-
   );
 };
 

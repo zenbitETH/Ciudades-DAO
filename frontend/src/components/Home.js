@@ -292,7 +292,7 @@ function Home() {
                 <section id="">
                   <div class="homegrid">
                     <div class="bg-grid"><a href="/createProposal">
-                      <img src={reward} class="ribvan"/> 
+                      <img src={reward} class="homevan"/> 
                       <div class="propsub">You have</div>
                       <div class="propopt2"> {userBalance} TARO</div>
                     </a></div>
@@ -302,7 +302,7 @@ function Home() {
                       <div class="propopt">Validate</div>
                     </a></div>
                     <div class="bg-grid"><a href="/ProposalList">
-                      <img src={past} class="ribvan"/> 
+                      <img src={past} class="homevan"/> 
                       <div class="propsub">Vote with your TARO</div>
                       <div class="propopt">City DAO</div>
                     </a></div>
@@ -323,12 +323,12 @@ function Home() {
                 <section>
                   <div class="govgrid">
                     <div class="prop-bgr"><a href="/About">
-                        <img src={prop} class="rivban"/> 
+                        <img src={prop} class="ribvan"/> 
                         <div class="propsub">What is a VoTARO?</div>
                         <div class="propopt">Start here</div>
                       </a></div>
                       <div class="prop-bgr"><a href="/About">
-                        <img src={vote} class="rivban"/>
+                        <img src={vote} class="ribvan"/>
                         <div class="propsub">Urban Governance</div>
                         <div class="propopt">City DAO</div>
                       </a></div>
@@ -392,12 +392,12 @@ function Home() {
               <section>
               <div class="govgrid">
                 <div class="prop-bgr"><a href="/About">
-                  <img src={prop} class="rivban"/> 
+                  <img src={prop} class="ribvan"/> 
                   <div class="propsub">¿Qué es una cartera web 3?</div>
                   <div class="propopt">Empieza Aquí</div>
                 </a></div>
                 <div class="prop-bgr"><a href="/About">
-                  <img src={vote} class="rivban"/>
+                  <img src={vote} class="ribvan"/>
                   <div class="propsub">¿Qué es el presupuesto descentralizado?</div>
                   <div class="propopt">Ciudad DAO</div>
                 </a></div>
