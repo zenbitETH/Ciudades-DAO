@@ -33,7 +33,7 @@ const CreateProposalSuccessModal = (props) => {
         
       
         <div class="void-link">
-          <div class="prop-bgr"><a href="/ProposalList#vote">
+          <div class="prop-bg2"><a href="/ProposalList#vote">
               <img src={vote2} class="ribvan"/> 
               <div class="propsub">Avaliable proposals</div>
               <div class="propopt">Vote</div>
@@ -62,12 +62,12 @@ const CreateProposalSuccessModal = (props) => {
       Crea mas propuestas para incrementar tu poder de voto. 
     </h3>
       <div class="void-link">
-        <div class="prop-bgr"><a href="/ProposalList#vote">
+        <div class="prop-bg2"><a href="/ProposalList#vote">
             <img src={vote2} class="ribvan"/> 
             <div class="propsub">Propuestas por</div>
             <div class="propopt">Votar</div>
           </a></div>
-          <div class="prop-bgr"><a href="/CreateProposal">
+          <div class="prop-bg2"><a href="/CreateProposal">
             <img src={prop} class="ribvan"/>
             <div class="propsub">Nueva propuesta</div>
             <div class="propopt">Proponer </div>

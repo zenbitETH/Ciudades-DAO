@@ -414,7 +414,7 @@ function myFunction() {
           </Form.Group>
           */}
           <a class="jos" href="#proposal">Check your post before sending</a>
-          <div className="verify-bt"classntype="submit" onClick={handleOnSubmit}><span class="oneem">🚀 Send proposal</span></div>
+          <div class="center"><div class="quiz-bt" classntype="submit" onClick={handleOnSubmit}>🚀 Send Proposal</div></div>
           </Form>
         <IsLoadingModal
           show={loadingModalShow}
