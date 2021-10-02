@@ -1,24 +1,19 @@
 import { useContext } from 'react';
-import {Button} from 'react-bootstrap';
 import { LanguageContext } from '../contexts/LanguageContext';
 import ReactPlayer from "react-player";
 
-import logo from '../assets/Logow.png';
 import meta from '../assets/meta.svg';
 import img from '../assets/about-img.svg';
 import vote from '../assets/vote.png';
 import img3 from '../assets/about-img3.png';
 import img4 from '../assets/about-img4.svg';
-import wallet from '../assets/wallet.gif'
+
 import TAROtok from '../assets/TAROtok.png';
 import past from '../assets/past.png';
 import TARO from '../assets/taro.png';
 import words from '../assets/about-img2.png';
 import TAROrew from '../assets/TAROrew.png';
 import www from '../assets/www.svg'
-import dk from '../assets/dk.png'
-import corner from '../assets/corner.svg'
-
 
 import DAO from '../assets/DAO.svg'
 import DAOeng from '../assets/DAOeng.svg'
@@ -62,9 +57,8 @@ const About = () => {
       <div class="aboutbg-grid">
         <h1 class=""><span class="jos">Start here</span></h1>
         <h3>
-            VoTARO is a <span class = "orange"> Web 3 application to get crypto </span> by participating in the city DAO  in Querétaro for a
-            <span class = "orange"> decentralized budget, </span> with which citizens can convert travel expenses into income and would establish a decentralized channel to fund works, activities or hiring human talent that meets the needs of the city. <br/> <br/> Get a crypto key to participate and win TARO, the VoTARO token
-            With which you can vote for proposals that will define the use of the decentralized budget of the DAO city.
+          VoTARO is a <span class = "orange"> Web 3 application to get crypto </span> by participating in the city DAO for Querétaro
+          Citizens develop a decentralized budget with which they can convert travel expenses into  income   and  establish a decentralized channel to fund activities or hire human talent that   meets the   needs of the city. Get a crypto key to participate and win TARO. TARO is the VoTARO token that you can use to  vote   for proposals that will decide how the decentralized budget of the DAO is spent.
         </h3>
         </div>
       <br/>
@@ -102,13 +96,13 @@ const About = () => {
           
         </a> </div>
         <div class = "bg-grid"> <a href="#step2">
-         <div class = "about-hl"> 3. Vote in DAO City </div> <br/>
+         <div class = "about-hl"> 3. Vote in City DAO </div> <br/>
         <img src = {vote} class = "about-img" />
         <span class = "ustext"> <div class = "center"> <img src = {past} class = "about-img" /> </div> <br/> VoTARO is a DAO (Decentralized Autonomous Organization)
         with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "orange"> Each TARO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
         <div class = "usgrid">
           <a class="about-bt" href="/Quiz"> Proposals to vote </a>
-          <a class="about-bt" href="/CreateProposal"> Read about DAO City </a>
+          <a class="about-bt" href="/CreateProposal"> Read about City DAO </a>
         </div>
         </span>
          
@@ -136,17 +130,17 @@ const About = () => {
         <h1 class = "about-hl2"> 1. Get a crypto key </h1>
         <h3>
           To use VoTARO and save your rewards, you need to download an ethereum wallet on your computer or mobile and create a crypto key.
-          With it you will be able to access web applications 3 such as VoTARO in a safe, private and unrestricted manner.
+          With it you will be able to access web3 applications such as VoTARO in a safe, private and unrestricted manner.
           <br/> <br/>
          </h3>
-         <h3> In the following tutorial you will know the step by step to download a web wallet 3 and create a crypto key: </h3>
+         <h3> In the following tutorial you will learn the steps to download a web3 wallet  and create a crypto key: </h3>
          <ReactPlayer class = "player" url = "https://youtu.be/Abzogd_3VBA" />
         <br/>
         <h3> Touch or hover over the images to learn more about your crypto key: </h3>
         <div>
         <div class = "about-grid2">
           <div class = "bg-grid"> <h2 class = "yellow-lex"> Two keys to take care of your account </h2> <div class = "center"> <img src = {img} class = "about-img"/> </div>
-            <span class = "ustext"> Web 3 substitutes crypto keys for emails and personal data used to create accounts on web 2.
+            <span class = "ustext"> Web 3 substitutes crypto keys for emails and personal data used to create accounts on web2.
             <div class = "center"> <div class = "lex"> <span class = "em"> Your crypto key is formed with: </span> </div> </div>
               <div class = "keys">
                 <div class = "center"> <div class = "p-key"> <h2> 🔐 </h2> <span class = "lex"> Private key </span> </div> </div>
@@ -156,14 +150,14 @@ const About = () => {
               </div>
              
               The <span class = "yellow-text"> private key </span> gives access to your account without asking for your personal data and protects your account with 12 words that only you should know. <br/>
-              The <span class = "orange"> public key </span> is like your phone number, you can share it with other people to receive digital assets or participate in web applications 3.
+              The <span class = "orange"> public key </span> is like your phone number, you can share it with other people to receive digital assets or participate in web3 applications.
             </span>
           </div>
           <div class = "bg-grid"> <h2 class = "yollow-lex"> The 12 words of your private key </h2>
           <div class = "center"> <img src = {words} alt = "Public Key" class = "about-img" /> </div>
             <span class = "ustext">
             Your crypto key is linked with <span class = "yollow-text"> 12 secret words </span>, which decode your wallet and are the only <span class = "network">
-              way to access your wallet </span> or recover it in case you lose your equipment.
+              way to access your wallet </span> or recover it in case you lose your device.
               <div class = "center"> <div class = "yollow-lex"> <span class = "em"> 12 secret words </span> </div> </div>
               <div class = "words">
                 <div class = "cword"> 1 </div>
@@ -188,20 +182,19 @@ const About = () => {
             </span>
           </div>
           <div class = "bg-grid"> <h2 class = "orange-lex"> The public key is for sharing </h2> <div class = "center"> <img src = {img3} alt = "Public Key "class =" about-img "/> </div>
-            <span class = "ustext"> <span class = "orange"> The public key is similar to your phone number </span>: a pseudonym that you share with your contacts to be able to interact in different applications.
+            <span class = "ustext"> <span class = "orange"> The public key is similar to your phone number: </span> a pseudonym that you share with your contacts to be able to interact in different applications.
             <div class = "e-pkey">
               <div class = "pu-key2"> <span class = "lex"> 📬 <br/> Public key </span> </div>
               <div class = "center"> <span class = "orange-lex"> <span class = "em"> They start with 0x </span> </span> </div>
             </div>
-            On web3 your public key identifies you
-            to other users, it allows you to interact with smart contracts and <span class = "orange"> receive digital assets. </span>
+            On web3 your public key identifies you to other users, it allows you to interact with smart contracts and <span class = "orange"> receive digital assets. </span>
             </span>
           </div>
           <div class = "bg-grid"> <h2 class = "red-lex"> You are responsible for your key </h2> <div class = "center"> <img src = {img4} alt = "Alert about key "class =" about-img "/> </div>
             <span class = "ustext">
                <div class = "valert3"> <span id = "step0" class = "center"> <h1> ⚠️ <br/> Attention </h1> </span>
                 <h3> Neither VoTARO, nor Zenbit or Metamask will know your private keys and we will never have custody of your digital assets; so in case of loss,
-                  We will not be able to help you retrieve your wallet or keys. Take good care of them!
+                  we will not be able to help you retrieve your wallet or keys. Take good care of them!
                 </h3>
                </div>
                   
@@ -221,11 +214,10 @@ const About = () => {
         <img src={TAROrew} class="ribbon2"/>
         <h1 class = "about-hl2"> 2. Participate and win TARO </h1>
         <h3>
-          TARO is the VoTARO token, the crypto that you will receive as a reward for completing tasks on the platform and that you can use to vote for the proposals
-          of the DAO city that define the decentralized budget of Querétaro. <br/> <br/> To obtain your first TARO tokens <span class = "orange"> you must already have an installed
-          web wallet 3 and having connected your crypto key </span> from the main menu. If you already have, complete the knowledge test to get up to 1,000 TARO tokens
-          by using your digital skills to validate your account with VoTARO smart contracts. <br/> <br/> <span class = "orange"> Once you validate your account you will be able to create proposals for the DAO city </span>
-          and you will get 50 TARO for each of the first 20 proposals you make, so you can get another 1,000 TARO for participating in the DAO city. <br/> <br/>
+          TARO is the VoTARO token. You will receive it as a reward for completing tasks on the platform and you can use it to vote on the proposals of the DAO  that define the decentralized budget of Querétaro.
+          To obtain your first TARO tokens <span class = "orange"> you must  have an installed web3 wallet that connects to your crypto key </span>from the main menu.
+          If you already have this, then complete the knowledge test to get up to 1,000 TARO tokens by using your digital skills to validate your account with VoTARO smart contracts. <br/> <br/> 
+          <span class = "orange"> Once you validate your account you will be able to create proposals for the City DAO </span>and you will get 50 TARO for each of the first 20 proposals you make, This means you can get another 1,000 TARO for participating in the City DAO. <br/> <br/>
           <div class = "usgrid">
           <div class = "bg-reward"> <a href="/Quiz">
             <img src = {verify} class = "ribvan" />
@@ -238,12 +230,12 @@ const About = () => {
             <div class = "propopt"> 2. Propose </div>
           </a> </div>
         </div> <br/>
-          Learn more about the TARO token and smart contracts that facilitate consensus in the DAO city to implement a decentralized budget.
+          Learn more about the TARO token and smart contracts that facilitate consensus in the City DAO to implement a decentralized budget.
 
           <div class = "about-grid2">
           <div class = "bg-grid"> <h2> What is a smart contract? </h2> <div class = "center"> <img src = {ticon} class = "about-img" /> </ div>
             <span class = "ustext">
-              Smart contracts are digital machines that use information as raw material to digitize the value of some element or activity and by connecting them to a blockchain (global computer) they are capable of programming the behavior of digital assets over time, allowing the creation of products. , companies or systems never seen before. At VoTARO we use 2 smart contracts to <span class = "orange"> create a Decentralized Autonomous Organization in the city of Querétaro that: </span>
+            Smart contracts are programs that use information as raw material to digitize the value of some element or activity.  When these are connected to a blockchain (global computer) they are capable of programming the behavior of digital assets. This allows the creation of products, companies or systems never seen before. At VoTARO we use 2 smart contracts to <span class = "orange">create a Decentralized Autonomous Organization in the city of Querétaro</span>
               <ol>
                 <li> Registers the needs of citizens. </li>
                 <li> Rewards the development of your digital skills. </li>
@@ -262,16 +254,16 @@ const About = () => {
               <li> Be able to transfer the tokens to other public keys. </li>
             </ol>
             
-            TARO is an ERC20 token with these characteristics, but it was also programmed so that you can use it to vote for the DAO city proposals. Here you can consult the complete wording of the contract but in summary the TARO contract stipulates:
+            TARO is an ERC20 token with these characteristics, but it was also programmed so that you can use it to vote for the City DAO proposals. Here you can consult the complete wording of the contract but in summary the TARO contract stipulates:
               <ol>
                 <li> That the contract is called "VoTARO DAO token". </li>
                 <li> The token is identified with the symbol "TARO". </li>
                 <li> The creation of 10,000,000 TARO tokens. </li>
-                <li> That 1 TARO token equals 1 vote in DAO city </li>
+                <li> That 1 TARO token equals 1 vote in City DAO </li>
               </ol>
             </span>
           </div>
-          <div class = "bg-grid"> <h2> The Alpha Governor contract </h2>
+          <div class = "bg-grid"> <h2> The Governor Alpha contract </h2>
           <div class = "center"> <img src = {governor} alt = "Public Key" class = "about-img" /> </div>
             <span class = "ustext">
               In VoTARO, the TARO token contract is connected with the Alfa Governor contract to add these functions:
@@ -280,7 +272,7 @@ const About = () => {
                 <li> Validate public keys that present proof of knowledge. </li>
                 <li> Give validity to the validation for 3 months. </li>
                 <li> Reward 1,000 TARO tokens upon completion of validation. </li>
-                <li> Register governance proposals for the DAO city. </li>
+                <li> Register governance proposals for the City DAO. </li>
                 <li> Award 50 TARO for each proposal created (only the first 20) </li>
                 <li> Register the voting public addresses and TAROs used to vote proposals. </li>
                 <li> Give validity to vote the proposals for 15 days. </li>
@@ -291,7 +283,7 @@ const About = () => {
           </div>
           <div class = "bg-grid"> <h2> Validate your crypto address </h2> <div class = "center"> <img src = {verify} alt = "Public Key" class = "about-img"/> </div>
             <span class = "ustext">
-              The main difference between web 2 and web 3 is how users are identified. While on web 2 it is necessary to give your personal data to validate your identity, on web 3 encryption tests are used to validate the identity which allows creating services that not only work with people but are also capable of interacting with other contracts smart or digital entities. <br/> <br/> <span class = "orange"> VoTARO is made for Queretaro residents and requires developing digital skills </span> on digital security, communication and problem solving in order to be used. Therefore, although it is open to everyone and entity, it is necessary to present a knowledge test that verifies the user's knowledge of the web 3, the crypto keys and the DAO city. If you submit the proof successfully, the Governor Alpha contract will deposit 1,000 TAROs in your public key and validate your account so that you can create proposals and vote on them for 3 months.
+              The main difference between web2 and web3 is how users are identified. While on web2 it is necessary to give your personal data to validate your identity, on web3 encryption tests are used to validate the identity which allows creating services that not only work with people but are also capable of interacting with other contracts smart or digital entities. <br/> <br/> <span class = "orange"> VoTARO is made for Queretaro residents and requires developing digital skills </span> on digital security, communication and problem solving in order to be used. Therefore, although it is open to everyone, it is necessary to present a knowledge test that verifies the user's knowledge of web3, the crypto keys and the City DAO. If you submit the proof successfully, the Governor Alpha contract will deposit 1,000 TAROs in your public key and validate your account so that you can create proposals and vote on them for 3 months.
             </span>
           </div>
         </div>
@@ -306,22 +298,20 @@ const About = () => {
     <section>
       <div class = "aboutbg-grid2">
         <img src = {vote} class = "ribbon2" />
-        <h1 class = "about-hl2"> 3. Vote in DAO City </h1>
+        <h1 class = "about-hl2"> 3. Vote in City DAO </h1>
         
         <h3>
-          Once you validate your account, you can create proposals for the DAO city and vote for them using the TARO tokens you have obtained. To create proposals you will have to fill in the following fields:
+          Once you validate your account, you can create proposals for the City DAO and vote for them using the TARO tokens you have obtained. To create proposals you will have to fill in the following fields:
           <ol class="margins">
             <li> 🎯 Name of the proposal </li>
             <li> 📍 Place </li>
             <li> ⚙️ Type of activity </li>
-            <li> 🦸 Responsible </li>
+            <li> 🦸 person responsible </li>
             <li> 📑 Description </li>
             <li> 💸 Budget </li>
           </ol>
-          Once you accept the submission of your proposal from metamask, it will be registered in the Governor Alpha contract and <span class = "orange"> will be available to vote for 15 days. </span> During the 15 days of validity, you and others Users will be able to vote for it, or you can vote for the proposals of other users if they are available.
-          
-          
-           Upon expiration of the time to vote, it will be accepted if it has more votes in favor or it will be rejected if it has more votes against or if it does not receive any vote.
+          Once you accept the submission of your proposal from metamask, it will be registered in the Governor Alpha contract and <span class = "orange"> will be available for voting for 15 days. </span> During the 15 days of validity, you and others users will be able to vote for it, or you can vote for the proposals of other users if they are available.
+          Upon expiration of the voting period, the proposal will be accepted if it has more votes in favor or it will be rejected if it has more votes against or does not receive any votes.
         </h3> <br/>
         <h2> Evolution of a proposal </h2>
         <div class = "center"> <img src={voting2} alt="Public Key" class ="fase"/> </div> <br/>
@@ -351,7 +341,7 @@ const About = () => {
           VoTARO has the objective of forming a DAO (Decentralized Autonomous Organization) in the city of Querétaro to manage the creation of a decentralized budget, which contributes to the economy of Queretans with rewards for citizen participation and the development of digital skills. <br/> <br/>
           <h2> To begin with, what is a DAO? </h2>
           A Decentralized Autonomous Organization or DAO is a group organized around a mission that is coordinated through a set of standards applied in a blockchain. One of the main advantages of a DAO is that they are more transparent than traditional companies since all actions and funding of activities are visible by anyone, significantly reducing the risk of corruption and censorship. <br/> <br/>
-          They also give accessibility to stakeholders from any part of the world who can contribute with development, talent or funds. These organization models use smart contracts like VoTARO's to decentralize the governance of their operation. VoTARO is a prototype of DAO for cities, where users obtain rights as participants of the organization through the digital tokens that they obtain as a reward for developing their digital skills.
+          They also give accessibility to stakeholders from any part of the world who can contribute with development, talent or funds. These organization models use smart contracts like VoTARO's to decentralize the governance of their operation. VoTARO is a prototype of a DAO for cities, where users obtain rights as participants of the organization through the digital tokens that they obtain as a reward for developing their digital skills.
         
           <div class = "webvs">
           <div class = "gray2"> <h1> ▲ </h1> Traditional companies </div>
@@ -367,11 +357,11 @@ const About = () => {
             <div class = "vs"> Decentralized <span class = "ustext"> <img src = {www} class = "about-img" /> <br/> Distributed among users. </span> </div>
             <div class = "vs"> Non-invasive <span class = "ustext"> <img src = {img} class = "about-img" /> <br/> Create a crypto address to use it. </span> </div>
             <div class = "vs"> Transparent <span class = "ustext"> <img src = {door} class = "about-img" /> <br/> Anyone and machines can use it. </span> </div>
-            <div class = "vs"> Incensible <span class = "ustext"> <img src = {open} class = "about-img" /> <br/> Pre-programmed to generate consensus. </span> </div>
+            <div class = "vs"> Censor resistant <span class = "ustext"> <img src = {open} class = "about-img" /> <br/> Pre-programmed to generate consensus. </span> </div>
             <div class = "vs"> No borders <span class = "ustext"> <img src = {moon} class = "about-img" /> <br/> Number of users defined by contexts. </span> </div>
           </div>
           </div> <br/> <br/>
-          <h2> Members of the DAO Citizen </h2>
+          <h2> Members of the City DAO </h2>
           <div class = "center"> <img src = {DAOeng} alt = "Public Key" class = "fase"/> </div> <br/>
           <h2> Phase 1: Pilot Test </h2>
           <div class = "center"> <img src = {phase1} alt = "Public Key" class = "fase"/> </div> <br/>
@@ -445,7 +435,7 @@ const About = () => {
          <div class="about-hl">4. Mapa de ruta</div>
         <img src={moon} class="about-img"/> 
         <span class="ustext"> <div class="center"><img src={TAROtok} class="about-img"/></div><br/>
-        Para participar en una DAO es necesario contar con las habilidades digitales necesarias para interactuar con las herramientas de la web 3 como una llave cripto o usar tus 
+        Para participar en una DAO es necesario contar con las habilidades digitales necesarias para interactuar con las herramientas de la web3 como una llave cripto o usar tus 
         tokens TARO para votar. <span class="orange">Conoce cuales son y el mapa de ruta para mejorarlas </span> con tu participación en la DAO de la ciudad de Querétaro.
         <br/><br/>
         <div class="center"><a class="about-bt" href="/CreateProposal">Lee sobre token TARO</a></div>
@@ -464,17 +454,17 @@ const About = () => {
         <h1 class="about-hl2">1. Obtén una llave cripto</h1>
         <h3>
           Para usar VoTARO y guardar tus recompensas ocupas descargar una cartera de ethereum en tu computadora o móvil y crear una llave cripto. 
-          Con ella podrás acceder aplicaciones web 3 como VoTARO de manera segura, privada y sin restricciones.
+          Con ella podrás acceder aplicaciones web3 como VoTARO de manera segura, privada y sin restricciones.
           <br/><br/>
          </h3>
-         <h3>En el siguiente tutorial conocerás el paso a paso para descargar una cartera web 3 y crear una llave cripto:</h3>
+         <h3>En el siguiente tutorial conocerás el paso a paso para descargar una cartera web3 y crear una llave cripto:</h3>
          <ReactPlayer class="player"  url="https://youtu.be/Abzogd_3VBA"/>
         <br/>
         <h3>Toca o coloca el cursor encima de las imágenes para conocer más sobre tu llave cripto:</h3>
         <div >
         <div class="about-grid2">  
           <div class="bg-grid"><h2 class="yellow-lex">Dos llaves para cuidar tu cuenta</h2><div class="center"><img src={img} class="about-img"/></div>
-            <span class="ustext"> La web 3 sustituye con llaves cripto a los correos y datos personales utilizados para crear cuentas en la web 2.
+            <span class="ustext"> La web3 sustituye con llaves cripto a los correos y datos personales utilizados para crear cuentas en la web2.
             <div class="center"><div class="lex"><span class="em">Tu llave cripto se forma con:</span></div></div>
               <div class="keys">
                 <div class="center"><div class="p-key"><h2>🔐</h2><span class="lex">Llave privada</span></div></div>
@@ -484,7 +474,7 @@ const About = () => {
               </div>
              
               La <span class="yellow-text">llave privada </span>da acceso a tu cuenta sin pedir tus datos personales y protege tu cuenta con 12 palabras que solo tú debes conocer.<br/>
-              La <span class="orange">llave pública</span> es como tu número de teléfono, puedes compartirlo con otras personas para recibir activos digitales o participar en aplicaciones de la web 3.
+              La <span class="orange">llave pública</span> es como tu número de teléfono, puedes compartirlo con otras personas para recibir activos digitales o participar en aplicaciones de la web3.
             </span>
           </div>
           <div class="bg-grid"><h2 class="yollow-lex">Las 12 palabras de tu llave privada</h2>
@@ -551,7 +541,7 @@ const About = () => {
         <h3>
           TARO es el token de VoTARO, la cripto que recibirás como recompensa al completar tareas en la plataforma y que podrás usar para votar por las propuestas
           de la ciudad DAO que definen el presupuesto descentralizado de Querétaro.<br/><br/>Para obtener tus primeros tokens TARO <span class="orange">ya debes tener instalada una
-          cartera web 3 y haber conectado tu llave cripto</span> desde el menú principal. Si ya lo hiciste, completa la prueba de conocimiento para obtener hasta 1,000 tokens TARO
+          cartera web3 y haber conectado tu llave cripto</span> desde el menú principal. Si ya lo hiciste, completa la prueba de conocimiento para obtener hasta 1,000 tokens TARO
           al usar tus habilidades digitales para  validar tu cuenta con los contratos inteligentes de VoTARO.<br/><br/><span class="orange"> Una vez que valides tu cuenta podrás crear propuestas para la ciudad DAO </span>
           y obtendrás 50 TARO por cada una de las primeras 20 propuestas que hagas, por lo que podrás obtener otros 1,000 TARO por participar en la ciudad DAO. <br/><br/>
           <div class="usgrid">
@@ -619,7 +609,7 @@ const About = () => {
           </div>
           <div class="bg-grid"><h2>Valida tu dirección cripto</h2><div class="center"><img src={verify} alt="Public Key" class="about-img"/></div>
             <span class="ustext">
-              La principal diferencia entre la web 2 y la web 3 es como se identifican a los usuarios. Mientras que en la web 2 es necesario dar tus datos personales para validar tu identidad, en la web 3 se utiliza pruebas de encriptación para validar la identidad lo que permite crear servicios que no solo funcionen con personas sino que sean capaces de interactuar con otros contratos inteligentes o entidades digitales. <br/><br/><span class="orange"> VoTARO esta hecho para residentes queretanos y require desarrollar habilidades digitales </span> sobre seguridad digital, comunicación y resolución de problemas para poder usarse. Por lo que aunque es abierto para todo el mundo y entidad, es necesario presentar una prueba de conocimiento que compruebe los conocimientos del usuario sobre la web 3, las llaves cripto y la ciudad DAO. Si presentas la prueba satisfactoriamente, el contrato Gobernador Alfa depositará 1,000 TARO en tu llave pública y validará tu cuenta para que puedas crear propuestas y votarlas durante 3 meses.
+              La principal diferencia entre la web2 y la web3 es como se identifican a los usuarios. Mientras que en la web2 es necesario dar tus datos personales para validar tu identidad, en la web3 se utiliza pruebas de encriptación para validar la identidad lo que permite crear servicios que no solo funcionen con personas sino que sean capaces de interactuar con otros contratos inteligentes o entidades digitales. <br/><br/><span class="orange"> VoTARO esta hecho para residentes queretanos y require desarrollar habilidades digitales </span> sobre seguridad digital, comunicación y resolución de problemas para poder usarse. Por lo que aunque es abierto para todo el mundo y entidad, es necesario presentar una prueba de conocimiento que compruebe los conocimientos del usuario sobre la web3, las llaves cripto y la ciudad DAO. Si presentas la prueba satisfactoriamente, el contrato Gobernador Alfa depositará 1,000 TARO en tu llave pública y validará tu cuenta para que puedas crear propuestas y votarlas durante 3 meses.
             </span>
           </div>
         </div>

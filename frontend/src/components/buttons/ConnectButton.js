@@ -13,14 +13,14 @@ const ConnectButton = ({handleOnConnect}) => {
     {isEnglish === 'english' ?
     <div className="prop-wallet" onClick={handleOnConnect}>
       <a>
-      <div class="dw">Conect your wallet </div>
+      <div class="dw">Connect your wallet </div>
        <img src={meta} class="shake2"/>
       </a>
     </div>
     :
     <div className="prop-wallet" onClick={handleOnConnect}>
       <a>
-      <div class="dw">Conecta tu cartera web 3 </div>
+      <div class="dw">Conecta tu cartera web3 </div>
        <img src={meta} class="shake2"/>
       </a>
     </div>

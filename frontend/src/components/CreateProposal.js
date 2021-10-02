@@ -229,7 +229,7 @@ function myFunction() {
             1. Proposal Title
             </Form.Label>
             <Form.Control type="text"
-              placeholder="🎯 What is need to be done?"
+              placeholder="🎯 what needs to be done?"
               onChange={handleOnChangeTitle}/>
           </Form.Group>
 
@@ -239,7 +239,7 @@ function myFunction() {
             </Form.Label>
               <Form.Control as="select" data-live-search="true"
                 onChange={handleOnChangeNeighborhood}>
-                <option disabled selected>📍 Where is the proposal</option>
+                <option disabled selected>📍 Where will the proposal take place</option>
                 <optgroup label="Del. Felipe Carrillo Puerto Región 7">
                   <option>Cerro Prieto</option>
                   <option>El Patol</option>
@@ -354,7 +354,7 @@ function myFunction() {
                 <option disabled selected>⚙️ Select the type of acitivity</option>
                 <option>Face-to-face event</option>
                 <option>Online event</option>
-                <option>Mix event</option>
+                <option>Mixed event</option>
                 <option>Public Work</option>
             </Form.Control>
           </Form.Group>
@@ -368,7 +368,7 @@ function myFunction() {
               <option disabled selected>🦸 Who will do the proposal?</option>
               <option>Citizens</option>
               <option>Government</option>
-              <option>Organizasmo u asociación</option>
+              <option>Organization or group</option>
               <option>Other (especify in description)</option>
             </Form.Control>
           </Form.Group>
@@ -379,7 +379,7 @@ function myFunction() {
           </Form.Label>
           <Form.Control className="description" as="textarea"
             type="text" rows={3}
-            placeholder="📑Describe a detalle tu propuesta"
+            placeholder="📑Give details about your proposal"
             onChange={handleOnChangeDescription}/>
           </Form.Group>
 
