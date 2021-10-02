@@ -385,7 +385,7 @@ function myFunction() {
           :
           <div class="valert2">
             <br/><br/><br/><br/><br/><br/><br/><br/>
-              <h1><span id="vote">Conecta tu cartera web 3</span></h1><br/>
+              <h1><span id="vote">Conecta tu cartera web3</span></h1><br/>
               <div class="center"><img src={img4} alt="Alert about key" class="prop-img"/></div><br/>
                 <div class="floating">
                   <h3>Necesitas una cartera Web 3 para usar VoTARO.
@@ -395,7 +395,7 @@ function myFunction() {
                 <div class="void-link">
                   <div class="bg-grid3"><a href="https://metamask.io">
                     <img src={meta} class="ribvan"/> 
-                    <div class="propsub">Obtener wallet web 3</div>
+                    <div class="propsub">Obtener wallet web3</div>
                     <div class="propopt">Descargar</div>
                   </a></div>
                   <div class="bg-grid3"><a href="/Home">

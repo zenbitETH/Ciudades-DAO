@@ -164,7 +164,7 @@ const RejectedProposal = ({title, typeOfAction, neighborhood, personInCharge, de
           */}
       <div class="author"> Hecha por {proposer}</div><br/>
       <div className="vote-grid">
-        <div class="prop-bgw">Apoyada por<br/>{forVotes}<br/>TARO</div>    
+        <div class="prop-bgw">Votos a favor:<br/>{forVotes}<br/>TARO</div>    
         <div class="prop-bga2">Rechazada por:<br/>{againstVotes}<br/> TARO</div>
       </div>
     </div>

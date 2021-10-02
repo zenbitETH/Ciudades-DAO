@@ -315,11 +315,6 @@ const PastProposals = () => {
                           <div class="propsub">Create a proposal</div>
                           <div class="propopt">Propose</div>
                         </a></div>
-                        <div class="bg-grid3"><a href="/Quiz">
-                          <img src={verify} class="ribvan"/>
-                          <div class="propsub">Before you start</div>
-                          <div class="propopt">Validate</div>
-                        </a></div>
                       </div>
                     </div>
                   }
@@ -375,13 +370,6 @@ const PastProposals = () => {
                           <div class="propsub">Create a proposal</div>
                           <div class="propopt">Propose</div>
                         </a></div>
-                        <div class="bg-grid3"><a href="/Quiz">
-                          <img src={verify} class="ribvan"/>
-                          <div class="propsub">Before you start</div>
-                          <div class="propopt">Validate</div>
-                        </a></div>
-
-
                       </div>
                     </div>
                   }
@@ -457,11 +445,6 @@ const PastProposals = () => {
                           <div class="propsub">Crea una propuesta</div>
                           <div class="propopt">Proponer</div>
                         </a></div>
-                        <div class="bg-grid3"><a href="/Quiz">
-                          <img src={verify} class="ribvan"/>
-                          <div class="propsub">Antes de empezar</div>
-                          <div class="propopt">Validar</div>
-                        </a></div>
                       </div>
                     </div>
                   }
@@ -516,11 +499,6 @@ const PastProposals = () => {
                           <img src={prop} class="ribvan"/> 
                           <div class="propsub">Crea una propuesta</div>
                           <div class="propopt">Proponer</div>
-                        </a></div>
-                        <div class="bg-grid3"><a href="/Quiz">
-                          <img src={verify} class="ribvan"/>
-                          <div class="propsub">Antes de empezar</div>
-                          <div class="propopt">Validar</div>
                         </a></div>
                       </div>
                     </div>

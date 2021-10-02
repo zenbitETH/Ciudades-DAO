@@ -180,7 +180,7 @@ const ApprovedProposal = ({title,
         <div class="author">Hecha por by {proposer}</div><br/>
         <div className="vote-grid">
           <div class="prop-bgf2">Aprobada con:<br/>{forVotes}<br/>TARO</div>    
-          <div class="prop-bgw">Estuvieron en contra:<br/>{againstVotes}<br/>TARO</div>
+          <div class="prop-bgw">Votos en contra:<br/>{againstVotes}<br/>TARO</div>
         </div>
       </div>
       }

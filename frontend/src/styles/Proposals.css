@@ -509,23 +509,20 @@ option:disabled {
   font-size: 0.9em;
 }
 
-
 .homevan {
-  content:'';
   position: absolute;
   bottom: 0px;
   right:  0px;
-  opacity: 90%;
   height: 45% !important;
+  z-index: 1 !important;
 }
 
 .ribvan {
-  content:'';
   position: absolute;
   bottom: 0px;
   right:  0px;
-  opacity: 90%;
   height: 60% !important;
+  z-index: 1 !important;
 }
 
 /* Proposal */
@@ -552,7 +549,6 @@ option:disabled {
   font-family: 'Lexend Deca', sans-serif;
   font-size: 2em;
 }
-
 
 .rproposal1 {
   width: auto;

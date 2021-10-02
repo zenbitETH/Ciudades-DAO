@@ -298,7 +298,6 @@ margin-top: 1.5em;
   margin-bottom: 0.3em;
   font-size: 1em;
   position: absolute;
-  z-index: 1;
 }
 
 .main-reward .ustext::after {
