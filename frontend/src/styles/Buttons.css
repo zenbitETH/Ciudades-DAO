@@ -11,7 +11,7 @@ Button {
   Button:hover {
     border-radius: 25px !important;
     border: none !important;
-    color: #3d386b !important;
+    color: #01304E !important;
     background-color: #ff950082;
   }
   
@@ -76,7 +76,7 @@ Button {
   .aboutbutton:hover {
     background-color: #FAC91A ;
     border: 1px solid;
-    color: #3d386b !important;
+    color: #01304E !important;
     position: relative;
   }
   .aboutbutton:visited {
@@ -84,13 +84,13 @@ Button {
   }
   
   .aboutbutton:active {
-    background-color: #3d386b ;
+    background-color: #01304E ;
     border: 1px solid;
   }
   
   .aboutbutton:focus {
     box-shadow: none !important;
-    background-color: #3d386b !important;
+    background-color: #01304E !important;
     color: #ffffff !important;
     border: 1px solid !important;
   }
@@ -101,24 +101,24 @@ Button {
     background-image: linear-gradient(to left, #FF9400, #FF9400);
     border-radius: 20px;
     margin: 0.5em;
-    color: #3d386b !important;
+    color: #01304E !important;
   }
   
   .Wallet:hover {
     background-image: linear-gradient(to right, #FAC91a, #FAC91a);
-    color: #3d386b;
+    color: #01304E;
   }
   
   .account-bt {
     width: 90% ;
     font-size: clamp(0.8em, -0.975rem + 8.5vw, 0.2em);
-    background-image: linear-gradient(to left, #3d386b, #5c53b4) !important;
+    background-image: linear-gradient(to left, #01304E, #5c53b4) !important;
     border-radius: 20px;
   }
   
   .account-bt:hover {
     background-image: linear-gradient(to right, #FF9400, #f9a733) !important;
-    color: #3d386b;
+    color: #01304E;
   }
   
   .account-bt:focus {
@@ -140,7 +140,7 @@ Button {
     margin-top: 1em;
     padding: 0.5em;
     color: white;
-    background-color: #3d386b;
+    background-color: #01304E;
     border-radius: 25px;
     width: 100%;
     position: relative;

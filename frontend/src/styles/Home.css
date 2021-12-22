@@ -27,7 +27,7 @@
 }
 
 .purple {
-  color: #3d386b;
+  color: #01304E;
 }
 
 .orange {
@@ -145,7 +145,8 @@ li {
 }
 
 body {
-	background: #2b284a;
+  background-image: linear-gradient(to top, #141e30, #01304E);
+  background-size: 200% 200%;
 }
 
 .App {
@@ -222,7 +223,7 @@ Nav {
   border: none !important;
   text-align: center !important;
   display: inline-block !important;
-  color: #3d386b !important;
+  color: #01304E !important;
 }
 
 div.dropdown-menu.show {
@@ -281,7 +282,7 @@ margin-top: 1.5em;
   display: inline-block;
   width: 100%;
   font-size: 0.8em;
-  color: #3d386b !important;
+  color: #01304E !important;
 }
 
 .main-reward .ustext {
@@ -316,13 +317,13 @@ margin-top: 1.5em;
 }
 
 .main-reward:hover {
-  background-image: radial-gradient(#3d386b, #3d386b);
+  background-image: radial-gradient(#01304E, #01304E);
   border-radius: 10px;
   color: #ffffff !important;
 }
 
 .main-reward:active {
-  background-image: radial-gradient(#3d386b, #5c54a6);
+  background-image: radial-gradient(#01304E, #5c54a6);
   background-color: transparent !important;
 }
 
@@ -336,7 +337,7 @@ margin-top: 1.5em;
 }
 
 .account-bgu {
-  color: #3d386b;
+  color: #01304E;
   padding: 1em;
   background-color: #ffffffac;
   border-radius: 25px;

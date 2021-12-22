@@ -76,7 +76,7 @@
   border-radius: 25px;
   height: 100%;
   position: relative !important;
-  color: #3d386b;
+  color: #01304E;
   font-size: 1.3em;
 }
   
@@ -89,7 +89,7 @@
   row-gap: 0.5em;
   height: max-content;
   position: relative;
-  color: #3d386b;
+  color: #01304E;
 }
 
 .reward-un {
@@ -101,7 +101,7 @@
   row-gap: 0.5em;
   height: max-content;
   position: relative;
-  color: #3d386b;
+  color: #01304E;
 }
 
 .reward {
@@ -142,7 +142,7 @@
 }
 
 .reward:hover {
-  background-image: radial-gradient(#3d386b, #3d386b);
+  background-image: radial-gradient(#01304E, #01304E);
   border-radius: 15px;
   color: #ffffff !important;
 }
@@ -217,7 +217,7 @@
   text-align: center;
   font-size: clamp(1.2em, -0.85rem + 6.333vw, 1.4rem);
   position: relative !important;
-  color: #3d386b !important;
+  color: #01304E !important;
 }
 
 .about-tx2 {
@@ -396,7 +396,7 @@ padding-top: 0.5em;
 .e-pkey {
   display: grid;
   margin-bottom: 1em;
-  color: #3d386b;
+  color: #01304E;
   position: relative;
   text-align: center;
 }
