@@ -15,14 +15,14 @@
 
 
 #about {
-  background: linear-gradient(-180deg, #2b284a, #2b284a, #b08d0f6c, #FF9400);
+  background: linear-gradient(-180deg, #2b284a, #2b284a, #b08d0f6c, #119195);
 }
   
 .about {
   border-radius: 20px;
   height: fit-content;
   font-family: 'Lexend Deca', sans-serif;
-  color: #FF9400;
+  color: #119195;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -62,7 +62,7 @@
  }
 
 .reward {
-  background: linear-gradient(-15deg, #FAC91a, #FAC91a,#FF9400, #FF9400);
+  background: linear-gradient(-15deg, #FAC91a, #FAC91a,#119195, #119195);
   background-size: 400% 400%;
   animation: gradient 1s ease-in-out infinite;
   
@@ -70,7 +70,7 @@
   
 .account-reward {
   padding: 1em;
-  background: linear-gradient(-15deg, #FAC91a, #FAC91a,#FF9400, #FF9400);
+  background: linear-gradient(-15deg, #FAC91a, #FAC91a,#119195, #119195);
   background-size: 400% 400%;
     animation: gradient 1s ease-in-out infinite;
   border-radius: 25px;
@@ -193,7 +193,7 @@
 }
 
 .about-bg .about-hl:hover {
-  color: #FF9400;
+  color: #119195;
 }
 
 .about-bg1 {
@@ -337,7 +337,7 @@
   text-align:center;
   position: relative;
   margin-left: 1em;
-  background-color: #FF9400;
+  background-color: #119195;
   width: 8em;
   height: 8em;
   border-radius: 100%;
@@ -359,7 +359,7 @@
 .pu-key2 {
 text-align:center;
 position: relative;
-background-color: #FF9400;
+background-color: #119195;
 width: 6em;
 height: 6em;
 border-radius: 100%;
@@ -449,7 +449,7 @@ padding-top: 0.5em;
 }
 
 .web3 {
-  color: #FF9400;
+  color: #119195;
   margin-bottom: 1.5em;
 }
 
@@ -467,7 +467,7 @@ padding-top: 0.5em;
 }
 
 .web3vs {
-  background-color: #FF940090;
+  background-color: #11919590;
   color: #fff;
   border-radius: 0 25px 25px 0;
 }

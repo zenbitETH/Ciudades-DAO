@@ -220,7 +220,7 @@ function myFunction() {
           <div class="progress-bar" id="myBar"></div>
         </div>
       </div>
-      <h1><span  class="orange">New Proposal</span></h1><br/><br/>
+      <h1><span  class="yellow">New Proposal</span></h1><br/><br/>
       <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
       
       <Form autocomplete="off" id="margin">
@@ -440,7 +440,7 @@ function myFunction() {
             <div class="progress-bar" id="myBar"></div>
           </div>
         </div>
-        <h1><span  class="orange">Nueva propuesta</span></h1><br/><br/>
+        <h1><span  class="yellow">Nueva propuesta</span></h1><br/><br/>
         <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
           
         <Form autocomplete="off" id="margin">

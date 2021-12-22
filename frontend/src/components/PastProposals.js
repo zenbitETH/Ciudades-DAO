@@ -257,7 +257,7 @@ const PastProposals = () => {
           
           </div>
           <br/><br/>
-          <h1><span class="orange">Past Proposals</span></h1><br/><br/>
+          <h1><span class="yellow">Past Proposals</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
           
    
@@ -387,7 +387,7 @@ const PastProposals = () => {
             </div>
           </div>
           <br/><br/>
-          <h1><span class="orange">Propuestas anteriores</span></h1><br/><br/>
+          <h1><span class="yellow">Propuestas anteriores</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
           <div id="margin" className= "props" >
             <div>

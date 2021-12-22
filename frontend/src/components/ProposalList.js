@@ -239,7 +239,7 @@ const ProposalList = () => {
           </div>
         
             <span>{isValidated ? "" : <ValidationRequired />}</span>
-          <h1><span class="orange">Querétaro City DAO</span></h1><br/><br/>
+          <h1><span class="yellow">Querétaro City DAO</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>          
           <div id="margin">
            <div className= "govgrid" id="">
@@ -325,7 +325,7 @@ const ProposalList = () => {
           </div>
         </div>
           <span>{isValidated ? "" : <ValidationRequired />}</span>
-        <h1><span class="orange">Ciudad DAO Querétaro</span></h1><br/><br/>
+        <h1><span class="yellow">Ciudad DAO Querétaro</span></h1><br/><br/>
         <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
 
         <div id="margin">

@@ -38,9 +38,9 @@ const About = () => {
           <div class="about-hl"><a id="new" class="big-icon">🥚</a><br/>New user</div>
           <div class="ct1-text">
             Bienvenid@ a VoTARO, seguro tienes muchas dudas sobre el impacto que tiene blockchain en nuestras vidas y te resulta dificil identificar
-            la utilidad de <span class="orange">digitalizar la gobernanza de una ciudad en un registro público, transparente, seguro e inmutable.</span>
+            la utilidad de <span class="yellow">digitalizar la gobernanza de una ciudad en un registro público, transparente, seguro e inmutable.</span>
             <br/><br/>
-              Para resolver todas esas dudas, empezaremos por entender por qué la <span class="orange">Web 3.0 es un esfuerzo global para resolver
+              Para resolver todas esas dudas, empezaremos por entender por qué la <span class="yellow">Web 3.0 es un esfuerzo global para resolver
               las problemáticas actuales del internet.</span> 
             <div class="center"><img src={bg2} alt="Web2 problems" class="web2p"/></div>
               <br/>
@@ -57,7 +57,7 @@ const About = () => {
 
          <div class="timeline">
         <div class="timeyr">  Evolución del Internet 
-          <div class="orange"> de 1989 a 2020</div>
+          <div class="yellow"> de 1989 a 2020</div>
         </div>
           <div class="container">
            <div class="lines">
@@ -137,7 +137,7 @@ const About = () => {
         </div>
         <div class="webvs">
           <div class="yellow">Web 2.0</div>
-          <div class="orange">Web 3.0</div>
+          <div class="yellow">Web 3.0</div>
           <div class="web2vs">
             <div class="vs">🤴 Centralizado</div>
             <div class="vs">👁️ Invasivo</div>
@@ -160,7 +160,7 @@ const About = () => {
         <div class="aboutwr">
           <div class="big-icon">⚠️</div>
           <h3>Atención</h3>
-          <div class="ct1-text"><span>VoTARO es una aplicación de la Web 3.0</span>, por lo tanto <span class="orange">necesitas una wallet descentralizada</span> para interactuar. 
+          <div class="ct1-text"><span>VoTARO es una aplicación de la Web 3.0</span>, por lo tanto <span class="yellow">necesitas una wallet descentralizada</span> para interactuar. 
           <br/><br/>
           Para obtenerla no necesitas dar tus datos personales, solo necesitas <span class="yellow">guardar muy bien la llave privada de tu cuenta</span>, pues <span class="red">solo tu la conocerás y 
           es la única forma de recuperar tu cuenta</span> o usarla en un dispositivo diferente.
@@ -221,7 +221,7 @@ const About = () => {
          </p>
        <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🗳️ See proposals</Button></div>
     </div>
-      <div className="orange"> Benefits for the city</div>
+      <div className="yellow"> Benefits for the city</div>
       <div className="text-medium-left">
       <div className = "aboutC"> ⛓️  Urban governance on blockchain. </div>
          <div className = "aboutC"> 🏙️ Urban processes tracked in Smart Contracts. </div>
@@ -255,11 +255,11 @@ const About = () => {
           adaptado para gestionar la gobernanza de problemas urbanos.</p>
         <p>Implementa <a className="alt" href="https://skale.network/">SKALE Network,</a> una solución de segunda capa en Ethereum que reduce a 0 las cuotas de gas e incrementa la rapidez de las transacciones sin comprometer la seguridad</p>
       </div>
-      <div className="orange">🎯 Objetivo</div>
+      <div className="yellow">🎯 Objetivo</div>
       <div className="main">
         Convertir a la ciudad de Querétaro en una Organización Autónoma Descentralizada que exista de manera automatizada en internet pero que
         dependa fuertemente del talento humano para ejecutar tareas urbanas o virtuales que los contratos inteligentes no puedan completar por si mismo.</div>
-      <div className="orange">🧰 ¿Cómo obtengo $TARO?</div>
+      <div className="yellow">🧰 ¿Cómo obtengo $TARO?</div>
       <div className="main">Necesitas realizar 3 actividades para obtener TARO.</div>
        <div className="text-medium-left">
           <div className="aboutB">1. 🦊 Descargar Metamask</div>
@@ -300,7 +300,7 @@ const About = () => {
         </p>
        <div className ="submitbutton"><Button className="aboutbutton" href="ProposalList" >🗳️ Ver propuestas</Button></div>
     </div>
-      <div className="orange"> Beneficios para la ciudad</div>
+      <div className="yellow"> Beneficios para la ciudad</div>
       <div className="text-medium-left">
         <div className="aboutC">⛓️ Registro de gobernanza urbana en blockchain.</div>
         <div className="aboutC" >🏙️ Procesos urbanos en Contratos Inteligentes.</div>

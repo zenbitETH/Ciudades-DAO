@@ -57,7 +57,7 @@ const About = () => {
       <div class="aboutbg-grid">
         <h1 class=""><span class="jos">Start here</span></h1>
         <h3>
-          VoTARO is a <span class = "orange"> Web 3 application to get crypto </span> by participating in the city DAO for Querétaro
+          VoTARO is a <span class = "yellow"> Web 3 application to get crypto </span> by participating in the city DAO for Querétaro
           Citizens develop a decentralized budget with which they can convert travel expenses into  income   and  establish a decentralized channel to fund activities or hire human talent that   meets the   needs of the city. Get a crypto key to participate and win TARO. TARO is the VoTARO token that you can use to  vote   for proposals that will decide how the decentralized budget of the DAO is spent.
         </h3>
         </div>
@@ -70,7 +70,7 @@ const About = () => {
          <div class = "about-hl"> 1. Get a crypto key </div> <br/>
         <img src = {img} class ="about-img"/>
         <span class = "ustext"> <div class = "center"> <img src = {meta} class="about-img"/> </div> <br/> Metamask is an ethereum wallet with which you can
-        <span class = "orange"> create a crypto key. </span> This portfolio is decentralized, so only you will have access to it and full custody of the digital assets that are deposited. Download it from your site on a computer or mobile device:
+        <span class = "yellow"> create a crypto key. </span> This portfolio is decentralized, so only you will have access to it and full custody of the digital assets that are deposited. Download it from your site on a computer or mobile device:
 
         <div class = "usgrid">
           <a class="about-bt" href="https://metamask.io"> Download Metamask </a>
@@ -83,8 +83,8 @@ const About = () => {
         <div class = "bg-reward2"> <a href="#step1">
          <div class = "about-hl"> 2. How te get TARO </div> <br/>
         <img src={TAROrew} class="about-img"/>
-        <span class = "ustext"> <div class = "center"> <img src = {TARO} class="about-img" /> </div> <br/> <span class = "orange"> Get 1,000 TARO </span> when obtaining your crypto key and validating it.
-          Once you have your crypto key validated <span class = "orange"> you can get 50 TARO for each one </span> of the first 20 proposals you make. <br/> <br/>
+        <span class = "ustext"> <div class = "center"> <img src = {TARO} class="about-img" /> </div> <br/> <span class = "yellow"> Get 1,000 TARO </span> when obtaining your crypto key and validating it.
+          Once you have your crypto key validated <span class = "yellow"> you can get 50 TARO for each one </span> of the first 20 proposals you make. <br/> <br/>
         <div class = "usgrid">
           <a class="bg-reward3" href="/Quiz"> Validate <br/> (1000 TARO) </a>
           <a class="bg-reward3" href="/CreateProposal"> Propose <br/> (50 TARO) </a>
@@ -99,7 +99,7 @@ const About = () => {
          <div class = "about-hl"> 3. Vote in City DAO </div> <br/>
         <img src = {vote} class = "about-img" />
         <span class = "ustext"> <div class = "center"> <img src = {past} class = "about-img" /> </div> <br/> VoTARO is a DAO (Decentralized Autonomous Organization)
-        with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "orange"> Each TARO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
+        with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "yellow"> Each TARO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
         <div class = "usgrid">
           <a class="about-bt" href="/Quiz"> Proposals to vote </a>
           <a class="about-bt" href="/CreateProposal"> Read about City DAO </a>
@@ -112,7 +112,7 @@ const About = () => {
         <img src = {moon} class = "about-img" />
         <span class = "ustext"> <div class = "center"> <img src = {TAROtok} class = "about-img" /> </div> <br/>
         To participate in a DAO it is necessary to have the digital skills necessary to interact with web tools 3 such as a crypto key or use your
-        TARO tokens to vote. <span class = "orange"> Know what they are and the roadmap to improve them </span> with your participation in the DAO of the city of Querétaro.
+        TARO tokens to vote. <span class = "yellow"> Know what they are and the roadmap to improve them </span> with your participation in the DAO of the city of Querétaro.
         <br/><br/>
         <div class = "center"> <a class="about-bt" href="/CreateProposal"> View roadmap </a> </div>
         </span>
@@ -146,11 +146,11 @@ const About = () => {
                 <div class = "center"> <div class = "p-key"> <h2> 🔐 </h2> <span class = "lex"> Private key </span> </div> </div>
                 <div class = "pu-key"> <h2> 📬 </h2> <span class = "lex"> Public key </span> </div>
                 <p class = "yellow-lex"> Just for you </p>
-                <p class = "orange-lex"> To share </p>
+                <p class = "yellow-lex"> To share </p>
               </div>
              
               The <span class = "yellow-text"> private key </span> gives access to your account without asking for your personal data and protects your account with 12 words that only you should know. <br/>
-              The <span class = "orange"> public key </span> is like your phone number, you can share it with other people to receive digital assets or participate in web3 applications.
+              The <span class = "yellow"> public key </span> is like your phone number, you can share it with other people to receive digital assets or participate in web3 applications.
             </span>
           </div>
           <div class = "bg-grid"> <h2 class = "yollow-lex"> The 12 words of your private key </h2>
@@ -181,13 +181,13 @@ const About = () => {
               To protect them, it is recommended that you write them down by hand in a journal or private document to ensure that no one but you knows them.
             </span>
           </div>
-          <div class = "bg-grid"> <h2 class = "orange-lex"> The public key is for sharing </h2> <div class = "center"> <img src = {img3} alt = "Public Key "class =" about-img "/> </div>
-            <span class = "ustext"> <span class = "orange"> The public key is similar to your phone number: </span> a pseudonym that you share with your contacts to be able to interact in different applications.
+          <div class = "bg-grid"> <h2 class = "yellow-lex"> The public key is for sharing </h2> <div class = "center"> <img src = {img3} alt = "Public Key "class =" about-img "/> </div>
+            <span class = "ustext"> <span class = "yellow"> The public key is similar to your phone number: </span> a pseudonym that you share with your contacts to be able to interact in different applications.
             <div class = "e-pkey">
               <div class = "pu-key2"> <span class = "lex"> 📬 <br/> Public key </span> </div>
-              <div class = "center"> <span class = "orange-lex"> <span class = "em"> They start with 0x </span> </span> </div>
+              <div class = "center"> <span class = "yellow-lex"> <span class = "em"> They start with 0x </span> </span> </div>
             </div>
-            On web3 your public key identifies you to other users, it allows you to interact with smart contracts and <span class = "orange"> receive digital assets. </span>
+            On web3 your public key identifies you to other users, it allows you to interact with smart contracts and <span class = "yellow"> receive digital assets. </span>
             </span>
           </div>
           <div class = "bg-grid"> <h2 class = "red-lex"> You are responsible for your key </h2> <div class = "center"> <img src = {img4} alt = "Alert about key "class =" about-img "/> </div>
@@ -215,9 +215,9 @@ const About = () => {
         <h1 class = "about-hl2"> 2. Participate and win TARO </h1>
         <h3>
           TARO is the VoTARO token. You will receive it as a reward for completing tasks on the platform and you can use it to vote on the proposals of the DAO  that define the decentralized budget of Querétaro.
-          To obtain your first TARO tokens <span class = "orange"> you must  have an installed web3 wallet that connects to your crypto key </span>from the main menu.
+          To obtain your first TARO tokens <span class = "yellow"> you must  have an installed web3 wallet that connects to your crypto key </span>from the main menu.
           If you already have this, then complete the knowledge test to get up to 1,000 TARO tokens by using your digital skills to validate your account with VoTARO smart contracts. <br/> <br/> 
-          <span class = "orange"> Once you validate your account you will be able to create proposals for the City DAO </span>and you will get 50 TARO for each of the first 20 proposals you make, This means you can get another 1,000 TARO for participating in the City DAO. <br/> <br/>
+          <span class = "yellow"> Once you validate your account you will be able to create proposals for the City DAO </span>and you will get 50 TARO for each of the first 20 proposals you make, This means you can get another 1,000 TARO for participating in the City DAO. <br/> <br/>
           <div class = "usgrid">
           <div class = "bg-reward"> <a href="/Quiz">
             <img src = {verify} class = "ribvan" />
@@ -235,7 +235,7 @@ const About = () => {
           <div class = "about-grid2">
           <div class = "bg-grid"> <h2> What is a smart contract? </h2> <div class = "center"> <img src = {ticon} class = "about-img" /> </ div>
             <span class = "ustext">
-            Smart contracts are programs that use information as raw material to digitize the value of some element or activity.  When these are connected to a blockchain (global computer) they are capable of programming the behavior of digital assets. This allows the creation of products, companies or systems never seen before. At VoTARO we use 2 smart contracts to <span class = "orange">create a Decentralized Autonomous Organization in the city of Querétaro</span>
+            Smart contracts are programs that use information as raw material to digitize the value of some element or activity.  When these are connected to a blockchain (global computer) they are capable of programming the behavior of digital assets. This allows the creation of products, companies or systems never seen before. At VoTARO we use 2 smart contracts to <span class = "yellow">create a Decentralized Autonomous Organization in the city of Querétaro</span>
               <ol>
                 <li> Registers the needs of citizens. </li>
                 <li> Rewards the development of your digital skills. </li>
@@ -283,7 +283,7 @@ const About = () => {
           </div>
           <div class = "bg-grid"> <h2> Validate your crypto address </h2> <div class = "center"> <img src = {verify} alt = "Public Key" class = "about-img"/> </div>
             <span class = "ustext">
-              The main difference between web2 and web3 is how users are identified. While on web2 it is necessary to give your personal data to validate your identity, on web3 encryption tests are used to validate the identity which allows creating services that not only work with people but are also capable of interacting with other contracts smart or digital entities. <br/> <br/> <span class = "orange"> VoTARO is made for Queretaro residents and requires developing digital skills </span> on digital security, communication and problem solving in order to be used. Therefore, although it is open to everyone, it is necessary to present a knowledge test that verifies the user's knowledge of web3, the crypto keys and the City DAO. If you submit the proof successfully, the Governor Alpha contract will deposit 1,000 TAROs in your public key and validate your account so that you can create proposals and vote on them for 3 months.
+              The main difference between web2 and web3 is how users are identified. While on web2 it is necessary to give your personal data to validate your identity, on web3 encryption tests are used to validate the identity which allows creating services that not only work with people but are also capable of interacting with other contracts smart or digital entities. <br/> <br/> <span class = "yellow"> VoTARO is made for Queretaro residents and requires developing digital skills </span> on digital security, communication and problem solving in order to be used. Therefore, although it is open to everyone, it is necessary to present a knowledge test that verifies the user's knowledge of web3, the crypto keys and the City DAO. If you submit the proof successfully, the Governor Alpha contract will deposit 1,000 TAROs in your public key and validate your account so that you can create proposals and vote on them for 3 months.
             </span>
           </div>
         </div>
@@ -310,7 +310,7 @@ const About = () => {
             <li> 📑 Description </li>
             <li> 💸 Budget </li>
           </ol>
-          Once you accept the submission of your proposal from metamask, it will be registered in the Governor Alpha contract and <span class = "orange"> will be available for voting for 15 days. </span> During the 15 days of validity, you and others users will be able to vote for it, or you can vote for the proposals of other users if they are available.
+          Once you accept the submission of your proposal from metamask, it will be registered in the Governor Alpha contract and <span class = "yellow"> will be available for voting for 15 days. </span> During the 15 days of validity, you and others users will be able to vote for it, or you can vote for the proposals of other users if they are available.
           Upon expiration of the voting period, the proposal will be accepted if it has more votes in favor or it will be rejected if it has more votes against or does not receive any votes.
         </h3> <br/>
         <h2> Evolution of a proposal </h2>
@@ -345,7 +345,7 @@ const About = () => {
         
           <div class = "webvs">
           <div class = "gray2"> <h1> ▲ </h1> Traditional companies </div>
-          <div class = "orange"> <h1> ▼ </h1> DAOs </div>
+          <div class = "yellow"> <h1> ▼ </h1> DAOs </div>
           <div class = "web2vs">
             <div class = "vs"> Centralized <span class = "ustext"> <img src = {central} class = "about-img" /> <br/> Depends on an intermediary. </span> </div>
             <div class = "vs"> Invasive <span class = "ustext"> <img src = {spy} class = "about-img" /> <br/> You provide your personal data to use it. </span> </ div>
@@ -380,8 +380,8 @@ const About = () => {
       <div class="aboutbg-grid">
         <h1 class=""><span class="jos">Empieza aquí</span></h1>
         <h3>
-          VoTARO es una <span class="orange"> aplicación Web 3 para obtener cripto</span> al participar en la ciudad DAO en Querétaro para un
-           <span class="orange"> presupuesto descentralizado,</span> con el que los ciudadanos puedan convertir los gastos de traslado en ingresos y se establecería un canal descentralizado para fondear obras, actividades o contratación de talento humano que resuelva las necesidades de la ciudad.<br/><br/> Obtén una llave cripto para participar y ganar TARO, el  token de VoTARO
+          VoTARO es una <span class="yellow"> aplicación Web 3 para obtener cripto</span> al participar en la ciudad DAO en Querétaro para un
+           <span class="yellow"> presupuesto descentralizado,</span> con el que los ciudadanos puedan convertir los gastos de traslado en ingresos y se establecería un canal descentralizado para fondear obras, actividades o contratación de talento humano que resuelva las necesidades de la ciudad.<br/><br/> Obtén una llave cripto para participar y ganar TARO, el  token de VoTARO
            con el que podrás votar por propuestas que definirán el uso del presupuesto descentralizado de la ciudad DAO.
         </h3>
         </div>
@@ -394,7 +394,7 @@ const About = () => {
          <div class="about-hl">1. Obtén una llave cripto</div><br/>
         <img src={img} class="about-img"/>
         <span class="ustext"> <div class="center"><img src={meta} class="about-img"/></div><br/>Metamask es una cartera de ethereum con la que podrás
-        <span class="orange"> crear una llave cripto. </span> Esta cartera es descentralizada, por lo que que solo tú tendrás acceso a ella y custodia total de los activos digitales que se depositen. Descárgala desde su sitio en una computadora o dispositivo móvil:
+        <span class="yellow"> crear una llave cripto. </span> Esta cartera es descentralizada, por lo que que solo tú tendrás acceso a ella y custodia total de los activos digitales que se depositen. Descárgala desde su sitio en una computadora o dispositivo móvil:
 
         <div class="usgrid">
           <a class="about-bt" href="https://metamask.io">Descargar Metamask</a>
@@ -407,8 +407,8 @@ const About = () => {
         <div class="bg-reward2"><a href="#step1">
          <div class="about-hl">2. Participa y gana TARO</div><br/>
         <img src={TAROrew} class="about-img"/> 
-        <span class="ustext"> <div class="center"><img src={TARO} class="about-img"/></div><br/><span class="orange">Obtén 1,000 TARO </span> al obtener tu llave cripto y validarla. 
-          Ya que tengas tu llave cripto validada <span class="orange">podrás obtener 50 TARO por cada una </span> de las primeras 20 propuestas que realices.<br/><br/>
+        <span class="ustext"> <div class="center"><img src={TARO} class="about-img"/></div><br/><span class="yellow">Obtén 1,000 TARO </span> al obtener tu llave cripto y validarla. 
+          Ya que tengas tu llave cripto validada <span class="yellow">podrás obtener 50 TARO por cada una </span> de las primeras 20 propuestas que realices.<br/><br/>
         <div class="usgrid">
           <a class="bg-reward3" href="/Quiz">Validar <br/>(1000 TARO) </a>
           <a class="bg-reward3" href="/CreateProposal">Proponer <br/>(50 TARO)</a>  
@@ -423,7 +423,7 @@ const About = () => {
          <div class="about-hl">3. Vota en la Ciudad DAO</div><br/>
         <img src={vote} class="about-img"/> 
         <span class="ustext"> <div class="center"><img src={past} class="about-img"/></div><br/>VoTARO es una DAO (Organización Autónoma Descentralizada) 
-        con el objetivo de crear un presupuesto descentralizado y gestionar la toma de decisiones de la ciudad de Querétaro mediante contratos inteligentes. <span class="orange">Cada TARO que obtengas equivale a un voto</span> y cada propuesta se podrá votar durante 15 días.
+        con el objetivo de crear un presupuesto descentralizado y gestionar la toma de decisiones de la ciudad de Querétaro mediante contratos inteligentes. <span class="yellow">Cada TARO que obtengas equivale a un voto</span> y cada propuesta se podrá votar durante 15 días.
         <div class="usgrid">
           <a class="about-bt" href="/Quiz">Propuestas por votar </a>
           <a class="about-bt" href="/CreateProposal">Leer sobre la Ciudad DAO</a>
@@ -436,7 +436,7 @@ const About = () => {
         <img src={moon} class="about-img"/> 
         <span class="ustext"> <div class="center"><img src={TAROtok} class="about-img"/></div><br/>
         Para participar en una DAO es necesario contar con las habilidades digitales necesarias para interactuar con las herramientas de la web3 como una llave cripto o usar tus 
-        tokens TARO para votar. <span class="orange">Conoce cuales son y el mapa de ruta para mejorarlas </span> con tu participación en la DAO de la ciudad de Querétaro.
+        tokens TARO para votar. <span class="yellow">Conoce cuales son y el mapa de ruta para mejorarlas </span> con tu participación en la DAO de la ciudad de Querétaro.
         <br/><br/>
         <div class="center"><a class="about-bt" href="/CreateProposal">Lee sobre token TARO</a></div>
         </span>
@@ -470,11 +470,11 @@ const About = () => {
                 <div class="center"><div class="p-key"><h2>🔐</h2><span class="lex">Llave privada</span></div></div>
                 <div class="pu-key"><h2>📬</h2> <span class="lex">Llave pública</span></div>
                 <p class="yellow-lex">Solo para ti</p>
-                <p class="orange-lex">Para compartir</p>
+                <p class="yellow-lex">Para compartir</p>
               </div>
              
               La <span class="yellow-text">llave privada </span>da acceso a tu cuenta sin pedir tus datos personales y protege tu cuenta con 12 palabras que solo tú debes conocer.<br/>
-              La <span class="orange">llave pública</span> es como tu número de teléfono, puedes compartirlo con otras personas para recibir activos digitales o participar en aplicaciones de la web3.
+              La <span class="yellow">llave pública</span> es como tu número de teléfono, puedes compartirlo con otras personas para recibir activos digitales o participar en aplicaciones de la web3.
             </span>
           </div>
           <div class="bg-grid"><h2 class="yollow-lex">Las 12 palabras de tu llave privada</h2>
@@ -505,14 +505,14 @@ const About = () => {
               Para resguardarlas se recomienda que las anotes a mano en un diario o documento privado para asegurar que nadie más que tú las conozca.
             </span>
           </div>
-          <div class="bg-grid"><h2 class="orange-lex">La llave pública es para compartir</h2><div class="center"><img src={img3} alt="Public Key" class="about-img"/></div>
-            <span class="ustext"> <span class="orange">La llave pública es similar a tu número de telefono</span>: un seudónimo que compartes con tus contactos para poder interactuar en diferentes aplicaciones. 
+          <div class="bg-grid"><h2 class="yellow-lex">La llave pública es para compartir</h2><div class="center"><img src={img3} alt="Public Key" class="about-img"/></div>
+            <span class="ustext"> <span class="yellow">La llave pública es similar a tu número de telefono</span>: un seudónimo que compartes con tus contactos para poder interactuar en diferentes aplicaciones. 
             <div class="e-pkey">
               <div class="pu-key2"><span class="lex">📬 <br/>Llave pública</span></div>  
-              <div class="center"><span class="orange-lex"><span class="em">Empiezan con 0x</span></span></div>
+              <div class="center"><span class="yellow-lex"><span class="em">Empiezan con 0x</span></span></div>
             </div>
             En la web3 tu llave pública te identifica
-            ante otros usuarios, te permite interactuar con contratos inteligentes y <span class="orange">recibir activos digitales.</span>
+            ante otros usuarios, te permite interactuar con contratos inteligentes y <span class="yellow">recibir activos digitales.</span>
             </span>
           </div>
           <div class="bg-grid" ><h2 class="red-lex">Tú eres responsable de tu llave</h2><div class="center"><img src={img4} alt="Alert about key" class="about-img"/></div>
@@ -540,9 +540,9 @@ const About = () => {
         <h1 class="about-hl2">2. Participa y gana TARO</h1>
         <h3>
           TARO es el token de VoTARO, la cripto que recibirás como recompensa al completar tareas en la plataforma y que podrás usar para votar por las propuestas
-          de la ciudad DAO que definen el presupuesto descentralizado de Querétaro.<br/><br/>Para obtener tus primeros tokens TARO <span class="orange">ya debes tener instalada una
+          de la ciudad DAO que definen el presupuesto descentralizado de Querétaro.<br/><br/>Para obtener tus primeros tokens TARO <span class="yellow">ya debes tener instalada una
           cartera web3 y haber conectado tu llave cripto</span> desde el menú principal. Si ya lo hiciste, completa la prueba de conocimiento para obtener hasta 1,000 tokens TARO
-          al usar tus habilidades digitales para  validar tu cuenta con los contratos inteligentes de VoTARO.<br/><br/><span class="orange"> Una vez que valides tu cuenta podrás crear propuestas para la ciudad DAO </span>
+          al usar tus habilidades digitales para  validar tu cuenta con los contratos inteligentes de VoTARO.<br/><br/><span class="yellow"> Una vez que valides tu cuenta podrás crear propuestas para la ciudad DAO </span>
           y obtendrás 50 TARO por cada una de las primeras 20 propuestas que hagas, por lo que podrás obtener otros 1,000 TARO por participar en la ciudad DAO. <br/><br/>
           <div class="usgrid">
           <div class="bg-reward"><a href="/Quiz">
@@ -561,7 +561,7 @@ const About = () => {
           <div class="about-grid2">  
           <div class="bg-grid"><h2>¿Qué es un contrato inteligente?</h2><div class="center"><img src={ticon} class="about-img"/></div>
             <span class="ustext">
-              Los contratos inteligentes son máquinas digitales que utilizan la información como materia prima para digitalizar el valor de algún elemento o actividad y al conectarlos a un blockchain (computadora global) son capaces de programar el comportamiento de activos digitales a lo largo del tiempo, permitiendo crear productos, empresas o sistemas nunca antes vistos. En VoTARO utilizamos 2 contratos inteligentes para <span class="orange"> crear una Organización Autónoma Descentralizada en la ciudad de Querétaro que:</span> 
+              Los contratos inteligentes son máquinas digitales que utilizan la información como materia prima para digitalizar el valor de algún elemento o actividad y al conectarlos a un blockchain (computadora global) son capaces de programar el comportamiento de activos digitales a lo largo del tiempo, permitiendo crear productos, empresas o sistemas nunca antes vistos. En VoTARO utilizamos 2 contratos inteligentes para <span class="yellow"> crear una Organización Autónoma Descentralizada en la ciudad de Querétaro que:</span> 
               <ol>
                 <li>Registra las necesidades de los ciudadanos.</li>
                 <li>Recompensa el desarrollo de sus habilidades digitales.</li>
@@ -609,7 +609,7 @@ const About = () => {
           </div>
           <div class="bg-grid"><h2>Valida tu dirección cripto</h2><div class="center"><img src={verify} alt="Public Key" class="about-img"/></div>
             <span class="ustext">
-              La principal diferencia entre la web2 y la web3 es como se identifican a los usuarios. Mientras que en la web2 es necesario dar tus datos personales para validar tu identidad, en la web3 se utiliza pruebas de encriptación para validar la identidad lo que permite crear servicios que no solo funcionen con personas sino que sean capaces de interactuar con otros contratos inteligentes o entidades digitales. <br/><br/><span class="orange"> VoTARO esta hecho para residentes queretanos y require desarrollar habilidades digitales </span> sobre seguridad digital, comunicación y resolución de problemas para poder usarse. Por lo que aunque es abierto para todo el mundo y entidad, es necesario presentar una prueba de conocimiento que compruebe los conocimientos del usuario sobre la web3, las llaves cripto y la ciudad DAO. Si presentas la prueba satisfactoriamente, el contrato Gobernador Alfa depositará 1,000 TARO en tu llave pública y validará tu cuenta para que puedas crear propuestas y votarlas durante 3 meses.
+              La principal diferencia entre la web2 y la web3 es como se identifican a los usuarios. Mientras que en la web2 es necesario dar tus datos personales para validar tu identidad, en la web3 se utiliza pruebas de encriptación para validar la identidad lo que permite crear servicios que no solo funcionen con personas sino que sean capaces de interactuar con otros contratos inteligentes o entidades digitales. <br/><br/><span class="yellow"> VoTARO esta hecho para residentes queretanos y require desarrollar habilidades digitales </span> sobre seguridad digital, comunicación y resolución de problemas para poder usarse. Por lo que aunque es abierto para todo el mundo y entidad, es necesario presentar una prueba de conocimiento que compruebe los conocimientos del usuario sobre la web3, las llaves cripto y la ciudad DAO. Si presentas la prueba satisfactoriamente, el contrato Gobernador Alfa depositará 1,000 TARO en tu llave pública y validará tu cuenta para que puedas crear propuestas y votarlas durante 3 meses.
             </span>
           </div>
         </div>
@@ -636,7 +636,7 @@ const About = () => {
             <li>📑 Descripción</li>
             <li>💸 Presupuesto </li>
           </ol>
-          Una vez que aceptes el envío de tu propuesta desde metamask, se registrará en el contrato Gobernador Alpha y <span class="orange">estará disponible para votar durante 15 días.</span> Durante los 15 días de vigencia, tú y otros usuarios podrán votarla, o puedes votar por las propuestas de otros usuarios si están disponibles.
+          Una vez que aceptes el envío de tu propuesta desde metamask, se registrará en el contrato Gobernador Alpha y <span class="yellow">estará disponible para votar durante 15 días.</span> Durante los 15 días de vigencia, tú y otros usuarios podrán votarla, o puedes votar por las propuestas de otros usuarios si están disponibles.
           
           
            Al expirar el tiempo para votar se aceptará si tiene más votos a favor o será rechazada si tiene más votos en contra o si no recibe ningún voto.
@@ -673,7 +673,7 @@ const About = () => {
         
           <div class="webvs">
           <div class="gray2"><h1>▲ </h1>Compañias tradicionales </div>
-          <div class="orange"><h1>▼ </h1>DAOs </div>
+          <div class="yellow"><h1>▼ </h1>DAOs </div>
           <div class="web2vs">
             <div class="vs"> Centralizada <span class="ustext"> <img src={central} class="about-img"/><br/>Depende de un intermediario.</span></div>
             <div class="vs"> Invasiva <span class="ustext"> <img src={spy} class="about-img"/><br/>Das tus datos personales para usarlo.</span></div>

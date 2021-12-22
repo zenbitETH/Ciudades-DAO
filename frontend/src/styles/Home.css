@@ -16,13 +16,13 @@
   color: #fff;
 }
 
-.orange-lex {
-  color: #FF9400;
+.yellow-lex {
+  color: #F6AF55;
   font-family: "Lexend Deca";
 }
 
-.orange-jos {
-  color: #FF9400;
+.yellow-jos {
+  color: #F6AF55;
   font-family: "ABeeZee";
 }
 
@@ -30,12 +30,9 @@
   color: #01304E;
 }
 
-.orange {
-  color: #FF9400;
-}
 
 .yollow {
-  color: #F2C374;
+  color: #928a7b;
 }
 
 .yollow-text {
@@ -43,19 +40,19 @@
 }
 
 .yollow-lex {
-  color: #F2C374;
+  color: #F6AF55;
   font-family: "Lexend Deca";
 }
 
 .yellow {
-  color: #FAC91a !important;
+  color: #F6AF55 !important;
 }
 
 .yellowr {
   color: #5b5a5f !important;
   text-align: right;
   vertical-align: middle;
-  background-color: #FAC91a;
+  background-color: #F6AF55;
   padding: 1em;
   margin: -.62em -.62em 0 0em;
   border-radius: 0px 20px 0px 20px;
@@ -63,11 +60,11 @@
 }
 
 .yellow-text {
-  color: #dcb31b !important;
+  color: #F6AF55 !important;
 }
 
 .yellow-lex {
-  color: #FAC91a;
+  color: #F6AF55;
   font-family: "Lexend Deca";
 }
 
@@ -94,7 +91,7 @@
 
 .subt {
   text-align: justify !important;
-  color: #FF9400;
+  color: #F6AF55;
 }
 
 .center {
@@ -124,7 +121,7 @@ li {
 
  ol li::before {
   content: counter(li);
-  color: #FF9400;
+  color: #119195;
   display: inline-block;
   width: 1em;
   margin-left: -1.5em;
@@ -145,7 +142,8 @@ li {
 }
 
 body {
-  background-image: linear-gradient(to top, #141e30, #01304E);
+  background-color: #01304E;
+  background-image: linear-gradient(to top, #141e30 40%, #01304E 75%);
   background-size: 200% 200%;
 }
 
@@ -154,7 +152,7 @@ body {
   margin-top: 4em;
   width: 100%;
   font-family: 'Lexend Deca', sans-serif !important;
-  color: #FF9400;
+  color: #119195;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -210,7 +208,7 @@ Nav {
 }
 
 .NavLink:hover {
-  color: #FF9400 !important;
+  color: #F6AF55 !important;
   margin-left: 15px;
   text-align: right;
   justify-content: center !important;
@@ -228,18 +226,20 @@ Nav {
 
 div.dropdown-menu.show {
   text-align: center;
-  background-color: #FF9400;
+  background-color: #F6AF55;
   border-radius: 100px !important;
 }
 div.dropdown-menu.show:hover {
   text-align: center;
-  background-color: #FAC91A;
+  background-color: #119195;
   border-radius: 100px !important;
+  
 }
 
 a.dropdown-item:hover {
-  background-color: #FAC91A;   
+  background-color: #119195;   
   border-radius: 20px !important;
+  color: #fff !important;
 }
 
 /* Home */
@@ -257,7 +257,7 @@ font-size: clamp(1em, -0.975rem + 6.5vw, 1.6rem);
 margin-top: 0.5em;
 font-weight: 300;
 font-family: "ABeeZee";
-color: #FF9400;
+color: #F6AF55;
 }
 
 .grid-block {

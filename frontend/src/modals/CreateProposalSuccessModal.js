@@ -26,7 +26,7 @@ const CreateProposalSuccessModal = (props) => {
       
         
         <h3>
-           Your proposal is ready to be voted, <span class="orange">use your TARO to vote.</span>
+           Your proposal is ready to be voted, <span class="yellow">use your TARO to vote.</span>
           <span class="yellow"> The first 20 proposals will give you 50 TARO each! </span>
           Create more proposals to increase your voting power. 
         </h3>
@@ -57,7 +57,7 @@ const CreateProposalSuccessModal = (props) => {
     >
     <div class="center"><div class="jump"><img src={send} alt="Alert about verification" class="prop-img"/></div></div>
     <h1><div >¡Propuesta enviada! </div></h1><br/>
-    <h3>Tu propuesta esta lista para ser votada<span class="orange"> usa tu TARO para votar. </span>
+    <h3>Tu propuesta esta lista para ser votada<span class="yellow"> usa tu TARO para votar. </span>
       <span class="yellow">¡Las primeras 20 propuestas te darán 50 TARO cada una! </span>
       Crea mas propuestas para incrementar tu poder de voto. 
     </h3>

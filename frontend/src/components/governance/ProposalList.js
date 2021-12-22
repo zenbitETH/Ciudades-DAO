@@ -238,7 +238,7 @@ const ProposalList = () => {
             </div>
           </div>
           <span>{isValidated ? "" : <ValidationRequired />}</span>
-          <h1><span class="orange">Gobernanza Urbana</span></h1>
+          <h1><span class="yellow">Gobernanza Urbana</span></h1>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>          
           <div className= "propgrid">
             <div class="prop-bg"><a href="/createProposal">
@@ -314,7 +314,7 @@ const ProposalList = () => {
           <div className= "valert">
             {isValidated ? "" : <ValidationRequired />}
           </div>
-          <div className= "orangeB">
+          <div className= "yellowB">
             <div className="text-large">Crea una nueva propuesta</div>
             <div className="big-icon">🦸🦸‍♂️</div>
             <div className="main">¡La ciudad te necesita! genera propuestas de actividades, obras públicas o necesidades que hayas identificado en tu comunidad

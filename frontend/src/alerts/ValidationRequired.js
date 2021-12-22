@@ -12,7 +12,7 @@ const ValidationRequired = () => {
       <a href="/quiz" >
         <div className="main">
           <br/><br/>
-        <h1><span id="vote" class="orange">Validate Account</span></h1><br/>
+        <h1><span id="vote" class="yellow">Validate Account</span></h1><br/>
           <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
           <h3 class="white-jos">
             Only validated Querétaro citizens can create new proposals or vote on the available proposals. <br/><br/>
@@ -26,7 +26,7 @@ const ValidationRequired = () => {
       <a href="/quiz" >
         <div className="main">
           <br/><br/>
-        <h1><span id="vote" class="orange">Valida tu cuenta</span></h1><br/>
+        <h1><span id="vote" class="yellow">Valida tu cuenta</span></h1><br/>
           <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
           <h3 class="white-jos">
             Solo las direcciones cripto que hayan sido validadas por VoTARO podrán crear y votar por las propuestas
