@@ -1,6 +1,6 @@
 #quiz {
     color: #ffffff;
-    background: linear-gradient(#2b284a,#11919592, #11919592);
+    background: linear-gradient(#01304E,#11919592, #11919592);
     font-size: 0.9em;
     background-size: 200% 250%;
     padding: 0em 0 0 0em;
@@ -84,12 +84,12 @@
   
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
-    background-color: #ff9500f1;
+    background-color: #F6AF55f1;
   }
   
   /* When the radio button is checked, add a background */
   .container input:checked ~ .checkmark {
-  background: linear-gradient(75deg, #2b284a00, #ff9500d7, #ff9500d7, #ff950069, #2b284a00);
+  background: linear-gradient(75deg, #2b284a00, #F6AF55d7, #F6AF55d7, #F6AF5569, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 3s ease infinite;
   color: white;

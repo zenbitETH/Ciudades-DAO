@@ -206,7 +206,7 @@
     border-width: 0.1em;
     border-style: solid;
     border-color:linear-gradient(45deg, #ffffff, #ffffff);
-    background: linear-gradient(-45deg, #2b284a00, #11919576, #11919576, #2b284a00);
+    background: linear-gradient(45deg, #2b284a00, #11919576, #11919576, #2b284a00);
     background-size: 200% 200%;
     animation: gradient 5s ease infinite;
 }
@@ -223,6 +223,12 @@
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
   .bg-grid {
+    grid-row: span 3;
+    grid-column: span 1;
+    height: auto;
+  }
+
+  .bg-grid0 {
     grid-row: span 3;
     grid-column: span 1;
     height: auto;

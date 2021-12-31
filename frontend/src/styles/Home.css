@@ -197,7 +197,6 @@ ol {
 }
 
 Nav {
-  margin-bottom: 3em !important;
   position: fixed !important;
   font-family: 'Lexend Deca', sans-serif;
 }
@@ -250,6 +249,7 @@ a.dropdown-item:hover {
   color: #ffffff;
   text-align: center;
   position: relative;
+  
 }
 
 .headline-p {
@@ -353,7 +353,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1em, -0.875rem + 6.6vw, 2.55rem)
+  font-size: clamp(1em, -0.875rem + 6.6vw, 2.3rem)
 }
 
 h3 {

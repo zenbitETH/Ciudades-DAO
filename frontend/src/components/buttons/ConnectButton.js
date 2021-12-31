@@ -11,18 +11,13 @@ const ConnectButton = ({handleOnConnect}) => {
   return (
   <span>
     {isEnglish === 'english' ?
-    <div className="prop-wallet" onClick={handleOnConnect}>
-      <a>
-      <div class="dw">Connect your wallet </div>
-       <img src={meta} class="shake2"/>
-      </a>
+    <div class="prop-wallet" onClick={handleOnConnect}>
+      <div class="dw">Connect your web3 key </div>
     </div>
     :
-    <div className="prop-wallet" onClick={handleOnConnect}>
-      <a>
-      <div class="dw">Conecta tu cartera web3 </div>
+    <div class="prop-wallet" onClick={handleOnConnect}>
+      <div class="dw">Conecta tu llave web3 </div>
        <img src={meta} class="shake2"/>
-      </a>
     </div>
 }</span>
   );

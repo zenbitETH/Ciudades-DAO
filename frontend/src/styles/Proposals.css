@@ -30,7 +30,7 @@ Form {
 .form-control:focus-visible {
   border-color: #119195 !important;
   background-color: transparent !important;
-  color: #119195 !important;
+  color: #F6AF55 !important;
   box-shadow: none !important;
 }
 
@@ -64,7 +64,7 @@ input:focus {
 }
 
 select option {
-    background-color: #262341 !important;
+    background-color: #01304E !important;
     
     border-color: transparent !important;
     border: 0 !important;
@@ -92,12 +92,12 @@ select {
 }
 
 select option:checked {
-  background: #ff9500 -webkit-linear-gradient(bottom, #ff9500 0%, #ff9500 100%) !important;
+  background: #119195 -webkit-linear-gradient(bottom, #F6AF55 0%, #F6AF55 100%) !important;
   color: #fff !important;
 }
 
 option:disabled { 
-  color: #9e9e9e !important; 
+  color: #fff !important; 
   border: 0 !important;
 }
 
@@ -148,7 +148,12 @@ option:disabled {
 
 .propsub {
   text-align: left;
-  color: #F6AF55;
+  font-family: "ABeeZee";
+  font-weight: 300;
+}
+
+.propsub:hover {
+  text-align: left;
   font-family: "ABeeZee";
   font-weight: 300;
 }
@@ -163,6 +168,8 @@ option:disabled {
   text-align: left;
   font-size: 1.7em;
   color: #ffffff;
+  
+  max-height: 260%;
 }
 
 .propopt2 {
@@ -214,7 +221,7 @@ option:disabled {
 
 .prop-wallet {
   padding: 1em;
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #F6AF5576, #F6AF5576,#2b284a00, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00,#2b284a00, #11919576, #F6AF5576, #F6AF5576,#11919576, #2b284a00,#2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
   height: 200px;
@@ -233,7 +240,7 @@ option:disabled {
   cursor: pointer;
   border-width: 0em;
   border-style: solid;
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #F6AF5576, #F6AF5576,#2b284a00, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #119195b4, #f6b055b4, #f6b055b4,#119195b4, #2b284a00);
   animation: none;
 }
 
@@ -254,7 +261,7 @@ option:disabled {
   border-width: 0.1em;
   border-style: solid;
   border-color:linear-gradient(45deg, #ffffff, #ffffff);
-  background: linear-gradient(-45deg, #2b284a00, #fac91a78, #fac91a78, #2b284a00);
+  background: linear-gradient(45deg, #2b284a00, #fac91a78, #fac91a78, #2b284a00);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -272,7 +279,7 @@ option:disabled {
 .prop-bg2:hover {
   cursor: pointer;
   border-color:linear-gradient(45deg, #ffffff, #ffffff);
-  background: linear-gradient(-45deg, #2b284a00, #11919576, #11919576, #2b284a00);
+  background: linear-gradient(45deg, #2b284a00, #11919576, #11919576, #2b284a00);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -290,7 +297,26 @@ option:disabled {
 
 .bg-grid:hover {
   cursor: pointer;
-  background: linear-gradient(-45deg,  #ff9500d3, #ff9500d3,#2b284a8f, #2b284a8f);
+  background: linear-gradient(115deg,  #11919576, #11919576,#F6AF55d3, #F6AF55d3);
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+  color: #119195 !important;
+}
+
+.bg-grid0 {
+  padding: 1em;
+  background-color: #00000068;
+  border-radius: 25px;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  border-color: transparent;
+  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
+}
+
+.bg-grid0:hover {
+  cursor: pointer;
+  background: linear-gradient(-115deg,  #11919576, #11919576,#F6AF55d3, #F6AF55d3);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -340,7 +366,7 @@ option:disabled {
   border-width: 0.1em;
   border-style: solid;
   border-color:linear-gradient(45deg, #ffffff, #ffffff);
-  background: linear-gradient(-45deg, #2b284a00, #11919576, #11919576, #2b284a00);
+  background: linear-gradient(45deg, #2b284a00, #11919576, #11919576, #2b284a00);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -357,7 +383,7 @@ option:disabled {
 
 .prop-bgh:hover {
   cursor: pointer;
-  background: linear-gradient(-45deg, #b5342dac, #b5342dac, #395b2c, #395b2c);
+  background: linear-gradient(45deg, #b5342dac, #b5342dac, #395b2c, #395b2c);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -377,7 +403,7 @@ option:disabled {
 .prop-bgv:hover {
   border-width: 0.1em;
   border-style: solid;
-  background: linear-gradient(-45deg, #2b284a00, #00aebea0, #00aebea0, #2b284a00);
+  background: linear-gradient(45deg, #2b284a00, #00aebea0, #00aebea0, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
 }
@@ -396,9 +422,10 @@ option:disabled {
 
 .prop-bgr:hover {
   border-color: transparent;
-  background: linear-gradient(-45deg,  #F6AF55, #F6AF55,#01304E, #01304E);
+  background: linear-gradient(-45deg,  #F6AF55, #F6AF55,#00aebeb4, #00aebeb4);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
+  color: #e9e9e9 !important;
 }
 
 .prop-bgf {
@@ -599,7 +626,7 @@ option:disabled {
 }
 
 .prop-hl {
-  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
+  font-size: clamp(1em, -1.2em + 2.1vw, 2.5rem);
   font-weight: 300;
   color: #ffffff;
   text-align: justify ;

@@ -26,15 +26,15 @@ import prop from '../assets/prop.png';
 import past from '../assets/past.png';
 import verify from '../assets/verify.png';
 import vote from '../assets/vote.png';
-
+import taro from '../assets/taro.png';
 
 function Home() {
   let [ethersProvider, setEthersProvider] = useState();
   let [isConnecting, setIsConnecting] = useState();
-  let [isMetamastInstalled, setIsMetamaskInstalled] = useState();
+  let [isMetamaskInstalled, setIsMetamaskInstalled] = useState();
 //let [isSkaleSwitched, setIsSkaleSwitched] = useState();
   let [currentMetaMaskAccount, setCurrentMetaMaskAccount] = useState(null);
-  let [userBalance, setUserBalance] = useState();
+  var [userBalance, setUserBalance] = useState();
 //let [isConnectingToSkale, setIsConnectingToSkale] = useState();
 
   let {setIsValidated} = useContext(ValidationRequiredContext);
@@ -264,7 +264,6 @@ function Home() {
       setGovernorAlpha(_governorAlpha);
     } catch (error) {
       console.error(error);
-      
     };
   };
 
@@ -273,25 +272,17 @@ function Home() {
       {isEnglish === 'english' ?
           <div class="App">
             <div class="headline">
-              <h1>Querétaro City DAO </h1>
-              <p class="headline-p">Urban Governance on Ethereum Blockchain.</p>
+              <h1 class="yellow">VoTARO Ciudad DAO®</h1>
+              <h2>Querétaro on Ethereum</h2>
             </div>
-            <div class="center">
-            {!isMetamastInstalled ?
-                    <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                    <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-                }
-                {/*isSkaleSwitched ? '' : isConnectingToSkale ?
-                  <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-                */}
-            </div>
+            
             <div class="grid-block">
               <div>
                 {isConnected ?
                 <section id="">
                   <div class="homegrid">
                     <div class="bg-grid"><a href="/createProposal">
-                      <img src={reward} class="homevan"/> 
+                      <img src={taro} class="homevan"/> 
                       <div class="propsub">You have</div>
                       <div class="propopt2"> {userBalance} TARO</div>
                     </a></div>
@@ -300,10 +291,10 @@ function Home() {
                       <div class="propsub">Get up to 1,000 TARO</div>
                       <div class="propopt">Validate</div>
                     </a></div>
-                    <div class="bg-grid"><a href="/ProposalList">
+                    <div class="bg-grid0"><a href="/ProposalList">
                       <img src={past} class="homevan"/> 
                       <div class="propsub">Vote with your TARO</div>
-                      <div class="propopt">City DAO</div>
+                      <div class="propopt">Qurétaro DAO</div>
                     </a></div>
                     <div class="bg-reward"><a href="/createProposal">
                       <img src={prop} class="ribvan"/> 
@@ -311,25 +302,19 @@ function Home() {
                       <div class="propopt">Propose</div>
                     </a></div>
                     <div class="prop-bgr"><a href="/About">
-                      <img src={vote} class="ribvan"/>
+                      <img src={reward} class="ribvan"/>
                       <div class="propsub">Learn +</div>
                       <div class="propopt">Docs</div>
                     </a></div>
-                    
                   </div>
                 </section>
                 :
                 <section>
                   <div class="govgrid">
-                    <div class="prop-bgr"><a href="/About">
+                    <div class="prop-bgr"><a href="/About" class="fit">
                         <img src={prop} class="ribvan"/> 
-                        <div class="propsub">What is a VoTARO?</div>
+                        <div class="propsub">No web3 key?</div>
                         <div class="propopt">Start here</div>
-                      </a></div>
-                      <div class="prop-bgr"><a href="/About">
-                        <img src={vote} class="ribvan"/>
-                        <div class="propsub">Urban Governance</div>
-                        <div class="propopt">City DAO</div>
                       </a></div>
                   </div>  
                 </section>      
@@ -340,12 +325,12 @@ function Home() {
       :
       <div class="App">
           <div class="headline">
-            <h1>La DAO de Querétaro </h1>
-            <p class="headline-p">Aplicación de consenso urbano para un presupuesto descentralizado</p>
+            <h1>VoTARO Ciudad DAO®</h1>
+            <p class="headline-p">Querétaro en ethereum</p>
           </div>
           
             <div class="center">     
-              {!isMetamastInstalled ?
+              {!isMetamaskInstalled ?
                   <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
                   <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
               }
@@ -361,7 +346,7 @@ function Home() {
               <section>
                 <div class="homegrid">
                   <div class="bg-grid"><a href="/createProposal">
-                    <img src={reward} class="homevan"/> 
+                    <img src={taro} class="homevan"/> 
                     <div class="propsub">Tienes</div>
                     <div class="propopt2"> {userBalance} TARO</div>
                   </a></div>    
@@ -370,7 +355,7 @@ function Home() {
                     <div class="propsub">Obtén hasta 1,000 TARO</div>
                     <div class="propopt">Validar</div>
                   </a></div>
-                  <div class="bg-grid"><a href="/ProposalList">
+                  <div class="bg-grid0"><a href="/ProposalList">
                     <img src={past} class="homevan"/> 
                     <div class="propsub">Usa tu TARO para votar</div>
                     <div class="propopt">Ciudad DAO</div>
@@ -384,7 +369,7 @@ function Home() {
                     <img src={reward} class="ribvan"/>
                     <div class="propsub">Conoce la ciudad DAO</div>
                     <div class="propopt">+ Info</div>
-                  </a></div>  
+                  </a></div>
                 </div>
               </section>
               :
@@ -401,7 +386,7 @@ function Home() {
                   <div class="propopt">Ciudad DAO</div>
                 </a></div>
                 </div>
-              </section>      
+              </section>
               }
             </div>
           </div>
@@ -414,3 +399,4 @@ function Home() {
 
 
 export default Home;
+
