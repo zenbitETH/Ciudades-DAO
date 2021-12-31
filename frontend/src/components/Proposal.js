@@ -155,14 +155,14 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
          <div class="yellow">made by {proposer}</div><br/>
          <div class="vote-grid">
            {!hasVoted?
-           <a class="prop-bgf" onClick={handleOnClickFor}><h1 class="votef">Vote <br/>for</h1></a>
+           <a class="prop-bgf" onClick={handleOnClickFor}><h1 class="votef">Vote for</h1></a>
            :
-           <div class="prop-bgf2"><h2>For:<br/><br/>{forVotes}<br/><br/>TARO</h2></div>    
+           <div class="prop-bgf2"><h2>For:<br/>{forVotes} TARO</h2></div>    
            }
            {!hasVoted ?
            <a class="prop-bga" onClick={handleOnClickAgainst}><h1 class="votef">Vote against</h1></a>
            : 
-           <div class="prop-bga2"><h2> Against:<br/><br/>{againstVotes}<br/><br/> TARO</h2></div>
+           <div class="prop-bga2"><h2> Against:<br/>{againstVotes}TARO</h2></div>
            }
          </div>    
        </div>

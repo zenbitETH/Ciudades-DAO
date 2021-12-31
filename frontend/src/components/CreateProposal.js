@@ -225,7 +225,7 @@ function myFunction() {
       
       <Form autocomplete="off" id="margin">
           <Form.Group as={Row} controlId="formTitle">
-          <Form.Label  >
+          <Form.Label>
             1. Proposal Title
             </Form.Label>
             <Form.Control type="text"
@@ -240,108 +240,22 @@ function myFunction() {
               <Form.Control as="select" data-live-search="true"
                 onChange={handleOnChangeNeighborhood}>
                 <option disabled selected>📍 Where will the proposal take place</option>
-                <optgroup label="Del. Felipe Carrillo Puerto Región 7">
-                  <option>Cerro Prieto</option>
-                  <option>El Patol</option>
-                  <option>El Pie</option>
-                  <option>El Transito</option>
-                  <option>La Purisima</option>
-                  <option>La Tinaja de la Estancia</option>
-                  <option>San Isidro el Alto</option>
-                </optgroup>
- 
-                <optgroup label="Del. Felipe Carrillo Puerto Región 8">
-                  <option>El Nabo</option>
-                  <option>El Zapote</option>
-                  <option>Huertas La Joya</option>
-                  <option>Jardines de Azucenas</option>
-                  <option>La Palma</option>
-                  <option>Las Camelinas</option>
-                  <option>Laderas de San Pedro / Prados del Rincon</option>
-                  <option>Mompani</option>
-                  <option>Patria Nueva</option>
-                  <option>Puerta Navarra</option>
-                  <option>Puerta del Sol</option>
-                  <option>Puerta Verona</option>
-                  <option>Rancho San Pedro</option>
-                  <option>Santo Niño de Praga</option>
-                  <option>Tenochtitlan</option>
-                  <option>Tlacote el Alto</option>
-                  <option>Tlacote el Bajo</option>
-                  <option>Valle de Santiago</option>
-                  <option>Villa Real </option>
-                  <option>Viñedos</option>
-                </optgroup>
-
-                <optgroup label="Del. Felipe Carrillo Puerto Región 9">
-                  <option>5 de Febrero</option>
-                  <option>Campo Militar</option>
-                  <option>Comisión Estatal de Aguas</option>
-                  <option>Demetrio Vallejo</option>
-                  <option>Desarrollo Especial</option>
-                  <option>Ejido Modelo</option>
-                  <option>Ensueño</option>
-                  <option>El Rosario</option>
-                  <option>Eucaliptos</option>
-                  <option>Fraccionamiento Carolina</option>
-                  <option>Ferrocarrileros</option>
-                  <option>Jardines del Valle</option>
-                  <option>José María Arteaga</option>
-                  <option>La Aurora</option>
-                  <option>La Carambada</option>
-                  <option>La Capilla</option>
-                  <option>Las Flores</option>
-                  <option>La Sierrita</option>
-                  <option>Parque La Gloria</option>
-                  <option>Prados de la Capilla</option>
-                  <option>Residencial Italia</option>
-                  <option>Residencial Galindas</option>
-                  <option>Residencial Gema</option>
-                  <option>Rayito</option>
-                  <option>Rinconada La Capilla</option>
-                  <option>Rinconada Santa Anita</option>
-                  <option>Santa Anita</option>
-                  <option>San Antonio del Maurel</option>
-                  <option>San Antonio de la Punta</option>
-                  <option>Santa María Magdalena</option>
-                  <option>Santiago</option>
-                  <option>Villas Las Arboledas</option>
-                  <option>Virreyes</option>
-                  <option>Zona Industrial</option>
-                  <option>Ampolletas</option>
-                </optgroup>
-                
-                <optgroup label="Del. Felipe Carrillo Puerto Región 10">
-                  <option>Arcangel</option>
-                  <option>Aduana / Vías</option>
-                  <option>Alborada</option>
-                  <option>Bosques del Chamisal</option>
-                  <option>Bosques del Sol</option>
-                  <option>Carrillo</option>
-                  <option>El Tintero</option>
-                  <option>El Higo</option>
-                  <option>El Mirador</option>
-                  <option>El Sol</option>
-                  <option>El Progreso</option>
-                  <option>Ex-Hacienda "El Tintero"</option>
-                  <option>Felipe Carrillo Puerto</option>
-                  <option>Las Teresas</option>
-                  <option>Los Laureles</option>
-                  <option>La Luna</option>
-                  <option>Rancho Bellavista</option>
-                  <option>San Diego</option>
-                  <option>San Sebastián</option>
-                  <option>Santa Mónica</option>
-                  <option>Santa Mónica 2</option>
-                  <option>Solidaridad 90</option>
-                  <option>Tabachines</option>
-                  <option>Tonatiuh 1</option>
-                  <option>Tonatiuh Secc. 2</option>
-                  <option>Tonatiuh 3</option>
-                  <option>Tonatiuh Secc. 4</option>
-                  <option>Valle de San Pedro</option>
-                  <option>Valle el Mezquital</option>
-                </optgroup> 
+                  <option>City Hall</option>
+                  <option>Street</option>
+                  <option>Bus Stop</option>
+                  <option>Church</option>
+                  <option>Police Station</option>
+                  <option>Firemen Station</option>
+                  <option>University</option>
+                  <option>Parks</option>
+                  <option>Art Gallery</option>
+                  <option>Market</option>
+                  <option>Food place</option>
+                  <option>Industrial Park</option>
+                  <option>Co-working</option>
+                  <option>Police Station</option>
+                  <option>Web</option>
+                  <option>DAO</option>
               </Form.Control>
           </Form.Group>
 
@@ -354,8 +268,15 @@ function myFunction() {
                 <option disabled selected>⚙️ Select the type of acitivity</option>
                 <option>Face-to-face event</option>
                 <option>Online event</option>
+                <option>Ask for maintainance</option>
+                <option>Buy</option>
+                <option>Sell</option>
+                <option>Offer service</option>
+                <option>Offer digital talent</option>
+                <option>Offer industrial talent</option>
+                <option>Create Art</option>
+                <option>Create digital Content</option>
                 <option>Mixed event</option>
-                <option>Public Work</option>
             </Form.Control>
           </Form.Group>
 
@@ -366,10 +287,18 @@ function myFunction() {
             <Form.Control as="select" class="selectpicker show-tick form-control"
               onChange={handleOnChangePersonInCharge}>
               <option disabled selected>🦸 Who will do the proposal?</option>
-              <option>Citizens</option>
-              <option>Government</option>
-              <option>Organization or group</option>
-              <option>Other (especify in description)</option>
+              <option>Public Worker / Government</option>
+              <option>Citizen</option>
+              <option>Artist</option>
+              <option>Pet lover</option>
+              <option>Scholar</option>
+              <option>Athlete</option>
+              <option>Chef</option>
+              <option>Industrial Talent</option>
+              <option>Merchant</option>
+              <option>Digital Creator</option>
+              <option>Developer</option>
+              
             </Form.Control>
           </Form.Group>
 
@@ -460,108 +389,22 @@ function myFunction() {
                 <Form.Control as="select" data-live-search="true"
                   onChange={handleOnChangeNeighborhood}>
                   <option disabled selected>📍 ¿Dónde es la propuesta?</option>
-                  <optgroup label="Del. Felipe Carrillo Puerto Región 7">
-                    <option>Cerro Prieto</option>
-                    <option>El Patol</option>
-                    <option>El Pie</option>
-                    <option>El Transito</option>
-                    <option>La Purisima</option>
-                    <option>La Tinaja de la Estancia</option>
-                    <option>San Isidro el Alto</option>
-                  </optgroup>
-          
-                  <optgroup label="Del. Felipe Carrillo Puerto Región 8">
-                    <option>El Nabo</option>
-                    <option>El Zapote</option>
-                    <option>Huertas La Joya</option>
-                    <option>Jardines de Azucenas</option>
-                    <option>La Palma</option>
-                    <option>Las Camelinas</option>
-                    <option>Laderas de San Pedro / Prados del Rincon</option>
-                    <option>Mompani</option>
-                    <option>Patria Nueva</option>
-                    <option>Puerta Navarra</option>
-                    <option>Puerta del Sol</option>
-                    <option>Puerta Verona</option>
-                    <option>Rancho San Pedro</option>
-                    <option>Santo Niño de Praga</option>
-                    <option>Tenochtitlan</option>
-                    <option>Tlacote el Alto</option>
-                    <option>Tlacote el Bajo</option>
-                    <option>Valle de Santiago</option>
-                    <option>Villa Real </option>
-                    <option>Viñedos</option>
-                  </optgroup>
-          
-                  <optgroup label="Del. Felipe Carrillo Puerto Región 9">
-                    <option>5 de Febrero</option>
-                    <option>Campo Militar</option>
-                    <option>Comisión Estatal de Aguas</option>
-                    <option>Demetrio Vallejo</option>
-                    <option>Desarrollo Especial</option>
-                    <option>Ejido Modelo</option>
-                    <option>Ensueño</option>
-                    <option>El Rosario</option>
-                    <option>Eucaliptos</option>
-                    <option>Fraccionamiento Carolina</option>
-                    <option>Ferrocarrileros</option>
-                    <option>Jardines del Valle</option>
-                    <option>José María Arteaga</option>
-                    <option>La Aurora</option>
-                    <option>La Carambada</option>
-                    <option>La Capilla</option>
-                    <option>Las Flores</option>
-                    <option>La Sierrita</option>
-                    <option>Parque La Gloria</option>
-                    <option>Prados de la Capilla</option>
-                    <option>Residencial Italia</option>
-                    <option>Residencial Galindas</option>
-                    <option>Residencial Gema</option>
-                    <option>Rayito</option>
-                    <option>Rinconada La Capilla</option>
-                    <option>Rinconada Santa Anita</option>
-                    <option>Santa Anita</option>
-                    <option>San Antonio del Maurel</option>
-                    <option>San Antonio de la Punta</option>
-                    <option>Santa María Magdalena</option>
-                    <option>Santiago</option>
-                    <option>Villas Las Arboledas</option>
-                    <option>Virreyes</option>
-                    <option>Zona Industrial</option>
-                    <option>Ampolletas</option>
-                  </optgroup>
-                  
-                  <optgroup label="Del. Felipe Carrillo Puerto Región 10">
-                    <option>Arcangel</option>
-                    <option>Aduana / Vías</option>
-                    <option>Alborada</option>
-                    <option>Bosques del Chamisal</option>
-                    <option>Bosques del Sol</option>
-                    <option>Carrillo</option>
-                    <option>El Tintero</option>
-                    <option>El Higo</option>
-                    <option>El Mirador</option>
-                    <option>El Sol</option>
-                    <option>El Progreso</option>
-                    <option>Ex-Hacienda "El Tintero"</option>
-                    <option>Felipe Carrillo Puerto</option>
-                    <option>Las Teresas</option>
-                    <option>Los Laureles</option>
-                    <option>La Luna</option>
-                    <option>Rancho Bellavista</option>
-                    <option>San Diego</option>
-                    <option>San Sebastián</option>
-                    <option>Santa Mónica</option>
-                    <option>Santa Mónica 2</option>
-                    <option>Solidaridad 90</option>
-                    <option>Tabachines</option>
-                    <option>Tonatiuh 1</option>
-                    <option>Tonatiuh Secc. 2</option>
-                    <option>Tonatiuh 3</option>
-                    <option>Tonatiuh Secc. 4</option>
-                    <option>Valle de San Pedro</option>
-                    <option>Valle el Mezquital</option>
-                  </optgroup> 
+                  <option> Ayuntamiento </option>
+                  <option> Calle </option>
+                  <option> Parada de autobús </option>
+                  <option> Iglesia </option>
+                  <option> Estación de policia </option>
+                  <option> Estación de Bomberos </option>
+                  <option> Universidad </option>
+                  <option> Parque </option>
+                  <option> Galería de arte </option>
+                  <option> Mercado </option>
+                  <option> Lugar de comida </option>
+                  <option> Parque Industrial </option>
+                  <option> Co-working </option>
+                  <option> Comisaría </option>
+                  <option> Web </option>
+                  <option> DAO </option>
                 </Form.Control>
             </Form.Group>
           
@@ -572,10 +415,17 @@ function myFunction() {
               <Form.Control as="select" data-live-search="true"
                 onChange={handleOnChangeTypeOfAction}>
                   <option disabled selected>⚙️ Selecciona el tipo de actividad</option>
-                  <option>Evento presencial</option>
-                  <option>Evento en linea</option>
-                  <option>Evento mixto</option>
-                  <option>Obra Pública</option>
+                 <option> Evento presencial </option>
+                 <option> Evento en línea </option>
+                 <option> Solicitar mantenimiento </option>
+                 <option> Comprar </option>
+                 <option> Vender </option>
+                 <option> Ofrecer servicio </option>
+                 <option> Ofrezca talento digital </option>
+                 <option> Ofrecer talento industrial </option>
+                 <option> Crear arte </option>
+                 <option> Crear contenido digital </option>
+                 <option> Evento mixto </option>
               </Form.Control>
             </Form.Group>
           
@@ -585,11 +435,18 @@ function myFunction() {
               </Form.Label>
               <Form.Control as="select" class="selectpicker show-tick form-control"
                 onChange={handleOnChangePersonInCharge}>
-                <option disabled selected>🦸 ¿Quién tiene que hacerlo?</option>
-                <option>Ciudadanos</option>
-                <option>Gobierno</option>
-                <option>Organismo o asociación</option>
-                <option>Otro (especifica en descripción) </option>
+               <option disabled selected>🦸 ¿Quién tiene que hacerlo?</option>
+               <option> Trabajador público / Gobierno </option>
+               <option> Ciudadano </option>
+               <option> Artista </option>
+               <option> Amante de las mascotas </option>
+               <option> Académico </option>
+               <option> Atleta </option>
+               <option> Chef </option>
+               <option> Talento industrial </option>
+               <option> Comerciante </option>
+               <option> Creador digital </option>
+               <option> Desarrollador </option>
               </Form.Control>
             </Form.Group>
           
