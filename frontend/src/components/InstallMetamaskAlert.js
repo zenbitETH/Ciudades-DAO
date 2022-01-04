@@ -12,22 +12,13 @@ const InstallMetamaskAlert = () => {
       {isEnglish === 'english' ?
       <div class="no-wallet" >
          <a href="https://www.metamask.io/">
-          <div class="dw">Touch to download a wallet
-            <div class="jos"><span class="white">You don't have a crypto address</span></div>
-            <img src={meta} class="shake"/>
-          </div>
-          
+          <div class="">You don't have a crypto address</div>
+          <div class="">Touch to download a wallet</div>
         </a>
       </div>
     :
     <div class="no-wallet" >
-       <a href="https://www.metamask.io/">
-        <div class="dw">Toca y descarga una cartera web3
-          <div class="jos"><span class="white">No tienes una dirección cripto</span></div>
-          <img src={meta} class="shake"/>
-        </div>
-        
-      </a>
+      
     </div>
     }</span>
   );

@@ -10,14 +10,14 @@ const ConnectingButton = () => {
   return (
     <span>
     {isEnglish === 'english' ?
-    <div class="prop-wallet">
-      <div class="spinner-grow" role="status"></div>
-      <div class="center"><span class="cw">Connecting...</span></div>
+    <div class="hudWallet">
+      <span class="spinner-grow" role="status"></span>
+      <span class="cw">Connecting...</span>
     </div>
     :
-    <div class="prop-wallet">
-      <div class="spinner-grow" role="status"></div>
-      <div class="center"><span class="cw">Conectando...</span></div>
+    <div class="">
+      <div class="" role=""></div>
+      <div class=""><span class="cw">Conectando...</span></div>
     </div>
     }
     </span>
