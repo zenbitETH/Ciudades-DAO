@@ -19,6 +19,7 @@ import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
 
+
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 
@@ -29,7 +30,7 @@ import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-
 const Header = () => {
   let [isEnglish, setLoc] = useContext(LanguageContext);
 
-  const handleOnSelect = () => {
+  const handleOnClick = () => {
     setLoc();
     window.location.reload();
   };
@@ -41,7 +42,7 @@ const Header = () => {
   var [userBalance, setUserBalance] = useState();
 //let [isConnectingToSkale, setIsConnectingToSkale] = useState();
 
-  let {setIsValidated} = useContext(ValidationRequiredContext);
+  let {isValidated,setIsValidated} = useContext(ValidationRequiredContext);
   let {setTaro} = useContext(TaroContext);
   let {setGovernorAlpha} = useContext(GovernorAlphaContext);
   let {setEthersSigner, provider, setProvider} = useContext(EthersContext);
@@ -226,42 +227,39 @@ const Header = () => {
   <div>
       {isEnglish === 'english' ?
 
-        <div >
-         
-          <Navbar collapseOnSelect fixed="top" expand="sm">
-            <Navbar.Brand href="/Home"><img src={logo} alt="VoTARO" width="200px" />
-            </Navbar.Brand>
-            <Navbar.Toggle className="navbar-dark" aria-controls="responsive-navbar-nav"/>
-            <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
-              <Nav>
-                <NavItem class="white"> ☀️ {userBalance} TARO</NavItem>
-                <div class="center">
-                {!isMetamaskInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-                }
-                </div>
-              </Nav>
-              
-                
-            </Navbar.Collapse>
-          </Navbar> 
+      <div class="center">
+        <nav class="topHud">
+          {isConnected ? 
+          <div class="topGrid">
+            <div class="hud0">{userBalance} ☀️ TARO</div>
+            <div>{isValidated ? <div class="hudV"><div class="hudLevel">🦸🦸‍♂️ DAO Roles</div></div> : <div class="hudU">⚠️Validate</div>}</div>
+          </div>: 
+          <div>
+            {!isMetamaskInstalled ?
+              <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+              <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+            }
+          </div> }                
+        </nav>
+        <nav class="bottomHud">
+          <div class="hud1" to="/About">📚Docs</div>
+          <div class="hud2" to="/About">🤝🏻Community</div>
+          <div class="hud3"onClick={handleOnClick} >🌐Español</div>
+        </nav>
       </div>
       :
       <div>
-        <Navbar className="Nav" fixed="top" expand="sm" >
-        <Navbar.Brand href="/Home"><img src={logo} alt="VoTARO" width="200px" />
-            </Navbar.Brand>
-
-          <Navbar.Toggle className="navbar-dark" aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
+        <Navbar className="Nav" fixed="top" expand="sm">
+        <Navbar.Brand href="/Home"><img src={logo} alt="VoTARO" width="200px"/></Navbar.Brand>
+          <Navbar.Toggle className="navbar-dark"/>
+          <Navbar.Collapse className="justify-content-end">
             <Nav>
               <NavLink className="NavLink" to="/Quiz">✔️ Validar</NavLink>
               <NavLink className="NavLink" to="/CreateProposal">💡 Proponer</NavLink>
               <NavLink className="NavLink" to="/ProposalList">🗳️ Votar</NavLink>
             </Nav>
             <NavDropdown drop="down" title="🌐 Idioma">
-              <NavDropdown.Item className="language" onSelect={handleOnSelect}>Inglés</NavDropdown.Item>
+              <NavDropdown.Item className="language" onSelect={handleOnClick}>Inglés</NavDropdown.Item>
             </NavDropdown>
           </Navbar.Collapse>
           </Navbar>
