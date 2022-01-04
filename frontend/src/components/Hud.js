@@ -226,7 +226,6 @@ const Header = () => {
   return (
   <div>
       {isEnglish === 'english' ?
-
       <div class="center">
         <nav class="topHud">
           {isConnected ? 
@@ -248,22 +247,26 @@ const Header = () => {
         </nav>
       </div>
       :
-      <div>
-        <Navbar className="Nav" fixed="top" expand="sm">
-        <Navbar.Brand href="/Home"><img src={logo} alt="VoTARO" width="200px"/></Navbar.Brand>
-          <Navbar.Toggle className="navbar-dark"/>
-          <Navbar.Collapse className="justify-content-end">
-            <Nav>
-              <NavLink className="NavLink" to="/Quiz">✔️ Validar</NavLink>
-              <NavLink className="NavLink" to="/CreateProposal">💡 Proponer</NavLink>
-              <NavLink className="NavLink" to="/ProposalList">🗳️ Votar</NavLink>
-            </Nav>
-            <NavDropdown drop="down" title="🌐 Idioma">
-              <NavDropdown.Item className="language" onSelect={handleOnClick}>Inglés</NavDropdown.Item>
-            </NavDropdown>
-          </Navbar.Collapse>
-          </Navbar>
-        </div>
+      <div class="center">
+        <nav class="topHud">
+          {isConnected ? 
+          <div class="topGrid">
+            <div class="hud0"><a href='/Home' class="hudBalance">{userBalance} ☀️ TARO</a></div>
+            <div>{isValidated ? <div class="hudV"><div class="hudLevel">🦸🦸‍♂️ Roles DAO </div></div> : <div class="hudU"><a href='/Quiz'>⚠️Validar</a></div>}</div>
+          </div>: 
+          <div>
+            {!isMetamaskInstalled ?
+              <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+              <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+            }
+          </div> }                
+        </nav>
+        <nav class="bottomHud">
+          <div class="hud1" ><a href="/About" class="hudBalance">📚Docs</a></div>
+          <div class="hud2" ><a href="/About" class="hudBalance">🤝🏻Comunidad</a></div>
+          <div class="hud3"onClick={handleOnClick} >🌐English</div>
+        </nav>
+      </div>
       }
     </div>
   );

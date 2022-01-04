@@ -10,11 +10,11 @@ const ConnectButton = ({handleOnConnect}) => {
   <span>
     {isEnglish === 'english' ?
     <div class="hudWallet" onClick={handleOnConnect}>
-      <div class="dw">Connect your web3 wallet </div>
+      <div class="dw">Connect your web3 wallet</div>
     </div>
     :
-    <div class="prop-wallet" onClick={handleOnConnect}>
-      <div class="dw">Conecta tu llave web3 </div>
+    <div class="hudWallet" onClick={handleOnConnect}>
+      <div class="dw">Conecta tu llave web3</div>
     </div>
 }</span>
   );

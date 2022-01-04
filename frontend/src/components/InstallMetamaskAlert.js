@@ -1,8 +1,5 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
-import meta from '../assets/meta.svg';
-
-
 
 const InstallMetamaskAlert = () => {
   let [isEnglish] = useContext(LanguageContext);
@@ -12,14 +9,17 @@ const InstallMetamaskAlert = () => {
       {isEnglish === 'english' ?
       <div class="no-wallet" >
          <a href="https://www.metamask.io/">
-          <div class="">You don't have a crypto address</div>
-          <div class="">Touch to download a wallet</div>
+          <div class="">You don't have a web3 wallet</div>
+          <div class="">Touch to download</div>
         </a>
       </div>
     :
     <div class="no-wallet" >
-      
-    </div>
+    <a href="https://www.metamask.io/">
+     <div class="">No tienes una llave web3</div>
+     <div class="">Toca para descargar y crear una</div>
+   </a>
+ </div>
     }</span>
   );
 };

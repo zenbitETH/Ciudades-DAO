@@ -15,9 +15,9 @@ const ConnectingButton = () => {
       <span class="cw">Connecting...</span>
     </div>
     :
-    <div class="">
-      <div class="" role=""></div>
-      <div class=""><span class="cw">Conectando...</span></div>
+    <div class="hudWallet">
+      <span class="spinner-grow" role="status"></span>
+      <span class="cw">Conectando...</span>
     </div>
     }
     </span>

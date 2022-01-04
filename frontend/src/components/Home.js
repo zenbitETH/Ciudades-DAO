@@ -254,8 +254,6 @@ function Home() {
         if(_userBalance) {
           setUserBalance(_userBalance.toString());
         };
-      
-        
 
       const _governorAlpha = new ethers.Contract(
         governorAlphaAddress.GovernorAlpha,
@@ -279,35 +277,35 @@ function Home() {
                   <div class="homegrid">
                   <a class="bg-grid0" href="https://faucet.ropsten.be/">
                       <img src={past} class="homevan"/> 
-                      <div class="propsub">Get ETH on</div>
-                      <div class="propopt">1 Testnet Faucet </div>
+                      <div class="propsub">1 Get </div>
+                      <div class="propopt">Testnet ETH </div>
                     </a>
                     <a class="bg-reward"href="/Quiz">
                       <img src={verify} class="ribvan"/>
-                      <div class="propsub">Get up to 1,000 TARO</div>
-                      <div class="propopt">2 Validate</div>
+                      <div class="propsub">2 Get up to 1,000 TARO</div>
+                      <div class="propopt">Validate</div>
                     </a>
                     {isValidated ? <a class="bg-reward" href="/createProposal">
                       <img src={prop} class="ribvan"/> 
-                      <div class="propsub">Get 50 TARO per proposal</div>
-                      <div class="propopt">3 Propose</div>
+                      <div class="propsub">3 Get 50 TARO per proposal</div>
+                      <div class="propopt">Propose</div>
                     </a>
                      : <div class="bg-blocked" >
                      <img src={prop} class="ribvan"/> 
-                     <div class="propsub">Blocked</div>
-                     <div class="propopt">3 Propose</div>
+                     <div class="propsub">3 Validate to unlock</div>
+                     <div class="propopt">Propose</div>
                    </div>}
                    {isValidated ?
                   <a class="bg-grid0" href="/ProposalList">
                       <img src={past} class="homevan"/> 
-                      <div class="propsub">Vote with your TARO</div>
-                      <div class="propopt">4 Qurétaro DAO</div>
+                      <div class="propsub">4 Vote with your TARO</div>
+                      <div class="propopt">Qurétaro DAO</div>
                     </a>
                     :
                     <div class="bg-blocked" >
                       <img src={past} class="homevan"/> 
-                      <div class="propsub">Blocked</div>
-                      <div class="propopt">4 Qurétaro DAO</div>
+                      <div class="propsub">4 Validate to unlock</div>
+                      <div class="propopt">Qurétaro DAO</div>
                     </div>}
                   </div>
                   
@@ -319,14 +317,13 @@ function Home() {
                     <h1 class="yellow">VoTARO Ciudad DAO®</h1>
                     <h2>Querétaro on Ethereum</h2>
                   </div>
-                  <div class="govgrid">
-                    
-                    <div class="prop-bgr"><a href="/About" class="fit">
+                  <div class="grid-blocked">
+                    <a href="/About" class="bg-start">
                         <img src={prop} class="ribvan"/> 
                         <div class="propsub">No web3 key?</div>
                         <div class="propopt">Start here</div>
-                      </a></div>
-                  </div>  
+                    </a></div>
+                
                 </section>      
                 }
               </div>
@@ -334,73 +331,65 @@ function Home() {
         </div>
       :
       <div class="App">
-          <div class="headline">
-            <h1>VoTARO Ciudad DAO®</h1>
-            <p class="headline-p">Querétaro en ethereum</p>
-          </div>
-          
-            <div class="center">     
-              {!isMetamaskInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
-              {/*isSkaleSwitched ? '' : isConnectingToSkale ?
-                <SkaleSwitch /> : <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-              */}
-            </div>            
             <div class="grid-block">
-            
-            
-            <div>
-              {isConnected ?
-              <section>
+              <div>
+                {isConnected ?
+                <section id="">
                 <div class="homegrid">
-                  <div class="bg-grid"><a href="/createProposal">
-                    <img src={taro} class="homevan"/> 
-                    <div class="propsub">Tienes</div>
-                    <div class="propopt2"> {userBalance} TARO</div>
-                  </a></div>    
-                  <div class="bg-reward"><a href="/Quiz">
-                    <img src={verify} class="ribvan"/>
-                    <div class="propsub">Obtén hasta 1,000 TARO</div>
-                    <div class="propopt">Validar</div>
-                  </a></div>
-                  <div class="bg-grid0"><a href="/ProposalList">
+                <a class="bg-grid0" href="https://faucet.ropsten.be/">
                     <img src={past} class="homevan"/> 
-                    <div class="propsub">Usa tu TARO para votar</div>
-                    <div class="propopt">Ciudad DAO</div>
-                  </a></div>
-                  <div class="bg-reward"><a href="/createProposal">
+                    <div class="propsub">1 Obtén </div>
+                    <div class="propopt">ETH de prueba </div>
+                  </a>
+                  <a class="bg-reward"href="/Quiz">
+                    <img src={verify} class="ribvan"/>
+                    <div class="propsub">2 Obtén hasta 1,000 TARO</div>
+                    <div class="propopt">Validar</div>
+                  </a>
+                  {isValidated ? <a class="bg-reward" href="/createProposal">
                     <img src={prop} class="ribvan"/> 
-                    <div class="propsub">50 TARO por propuesta </div>
+                    <div class="propsub">3 Obtén 50 TARO por propuesta</div>
                     <div class="propopt">Proponer</div>
-                  </a></div>
-                  <div class="prop-bgr"><a href="/About">
-                    <img src={reward} class="ribvan"/>
-                    <div class="propsub">Conoce la ciudad DAO</div>
-                    <div class="propopt">+ Info</div>
-                  </a></div>
+                  </a>
+                   : <div class="bg-blocked" >
+                   <img src={prop} class="ribvan"/> 
+                   <div class="propsub">3 Valida para desbloquear</div>
+                   <div class="propopt">Propose</div>
+                 </div>}
+                 {isValidated ?
+                <a class="bg-grid0" href="/ProposalList">
+                    <img src={past} class="homevan"/> 
+                    <div class="propsub">4 Vota con tu TARO</div>
+                    <div class="propopt">VoTARO Ciudad DAO</div>
+                  </a>
+                  :
+                  <div class="bg-blocked" >
+                    <img src={past} class="homevan"/> 
+                    <div class="propsub">4 Valida para desbloquear</div>
+                    <div class="propopt">Qurétaro DAO</div>
+                  </div>}
                 </div>
+                
               </section>
-              :
-              <section>
-              <div class="govgrid">
-                <div class="prop-bgr"><a href="/About">
-                  <img src={prop} class="ribvan"/> 
-                  <div class="propsub">¿Qué es una cartera web3?</div>
-                  <div class="propopt">Empieza Aquí</div>
-                </a></div>
-                <div class="prop-bgr"><a href="/About">
-                  <img src={vote} class="ribvan"/>
-                  <div class="propsub">¿Qué es el presupuesto descentralizado?</div>
-                  <div class="propopt">Ciudad DAO</div>
-                </a></div>
-                </div>
-              </section>
-              }
+                :
+                <section>
+                  <div class="headline">
+                    <img src={logo} height="125px"/>  
+                    <h1 class="yellow">VoTARO Ciudad DAO®</h1>
+                    <h2>Querétaro on Ethereum</h2>
+                  </div>
+                  <div class="grid-blocked">
+                    <a href="/About" class="bg-start">
+                        <img src={prop} class="ribvan"/> 
+                        <div class="propsub">No web3 key?</div>
+                        <div class="propopt">Start here</div>
+                    </a></div>
+                
+                </section>      
+                }
+              </div>
             </div>
-          </div>
-      </div>
+        </div>
   }
 </div>
     
