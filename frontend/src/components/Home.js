@@ -27,6 +27,7 @@ import past from '../assets/past.png';
 import verify from '../assets/verify.png';
 import vote from '../assets/vote.png';
 import taro from '../assets/taro.png';
+import logo from '../assets/Logow.png';
 
 function Home() {
   let [ethersProvider, setEthersProvider] = useState();
@@ -271,21 +272,16 @@ function Home() {
     <div>
       {isEnglish === 'english' ?
           <div class="App">
-            <div class="headline">
-              <h1 class="yellow">VoTARO Ciudad DAO®</h1>
-              <h2>Querétaro on Ethereum</h2>
-            </div>
+            <br/><br/>
+            
+            
             
             <div class="grid-block">
               <div>
                 {isConnected ?
                 <section id="">
                   <div class="homegrid">
-                    <div class="bg-grid"><a href="/createProposal">
-                      <img src={taro} class="homevan"/> 
-                      <div class="propsub">You have</div>
-                      <div class="propopt2"> {userBalance} TARO</div>
-                    </a></div>
+                    
                     <div class="bg-reward"><a href="/Quiz">
                       <img src={verify} class="ribvan"/>
                       <div class="propsub">Get up to 1,000 TARO</div>
@@ -301,16 +297,17 @@ function Home() {
                       <div class="propsub">Get 50 TARO per proposal</div>
                       <div class="propopt">Propose</div>
                     </a></div>
-                    <div class="prop-bgr"><a href="/About">
-                      <img src={reward} class="ribvan"/>
-                      <div class="propsub">Learn +</div>
-                      <div class="propopt">Docs</div>
-                    </a></div>
                   </div>
                 </section>
                 :
                 <section>
+                  <div class="headline">
+                    <img src={logo} height="125px"/>  
+                    <h1 class="yellow">VoTARO Ciudad DAO®</h1>
+                    <h2>Querétaro on Ethereum</h2>
+                  </div>
                   <div class="govgrid">
+                    
                     <div class="prop-bgr"><a href="/About" class="fit">
                         <img src={prop} class="ribvan"/> 
                         <div class="propsub">No web3 key?</div>
