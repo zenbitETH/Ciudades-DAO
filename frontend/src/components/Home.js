@@ -38,7 +38,7 @@ function Home() {
   var [userBalance, setUserBalance] = useState();
 //let [isConnectingToSkale, setIsConnectingToSkale] = useState();
 
-  let {setIsValidated} = useContext(ValidationRequiredContext);
+  let {setIsValidated,isValidated} = useContext(ValidationRequiredContext);
   let {setTaro} = useContext(TaroContext);
   let {setGovernorAlpha} = useContext(GovernorAlphaContext);
   let [isEnglish] = useContext(LanguageContext);
@@ -272,32 +272,45 @@ function Home() {
     <div>
       {isEnglish === 'english' ?
           <div class="App">
-            <br/><br/>
-            
-            
-            
             <div class="grid-block">
               <div>
                 {isConnected ?
                 <section id="">
                   <div class="homegrid">
-                    
-                    <div class="bg-reward"><a href="/Quiz">
+                  <a class="bg-grid0" href="https://faucet.ropsten.be/">
+                      <img src={past} class="homevan"/> 
+                      <div class="propsub">Get ETH on</div>
+                      <div class="propopt">1 Testnet Faucet </div>
+                    </a>
+                    <a class="bg-reward"href="/Quiz">
                       <img src={verify} class="ribvan"/>
                       <div class="propsub">Get up to 1,000 TARO</div>
-                      <div class="propopt">Validate</div>
-                    </a></div>
-                    <div class="bg-grid0"><a href="/ProposalList">
-                      <img src={past} class="homevan"/> 
-                      <div class="propsub">Vote with your TARO</div>
-                      <div class="propopt">Qurétaro DAO</div>
-                    </a></div>
-                    <div class="bg-reward"><a href="/createProposal">
+                      <div class="propopt">2 Validate</div>
+                    </a>
+                    {isValidated ? <a class="bg-reward" href="/createProposal">
                       <img src={prop} class="ribvan"/> 
                       <div class="propsub">Get 50 TARO per proposal</div>
-                      <div class="propopt">Propose</div>
-                    </a></div>
+                      <div class="propopt">3 Propose</div>
+                    </a>
+                     : <div class="bg-blocked" >
+                     <img src={prop} class="ribvan"/> 
+                     <div class="propsub">Blocked</div>
+                     <div class="propopt">3 Propose</div>
+                   </div>}
+                   {isValidated ?
+                  <a class="bg-grid0" href="/ProposalList">
+                      <img src={past} class="homevan"/> 
+                      <div class="propsub">Vote with your TARO</div>
+                      <div class="propopt">4 Qurétaro DAO</div>
+                    </a>
+                    :
+                    <div class="bg-blocked" >
+                      <img src={past} class="homevan"/> 
+                      <div class="propsub">Blocked</div>
+                      <div class="propopt">4 Qurétaro DAO</div>
+                    </div>}
                   </div>
+                  
                 </section>
                 :
                 <section>

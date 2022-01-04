@@ -231,8 +231,8 @@ const Header = () => {
         <nav class="topHud">
           {isConnected ? 
           <div class="topGrid">
-            <div class="hud0">{userBalance} ☀️ TARO</div>
-            <div>{isValidated ? <div class="hudV"><div class="hudLevel">🦸🦸‍♂️ DAO Roles</div></div> : <div class="hudU">⚠️Validate</div>}</div>
+            <div class="hud0"><a href='/Home' class="hudBalance">{userBalance} ☀️ TARO</a></div>
+            <div>{isValidated ? <div class="hudV"><div class="hudLevel">🦸🦸‍♂️ DAO Roles</div></div> : <div class="hudU"><a href='/Quiz'>⚠️Validate</a></div>}</div>
           </div>: 
           <div>
             {!isMetamaskInstalled ?
@@ -242,8 +242,8 @@ const Header = () => {
           </div> }                
         </nav>
         <nav class="bottomHud">
-          <div class="hud1" to="/About">📚Docs</div>
-          <div class="hud2" to="/About">🤝🏻Community</div>
+          <div class="hud1" ><a href="/About" class="hudBalance">📚Docs</a></div>
+          <div class="hud2" ><a href="/About" class="hudBalance">🤝🏻Community</a></div>
           <div class="hud3"onClick={handleOnClick} >🌐Español</div>
         </nav>
       </div>

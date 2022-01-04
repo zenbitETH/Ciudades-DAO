@@ -167,8 +167,6 @@ option:disabled {
   margin-top: -0.3em;
   text-align: left;
   font-size: 1.7em;
-  color: #ffffff;
-  
   max-height: 260%;
 }
 
@@ -240,23 +238,7 @@ option:disabled {
   color: #119195 !important;
 }
 
-.bg-grid0 {
-  padding: 1em;
-  background-color: #00000068;
-  border-radius: 25px;
-  height: 200px;
-  width: 100%;
-  position: relative;
-  border-color: transparent;
-  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
-}
 
-.bg-grid0:hover {
-  cursor: pointer;
-  background: linear-gradient(-115deg,  #11919576, #11919576,#F6AF55d3, #F6AF55d3);
-  background-size: 200% 200%;
-  animation: gradient 5s ease infinite;
-}
 
 .bg-grid2 {
   padding: 1em;

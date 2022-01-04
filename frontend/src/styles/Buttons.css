@@ -1,34 +1,5 @@
 /* Buttons and links */
 
-Button {
-    background-color: transparent !important;
-    font-size: 1em !important;
-    border-radius: 25px !important;
-    border: none !important;
-  }
-  
-  Button:hover {
-    border-radius: 25px !important;
-    border: none !important;
-    color: #01304E !important;
-    background-color: #ff950082;
-  }
-  
-  Button:active {
-    box-shadow: none !important;
-    border: none !important;
-    background-color: #211e40;
-  }
-  
-  Button:focus {
-    box-shadow: none !important;
-  }
-  
-  Button:disabled {
-    border: none !important;
-    background-color: #5f5f5f !important;
-    color: #cac9c9 !important;
-  }
   
   a {
     
@@ -41,7 +12,7 @@ Button {
   }
   
   a:active{
-    color: #211e40 !important;
+    color: #01304E !important;
   }
   
   a:visited {
@@ -50,7 +21,7 @@ Button {
   
   a:hover {
     text-decoration: none;
-    color: #FFF;
+    color: #01304E;
   }
   
 
