@@ -95,7 +95,8 @@
 }
 
 .center {
-  text-align: center !important;  
+  text-align: center !important;
+  align-content: center;
 }
 
 .justify {
@@ -197,22 +198,8 @@ ol {
 }
 
 Nav {
-  position: fixed !important;
+
   font-family: 'Lexend Deca', sans-serif;
-}
-
-.NavLink {
-  margin-left: 15px;
-  text-align: right;
-}
-
-.NavLink:hover {
-  color: #F6AF55 !important;
-  margin-left: 15px;
-  text-align: right;
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
 }
 
 .language {

@@ -5,7 +5,6 @@ Button {
     font-size: 1em !important;
     border-radius: 25px !important;
     border: none !important;
-    
   }
   
   Button:hover {
@@ -31,16 +30,8 @@ Button {
     color: #cac9c9 !important;
   }
   
-  .spinner-grow {
-    color: #FAC91a;
-    height: 100px !important;
-    width: 100px !important;
-    margin-top: 1.5em;
-    position: relative;
-  }
-  
   a {
-    font-size: clamp(1em, 6.5vw, 1.3rem);
+    
     color: #FFF;
   }
   
@@ -62,6 +53,20 @@ Button {
     color: #FFF;
   }
   
+
+
+  
+
+
+
+  .dw {
+    top: 0em;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+  }
+
+
   .aboutbutton {
     font-size: clamp(1em, -0.975rem + 6.5vw, 1.3rem);
     border-radius: 25px;
@@ -93,20 +98,6 @@ Button {
     background-color: #01304E !important;
     color: #ffffff !important;
     border: 1px solid !important;
-  }
-  
-  .Wallet {
-    font-family: "Lexend Deca";
-    font-size: clamp(1em, -0.975rem + 8.5vw, 0.2em);
-    background-image: linear-gradient(to left, #119195, #119195);
-    border-radius: 20px;
-    margin: 0.5em;
-    color: #01304E !important;
-  }
-  
-  .Wallet:hover {
-    background-image: linear-gradient(to right, #FAC91a, #FAC91a);
-    color: #01304E;
   }
   
   .account-bt {
@@ -196,6 +187,10 @@ Button {
       margin-left: 25%;
       margin-right: 25%;
     }
+  }
+
+  .prop-wallet{
+    font-size: 1.2em !important;
   }
   
   @media only screen and (min-width: 1800px) {

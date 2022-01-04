@@ -179,70 +179,7 @@ option:disabled {
   color: #ffffff;
 }
 
-.cw {
-  top: -2.25em;
-  text-align: center;
-  font-size: 1.1em;
-  color: #ffffff;
-  position: relative;
-}
 
-.dw {
-  top: 1em;
-  text-align: center;
-  font-size: 1.5em;
-  color: #ffffff;
-  position: relative;
-}
-
-.no-wallet {
-
-  padding: 1em;
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
-  background-size: 500% 500%;
-  animation: gradient 2s ease infinite;
-  height: 200px;
-  width: 100%;
-  position: relative;
-  border-width: 0em;
-  border-style: solid;
-  border-color: transparent;
-}
-
-
-.no-wallet:hover {
-  content:'';
-  cursor: pointer;
-  border-width: 0em;
-  border-style: solid;
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
-  animation: none;
-}
-
-.prop-wallet {
-  padding: 1em;
-  background: linear-gradient(90deg, #2b284a00,#2b284a00, #11919576, #F6AF5576, #F6AF5576,#11919576, #2b284a00,#2b284a00);
-  background-size: 500% 500%;
-  animation: gradient 2s ease infinite;
-  height: 200px;
-  width: 100%;
-  position: relative;
-  border-width: 0em;
-  border-style: solid;
-  border-color: transparent;
-  text-align: center;
-  color: #fff;
-  font-size: 1.5em;
-}
-
-.prop-wallet:hover {
-  content:'';
-  cursor: pointer;
-  border-width: 0em;
-  border-style: solid;
-  background: linear-gradient(90deg, #2b284a00, #119195b4, #f6b055b4, #f6b055b4,#119195b4, #2b284a00);
-  animation: none;
-}
 
 .prop-bg {
   padding: 1em;
@@ -733,10 +670,7 @@ option:disabled {
 }
 
 @media only screen and (min-width: 1400px) {
-  .prop-wallet{
-    font-size: 2em;
-    padding-top: 0.25em;
-  }
+
 
   .author {
     font-size: 1.5em;
