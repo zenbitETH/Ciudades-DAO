@@ -1,3 +1,8 @@
+
+Nav {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
 .hudWallet {
     color: #ffffff;
     background: linear-gradient(45deg,  #057f8a70, #057f8a70,#00aebeb4, #00aebeb4);
@@ -36,18 +41,37 @@
 
   .spinner-grow {
     color: #F6AF55;
-    height: 50px !important;
-    width: 50px !important;
+    height: 40px !important;
+    width: 40px !important;
     position: relative;
-    left:16%;
+    left:10%;
+    margin: -0.55em 0 -0.55em 0;
+  }
+
+  .bg-start {
+    padding: 1em;
+    background-color: #00000068;
+    border-radius: 25px;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    border-color: transparent;
+    display: block;
+  }
+
+  .bg-start:hover {
+    border-color: transparent;
+    background: linear-gradient(-45deg,  #F6AF55, #F6AF55,#00aebeb4, #00aebeb4);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    color: #01304E !important;
   }
 
   .cw {
     text-align: center;
-    font-size: 1.1em;
     color: #ffffff;
     position: relative;
-    top:-0.5em;
+    left: -1em;
   }
 
 .topHud{
@@ -93,6 +117,7 @@
 
   .hudBalance {
     color:#01304E !important;
+    display: block;
   }
 
   .hudBalance:hover {
@@ -213,8 +238,12 @@
         margin-left: 25%;
         font-size: 1em;
     }
+    
+    .bg-start {
+      height: 450px;
+    }
 
     .spinner-grow {
-        left:9%;
+        left:7%;
     }
   }

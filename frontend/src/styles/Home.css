@@ -85,10 +85,6 @@
   color: #9b989f;
 }
 
-.nexus {
-  color: #00adbe;
-}
-
 .subt {
   text-align: justify !important;
   color: #F6AF55;
@@ -132,7 +128,6 @@ li {
 }
 
 /* Sections */
-
 *, *:after, *:before  {
   outline: none;
   -webkit-box-sizing: border-box;
@@ -190,44 +185,6 @@ ol {
 	}
 }
 
-/* Header */
-
-.justify-content-end {
-  vertical-align: middle !important;
-  text-align: right;
-}
-
-Nav {
-
-  font-family: 'Lexend Deca', sans-serif;
-}
-
-.language {
-  vertical-align: middle !important;
-  border: none !important;
-  text-align: center !important;
-  display: inline-block !important;
-  color: #01304E !important;
-}
-
-div.dropdown-menu.show {
-  text-align: center;
-  background-color: #F6AF55;
-  border-radius: 100px !important;
-}
-div.dropdown-menu.show:hover {
-  text-align: center;
-  background-color: #119195;
-  border-radius: 100px !important;
-  
-}
-
-a.dropdown-item:hover {
-  background-color: #119195;   
-  border-radius: 20px !important;
-  color: #fff !important;
-}
-
 /* Home */
 
 .headline {
@@ -236,7 +193,7 @@ a.dropdown-item:hover {
   color: #ffffff;
   text-align: center;
   position: relative;
-  
+  margin-top: 30%;
 }
 
 .headline-p {
@@ -245,87 +202,6 @@ margin-top: 0.5em;
 font-weight: 300;
 font-family: "ABeeZee";
 color: #F6AF55;
-}
-
-
-
-.account-bg {
-  font-size: 1.3em;
-  padding: 1em;
-  background-color: #00000068;
-  border-radius: 25px;
-  height: 100%;
-  position: relative !important;
-}
-
-.main-reward {
-  background-color: transparent;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  font-size: 0.8em;
-  color: #01304E !important;
-}
-
-.main-reward .ustext {
-  visibility: hidden;
-  width: 150%;
-  bottom: 100%;
-  left: -25%;
-  font-family: 'ABeeZee';
-  background-color: white;
-  color: #211e40 !important;
-  text-align: center;
-  border-radius: 20px;
-  padding: 5px;
-  margin-bottom: 0.3em;
-  font-size: 1em;
-  position: absolute;
-}
-
-.main-reward .ustext::after {
-  content: " ";
-  position: absolute;
-  top: 100%; /* At the bottom of the tooltip */
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgb(255, 255, 255) transparent transparent transparent;
-}
-
-.main-reward:hover .ustext {
-  visibility: visible;
-}
-
-.main-reward:hover {
-  background-image: radial-gradient(#01304E, #01304E);
-  border-radius: 10px;
-  color: #ffffff !important;
-}
-
-.main-reward:active {
-  background-image: radial-gradient(#01304E, #5c54a6);
-  background-color: transparent !important;
-}
-
-.main-reward:focus {
-  box-shadow: none !important;
-  background-color: transparent !important;
-}
-
-.main-reward:link {
-  background-color: transparent !important;
-}
-
-.account-bgu {
-  color: #01304E;
-  padding: 1em;
-  background-color: #ffffffac;
-  border-radius: 25px;
-  height: 100%;
-  position: relative !important;
-  font-size: 1.3em;
 }
 
 h1 {
@@ -344,127 +220,6 @@ h3 {
   text-align: justify;
 }
 
-
-.timeyr {
-  padding: 1em;
-  margin-bottom: 1em;
-  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 4rem);
-  line-height: 110%;
-}
-
-.cv {
-  display: flex;
-  height: 50vh;
-  position: relative; 
-  align-items: center;
-  justify-content: center;
-}
-
-.locked {
-  background-color: transparent;
-  border-radius: 20px;
-  margin-top: 1em;
-  border: none;
-}
-
-.unlocked {
-  background-color: transparent;
-  border-radius: 20px;
-  margin-top: 1em;
-  border: none;
-}
-
-.title {
-  color: #ffffff !important; 
-  font-size: 1.5rem !important;
-  margin-top: 1em;
-  text-align: center;
-  vertical-align: middle;
-  font-family: "ABeeZee";
-}
-
-.big-icon {
-  font-size: clamp(3.5rem, -0.875rem + 8.333vw, 3rem);
-  color: #ffffff;
-  font-family: "Lexend Deca";
-}
-
-.taro-balance {
-  width: auto;
-  color: #2b284a;
-  font-size: 2em;
-  text-align: center;
-  line-height: 100%;
-}
-
-.taro-locked {
-  width: auto;
-  color: #ffffff;
-  font-size: 2em;
-  text-align: center;
-  vertical-align: bottom;
-}
-
-.main-button {
-  color: #ffffff;
-  font-size: 3em;
-  text-align: center;
-}
-
-.taro {
-  font-size: 0.5em !important;
-  vertical-align: baseline;
-}
-
-/* Alerts */
-
-.valert {
-  font-size: clamp(.9em, -0.975rem + 6.5vw, 1.6rem);
-  color: #fff !important;
-  border-radius: 10px;  
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
-  background-size: 500% 500%;
-  animation: gradient 2s ease infinite;
-}
-
-.valert2 {
-  font-size: clamp (.9em, -0.975rem + 6.5vw, 1.6rem);
-  margin-left: -0.5em;
-  margin-right: -0.5em;
-  margin-top: -3em;
-  width: auto !important;
-  padding: 1em;
-  background: linear-gradient(90deg, #2b284a00,#2b284a00, #ff950069, #ff950069, #2b284a00, #2b284a00);
-  background-size: 500% 500%;
-  animation: gradient 2s ease infinite;
-  border-radius: 0px 0px 25px 25px;
-}
-
-.valert3 {
-  background-size: cover;
-  font-size: clamp(1em, -0.975rem + 6.5vw, 1.8rem);
-  margin: -0.75em -0.75em -0.75em -0.75em;
-  border-radius: 20px;
-  width: auto !important;
-  padding: 1em;
-  background-image: linear-gradient(#dc3840, #e26c72);
-  color: #fff !important;
-}
-
-.valert4 {
-  background-size: cover;
-  font-size: clamp(1em, -0.975rem + 6.5vw, 1.8rem);
-  margin-top: -3.7em;
-  margin-bottom: -1.1em;
-  height: 100vh;
-  padding: 25% 1em;
-  font-family: 'Lexend Deca';
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
-  background-size: 500% 500%;
-  animation: gradient 2s ease infinite;
-  color: #fff !important;
-}
-
 /* Animations */
 
 .shake {
@@ -479,7 +234,6 @@ h3 {
   opacity: 50%;
   position: relative;
 }
-
 
 .shake2 {
   margin: 0.5em;
@@ -548,15 +302,6 @@ h3 {
     justify-content: center;
   }
 
-  .unlocked {
-    width: 100% !important;
-    justify-content: center;
-  }
-  
-  .locked {
-    width: 100% !important;
-  }
-
   .main-grid {
     column-gap: 1em;
     margin: 0 15vh 0 15vh;
@@ -564,22 +309,6 @@ h3 {
 
   .headline {
     margin: 15vh 40vh 0 40vh;
-  }
-
-
-  .main-reward {
-    font-size: 0.65em;
-  }
-
-  .un-reward {
-    font-size: 1.5em;
-  } 
-
-
-
-  .valert2 {
-    padding-left: 30%;
-    padding-right: 30%;
   }
 }
 

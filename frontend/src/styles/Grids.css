@@ -4,7 +4,7 @@
   font-size: clamp(.9em, -0.975rem + 6.5vw, 1.5rem);
   text-align: center;
   padding: 1em;
-  margin-top: 1em;
+  margin-top: -4em;
   margin-bottom: 5em;
   }
 
@@ -26,6 +26,7 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
   font-size: clamp(1em, -1.1rem + 2.2vw, 4.5rem);
+  margin-top: 20%;
   }
     
 .govgrid {
@@ -253,6 +254,14 @@
 
   .grid-block {
     margin: 12.5vh 5vh 0 5vh;
+  }
+
+  .grid-blocked {
+    margin: 0 25% 0 25%;  
+  }
+
+  .homegrid {
+    margin-top: 8%;
   }
 
 
