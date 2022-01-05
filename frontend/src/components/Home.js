@@ -374,7 +374,7 @@ function Home() {
                 :
                 <section>
                   <div class="headline">
-                    <img src={logo} height="125px"/>  
+                    <img src={logo} height="100px"/>  
                     <h1 class="yellow">VoTARO Ciudad DAO®</h1>
                     <h2>Querétaro on Ethereum</h2>
                   </div>
