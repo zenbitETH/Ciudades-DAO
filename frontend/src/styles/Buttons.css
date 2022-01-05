@@ -90,7 +90,7 @@
 
   
   .about-bt:hover {
-    background-image: linear-gradient(to right, #119195, #f9a733) !important;
+    background-image: linear-gradient(to right, #119195, #119195) !important;
     color: #ffffff !important;
   }
   
@@ -99,10 +99,10 @@
   }
 
   .about-bt {
-    margin-top: 1em;
+    margin: 1em 0 1em 0;
     padding: 0.5em;
     color: white;
-    background-color: #01304E;
+    background-color: #00000068;
     border-radius: 25px;
     width: 100%;
     position: relative;
@@ -124,28 +124,30 @@
   }
 
   .quiz-bt:hover {
-    background: linear-gradient(75deg, #2b284a00, #ff9500d7, #ff9500d7, #ff950069, #2b284a00);
+    background: linear-gradient(75deg, #2b284a00, #f9a733d7, #f9a733d7, #f9a73369, #2b284a00);
     background-size: 500% 500%;
     animation: gradient 2s ease infinite;
     cursor: pointer;
-    
   }
 
   
   .verify-bt {
-    padding: 1em;
+    padding: 4em 0 0 0;
     color: white;
     background-color: #00000068;
-    border-radius: 25px;
-    width: 100%;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
     position: relative;
     border-color: transparent;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    text-align: center;
+    margin: -1em 2em 0 2em;
   }
 
   
   .verify-bt:hover {
-    background: linear-gradient(75deg, #2b284a00, #ff9500d7, #ff9500d7, #ff950069, #2b284a00);
+    background: linear-gradient(75deg, #2b284a00, #F6AF55d7, #F6AF55d7, #F6AF5569, #2b284a00);
     background-size: 500% 500%;
     animation: gradient 2s ease infinite;
     cursor: pointer;

@@ -4,8 +4,8 @@
   font-size: clamp(.9em, -0.975rem + 6.5vw, 1.5rem);
   text-align: center;
   padding: 1em;
-  margin-top: -4em;
-  margin-bottom: 5em;
+  margin-top: -4.5em;
+  margin-bottom: 3em;
   }
 
 .grid-prop {
@@ -24,9 +24,9 @@
   display: grid;
   grid-gap: 0.5em;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(140px, 1fr));
   font-size: clamp(1em, -1.1rem + 2.2vw, 4.5rem);
-  margin-top: 20%;
+  margin-top: 15%;
   }
     
 .govgrid {
@@ -39,7 +39,7 @@
   border-radius: 20px;
   font-family: 'Lexend Deca', sans-serif;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-template-rows:  repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 0.75em;
   margin: 0em 0em 0em 0em;
@@ -97,7 +97,7 @@
   padding: 1em;
   background-color: #00000068;
   border-radius: 25px;
-  height: 150px;
+  height: 140px;
   width: 100%;
   position: relative;
   border-color: transparent;
@@ -116,7 +116,7 @@
   padding: 1em;
   background: linear-gradient(-15deg, #dc3840b5, #e26c72b5,#dc3840b5);
   border-radius: 25px;
-  height: 150px;
+  height: 140px;
   width: 100%;
   position: relative;
   color: #ffffff;
@@ -129,7 +129,7 @@
   background-size: 400% 400%;
   animation: gradient 1s ease-in-out infinite;
   border-radius: 25px;
-  height: 150px;
+  height: 140px;
   width: 100%;
   position: relative;
   font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
