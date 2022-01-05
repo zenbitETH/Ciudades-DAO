@@ -14,6 +14,14 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { TaroContext } from '../contexts/TaroContext';
 
+import isMetamaskInstalled from './Home.js'
+import InstallMetamaskAlert from './InstallMetamaskAlert';
+import isConnected from './Home.js'
+import isConnecting from './Home.js'
+import ConnectButton from './buttons/ConnectButton';
+import ConnectingButton from './buttons/ConnectingButton';
+import handleOnConnect from './Home.js'
+
 import img4 from '../assets/about-img4.svg';
 import meta from '../assets/meta.svg';
 import connect from '../assets/about-img.svg';
@@ -294,7 +302,7 @@ function myFunction() {
             <div id="margin">{englishQuestions}</div>
             </QuizContext.Provider>
             <div className="floating">
-              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Validate account</div>
+              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Validate</div>
             </div>
             </div>
             
@@ -314,32 +322,39 @@ function myFunction() {
                 show={loadingModalShow}
                 onHide={handleOnLoadingModal}
               />
-
           </div>
           :
-          
-          <div class="valert2">
-              <br/><br/><br/><br/><br/><br/><br/>
-              <h1><span id="vote">Connect your wallet</span></h1><br/>
-              <div class="center"><img src={img4} alt="Alert about key" class="prop-img"/></div><br/>
-                <div class="floating">
-                  <h3>You need a Web 3 wallet to use VoTARO. 
-                  Get a wallet or connect an existing address in the home screen.
-                  <br/><br/></h3>
-                </div>
-                <div class="void-link">
-                  <div class="about-bg"><a href="https://metamask.io">
-                    <img src={meta} class="ribvan"/> 
-                    <div class="propsub">Get a Web 3 wallet</div>
-                    <div class="propopt">Download</div>
-                  </a></div>
-                  <div class="about-bg"><a href="/Home">
-                    <img src={connect} class="ribvan"/>
-                    <div class="propsub">Use your address</div>
-                    <div class="propopt">Connect</div>
-                  </a></div>
-                </div>
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <div >
+            <h1><span id="vote">Validate your account</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            <div> 
+            <br/><br/>
+            
+            
+            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
+            <div id="margin">{englishQuestions}</div>
+            </QuizContext.Provider>
+            <div className="floating">
+              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Validate</div>
+            </div>
+            </div>
+            
+            <QuizFailureModal
+              show={failureModalShow}
+              onHide={handleOnFailure}
+            />
+            <QuizSuccessModal
+              show={successModalShow}
+              onHide={handleOnSuccess}
+            />
+            <QuizAlreadySubmittedModal
+              show={alreadySubmittedModal}
+              onHide={handleOnAlreadySubmitted}
+            />
+              <IsLoadingModal
+                show={loadingModalShow}
+                onHide={handleOnLoadingModal}
+              />
           </div>
           }
         </div>
