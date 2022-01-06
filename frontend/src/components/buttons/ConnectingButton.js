@@ -8,29 +8,19 @@ const ConnectingButton = () => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div>
-    {isEnglish === 'english' ?    
-    <div>
-      <div>
-        <Button disabled>
-        Connecting... 
-        <span className="spinner-grow" role="status"></span>
-        </Button>
-        <Card.Text>You need a Metamask wallet to use VoTARO</Card.Text>      
-      </div>
+    <span>
+    {isEnglish === 'english' ?
+    <div class="hudWallet">
+      <span class="spinner-grow" role="status"></span>
       
     </div>
     :
-    <div>
-        <Button disabled>
-        <span className="spinner-grow" role="status" aria-hidden="true"></span>
-        <span> Conectando...</span>
-        </Button>
-        <Card.Text>Necesitas una wallet de Metamask para usar VoTARO</Card.Text>      
-      
+    <div class="hudWallet">
+      <span class="spinner-grow" role="status"></span>
+      <span class="cw">Conectando...</span>
     </div>
     }
-    </div>
+    </span>
   );
 };
 

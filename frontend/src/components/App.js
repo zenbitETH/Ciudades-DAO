@@ -16,7 +16,7 @@ import Home from './Home';
 import About from './About';
 import ProposalList from './ProposalList';
 import Quiz from './Quiz';
-import Header from './Header';
+import Hud from './Hud';
 import CreateProposal from './CreateProposal';
 import PastProposals from './PastProposals';
 
@@ -40,10 +40,10 @@ function App() {
               <ValidationRequiredContext.Provider value={{isValidated, setIsValidated}}>
                 <ConnectedContext.Provider value={{isConnected, setIsConnected}}>
                   <Router>
-                    <Header />
+                    <Hud />
                     <Switch>
                       <Route path="/about"><About /></Route>
-                      <Route path="/proposallist"><ProposalList /></Route>
+                      <Route path="/ProposalList"><ProposalList /></Route>
                       <Route path="/createproposal"><CreateProposal /></Route>
                       <Route path="/quiz"><Quiz /></Route>
                       <Route path="/pastproposals"><PastProposals /></Route>

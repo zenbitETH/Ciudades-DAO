@@ -1,14 +1,9 @@
 import { useEffect, useState, useContext } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { ethers } from 'ethers';
-import {Card, Button} from 'react-bootstrap';
-import ConnectButton from './buttons/ConnectButton';
-import ConnectingButton from './buttons/ConnectingButton';
-import InstallMetamaskAlert from './InstallMetamaskAlert';
 //import SkaleButton from './buttons/SkaleButton';
 //import SkaleSwitch from './buttons/SkaleSwitch';
 //import SwitchSkaleAlert from './SwitchSkaleAlert';
-import '../styles/Home.css';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { TaroContext } from '../contexts/TaroContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
@@ -16,23 +11,29 @@ import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
+
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
+import test from '../assets/confirm.svg';
+import prop from '../assets/prop.png';
+import past from '../assets/past.png';
+import verify from '../assets/verify.png';
+import logo from '../assets/Logow.png';
 
 function Home() {
   let [ethersProvider, setEthersProvider] = useState();
   let [isConnecting, setIsConnecting] = useState();
-  let [isMetamastInstalled, setIsMetamaskInstalled] = useState();
+  let [isMetamaskInstalled, setIsMetamaskInstalled] = useState();
 //let [isSkaleSwitched, setIsSkaleSwitched] = useState();
   let [currentMetaMaskAccount, setCurrentMetaMaskAccount] = useState(null);
-  let [userBalance, setUserBalance] = useState();
+  var [userBalance, setUserBalance] = useState();
 //let [isConnectingToSkale, setIsConnectingToSkale] = useState();
 
-  let {setIsValidated} = useContext(ValidationRequiredContext);
+  let {setIsValidated,isValidated} = useContext(ValidationRequiredContext);
   let {setTaro} = useContext(TaroContext);
   let {setGovernorAlpha} = useContext(GovernorAlphaContext);
   let [isEnglish] = useContext(LanguageContext);
@@ -263,160 +264,133 @@ function Home() {
   return (
     <div>
       {isEnglish === 'english' ?
-        <div className="App">
-          <Card.Text>Urban governance protocol for Querétaro City DAO</Card.Text>
-          {isConnected ?
-          <div>
-          <Card className="orange-unlock">
-            <Card.Title className="purple-unlock">TARO balance</Card.Title>
-            <Card.Title className="big-icon">🥇</Card.Title>
-            <div>
-              <Card.Body>
-                <Card.Text className="text-large">{userBalance} TARO</Card.Text>
-                <Button className="TARO-button" href="/About"> Get TARO </Button>
-              </Card.Body>
-            </div>
-          </Card>
-          <Card className="yellow-unlock">
-            <Card.Title className="purple-unlock">Urban governance</Card.Title>
-            <Card.Title className="big-icon">🗳️</Card.Title>
-            <div>
-              <Card.Body>
-                <Button className="TARO-button" href="/proposallist">🙋🏻‍♀️ Vote 🙋🏽‍♂️</Button>
-              </Card.Body>
-            </div>
-          </Card>
-        </div>
-        :
-        <div>
-          <Card className="gray">
-            <Card.Title className="purple-unlock">TARO Balance</Card.Title>
-            <Card.Title className="big-icon">🥇</Card.Title>
-            <Card.Text className="text-large">Locked</Card.Text>
-            <div className="Wallet">
-              {!isMetamastInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
-
-              {/*isSkaleSwitched
-                ?
-                  ''
+          <div class="App">
+            <div class="grid-block">
+              <div>
+                {isConnected ?
+                <section id="">
+                  <div class="homegrid">
+                  <a class="bg-grid0" href="https://faucet.ropsten.be/">
+                      <img src={test} class="homevan"/> 
+                      <div class="propsub">1 Get </div>
+                      <div class="propopt">Testnet ETH </div>
+                    </a>
+                    <a class="bg-reward"href="/Quiz">
+                      <img src={verify} class="homevan"/>
+                      <div class="propsub">2 Get up to 1,000 TARO</div>
+                      <div class="propopt">Validate</div>
+                    </a>
+                    {isValidated ? <a class="bg-reward" href="/createProposal">
+                      <img src={prop} class="homevan"/> 
+                      <div class="propsub">3 Get 50 TARO per proposal</div>
+                      <div class="propopt">Propose</div>
+                    </a>
+                     : <div class="bg-blocked" >
+                     <img src={prop} class="homevan"/> 
+                     <div class="propsub">3 Validate to unlock</div>
+                     <div class="propopt">Propose</div>
+                   </div>}
+                   {isValidated ?
+                  <a class="bg-grid0" href="/ProposalList">
+                      <img src={past} class="homevan"/> 
+                      <div class="propsub">4 Vote with your TARO</div>
+                      <div class="propopt">Qurétaro DAO</div>
+                    </a>
+                    :
+                    <div class="bg-blocked" >
+                      <img src={past} class="homevan"/> 
+                      <div class="propsub">4 Validate to unlock</div>
+                      <div class="propopt">Qurétaro DAO</div>
+                    </div>}
+                  </div>
+                  
+                </section>
                 :
-                  isConnectingToSkale
-                  ?
-                    <SkaleSwitch />
-                  :
-                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-              */}
-            </div>
-          </Card>
-          <Card className="gray">
-            <Card.Title className="purple-unlock">Urban governance</Card.Title>
-            <Card.Title className="big-icon">🗳️</Card.Title>
-            <Card.Text className="text-large">Locked</Card.Text>              
-              <div className="Wallet">
-              {!isMetamastInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
-              {/*isSkaleSwitched
-                ?
-                  ''
-                :
-                  isConnectingToSkale
-                  ?
-                    <SkaleSwitch />
-                  :
-                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-              */}
+                <section>
+                  <div class="headline">
+                    <img src={logo} height="125px"/>  
+                    <div class="yellow">VoTARO Ciudad DAO®</div>
+                    <h2>Querétaro on Ethereum</h2>
+                  </div>
+                  <div class="grid-blocked">
+                    <a href="/About" class="bg-start">
+                        <img src={prop} class="ribvan"/> 
+                        <div class="propsub">No web3 key?</div>
+                        <div class="propopt">Start here</div>
+                    </a></div>
+                
+                </section>      
+                }
               </div>
-          </Card>
+            </div>
         </div>
-        }
-      </div>
       :
-        <div className="App">
-          <Card.Text>Una DApp de Gobernanza Urbana para la ciudad de Querétaro.</Card.Text>
-          {isConnected ?
-          <div>
-            <Card className="orange-unlock">
-              <Card.Title className="purple-unlock">Balance de TARO</Card.Title>
-              <Card.Title className="big-icon">🥇</Card.Title>
+      <div class="App">
+            <div class="grid-block">
               <div>
-                <Card.Body>
-                  <Card.Text className="text-large">{userBalance} TARO</Card.Text>
-                  <Button className="TARO-button" href="/About"> Obtén TARO </Button>
-                </Card.Body>
-              </div>
-            </Card>
-            <Card className="yellow-unlock">
-              <Card.Title className="purple-unlock">Gobernanza Urbana</Card.Title>
-              <Card.Title className="big-icon">🗳️</Card.Title>
-              <div>
-                <Card.Body>
-                  <Button className="TARO-button" href="/ProposalList">🙋🏻‍♀️ Vota 🙋🏽‍♂️</Button>
-                </Card.Body>
-              </div>
-            </Card>
-          </div>
-          :
-          <div>
-            <Card className="gray">
-              <Card.Title className="purple-unlock">Balance de TARO</Card.Title>
-              <Card.Title className="big-icon">🥇</Card.Title>
-              <Card.Text className="text-large">Bloqueado</Card.Text>
-              <div>
-              <div className="Wallet">
-              {!isMetamastInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
-
-              {/*isSkaleSwitched
-                ?
-                  ''
-                :
-                  isConnectingToSkale
-                  ?
-                    <SkaleSwitch />
+                {isConnected ?
+                <section id="">
+                <div class="homegrid">
+                <a class="bg-grid0" href="https://faucet.ropsten.be/">
+                    <img src={test} class="homevan"/> 
+                    <div class="propsub">1 Obtén </div>
+                    <div class="propopt">ETH de prueba </div>
+                  </a>
+                  <a class="bg-reward"href="/Quiz">
+                    <img src={verify} class="homevan"/>
+                    <div class="propsub">2 Obtén hasta 1,000 TARO</div>
+                    <div class="propopt">Validar</div>
+                  </a>
+                  {isValidated ? <a class="bg-reward" href="/createProposal">
+                    <img src={prop} class="homevan"/> 
+                    <div class="propsub">3 Obtén 50 TARO por propuesta</div>
+                    <div class="propopt">Proponer</div>
+                  </a>
+                   : <div class="bg-blocked" >
+                   <img src={prop} class="homevan"/> 
+                   <div class="propsub">3 Valida para desbloquear</div>
+                   <div class="propopt">Propose</div>
+                 </div>}
+                 {isValidated ?
+                <a class="bg-grid0" href="/ProposalList">
+                    <img src={past} class="homevan"/> 
+                    <div class="propsub">4 Vota con tu TARO</div>
+                    <div class="propopt">VoTARO Ciudad DAO</div>
+                  </a>
                   :
-                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-              */}
-
-          </div>
-              </div>
-            </Card>
-            <Card className="gray">
-              <Card.Title className="purple-unlock">Gobernanza Urbana</Card.Title>
-              <Card.Title className="big-icon">🗳️</Card.Title>
-              <Card.Text className="text-large">Bloqueado</Card.Text>
-              <div className="Wallet">
-              {!isMetamastInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
-
-              {/*isSkaleSwitched
-                ?
-                  ''
+                  <div class="bg-blocked" >
+                    <img src={past} class="homevan"/> 
+                    <div class="propsub">4 Valida para desbloquear</div>
+                    <div class="propopt">Qurétaro DAO</div>
+                  </div>}
+                </div>
+                
+              </section>
                 :
-                  isConnectingToSkale
-                  ?
-                    <SkaleSwitch />
-                  :
-                    <SkaleButton handleOnConnect={listSkaleInMetamask}/>
-              */}
-
-          </div>
-            </Card>
-
-          </div>
-          }
+                <section>
+                  <div class="headline">
+                    <img src={logo} height="100px"/>  
+                    <h1 class="yellow">VoTARO Ciudad DAO®</h1>
+                    <h2>Querétaro on Ethereum</h2>
+                  </div>
+                  <div class="grid-blocked">
+                    <a href="/About" class="bg-start">
+                        <img src={prop} class="ribvan"/> 
+                        <div class="propsub">No web3 key?</div>
+                        <div class="propopt">Start here</div>
+                    </a></div>
+                
+                </section>      
+                }
+              </div>
+            </div>
         </div>
-      }
-    </div>
+  }
+</div>
+    
   );
 }
 
+
 export default Home;
+

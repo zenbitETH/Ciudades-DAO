@@ -1,40 +1,26 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
-import {Alert, Button} from 'react-bootstrap';
-
-
 
 const InstallMetamaskAlert = () => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div>
+    <span >
       {isEnglish === 'english' ?
-
-    <Alert className= "valert">
-      <div >
-        <div className="big-icon">⚠️</div>
-        <div className="title3">It appears you don't have MetaMask installed</div>
-
-        <div className ="floating">
-          <Button className="alt2" to="https://metamask.io/">Download Wallet</Button>
-        </div>
+      <div class="no-wallet" >
+         <a href="https://www.metamask.io/">
+          <div class="">You don't have a web3 wallet</div>
+          <div class="">Touch to download</div>
+        </a>
       </div>
-
-   </Alert>
     :
-    <Alert className= "valert">
-        <div >
-          <div className="big-icon">⚠️</div>
-          <div className="title3">Parece que no tienes una wallet de Metamask</div>
-
-          <div className ="floating">
-            <Button className="alt2" to="https://metamask.io/">Descargar Wallet</Button>
-          </div>
-        </div>
-
-    </Alert>
-    }</div>
+    <div class="no-wallet" >
+    <a href="https://www.metamask.io/">
+     <div class="">No tienes una llave web3</div>
+     <div class="">Toca para descargar y crear una</div>
+   </a>
+ </div>
+    }</span>
   );
 };
 

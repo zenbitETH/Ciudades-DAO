@@ -1,0 +1,139 @@
+#quiz {
+    color: #ffffff;
+    background: linear-gradient(#01304E,#11919592, #11919592);
+    font-size: 0.9em;
+    background-size: 200% 250%;
+    padding: 6em 0 5em 0em;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.quiz-bg {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.quiz-grid {
+    border-radius: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: -1em 0 1em 0;
+    position: relative;
+    justify-content: space-evenly
+}
+
+.quiz-lb {
+
+ position: relative;
+ text-align: center;
+ color: #2b284a;
+ font-size: 0.8em;
+ padding: 2em;
+}
+
+.question-card {
+  background-color: #ffffff26;
+  
+  height: 310px;
+  border: none;
+  font-size: 1em !important;
+  color: #ffffff !important;
+  margin-bottom: 3em;
+  border-radius: 20px;
+}
+
+.main  {
+  width: 100%;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1em;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  box-sizing: border-box !important;
+  padding: 15px;
+}
+
+.quiz-q {
+  font-size: 1.3em;
+}
+
+.container {
+    display: grid;
+    position: relative;
+    justify-content: space-evenly;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+  }
+
+  
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+  top: 1.7em;
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  background-color: #85858569;
+  color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  padding: 2.75em 0.25em 0.5em 0.25em;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #F6AF55f1;
+  }
+  
+  /* When the radio button is checked, add a background */
+  .container input:checked ~ .checkmark {
+  background: linear-gradient(75deg, #2b284a00, #F6AF55d7, #F6AF55d7, #F6AF5569, #2b284a00);
+  background-size: 500% 500%;
+  animation: gradient 3s ease infinite;
+  color: white;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+
+  
+
+
+  @media only screen and (min-width: 1000px) {
+    .checkmark {
+      top: 1em;
+      left: 1em;
+      height: 200px;
+      width: 200px;
+      padding: 3em 0.5em 0.5em 0.5em;
+    }
+
+
+    .container {
+      font-size: 1.3em;
+    }
+  }
+  
+  @media only screen and (min-width: 1800px) {
+    
+  }

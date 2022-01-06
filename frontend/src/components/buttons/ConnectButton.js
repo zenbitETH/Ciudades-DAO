@@ -1,4 +1,3 @@
-import {Card, Button } from 'react-bootstrap';
 import { useContext } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
 import '../../styles/Home.css';
@@ -8,25 +7,16 @@ const ConnectButton = ({handleOnConnect}) => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div>
-      {isEnglish === 'english' ?
-      
-    <div>
-      <div>
-        <Button onClick={handleOnConnect}>Connect Wallet</Button>
-        <Card.Text>You need a Metamask wallet to use VoTARO</Card.Text>
-      </div>
-      
+  <span>
+    {isEnglish === 'english' ?
+    <div class="hudWallet" onClick={handleOnConnect}>
+      <div class="dw">Connect your web3 wallet</div>
     </div>
     :
-    <div>
-      <div>
-        <Button onClick={handleOnConnect}>Conectar Wallet</Button>
-        <Card.Text>Necesitas una wallet de Metamask para usar VoTARO</Card.Text>
-      </div>
-      
+    <div class="hudWallet" onClick={handleOnConnect}>
+      <div class="dw">Conecta tu llave web3</div>
     </div>
-}</div>
+}</span>
   );
 };
 

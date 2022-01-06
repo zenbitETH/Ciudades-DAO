@@ -6,45 +6,41 @@ import { LanguageContext } from '../contexts/LanguageContext';
 const Question = ({question, answers, number}) => {
   let { userAnswers, setUserAnswers } = useContext(QuizContext);
   let [isEnglish] = useContext(LanguageContext);
-
   const handleOnAnswer = e => {
     userAnswers.push(e.target.value);
     setUserAnswers(userAnswers);
   };
 
   const answer = answers.map((a, i) => (
-    <div key={i}>
+    <span class="container" key={i}>
       <input
         type='radio'
         id={a}
         value={a}
         name={number}
-        onClick={handleOnAnswer}
-      />
-    <label htmlFor={a}>{a}</label>
-    </div>
+        onClick={handleOnAnswer}>
+      </input>
+      <label class="checkmark" htmlFor={a}>{a}</label>
+    </span>
 ))
-
   return (
     <div>
       {isEnglish === 'english' ?
-
       <Card className="question-card">
         <Card.Body className="main">
-          <Card.Title className="orange3">{question}</Card.Title>
-          <div className="text-large-quiz"> {answer} </div>
+          <div class="quiz-q">{question}</div><br/>
+          <div class="quiz-grid"> {answer} </div>
         </Card.Body>
       </Card>
       :
       <Card className="question-card">
-      <Card.Body className="main">
-        <Card.Title className="orange3">{question}</Card.Title>
-        <div className="text-large-quiz">{answer}</div>
-      </Card.Body>
-    </Card>
+        <Card.Body className="main">
+          <div class="quiz-q">{question}</div><br/>
+          <div class="quiz-grid"> {answer} </div>
+        </Card.Body>
+      </Card>
     }
     </div>
-
   );
 };
 

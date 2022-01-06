@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/Home.css'
+import './styles/About.css'
+import './styles/Buttons.css'
+import './styles/Proposals.css'
+import './styles/CreateProposal.css'
+import './styles/Old.css'
+import './styles/Quiz.css'
+import './styles/Grids.css'
+import './styles/Modals.css'
+import './styles/Hud.css'
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

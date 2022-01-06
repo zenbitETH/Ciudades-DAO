@@ -1,8 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
-import {Link} from "react-router-dom";
 import Question from './Question';
 import { englishQuiz } from '../REALQUIZ/englishQuiz';
 import { spanishQuiz } from '../REALQUIZ/spanishQuiz';
@@ -15,6 +13,22 @@ import { LanguageContext } from '../contexts/LanguageContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { TaroContext } from '../contexts/TaroContext';
+
+import isMetamaskInstalled from './Home.js'
+import InstallMetamaskAlert from './InstallMetamaskAlert';
+import isConnected from './Home.js'
+import isConnecting from './Home.js'
+import ConnectButton from './buttons/ConnectButton';
+import ConnectingButton from './buttons/ConnectingButton';
+import handleOnConnect from './Home.js'
+
+import img4 from '../assets/about-img4.svg';
+import meta from '../assets/meta.svg';
+import connect from '../assets/about-img.svg';
+import verify from '../assets/verify.png';
+
+import key from '../assets/about-img.svg'
+
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
@@ -151,10 +165,10 @@ const Quiz = () => {
       //Delay function is only for development
       // const delay = () => new Promise(res => setTimeout(res, 2000));
 
-      if(_checkedAnswers.length === 10) {
+      if(_checkedAnswers.length === 6) {
         setLoadingModalShow(true);
-        //Make network call to receive 100 tokens
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('100'));
+        //Make network call to receive 1000 tokens
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('1000'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log('submitAnswersReceipt: ', submitAnswersReceipt);
         handleOnLoadingModal();
@@ -169,23 +183,47 @@ const Quiz = () => {
         // console.log('length: ', checkedAnswers.length);
         setSuccessModalShow(true);
         setCheckedAnswers([]);
-      } else if(_checkedAnswers.length >= 8) {
+      } else if(_checkedAnswers.length >= 5) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('80'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('800'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
         //
+
         // console.log('length: ', checkedAnswers.length);
         setSuccessModalShow(true);
         setCheckedAnswers([]);
-      } else if(_checkedAnswers.length >= 6) {
+      } else if(_checkedAnswers.length >= 4) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('20'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('600'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
         //
+
+        // console.log('length: ', checkedAnswers.length);
+        setSuccessModalShow(true);
+        setCheckedAnswers([]);
+      } else if(_checkedAnswers.length >= 3) {
+        setLoadingModalShow(true);
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('400'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log(submitAnswersReceipt);
+        handleOnLoadingModal();
+        //
+
+        // console.log('length: ', checkedAnswers.length);
+        setSuccessModalShow(true);
+        setCheckedAnswers([]);
+      } else if(_checkedAnswers.length >= 2) {
+        setLoadingModalShow(true);
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('200'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log(submitAnswersReceipt);
+        handleOnLoadingModal();
+        //
+
         // console.log('length: ', checkedAnswers.length)
         setSuccessModalShow(true);
         setCheckedAnswers([]);
@@ -237,111 +275,92 @@ const Quiz = () => {
   };
 
   return (
-    <div className="App">
+    <body id="quiz">
       {isEnglish === 'english' ?
-        <div className="app">
+        <div>
         {isConnected ?
-            <div className="gray2">
-            <div>
-              <div className="main">      
-              <div className="text-large"> Validate your account</div>
-              <div className="big-icon">✔️</div>
-              <div>
-              <p> VoTARO focuses on the governance of the city of Querétaro, so you must <span className = "yellow"> validate that you are a citizen of Queréaro. to be able to create proposals or vote the governance module. </span> </p>
-                <p> To validate your account, it is necessary to answer this Quiz. By answering it correctly, the contract will validate your address and you will receive <span className = "orange3"> 20 to 100 TARO </span>, depending on the correct answers. </ p>
-              </div>
-                <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-                {englishQuestions}
-                </QuizContext.Provider>
-
-                <div className="floating">
-                      <Button className="alt" onClick={handleOnSubmitAnswers}> ✔️ Verify answers</Button>
-                    </div>
-                </div>
-
-                <QuizFailureModal
-                  show={failureModalShow}
-                  onHide={handleOnFailure}
-                />
-                <QuizSuccessModal
-                  show={successModalShow}
-                  onHide={handleOnSuccess}
-                />
-                <QuizAlreadySubmittedModal
-                  show={alreadySubmittedModal}
-                  onHide={handleOnAlreadySubmitted}
-                />
-                  <IsLoadingModal
-                    show={loadingModalShow}
-                    onHide={handleOnLoadingModal}
-                  />
-              </div>
+          <div >
+            <h1><span id="vote">Validate your account</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            <div> 
+            <br/><br/>
+            
+            
+            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
+            <div id="margin">{englishQuestions}</div>
+            </QuizContext.Provider>
+            <div className="floating">
+              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Validate</div>
             </div>
-
-          :
-
-          <div className="valert">
-            <div className="main">
-              <div className="big-icon">⚠️</div>
-              <div className="white">To take the quiz and start earning TARO, you first need to get connected to the Ethereum network</div>
-              <Link className="alt2" to="/">Return home and click on "Connect Wallet to Unlock"</Link>
             </div>
+            
+            <QuizFailureModal
+              show={failureModalShow}
+              onHide={handleOnFailure}
+            />
+            <QuizSuccessModal
+              show={successModalShow}
+              onHide={handleOnSuccess}
+            />
+            <QuizAlreadySubmittedModal
+              show={alreadySubmittedModal}
+              onHide={handleOnAlreadySubmitted}
+            />
+              <IsLoadingModal
+                show={loadingModalShow}
+                onHide={handleOnLoadingModal}
+              />
           </div>
+          :
+          <div class="connect2">
+          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <h1 class="white">Connect your web3 wallet</h1><br/>
+        </div>
           }
         </div>
-
         :
-        <div className="app">
-          {isConnected ?
-              <div className="gray2">
-                <div>
-                  <div className="main">      
-                  <div className="text-large"> Valida tu cuenta</div>
-                  <div className="big-icon">✔️</div>
-                  <div>
-                    <p>VoTARO se enfoca en la gobernanza de la ciudad de Querétaro, por lo que deberas<span className="yellow"> validar que eres ciudadan@ de Queréaro. para poder crear propuestas o votar el módulo de gobernanza.</span></p>
-                    <p>Para validar tu cuenta, es necesario contestar este cuestionario Al contestarlo coorrectamente el contrato validará tu dirección y recibiras de <span className="orange3">20 a 100 TARO</span>, dependiendo de las respuestas correctas.</p>
-                  </div>
-                    <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-                    {spanishQuestions}
-                    </QuizContext.Provider>
-
-                    <div className="floating">
-                      <Button className="alt" onClick={handleOnSubmitAnswers}> ✔️ Verificar respuestas</Button>
-                    </div>
-                  </div>
-
-
-                  <QuizFailureModal
-                    show={failureModalShow}
-                    onHide={handleOnFailure}
-                  />
-                  <QuizSuccessModal
-                    show={successModalShow}
-                    onHide={handleOnSuccess}
-                  />
-                  <QuizAlreadySubmittedModal
-                    show={alreadySubmittedModal}
-                    onHide={handleOnAlreadySubmitted}
-                  />
-                    <IsLoadingModal
-                      show={loadingModalShow}
-                      onHide={handleOnLoadingModal}
-                    />
-                </div>
-              </div>
-              :
-              <div className="valert">
-            <div className="main">
-              <div className="big-icon">⚠️</div>
-              <div className="white">Necesitas conectarte con una wallet de Metamask a la red de Ethereum para poder contestar el cuestionario</div>
-              <Link className="alt2" to="/">Regresa al inicio para conectar Wallet</Link>
+        <div>
+        {isConnected ?
+          <div>
+            <div> 
+            <br/><br/>
+            <h1><span id="vote">Valida tu cuenta</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            
+            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
+            <div id="margin">{spanishQuestions}</div>
+            </QuizContext.Provider>
+            <div className="floating">
+              <div class="verify-bt" onClick={handleOnSubmitAnswers}> Valida tu cuenta</div>
             </div>
+            </div>
+            
+            <QuizFailureModal
+              show={failureModalShow}
+              onHide={handleOnFailure}
+            />
+            <QuizSuccessModal
+              show={successModalShow}
+              onHide={handleOnSuccess}
+            />
+            <QuizAlreadySubmittedModal
+              show={alreadySubmittedModal}
+              onHide={handleOnAlreadySubmitted}
+            />
+              <IsLoadingModal
+                show={loadingModalShow}
+                onHide={handleOnLoadingModal}
+              />
           </div>
+          :
+          <div class="connect2">
+          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <h1 class="white">Conecta tu llave web3</h1><br/>
+        </div>
           }
         </div>
       }
-    </div>
+    </body>
   );
 };
 

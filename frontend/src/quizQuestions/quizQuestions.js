@@ -65,48 +65,4 @@ export const quizQuestions = [
     ],
     correctAnswer: 'Buterin'
   },
-  {
-    number: 7,
-    question: 'Why did the cat cross the road?',
-    answers: [
-      'He was bored',
-      'A tiger was chasing him',
-      'this is the correct answer',
-      'This question makes no sense in the multi-verse in which Vitalik lives'
-    ],
-    correctAnswer: 'this is the correct answer'
-  },
-  {
-    number: 8,
-    question: '4 - 3 = __',
-    answers: [
-      0,
-      1,
-      2,
-      3
-    ],
-    correctAnswer: 1
-  },
-  {
-    number: 9,
-    question: 'one, two,  _______',
-    answers: [
-      'Koskinen',
-      'Abadi',
-      'Ganbaatar',
-      'three'
-    ],
-    correctAnswer: 'three'
-  },
-  {
-    number: 10,
-    question: 'four, five, _______',
-    answers: [
-      'Koskinen',
-      'Abadi',
-      'Ganbaatar',
-      'six'
-    ],
-    correctAnswer: 'six'
-  }
 ];

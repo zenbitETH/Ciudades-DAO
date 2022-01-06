@@ -1,40 +1,31 @@
 import { useContext } from 'react';
-import { Alert } from 'react-bootstrap';
-import {Link} from "react-router-dom";
 import { LanguageContext } from '../contexts/LanguageContext';
+import verify from '../assets/verify.png';
 
 const ValidationRequired = () => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div>
+    <div class="connect">
       {isEnglish === 'english'
       ?
-      <Alert>
+      <a href="/quiz" >
         <div className="main">
-          <div className="title3">Get validated to vote</div>
-          <div className="big-icon">⚠️</div>
-          <div className="white">
-            Only validated Querétaro citizens can create new proposals or vote on the available proposals
-          </div>
+        <h1><span id="vote">Validate your address</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
         </div>
         <div className ="floating">
-          <Link className="alt2" to="/quiz">Validate account</Link>
         </div>
-      </Alert>
+      </a>
       :
-      <Alert>
+      <a href="/quiz" >
         <div className="main">
-          <div className="title3">Valida tu cuenta</div>
-          <div className="big-icon">⚠️</div>
-          <div className="white">
-          Solo los usuarios que validen ser ciudadanos de Querétaro podran crear nuevas propuestas, presiona aquí para validarte
-          </div>
+        <h1><span id="vote">Valida tu cuenta</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
         </div>
         <div className ="floating">
-          <Link className="alt2" to="/quiz">Validar que soy Queretan@</Link>
         </div>
-      </Alert>
+      </a>
       }
     </div>
   );

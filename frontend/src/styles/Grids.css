@@ -1,0 +1,315 @@
+/* Grids */
+
+.grid-block {
+  font-size: clamp(.9em, -0.975rem + 6.5vw, 1.5rem);
+  text-align: center;
+  padding: 1em;
+  margin-top: -4.5em;
+  margin-bottom: 3em;
+  }
+
+.grid-prop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 6em 6em;
+  text-align: left;  
+  grid-gap:0.5em;
+  justify-self: center;
+  align-self: center;
+  
+  margin-bottom: 0.5em;
+}
+
+.homegrid {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(140px, 1fr));
+  font-size: clamp(1em, -1.1rem + 2.2vw, 4.5rem);
+  margin-top: 15%;
+  }
+    
+.govgrid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid;
+  grid-gap: 0.5em;
+}
+
+.void-link {
+  border-radius: 20px;
+  font-family: 'Lexend Deca', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows:  repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 0.75em;
+  margin: 0em 0em 0em 0em;
+}
+
+.about-grid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows:  repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1em;
+  padding: 1em;
+  margin: 10em 0 0 0;
+}
+
+.about-grid2 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows:  repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1em;
+  padding: 1em;
+  margin: 0em 0 0em 0;
+}
+
+.usgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  text-align: left;  
+  grid-gap: 0em;
+  justify-self: center;
+  align-self: center;
+  column-gap: 0.5em;
+}
+
+.aboutbg-grid {
+  background-color: #00000068;
+  padding: 1em;
+  border-radius: 50px 0em 50px 0px;
+  color: #fff;
+}
+
+.aboutbg-grid2 {
+  background-color: #00000068;
+  padding: 1em;
+  border-radius: 50px 50px 50px 50px;
+  color: #fff;
+}
+
+
+
+/* Backgrounds */
+
+.bg-grid0 {
+  padding: 1em;
+  background-color: #00000068;
+  border-radius: 25px;
+  height: 140px;
+  width: 100%;
+  position: relative;
+  border-color: transparent;
+  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
+}
+
+.bg-grid0:hover {
+  cursor: pointer;
+  background: linear-gradient(-15deg, #119195, #119195,#f6b055, #f6b055);
+  background-size: 400% 400%;
+  animation: gradient 3s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.bg-blocked { 
+  padding: 1em;
+  background: linear-gradient(-15deg, #dc3840b5, #e26c72b5,#dc3840b5);
+  border-radius: 25px;
+  height: 140px;
+  width: 100%;
+  position: relative;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.bg-reward {
+  padding: 1em;
+  background: linear-gradient(-15deg, #f6b0558e, #f6b0558e,#11919550, #11919550);
+  background-size: 400% 400%;
+  animation: gradient 1s ease-in-out infinite;
+  border-radius: 25px;
+  height: 140px;
+  width: 100%;
+  position: relative;
+  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
+}
+
+.bg-reward:hover   {
+  background: linear-gradient(-15deg, #119195, #119195,#f6b055, #f6b055);
+  background-size: 400% 400%;
+  animation: gradient 3s ease-in-out infinite;
+  cursor: pointer;
+  color: #01304E !important;
+}
+
+.bg-reward:hover .about-hl  {
+  font-family: "ABeeZee";
+  cursor: pointer;
+  border-color:linear-gradient(45deg, #ffffff, #ffffff);
+  background: linear-gradient(-15deg, #FAC91a, #FAC91a,#119195, #119195);
+  background-size: 400% 400%;
+  animation: gradient 3s ease-in-out infinite;
+  color: #01304E;
+  position: relative;
+}
+
+
+.bg-reward2 {
+  padding: 1em;
+  background: linear-gradient(-15deg, #FAC91a70, #FAC91a70,#11919570, #11919570);
+  background-size: 400% 400%;
+  animation: gradient 1s ease-in-out infinite;
+  border-radius: 25px;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: transparent;
+  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
+}
+
+.bg-reward2:hover {
+  background: linear-gradient(-15deg, #fac91ac3, #FAC91ac3,#119195c3, #119195c3);
+  background-size: 400% 400%;
+  animation: gradient 1s ease-in-out infinite;
+}
+
+
+.bg-reward2 .ustext {
+  font-family: "ABeeZee";
+  visibility: hidden;
+  width: auto;
+  bottom: 100%;
+  left: 0%;
+  background-color: #ffffff;
+  backdrop-filter: blur(15px);
+  color: #211e40;
+  justify-items: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 1em;
+  margin-bottom: 0.3em;
+  font-size: 0.9em;
+  position: absolute;
+  text-align: justify;
+}
+
+.bg-reward2:hover .ustext {
+  visibility: visible;
+}
+
+.bg-reward3 {
+  padding: 1em;
+  background: linear-gradient(-15deg, #FAC91a, #FAC91a,#119195, #119195);
+  color: #01304E !important;
+  background-size: 400% 400%;
+  animation: gradient 1s ease-in-out infinite;
+  border-radius: 25px;
+  width: 100%;
+  position: relative;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: transparent;
+  font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
+}
+
+ a.bg-reward3:hover {
+  color: #fff !important;
+  background: linear-gradient(-15deg, #FAC91a, #FAC91a,#119195, #119195);
+  animation: none;
+
+}
+
+.propose-bg {
+    padding: 1em;
+    background-color: #00000068;
+    border-radius: 25px;
+    height: 225px;
+    width: 100%;
+    position: relative;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: transparent;
+    grid-column: span 2;
+    font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
+  }
+
+  
+  .propose-bg:hover {
+    cursor: pointer;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color:linear-gradient(45deg, #ffffff, #ffffff);
+    background: linear-gradient(45deg, #2b284a00, #11919576, #11919576, #2b284a00);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+}
+
+
+
+
+@media only screen and (min-width: 1200px) {
+
+  .grid-block {
+    margin: 12.5vh 5vh 0 5vh;
+  }
+
+  .grid-blocked {
+    margin: 0 25% 0 25%;  
+  }
+
+  .homegrid {
+    margin-top: 8%;
+  }
+
+
+  .govgrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .about-grid{
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .about-grid2 {
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  }
+  .bg-grid {
+    grid-row: span 3;
+    grid-column: span 1;
+    height: auto;
+  }
+  
+
+  .bg-grid0 {
+    height: 400px;
+  }
+
+.bg-reward {
+  height: 400px;
+}
+
+.bg-blocked {
+  height: 400px;
+}
+
+  .bg-reward2 {
+    grid-row: span 3;
+    grid-column: span 1;
+    height: auto;
+  }
+
+  .aboutbg-grid {
+    margin-left: 50.5vh;
+    margin-right: 50.5vh;
+  }
+  .aboutbg-grid2 {
+    margin-left: 50.5vh;
+    margin-right: 50.5vh;
+  }
+
+  
+}
+
+

@@ -1,0 +1,254 @@
+
+Nav {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.hudWallet {
+    color: #ffffff;
+    background: linear-gradient(45deg,  #057f8a70, #057f8a70,#00aebeb4, #00aebeb4);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    padding: 1.75em 0em 1.75em 0em ;
+    margin: 0 0 0 0;
+    border-radius:  0 0 25px 25px;
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  .hudWallet:hover {
+    background: linear-gradient(45deg,  #057f8ab4, #057f8ab4,#00aebeb4, #00aebeb4);
+    background-size: 200% 200%;
+    cursor: pointer;
+  }
+
+  .no-wallet {
+    background: linear-gradient(90deg, #dc3840b5, #e26c72b5, #dc3840b5);
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+    padding: 1em 0em 1em 0em ;
+    margin: 0 0 0 0;
+    border-radius:  0 0 25px 25px;
+    font-size: 1.3em;
+  }
+  
+  .no-wallet:hover {
+    background-size: 100% 100%;
+    content:'';
+    cursor: pointer;
+    border-width: 0em;
+    border-style: solid;
+    animation: none;
+  }
+
+  .spinner-grow {
+    color: #F6AF55;
+    height: 40px !important;
+    width: 40px !important;
+    position: relative;
+    margin: -0.55em 0 -0.55em 0;
+  }
+
+  
+  .bg-start {
+    padding: 1em;
+    background-color: #00000068;
+    border-radius: 25px;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    border-color: transparent;
+    display: block;
+  }
+
+  .bg-start:hover {
+    border-color: transparent;
+    background: linear-gradient(-45deg,  #F6AF55, #F6AF55,#00aebeb4, #00aebeb4);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    color: #01304E !important;
+  }
+
+  .cw {
+    
+    color: #ffffff;
+    position: relative;
+    left: -1em;
+  }
+
+
+  .spincenter {
+    padding-left: 2em;
+  }
+.topHud{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    font-size: 0.8em;
+    z-index: 2;
+}
+
+.topGrid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    
+}
+.bottomHud {
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    background: #2C2931;
+    font-size: 0.8em;
+    font-family: "Lexend Deca";
+
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    margin-left: 0;
+    
+    align-self: center;
+    
+}
+
+.hud0{
+    color:#01304E !important;
+    background: linear-gradient(45deg,  #F6AF55, #F6AF55,#b3803e, #b3803e);
+    background-size: 100% 100%;
+    z-index: 1;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius:  0 0 0 25px;
+    font-size: 2em;
+  }
+
+  .hudBalance {
+    color:#01304E !important;
+    display: block;
+  }
+
+  .hudBalance:hover {
+    color:#fff !important;
+  }
+
+  .hudU {
+    color: #fff !important;
+    background: linear-gradient(45deg,  #f65f55, #f65f55,#a54039, #a54039);
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+    padding: 1em 1em 1em 1em;
+    border-radius:  0 0 25px 0px;
+    font-size: 1.5em;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .hudV {
+    color: #fff !important;
+    background: linear-gradient(45deg,  #0a517e, #0a517e,#043b5e);
+    background-size: 100% 100%;
+    padding: 1em 1em 1em 1em;
+    border-radius:  0 0 25px 0px;
+    font-size: 1.5em;
+    text-align: center !important;
+  }
+
+  .hudV:hover {
+    cursor: pointer;
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+    color: #F6AF55 !important;
+  }
+
+  .hudLogo {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    opacity: 75%;
+  }
+
+  .hudLevel{
+    z-index: 2;
+    position:relative;
+    top: 30%;
+    right: 5%;
+
+  }
+
+  .hud1 {
+    color: #01304E !important;
+    background: linear-gradient(45deg,  #F6AF55, #F6AF55,#b3803e, #b3803e);
+    background-size: 150% 100%;
+    z-index: 1;
+    padding: 1em 0.5em 1em 0.5em ;
+    margin-top: -1.2em;
+    border-radius:  25px 0 0 0;
+    font-size: 1.3em;
+  }
+
+  .hud1:hover {
+    cursor: pointer;
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+    color: #fff !important;
+  }
+
+  .hud2 {
+    color: #01304E !important;
+    background: linear-gradient(45deg,  #F6AF55, #F6AF55,#b3803e, #b3803e);
+    background-size: 150% 100%;
+    z-index: 1;
+    padding: 1em 0.5em 1em 0.5em ;
+    margin-top: -1.2em;
+    border-radius:  0 0 0 0;
+    font-size: 1.3em;
+  }
+
+  .hud2:hover{
+    cursor: pointer;
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+    color: #fff !important;
+  }
+
+  .hud3 {
+    color: #ffffff;
+    background: linear-gradient(45deg, #119195, #119195,#0f595c, #0f595c);
+    background-size: 150% 150%;
+    z-index: 1;
+    padding: 1em 0.5em 1em 0.5em ;
+    margin: -1.2em 0 0 0;
+    border-radius:  0 25px 0px 0px;
+    font-size: 1.3em;
+  }
+
+  .hud3:hover {
+    cursor: pointer;
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+    color: #01304E !important;
+  }
+
+
+
+  @media only screen and (min-width: 1200px) {
+    .bottomHud {
+        font-size: 1em;
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    .topHud {
+        width: 50%;
+        margin-left: 25%;
+        font-size: 1em;
+    }
+    
+    .bg-start {
+      height: 450px;
+    }
+
+    .spinner-grow {
+        left:7%;
+    }
+  }

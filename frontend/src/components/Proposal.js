@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { Component, useContext, useEffect, useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import detectEthereumProvider from '@metamask/detect-provider';
 import { ethers } from 'ethers';
@@ -6,6 +6,7 @@ import CountdownClock from './CountdownClock';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
+
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
@@ -123,142 +124,86 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
     let voteTxReceipt = await voteTx.wait(1);
     console.log(voteTxReceipt);
   };
+  
 
 
   return (
     <div>
       {isEnglish === 'english'
-
       ?
+      <div class="proposal">    
+         <div class="proposal-expiration">
+           <h4 class="prop-title">💡 Proposal # {id} </h4>
+           <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
+         </div><br/>
+         <div class="mini-title">🎯 Objetive:</div>
+         <div class="prop-hl"> {title}</div><br/>
+         <div class="grid-prop">      
+           <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
+           <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
+           <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
+           <div class="minit-bg3">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
+         </div>  
 
-  <Card className="proposal">
-    <div className="proposal-id">💡 Proposal # {id} 
-      <div className="proposal-author">by {proposer}</div>
-    </div>
-    <div className="proposal-title">🎯{title}</div>
-    <div className="proposal-details">🔍 Details:</div>
-    <div className="proposal-container">
-      <div className="proposal-hero">🦸🦸‍♂️In charge: <div className="table-text">{personInCharge}</div></div>
-      <div className="proposal-table">
-          <div className="proposal-action">⚙️ Action: <div className="table-text">{typeOfAction}</div></div>
-          <div className="proposal-location"> 📍 Where: <div className="table-text">{neighborhood}</div></div>
-          <div className="proposal-cost">💸 Cost: <div className="table-text">{budget} pesos</div> </div>
-      </div>
-      
-      <div className="proposal-description">📑 Description: <div className="table-text">{description}</div></div>
-    </div>
-    
-      <div className="proposal-expiration">⏳ Time left to vote: <CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></div>
-    {/*}
-    <div className ="proposal-main">
-      <div className="proposal-sub">Costo: {budget}</div>
-      <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
-    </div>
-    */}
-
-  <Card.Body className="proposal-votes">
-  <div className="yellow-card"></div>
-    <div className="proposal-main">
-      <div className="proposal-favor">
-        <div>
-          ✔️ For:
-        </div>
-        <p className="big-iconf">{forVotes}
-          {!hasVoted
-            ?
-            <Button className="favor" block onClick={handleOnClickFor}>
-              ✔️ Vote for
-            </Button>
-            :
-            ''
-          }
-        </p>
-      </div>
-      <div >
-        <div className="proposal-against">
-          ❌ Against:
-        </div>
-        <p className="big-icona">{againstVotes}
-          {!hasVoted
-            ?
-            <Button className="against" block onClick={handleOnClickAgainst}>
-              ❌ Vote against
-            </Button>
-            :
-            ''
-          }
-        </p>
-      </div>
-    </div>
-  </Card.Body>
-</Card>
-
+         <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
+         {/*}
+         <div className ="proposal-main">
+           <div className="proposal-sub">Costo: {budget}</div>
+           <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+         </div>
+         */}
+         <div class="yellow">made by {proposer}</div><br/>
+         <div class="vote-grid">
+           {!hasVoted?
+           <a class="prop-bgf" onClick={handleOnClickFor}><h1 class="votef">Vote for</h1></a>
+           :
+           <div class="prop-bgf2"><h2>For:<br/>{forVotes} TARO</h2></div>    
+           }
+           {!hasVoted ?
+           <a class="prop-bga" onClick={handleOnClickAgainst}><h1 class="votef">Vote against</h1></a>
+           : 
+           <div class="prop-bga2"><h2> Against:<br/>{againstVotes} TARO</h2></div>
+           }
+         </div>    
+       </div>
       :
-
-<Card className="proposal">
-    <div className="proposal-id">💡 Propuesta # {id} 
-      <div className="proposal-author">por {proposer}</div>
-    </div>
-    <div className="proposal-title">🎯{title}</div>
-    <div className="proposal-details">🔍 Detalles:</div>
-    <div className="proposal-container">
-      <div className="proposal-hero">🦸 Responsable de la actividad🦸‍♂️ <div className="table-text">{personInCharge}</div></div>
-      <div className="proposal-table">
-          <div className="proposal-action">⚙️ Tipo: <div className="table-text">{typeOfAction}</div></div>
-          <div className="proposal-location">📍 Dónde: <div className="table-text">{neighborhood}</div></div>
-          <div className="proposal-cost">💸 Costo: <div className="table-text">{budget} pesos</div></div>
-      </div>
-      
-      
-      <div className="proposal-description" >📑 Descripción: <div className="table-text">{description}</div></div>
-    </div>
-    
-      <div className="proposal-expiration">⏳ Tiempo restante para votar ⌛  <CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></div>
-    {/*}
-    <div className ="proposal-main">
-      <div className="proposal-sub">Costo: {budget}</div>
-      <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
-    </div>
-    */}
-
-  <Card.Body className="proposal-votes">
-  <div className="yellow-card"></div>
-    <div className="proposal-main">
-      <div className="proposal-favor">
-        <div>
-          ✔️ A favor:
+      <div class="proposal">    
+        <div class="proposal-expiration">
+          <div class="prop-title">💡 Propuesta # {id} </div>
+          <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
+        </div><br/>
+        <div class="mini-title">🎯 Objetivo:</div>
+        <div class="prop-hl"> {title}</div><br/>
+        <div class="grid-prop">      
+          <div class="minit-bg">⚙️ Acción: <div class="prop-hl">{typeOfAction}</div></div>
+          <div class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></div>      
+          <div class="minit-bg3"> 📍 Dónde: <div className="prop-hl">{neighborhood}</div></div>
+          <div class="minit-bg3">💸 Costo: <div className="prop-hl">{budget} pesos</div> </div>
         </div>
-        <p className="big-iconf">{forVotes}<p>TARO</p>
-          {!hasVoted
-            ?
-            <Button className="favor" block onClick={handleOnClickFor}>
-              ✔️ Votar a favor
-            </Button>
-            :
-            ''
-          }
-        </p>
-      </div>
-      <div>
-        <div className="proposal-against">
-          ❌ En contra:
+        
+        <div class="description-bg"><div>📑 Descripción:</div> <div class="prop-description">{description}</div></div>
+        {/*}
+        <div className ="proposal-main">
+          <div className="proposal-sub">Costo: {budget}</div>
+          <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
         </div>
-        <p className="big-icona">{againstVotes}<p>TARO</p>
-          {!hasVoted
-            ?
-            <Button className="against" block onClick={handleOnClickAgainst}>
-              ❌ Votar en contra
-            </Button>
-            :
-            ''
+        */}
+        <div class="author">Hecha por {proposer}</div><br/>
+        <div class="vote-grid">
+          {!hasVoted?
+          <a class="prop-bgf" onClick={handleOnClickFor}><h1 class="votef">Vota <br/>a favor</h1></a>
+          :
+          <div class="prop-bgf2">A favor:<br/>{forVotes}<br/>TARO</div>    
           }
-        </p>
+          {!hasVoted ?
+          <a class="prop-bga" onClick={handleOnClickAgainst}><h1 class="votef">Vota <br/>en contra</h1></a>
+          : 
+          <div class="prop-bga2"> En contra:<br/>{againstVotes}<br/> TARO</div>
+          }
+        </div>    
       </div>
-    </div>
-  </Card.Body>
-</Card>
       }
-    </div>
+</div>
   );
 };
 
