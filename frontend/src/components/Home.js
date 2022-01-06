@@ -1,9 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { ethers } from 'ethers';
-import ConnectButton from './buttons/ConnectButton';
-import ConnectingButton from './buttons/ConnectingButton';
-import InstallMetamaskAlert from './InstallMetamaskAlert';
 //import SkaleButton from './buttons/SkaleButton';
 //import SkaleSwitch from './buttons/SkaleSwitch';
 //import SwitchSkaleAlert from './SwitchSkaleAlert';
@@ -21,12 +18,10 @@ import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-import reward from '../assets/TAROrew.png';
+import test from '../assets/confirm.svg';
 import prop from '../assets/prop.png';
 import past from '../assets/past.png';
 import verify from '../assets/verify.png';
-import vote from '../assets/vote.png';
-import taro from '../assets/taro.png';
 import logo from '../assets/Logow.png';
 
 function Home() {
@@ -276,22 +271,22 @@ function Home() {
                 <section id="">
                   <div class="homegrid">
                   <a class="bg-grid0" href="https://faucet.ropsten.be/">
-                      <img src={past} class="homevan"/> 
+                      <img src={test} class="homevan"/> 
                       <div class="propsub">1 Get </div>
                       <div class="propopt">Testnet ETH </div>
                     </a>
                     <a class="bg-reward"href="/Quiz">
-                      <img src={verify} class="ribvan"/>
+                      <img src={verify} class="homevan"/>
                       <div class="propsub">2 Get up to 1,000 TARO</div>
                       <div class="propopt">Validate</div>
                     </a>
                     {isValidated ? <a class="bg-reward" href="/createProposal">
-                      <img src={prop} class="ribvan"/> 
+                      <img src={prop} class="homevan"/> 
                       <div class="propsub">3 Get 50 TARO per proposal</div>
                       <div class="propopt">Propose</div>
                     </a>
                      : <div class="bg-blocked" >
-                     <img src={prop} class="ribvan"/> 
+                     <img src={prop} class="homevan"/> 
                      <div class="propsub">3 Validate to unlock</div>
                      <div class="propopt">Propose</div>
                    </div>}
@@ -314,7 +309,7 @@ function Home() {
                 <section>
                   <div class="headline">
                     <img src={logo} height="125px"/>  
-                    <h1 class="yellow">VoTARO Ciudad DAO®</h1>
+                    <div class="yellow">VoTARO Ciudad DAO®</div>
                     <h2>Querétaro on Ethereum</h2>
                   </div>
                   <div class="grid-blocked">
@@ -337,22 +332,22 @@ function Home() {
                 <section id="">
                 <div class="homegrid">
                 <a class="bg-grid0" href="https://faucet.ropsten.be/">
-                    <img src={past} class="homevan"/> 
+                    <img src={test} class="homevan"/> 
                     <div class="propsub">1 Obtén </div>
                     <div class="propopt">ETH de prueba </div>
                   </a>
                   <a class="bg-reward"href="/Quiz">
-                    <img src={verify} class="ribvan"/>
+                    <img src={verify} class="homevan"/>
                     <div class="propsub">2 Obtén hasta 1,000 TARO</div>
                     <div class="propopt">Validar</div>
                   </a>
                   {isValidated ? <a class="bg-reward" href="/createProposal">
-                    <img src={prop} class="ribvan"/> 
+                    <img src={prop} class="homevan"/> 
                     <div class="propsub">3 Obtén 50 TARO por propuesta</div>
                     <div class="propopt">Proponer</div>
                   </a>
                    : <div class="bg-blocked" >
-                   <img src={prop} class="ribvan"/> 
+                   <img src={prop} class="homevan"/> 
                    <div class="propsub">3 Valida para desbloquear</div>
                    <div class="propopt">Propose</div>
                  </div>}

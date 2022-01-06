@@ -26,10 +26,13 @@
   font-family: "ABeeZee";
 }
 
-.purple {
+.dark {
   color: #01304E;
 }
 
+.white {
+  color:#fff;
+}
 
 .yollow {
   color: #928a7b;
@@ -48,16 +51,7 @@
   color: #F6AF55 !important;
 }
 
-.yellowr {
-  color: #5b5a5f !important;
-  text-align: right;
-  vertical-align: middle;
-  background-color: #F6AF55;
-  padding: 1em;
-  margin: -.62em -.62em 0 0em;
-  border-radius: 0px 20px 0px 20px;
-  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem)
-}
+
 
 .yellow-text {
   color: #F6AF55 !important;

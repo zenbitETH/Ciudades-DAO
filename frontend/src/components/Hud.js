@@ -1,7 +1,3 @@
-import {NavLink} from 'react-router-dom'
-import {Navbar, Nav, NavDropdown, NavItem} from 'react-bootstrap';
-import logo from '../assets/Logow.png';
-
 import { useEffect, useState, useContext } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { ethers } from 'ethers';
@@ -18,14 +14,11 @@ import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
-
-
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
-
 
 const Header = () => {
   let [isEnglish, setLoc] = useContext(LanguageContext);
