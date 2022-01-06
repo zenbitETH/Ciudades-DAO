@@ -28,11 +28,39 @@
   }
   
   .modal-2 .modal-content {  
-    border-radius: 20px !important;
+    border-radius: 25px !important;
     text-align: center !important;
     background: linear-gradient(90deg, #2b284a00, #2b284a00, #11919590, #11919590, #2b284a00, #2b284a00);
     background-size: 500% 500%;
     animation: gradient 2s ease infinite;
     font-family: 'Lexend Deca', sans-serif !important; 
     color: #ffffff !important;
+  }
+
+  .connect {
+    background: linear-gradient(90deg, #dc3840b5, #e26c72b5, #dc3840b5);
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+    margin: -3em -1em 0em -1em !important;
+    padding: 12.5em 1em 12em 1em !important;
+    z-index: -1 !important;
+  }
+
+  .connect2 {
+    background: linear-gradient(90deg, #dc3840b5, #e26c72b5, #dc3840b5);
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+    margin: -6em 0em -6em 0em !important;
+    padding: 20em 1em 15em 1em !important;
+    z-index: -1 !important;
+  }
+
+  @media only screen and (min-width: 1200px) { 
+    .connect{
+      padding: 20em 1em 25em 1em !important;
+    }
+
+    .connect2 {
+      padding: 25em 0em 25em 0em !important;
+    }
   }

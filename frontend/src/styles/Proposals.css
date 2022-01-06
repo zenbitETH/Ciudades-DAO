@@ -140,6 +140,7 @@ option:disabled {
 .proplist {
   padding: 0.5em;
   margin-top: 2.5em;
+  margin-bottom: 5em;
   text-align: center;
   font-family: 'Lexend Deca';
 }
@@ -373,7 +374,7 @@ option:disabled {
   border-style: solid;
   border-color: transparent;
   align-self: center;
-  font-size: clamp(2em, -1.2em + 2vw, 2.35rem);
+  font-size: clamp(1.5em, -1.2em + 2vw, 2.35rem);
 }
 
 
@@ -412,7 +413,7 @@ option:disabled {
   border-style: solid;
   border-color: transparent;
   align-self: center;
-  font-size: clamp(2em, -1.2em + 2vw, 2.35rem);
+  font-size: clamp(1.5em, -1.2em + 2vw, 2.35rem);
 }
 
 
@@ -437,7 +438,7 @@ option:disabled {
   border-style: solid;
   border-color: transparent;
   align-self: center;
-  font-size: clamp(2em, -1.2em + 2vw, 2.35rem);
+  font-size: clamp(1.5em, -1.2em + 2vw, 2.35rem);
 }
 
 .props {
@@ -515,7 +516,7 @@ option:disabled {
   padding: 1em 1em;
   margin: 1em -.5em 1em -.5em;
   font-family: 'Lexend Deca', sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .aproposal1 {
@@ -525,7 +526,7 @@ option:disabled {
   padding: 1em 1em;
   margin: 0em -1em 0.5em -1em;
   font-family: 'Lexend Deca', sans-serif;
-  font-size: clamp(2em, -0.975rem + 6.5vw, 3rem);
+  font-size: clamp(1.5em, -0.975rem + 6.5vw, 1rem);
 }
 
 .proposal-expiration {
@@ -533,9 +534,8 @@ option:disabled {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   color: #fff;
-  grid-gap: 1em;
+  
   text-align: left;
-  margin-bottom: 2em;
 }
 
 .proposal-description {
@@ -546,6 +546,7 @@ option:disabled {
 
 .prop-hl {
   font-size: clamp(1em, -1.2em + 2.1vw, 2.5rem);
+  margin-bottom: 0.5em;
   font-weight: 300;
   color: #ffffff;
   text-align: justify ;
@@ -557,14 +558,13 @@ option:disabled {
 
 .description-bg {
   text-align: justify;
-  color: #119195;
+  color: #F6AF55;
   font-family: "ABeeZee"; 
-  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
+  font-size: clamp(1em, -1.2em + 2.1vw, 1rem);
   background-color: #ffffff26;
   border-radius: 0 0 20px 20px;
   padding: 0.5em;
   text-align: left;
-  
   line-height: 175%;
   text-align: justify;
 }
@@ -581,12 +581,23 @@ option:disabled {
  }
 
 .prop-title {
-  color: #5b5a5f;
+  color: #01304E;
   text-align: left;  
-  background-color: #119195;
+  background-color: #F6AF55;
   padding: 1em;
   margin: -0.62em 0em 0 -.62em;
   border-radius: 20px 0 20px 0px;
+  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem)
+}
+
+.yellowr {
+  color: #fff !important;
+  text-align: right;
+  vertical-align: middle;
+  background-color: #119195;
+  padding: 1em;
+  margin: -.62em -.62em 0 0em;
+  border-radius: 0px 20px 0px 20px;
   font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem)
 }
 
@@ -598,32 +609,32 @@ option:disabled {
 }
 
 .minit-bg {
-  color: #119195;
+  color: #F6AF55;
   font-family: "ABeeZee"; 
   background-color: #ffffff26;
   border-radius: 20px 0 0 0;
   padding: 0.5em;
   text-align: left;
-  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
+  font-size: clamp(1em, -1.2em + 2.1vw, 1rem);
 }
 
 .minit-bg2 {
-  color: #119195;
+  color: #F6AF55;
   font-family: "ABeeZee"; 
   background-color: #ffffff26;
   border-radius: 0 20px 0 0;
   padding: 0.5em;
   text-align: left;
-  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
+  font-size: clamp(1em, -1.2em + 2.1vw, 1rem);
 }
 
 .minit-bg3 {
-  color: #119195;
+  color: #F6AF55;
   font-family: "ABeeZee"; 
   background-color: #ffffff26;
   padding: 0.5em;
   text-align: left;
-  font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem);
+  font-size: clamp(1em, -1.2em + 2.1vw, 1rem);
 }
 
 .minit-bg4 {
@@ -653,7 +664,7 @@ option:disabled {
 
 @media only screen and (min-width: 1400px) {
   .propsub {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .propopt {

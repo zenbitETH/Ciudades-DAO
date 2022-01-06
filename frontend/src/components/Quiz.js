@@ -27,6 +27,8 @@ import meta from '../assets/meta.svg';
 import connect from '../assets/about-img.svg';
 import verify from '../assets/verify.png';
 
+import key from '../assets/about-img.svg'
+
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
@@ -272,24 +274,10 @@ const Quiz = () => {
     setLoadingModalShow(false);
   };
 
-  window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-
   return (
     <body id="quiz">
       {isEnglish === 'english' ?
         <div>
-          <div class="progress-holder">
-            <div class="progress-container">
-            <div class="progress-bar2" id="myBar"></div>
-          </div>
-        </div>
         {isConnected ?
           <div >
             <h1><span id="vote">Validate your account</span></h1><br/>
@@ -324,47 +312,14 @@ function myFunction() {
               />
           </div>
           :
-          <div >
-            <h1><span id="vote">Validate your account</span></h1><br/>
-            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
-            <div> 
-            <br/><br/>
-            
-            
-            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-            <div id="margin">{englishQuestions}</div>
-            </QuizContext.Provider>
-            <div className="floating">
-              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Validate</div>
-            </div>
-            </div>
-            
-            <QuizFailureModal
-              show={failureModalShow}
-              onHide={handleOnFailure}
-            />
-            <QuizSuccessModal
-              show={successModalShow}
-              onHide={handleOnSuccess}
-            />
-            <QuizAlreadySubmittedModal
-              show={alreadySubmittedModal}
-              onHide={handleOnAlreadySubmitted}
-            />
-              <IsLoadingModal
-                show={loadingModalShow}
-                onHide={handleOnLoadingModal}
-              />
-          </div>
+          <div class="connect2">
+          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <h1 class="white">Connect your web3 wallet</h1><br/>
+        </div>
           }
         </div>
         :
         <div>
-          <div class="progress-holder">
-            <div class="progress-container">
-            <div class="progress-bar2" id="myBar"></div>
-          </div>
-        </div>
         {isConnected ?
           <div>
             <div> 
@@ -398,29 +353,10 @@ function myFunction() {
               />
           </div>
           :
-          <div class="valert2">
-            <br/><br/><br/><br/><br/><br/><br/><br/>
-              <h1><span id="vote">Conecta tu cartera web3</span></h1><br/>
-              <div class="center"><img src={img4} alt="Alert about key" class="prop-img"/></div><br/>
-                <div class="floating">
-                  <h3>Necesitas una cartera Web 3 para usar VoTARO.
-                    Obten una cartera o conecte una dirección existente en la pantalla de inicio.
-                  <br/><br/></h3>
-                </div>
-                <div class="void-link">
-                  <div class="bg-grid3"><a href="https://metamask.io">
-                    <img src={meta} class="ribvan"/> 
-                    <div class="propsub">Obtener wallet web3</div>
-                    <div class="propopt">Descargar</div>
-                  </a></div>
-                  <div class="bg-grid3"><a href="/Home">
-                    <img src={connect} class="ribvan"/>
-                    <div class="propsub">Dirección existente</div>
-                    <div class="propopt">Conectar</div>
-                  </a></div>
-                </div>
-                <br/>
-          </div>
+          <div class="connect2">
+          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <h1 class="white">Conecta tu llave web3</h1><br/>
+        </div>
           }
         </div>
       }

@@ -201,26 +201,14 @@ const CreateProposal = () => {
   };
   
 
-window.onscroll = function() {myFunction()};
 
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
 
   return (
     <body id="quiz">
       {isEnglish === 'english'
       ?
       <div id="proposal" class="newprop">
-      <div class="progress-holder">
-        <div class="progress-container">
-          <div class="progress-bar" id="myBar"></div>
-        </div>
-      </div>
-      <h1><span  class="yellow">New Proposal</span></h1><br/><br/>
+      <h1><span  class="yellow">New Proposal</span></h1>
       <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
       
       <Form autocomplete="off" id="margin">
@@ -342,8 +330,8 @@ function myFunction() {
             <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
           </Form.Group>
           */}
-          <a class="jos" href="#proposal">Check your post before sending</a>
-          <div class="center"><div class="quiz-bt" classntype="submit" onClick={handleOnSubmit}>🚀 Send Proposal</div></div>
+          <a class="about-bt" href="#proposal">Check your post before sending</a>
+          <div class="center"><div class="quiz-bt" classntype="submit" onClick={handleOnSubmit}>💡 Create Proposal</div></div>
           </Form>
         <IsLoadingModal
           show={loadingModalShow}
@@ -364,11 +352,7 @@ function myFunction() {
         :
 
       <div id="proposal" class="newprop">
-        <div class="progress-holder">
-          <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
-          </div>
-        </div>
+        
         <h1><span  class="yellow">Nueva propuesta</span></h1><br/><br/>
         <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
           
@@ -490,8 +474,8 @@ function myFunction() {
               <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
             </Form.Group>
             */}
-            <a class="jos" href="#proposal">Revisa tu puesta antes de enviar</a>
-              <div class="center"><div class="quiz-bt" classntype="submit" onClick={handleOnSubmit}>🚀 Enviar propuesta</div></div>
+            <a class="about-bt" href="#proposal">Revisa tu puesta antes de enviar</a>
+              <div class="center"><div class="quiz-bt" classntype="submit" onClick={handleOnSubmit}>💡 Enviar propuesta</div></div>
             </Form>
           <IsLoadingModal
             show={loadingModalShow}
