@@ -6,18 +6,13 @@ const ValidationRequired = () => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
-    <div class="valert2">
+    <div class="connect">
       {isEnglish === 'english'
       ?
       <a href="/quiz" >
         <div className="main">
-          <br/><br/>
-        <h1><span id="vote" class="yellow">Validate Account</span></h1><br/>
-          <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
-          <h3 class="white-jos">
-            Only validated Querétaro citizens can create new proposals or vote on the available proposals. <br/><br/>
-            <div class="center">Touch to validate your account.</div>
-          </h3>
+        <h1><span id="vote">Validate your address</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
         </div>
         <div className ="floating">
         </div>
@@ -25,15 +20,8 @@ const ValidationRequired = () => {
       :
       <a href="/quiz" >
         <div className="main">
-          <br/><br/>
-        <h1><span id="vote" class="yellow">Valida tu cuenta</span></h1><br/>
-          <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
-          <h3 class="white-jos">
-            Solo las direcciones cripto que hayan sido validadas por VoTARO podrán crear y votar por las propuestas
-            disponibles.
-            <br/><br/>
-            <div class="center">Toca para validar tu cuenta.</div>
-          </h3>
+        <h1><span id="vote">Valida tu cuenta</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
         </div>
         <div className ="floating">
         </div>
