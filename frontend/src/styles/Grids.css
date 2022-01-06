@@ -52,6 +52,7 @@
   grid-template-rows:  repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1em;
   padding: 1em;
+  margin: 10em 0 0 0;
 }
 
 .about-grid2 {
