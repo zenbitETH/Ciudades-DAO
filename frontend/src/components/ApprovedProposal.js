@@ -134,7 +134,7 @@ const ApprovedProposal = ({title,
         </div>
         <div class="aproposal">Approved by {forVotes} votes</div>
         <div class="mini-title">🎯 Objetive:</div>
-        <div class="prop-hl"> {title}</div><br/><br/>
+        <div class="prop-hl"> {title}</div>
         <div class="grid-prop">      
           <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
           <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
@@ -161,9 +161,9 @@ const ApprovedProposal = ({title,
             <div class="prop-title">💡 Prouesta # {id}</div>
             <span class="yellowr"> Hecha el {proposalDay}/{proposalMonth}/{proposalYear}</span> 
           </div>
-          <div class="aproposal">Probada por  {forVotes} votos</div>
+          <div class="aproposal">Arobada por  {forVotes} votos</div>
           <div class="mini-title">🎯 Objetivo:</div>
-          <div class="prop-hl"> {title}</div><br/><br/>
+          <div class="prop-hl"> {title}</div>
           <div class="grid-prop">      
             <div class="minit-bg">⚙️ Actividad: <div class="prop-hl">{typeOfAction}</div></div>
             <div class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></div>      

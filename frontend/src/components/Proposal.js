@@ -135,9 +135,9 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
          <div class="proposal-expiration">
            <h4 class="prop-title">💡 Proposal # {id} </h4>
            <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
-         </div>
+         </div><br/>
          <div class="mini-title">🎯 Objetive:</div>
-         <div class="prop-hl"> {title}</div><br/><br/>
+         <div class="prop-hl"> {title}</div><br/>
          <div class="grid-prop">      
            <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
            <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
@@ -162,7 +162,7 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
            {!hasVoted ?
            <a class="prop-bga" onClick={handleOnClickAgainst}><h1 class="votef">Vote against</h1></a>
            : 
-           <div class="prop-bga2"><h2> Against:<br/>{againstVotes}TARO</h2></div>
+           <div class="prop-bga2"><h2> Against:<br/>{againstVotes} TARO</h2></div>
            }
          </div>    
        </div>
@@ -171,9 +171,9 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
         <div class="proposal-expiration">
           <div class="prop-title">💡 Propuesta # {id} </div>
           <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
-        </div>
+        </div><br/>
         <div class="mini-title">🎯 Objetivo:</div>
-        <div class="prop-hl"> {title}</div><br/><br/>
+        <div class="prop-hl"> {title}</div><br/>
         <div class="grid-prop">      
           <div class="minit-bg">⚙️ Acción: <div class="prop-hl">{typeOfAction}</div></div>
           <div class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></div>      

@@ -250,12 +250,7 @@ const PastProposals = () => {
         {isEnglish === 'english'
         ?
         <div class="proplist">
-          <div class="progress-holder">
-            <div class="progress-container">
-              <div class="progress-bar" id="myBar"></div>
-            </div>
           
-          </div>
           <br/><br/>
           <h1><span class="yellow">Past Proposals</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
@@ -381,11 +376,7 @@ const PastProposals = () => {
 
         :
         <div class="proplist">
-          <div class="progress-holder">
-            <div class="progress-container">
-              <div class="progress-bar" id="myBar"></div>
-            </div>
-          </div>
+          
           <br/><br/>
           <h1><span class="yellow">Propuestas anteriores</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
