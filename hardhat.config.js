@@ -3,13 +3,13 @@ require("@nomiclabs/hardhat-etherscan");
 require('dotenv').config()
 const fs = require("fs");
 
-const defaultNetwork = "localhost";
+const defaultNetwork = "mumbai";
 
 function mnemonic() {
   try {
     return fs.readFileSync("./mnemonic.txt").toString().trim();
   } catch (e) {
-    if (defaultNetwork !== "localhost") {
+    if (defaultNetwork !== "mumbai") {
     }
   }
   return "";
@@ -41,13 +41,30 @@ module.exports = {
         mnemonic: mnemonic(),
       },
     },
-    ropsten: {
-      url: "https://ropsten.infura.io/v3/b98747734bab473a99d0fe366eb065a0",
+    //ropsten: {
+    //  url: "https://ropsten.infura.io/v3/b98747734bab473a99d0fe366eb065a0",
+    //  accounts: [`0x${process.env.PRIVATE_KEY}`]
+    //  //accounts: {
+    //  //  mnemonic: mnemonic(),
+    //  //},
+    //},
+
+    mumbai: {
+      url: "https://speedy-nodes-nyc.moralis.io/729deaf43e7375d77367370e/polygon/mumbai",
       accounts: [`0x${process.env.PRIVATE_KEY}`]
       //accounts: {
       //  mnemonic: mnemonic(),
       //},
     },
+    
+      //polygon: {
+      //  url: "https://ropsten.infura.io/v3/b98747734bab473a99d0fe366eb065a0",
+      //  accounts: [`0x${process.env.PRIVATE_KEY}`]
+      //accounts: {
+      //  mnemonic: mnemonic(),
+      //},
+      //},
+
     kovan: {
       url: "https://kovan.infura.io/v3/faefe1dcd6094fb388019173d2328d8f",
       accounts: {
