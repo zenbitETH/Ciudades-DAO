@@ -1,19 +1,11 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 
-import meta from '../assets/meta.svg';
 import img from '../assets/about-img.svg';
 import vote from '../assets/vote.png';
 
-import TAROtok from '../assets/TAROtok.png';
-import past from '../assets/past.png';
-import TARO from '../assets/taro.png';
-
 import TAROrew from '../assets/TAROrew.png';
 import moon from '../assets/moon.svg'
-
-
-
 
 const About = () => {
   let [isEnglish] = useContext(LanguageContext);

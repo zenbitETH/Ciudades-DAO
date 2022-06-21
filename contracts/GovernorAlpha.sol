@@ -118,8 +118,8 @@ contract GovernorAlpha {
       string neighborhood;
       string personInCharge;
       string description;
+      string budget;
       uint expiration;
-      uint budget;
       uint requiredTaroToVote;
       uint proposalTime;
       address proposer;

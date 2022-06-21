@@ -275,12 +275,12 @@
   .about-grid2 {
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
+
   .bg-grid {
     grid-row: span 3;
     grid-column: span 1;
     height: auto;
   }
-  
 
   .bg-grid0 {
     height: 400px;
