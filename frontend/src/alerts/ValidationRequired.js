@@ -11,7 +11,7 @@ const ValidationRequired = () => {
       ?
       <a href="/quiz" >
         <div className="main">
-        <h1><span id="vote">Validate your address</span></h1><br/>
+        <h1><span id="vote">Valida tu cuenta</span></h1><br/>
             <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
         </div>
         <div className ="floating">
@@ -19,13 +19,13 @@ const ValidationRequired = () => {
       </a>
       :
       <a href="/quiz" >
-        <div className="main">
-        <h1><span id="vote">Valida tu cuenta</span></h1><br/>
-            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
-        </div>
-        <div className ="floating">
-        </div>
-      </a>
+      <div className="main">
+      <h1><span id="vote">Validate your address</span></h1><br/>
+          <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+      </div>
+      <div className ="floating">
+      </div>
+    </a>
       }
     </div>
   );

@@ -8,22 +8,6 @@ const IsLoadingModal = (props) => {
   return (
     <div>
       {isEnglish === 'english' ?
-
-      <Modal
-        {...props}
-        size="md"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Body className="text-large">
-          <div>
-            Loading...
-          </div>
-        </Modal.Body>
-      </Modal>
-
-      :
-
       <Modal
         {...props}
         size="md"
@@ -35,6 +19,19 @@ const IsLoadingModal = (props) => {
             Cargando...
           </div>
           <div>
+          </div>
+        </Modal.Body>
+      </Modal>
+      :
+      <Modal
+        {...props}
+        size="md"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Body className="text-large">
+          <div>
+            Loading...
           </div>
         </Modal.Body>
       </Modal>

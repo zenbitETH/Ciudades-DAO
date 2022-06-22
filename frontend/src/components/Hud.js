@@ -219,30 +219,30 @@ const Header = () => {
   return (
   <div>
       {isEnglish === 'english' ?
-            <div class="center">
-            <nav class="topHud">
-              {isConnected ? 
-              <div class="topGrid">
-                <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-                <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐Spanish</div></a>
-                <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
-              </div>: 
-              <div>
-                {!isMetamaskInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-                }
-              </div> }                
-            </nav>
-          </div>
+        <div class="center">
+          <nav class="topHud">
+            {isConnected ? 
+            <div class="topGrid">
+              <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
+              <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐English</div></a>
+              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba para obtener TARO ⚠️</div></a>}</div>
+            </div>: 
+            <div>
+              {!isMetamaskInstalled ?
+                <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+              }
+            </div> }                
+          </nav>
+        </div>
       :
       <div class="center">
         <nav class="topHud">
           {isConnected ? 
           <div class="topGrid">
             <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-            <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐English</div></a>
-            <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba para obtener TARO ⚠️</div></a>}</div>
+            <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐Spanish</div></a>
+            <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
           </div>: 
           <div>
             {!isMetamaskInstalled ?

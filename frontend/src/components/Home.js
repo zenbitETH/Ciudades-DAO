@@ -264,126 +264,124 @@ function Home() {
   return (
     <div>
       {isEnglish === 'english' ?
-          <div class="App">
-            <div class="grid-block">
-              <div>
-                {isConnected ?
-                <section id="">
-                  <div class="homegrid">
-                  <a class="bg-grid0" href="https://faucet.ropsten.be/">
-                      <img src={test} class="homevan"/> 
-                      <div class="propsub">1 Get </div>
-                      <div class="propopt">Testnet ETH </div>
-                    </a>
-                    <a class="bg-reward"href="/Quiz">
-                      <img src={verify} class="homevan"/>
-                      <div class="propsub">2 Get up to 1,000 TARO</div>
-                      <div class="propopt">Validate</div>
-                    </a>
-                    {isValidated ? <a class="bg-reward" href="/createProposal">
-                      <img src={prop} class="homevan"/> 
-                      <div class="propsub">3 Get 50 TARO per proposal</div>
-                      <div class="propopt">Propose</div>
-                    </a>
-                     : <div class="bg-blocked" >
-                     <img src={prop} class="homevan"/> 
-                     <div class="propsub">3 Validate to unlock</div>
-                     <div class="propopt">Propose</div>
-                   </div>}
-                   {isValidated ?
-                  <a class="bg-grid0" href="/ProposalList">
-                      <img src={past} class="homevan"/> 
-                      <div class="propsub">4 Vote with your TARO</div>
-                      <div class="propopt">Qurétaro DAO</div>
-                    </a>
-                    :
-                    <div class="bg-blocked" >
-                      <img src={past} class="homevan"/> 
-                      <div class="propsub">4 Validate to unlock</div>
-                      <div class="propopt">Qurétaro DAO</div>
-                    </div>}
-                  </div>
-                  
-                </section>
+        <div class="App">
+          <div class="grid-block">
+            <div>
+              {isConnected ?
+              <section id="">
+              <div class="homegrid">
+              <a class="bg-grid0" href="https://faucet.ropsten.be/">
+                  <img src={test} class="homevan"/> 
+                  <div class="propsub">1 Obtén </div>
+                  <div class="propopt">ETH de prueba </div>
+                </a>
+                <a class="bg-reward"href="/Quiz">
+                  <img src={verify} class="homevan"/>
+                  <div class="propsub">2 Obtén hasta 1,000 TARO</div>
+                  <div class="propopt">Prueba Web3</div>
+                </a>
+                {isValidated ? <a class="bg-reward" href="/createProposal">
+                  <img src={prop} class="homevan"/> 
+                  <div class="propsub">3 Obtén 50 TARO por</div>
+                  <div class="propopt">Proponer</div>
+                </a>
+                 : <div class="bg-blocked" >
+                 <img src={prop} class="homevan"/> 
+                 <div class="propsub">3 Valida para desbloquear</div>
+                 <div class="propopt">Proponer</div>
+               </div>}
+               {isValidated ?
+              <a class="bg-grid0" href="/ProposalList">
+                  <img src={past} class="homevan"/> 
+                  <div class="propsub">4 Vota con tu TARO</div>
+                  <div class="propopt">Querétaro DAO</div>
+                </a>
                 :
-                <section>
-                  <div class="headline">
-                    <img src={logo} height="125px"/>  
-                    <div class="yellow">VoTARO Ciudad DAO®</div>
-                    <h2>Querétaro on Ethereum</h2>
-                  </div>
-                  <div class="grid-blocked">
-                    <a href="/About" class="bg-start">
-                        <img src={prop} class="ribvan"/> 
-                        <div class="propsub">No web3 key?</div>
-                        <div class="propopt">Start here</div>
-                    </a></div>
-                
-                </section>      
-                }
+                <div class="bg-blocked" >
+                  <img src={past} class="homevan"/> 
+                  <div class="propsub">4 Valida para desbloquear</div>
+                  <div class="propopt">Qurétaro DAO</div>
+                </div>}
               </div>
+            </section>
+              :
+              <section>
+                <div class="headline">
+                  <h1 class="yellow">Taller web3</h1>
+                  <h2>Responde para ganar TARO</h2>
+                </div>
+                <div class="grid-blocked">
+                  <a href="/About" class="bg-start">
+                    <img src={prop} class="ribvan"/> 
+                    <div class="propsub">¿No tienes wallet web3?</div>
+                    <div class="propopt">Descargar wallet</div>
+                  </a>
+                </div>
+              
+              </section>      
+              }
             </div>
+          </div>
         </div>
       :
       <div class="App">
-            <div class="grid-block">
-              <div>
-                {isConnected ?
-                <section id="">
-                <div class="homegrid">
-                <a class="bg-grid0" href="https://faucet.ropsten.be/">
-                    <img src={test} class="homevan"/> 
-                    <div class="propsub">1 Obtén </div>
-                    <div class="propopt">ETH de prueba </div>
-                  </a>
-                  <a class="bg-reward"href="/Quiz">
-                    <img src={verify} class="homevan"/>
-                    <div class="propsub">2 Obtén hasta 1,000 TARO</div>
-                    <div class="propopt">Prueba Web3</div>
-                  </a>
-                  {isValidated ? <a class="bg-reward" href="/createProposal">
-                    <img src={prop} class="homevan"/> 
-                    <div class="propsub">3 Obtén 50 TARO por</div>
-                    <div class="propopt">Proponer</div>
-                  </a>
-                   : <div class="bg-blocked" >
-                   <img src={prop} class="homevan"/> 
-                   <div class="propsub">3 Valida para desbloquear</div>
-                   <div class="propopt">Proponer</div>
-                 </div>}
-                 {isValidated ?
-                <a class="bg-grid0" href="/ProposalList">
-                    <img src={past} class="homevan"/> 
-                    <div class="propsub">4 Vota con tu TARO</div>
-                    <div class="propopt">Querétaro DAO</div>
-                  </a>
-                  :
-                  <div class="bg-blocked" >
-                    <img src={past} class="homevan"/> 
-                    <div class="propsub">4 Valida para desbloquear</div>
-                    <div class="propopt">Qurétaro DAO</div>
-                  </div>}
-                </div>
-              </section>
+        <div class="grid-block">
+          <div>
+            {isConnected ?
+            <section id="">
+              <div class="homegrid">
+              <a class="bg-grid0" href="https://faucet.ropsten.be/">
+                  <img src={test} class="homevan"/> 
+                  <div class="propsub">1 Get </div>
+                  <div class="propopt">Testnet ETH </div>
+                </a>
+                <a class="bg-reward"href="/Quiz">
+                  <img src={verify} class="homevan"/>
+                  <div class="propsub">2 Get up to 1,000 TARO</div>
+                  <div class="propopt">Validate</div>
+                </a>
+                {isValidated ? <a class="bg-reward" href="/createProposal">
+                  <img src={prop} class="homevan"/> 
+                  <div class="propsub">3 Get 50 TARO per proposal</div>
+                  <div class="propopt">Propose</div>
+                </a>
+                 : <div class="bg-blocked" >
+                 <img src={prop} class="homevan"/> 
+                 <div class="propsub">3 Validate to unlock</div>
+                 <div class="propopt">Propose</div>
+               </div>}
+               {isValidated ?
+              <a class="bg-grid0" href="/ProposalList">
+                  <img src={past} class="homevan"/> 
+                  <div class="propsub">4 Vote with your TARO</div>
+                  <div class="propopt">Qurétaro DAO</div>
+                </a>
                 :
-                <section>
-                  <div class="headline">
-                    <h1 class="yellow">Taller web3</h1>
-                    <h2>Responde para ganar TARO</h2>
-                  </div>
-                  <div class="grid-blocked">
-                    <a href="/About" class="bg-start">
-                      <img src={prop} class="ribvan"/> 
-                      <div class="propsub">¿No tienes wallet web3?</div>
-                      <div class="propopt">Descargar wallet</div>
-                    </a>
-                  </div>
-                
-                </section>      
-                }
+                <div class="bg-blocked" >
+                  <img src={past} class="homevan"/> 
+                  <div class="propsub">4 Validate to unlock</div>
+                  <div class="propopt">Qurétaro DAO</div>
+                </div>}
               </div>
-            </div>
+              
+            </section>
+            :
+            <section>
+              <div class="headline">
+                <div class="yellow">VoTARO Ciudad DAO®</div>
+                <h2>Querétaro on Ethereum</h2>
+              </div>
+              <div class="grid-blocked">
+                <a href="/About" class="bg-start">
+                    <img src={prop} class="ribvan"/> 
+                    <div class="propsub">No web3 key?</div>
+                    <div class="propopt">Start here</div>
+                </a></div>
+            </section>      
+            }
+          </div>
         </div>
+    </div>
   }
 </div>
     

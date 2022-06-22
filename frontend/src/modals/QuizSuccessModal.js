@@ -11,33 +11,6 @@ const QuizSuccessModal = (props) => {
   return (
     <div>
       {isEnglish === 'english' ?
-
-      <Modal
-        {...props}
-        class="modal-fullscreen-xxl-down"
-        size="xl"
-        centered
-      >
-        <h1><span id="vote" class="yellow-jos"> Congratulations! </span></h1><br/>
-        <div class="center"><div class="jump"><img src={reward} alt="Alert about verification" class="prop-img"/></div></div>
-        <h1><span> Validated address</span></h1>
-        <div class="about-tx"> <span class="yellow">You have validated your account for six   months and TARO tokens have been transfered to your account. </span></div>
-        <Modal.Body>
-        <div class="void-link">
-          <a class="prop-bgr"href="/createProposal">
-            <img src={prop} class="ribvan"/> 
-            <div class="propsub">Create proposal</div>
-            <div class="propopt">Propose</div>
-          </a>
-          <a class="prop-bgr" href="/ProposalList#vote">
-            <img src={vote2} class="ribvan"/> 
-            <div class="propsub">Available proposals</div>
-            <div class="propopt">Vote</div>
-          </a>
-        </div>
-        </Modal.Body>
-      </Modal>
-      :
       <Modal
       {...props}
       class="modal-fullscreen-xxl-down"
@@ -63,6 +36,33 @@ const QuizSuccessModal = (props) => {
           </div>
       </Modal.Body>
     </Modal>
+      :
+      <Modal
+        {...props}
+        class="modal-fullscreen-xxl-down"
+        size="xl"
+        centered
+      >
+        <h1><span id="vote" class="yellow-jos"> Congratulations! </span></h1><br/>
+        <div class="center"><div class="jump"><img src={reward} alt="Alert about verification" class="prop-img"/></div></div>
+        <h1><span> Validated address</span></h1>
+        <div class="about-tx"> <span class="yellow">You have validated your account for six   months and TARO tokens have been transfered to your account. </span></div>
+        <Modal.Body>
+        <div class="void-link">
+          <a class="prop-bgr"href="/createProposal">
+            <img src={prop} class="ribvan"/> 
+            <div class="propsub">Create proposal</div>
+            <div class="propopt">Propose</div>
+          </a>
+          <a class="prop-bgr" href="/ProposalList#vote">
+            <img src={vote2} class="ribvan"/> 
+            <div class="propsub">Available proposals</div>
+            <div class="propopt">Vote</div>
+          </a>
+        </div>
+        </Modal.Body>
+      </Modal>
+      
     }
     </div>
   );

@@ -124,38 +124,7 @@ const ApprovedProposal = ({title,
 
   return (
       <div>
-        {isEnglish === 'english'
-
-      ?
-      <div class="proposal">
-        <div class="proposal-expiration">
-          <div class="prop-title">💡 Proposal # {id}</div>
-          <span class="yellowr"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
-        </div>
-        <div class="aproposal">Approved by {forVotes} votes</div>
-        <div class="mini-title">🎯 Objetive:</div>
-        <div class="prop-hl"> {title}</div>
-        <div class="grid-prop">      
-          <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
-          <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
-          <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
-          <div class="minit-bg3">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
-        </div>
-        <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
-        {/*}
-        <div className ="proposal-main">
-          <div className="proposal-sub">Costo: {budget} pesos</div>
-          <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
-        </div>
-        */}
-      <div class="author">made by {proposer}</div><br/>
-      <div className="vote-grid">
-        <div class="prop-bgf2">Approved by:<br/>{forVotes}<br/>TARO</div>    
-        <div class="prop-bgw"> Against:<br/>{againstVotes}<br/> TARO</div>
-      </div>
-    </div>
-
-      :
+      {isEnglish === 'english' ?
       <div class="proposal">
           <div class="proposal-expiration">
             <div class="prop-title">💡 Prouesta # {id}</div>
@@ -181,6 +150,34 @@ const ApprovedProposal = ({title,
         <div className="vote-grid">
           <div class="prop-bgf2">Aprobada con:<br/>{forVotes}<br/>TARO</div>    
           <div class="prop-bgw">Votos en contra:<br/>{againstVotes}<br/>TARO</div>
+        </div>
+      </div>
+      :
+      <div class="proposal">
+          <div class="proposal-expiration">
+            <div class="prop-title">💡 Proposal # {id}</div>
+            <span class="yellowr"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
+          </div>
+          <div class="aproposal">Approved by {forVotes} votes</div>
+          <div class="mini-title">🎯 Objetive:</div>
+          <div class="prop-hl"> {title}</div>
+          <div class="grid-prop">      
+            <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
+            <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
+            <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
+            <div class="minit-bg3">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
+          </div>
+          <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
+          {/*}
+          <div className ="proposal-main">
+            <div className="proposal-sub">Costo: {budget} pesos</div>
+            <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+          </div>
+          */}
+        <div class="author">made by {proposer}</div><br/>
+        <div className="vote-grid">
+          <div class="prop-bgf2">Approved by:<br/>{forVotes}<br/>TARO</div>    
+          <div class="prop-bgw"> Against:<br/>{againstVotes}<br/> TARO</div>
         </div>
       </div>
       }

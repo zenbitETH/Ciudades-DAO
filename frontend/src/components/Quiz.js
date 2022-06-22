@@ -277,6 +277,45 @@ const Quiz = () => {
   return (
     <body id="quiz">
       {isEnglish === 'english' ?
+      <div>
+        {isConnected ?
+          <div>
+            <div> 
+            <h1><span id="vote">Valida tu cuenta</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
+              <div id="margin">{spanishQuestions}</div>
+            </QuizContext.Provider>
+            <div className="floating">
+              <div class="verify-bt" onClick={handleOnSubmitAnswers}> Valida tu cuenta</div>
+            </div>
+            </div>
+
+            <QuizFailureModal
+              show={failureModalShow}
+              onHide={handleOnFailure}
+            />
+            <QuizSuccessModal
+              show={successModalShow}
+              onHide={handleOnSuccess}
+            />
+            <QuizAlreadySubmittedModal
+              show={alreadySubmittedModal}
+              onHide={handleOnAlreadySubmitted}
+            />
+              <IsLoadingModal
+                show={loadingModalShow}
+                onHide={handleOnLoadingModal}
+              />
+          </div>
+          :
+          <div class="connect2">
+          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <h1 class="white">Conecta tu llave web3</h1><br/>
+        </div>
+        }
+      </div>
+        :
         <div>
         {isConnected ?
           <div >
@@ -284,8 +323,6 @@ const Quiz = () => {
             <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
             <div> 
             <br/><br/>
-            
-            
             <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
             <div id="margin">{englishQuestions}</div>
             </QuizContext.Provider>
@@ -315,47 +352,6 @@ const Quiz = () => {
           <div class="connect2">
           <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
           <h1 class="white">Connect your web3 wallet</h1><br/>
-        </div>
-          }
-        </div>
-        :
-        <div>
-        {isConnected ?
-          <div>
-            <div> 
-            <br/><br/>
-            <h1><span id="vote">Valida tu cuenta</span></h1><br/>
-            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
-            
-            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-            <div id="margin">{spanishQuestions}</div>
-            </QuizContext.Provider>
-            <div className="floating">
-              <div class="verify-bt" onClick={handleOnSubmitAnswers}> Valida tu cuenta</div>
-            </div>
-            </div>
-            
-            <QuizFailureModal
-              show={failureModalShow}
-              onHide={handleOnFailure}
-            />
-            <QuizSuccessModal
-              show={successModalShow}
-              onHide={handleOnSuccess}
-            />
-            <QuizAlreadySubmittedModal
-              show={alreadySubmittedModal}
-              onHide={handleOnAlreadySubmitted}
-            />
-              <IsLoadingModal
-                show={loadingModalShow}
-                onHide={handleOnLoadingModal}
-              />
-          </div>
-          :
-          <div class="connect2">
-          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-          <h1 class="white">Conecta tu llave web3</h1><br/>
         </div>
           }
         </div>
