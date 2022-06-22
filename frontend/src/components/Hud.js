@@ -219,33 +219,30 @@ const Header = () => {
   return (
   <div>
       {isEnglish === 'english' ?
-      <div class="center">
-        <nav class="topHud">
-          {isConnected ? 
-          <div class="topGrid">
-            <div class="hud0"><a href='/Home' class="hudBalance">{userBalance} ☀️ TARO</a></div>
-            <div>{isValidated ? <div class="hudV"><div class="hudLevel">🦸🦸‍♂️ DAO Roles</div></div> : <div class="hudU"><a href='/Quiz'>⚠️Validate</a></div>}</div>
-          </div>: 
-          <div>
-            {!isMetamaskInstalled ?
-              <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-              <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-            }
-          </div> }                
-        </nav>
-        <nav class="bottomHud">
-          <div class="hud1" ><a href="/About" class="hudBalance">📚Docs</a></div>
-          <div class="hud2" ><a href="/About" class="hudBalance">🤝🏻Community</a></div>
-          <div class="hud3"onClick={handleOnClick} >🌐Español</div>
-        </nav>
-      </div>
+            <div class="center">
+            <nav class="topHud">
+              {isConnected ? 
+              <div class="topGrid">
+                <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
+                <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐Spanish</div></a>
+                <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
+              </div>: 
+              <div>
+                {!isMetamaskInstalled ?
+                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+                }
+              </div> }                
+            </nav>
+          </div>
       :
       <div class="center">
         <nav class="topHud">
           {isConnected ? 
           <div class="topGrid">
-            <div class="hud0"><a href='/Home' class="hudBalance">{userBalance} ☀️ TARO</a></div>
-            <div>{isValidated ? <div class="hudV"><div class="hudLevel">🦸🦸‍♂️ Roles DAO </div></div> : <div class="hudU"><a href='/Quiz'>⚠️Validar</a></div>}</div>
+            <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
+            <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐English</div></a>
+            <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba para obtener TARO ⚠️</div></a>}</div>
           </div>: 
           <div>
             {!isMetamaskInstalled ?
@@ -253,11 +250,6 @@ const Header = () => {
               <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
             }
           </div> }                
-        </nav>
-        <nav class="bottomHud">
-          <div class="hud1" ><a href="/About" class="hudBalance">📚Docs</a></div>
-          <div class="hud2" ><a href="/About" class="hudBalance">🤝🏻Comunidad</a></div>
-          <div class="hud3"onClick={handleOnClick} >🌐English</div>
         </nav>
       </div>
       }

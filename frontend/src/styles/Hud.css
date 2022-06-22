@@ -69,7 +69,6 @@ Nav {
   }
 
   .cw {
-    
     color: #ffffff;
     position: relative;
     left: -1em;
@@ -90,8 +89,7 @@ Nav {
 
 .topGrid{
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
 }
 .bottomHud {
     display: grid;
@@ -110,54 +108,55 @@ Nav {
     
 }
 
-.hud0{
-    color:#01304E !important;
-    background: linear-gradient(45deg,  #F6AF55, #F6AF55,#b3803e, #b3803e);
-    background-size: 100% 100%;
-    z-index: 1;
-    padding: 0.5em 1em 0.5em 1em;
-    border-radius:  0 0 0 25px;
-    font-size: 2em;
-  }
+.hud0, .hud1{
+  background-size: 100% 100%;
+  z-index: 2;
+  padding: 0.25em 1em 0.25em 1em;
+  font-size: 1.5em;
+  background-color: #AAA6A150;
+}
 
-  .hudBalance {
-    color:#01304E !important;
-    display: block;
-  }
+.hud0 {
+  border-radius:  0 0 0px 25px;
+}
 
-  .hudBalance:hover {
-    color:#fff !important;
-  }
+.hud1 {
+  border-radius:  0 0 25px 0px;
+}
+
+.hud0:hover, .hud1:hover{ 
+  background-color: #F6AF5575;
+  color: #F6AF55;
+}
+
+.hudBalance {
+  color:#01304E !important;
+  display: block;
+}
+
+.hudBalance:hover {
+  color:#fff !important;
+}
 
   .hudU {
     color: #fff !important;
     background: linear-gradient(45deg,  #f65f55, #f65f55,#a54039, #a54039);
     background-size: 200% 200%;
     animation: gradient 2s ease infinite;
-    padding: 1em 1em 1em 1em;
-    border-radius:  0 0 25px 0px;
+    margin: -2em 0 2em 0;
+    padding: 2.5em 1em 1em 1em;
+    border-radius:  0 0 25px 25px;
     font-size: 1.5em;
     position: relative;
     width: 100%;
     height: 100%;
     border: none;
+    
   }
 
-  .hudV {
-    color: #fff !important;
-    background: linear-gradient(45deg,  #0a517e, #0a517e,#043b5e);
-    background-size: 100% 100%;
-    padding: 1em 1em 1em 1em;
-    border-radius:  0 0 25px 0px;
-    font-size: 1.5em;
-    text-align: center !important;
-  }
-
-  .hudV:hover {
-    cursor: pointer;
-    background-size: 200% 200%;
-    animation: gradient 2s ease infinite;
-    color: #F6AF55 !important;
+  .double {
+    grid-column: span 2 / span 2; 
+    z-index: 0;
   }
 
   .hudLogo {
@@ -166,69 +165,6 @@ Nav {
     overflow: hidden;
     opacity: 75%;
   }
-
-  .hudLevel{
-    z-index: 2;
-    position:relative;
-    top: 30%;
-    right: 5%;
-
-  }
-
-  .hud1 {
-    color: #01304E !important;
-    background: linear-gradient(45deg,  #F6AF55, #F6AF55,#b3803e, #b3803e);
-    background-size: 150% 100%;
-    z-index: 1;
-    padding: 1em 0.5em 1em 0.5em ;
-    margin-top: -1.2em;
-    border-radius:  25px 0 0 0;
-    font-size: 1.3em;
-  }
-
-  .hud1:hover {
-    cursor: pointer;
-    background-size: 200% 200%;
-    animation: gradient 2s ease infinite;
-    color: #fff !important;
-  }
-
-  .hud2 {
-    color: #01304E !important;
-    background: linear-gradient(45deg,  #F6AF55, #F6AF55,#b3803e, #b3803e);
-    background-size: 150% 100%;
-    z-index: 1;
-    padding: 1em 0.5em 1em 0.5em ;
-    margin-top: -1.2em;
-    border-radius:  0 0 0 0;
-    font-size: 1.3em;
-  }
-
-  .hud2:hover{
-    cursor: pointer;
-    background-size: 200% 200%;
-    animation: gradient 2s ease infinite;
-    color: #fff !important;
-  }
-
-  .hud3 {
-    color: #ffffff;
-    background: linear-gradient(45deg, #119195, #119195,#0f595c, #0f595c);
-    background-size: 150% 150%;
-    z-index: 1;
-    padding: 1em 0.5em 1em 0.5em ;
-    margin: -1.2em 0 0 0;
-    border-radius:  0 25px 0px 0px;
-    font-size: 1.3em;
-  }
-
-  .hud3:hover {
-    cursor: pointer;
-    background-size: 200% 200%;
-    animation: gradient 2s ease infinite;
-    color: #01304E !important;
-  }
-
 
 
   @media only screen and (min-width: 1200px) {
