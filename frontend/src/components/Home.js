@@ -339,23 +339,23 @@ function Home() {
                   <a class="bg-reward"href="/Quiz">
                     <img src={verify} class="homevan"/>
                     <div class="propsub">2 Obtén hasta 1,000 TARO</div>
-                    <div class="propopt">Validar</div>
+                    <div class="propopt">Prueba Web3</div>
                   </a>
                   {isValidated ? <a class="bg-reward" href="/createProposal">
                     <img src={prop} class="homevan"/> 
-                    <div class="propsub">3 Obtén 50 TARO por propuesta</div>
+                    <div class="propsub">3 Obtén 50 TARO por</div>
                     <div class="propopt">Proponer</div>
                   </a>
                    : <div class="bg-blocked" >
                    <img src={prop} class="homevan"/> 
                    <div class="propsub">3 Valida para desbloquear</div>
-                   <div class="propopt">Propose</div>
+                   <div class="propopt">Proponer</div>
                  </div>}
                  {isValidated ?
                 <a class="bg-grid0" href="/ProposalList">
                     <img src={past} class="homevan"/> 
                     <div class="propsub">4 Vota con tu TARO</div>
-                    <div class="propopt">VoTARO Ciudad DAO</div>
+                    <div class="propopt">Querétaro DAO</div>
                   </a>
                   :
                   <div class="bg-blocked" >
@@ -364,21 +364,20 @@ function Home() {
                     <div class="propopt">Qurétaro DAO</div>
                   </div>}
                 </div>
-                
               </section>
                 :
                 <section>
                   <div class="headline">
-                    <img src={logo} height="100px"/>  
-                    <h1 class="yellow">VoTARO Ciudad DAO®</h1>
-                    <h2>Querétaro on Ethereum</h2>
+                    <h1 class="yellow">Taller web3</h1>
+                    <h2>Responde para ganar TARO</h2>
                   </div>
                   <div class="grid-blocked">
                     <a href="/About" class="bg-start">
-                        <img src={prop} class="ribvan"/> 
-                        <div class="propsub">No web3 key?</div>
-                        <div class="propopt">Start here</div>
-                    </a></div>
+                      <img src={prop} class="ribvan"/> 
+                      <div class="propsub">¿No tienes wallet web3?</div>
+                      <div class="propopt">Descargar wallet</div>
+                    </a>
+                  </div>
                 
                 </section>      
                 }
