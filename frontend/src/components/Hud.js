@@ -225,7 +225,7 @@ const Header = () => {
             <div class="topGrid">
               <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
               <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐English</div></a>
-              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba para obtener TARO ⚠️</div></a>}</div>
+              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba web3 para obtener TARO ⚠️</div></a>}</div>
             </div>: 
             <div>
               {!isMetamaskInstalled ?
