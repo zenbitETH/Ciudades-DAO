@@ -22,9 +22,7 @@ import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import handleOnConnect from './Home.js'
 
-import img4 from '../assets/about-img4.svg';
-import meta from '../assets/meta.svg';
-import connect from '../assets/about-img.svg';
+
 import verify from '../assets/verify.png';
 
 import key from '../assets/about-img.svg'
@@ -165,10 +163,10 @@ const Quiz = () => {
       //Delay function is only for development
       // const delay = () => new Promise(res => setTimeout(res, 2000));
 
-      if(_checkedAnswers.length === 6) {
+      if(_checkedAnswers.length === 5) {
         setLoadingModalShow(true);
-        //Make network call to receive 1000 tokens
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('1000'));
+        //Make network call to receive 100 tokens
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('100'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log('submitAnswersReceipt: ', submitAnswersReceipt);
         handleOnLoadingModal();
@@ -183,20 +181,9 @@ const Quiz = () => {
         // console.log('length: ', checkedAnswers.length);
         setSuccessModalShow(true);
         setCheckedAnswers([]);
-      } else if(_checkedAnswers.length >= 5) {
-        setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('800'));
-        let submitAnswersReceipt = await submitAnswers.wait(1);
-        console.log(submitAnswersReceipt);
-        handleOnLoadingModal();
-        //
-
-        // console.log('length: ', checkedAnswers.length);
-        setSuccessModalShow(true);
-        setCheckedAnswers([]);
       } else if(_checkedAnswers.length >= 4) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('600'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('80'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
@@ -207,7 +194,7 @@ const Quiz = () => {
         setCheckedAnswers([]);
       } else if(_checkedAnswers.length >= 3) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('400'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('60'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
@@ -218,7 +205,18 @@ const Quiz = () => {
         setCheckedAnswers([]);
       } else if(_checkedAnswers.length >= 2) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('200'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('40'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log(submitAnswersReceipt);
+        handleOnLoadingModal();
+        //
+
+        // console.log('length: ', checkedAnswers.length);
+        setSuccessModalShow(true);
+        setCheckedAnswers([]);
+      } else if(_checkedAnswers.length >= 1) {
+        setLoadingModalShow(true);
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('20'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
