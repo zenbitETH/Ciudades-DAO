@@ -5,8 +5,8 @@ import "hardhat/console.sol";
 
 contract GovernorAlpha {
     /// @notice The name of this contract
-    string public constant name = "VoTARO Governor Alpha";
-
+    string public constant name = "VOTARO CIUDAD DAO®";
+    
     /// @notice The number of votes required in order for a voter to become a proposer
     // function proposalThreshold() public pure returns (uint) { return 100000e18; } // 100,000 = 1% of Taro
     //
@@ -127,8 +127,8 @@ contract GovernorAlpha {
 
     function propose(UserInputFields memory _userInputFields) public checkValidity returns (uint) {
         //A user recieves 50 Taro for each of their first ten proposals
-        if(userProposals[msg.sender].count < 20) {
-          bool transferred = taro.transferFrom(address(this), msg.sender, 50e18);
+        if(userProposals[msg.sender].count < 10) {
+          bool transferred = taro.transferFrom(address(this), msg.sender, 10e18);
           require(transferred, "Tokens not transferred to msg.sender");
           userProposals[msg.sender].count++;
         }
