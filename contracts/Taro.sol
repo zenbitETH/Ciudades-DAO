@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.5.16;
 pragma experimental ABIEncoderV2;
 
@@ -5,7 +6,7 @@ import "hardhat/console.sol";
 
 contract Taro {
     /// @notice EIP-20 token name for this token
-    string public constant name = "TARO GovernanceToken";
+    string public constant name = "QUERETARO TOKEN";
 
     /// @notice EIP-20 token symbol for this token
     string public constant symbol = "TARO";
@@ -14,7 +15,7 @@ contract Taro {
     uint8 public constant decimals = 18;
 
     /// @notice Total number of tokens in circulation
-    uint public constant totalSupply = 10000000e18; // 10 million Taro for Testnet
+    uint public constant totalSupply = 1000000e18; // 1 million TARO for Queretaro Web3 Workshop July 2022
 
     /// @notice Allowance amounts on behalf of others
     mapping (address => mapping (address => uint96)) internal allowances;
