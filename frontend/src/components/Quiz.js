@@ -281,7 +281,7 @@ const Quiz = () => {
         {isConnected ?
           <div>
             <div> 
-            <h1><span id="vote">Valida tu cuenta</span></h1><br/>
+            <h1><span id="vote">Prueba Web3</span></h1><br/>
             <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
             <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
               <div id="margin">{spanishQuestions}</div>
