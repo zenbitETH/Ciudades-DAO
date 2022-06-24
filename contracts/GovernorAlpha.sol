@@ -197,9 +197,6 @@ contract GovernorAlpha {
         return (validations[msg.sender].expirationTime, block.timestamp);
     }
 
-
-
-
     function castVote(uint proposalId, bool support) public {
         return _castVote(msg.sender, proposalId, support);
     }
@@ -261,7 +258,7 @@ contract GovernorAlpha {
 //     function cancelTransaction(address target, uint value, string calldata signature, bytes calldata data, uint eta) external;
 //     function executeTransaction(address target, uint value, string calldata signature, bytes calldata data, uint eta) external payable returns (bytes memory);
 // }
-//
+
 interface TaroInterface {
     function getPriorVotes(address account, uint blockNumber) external view returns (uint96);
     function getCurrentVotes(address account) external view returns (uint96);
