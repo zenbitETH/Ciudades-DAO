@@ -270,10 +270,10 @@ function Home() {
               <section id="">
               <div class="homegrid">
               
-              <a class="bg-grid0" href="https://faucet.ropsten.be/">
+              <a class="bg-grid0" href="https://faucet.polygon.technology/">
                   <img src={test} class="homevan"/> 
                   <div class="propsub">1 Obtén </div>
-                  <div class="propopt">ETH de prueba </div>
+                  <div class="propopt">Gas de prueba </div>
                 </a>
                 <a class="bg-reward"href="/Quiz">
                   <img src={verify} class="homevan"/>
