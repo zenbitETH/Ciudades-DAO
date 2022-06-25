@@ -35,10 +35,10 @@ const ProposalList = () => {
   let [ethersProvider, setEthersProvider] = useState();
   let [isConnecting, setIsConnecting] = useState();
   let [isMetamaskInstalled, setIsMetamaskInstalled] = useState();
-//let [isSkaleSwitched, setIsSkaleSwitched] = useState();
+//let [setIsPolygonSwitched, setIsPolygonSwitched] = useState();
   let [currentMetaMaskAccount, setCurrentMetaMaskAccount] = useState(null);
   var [userBalance, setUserBalance] = useState();
-//let [isConnectingToSkale, setIsConnectingToSkale] = useState();
+//let [isConnectingToPolygon, setIsConnectingToPolygon] = useState();
   
   let {setEthersSigner, provider, setProvider} = useContext(EthersContext);
   let {isConnected, setIsConnected} = useContext(ConnectedContext);
@@ -75,7 +75,7 @@ const ProposalList = () => {
          // console.log('chainId: ', chainId);
          //
          // if (chainId === '0x3ad0e149d0bf5') {
-         //   setIsSkaleSwitched(true);
+         //   setIsPolygonSwitched(true);
          // };
 
           //Check if a MetaMask account has permission to connect to app

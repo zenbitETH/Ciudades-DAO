@@ -4,19 +4,19 @@ import { LanguageContext } from '../../contexts/LanguageContext';
 import '../../styles/Home.css';
 
 
-const SkaleSwitch = () => {
+const PolygonSwitch = () => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
     <div>
     {isEnglish === 'english' ?    
     <Button variant="secondary" disabled>
-   🧅 Switching to SKALE...
+      Cambiando a Polygon...
    <span animation="border"className="spinner-grow" role="status"></span>
   </Button>
     :
     <Button variant="secondary" disabled>
-   🧅 Cambiando a SKALE...
+      Switching to Polygon...
    <span animation="border"className="spinner-grow" role="status"></span>
   </Button>
     }
@@ -25,4 +25,4 @@ const SkaleSwitch = () => {
   );
 };
 
-export default SkaleSwitch;
+export default PolygonSwitch;

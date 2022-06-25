@@ -14,19 +14,8 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { TaroContext } from '../contexts/TaroContext';
 
-import isMetamaskInstalled from './Home.js'
-import InstallMetamaskAlert from './InstallMetamaskAlert';
-import isConnected from './Home.js'
-import isConnecting from './Home.js'
-import ConnectButton from './buttons/ConnectButton';
-import ConnectingButton from './buttons/ConnectingButton';
-import handleOnConnect from './Home.js'
-
-
 import verify from '../assets/verify.png';
-
 import key from '../assets/about-img.svg'
-
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';

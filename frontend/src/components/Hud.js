@@ -4,9 +4,9 @@ import { ethers } from 'ethers';
 import ConnectButton from './buttons/ConnectButton';
 import ConnectingButton from './buttons/ConnectingButton';
 import InstallMetamaskAlert from './InstallMetamaskAlert';
-//import SkaleButton from './buttons/SkaleButton';
-//import SkaleSwitch from './buttons/SkaleSwitch';
-//import SwitchSkaleAlert from './SwitchSkaleAlert';
+import PolygonButton from './buttons/PolygonButton';
+import PolygonSwitch from './buttons/PolygonSwitch';
+import SwitchPolygonAlert from './SwitchPolygonAlert';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { TaroContext } from '../contexts/TaroContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
@@ -30,10 +30,10 @@ const Header = () => {
   let [ethersProvider, setEthersProvider] = useState();
   let [isConnecting, setIsConnecting] = useState();
   let [isMetamaskInstalled, setIsMetamaskInstalled] = useState();
-//let [isSkaleSwitched, setIsSkaleSwitched] = useState();
+  let [IsPolygonSwitched, setIsPolygonSwitched] = useState();
   let [currentMetaMaskAccount, setCurrentMetaMaskAccount] = useState(null);
   var [userBalance, setUserBalance] = useState();
-//let [isConnectingToSkale, setIsConnectingToSkale] = useState();
+  let [isConnectingToPolygon, setIsConnectingToPolygon] = useState();
 
   let {isValidated,setIsValidated} = useContext(ValidationRequiredContext);
   let {setTaro} = useContext(TaroContext);
@@ -67,13 +67,14 @@ const Header = () => {
             return;
           };
 
-          //Force the browser to refresh whenever the network chain is changed
-         // let chainId = await _ethereumProvider.request({ method: 'eth_chainId' });
-         // _ethereumProvider.on('chainChanged', handleChainChanged);
-         // console.log('chainId: ', chainId);
-         //
-
-         // };
+          // Force the browser to refresh whenever the network chain is changed
+          let chainId = await _ethereumProvider.request({ method: 'eth_chainId' });
+          _ethereumProvider.on('chainChanged', handleChainChanged);
+          console.log('chainId: ', chainId);
+         
+          if (chainId === '80001') {
+            setIsPolygonSwitched(true);
+          };
 
           //Check if a MetaMask account has permission to connect to app
           let metamaskAccount;
@@ -149,7 +150,53 @@ const Header = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+    //Enable app to have Polygon among listed networks
+    const listPolygonInMetamask = async () => {
+      setIsConnectingToPolygon(true);
+      //let endpoint = "http://eth-global-11.skalenodes.com:10323";
+      let chainId = "80001";
   
+      let switchToPOLYGON = {
+        chainId: chainId,
+        chainName: "Polygon Testnet",
+        rpcUrls: "https://matic-mumbai.chainstacklabs.com",
+        nativeCurrency: {
+          name: "MATIC",
+          symbol: "MATIC",
+          decimals: 18
+        },
+        blockExplorerUrls: [
+          "https://mumbai.polygonscan.com/"
+        ]
+      };
+      //Request current account selected in Metamask
+      let metamaskAccount;
+      let accounts = await provider.request({ method: 'eth_requestAccounts' });
+        if (accounts.length > 0) {
+          metamaskAccount = accounts[0];
+          setCurrentMetaMaskAccount(accounts[0]);
+          setIsMetamaskInstalled(true);
+          setIsConnected(true);
+        } else {
+        };
+      console.log(`metamaskAccount in Skale function: ${metamaskAccount}`);
+  
+      //Request change to Polygon network
+      try {
+        await provider.request({
+          method: "wallet_addEthereumChain",
+          params: [switchToPOLYGON, accounts[0]]
+        });
+  
+        setIsConnectingToPolygon(false);
+        setIsPolygonSwitched(true);
+  
+        window.location.reload();
+      }catch (error) {
+        console.log(error);
+        window.location.reload();
+      };
+    };
 
   const getAccounts = async () => {
     try {
@@ -172,9 +219,9 @@ const Header = () => {
     }
   };
 
- // function handleChainChanged(_chainId) {
- //   window.location.reload();
- // };
+  function handleChainChanged(_chainId) {
+    window.location.reload();
+  };
 
   //Give a MetaMask account permission to interact with the app
   const handleOnConnect = async () => {
@@ -232,7 +279,16 @@ const Header = () => {
                 <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
                 <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
               }
-            </div> }                
+            </div> }       
+            
+            {!IsPolygonSwitched ?
+              <div>
+                <SwitchPolygonAlert/> {isConnectingToPolygon ?
+                <PolygonSwitch /> : <PolygonButton handleOnPolygon={listPolygonInMetamask}/>}
+              </div>
+              : 
+              ''
+            }         
           </nav>
         </div>
       :

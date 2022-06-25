@@ -14,7 +14,7 @@ const InstallMetamaskAlert = () => {
     <Alert className= "valert">
       <div >
         <div className="big-icon">⚠️</div>
-        <div className="title3">It appears you are connected to other network</div>
+        <div className="white">It appears you are connected to other network</div>
       </div>
 
    </Alert>
@@ -22,7 +22,7 @@ const InstallMetamaskAlert = () => {
     <Alert className= "valert">
         <div >
           <div className="big-icon">⚠️</div>
-          <div className="title3">Parece que estas conectado a otra red</div>
+          <div className="white">Parece que estas conectado a otra red</div>
         </div>
 
     </Alert>
