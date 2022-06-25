@@ -1,18 +1,129 @@
-require('dotenv').config()
 require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-etherscan");
+require('dotenv').config()
+const fs = require("fs");
 
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
-module.exports = {
-  solidity: "0.8.0",
-  paths: {
-    artifacts: './frontend/src/contracts'
-  },
-  networks: {
-    rinkeby: {
-      url: 'https://rinkeby.infura.io/v3/3945f5582e1e4484868d3f148c003623',
-      accounts: [`0x26d8f96400b696031a8ff240390b4c45760d397e0a8558ee84f91eb521012265`]
+const defaultNetwork = "mumbai";
+
+function mnemonic() {
+  try {
+    return fs.readFileSync("./mnemonic.txt").toString().trim();
+  } catch (e) {
+    if (defaultNetwork !== "mumbai") {
     }
   }
+  return "";
+}
+
+module.exports = {
+  defaultNetwork,
+
+  networks: {
+    hardhat: {
+      chainId: 1337
+    },
+    localhost: {
+      url: "http://localhost:8545",
+    },
+    //skale: {
+    //  url: "https://eth-global-10.skalenodes.com:10200",
+    //  accounts: [`0x${process.env.PRIVATE_KEY}`]
+    //},
+    rinkeby: {
+      url: "https://rinkeby.infura.io/v3/faefe1dcd6094fb388019173d2328d8f",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+    },
+    mainnet: {
+      url: "https://mainnet.infura.io/v3/faefe1dcd6094fb388019173d2328d8f",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+    },
+    //ropsten: {
+    //  url: "https://ropsten.infura.io/v3/b98747734bab473a99d0fe366eb065a0",
+    //  accounts: [`0x${process.env.PRIVATE_KEY}`]
+    //  //accounts: {
+    //  //  mnemonic: mnemonic(),
+    //  //},
+    //},
+
+    mumbai: {
+      url: "https://speedy-nodes-nyc.moralis.io/729deaf43e7375d77367370e/polygon/mumbai",
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+      //accounts: {
+      //  mnemonic: mnemonic(),
+      //},
+    },
+    
+      //polygon: {
+      //  url: "https://ropsten.infura.io/v3/b98747734bab473a99d0fe366eb065a0",
+      //  accounts: [`0x${process.env.PRIVATE_KEY}`]
+      //accounts: {
+      //  mnemonic: mnemonic(),
+      //},
+      //},
+
+    kovan: {
+      url: "https://kovan.infura.io/v3/faefe1dcd6094fb388019173d2328d8f",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+    },
+    xdai: {
+      url: 'https://dai.poa.network',
+      gasPrice: 1000000000,
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+    },
+  },
+  solidity: {
+    compilers: [
+      {
+        version: "0.5.16"
+      },
+      {
+        version: "0.6.0"
+      },
+      {
+        version: "0.5.8"
+      },
+      {
+        version: "0.6.12"
+      },
+      {
+        version: "0.7.0"
+      }],
+    optimizer: {
+      enabled: true,
+      runs: 200,
+    },
+  },
+
+  etherscan: {
+    apiKey: process.env.POLYGONSCAN_API_KEY
+      // add other network's API key here
+  },
+
+  abiExporter: {
+    runOnCompile: true,
+    clear: true,
+    flat: true,
+    only: [],
+    spacing: 2,
+    pretty: false,
+  },
+  paths: {
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: './frontend/src/contracts'
+
+  },
+  mocha: {
+    timeout: 10000000
+  }
+
 };

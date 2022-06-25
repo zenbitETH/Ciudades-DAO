@@ -101,9 +101,19 @@ module.exports = {
       runs: 200,
     },
   },
+
   etherscan: {
-    apiKey: "FQKZCMUAQUA688R7FVDIH9BGD6698JIFPZ"
-    //npx hardhat verify --network rinkeby 0xD2820666665C127852213554E2B1cfA8A8199Ef8 "0xa55E01a40557fAB9d87F993d8f5344f1b2408072" "0x36bede640D19981A82090519bC1626249984c908" "0xF4C5310E51F6079F601a5fb7120bC72a70b96e2A" "0x745861AeD1EEe363b4AaA5F1994Be40b1e05Ff90" "EEEE ABNAEL MACHADO DE LIMA - CENE" "[5,7,10]" "[300,500,100]" "3" "500"
+    apiKey: process.env.POLYGONSCAN_API_KEY
+      // add other network's API key here
+  },
+
+  abiExporter: {
+    runOnCompile: true,
+    clear: true,
+    flat: true,
+    only: [],
+    spacing: 2,
+    pretty: false,
   },
   paths: {
     sources: "./contracts",

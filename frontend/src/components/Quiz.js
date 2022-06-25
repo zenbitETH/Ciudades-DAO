@@ -14,21 +14,8 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { TaroContext } from '../contexts/TaroContext';
 
-import isMetamaskInstalled from './Home.js'
-import InstallMetamaskAlert from './InstallMetamaskAlert';
-import isConnected from './Home.js'
-import isConnecting from './Home.js'
-import ConnectButton from './buttons/ConnectButton';
-import ConnectingButton from './buttons/ConnectingButton';
-import handleOnConnect from './Home.js'
-
-import img4 from '../assets/about-img4.svg';
-import meta from '../assets/meta.svg';
-import connect from '../assets/about-img.svg';
 import verify from '../assets/verify.png';
-
 import key from '../assets/about-img.svg'
-
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
 import taroAddress from '../contracts/contracts/Taro/contract-address.json';
@@ -165,10 +152,10 @@ const Quiz = () => {
       //Delay function is only for development
       // const delay = () => new Promise(res => setTimeout(res, 2000));
 
-      if(_checkedAnswers.length === 6) {
+      if(_checkedAnswers.length === 5) {
         setLoadingModalShow(true);
-        //Make network call to receive 1000 tokens
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('1000'));
+        //Make network call to receive 100 tokens
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('100'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log('submitAnswersReceipt: ', submitAnswersReceipt);
         handleOnLoadingModal();
@@ -183,20 +170,9 @@ const Quiz = () => {
         // console.log('length: ', checkedAnswers.length);
         setSuccessModalShow(true);
         setCheckedAnswers([]);
-      } else if(_checkedAnswers.length >= 5) {
-        setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('800'));
-        let submitAnswersReceipt = await submitAnswers.wait(1);
-        console.log(submitAnswersReceipt);
-        handleOnLoadingModal();
-        //
-
-        // console.log('length: ', checkedAnswers.length);
-        setSuccessModalShow(true);
-        setCheckedAnswers([]);
       } else if(_checkedAnswers.length >= 4) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('600'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('80'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
@@ -207,7 +183,7 @@ const Quiz = () => {
         setCheckedAnswers([]);
       } else if(_checkedAnswers.length >= 3) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('400'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('60'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
@@ -218,7 +194,18 @@ const Quiz = () => {
         setCheckedAnswers([]);
       } else if(_checkedAnswers.length >= 2) {
         setLoadingModalShow(true);
-        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('200'));
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('40'));
+        let submitAnswersReceipt = await submitAnswers.wait(1);
+        console.log(submitAnswersReceipt);
+        handleOnLoadingModal();
+        //
+
+        // console.log('length: ', checkedAnswers.length);
+        setSuccessModalShow(true);
+        setCheckedAnswers([]);
+      } else if(_checkedAnswers.length >= 1) {
+        setLoadingModalShow(true);
+        let submitAnswers = await governorAlpha.validate(ethers.utils.parseEther('20'));
         let submitAnswersReceipt = await submitAnswers.wait(1);
         console.log(submitAnswersReceipt);
         handleOnLoadingModal();
@@ -277,6 +264,45 @@ const Quiz = () => {
   return (
     <body id="quiz">
       {isEnglish === 'english' ?
+      <div>
+        {isConnected ?
+          <div>
+            <div> 
+            <h1><span id="vote">Prueba Web3</span></h1><br/>
+            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
+              <div id="margin">{spanishQuestions}</div>
+            </QuizContext.Provider>
+            <div className="floating">
+              <div class="verify-bt" onClick={handleOnSubmitAnswers}> Valida tu cuenta</div>
+            </div>
+            </div>
+
+            <QuizFailureModal
+              show={failureModalShow}
+              onHide={handleOnFailure}
+            />
+            <QuizSuccessModal
+              show={successModalShow}
+              onHide={handleOnSuccess}
+            />
+            <QuizAlreadySubmittedModal
+              show={alreadySubmittedModal}
+              onHide={handleOnAlreadySubmitted}
+            />
+              <IsLoadingModal
+                show={loadingModalShow}
+                onHide={handleOnLoadingModal}
+              />
+          </div>
+          :
+          <div class="connect2">
+          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <h1 class="white">Conecta tu llave web3</h1><br/>
+        </div>
+        }
+      </div>
+        :
         <div>
         {isConnected ?
           <div >
@@ -284,8 +310,6 @@ const Quiz = () => {
             <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
             <div> 
             <br/><br/>
-            
-            
             <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
             <div id="margin">{englishQuestions}</div>
             </QuizContext.Provider>
@@ -315,47 +339,6 @@ const Quiz = () => {
           <div class="connect2">
           <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
           <h1 class="white">Connect your web3 wallet</h1><br/>
-        </div>
-          }
-        </div>
-        :
-        <div>
-        {isConnected ?
-          <div>
-            <div> 
-            <br/><br/>
-            <h1><span id="vote">Valida tu cuenta</span></h1><br/>
-            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
-            
-            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-            <div id="margin">{spanishQuestions}</div>
-            </QuizContext.Provider>
-            <div className="floating">
-              <div class="verify-bt" onClick={handleOnSubmitAnswers}> Valida tu cuenta</div>
-            </div>
-            </div>
-            
-            <QuizFailureModal
-              show={failureModalShow}
-              onHide={handleOnFailure}
-            />
-            <QuizSuccessModal
-              show={successModalShow}
-              onHide={handleOnSuccess}
-            />
-            <QuizAlreadySubmittedModal
-              show={alreadySubmittedModal}
-              onHide={handleOnAlreadySubmitted}
-            />
-              <IsLoadingModal
-                show={loadingModalShow}
-                onHide={handleOnLoadingModal}
-              />
-          </div>
-          :
-          <div class="connect2">
-          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-          <h1 class="white">Conecta tu llave web3</h1><br/>
         </div>
           }
         </div>

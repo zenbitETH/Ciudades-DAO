@@ -1,15 +1,20 @@
 import { useEffect, useState, useContext } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { ethers } from 'ethers';
-//import SkaleButton from './buttons/SkaleButton';
-//import SkaleSwitch from './buttons/SkaleSwitch';
-//import SwitchSkaleAlert from './SwitchSkaleAlert';
+import PolygonButton from './buttons/PolygonButton';
+import PolygonSwitch from './buttons/PolygonSwitch';
+import SwitchPolygonAlert from './SwitchPolygonAlert';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { TaroContext } from '../contexts/TaroContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
+
+import test from '../assets/confirm.svg';
+import prop from '../assets/prop.png';
+import past from '../assets/past.png';
+import verify from '../assets/verify.png';
 
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
@@ -18,20 +23,14 @@ import taroAddress from '../contracts/contracts/Taro/contract-address.json';
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-import test from '../assets/confirm.svg';
-import prop from '../assets/prop.png';
-import past from '../assets/past.png';
-import verify from '../assets/verify.png';
-import logo from '../assets/Logow.png';
-
 function Home() {
   let [ethersProvider, setEthersProvider] = useState();
   let [isConnecting, setIsConnecting] = useState();
   let [isMetamaskInstalled, setIsMetamaskInstalled] = useState();
-//let [isSkaleSwitched, setIsSkaleSwitched] = useState();
+  let [IsPolygonSwitched, setIsPolygonSwitched] = useState();
   let [currentMetaMaskAccount, setCurrentMetaMaskAccount] = useState(null);
   var [userBalance, setUserBalance] = useState();
-//let [isConnectingToSkale, setIsConnectingToSkale] = useState();
+  let [isConnectingToPolygon, setIsConnectingToPolygon] = useState();
 
   let {setIsValidated,isValidated} = useContext(ValidationRequiredContext);
   let {setTaro} = useContext(TaroContext);
@@ -66,14 +65,14 @@ function Home() {
             return;
           };
 
-          //Force the browser to refresh whenever the network chain is changed
-         // let chainId = await _ethereumProvider.request({ method: 'eth_chainId' });
-         // _ethereumProvider.on('chainChanged', handleChainChanged);
-         // console.log('chainId: ', chainId);
-         //
-         // if (chainId === '0x3ad0e149d0bf5') {
-         //   setIsSkaleSwitched(true);
-         // };
+         // Force the browser to refresh whenever the network chain is changed
+          let chainId = await _ethereumProvider.request({ method: 'eth_chainId' });
+          _ethereumProvider.on('chainChanged', handleChainChanged);
+          console.log('chainId: ', chainId);
+         
+          if (chainId === '80001') {
+            setIsPolygonSwitched(true);
+          };
 
           //Check if a MetaMask account has permission to connect to app
           let metamaskAccount;
@@ -149,53 +148,53 @@ function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  //Enable app to have SKALE among listed networks
-  //const listSkaleInMetamask = async () => {
-  //  setIsConnectingToSkale(true);
-  //  let endpoint = "http://eth-global-11.skalenodes.com:10323";
-  //  let chainId = "0x3ad0e149d0bf5";
-//
-  //  let switchToSKALE = {
-  //    chainId: chainId,
-  //    chainName: "SKALE Network Testnet",
-  //    rpcUrls: [endpoint],
-  //    nativeCurrency: {
-  //      name: "SKALE ETH",
-  //      symbol: "skETH",
-  //      decimals: 18
-  //    },
-  //    blockExplorerUrls: [
-  //      "https://expedition.dev/?network=SKALE&rpcUrl=" + endpoint
-  //    ]
-  //  };
-  //  //Request current account selected in Metamask
-  //  let metamaskAccount;
-  //  let accounts = await provider.request({ method: 'eth_requestAccounts' });
-  //    if (accounts.length > 0) {
-  //      metamaskAccount = accounts[0];
-  //      setCurrentMetaMaskAccount(accounts[0]);
-  //      setIsMetamaskInstalled(true);
-  //      setIsConnected(true);
-  //    } else {
-  //    };
-  //  console.log(`metamaskAccount in Skale function: ${metamaskAccount}`);
-//
-  //  //Request change to SKALE network
-  //  try {
-  //    await provider.request({
-  //      method: "wallet_addEthereumChain",
-  //      params: [switchToSKALE, accounts[0]]
-  //    });
-//
-  //    setIsConnectingToSkale(false);
-  //    setIsSkaleSwitched(true);
-//
-  //    window.location.reload();
-  //  }catch (error) {
-  //    console.log(error);
-  //    window.location.reload();
-  //  };
-  //};
+  //Enable app to have Polygon among listed networks
+  const listPolygonInMetamask = async () => {
+    setIsConnectingToPolygon(true);
+    //let endpoint = "http://eth-global-11.skalenodes.com:10323";
+    let chainId = "80001";
+
+    let switchToPOLYGON = {
+      chainId: chainId,
+      chainName: "Polygon Testnet",
+      rpcUrls: "https://matic-mumbai.chainstacklabs.com",
+      nativeCurrency: {
+        name: "MATIC",
+        symbol: "MATIC",
+        decimals: 18
+      },
+      blockExplorerUrls: [
+        "https://mumbai.polygonscan.com/"
+      ]
+    };
+    //Request current account selected in Metamask
+    let metamaskAccount;
+    let accounts = await provider.request({ method: 'eth_requestAccounts' });
+      if (accounts.length > 0) {
+        metamaskAccount = accounts[0];
+        setCurrentMetaMaskAccount(accounts[0]);
+        setIsMetamaskInstalled(true);
+        setIsConnected(true);
+      } else {
+      };
+    console.log(`metamaskAccount in Skale function: ${metamaskAccount}`);
+
+    //Request change to Polygon network
+    try {
+      await provider.request({
+        method: "wallet_addEthereumChain",
+        params: [switchToPOLYGON, accounts[0]]
+      });
+
+      setIsConnectingToPolygon(false);
+      setIsPolygonSwitched(true);
+
+      window.location.reload();
+    }catch (error) {
+      console.log(error);
+      window.location.reload();
+    };
+  };
 
   const getAccounts = async () => {
     try {
@@ -218,9 +217,9 @@ function Home() {
     }
   };
 
- // function handleChainChanged(_chainId) {
- //   window.location.reload();
- // };
+  function handleChainChanged(_chainId) {
+    window.location.reload();
+  };
 
   //Give a MetaMask account permission to interact with the app
   const handleOnConnect = async () => {
@@ -264,126 +263,127 @@ function Home() {
   return (
     <div>
       {isEnglish === 'english' ?
-          <div class="App">
-            <div class="grid-block">
-              <div>
-                {isConnected ?
-                <section id="">
-                  <div class="homegrid">
-                  <a class="bg-grid0" href="https://faucet.ropsten.be/">
-                      <img src={test} class="homevan"/> 
-                      <div class="propsub">1 Get </div>
-                      <div class="propopt">Testnet ETH </div>
-                    </a>
-                    <a class="bg-reward"href="/Quiz">
-                      <img src={verify} class="homevan"/>
-                      <div class="propsub">2 Get up to 1,000 TARO</div>
-                      <div class="propopt">Validate</div>
-                    </a>
-                    {isValidated ? <a class="bg-reward" href="/createProposal">
-                      <img src={prop} class="homevan"/> 
-                      <div class="propsub">3 Get 50 TARO per proposal</div>
-                      <div class="propopt">Propose</div>
-                    </a>
-                     : <div class="bg-blocked" >
-                     <img src={prop} class="homevan"/> 
-                     <div class="propsub">3 Validate to unlock</div>
-                     <div class="propopt">Propose</div>
-                   </div>}
-                   {isValidated ?
-                  <a class="bg-grid0" href="/ProposalList">
-                      <img src={past} class="homevan"/> 
-                      <div class="propsub">4 Vote with your TARO</div>
-                      <div class="propopt">Qurétaro DAO</div>
-                    </a>
-                    :
-                    <div class="bg-blocked" >
-                      <img src={past} class="homevan"/> 
-                      <div class="propsub">4 Validate to unlock</div>
-                      <div class="propopt">Qurétaro DAO</div>
-                    </div>}
-                  </div>
-                  
-                </section>
+        <div class="App">
+          <div class="grid-block">
+            <div>
+              {isConnected ?
+              <section id="">
+              <div class="homegrid">
+              
+              <a class="bg-grid0" href="https://faucet.polygon.technology/">
+                  <img src={test} class="homevan"/> 
+                  <div class="propsub">1 Obtén </div>
+                  <div class="propopt">Gas de prueba </div>
+                </a>
+                <a class="bg-reward"href="/Quiz">
+                  <img src={verify} class="homevan"/>
+                  <div class="propsub">2 Obtén hasta 1,000 TARO</div>
+                  <div class="propopt">Prueba Web3</div>
+                </a>
+                {isValidated ? <a class="bg-reward" href="/createProposal">
+                  <img src={prop} class="homevan"/> 
+                  <div class="propsub">3 Obtén 50 TARO por</div>
+                  <div class="propopt">Proponer</div>
+                </a>
+                 : <div class="bg-blocked" >
+                 <img src={prop} class="homevan"/> 
+                 <div class="propsub">3 Valida para desbloquear</div>
+                 <div class="propopt">Proponer</div>
+               </div>}
+               {isValidated ?
+              <a class="bg-grid0" href="/ProposalList">
+                  <img src={past} class="homevan"/> 
+                  <div class="propsub">4 Vota con tu TARO</div>
+                  <div class="propopt">Querétaro DAO</div>
+                </a>
                 :
-                <section>
-                  <div class="headline">
-                    <img src={logo} height="125px"/>  
-                    <div class="yellow">VoTARO Ciudad DAO®</div>
-                    <h2>Querétaro on Ethereum</h2>
-                  </div>
-                  <div class="grid-blocked">
-                    <a href="/About" class="bg-start">
-                        <img src={prop} class="ribvan"/> 
-                        <div class="propsub">No web3 key?</div>
-                        <div class="propopt">Start here</div>
-                    </a></div>
-                
-                </section>      
-                }
+                <div class="bg-blocked" >
+                  <img src={past} class="homevan"/> 
+                  <div class="propsub">4 Valida para desbloquear</div>
+                  <div class="propopt">Qurétaro DAO</div>
+                </div>}
               </div>
+            </section>
+              :
+              <section>
+                <div class="headline">
+                  <h1 class="yellow">Taller web3</h1>
+                  <h2>Responde para ganar TARO</h2>
+                </div>
+                <div class="grid-blocked">
+
+               
+                  <a href="/About" class="bg-start">
+                    <img src={prop} class="ribvan"/> 
+                    <div class="propsub">¿No tienes wallet web3?</div>
+                    <div class="propopt">Descargar wallet</div>
+                  </a>
+                </div>
+              
+              </section>      
+              }
             </div>
+          </div>
         </div>
       :
       <div class="App">
-            <div class="grid-block">
-              <div>
-                {isConnected ?
-                <section id="">
-                <div class="homegrid">
-                <a class="bg-grid0" href="https://faucet.ropsten.be/">
-                    <img src={test} class="homevan"/> 
-                    <div class="propsub">1 Obtén </div>
-                    <div class="propopt">ETH de prueba </div>
-                  </a>
-                  <a class="bg-reward"href="/Quiz">
-                    <img src={verify} class="homevan"/>
-                    <div class="propsub">2 Obtén hasta 1,000 TARO</div>
-                    <div class="propopt">Prueba Web3</div>
-                  </a>
-                  {isValidated ? <a class="bg-reward" href="/createProposal">
-                    <img src={prop} class="homevan"/> 
-                    <div class="propsub">3 Obtén 50 TARO por</div>
-                    <div class="propopt">Proponer</div>
-                  </a>
-                   : <div class="bg-blocked" >
-                   <img src={prop} class="homevan"/> 
-                   <div class="propsub">3 Valida para desbloquear</div>
-                   <div class="propopt">Proponer</div>
-                 </div>}
-                 {isValidated ?
-                <a class="bg-grid0" href="/ProposalList">
-                    <img src={past} class="homevan"/> 
-                    <div class="propsub">4 Vota con tu TARO</div>
-                    <div class="propopt">Querétaro DAO</div>
-                  </a>
-                  :
-                  <div class="bg-blocked" >
-                    <img src={past} class="homevan"/> 
-                    <div class="propsub">4 Valida para desbloquear</div>
-                    <div class="propopt">Qurétaro DAO</div>
-                  </div>}
-                </div>
-              </section>
+        <div class="grid-block">
+          <div>
+            {isConnected ?
+            <section id="">
+              <div class="homegrid">
+              <a class="bg-grid0" href="https://faucet.ropsten.be/">
+                  <img src={test} class="homevan"/> 
+                  <div class="propsub">1 Get </div>
+                  <div class="propopt">Testnet ETH </div>
+                </a>
+                <a class="bg-reward"href="/Quiz">
+                  <img src={verify} class="homevan"/>
+                  <div class="propsub">2 Get up to 1,000 TARO</div>
+                  <div class="propopt">Validate</div>
+                </a>
+                {isValidated ? <a class="bg-reward" href="/createProposal">
+                  <img src={prop} class="homevan"/> 
+                  <div class="propsub">3 Get 50 TARO per proposal</div>
+                  <div class="propopt">Propose</div>
+                </a>
+                 : <div class="bg-blocked" >
+                 <img src={prop} class="homevan"/> 
+                 <div class="propsub">3 Validate to unlock</div>
+                 <div class="propopt">Propose</div>
+               </div>}
+               {isValidated ?
+              <a class="bg-grid0" href="/ProposalList">
+                  <img src={past} class="homevan"/> 
+                  <div class="propsub">4 Vote with your TARO</div>
+                  <div class="propopt">Qurétaro DAO</div>
+                </a>
                 :
-                <section>
-                  <div class="headline">
-                    <h1 class="yellow">Taller web3</h1>
-                    <h2>Responde para ganar TARO</h2>
-                  </div>
-                  <div class="grid-blocked">
-                    <a href="/About" class="bg-start">
-                      <img src={prop} class="ribvan"/> 
-                      <div class="propsub">¿No tienes wallet web3?</div>
-                      <div class="propopt">Descargar wallet</div>
-                    </a>
-                  </div>
-                
-                </section>      
-                }
+                <div class="bg-blocked" >
+                  <img src={past} class="homevan"/> 
+                  <div class="propsub">4 Validate to unlock</div>
+                  <div class="propopt">Qurétaro DAO</div>
+                </div>}
               </div>
-            </div>
+              
+            </section>
+            :
+            <section>
+              <div class="headline">
+                <div class="yellow">VoTARO Ciudad DAO®</div>
+                <h2>Querétaro on Ethereum</h2>
+              </div>
+              <div class="grid-blocked">
+                <a href="/About" class="bg-start">
+                    <img src={prop} class="ribvan"/> 
+                    <div class="propsub">No web3 key?</div>
+                    <div class="propopt">Start here</div>
+                </a></div>
+            </section>      
+            }
+          </div>
         </div>
+    </div>
   }
 </div>
     

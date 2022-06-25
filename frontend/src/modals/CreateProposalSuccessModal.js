@@ -12,41 +12,6 @@ const CreateProposalSuccessModal = (props) => {
   return (
     <div >
       {isEnglish === 'english' ?
-
-      <Modal
-        class="grid-block"
-        {...props}
-        size="xl"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-        className="main"
-      >
-      <div class="center"><div class="jump"><img src={send} alt="Alert about verification" class="prop-img"/></div></div>
-      <h1><div >Proposal sended! </div></h1><br/>
-      
-        
-        <h3>
-           Your proposal is ready to be voted, <span class="yellow">use your TARO to vote.</span>
-          <span class="yellow"> The first 20 proposals will give you 50 TARO each! </span>
-          Create more proposals to increase your voting power. 
-        </h3>
-        
-      
-        <div class="void-link">
-          <div class="prop-bg2"><a href="/ProposalList#vote">
-              <img src={vote2} class="ribvan"/> 
-              <div class="propsub">Avaliable proposals</div>
-              <div class="propopt">Vote</div>
-            </a></div>
-            <div class="prop-bg2"><a href="/CreateProposal">
-              <img src={prop} class="ribvan"/>
-              <div class="propsub">New proposal</div>
-              <div class="propopt">Propose </div>
-            </a></div>
-          </div>
-        
-      </Modal>
-      :
       <Modal
       class="grid-block"
       {...props}
@@ -75,6 +40,39 @@ const CreateProposalSuccessModal = (props) => {
         </div>
       
     </Modal>
+      
+      :
+      <Modal
+        class="grid-block"
+        {...props}
+        size="xl"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        className="main"
+      >
+      <div class="center"><div class="jump"><img src={send} alt="Alert about verification" class="prop-img"/></div></div>
+      <h1><div >Proposal sended! </div></h1><br/>
+        
+        <h3>
+           Your proposal is ready to be voted, <span class="yellow">use your TARO to vote.</span>
+          <span class="yellow"> The first 20 proposals will give you 50 TARO each! </span>
+          Create more proposals to increase your voting power. 
+        </h3>
+
+        <div class="void-link">
+          <div class="prop-bg2"><a href="/ProposalList#vote">
+              <img src={vote2} class="ribvan"/> 
+              <div class="propsub">Avaliable proposals</div>
+              <div class="propopt">Vote</div>
+            </a></div>
+            <div class="prop-bg2"><a href="/CreateProposal">
+              <img src={prop} class="ribvan"/>
+              <div class="propsub">New proposal</div>
+              <div class="propopt">Propose </div>
+            </a></div>
+          </div>
+        
+      </Modal>
     }
     </div>
   );
