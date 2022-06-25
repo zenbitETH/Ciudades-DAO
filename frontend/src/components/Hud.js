@@ -281,14 +281,14 @@ const Header = () => {
               }
             </div> }       
             
-            {!IsPolygonSwitched ?
+            {/*!IsPolygonSwitched ?
               <div>
                 <SwitchPolygonAlert/> {isConnectingToPolygon ?
                 <PolygonSwitch /> : <PolygonButton handleOnPolygon={listPolygonInMetamask}/>}
               </div>
               : 
               ''
-            }         
+                */}         
           </nav>
         </div>
       :
