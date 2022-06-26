@@ -269,16 +269,31 @@ const Header = () => {
         <div class="center">
           <nav class="topHud">
             {isConnected ? 
-            <div class="topGrid">
-              <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-              <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐English</div></a>
-              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba web3 para obtener TARO ⚠️</div></a>}</div>
-            </div>: 
             <div>
-              {!isMetamaskInstalled ?
-                <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
+              <div class="topGrid">
+                <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
+                <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐English</div></a>
+                <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba web3 para obtener TARO ⚠️</div></a>}</div>
+              </div>
+              <a href="https://zenbit.mx">
+                <div class="zenbitBTM">
+                  zenbit.eth /<span> 2022</span>
+                </div>
+              </a>
+           </div>
+            : 
+            <div>  
+              <a href="https://zenbit.mx">
+                <div class="zenbit">
+                  zenbit.eth /<span> 2022</span>
+                </div>
+              </a>
+              <div class="bottomHud">
+                {!isMetamaskInstalled ?
+                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+                }
+              </div>
             </div> }       
             
             {/*!IsPolygonSwitched ?
@@ -290,22 +305,38 @@ const Header = () => {
               ''
                 */}         
           </nav>
+          
         </div>
       :
       <div class="center">
         <nav class="topHud">
           {isConnected ? 
-          <div class="topGrid">
-            <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-            <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐Spanish</div></a>
-            <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
-          </div>: 
           <div>
+          <div class="topGrid">
+              <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
+              <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐Spanish</div></a>
+              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
+            </div>
+            <a href="https://zenbit.mx">
+              <div class="zenbitBTM">
+                zenbit.eth /<span> 2022</span>
+              </div>
+            </a>
+          </div>
+         : 
+          <div>  
+          <a href="https://zenbit.mx">
+            <div class="zenbit">
+              zenbit.eth /<span> 2022</span>
+            </div>
+          </a>
+          <div class="bottomHud">
             {!isMetamaskInstalled ?
               <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
               <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
             }
-          </div> }                
+          </div>
+        </div> }                
         </nav>
       </div>
       }
