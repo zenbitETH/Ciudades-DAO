@@ -4,7 +4,7 @@ import { LanguageContext } from '../../contexts/LanguageContext';
 import '../../styles/Home.css';
 
 
-const PolygonButton = ({handleOnPolygon}) => {
+const PolygonButton = ({handleOnClick}) => {
   let [isEnglish] = useContext(LanguageContext);
 
   return (
@@ -13,13 +13,12 @@ const PolygonButton = ({handleOnPolygon}) => {
       
     <div>
       <div className="purple2">        
-        <Button onClick={handleOnPolygon}>Cambiar a Polygon Testnet</Button>
+        <Button onClick={handleOnClick}>Cambiar a Polygon Testnet</Button>
       </div>
     </div>
     :
     <div>
-      
-      <Button onClick={handleOnPolygon}>Switch to Polygon Testnet</Button>
+      <Button onClick={handleOnClick}>Switch to Polygon Testnet</Button>
     </div>
 }</div>
   );

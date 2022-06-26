@@ -154,7 +154,7 @@ const Header = () => {
     const listPolygonInMetamask = async () => {
       setIsConnectingToPolygon(true);
       //let endpoint = "http://eth-global-11.skalenodes.com:10323";
-      let chainId = "80001";
+      let chainId = "0x13881";
   
       let switchToPOLYGON = {
         chainId: chainId,
@@ -184,7 +184,7 @@ const Header = () => {
       //Request change to Polygon network
       try {
         await provider.request({
-          method: "wallet_addEthereumChain",
+          method: "wallet_switchEthereumChain",
           params: [switchToPOLYGON, accounts[0]]
         });
   
@@ -284,7 +284,7 @@ const Header = () => {
             {/*!IsPolygonSwitched ?
               <div>
                 <SwitchPolygonAlert/> {isConnectingToPolygon ?
-                <PolygonSwitch /> : <PolygonButton handleOnPolygon={listPolygonInMetamask}/>}
+                <PolygonSwitch /> : <PolygonButton handleOnClick={listPolygonInMetamask}/>}
               </div>
               : 
               ''

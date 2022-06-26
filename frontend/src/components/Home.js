@@ -152,14 +152,14 @@ function Home() {
   const listPolygonInMetamask = async () => {
     setIsConnectingToPolygon(true);
     //let endpoint = "http://eth-global-11.skalenodes.com:10323";
-    let chainId = "80001";
+    let chainId = "0x13881";
 
     let switchToPOLYGON = {
       chainId: chainId,
       chainName: "Polygon Testnet",
-      rpcUrls: "https://matic-mumbai.chainstacklabs.com",
+      rpcUrls: "https://matic-mumbai.chainstacklabs.com/",
       nativeCurrency: {
-        name: "MATIC",
+        name: "MATIC token",
         symbol: "MATIC",
         decimals: 18
       },
@@ -277,12 +277,12 @@ function Home() {
                 </a>
                 <a class="bg-reward"href="/Quiz">
                   <img src={verify} class="homevan"/>
-                  <div class="propsub">2 Obtén hasta 1,000 TARO</div>
+                  <div class="propsub">2 Obtén hasta 100 TARO</div>
                   <div class="propopt">Prueba Web3</div>
                 </a>
                 {isValidated ? <a class="bg-reward" href="/createProposal">
                   <img src={prop} class="homevan"/> 
-                  <div class="propsub">3 Obtén 50 TARO por</div>
+                  <div class="propsub">3 Obtén 10 TARO por</div>
                   <div class="propopt">Proponer</div>
                 </a>
                  : <div class="bg-blocked" >
