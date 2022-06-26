@@ -152,14 +152,14 @@ function Home() {
   const listPolygonInMetamask = async () => {
     setIsConnectingToPolygon(true);
     //let endpoint = "http://eth-global-11.skalenodes.com:10323";
-    let chainId = "80001";
+    let chainId = "0x13881";
 
     let switchToPOLYGON = {
       chainId: chainId,
       chainName: "Polygon Testnet",
-      rpcUrls: "https://matic-mumbai.chainstacklabs.com",
+      rpcUrls: "https://matic-mumbai.chainstacklabs.com/",
       nativeCurrency: {
-        name: "MATIC",
+        name: "MATIC token",
         symbol: "MATIC",
         decimals: 18
       },
@@ -269,26 +269,21 @@ function Home() {
               {isConnected ?
               <section id="">
               <div class="homegrid">
-              
-              <a class="bg-grid0" href="https://faucet.polygon.technology/">
-                  <img src={test} class="homevan"/> 
-                  <div class="propsub">1 Obtén </div>
-                  <div class="propopt">Gas de prueba </div>
-                </a>
+                {isValidated ? '':
                 <a class="bg-reward"href="/Quiz">
                   <img src={verify} class="homevan"/>
-                  <div class="propsub">2 Obtén hasta 1,000 TARO</div>
+                  <div class="propsub">Obtén hasta 100 TARO</div>
                   <div class="propopt">Prueba Web3</div>
-                </a>
+                </a>}
                 {isValidated ? <a class="bg-reward" href="/createProposal">
                   <img src={prop} class="homevan"/> 
-                  <div class="propsub">3 Obtén 50 TARO por</div>
-                  <div class="propopt">Proponer</div>
+                  <div class="propsub">Obtén 10 TARO por</div>
+                  <div class="propopt">Propuestas DAO</div>
                 </a>
                  : <div class="bg-blocked" >
                  <img src={prop} class="homevan"/> 
                  <div class="propsub">3 Valida para desbloquear</div>
-                 <div class="propopt">Proponer</div>
+                 <div class="propopt">Propuestas DAO</div>
                </div>}
                {isValidated ?
               <a class="bg-grid0" href="/ProposalList">
@@ -307,17 +302,27 @@ function Home() {
               :
               <section>
                 <div class="headline">
-                  <h1 class="yellow">Taller web3</h1>
-                  <h2>Responde para ganar TARO</h2>
+                  <h1 class="yellow">Reto Querétaro Web3</h1>
+                  <h2>¿Estas listo para empezar?</h2>
                 </div>
                 <div class="grid-blocked">
-
-               
-                  <a href="/About" class="bg-start">
-                    <img src={prop} class="ribvan"/> 
-                    <div class="propsub">¿No tienes wallet web3?</div>
-                    <div class="propopt">Descargar wallet</div>
-                  </a>
+                  <div class="homegrid">
+                    <a href="/About" class="bg-grid0">
+                      <img src={prop} class="homevan"/> 
+                      <div class="propsub">¿Tienes cómo conectarte?</div>
+                      <div class="propopt">Ir por Wallet web3</div>
+                    </a>
+                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
+                      <img src={test} class="homevan"/> 
+                      <div class="propsub">¿Estas en la red correcta?</div>
+                      <div class="propopt">Ir a red de pruebas </div>
+                    </a>
+                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
+                      <img src={test} class="homevan"/> 
+                      <div class="propsub">¿Tienes gas? </div>
+                      <div class="propopt">Conseguir Gas </div>
+                    </a>
+                  </div>
                 </div>
               
               </section>      
@@ -332,36 +337,33 @@ function Home() {
             {isConnected ?
             <section id="">
               <div class="homegrid">
-              <a class="bg-grid0" href="https://faucet.ropsten.be/">
-                  <img src={test} class="homevan"/> 
-                  <div class="propsub">1 Get </div>
-                  <div class="propopt">Testnet ETH </div>
-                </a>
+                {isValidated ? '':
                 <a class="bg-reward"href="/Quiz">
                   <img src={verify} class="homevan"/>
-                  <div class="propsub">2 Get up to 1,000 TARO</div>
+                  <div class="propsub">Get up to 100 TARO</div>
                   <div class="propopt">Validate</div>
-                </a>
+                </a>}
                 {isValidated ? <a class="bg-reward" href="/createProposal">
                   <img src={prop} class="homevan"/> 
-                  <div class="propsub">3 Get 50 TARO per proposal</div>
+                  <div class="propsub">Get 10 TARO per proposal</div>
                   <div class="propopt">Propose</div>
                 </a>
-                 : <div class="bg-blocked" >
+                :
+                <div class="bg-blocked" >
                  <img src={prop} class="homevan"/> 
-                 <div class="propsub">3 Validate to unlock</div>
+                 <div class="propsub">Validate to unlock</div>
                  <div class="propopt">Propose</div>
                </div>}
                {isValidated ?
               <a class="bg-grid0" href="/ProposalList">
                   <img src={past} class="homevan"/> 
-                  <div class="propsub">4 Vote with your TARO</div>
+                  <div class="propsub">Vote with your TARO</div>
                   <div class="propopt">Qurétaro DAO</div>
                 </a>
                 :
                 <div class="bg-blocked" >
                   <img src={past} class="homevan"/> 
-                  <div class="propsub">4 Validate to unlock</div>
+                  <div class="propsub">Validate to unlock</div>
                   <div class="propopt">Qurétaro DAO</div>
                 </div>}
               </div>
@@ -370,15 +372,29 @@ function Home() {
             :
             <section>
               <div class="headline">
-                <div class="yellow">VoTARO Ciudad DAO®</div>
-                <h2>Querétaro on Ethereum</h2>
-              </div>
-              <div class="grid-blocked">
-                <a href="/About" class="bg-start">
-                    <img src={prop} class="ribvan"/> 
-                    <div class="propsub">No web3 key?</div>
-                    <div class="propopt">Start here</div>
-                </a></div>
+                  <h1 class="yellow">Querétaro Web3 Quest</h1>
+                  <h2>Are you ready to start?</h2>
+                </div>
+                <div class="grid-blocked">
+                  <div class="homegrid">
+                    <a href="/About" class="bg-grid0">
+                      <img src={prop} class="homevan"/> 
+                      <div class="propsub">Do you have a web3 wallet</div>
+                      <div class="propopt">Go for Wallet</div>
+                    </a>
+                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
+                      <img src={test} class="homevan"/> 
+                      <div class="propsub">Are you on the right network?</div>
+                      <div class="propopt">Go to testnet </div>
+                    </a>
+                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
+                      <img src={test} class="homevan"/> 
+                      <div class="propsub">Do you have gas? </div>
+                      <div class="propopt">Get Gas </div>
+                    </a>
+                  </div>
+                </div>
+
             </section>      
             }
           </div>

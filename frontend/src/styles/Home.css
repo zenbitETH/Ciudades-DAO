@@ -199,7 +199,7 @@ color: #F6AF55;
 }
 
 h1 {
-  font-size: clamp(2.5em, -0.875rem + 8.333vw, 4.5rem);
+  font-size: clamp(2.5em, -0.875rem + 8.333vw, 5.5rem);
   font-weight: 400;
   text-align: center;
 }

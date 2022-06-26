@@ -154,7 +154,7 @@ const Header = () => {
     const listPolygonInMetamask = async () => {
       setIsConnectingToPolygon(true);
       //let endpoint = "http://eth-global-11.skalenodes.com:10323";
-      let chainId = "80001";
+      let chainId = "0x13881";
   
       let switchToPOLYGON = {
         chainId: chainId,
@@ -184,7 +184,7 @@ const Header = () => {
       //Request change to Polygon network
       try {
         await provider.request({
-          method: "wallet_addEthereumChain",
+          method: "wallet_switchEthereumChain",
           params: [switchToPOLYGON, accounts[0]]
         });
   
@@ -269,43 +269,74 @@ const Header = () => {
         <div class="center">
           <nav class="topHud">
             {isConnected ? 
-            <div class="topGrid">
-              <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-              <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐English</div></a>
-              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba web3 para obtener TARO ⚠️</div></a>}</div>
-            </div>: 
             <div>
-              {!isMetamaskInstalled ?
-                <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-              }
+              <div class="topGrid">
+                <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
+                <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐English</div></a>
+                <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba web3 para obtener TARO ⚠️</div></a>}</div>
+              </div>
+              <a href="https://zenbit.mx">
+                <div class="zenbitBTM">
+                  zenbit.eth /<span> 2022</span>
+                </div>
+              </a>
+           </div>
+            : 
+            <div>  
+              <a href="https://zenbit.mx">
+                <div class="zenbit">
+                  zenbit.eth /<span> 2022</span>
+                </div>
+              </a>
+              <div class="bottomHud">
+                {!isMetamaskInstalled ?
+                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+                }
+              </div>
             </div> }       
             
             {/*!IsPolygonSwitched ?
               <div>
                 <SwitchPolygonAlert/> {isConnectingToPolygon ?
-                <PolygonSwitch /> : <PolygonButton handleOnPolygon={listPolygonInMetamask}/>}
+                <PolygonSwitch /> : <PolygonButton handleOnClick={listPolygonInMetamask}/>}
               </div>
               : 
               ''
                 */}         
           </nav>
+          
         </div>
       :
       <div class="center">
         <nav class="topHud">
           {isConnected ? 
-          <div class="topGrid">
-            <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-            <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐Spanish</div></a>
-            <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
-          </div>: 
           <div>
+          <div class="topGrid">
+              <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
+              <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐Spanish</div></a>
+              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
+            </div>
+            <a href="https://zenbit.mx">
+              <div class="zenbitBTM">
+                zenbit.eth /<span> 2022</span>
+              </div>
+            </a>
+          </div>
+         : 
+          <div>  
+          <a href="https://zenbit.mx">
+            <div class="zenbit">
+              zenbit.eth /<span> 2022</span>
+            </div>
+          </a>
+          <div class="bottomHud">
             {!isMetamaskInstalled ?
               <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
               <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
             }
-          </div> }                
+          </div>
+        </div> }                
         </nav>
       </div>
       }
