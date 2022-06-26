@@ -11,10 +11,12 @@ import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
-import test from '../assets/confirm.svg';
+import test from '../assets/testnet.svg';
+import wallet from '../assets/confirm.svg'
 import prop from '../assets/prop.png';
 import past from '../assets/past.png';
 import verify from '../assets/verify.png';
+import gas from '../assets/gas.svg';
 
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
@@ -318,7 +320,7 @@ function Home() {
                       <div class="propopt">Ir a red de pruebas </div>
                     </a>
                     <a class="bg-grid0" href="https://faucet.polygon.technology/">
-                      <img src={test} class="homevan"/> 
+                      <img src={gas} class="homevan"/> 
                       <div class="propsub">¿Tienes gas? </div>
                       <div class="propopt">Conseguir Gas </div>
                     </a>
@@ -378,7 +380,7 @@ function Home() {
                 <div class="grid-blocked">
                   <div class="homegrid">
                     <a href="/About" class="bg-grid0">
-                      <img src={prop} class="homevan"/> 
+                      <img src={wallet} class="homevan"/> 
                       <div class="propsub">Do you have a web3 wallet</div>
                       <div class="propopt">Go for Wallet</div>
                     </a>
@@ -388,7 +390,7 @@ function Home() {
                       <div class="propopt">Go to testnet </div>
                     </a>
                     <a class="bg-grid0" href="https://faucet.polygon.technology/">
-                      <img src={test} class="homevan"/> 
+                      <img src={gas} class="homevan"/> 
                       <div class="propsub">Do you have gas? </div>
                       <div class="propopt">Get Gas </div>
                     </a>
