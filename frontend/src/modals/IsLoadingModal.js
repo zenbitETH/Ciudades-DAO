@@ -16,9 +16,7 @@ const IsLoadingModal = (props) => {
       >
         <Modal.Body className="text-large">
           <div>
-            Cargando...
-          </div>
-          <div>
+            Loading...
           </div>
         </Modal.Body>
       </Modal>
@@ -31,7 +29,7 @@ const IsLoadingModal = (props) => {
       >
         <Modal.Body className="text-large">
           <div>
-            Loading...
+            Cargando...
           </div>
         </Modal.Body>
       </Modal>

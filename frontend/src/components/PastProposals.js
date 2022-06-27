@@ -249,8 +249,130 @@ const PastProposals = () => {
     <div>
         {isEnglish === 'english'
         ?
-        <div class="proplist">
-          
+        <section class="proplist">
+          <br/><br/>
+          <h1><span class="yellow">Past Proposals</span></h1><br/><br/>
+          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+        
+          <div id="margin" className= "props">
+            <div>
+              {showApproved
+                ?
+                <div className="space">
+                  {approvedList.length > 0
+                    ?
+                    <div className="space">
+                        <div class="void-link">
+                          <div class="prop-bgh"><a onClick={handleOnApprove}>
+                            <img src={rprop} class="ribvan"/> 
+                            <div class="propsub">Switch proposals</div>
+                            <div class="propopt">Rejected </div>
+                            </a></div>
+                            <div class="prop-bg2"><a href="/ProposalList#vote">
+                            <img src={vote2} class="ribvan"/>
+                            <div class="propsub">Avalilable proposals</div>
+                            <div class="propopt">Vote</div></a>
+                          </div>
+                        </div><br/>
+                      <h1 class="aproposal1">Approved Proposals</h1>
+                      {approvedList}
+                      <div class="void-link">
+                        <div class="prop-bgh"><a onClick={handleOnApprove}>
+                          <img src={rprop} class="ribvan"/> 
+                          <div class="propsub">Switch proposals</div>
+                          <div class="propopt">Rejected </div>
+                        </a></div>
+                        <div class="prop-bg"><a href="/createProposal">
+                          <img src={prop} class="ribvan"/> 
+                          <div class="propsub">Create a proposal</div>
+                          <div class="propopt">Propose</div>
+                        </a></div>
+                      </div>
+                    </div>
+                    :
+                    <div className="void">                
+                    <h1><span class="red">There are no approved proposals</span></h1><br/>
+                      <div class="floating">
+                        <h3>Create a proposal or validate your account to participate.
+                          You can also view the proposal history or learn more before you start.
+                        </h3>
+                      </div>
+                      <div class="void-link">
+                        <div class="bg-grid3"><a onClick={handleOnApprove}>
+                        <img src={rprop} class="ribvan"/> 
+                          <div class="propsub">Switch proposals</div>
+                          <div class="propopt">Rejected </div>
+                        </a></div>
+                        <div class="bg-grid3"><a href="/createProposal">
+                          <img src={prop} class="ribvan"/> 
+                          <div class="propsub">Create a proposal</div>
+                          <div class="propopt">Propose</div>
+                        </a></div>
+                      </div>
+                    </div>
+                  }
+                </div>
+                :
+                <div>
+                  {rejectedList.length > 0
+                    ?
+                    <div className="space">
+                      <div class="void-link">
+                        <div class="prop-bgh"><a onClick={handleOnApprove}>
+                          <img src={aprop} class="ribvan"/> 
+                          <div class="propsub">Switch proposals</div>
+                          <div class="propopt">Approved </div>
+                          </a></div>
+                          <div class="prop-bg2"><a href="/ProposalList#vote">
+                          <img src={vote2} class="ribvan"/>
+                          <div class="propsub">Avalilable proposals</div>
+                          <div class="propopt">Vote</div></a>
+                        </div>
+                      </div><br/>
+                      <h1 class="rproposal1">Rejected Proposals</h1>
+                      {rejectedList}
+                      <div class="void-link">
+                        <div class="prop-bgh"><a onClick={handleOnApprove}>
+                          <img src={aprop} class="ribvan"/> 
+                          <div class="propsub">Switch proposals</div>
+                          <div class="propopt">Approved </div>
+                        </a></div>
+                        <div class="prop-bg"><a href="/createProposal">
+                          <img src={prop} class="ribvan"/> 
+                          <div class="propsub">Create proposal</div>
+                          <div class="propopt">Propose</div>
+                        </a></div>
+                      </div>
+                    </div>
+                    :
+                    <div className="void">                
+                    <h1><span class="red">There are no rejected proposals</span></h1><br/>
+                      <div class="floating">
+                        <h3>Create a proposal or validate your account to participate.
+                          You can also view the proposal history or learn more before you start.
+                        </h3>
+                      </div>
+                      <div class="void-link">
+                        <div class="bg-grid3"><a onClick={handleOnApprove}>
+                        <img src={aprop} class="ribvan"/> 
+                          <div class="propsub">Switch proposals</div>
+                          <div class="propopt">Approved </div>
+                        </a></div>
+                        <div class="bg-grid3"><a href="/createProposal">
+                          <img src={prop} class="ribvan"/> 
+                          <div class="propsub">Create a proposal</div>
+                          <div class="propopt">Propose</div>
+                        </a></div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        </section>      
+        :
+        <section class="proplist">
           <br/><br/>
           <h1><span class="yellow">Propuestas anteriores</span></h1><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
@@ -372,130 +494,7 @@ const PastProposals = () => {
               }
             </div>
           </div>
-        </div>      
-        :
-        <div class="proplist">
-          <br/><br/>
-          <h1><span class="yellow">Past Proposals</span></h1><br/><br/>
-          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-        
-          <div id="margin" className= "props">
-            <div>
-              {showApproved
-                ?
-                <div className="space">
-                  {approvedList.length > 0
-                    ?
-                    <div className="space">
-                        <div class="void-link">
-                          <div class="prop-bgh"><a onClick={handleOnApprove}>
-                            <img src={rprop} class="ribvan"/> 
-                            <div class="propsub">Switch proposals</div>
-                            <div class="propopt">Rejected </div>
-                            </a></div>
-                            <div class="prop-bg2"><a href="/ProposalList#vote">
-                            <img src={vote2} class="ribvan"/>
-                            <div class="propsub">Avalilable proposals</div>
-                            <div class="propopt">Vote</div></a>
-                          </div>
-                        </div><br/>
-                      <h1 class="aproposal1">Approved Proposals</h1>
-                      {approvedList}
-                      <div class="void-link">
-                        <div class="prop-bgh"><a onClick={handleOnApprove}>
-                          <img src={rprop} class="ribvan"/> 
-                          <div class="propsub">Switch proposals</div>
-                          <div class="propopt">Rejected </div>
-                        </a></div>
-                        <div class="prop-bg"><a href="/createProposal">
-                          <img src={prop} class="ribvan"/> 
-                          <div class="propsub">Create a proposal</div>
-                          <div class="propopt">Propose</div>
-                        </a></div>
-                      </div>
-                    </div>
-                    :
-                    <div className="void">                
-                    <h1><span class="red">There are no approved proposals</span></h1><br/>
-                      <div class="floating">
-                        <h3>Create a proposal or validate your account to participate.
-                          You can also view the proposal history or learn more before you start.
-                        </h3>
-                      </div>
-                      <div class="void-link">
-                        <div class="bg-grid3"><a onClick={handleOnApprove}>
-                        <img src={rprop} class="ribvan"/> 
-                          <div class="propsub">Switch proposals</div>
-                          <div class="propopt">Rejected </div>
-                        </a></div>
-                        <div class="bg-grid3"><a href="/createProposal">
-                          <img src={prop} class="ribvan"/> 
-                          <div class="propsub">Create a proposal</div>
-                          <div class="propopt">Propose</div>
-                        </a></div>
-                      </div>
-                    </div>
-                  }
-                </div>
-                :
-                <div>
-                  {rejectedList.length > 0
-                    ?
-                    <div className="space">
-                      <div class="void-link">
-                        <div class="prop-bgh"><a onClick={handleOnApprove}>
-                          <img src={aprop} class="ribvan"/> 
-                          <div class="propsub">Switch proposals</div>
-                          <div class="propopt">Approved </div>
-                          </a></div>
-                          <div class="prop-bg2"><a href="/ProposalList#vote">
-                          <img src={vote2} class="ribvan"/>
-                          <div class="propsub">Avalilable proposals</div>
-                          <div class="propopt">Vote</div></a>
-                        </div>
-                      </div><br/>
-                      <h1 class="rproposal1">Rejected Proposals</h1>
-                      {rejectedList}
-                      <div class="void-link">
-                        <div class="prop-bgh"><a onClick={handleOnApprove}>
-                          <img src={aprop} class="ribvan"/> 
-                          <div class="propsub">Switch proposals</div>
-                          <div class="propopt">Approved </div>
-                        </a></div>
-                        <div class="prop-bg"><a href="/createProposal">
-                          <img src={prop} class="ribvan"/> 
-                          <div class="propsub">Create proposal</div>
-                          <div class="propopt">Propose</div>
-                        </a></div>
-                      </div>
-                    </div>
-                    :
-                    <div className="void">                
-                    <h1><span class="red">There are no rejected proposals</span></h1><br/>
-                      <div class="floating">
-                        <h3>Create a proposal or validate your account to participate.
-                          You can also view the proposal history or learn more before you start.
-                        </h3>
-                      </div>
-                      <div class="void-link">
-                        <div class="bg-grid3"><a onClick={handleOnApprove}>
-                        <img src={aprop} class="ribvan"/> 
-                          <div class="propsub">Switch proposals</div>
-                          <div class="propopt">Approved </div>
-                        </a></div>
-                        <div class="bg-grid3"><a href="/createProposal">
-                          <img src={prop} class="ribvan"/> 
-                          <div class="propsub">Create a proposal</div>
-                          <div class="propopt">Propose</div>
-                        </a></div>
-                      </div>
-                    </div>
-                  }
-                </div>
-              }
-            </div>
-          </div>
-        </div>
+        </section>
        
       }
       </div>

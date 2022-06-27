@@ -207,154 +207,7 @@ const CreateProposal = () => {
     <body id="quiz">
       {isEnglish === 'english'
       ?
-      <div id="proposal" class="newprop">  
-        <h1><span  class="yellow">Nueva propuesta</span></h1><br/><br/>
-        <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
-          
-        <Form autocomplete="off" id="margin">
-        <Form.Group as={Row} controlId="formTitle">
-          <Form.Label>
-            1. Título de la propuesta
-            </Form.Label>
-            <Form.Control type="text"
-              placeholder="🎯 Dale un nombre a tu propuesta"
-              onChange={handleOnChangeTitle}/>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="formNeighborhood" >
-            <Form.Label  >
-            2. Ubicación
-            </Form.Label>
-              <Form.Control as="select" data-live-search="true"
-                onChange={handleOnChangeNeighborhood}>
-                <option disabled selected>📍 ¿Dónde se llevará a cabo la propuesta?</option>
-                    <option>Ayuntamiento</option>
-                    <option>Calle</option>
-                    <option>Parada de autobús</option>
-                    <option>Iglesia</option>
-                    <option>Estación de Policía</option>
-                    <option>Cuarto de Bomberos</option>
-                    <option>Universidad</option>
-                    <option>Parques</option>
-                    <option>Galería de Arte</option>
-                    <option>Mercado</option>
-                    <option>lugar de comida</option>
-                    <option>Parque Industrial</option>
-                    <option>Coworking</option>
-                    <option>Estación de Policía</option>
-                    <option>Web</option>
-                    <option>DAO</option>
-              </Form.Control>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="formTypeOfAction">
-          <Form.Label >
-            3. Tipo de actividad
-            </Form.Label>
-            <Form.Control as="select" data-live-search="true"
-              onChange={handleOnChangeTypeOfAction}>
-                <option disabled selected>⚙️ Selecciona un tipo de actividad</option>
-                <option>Organizar un evento público</option>
-                 <option>Evento en línea</option>
-                 <option>Solicitar mantenimiento</option>
-                 <option>Pide un bien público</option>
-                 <option>Solicitar análisis</option>
-                 <option>Comprar</option>
-                 <option>Vender</option>
-                 <option>Ofrecer servicio</option>
-                 <option>Ofrecer talento digital</option>
-                 <option>Ofrecer talento industrial</option>
-                 <option>Crear Arte</option>
-                 <option>Crear contenido digital</option>
-                 <option>Evento mixto</option>
-            </Form.Control>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="formPersonInCharge">    
-            <Form.Label  >
-              4. Roles DAO
-            </Form.Label>
-            <Form.Control as="select" class="selectpicker show-tick form-control"
-              onChange={handleOnChangePersonInCharge}>
-              <option disabled selected>🦸 ¿Que rol debe realizar la propuesa?</option>
-              <option>Trabajador Público / Gobierno</option>
-              <option>Ciudadano</option>
-              <option>Ciclista</option>
-              <option>Artista</option>
-              <option>Amante de las mascotas</option>
-              <option>Académico</option>
-              <option>Atleta</option>
-              <option>Cocinero</option>
-              <option>Talento Industrial</option>
-              <option>Comerciante</option>
-              <option>Creador digital</option>
-              <option>Desarrollador</option>
-              
-            </Form.Control>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
-            <Form.Label>
-             5. Descripción
-          </Form.Label>
-          <Form.Control className="description" as="textarea"
-            type="text" rows={3}
-            placeholder="📑 Describe a detalle tu propuesta"
-            onChange={handleOnChangeDescription}/>
-          </Form.Group>
-
-          {/*
-          <Form.Group as={Row} controlId="formExpiration">
-            <Form.Label  >
-              Expiration
-            </Form.Label>
-            <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
-          </Form.Group>
-          */}
-
-          <Form.Group as={Row} controlId="formBudget">
-            <Form.Label  >
-              6. Presupuesto
-            </Form.Label>
-            <Form.Control as="select" class="selectpicker show-tick form-control"
-              onChange={handleOnChangeBudget}>
-              <option disabled selected>💸 Elige el origen de los fondos</option>
-              <option>Voluntario</option>
-              <option>Presupuesto Público</option>
-              <option>Presupuesto DAO</option>
-              <option>Presupuesto Dual, Público + DAO</option>
-            </Form.Control>
-          </Form.Group>
-            {/*
-            <Form.Group as={Row} controlId="formRequiredTaroToVote">
-              <Form.Label  >
-                Required TARO to vote
-            </Form.Label>
-              <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
-            </Form.Group>
-            */}
-            <a class="about-bt" href="#proposal">Revisa tu puesta antes de enviar</a>
-              <div class="center"><div class="quiz-bt" classntype="submit" onClick={handleOnSubmit}>💡 Enviar propuesta</div></div>
-            </Form>
-          <IsLoadingModal
-            show={loadingModalShow}
-            onHide={handleOnLoadingModal}
-          />
- 
-          <CreateProposalErrorModal
-            show={errorModalShow}
-            onHide={handleOnErrorModal}
-          />
- 
-          <CreateProposalSuccessModal
-            show={successModalShow}
-            onHide={handleOnAlreadySubmitted}
-          />
-        </div>
-
-     
-        :
-        <div id="proposal" class="newprop">
+      <section id="proposal" class="newprop">
         <h1><span  class="yellow">New Proposal</span></h1>
         <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
         
@@ -497,9 +350,152 @@ const CreateProposal = () => {
             show={successModalShow}
             onHide={handleOnAlreadySubmitted}
           />
-        </div>
-  
-      
+      </section>
+      :
+      <section id="proposal" class="newprop">
+          <h1><span  class="yellow">Nueva propuesta</span></h1><br/><br/>
+        <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
+          
+        <Form autocomplete="off" id="margin">
+        <Form.Group as={Row} controlId="formTitle">
+          <Form.Label>
+            1. Título de la propuesta
+            </Form.Label>
+            <Form.Control type="text"
+              placeholder="🎯 Dale un nombre a tu propuesta"
+              onChange={handleOnChangeTitle}/>
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formNeighborhood" >
+            <Form.Label  >
+            2. Ubicación
+            </Form.Label>
+              <Form.Control as="select" data-live-search="true"
+                onChange={handleOnChangeNeighborhood}>
+                <option disabled selected>📍 ¿Dónde se llevará a cabo la propuesta?</option>
+                    <option>Ayuntamiento</option>
+                    <option>Calle</option>
+                    <option>Parada de autobús</option>
+                    <option>Iglesia</option>
+                    <option>Estación de Policía</option>
+                    <option>Cuarto de Bomberos</option>
+                    <option>Universidad</option>
+                    <option>Parques</option>
+                    <option>Galería de Arte</option>
+                    <option>Mercado</option>
+                    <option>lugar de comida</option>
+                    <option>Parque Industrial</option>
+                    <option>Coworking</option>
+                    <option>Estación de Policía</option>
+                    <option>Web</option>
+                    <option>DAO</option>
+              </Form.Control>
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formTypeOfAction">
+          <Form.Label >
+            3. Tipo de actividad
+            </Form.Label>
+            <Form.Control as="select" data-live-search="true"
+              onChange={handleOnChangeTypeOfAction}>
+                <option disabled selected>⚙️ Selecciona un tipo de actividad</option>
+                <option>Organizar un evento público</option>
+                 <option>Evento en línea</option>
+                 <option>Solicitar mantenimiento</option>
+                 <option>Pide un bien público</option>
+                 <option>Solicitar análisis</option>
+                 <option>Comprar</option>
+                 <option>Vender</option>
+                 <option>Ofrecer servicio</option>
+                 <option>Ofrecer talento digital</option>
+                 <option>Ofrecer talento industrial</option>
+                 <option>Crear Arte</option>
+                 <option>Crear contenido digital</option>
+                 <option>Evento mixto</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="formPersonInCharge">    
+            <Form.Label  >
+              4. Roles DAO
+            </Form.Label>
+            <Form.Control as="select" class="selectpicker show-tick form-control"
+              onChange={handleOnChangePersonInCharge}>
+              <option disabled selected>🦸 ¿Que rol debe realizar la propuesa?</option>
+              <option>Trabajador Público / Gobierno</option>
+              <option>Ciudadano</option>
+              <option>Ciclista</option>
+              <option>Artista</option>
+              <option>Amante de las mascotas</option>
+              <option>Académico</option>
+              <option>Atleta</option>
+              <option>Cocinero</option>
+              <option>Talento Industrial</option>
+              <option>Comerciante</option>
+              <option>Creador digital</option>
+              <option>Desarrollador</option>
+              
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
+            <Form.Label>
+             5. Descripción
+          </Form.Label>
+          <Form.Control className="description" as="textarea"
+            type="text" rows={3}
+            placeholder="📑 Describe a detalle tu propuesta"
+            onChange={handleOnChangeDescription}/>
+          </Form.Group>
+
+          {/*
+          <Form.Group as={Row} controlId="formExpiration">
+            <Form.Label  >
+              Expiration
+            </Form.Label>
+            <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
+          </Form.Group>
+          */}
+
+          <Form.Group as={Row} controlId="formBudget">
+            <Form.Label  >
+              6. Presupuesto
+            </Form.Label>
+            <Form.Control as="select" class="selectpicker show-tick form-control"
+              onChange={handleOnChangeBudget}>
+              <option disabled selected>💸 Elige el origen de los fondos</option>
+              <option>Voluntario</option>
+              <option>Presupuesto Público</option>
+              <option>Presupuesto DAO</option>
+              <option>Presupuesto Dual, Público + DAO</option>
+            </Form.Control>
+          </Form.Group>
+            {/*
+            <Form.Group as={Row} controlId="formRequiredTaroToVote">
+              <Form.Label  >
+                Required TARO to vote
+            </Form.Label>
+              <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
+            </Form.Group>
+            */}
+            <a class="about-bt" href="#proposal">Revisa tu puesta antes de enviar</a>
+              <div class="center"><div class="quiz-bt" classntype="submit" onClick={handleOnSubmit}>💡 Enviar propuesta</div></div>
+            </Form>
+          <IsLoadingModal
+            show={loadingModalShow}
+            onHide={handleOnLoadingModal}
+          />
+ 
+          <CreateProposalErrorModal
+            show={errorModalShow}
+            onHide={handleOnErrorModal}
+          />
+ 
+          <CreateProposalSuccessModal
+            show={successModalShow}
+            onHide={handleOnAlreadySubmitted}
+          />
+        </section>
         }
       </body>
       );

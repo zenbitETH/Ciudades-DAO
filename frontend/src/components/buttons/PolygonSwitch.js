@@ -11,12 +11,13 @@ const PolygonSwitch = () => {
     <div>
     {isEnglish === 'english' ?    
     <Button variant="secondary" disabled>
-      Cambiando a Polygon...
+      Switching to Polygon..
    <span animation="border"className="spinner-grow" role="status"></span>
   </Button>
     :
     <Button variant="secondary" disabled>
-      Switching to Polygon...
+      .
+      Cambiando a Polygon...
    <span animation="border"className="spinner-grow" role="status"></span>
   </Button>
     }

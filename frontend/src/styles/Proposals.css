@@ -461,7 +461,7 @@ option:disabled {
   position: absolute;
   bottom: 0px;
   right:  0px;
-  height: 45% !important;
+  height: 75%;
   z-index: 1 !important;
 }
 
@@ -665,6 +665,10 @@ option:disabled {
 @media only screen and (min-width: 1400px) {
   .propsub {
     font-size: 1.1em;
+  }
+
+  .homevan {
+    height: 60%;
   }
 
   .propopt {

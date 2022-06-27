@@ -24,7 +24,7 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(140px, 1fr));
   font-size: clamp(1em, -1.1rem + 2.2vw, 4.5rem);
-  margin-top: 15%;
+  margin-top: 3em;
   }
     
 .govgrid {
@@ -96,7 +96,7 @@
   padding: 1em;
   background-color: #00000068;
   border-radius: 25px;
-  height: 140px;
+  height: 175px;
   width: 100%;
   position: relative;
   border-color: transparent;
@@ -115,7 +115,7 @@
   padding: 1em;
   background: linear-gradient(-15deg, #dc3840b5, #e26c72b5,#dc3840b5);
   border-radius: 25px;
-  height: 140px;
+  height: 175px;
   width: 100%;
   position: relative;
   color: #ffffff;
@@ -128,7 +128,7 @@
   background-size: 400% 400%;
   animation: gradient 1s ease-in-out infinite;
   border-radius: 25px;
-  height: 140px;
+  height: 175px;
   width: 100%;
   position: relative;
   font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
@@ -252,17 +252,12 @@
 @media only screen and (min-width: 1200px) {
 
   .grid-block {
-    margin: 12.5vh 5vh 0 5vh;
+    margin: 1em 5vh 0 5vh;
   }
 
   .grid-blocked {
-    margin: 0 5vh 0 ;  
+    margin: 0 0 0 0;  
   }
-
-  .homegrid {
-    margin-top: 8%;
-  }
-
 
   .govgrid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

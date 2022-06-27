@@ -12,12 +12,12 @@ const ConnectingButton = () => {
     {isEnglish === 'english' ?
     <div class="hudWallet">
       <span class="spinner-grow" role="status"></span>
-      <span class="cw">Conectando...</span>
+      <span class="cw">Connecting...</span> 
     </div>
     :
     <div class="hudWallet">
       <span class="spinner-grow" role="status"></span> 
-      <span class="cw">Connecting...</span> 
+      <span class="cw">Conectando...</span>
     </div>
     }
     </span>

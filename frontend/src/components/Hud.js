@@ -266,20 +266,24 @@ const Header = () => {
   return (
   <div>
       {isEnglish === 'english' ?
-        <div class="center">
-          <nav class="topHud">
+      <div class="center">
+       
+        <nav class="topHud">
+            
             {isConnected ? 
             <div>
               <div class="topGrid">
                 <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-                <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐English</div></a>
-                <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba web3 para obtener TARO ⚠️</div></a>}</div>
+                <a href='/Home'><div class="hud1">0 ⚡</div></a>
+                <a href='/Home'><div class="hud2">0 💽</div></a>
+                <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
               </div>
               <a href="https://zenbit.mx">
                 <div class="zenbitBTM">
                   zenbit.eth /<span> 2022</span>
                 </div>
               </a>
+              <a href='/Home'><div class="langb"onClick={handleOnClick}>🌐Esp</div></a>
            </div>
             : 
             <div>  
@@ -294,6 +298,7 @@ const Header = () => {
                   <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
                 }
               </div>
+              <a href='/Home'><div class="lang"onClick={handleOnClick}>🌐Esp</div></a>
             </div> }       
             
             {/*!IsPolygonSwitched ?
@@ -305,39 +310,50 @@ const Header = () => {
               ''
                 */}         
           </nav>
-          
-        </div>
+      </div>
       :
       <div class="center">
-        <nav class="topHud">
+          <nav class="topHud">    
           {isConnected ? 
           <div>
-          <div class="topGrid">
+            <div class="topGrid">
               <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-              <a href='/Home'><div class="hud1"onClick={handleOnClick}>🌐Spanish</div></a>
-              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
+              <a href='/Home'><div class="hud1">0 ⚡</div></a>
+              <a href='/Home'><div class="hud2">0 💽</div></a>
+              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba web3 para obtener TARO ⚠️</div></a>}</div>
             </div>
             <a href="https://zenbit.mx">
               <div class="zenbitBTM">
                 zenbit.eth /<span> 2022</span>
               </div>
             </a>
-          </div>
-         : 
+            <a href='/Home'><div class="langb"onClick={handleOnClick}>🌐Eng</div></a>
+         </div>
+          : 
           <div>  
-          <a href="https://zenbit.mx">
-            <div class="zenbit">
-              zenbit.eth /<span> 2022</span>
+            <a href="https://zenbit.mx">
+              <div class="zenbit">
+                zenbit.eth /<span> 2022</span>
+              </div>
+            </a>
+            <div class="bottomHud">
+              {!isMetamaskInstalled ?
+                <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
+                <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
+              }
             </div>
-          </a>
-          <div class="bottomHud">
-            {!isMetamaskInstalled ?
-              <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-              <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-            }
-          </div>
-        </div> }                
-        </nav>
+            <a href='/Home'><div class="lang"onClick={handleOnClick}>🌐Eng</div></a>
+          </div> }       
+          
+          {/*!IsPolygonSwitched ?
+            <div>
+              <SwitchPolygonAlert/> {isConnectingToPolygon ?
+              <PolygonSwitch /> : <PolygonButton handleOnClick={listPolygonInMetamask}/>}
+            </div>
+            : 
+            ''
+              */}         
+        </nav>          
       </div>
       }
     </div>
