@@ -310,7 +310,7 @@ function Home() {
                 <div class="grid-blocked">
                   <div class="homegrid">
                     <a href="/About" class="bg-grid0">
-                      <img src={prop} class="homevan"/> 
+                      <img src={wallet} class="homevan"/> 
                       <div class="propsub">¿Tienes cómo conectarte?</div>
                       <div class="propopt">Ir por Wallet web3</div>
                     </a>

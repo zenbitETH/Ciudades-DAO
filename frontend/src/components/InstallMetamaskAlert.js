@@ -9,8 +9,8 @@ const InstallMetamaskAlert = () => {
       {isEnglish === 'english' ?
       <div class="no-wallet" >
         <a href="https://www.metamask.io/">
-          <div class="">No tienes una llave web3</div>
-          <div class="">Toca para descargar y crear una</div>
+          <div class="">No tienes una wallet web3</div>
+          <div class="">Toca para descargar</div>
         </a>
       </div>
       :
