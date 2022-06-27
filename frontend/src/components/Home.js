@@ -318,7 +318,7 @@ function Home() {
                       <div class="propsub">Do you have a web3 wallet</div>
                       <div class="propopt">Go for Wallet</div>
                     </a>
-                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
+                    <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
                       <img src={test} class="homevan"/> 
                       <div class="propsub">Are you on the right network?</div>
                       <div class="propopt">Go to testnet </div>
