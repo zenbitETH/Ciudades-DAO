@@ -13,12 +13,12 @@ const PolygonButton = ({handleOnClick}) => {
       
     <div>
       <div className="purple2">        
-        <Button onClick={handleOnClick}>Cambiar a Polygon Testnet</Button>
+        <Button onClick={handleOnClick}>Switch to Polygon Testnet</Button>
       </div>
     </div>
     :
     <div>
-      <Button onClick={handleOnClick}>Switch to Polygon Testnet</Button>
+      <Button onClick={handleOnClick}>Cambiar a Polygon Testnet</Button>
     </div>
 }</div>
   );

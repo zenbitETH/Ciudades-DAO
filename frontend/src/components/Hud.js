@@ -298,7 +298,7 @@ const Header = () => {
                   <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
                 }
               </div>
-              <a href='/Home'><div class="lang"onClick={handleOnClick}>🌐Eng</div></a>
+              <a href='/Home'><div class="lang"onClick={handleOnClick}>🌐Esp</div></a>
             </div> }       
             
             {/*!IsPolygonSwitched ?
