@@ -103,7 +103,7 @@ Nav {
     width: 100%;
     overflow: hidden;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
 }
 
 .bottomHud{
@@ -114,24 +114,48 @@ Nav {
   
 }
 
-.hud0, .hud1{
+.lang {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #AAA6A150;
+  padding: 1em;
+  border-radius: 0 0 0px 25px;
+}
+
+.langb {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #AAA6A150;
+  padding: 1em;
+  border-radius: 25px 0 0px 0px;
+}
+
+.hud0, .hud1, .hud2{
   background-size: 100% 100%;
   padding: 0.25em 1em 0.25em 1em;
   font-size: 1.5em;
   background-color: #AAA6A150;
 }
 
+
 .hud0 {
   border-radius:  0px 0 0px 25px;
 }
 
 .hud1 {
+  border-radius:  0 0 0px 0px;
+}
+
+.hud2 {
   border-radius:  0 0 25px 0px;
 }
 
-.hud0:hover, .hud1:hover{ 
+
+.hud0:hover, .hud1:hover, .hud2:hover, .lang:hover, .langb:hover{ 
   background-color: #F6AF5575;
-  color: #F6AF55;
+  color: #Fff;
 }
 
 .hudBalance {
@@ -163,7 +187,7 @@ Nav {
   }
 
   .double {
-    grid-column: span 2 / span 2; 
+    grid-column: span 3 / span 3; 
     z-index: 0;
   }
 

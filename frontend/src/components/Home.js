@@ -265,79 +265,13 @@ function Home() {
   return (
     <div>
       {isEnglish === 'english' ?
-        <div class="App">
-          <div class="grid-block">
-            <div>
-              {isConnected ?
-              <section id="">
-              <div class="homegrid">
-                {isValidated ? '':
-                <a class="bg-reward"href="/Quiz">
-                  <img src={verify} class="homevan"/>
-                  <div class="propsub">Obtén hasta 100 TARO</div>
-                  <div class="propopt">Prueba Web3</div>
-                </a>}
-                {isValidated ? <a class="bg-reward" href="/createProposal">
-                  <img src={prop} class="homevan"/> 
-                  <div class="propsub">Obtén 10 TARO por</div>
-                  <div class="propopt">Propuestas DAO</div>
-                </a>
-                 : <div class="bg-blocked" >
-                 <img src={prop} class="homevan"/> 
-                 <div class="propsub">3 Valida para desbloquear</div>
-                 <div class="propopt">Propuestas DAO</div>
-               </div>}
-               {isValidated ?
-              <a class="bg-grid0" href="/ProposalList">
-                  <img src={past} class="homevan"/> 
-                  <div class="propsub">4 Vota con tu TARO</div>
-                  <div class="propopt">Querétaro DAO</div>
-                </a>
-                :
-                <div class="bg-blocked" >
-                  <img src={past} class="homevan"/> 
-                  <div class="propsub">4 Valida para desbloquear</div>
-                  <div class="propopt">Qurétaro DAO</div>
-                </div>}
-              </div>
-            </section>
-              :
-              <section>
-                <div class="headline">
-                  <h1 class="yellow">Reto Querétaro Web3</h1>
-                  <h2>¿Estas listo para empezar?</h2>
-                </div>
-                <div class="grid-blocked">
-                  <div class="homegrid">
-                    <a href="/About" class="bg-grid0">
-                      <img src={wallet} class="homevan"/> 
-                      <div class="propsub">¿Tienes cómo conectarte?</div>
-                      <div class="propopt">Ir por Wallet web3</div>
-                    </a>
-                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
-                      <img src={test} class="homevan"/> 
-                      <div class="propsub">¿Estas en la red correcta?</div>
-                      <div class="propopt">Ir a red de pruebas </div>
-                    </a>
-                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
-                      <img src={gas} class="homevan"/> 
-                      <div class="propsub">¿Tienes gas? </div>
-                      <div class="propopt">Conseguir Gas </div>
-                    </a>
-                  </div>
-                </div>
-              
-              </section>      
-              }
-            </div>
-          </div>
-        </div>
-      :
       <div class="App">
         <div class="grid-block">
           <div>
             {isConnected ?
             <section id="">
+              <h1 class="yellow">TARO Web3 Quest</h1>
+              <h2>Complete the task and get TARO!</h2>
               <div class="homegrid">
                 {isValidated ? '':
                 <a class="bg-reward"href="/Quiz">
@@ -374,7 +308,7 @@ function Home() {
             :
             <section>
               <div class="headline">
-                  <h1 class="yellow">Querétaro Web3 Quest</h1>
+                  <h1 class="yellow">TARO Web3 Quest</h1>
                   <h2>Are you ready to start?</h2>
                 </div>
                 <div class="grid-blocked">
@@ -396,12 +330,84 @@ function Home() {
                     </a>
                   </div>
                 </div>
-
             </section>      
             }
           </div>
+          </div>
+      </div>
+      :
+      <div class="App">
+          <div class="grid-block">
+            <div>
+              {isConnected ?
+              <section id="">
+                <div class="headline">
+                  <h1 class="yellow">Reto Querétaro Web3</h1>
+                  <h2>¡Copleta las tareas y gana TARO!</h2>
+                </div>
+                <div class="homegrid">
+                  {isValidated ? '':
+                  <a class="bg-reward"href="/Quiz">
+                    <img src={verify} class="homevan"/>
+                    <div class="propsub">Obtén hasta 100 TARO</div>
+                    <div class="propopt">Prueba Web3</div>
+                  </a>}
+                  {isValidated ? <a class="bg-reward" href="/createProposal">
+                    <img src={prop} class="homevan"/> 
+                    <div class="propsub">Obtén 10 TARO por</div>
+                    <div class="propopt">Propuestas DAO</div>
+                  </a>
+                   : <div class="bg-blocked" >
+                   <img src={prop} class="homevan"/> 
+                   <div class="propsub">Valida para desbloquear</div>
+                   <div class="propopt">Propuestas DAO</div>
+                 </div>}
+                 {isValidated ?
+                <a class="bg-grid0" href="/ProposalList">
+                    <img src={past} class="homevan"/> 
+                    <div class="propsub">Vota con tu TARO</div>
+                    <div class="propopt">Querétaro DAO</div>
+                  </a>
+                  :
+                  <div class="bg-blocked" >
+                    <img src={past} class="homevan"/> 
+                    <div class="propsub">Valida para desbloquear</div>
+                    <div class="propopt">Qurétaro DAO</div>
+                  </div>}
+                </div>
+              </section>
+              :
+              <section>
+                <div class="headline">
+                  <h1 class="yellow">Reto Querétaro Web3</h1>
+                  <h2>¿Estas listo para empezar?</h2>
+                </div>
+                <div class="grid-blocked">
+                  <div class="homegrid">
+                    <a href="/About" class="bg-grid0">
+                      <img src={wallet} class="homevan"/> 
+                      <div class="propsub">¿Tienes cómo conectarte?</div>
+                      <div class="propopt">Ir por Wallet web3</div>
+                    </a>
+                    <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
+                      <img src={test} class="homevan"/> 
+                      <div class="propsub">¿Estas en la red correcta?</div>
+                      <div class="propopt">Ir a red de pruebas </div>
+                    </a>
+                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
+                      <img src={gas} class="homevan"/> 
+                      <div class="propsub">¿Tienes gas? </div>
+                      <div class="propopt">Conseguir Gas </div>
+                    </a>
+                  </div>
+                </div>
+              
+              </section>      
+              }
+            </div>
+          </div>
         </div>
-    </div>
+      
   }
 </div>
     

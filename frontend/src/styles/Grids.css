@@ -115,7 +115,7 @@
   padding: 1em;
   background: linear-gradient(-15deg, #dc3840b5, #e26c72b5,#dc3840b5);
   border-radius: 25px;
-  height: 140px;
+  height: 175px;
   width: 100%;
   position: relative;
   color: #ffffff;
@@ -128,7 +128,7 @@
   background-size: 400% 400%;
   animation: gradient 1s ease-in-out infinite;
   border-radius: 25px;
-  height: 140px;
+  height: 175px;
   width: 100%;
   position: relative;
   font-size: clamp(1em, -.975rem + 2.2vw, 1.5rem);
