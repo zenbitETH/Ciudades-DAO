@@ -16,17 +16,14 @@
 }
 
 .quiz-grid {
-    border-radius: 20px;
     font-family: 'Lexend Deca', sans-serif;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); 
-    margin: -1em 0 1em 0;
-    position: relative;
-    
+    grid-template-rows: repeat(3, minmax(0, 1fr)); 
+    position: relative;   
+    gap: 3em;
 }
 
 .quiz-lb {
-
  position: relative;
  text-align: center;
  color: #2b284a;
@@ -61,14 +58,12 @@
 .container {
     display: grid;
     position: relative;
-    justify-content: space-evenly;
     cursor: pointer;
-    font-size: 1em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
+    font-size: 1.3em;
   }
 
   
@@ -82,29 +77,25 @@
   
   /* Create a custom radio button */
   .checkmark {
-  top: 1.7em;
   position: absolute;
-  height: 130px;
-  width: 130px;
-  background-color: #85858569;
-  color: #fff;
-  border-radius: 100%;
-  text-align: center;
+  width: 90%; left: 50%; transform: translateX(-50%); border-radius: 10px;
+  background-color: #85858569; color: #fff;
+  text-align: left;
   cursor: pointer;
-  padding: 2.75em 0.25em 0.5em 0.25em;
+  padding: 0.5em;
   }
   
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
     background-color: #F6AF55f1;
+    color: #01304E;
   }
   
   /* When the radio button is checked, add a background */
   .container input:checked ~ .checkmark {
-  background: linear-gradient(75deg, #2b284a00, #F6AF55d7, #F6AF55d7, #F6AF5569, #2b284a00);
-  background-size: 500% 500%;
+  background: linear-gradient(189deg, #2b284a00, #F6AF55d7, #F6AF55d7, #F6AF5569, #2b284a00);
+  background-size: 200% 200%;
   animation: gradient 3s ease infinite;
-  color: white;
   }
   
   /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -119,22 +110,10 @@
 
 
   @media only screen and (min-width: 1000px) {
-    .checkmark {
-      top: 1em;
-      left: 1em;
-      height: 200px;
-      width: 200px;
-      padding: 3em 0.5em 0.5em 0.5em;
-    }
-
     .quiz-q {
-      font-size: 1.5em;
+      font-size: 1.75em;
     }
 
-
-    .container {
-      font-size: 1.3em;
-    }
   }
   
   @media only screen and (min-width: 1800px) {
