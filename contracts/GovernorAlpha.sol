@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0
+
 pragma solidity ^0.5.16;
 pragma experimental ABIEncoderV2;
 
@@ -5,7 +7,7 @@ import "hardhat/console.sol";
 
 contract GovernorAlpha {
     /// @notice The name of this contract
-    string public constant name = "VOTARO CIUDAD DAO®";
+    string public constant name = "VOTAR0O CIUDAD DAO";
     
     /// @notice The number of votes required in order for a voter to become a proposer
     // function proposalThreshold() public pure returns (uint) { return 100000e18; } // 100,000 = 1% of Taro

@@ -276,7 +276,7 @@ const Header = () => {
                 <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
                 <a href='/Home'><div class="hud1">0 ⚡</div></a>
                 <a href='/Home'><div class="hud2">0 💽</div></a>
-                <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the test to get TARO ⚠️</div></a>}</div>
+                <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the web3 test ⚠️</div></a>}</div>
               </div>
               <a href="https://zenbit.mx">
                 <div class="zenbitBTM">
@@ -320,7 +320,7 @@ const Header = () => {
               <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
               <a href='/Home'><div class="hud1">0 ⚡</div></a>
               <a href='/Home'><div class="hud2">0 💽</div></a>
-              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la prueba web3 para obtener TARO ⚠️</div></a>}</div>
+              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la Prueba Web3 para validar ⚠️</div></a>}</div>
             </div>
             <a href="https://zenbit.mx">
               <div class="zenbitBTM">
