@@ -3,7 +3,8 @@ A voting DApp that rewards users with $TARO when they validate their accounts or
 
 ## Contracts (deployed on Mumbai)
 
-[📚 Queretaro Token TARO](https://mumbai.polygonscan.com/address/0x6fa2279228288F392CBd2f967D93d77F655D76B2#code)
+[📚 Queretaro Token TARO](https://mumbai.polygonscan.com/address/0x6fa2279228288F392CBd2f967D93d77F655D76B2#code)  
+
 [📚 VoTARO Ciudad DAO GovernorAlpha](https://mumbai.polygonscan.com/address/0x23131cBc792aAdc67CFf8E4f636f6F9c89ed9456#code)
   
 # 🧰 What do I need to get $ TARO? 
@@ -21,8 +22,10 @@ Proposals are registered and managed in an automated way by the smart contract G
 
 ### Built with:
 
--React
--Compound Governance Contracts
+-React  
+
+-Compound Governance Contracts  
+
 -Surge
 
 
