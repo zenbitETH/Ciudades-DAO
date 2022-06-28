@@ -33,7 +33,7 @@ const CreateProposalErrorModal = (props) => {
           </div>
           <p/>
             <div class="prop-bg"><a href="/CreateProposal">
-              <img src={prop} class="ribbons"/>
+              <img src={prop} class="homevan"/>
               <div class="propsub">Review your proposal</div>
               <div class="propopt">Try again</div>
             </a></div>
@@ -55,7 +55,7 @@ const CreateProposalErrorModal = (props) => {
           ⚠️ 1. Asegurate de estar conectado a MetaMask y de haber ingresado su información correctamente.<br/><br/>
           ⚠️ 2. Además, asegurate de haber validado tu cuenta y haber llenado todos los campos.<br/><br/>
         <div class="prop-bg"><a href="/CreateProposal">
-          <img src={prop} class="ribbons"/>
+          <img src={prop} class="homevan"/>
           <div class="propsub">Revisa propuesta</div>
           <div class="propopt">Intentarlo de nuevo</div>
         </a></div>
