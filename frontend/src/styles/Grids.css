@@ -21,17 +21,18 @@
 .homegrid {
   display: grid;
   grid-gap: 0.5em;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(140px, 1fr));
   font-size: clamp(1em, -1.1rem + 2.2vw, 4.5rem);
   margin-top: 10%;
   vertical-align: middle;
+  
 }
 
 .grid-blocked {
   display: grid;
   grid-gap: 0.5em;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(140px, 1fr));
   font-size: clamp(1em, -1.1rem + 2.2vw, 4.5rem);
   margin-top: 5%;
@@ -262,9 +263,12 @@
 
 @media only screen and (min-width: 1200px) {
 
-
   .grid-block {
     margin: 1em 5vh 0 5vh;
+  }
+
+  .grid-blocked, .homegrid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
 
 

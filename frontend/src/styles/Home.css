@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
+.homelogo {
+  display: block;
+  width: 100%;
+}
 .lex {
   font-family: "Lexend Deca";
 }
@@ -223,7 +227,6 @@ h3 {
   perspective: 900px;
   height: 200px;
   top: -4.5em;
-  z-index: -1;
   opacity: 50%;
   position: relative;
 }
@@ -233,7 +236,6 @@ h3 {
   animation: none;
   height: 200px;
   top: -3em;
-  z-index: -1;
   opacity: 50%;
   position: relative;
 }
@@ -293,6 +295,7 @@ h3 {
     height: auto;
     margin-top: 5em;
     justify-content: center;
+    
   }
 
   .main-grid {

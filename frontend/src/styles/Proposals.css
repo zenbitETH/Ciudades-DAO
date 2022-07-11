@@ -104,7 +104,6 @@ option:disabled {
   margin-left: -1em;
   position: fixed;
   top: 0;
-  z-index: 1;
   width: 110%;
   background-color: #cccccc59;
 }
@@ -462,7 +461,7 @@ option:disabled {
   bottom: 0px;
   right:  0px;
   height: 75%;
-  z-index: 1 !important;
+
 }
 
 .ribvan {
@@ -470,7 +469,6 @@ option:disabled {
   bottom: 0px;
   right:  5px;
   height: 50%;
-  z-index: 1 !important;
 }
 
 /* Proposal */

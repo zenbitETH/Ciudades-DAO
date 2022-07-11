@@ -316,7 +316,7 @@ const Header = () => {
           {isConnected ? 
           <div>            
             <div class="topGrid">  
-              <a href='/Home'><div class="hud0">{userBalance} VOTOs en Querévoto</div></a>
+              <a href='/Home'><div class="hud0">{userBalance} VOTOs en Querétaro</div></a>
               <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la Prueba Web3 para validar ⚠️</div></a>}</div>
             </div>
             <a href="https://zenbit.mx">
@@ -341,6 +341,7 @@ const Header = () => {
               }
             </div>
             <a href='/Home'><div class="lang"onClick={handleOnClick}>🌐Eng</div></a>
+            
           </div> }       
           
           {/*!IsPolygonSwitched ?

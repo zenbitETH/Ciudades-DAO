@@ -372,7 +372,7 @@ function Home() {
               :
               <section>
                 <div class="headline">
-                  <img src={logo}/>
+                  <img src={logo} class="homelogo"/>
                   <h2>Gobernanza descentralizada para ciudades</h2>
                 </div>
                 

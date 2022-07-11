@@ -9,8 +9,7 @@
 .zenbitBTM {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0;  
   color: #fff;
 }
 
@@ -98,11 +97,11 @@ Nav {
   }
 
 .topGrid{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    font-size: 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 20;
 }
 
 .bottomHud{
@@ -110,7 +109,7 @@ Nav {
   position: fixed;
   bottom: 0;
   overflow: hidden;
-  
+  z-index: 20;  
 }
 
 .lang {
@@ -124,11 +123,11 @@ Nav {
 
 .langb {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 3em;
+  left: 0;
   background-color: #AAA6A150;
-  padding: 1em;
-  border-radius: 25px 0 0px 0px;
+  padding: 0.5em;
+  border-radius: 0px 25px 25px 0px;
 }
 
 .hud0, .hud1, .hud2{
@@ -142,8 +141,8 @@ Nav {
   position: fixed;
   height: auto;
   margin: 0.5em 0em 0em 1em;
-  width: 20%;
-  top: 0;
+  width: 40%;
+  bottom: 0;
   left: 0;
 }
 
@@ -194,16 +193,7 @@ Nav {
 
   .double {
     grid-column: span 3 / span 3; 
-    z-index: 0;
   }
-
-  .hudLogo {
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-    opacity: 75%;
-  }
-
 
 
 
@@ -215,11 +205,31 @@ Nav {
       transform: translateX(-50%);
     }
 
+    .hudlogo {
+      top: 0;
+      bottom: auto;
+      width: 20%;
+    }
+
+    .zenbitBTM {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .langb {
+      top: 0em;
+      right: 0;
+      left: auto;
+      bottom: auto;
+      border-radius: 0 0 0px 25px;
+    }
+
     .topGrid {
       width: 30%;
       margin: 0 0em 0 0em;
       left: 50%;
       transform: translateX(-50%);
+      font-size: 1.1em
     }
     
     .bg-start {

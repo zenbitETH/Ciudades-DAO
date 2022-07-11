@@ -43,7 +43,6 @@
     animation: gradient 2s ease infinite;
     margin: -3em -1em 0em -1em !important;
     padding: 12.5em 1em 12em 1em !important;
-    z-index: -1 !important;
   }
 
   .connect2 {
@@ -52,7 +51,6 @@
     animation: gradient 2s ease infinite;
     margin: -6em 0em -6em 0em !important;
     padding: 20em 1em 15em 1em !important;
-    z-index: -1 !important;
   }
 
   @media only screen and (min-width: 1200px) { 
