@@ -17,6 +17,7 @@ import prop from '../assets/prop.png';
 import past from '../assets/past.png';
 import verify from '../assets/verify.png';
 import gas from '../assets/gas.svg';
+import logo from '../assets/Logoww.png';
 
 
 import Taro from '../contracts/contracts/Taro.sol/Taro.json';
@@ -269,19 +270,17 @@ function Home() {
         <div class="grid-block">
           <div>
             {isConnected ?
-            <section id="">
-              <h1 class="yellow">TARO Web3 Quest</h1>
-              <h2>Complete the task and get TARO!</h2>
+            <section class="vertical">
               <div class="homegrid">
                 {isValidated ? '':
                 <a class="bg-reward"href="/Quiz">
                   <img src={verify} class="homevan"/>
-                  <div class="propsub">Get up to 100 TARO</div>
+                  <div class="propsub">Get up to 100 VOTO</div>
                   <div class="propopt">Validate</div>
                 </a>}
                 {isValidated ? <a class="bg-reward" href="/createProposal">
                   <img src={prop} class="homevan"/> 
-                  <div class="propsub">Get 10 TARO per proposal</div>
+                  <div class="propsub">Get 10 VOTO per proposal</div>
                   <div class="propopt">Propose</div>
                 </a>
                 :
@@ -293,7 +292,7 @@ function Home() {
                {isValidated ?
               <a class="bg-grid0" href="/ProposalList">
                   <img src={past} class="homevan"/> 
-                  <div class="propsub">Vote with your TARO</div>
+                  <div class="propsub">Vote with your VOTO</div>
                   <div class="propopt">Qurétaro DAO</div>
                 </a>
                 :
@@ -308,27 +307,25 @@ function Home() {
             :
             <section>
               <div class="headline">
-                  <h1 class="yellow">TARO Web3 Quest</h1>
-                  <h2>Are you ready to start?</h2>
+                  <img src={logo}/>
+                  <h2>Decentralized Governance for cities</h2>
                 </div>
                 <div class="grid-blocked">
-                  <div class="homegrid">
-                    <a href="/About" class="bg-grid0">
-                      <img src={wallet} class="homevan"/> 
-                      <div class="propsub">Do you have a web3 wallet</div>
-                      <div class="propopt">Go for Wallet</div>
-                    </a>
-                    <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
-                      <img src={test} class="homevan"/> 
-                      <div class="propsub">Are you on the right network?</div>
-                      <div class="propopt">Go to testnet </div>
-                    </a>
-                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
-                      <img src={gas} class="homevan"/> 
-                      <div class="propsub">Do you have gas? </div>
-                      <div class="propopt">Get Gas </div>
-                    </a>
-                  </div>
+                  <a href="/About" class="bg-grid0">
+                    <img src={wallet} class="homevan"/> 
+                    <div class="propsub">Do you have a web3 wallet</div>
+                    <div class="propopt">Go for Wallet</div>
+                  </a>
+                  <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
+                    <img src={test} class="homevan"/> 
+                    <div class="propsub">Are you on the right network?</div>
+                    <div class="propopt">Go to testnet </div>
+                  </a>
+                  <a class="bg-grid0" href="https://faucet.polygon.technology/">
+                    <img src={gas} class="homevan"/> 
+                    <div class="propsub">Do you have gas? </div>
+                    <div class="propopt">Get Gas </div>
+                  </a>
                 </div>
             </section>      
             }
@@ -341,20 +338,16 @@ function Home() {
             <div>
               {isConnected ?
               <section id="">
-                <div class="headline">
-                  <h1 class="yellow">Reto Querétaro Web3</h1>
-                  <h2>¡Copleta las tareas y gana TARO!</h2>
-                </div>
                 <div class="homegrid">
                   {isValidated ? '':
                   <a class="bg-reward"href="/Quiz">
                     <img src={verify} class="homevan"/>
-                    <div class="propsub">Obtén hasta 100 TARO</div>
+                    <div class="propsub">Obtén hasta 100 VOTOs</div>
                     <div class="propopt">Prueba Web3</div>
                   </a>}
                   {isValidated ? <a class="bg-reward" href="/createProposal">
                     <img src={prop} class="homevan"/> 
-                    <div class="propsub">Obtén 10 TARO por</div>
+                    <div class="propsub">Obtén 10 VOTOs por hacer</div>
                     <div class="propopt">Propuestas DAO</div>
                   </a>
                    : <div class="bg-blocked" >
@@ -365,7 +358,7 @@ function Home() {
                  {isValidated ?
                 <a class="bg-grid0" href="/ProposalList">
                     <img src={past} class="homevan"/> 
-                    <div class="propsub">Vota con tu TARO</div>
+                    <div class="propsub">Usa tus VOTOs en</div>
                     <div class="propopt">Querétaro DAO</div>
                   </a>
                   :
@@ -379,11 +372,11 @@ function Home() {
               :
               <section>
                 <div class="headline">
-                  <h1 class="yellow">Reto Querétaro Web3</h1>
-                  <h2>¿Estas listo para empezar?</h2>
+                  <img src={logo}/>
+                  <h2>Gobernanza descentralizada para ciudades</h2>
                 </div>
-                <div class="grid-blocked">
-                  <div class="homegrid">
+                
+                  <div class="grid-blocked">
                     <a href="/About" class="bg-grid0">
                       <img src={wallet} class="homevan"/> 
                       <div class="propsub">¿Tienes cómo conectarte?</div>
@@ -400,8 +393,6 @@ function Home() {
                       <div class="propopt">Conseguir Gas </div>
                     </a>
                   </div>
-                </div>
-              
               </section>      
               }
             </div>
