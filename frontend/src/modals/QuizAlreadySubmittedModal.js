@@ -49,7 +49,7 @@ const QuizAlreadySubmittedModal = (props) => {
       >
         <div class="center"><div><img src={confirm} alt="Alert about verification" class="prop-img"/></div></div>
         <h1><span>Tu cuenta ya está validada </span></h1><br/>
-        <h3> Ahora puedes crear y votar por propuestas de gobernanza urbana en Querétaro.</h3>
+        <h3> Ahora puedes crear y votar por propuestas de gobernanza urbana en Querévoto.</h3>
         <Modal.Body>
           <div class="void-link">
           <div class="prop-bg"><a href="/Createproposal">

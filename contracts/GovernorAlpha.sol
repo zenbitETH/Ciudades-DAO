@@ -7,10 +7,10 @@ import "hardhat/console.sol";
 
 contract GovernorAlpha {
     /// @notice The name of this contract
-    string public constant name = "VOTAR0O CIUDAD DAO";
+    string public constant name = "Gobernador Alfa de Ciudades DAO";
     
     /// @notice The number of votes required in order for a voter to become a proposer
-    // function proposalThreshold() public pure returns (uint) { return 100000e18; } // 100,000 = 1% of Taro
+    // function proposalThreshold() public pure returns (uint) { return 100000e18; } // 100,000 = 1% of Voto
     //
     /// @notice The delay before voting on a proposal may take place, once proposed
     function votingDelay() public pure returns (uint) { return 1; } // 1 block
@@ -18,11 +18,11 @@ contract GovernorAlpha {
     // /// @notice The duration of voting on a proposal, in blocks
     function votingPeriod() public pure returns (uint) { return 3600; } // ~15 days in blocks (assuming 15s blocks 1296000 blocks; 86400 blocks per day; 3600 per hour)
     // 
-    // /// @notice The address of the Taro Protocol Timelock
+    // /// @notice The address of the Voto Protocol Timelock
     // TimelockInterface public timelock;
     //
-    // /// @notice The address of the Taro governance token
-    TaroInterface public taro;
+    // /// @notice The address of the Voto governance token
+    VotoInterface public voto;
     //
     // /// @notice The address of the Governor Guardian
     // address public guardian;
@@ -110,8 +110,8 @@ contract GovernorAlpha {
     event ValidityStatus(uint timestamp);
 
 
-    constructor(address taro_) public {
-        taro = TaroInterface(taro_);
+    constructor(address voto_) public {
+        voto = VotoInterface(voto_);
     }
 
     struct UserInputFields {
@@ -122,15 +122,15 @@ contract GovernorAlpha {
       string description;
       string budget;
       uint expiration;
-      uint requiredTaroToVote;
+      uint requiredVotoToVote;
       uint proposalTime;
       address proposer;
     }
 
     function propose(UserInputFields memory _userInputFields) public checkValidity returns (uint) {
-        //A user recieves 50 Taro for each of their first ten proposals
+        //A user recieves 50 Voto for each of their first ten proposals
         if(userProposals[msg.sender].count < 10) {
-          bool transferred = taro.transferFrom(address(this), msg.sender, 10e18);
+          bool transferred = voto.transferFrom(address(this), msg.sender, 10e18);
           require(transferred, "Tokens not transferred to msg.sender");
           userProposals[msg.sender].count++;
         }
@@ -170,7 +170,7 @@ contract GovernorAlpha {
         validations[msg.sender] = Validation({
             expirationTime: block.timestamp + 15780000
         });
-        bool transferred = taro.transferFrom(address(this), msg.sender, _rewardedTokens);
+        bool transferred = voto.transferFrom(address(this), msg.sender, _rewardedTokens);
         require(transferred, "Tokens not transferred to msg.sender");
         return 0; //validates new user
       } else if(validations[msg.sender].expirationTime >= block.timestamp) {
@@ -213,12 +213,12 @@ contract GovernorAlpha {
 
         require(isProposalActive[proposalId] == true, "GovernorAlpha::_castVote: voting is closed");
 
-        uint amountOfTaro = taro.balanceOf(msg.sender);
-        uint96 amountOfT = uint96(amountOfTaro);
+        uint amountOfVoto = voto.balanceOf(msg.sender);
+        uint96 amountOfT = uint96(amountOfVoto);
 
         require(receipt.hasVoted == false, "GovernorAlpha::_castVote: voter already voted");
         //The following line was causing the first proposal to not allow it to be voted on
-        // uint96 votes = taro.getPriorVotes(voter, proposal.startBlock, amountOfT);
+        // uint96 votes = voto.getPriorVotes(voter, proposal.startBlock, amountOfT);
 
         if (support) {
             proposal.forVotes = add256(proposal.forVotes, amountOfT);
@@ -261,7 +261,7 @@ contract GovernorAlpha {
 //     function executeTransaction(address target, uint value, string calldata signature, bytes calldata data, uint eta) external payable returns (bytes memory);
 // }
 
-interface TaroInterface {
+interface VotoInterface {
     function getPriorVotes(address account, uint blockNumber) external view returns (uint96);
     function getCurrentVotes(address account) external view returns (uint96);
     function transferFrom(address src, address dst, uint rawAmount) external returns (bool);

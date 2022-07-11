@@ -31,23 +31,23 @@ const About = () => {
 
         </a> </div>
         <div class = "bg-reward2"> <a href="#step1">
-         <div class = "about-hl"> 2. How te get TARO </div> <br/>
+         <div class = "about-hl"> 2. How te get VOTO </div> <br/>
         <img src={TAROrew} class="about-img"/>
-        <span class = "ustext"> <div class = "center"> </div> <br/> <span class = "yellow"> Get 1,000 TARO </span> when obtaining your crypto key and validating it.
-          Once you have your crypto key validated <span class = "yellow"> you can get 50 TARO for each one </span> of the first 20 proposals you make. <br/> <br/>
+        <span class = "ustext"> <div class = "center"> </div> <br/> <span class = "yellow"> Get 1,000 VOTO </span> when obtaining your crypto key and validating it.
+          Once you have your crypto key validated <span class = "yellow"> you can get 50 VOTO for each one </span> of the first 20 proposals you make. <br/> <br/>
         <div class = "usgrid">
-          <a class="bg-reward3" href="/Quiz"> Validate <br/> (1000 TARO) </a>
-          <a class="bg-reward3" href="/CreateProposal"> Propose <br/> (50 TARO) </a>
+          <a class="bg-reward3" href="/Quiz"> Validate <br/> (1000 VOTO) </a>
+          <a class="bg-reward3" href="/CreateProposal"> Propose <br/> (50 VOTO) </a>
         </div>
         <br/>
-        <div class = "center"> <a class="about-bt" href="/CreateProposal"> Read about TARO token </a> </div>
+        <div class = "center"> <a class="about-bt" href="/CreateProposal"> Read about VOTO token </a> </div>
         </span>
         </a> </div>
         <div class = "bg-grid"> <a href="#step2">
          <div class = "about-hl"> 3. Vote in City DAO </div> <br/>
         <img src = {vote} class = "about-img" />
-        <span class = "ustext"> <div class = "center"></div> <br/> VoTARO is a DAO (Decentralized Autonomous Organization)
-        with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "yellow"> Each TARO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
+        <span class = "ustext"> <div class = "center"></div> <br/> VoVOTO is a DAO (Decentralized Autonomous Organization)
+        with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "yellow"> Each VOTO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
         <div class = "usgrid">
           <a class="about-bt" href="/Quiz"> Proposals to vote </a>
           <a class="about-bt" href="/CreateProposal"> Read about City DAO </a>
@@ -60,7 +60,7 @@ const About = () => {
         <img src = {moon} class = "about-img" />
         <span class = "ustext"> <div class = "center"> </div> <br/>
         To participate in a DAO it is necessary to have the digital skills necessary to interact with web tools 3 such as a crypto key or use your
-        TARO tokens to vote. <span class = "yellow"> Know what they are and the roadmap to improve them </span> with your participation in the DAO of the city of Querétaro.
+        VOTO tokens to vote. <span class = "yellow"> Know what they are and the roadmap to improve them </span> with your participation in the DAO of the city of Querétaro.
         <br/><br/>
         <div class = "center"> <a class="about-bt" href="/CreateProposal"> View roadmap </a> </div>
         </span>
@@ -89,16 +89,16 @@ const About = () => {
        
       </a> </div>
       <div class = "bg-reward2"> <a href="#step1">
-       <div class = "about-hl"> 2. How te get TARO </div> <br/>
+       <div class = "about-hl"> 2. How te get VOTO </div> <br/>
       <img src={TAROrew} class="about-img"/>
-      <span class = "ustext"> <div class = "center"> </div> <br/> <span class = "yellow"> Get 1,000 TARO </span> when obtaining your crypto key and validating it.
-        Once you have your crypto key validated <span class = "yellow"> you can get 50 TARO for each one </span> of the first 20 proposals you make. <br/> <br/>
+      <span class = "ustext"> <div class = "center"> </div> <br/> <span class = "yellow"> Get 1,000 VOTO </span> when obtaining your crypto key and validating it.
+        Once you have your crypto key validated <span class = "yellow"> you can get 50 VOTO for each one </span> of the first 20 proposals you make. <br/> <br/>
       <div class = "usgrid">
-        <a class="bg-reward3" href="/Quiz"> Validate <br/> (1000 TARO) </a>
-        <a class="bg-reward3" href="/CreateProposal"> Propose <br/> (50 TARO) </a>
+        <a class="bg-reward3" href="/Quiz"> Validate <br/> (1000 VOTO) </a>
+        <a class="bg-reward3" href="/CreateProposal"> Propose <br/> (50 VOTO) </a>
       </div>
       <br/>
-      <div class = "center"> <a class="about-bt" href="/CreateProposal"> Read about TARO token </a> </div>
+      <div class = "center"> <a class="about-bt" href="/CreateProposal"> Read about VOTO token </a> </div>
       </span>
       
         
@@ -106,8 +106,8 @@ const About = () => {
       <div class = "bg-grid"> <a href="#step2">
        <div class = "about-hl"> 3. Vote in City DAO </div> <br/>
       <img src = {vote} class = "about-img" />
-      <span class = "ustext"> <div class = "center"></div> <br/> VoTARO is a DAO (Decentralized Autonomous Organization)
-      with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "yellow"> Each TARO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
+      <span class = "ustext"> <div class = "center"></div> <br/> VoVOTO is a DAO (Decentralized Autonomous Organization)
+      with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "yellow"> Each VOTO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
       <div class = "usgrid">
         <a class="about-bt" href="/Quiz"> Proposals to vote </a>
         <a class="about-bt" href="/CreateProposal"> Read about City DAO </a>
@@ -120,7 +120,7 @@ const About = () => {
       <img src = {moon} class = "about-img" />
       <span class = "ustext"> <div class = "center"> </div> <br/>
       To participate in a DAO it is necessary to have the digital skills necessary to interact with web tools 3 such as a crypto key or use your
-      TARO tokens to vote. <span class = "yellow"> Know what they are and the roadmap to improve them </span> with your participation in the DAO of the city of Querétaro.
+      VOTO tokens to vote. <span class = "yellow"> Know what they are and the roadmap to improve them </span> with your participation in the DAO of the city of Querétaro.
       <br/><br/>
       <div class = "center"> <a class="about-bt" href="/CreateProposal"> View roadmap </a> </div>
       </span>

@@ -11,8 +11,8 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import ValidationRequired from '../alerts/ValidationRequired';
 import { EthersContext } from '../contexts/EthersContext';
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
@@ -28,7 +28,7 @@ import verify from '../assets/verify.png';
 
 
 const PastProposals = () => {
-  let [taro, setTaro] = useState();
+  let [voto, setVoto] = useState();
   let [signerAddress, setSignerAddress] = useState();
   let [approvedProposals, setApprovedProposals] = useState([]);
   let [rejectedProposals, setRejectedProposals] = useState([]);
@@ -93,18 +93,18 @@ const PastProposals = () => {
             let signer = await _ethersProvider.getSigner();
             // setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let _signerAddress = await signer.getAddress();
             // console.log("signerAddress: ", signerAddress);
             setSignerAddress(_signerAddress);
 
-            // let _userBalance = await _taro.balanceOf(signerAddress);
+            // let _userBalance = await _voto.balanceOf(signerAddress);
             // console.log('_userBalance in useEffect: ', _userBalance.toString());
             // if(_userBalance) {
             //   setUserBalance(_userBalance.toString());
@@ -154,7 +154,7 @@ const PastProposals = () => {
                     description: proposal[9][4],
                     expiration: proposal[9][5].toString(),
                     budget: proposal[9][6].toString(),
-                    requiredTaroToVote: proposal[9][7].toString(),
+                    requiredVotoToVote: proposal[9][7].toString(),
                     forVotes: proposal.forVotes.div('1000000000000000000').toString(),
                     againstVotes: proposal.againstVotes.div('1000000000000000000').toString(),
                     id: proposal.id.toString(),
@@ -204,7 +204,7 @@ const PastProposals = () => {
           description={proposal.description}
           expiration={proposal.expiration}
           budget={proposal.budget}
-          taroToVote={proposal.taroToVote}
+          votoToVote={proposal.votoToVote}
           forVotes={proposal.forVotes}
           againstVotes={proposal.againstVotes}
           id={proposal.id}
@@ -228,7 +228,7 @@ const PastProposals = () => {
           description={proposal.description}
           expiration={proposal.expiration}
           budget={proposal.budget}
-          taroToVote={proposal.taroToVote}
+          votoToVote={proposal.votoToVote}
           forVotes={proposal.forVotes}
           againstVotes={proposal.againstVotes}
           id={proposal.id}
@@ -252,7 +252,7 @@ const PastProposals = () => {
         <section class="proplist">
           <br/><br/>
           <h1><span class="yellow">Past Proposals</span></h1><br/><br/>
-          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <div class="center"><img src={vote} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
         
           <div id="margin" className= "props">
             <div>
@@ -375,7 +375,7 @@ const PastProposals = () => {
         <section class="proplist">
           <br/><br/>
           <h1><span class="yellow">Propuestas anteriores</span></h1><br/><br/>
-          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <div class="center"><img src={vote} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
           <div id="margin" className= "props" >
             <div>
               {showApproved

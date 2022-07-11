@@ -5,7 +5,7 @@ import PolygonButton from './buttons/PolygonButton';
 import PolygonSwitch from './buttons/PolygonSwitch';
 import SwitchPolygonAlert from './SwitchPolygonAlert';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
-import { TaroContext } from '../contexts/TaroContext';
+import { VotoContext } from '../contexts/VotoContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
@@ -20,8 +20,8 @@ import gas from '../assets/gas.svg';
 import logo from '../assets/Logoww.png';
 
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
@@ -36,7 +36,7 @@ function Home() {
   let [isConnectingToPolygon, setIsConnectingToPolygon] = useState();
 
   let {setIsValidated,isValidated} = useContext(ValidationRequiredContext);
-  let {setTaro} = useContext(TaroContext);
+  let {setVoto} = useContext(VotoContext);
   let {setGovernorAlpha} = useContext(GovernorAlphaContext);
   let [isEnglish] = useContext(LanguageContext);
   let {setEthersSigner, provider, setProvider} = useContext(EthersContext);
@@ -101,17 +101,17 @@ function Home() {
             let signer = await _ethersProvider.getSigner();
             setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let signerAddress = await signer.getAddress();
             console.log("signerAddress: ", signerAddress);
 
-            let _userBalance = await _taro.balanceOf(signerAddress);
+            let _userBalance = await _voto.balanceOf(signerAddress);
                 _userBalance = _userBalance.div(Math.pow(10,18).toString());
               console.log('_userBalance in useEffect: ', _userBalance.toString());
             if(_userBalance) {
@@ -235,17 +235,17 @@ function Home() {
       let signer = await ethersProvider.getSigner();
       setEthersSigner(signer);
 
-      const _taro = new ethers.Contract(
-        taroAddress.Taro,
-        Taro.abi,
+      const _voto = new ethers.Contract(
+        votoAddress.Voto,
+        Voto.abi,
         signer
       );
-      setTaro(_taro);
+      setVoto(_voto);
 
       let signerAddress = await signer.getAddress();
       console.log("signerAddress in handleOnConnect: ", signerAddress);
 
-      let _userBalance = await _taro.balanceOf(signerAddress);
+      let _userBalance = await _voto.balanceOf(signerAddress);
           _userBalance = _userBalance.div(Math.pow(10,18).toString());
           console.log('_userBalance in useEffect: ', _userBalance.toString());
         if(_userBalance) {
@@ -293,13 +293,13 @@ function Home() {
               <a class="bg-grid0" href="/ProposalList">
                   <img src={past} class="homevan"/> 
                   <div class="propsub">Vote with your VOTO</div>
-                  <div class="propopt">Qurétaro DAO</div>
+                  <div class="propopt">Qurévoto DAO</div>
                 </a>
                 :
                 <div class="bg-blocked" >
                   <img src={past} class="homevan"/> 
                   <div class="propsub">Validate to unlock</div>
-                  <div class="propopt">Qurétaro DAO</div>
+                  <div class="propopt">Qurévoto DAO</div>
                 </div>}
               </div>
               
@@ -359,13 +359,13 @@ function Home() {
                 <a class="bg-grid0" href="/ProposalList">
                     <img src={past} class="homevan"/> 
                     <div class="propsub">Usa tus VOTOs en</div>
-                    <div class="propopt">Querétaro DAO</div>
+                    <div class="propopt">Querévoto DAO</div>
                   </a>
                   :
                   <div class="bg-blocked" >
                     <img src={past} class="homevan"/> 
                     <div class="propsub">Valida para desbloquear</div>
-                    <div class="propopt">Qurétaro DAO</div>
+                    <div class="propopt">Qurévoto DAO</div>
                   </div>}
                 </div>
               </section>

@@ -12,13 +12,13 @@ import IsLoadingModal from '../modals/IsLoadingModal';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
-import { TaroContext } from '../contexts/TaroContext';
+import { VotoContext } from '../contexts/VotoContext';
 
 import verify from '../assets/verify.png';
 import key from '../assets/about-img.svg'
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
@@ -38,7 +38,7 @@ const Quiz = () => {
 
   let [isEnglish] = useContext(LanguageContext);
   let {governorAlpha, setGovernorAlpha} = useContext(GovernorAlphaContext);
-  let {taro, setTaro} = useContext(TaroContext);
+  let {voto, setVoto} = useContext(VotoContext);
   let {ethersSigner, setEthersSigner, provider, setProvider} = useContext(EthersContext);
 
   useEffect(() => {
@@ -95,18 +95,18 @@ const Quiz = () => {
             let signer = await _ethersProvider.getSigner();
             setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let _signerAddress = await signer.getAddress();
             // console.log("signerAddress: ", _signerAddress);
             setSignerAddress(_signerAddress);
 
-            // let _userBalance = await _taro.balanceOf(signerAddress);
+            // let _userBalance = await _voto.balanceOf(signerAddress);
             // console.log('_userBalance in useEffect: ', _userBalance.toString());
             // if(_userBalance) {
             //   setUserBalance(_userBalance.toString());
@@ -163,7 +163,7 @@ const Quiz = () => {
         let signerAddress = await ethersSigner.getAddress();
         console.log("signerAddress in Quiz: ", signerAddress);
 
-        let _userBalance = await taro.balanceOf(signerAddress);
+        let _userBalance = await voto.balanceOf(signerAddress);
         console.log('_userBalance in Quiz: ', _userBalance.toString());
 
 
@@ -298,7 +298,7 @@ const Quiz = () => {
           </div>
           :
           <div class="connect2">
-          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
           <h1 class="white">Connect your web3 wallet</h1><br/>
         </div>
           }
@@ -337,7 +337,7 @@ const Quiz = () => {
           </div>
           :
           <div class="connect2">
-          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
           <h1 class="white">Conecta tu llave web3</h1><br/>
         </div>
         }

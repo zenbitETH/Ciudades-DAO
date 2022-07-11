@@ -10,8 +10,8 @@ import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
@@ -24,7 +24,7 @@ import key from '../assets/about-img.svg'
 
 const ProposalList = () => {
   let [retrievedProposals, setRetrievedProposals] = useState([]);
-  let [taro, setTaro] = useState();
+  let [voto, setVoto] = useState();
   let [signerAddress, setSignerAddress] = useState();
   
 
@@ -102,17 +102,17 @@ const ProposalList = () => {
             let signer = await _ethersProvider.getSigner();
             setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let signerAddress = await signer.getAddress();
             console.log("signerAddress: ", signerAddress);
 
-            let _userBalance = await _taro.balanceOf(signerAddress);
+            let _userBalance = await _voto.balanceOf(signerAddress);
                 _userBalance = _userBalance.div(Math.pow(10,18).toString());
               console.log('_userBalance in useEffect: ', _userBalance.toString());
             if(_userBalance) {
@@ -188,17 +188,17 @@ const ProposalList = () => {
       let signer = await ethersProvider.getSigner();
       setEthersSigner(signer);
 
-      const _taro = new ethers.Contract(
-        taroAddress.Taro,
-        Taro.abi,
+      const _voto = new ethers.Contract(
+        votoAddress.Voto,
+        Voto.abi,
         signer
       );
-      setTaro(_taro);
+      setVoto(_voto);
 
       let signerAddress = await signer.getAddress();
       console.log("signerAddress in handleOnConnect: ", signerAddress);
 
-      let _userBalance = await _taro.balanceOf(signerAddress);
+      let _userBalance = await _voto.balanceOf(signerAddress);
           _userBalance = _userBalance.div(Math.pow(10,18).toString());
           console.log('_userBalance in useEffect: ', _userBalance.toString());
         if(_userBalance) {
@@ -270,18 +270,18 @@ const ProposalList = () => {
             let signer = await _ethersProvider.getSigner();
             // setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let _signerAddress = await signer.getAddress();
             // console.log("signerAddress: ", signerAddress);
             setSignerAddress(_signerAddress);
 
-            // let _userBalance = await _taro.balanceOf(signerAddress);
+            // let _userBalance = await _voto.balanceOf(signerAddress);
             // console.log('_userBalance in useEffect: ', _userBalance.toString());
             // if(_userBalance) {
             //   setUserBalance(_userBalance.toString());
@@ -348,7 +348,7 @@ const ProposalList = () => {
                     description: proposal[9][4],
                     expiration: proposal[9][5].toString(),
                     budget: proposal[9][6].toString(),
-                    requiredTaroToVote: proposal[9][7].toString(),
+                    requiredVotoToVote: proposal[9][7].toString(),
                     forVotes: proposal.forVotes.div('1000000000000000000').toString(),
                     againstVotes: proposal.againstVotes.div('1000000000000000000').toString(),
                     id: proposal.id.toString(),
@@ -383,7 +383,7 @@ const ProposalList = () => {
           description={proposal.description}
           expiration={proposal.expiration}
           budget={proposal.budget}
-          taroToVote={proposal.taroToVote}
+          votoToVote={proposal.votoToVote}
           forVotes={proposal.forVotes}
           againstVotes={proposal.againstVotes}
           id={proposal.id}
@@ -397,7 +397,7 @@ const ProposalList = () => {
   });
   
   //const handleOnClickDelegate = async () => {
-  //  let delegate = await taro.delegate(signerAddress);
+  //  let delegate = await voto.delegate(signerAddress);
   //  let delegateReceipt = await delegate.wait(1);
   //  console.log('delegateReceipt: ', delegateReceipt);
   //}
@@ -415,9 +415,9 @@ const ProposalList = () => {
               <h1><span >Proposals to vote</span></h1><br/>
               <img src={vote2} alt="Alert about key" class="prop-img"/>
                 <div class="floating">
-                  <h3>Use the TARO you have earned to
-                   vote for governance proposals in the city of Querétaro.</h3>
-                  </div><h1>1 TARO = 1 Vote</h1><br/>
+                  <h3>Use the VOTO you have earned to
+                   vote for governance proposals in the city of Querévoto.</h3>
+                  </div><h1>1 VOTO = 1 Vote</h1><br/>
                 {list}
                 <div class="void-link">
                   <div class="bg-grid0"><a href="/PastProposals">
@@ -434,7 +434,7 @@ const ProposalList = () => {
             </div>
            :
             <div><br/>
-              <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+              <div class="center"><img src={vote2} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
               <h1><span  class="red">No proposals to vote</span></h1><br/>
       
                   <div class="void-link">
@@ -454,7 +454,7 @@ const ProposalList = () => {
         </div> : <ValidationRequired />}</span>
         : 
         <div class="connect">
-          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
           <h1 class="white">Connect your web3 address</h1><br/>
         </div>
         }
@@ -468,8 +468,8 @@ const ProposalList = () => {
               <h1><span >Propuestas por votar</span></h1><br/>
               <img src={vote2} alt="Alert about key" class="prop-img"/>
                 <div class="floating">
-                  <h3>Usa tu TARO para votar por propuestas de VoTARO Ciudad DAO</h3>
-                  </div><h1>1 TARO = 1 Voto</h1><br/>
+                  <h3>Usa tu VOTO para votar por propuestas de VoVOTO Ciudad DAO</h3>
+                  </div><h1>1 VOTO = 1 Voto</h1><br/>
                 {list}
                 <div class="void-link">
                   <div class="bg-grid0"><a href="/PastProposals">
@@ -486,7 +486,7 @@ const ProposalList = () => {
             </div>
            :
             <div><br/>
-              <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+              <div class="center"><img src={vote2} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
               <h1><span  class="red">Sin propuestas por votar</span></h1><br/>
           
                   <div class="void-link">
@@ -506,7 +506,7 @@ const ProposalList = () => {
         </div> : <ValidationRequired />}</span>
         : 
         <div class="connect">
-          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
           <h1 class="white">Conecta tu llave web3</h1>
         </div>
         }

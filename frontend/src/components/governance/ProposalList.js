@@ -9,14 +9,14 @@ import { GovernorAlphaContext } from '../../contexts/GovernorAlphaContext';
 import ValidationRequired from '../../alerts/ValidationRequired';
 import { EthersContext } from '../../contexts/EthersContext';
 
-import Taro from '../../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../../contracts/contracts/Taro/contract-address.json';
+import Voto from '../../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../../contracts/contracts/GovernorAlpha/contract-address.json';
 
 import prop from '../assets/prop.png';
-import reward from '../assets/TAROrew.png';
+import reward from '../assets/VOTOrew.png';
 import vote from '../assets/vote.png';
 import vote2 from '../assets/vote2.svg';
 import past from '../assets/past.png';
@@ -24,7 +24,7 @@ import verify from '../assets/verify.png';
 
 const ProposalList = () => {
   let [retrievedProposals, setRetrievedProposals] = useState([]);
-  let [taro, setTaro] = useState();
+  let [voto, setVoto] = useState();
   let [signerAddress, setSignerAddress] = useState();
 
   let {isValidated, setIsValidated} = useContext(ValidationRequiredContext);
@@ -86,18 +86,18 @@ const ProposalList = () => {
             let signer = await _ethersProvider.getSigner();
             // setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let _signerAddress = await signer.getAddress();
             // console.log("signerAddress: ", signerAddress);
             setSignerAddress(_signerAddress);
 
-            // let _userBalance = await _taro.balanceOf(signerAddress);
+            // let _userBalance = await _voto.balanceOf(signerAddress);
             // console.log('_userBalance in useEffect: ', _userBalance.toString());
             // if(_userBalance) {
             //   setUserBalance(_userBalance.toString());
@@ -164,7 +164,7 @@ const ProposalList = () => {
                     description: proposal[9][4],
                     expiration: proposal[9][5].toString(),
                     budget: proposal[9][6].toString(),
-                    requiredTaroToVote: proposal[9][7].toString(),
+                    requiredVotoToVote: proposal[9][7].toString(),
                     forVotes: proposal.forVotes.div('1000000000000000000').toString(),
                     againstVotes: proposal.againstVotes.div('1000000000000000000').toString(),
                     id: proposal.id.toString(),
@@ -199,7 +199,7 @@ const ProposalList = () => {
           description={proposal.description}
           expiration={proposal.expiration}
           budget={proposal.budget}
-          taroToVote={proposal.taroToVote}
+          votoToVote={proposal.votoToVote}
           forVotes={proposal.forVotes}
           againstVotes={proposal.againstVotes}
           id={proposal.id}
@@ -212,7 +212,7 @@ const ProposalList = () => {
     )
   });
   //const handleOnClickDelegate = async () => {
-  //  let delegate = await taro.delegate(signerAddress);
+  //  let delegate = await voto.delegate(signerAddress);
   //  let delegateReceipt = await delegate.wait(1);
   //  console.log('delegateReceipt: ', delegateReceipt);
   //}
@@ -239,7 +239,7 @@ const ProposalList = () => {
           </div>
           <span>{isValidated ? "" : <ValidationRequired />}</span>
           <h1><span class="yellow">Gobernanza Urbana</span></h1>
-          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>          
+          <div class="center"><img src={vote} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>          
           <div className= "propgrid">
             <div class="prop-bg"><a href="/createProposal">
               <img src={prop} class="ribbons"/> 
@@ -258,7 +258,7 @@ const ProposalList = () => {
             </a></div>
             <div class="prop-bgr"><a href="/PastrProposal">
               <img src={reward} class="ribbons"/>
-              <div class="propsub">Crea propuestas, gana TARO</div>
+              <div class="propsub">Crea propuestas, gana VOTO</div>
               <div class="propopt">Recompensas</div>
             </a></div>
           </div>
@@ -268,14 +268,14 @@ const ProposalList = () => {
               <h1><span >Propuestas por votar</span></h1><br/>
               <img src={vote2} alt="Alert about key" class="prop-img"/>
                 <div class="floating">
-                  <div class="about-tx2">Usa el TARO que has ganado para 
-                  votar por propuestas de gobernanza en la ciudad de Querétaro.</div>
-                  </div><h1>1 TARO = 1 Voto</h1><br/>
+                  <div class="about-tx2">Usa el VOTO que has ganado para 
+                  votar por propuestas de gobernanza en la ciudad de Querévoto.</div>
+                  </div><h1>1 VOTO = 1 Voto</h1><br/>
                 {list}
             </div>
            :
             <div id="vote" className="void">                
-              <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+              <div class="center"><img src={vote2} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
               <h1><span  class="red">No hay propuestas por votar</span></h1><br/>
                 <div class="floating">
                   <div class="about-tx2">Crea una propuesta o valida tu cuenta para participar. 
@@ -318,7 +318,7 @@ const ProposalList = () => {
             <div className="text-large">Crea una nueva propuesta</div>
             <div className="big-icon">🦸🦸‍♂️</div>
             <div className="main">¡La ciudad te necesita! genera propuestas de actividades, obras públicas o necesidades que hayas identificado en tu comunidad
-              Realiza propuestas, vota por ellas y hazlas realidad para obtener más TARO.
+              Realiza propuestas, vota por ellas y hazlas realidad para obtener más VOTO.
             </div>
             <div className ="floating">
               <Link className="alt2" to="/createproposal"> ✍🏼 Crear propuesta</Link>
@@ -331,8 +331,8 @@ const ProposalList = () => {
     
                 <div className="text-large"> Propuestas para votar </div>
                 <div className="big-icon">🗳️</div>
-                <div className="text-large">1 TARO = 1 Voto</div>
-                <div className="main">Usa tu taro TARO para votar a favor o en contra de las propuestas disponibles. Tu poder de voto depende de la cantidad de tokens TARO que tengas en tu wallet.
+                <div className="text-large">1 VOTO = 1 Voto</div>
+                <div className="main">Usa tu voto VOTO para votar a favor o en contra de las propuestas disponibles. Tu poder de voto depende de la cantidad de tokens VOTO que tengas en tu wallet.
                 </div>
                 {list}
                 <div className="floating">
@@ -345,8 +345,8 @@ const ProposalList = () => {
           <div className= "yellowB">
             <div className="text-large"> Propuestas para votar </div>
             <div className="big-icon">🗳️</div>
-            <div className="text-large">1 TARO = 1 Voto</div>
-            <div className="main">Usa tu taro TARO para votar a favor o en contra de las propuestas disponibles. Tu poder de voto depende de la cantidad de tokens TARO que tengas en tu wallet.</div>
+            <div className="text-large">1 VOTO = 1 Voto</div>
+            <div className="main">Usa tu voto VOTO para votar a favor o en contra de las propuestas disponibles. Tu poder de voto depende de la cantidad de tokens VOTO que tengas en tu wallet.</div>
             <div className="floating">
             <div className="title2">⛔No hay propuestas activas.⛔</div>
             </div>

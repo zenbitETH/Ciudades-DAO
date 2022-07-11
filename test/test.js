@@ -8,7 +8,7 @@ const fs = require("fs");
 
 //make sure you've switched defaultnetwork to Kovan and put a mnemonic.txt file in the test folder
 describe("Cities-Protocol Governance v1", function () {
-  let governance, taro, timelock, governanceAddress, taroAddress, timelockAddress
+  let governance, voto, timelock, governanceAddress, votoAddress, timelockAddress
   let main, user1, user2;
   let greeter,greeterAddress,calldata,sighash
 
@@ -26,7 +26,7 @@ describe("Cities-Protocol Governance v1", function () {
     // Create Wallet
     main = new ethers.Wallet(privateKey, provider);
 
-    taro = new ethers.Contract(
+    voto = new ethers.Contract(
         "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD", //set on deploy
         abiComp,
         main)
@@ -42,16 +42,16 @@ describe("Cities-Protocol Governance v1", function () {
     // console.log(ethers.utils.parseUnits("100",18).toString())
   })
 
-  it("deploy governance and taro", async () => {
-    const Taro = await ethers.getContractFactory(
+  it("deploy governance and voto", async () => {
+    const Voto = await ethers.getContractFactory(
        "Comp"
      );
-    taro = await Taro.connect(main).deploy(main.getAddress()); //mints full supply to deployer
-    await taro.deployed()
-    console.log("taro Address: ", taro.address)
-    taroAddress=taro.address
+    voto = await Voto.connect(main).deploy(main.getAddress()); //mints full supply to deployer
+    await voto.deployed()
+    console.log("voto Address: ", voto.address)
+    votoAddress=voto.address
 
-    // tx = await taro.connect(main).approve(user1.getAddress(),ethers.BigNumber.from("1000"))
+    // tx = await voto.connect(main).approve(user1.getAddress(),ethers.BigNumber.from("1000"))
     // console.log(tx)
 
     const Timelock = await ethers.getContractFactory(
@@ -65,7 +65,7 @@ describe("Cities-Protocol Governance v1", function () {
     const Governance = await ethers.getContractFactory(
       "GovernorAlpha"
     );
-    governance = await Governance.connect(main).deploy(timelock.address,taro.address,main.getAddress());
+    governance = await Governance.connect(main).deploy(timelock.address,voto.address,main.getAddress());
     await governance.deployed()
     console.log("governance Address: ", governance.address)
     governanceAddress=governance.address
@@ -109,11 +109,11 @@ describe("Cities-Protocol Governance v1", function () {
     // console.log(signed)
   });
 
-  it("give taro to other users", async () => {
-    await taro.connect(main).transfer(user1.getAddress(),ethers.utils.parseUnits("10",18))
-    await taro.connect(main).transfer(user2.getAddress(),ethers.utils.parseUnits("10",18))
+  it("give voto to other users", async () => {
+    await voto.connect(main).transfer(user1.getAddress(),ethers.utils.parseUnits("10",18))
+    await voto.connect(main).transfer(user2.getAddress(),ethers.utils.parseUnits("10",18))
 
-    const balance = await taro.balanceOf(user1.getAddress())
+    const balance = await voto.balanceOf(user1.getAddress())
     console.log("user1 balance: ", balance.toString())
   })
 
@@ -139,7 +139,7 @@ describe("Cities-Protocol Governance v1", function () {
 
   xit("user 2 and user 1 vote", async () => {
     console.log(await governance.proposals(0))
-    //understand how taro is used for votes
+    //understand how voto is used for votes
     await governance.connect(user2).castVote(ethers.BigNumber.from("0"),"true");
 
     //need to move time forward 3 blocks

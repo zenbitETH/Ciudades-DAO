@@ -6,8 +6,8 @@ import { LanguageContext } from '../contexts/LanguageContext';
 // import { EthersContext } from '../contexts/EthersContext';
 // import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 
-// import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-// import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+// import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+// import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 //
 // import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 // import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
@@ -19,7 +19,7 @@ const ApprovedProposal = ({title,
                           description, 
                           expiration, 
                           budget, 
-                          requiredTaroToVote, 
+                          requiredVotoToVote, 
                           forVotes, 
                           againstVotes, 
                           id, 
@@ -28,7 +28,7 @@ const ApprovedProposal = ({title,
                           proposalMonth, 
                           proposalDay}) => {
   // let [governorAlpha, setGovernorAlpha] = useState();
-  // let [taro, setTaro] = useState();
+  // let [voto, setVoto] = useState();
   // let [signerAddress, setSignerAddress] = useState();
   //
   let [isEnglish] = useContext(LanguageContext);
@@ -89,18 +89,18 @@ const ApprovedProposal = ({title,
   //           let signer = await _ethersProvider.getSigner();
   //           // setEthersSigner(signer);
   //
-  //           const _taro = new ethers.Contract(
-  //             taroAddress.Taro,
-  //             Taro.abi,
+  //           const _voto = new ethers.Contract(
+  //             votoAddress.Voto,
+  //             Voto.abi,
   //             signer
   //           );
-  //           setTaro(_taro);
+  //           setVoto(_voto);
   //
   //           let _signerAddress = await signer.getAddress();
   //           // console.log("signerAddress: ", _signerAddress);
   //           setSignerAddress(_signerAddress);
   //
-  //           // let _userBalance = await _taro.balanceOf(signerAddress);
+  //           // let _userBalance = await _voto.balanceOf(signerAddress);
   //           // console.log('_userBalance in useEffect: ', _userBalance.toString());
   //           // if(_userBalance) {
   //           //   setUserBalance(_userBalance.toString());
@@ -143,13 +143,13 @@ const ApprovedProposal = ({title,
           {/*}
           <div className ="proposal-main">
             <div className="proposal-sub">Costo: {budget} pesos</div>
-            <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+            <div className="proposal-subaction">VOTO to vote:{requiredVotoToVote} VOTO</div>
           </div>
           */}
         <div class="author">made by {proposer}</div><br/>
         <div className="vote-grid">
-          <div class="prop-bgf2">Approved by:<br/>{forVotes}<br/>TARO</div>    
-          <div class="prop-bgw"> Against:<br/>{againstVotes}<br/> TARO</div>
+          <div class="prop-bgf2">Approved by:<br/>{forVotes}<br/>VOTO</div>    
+          <div class="prop-bgw"> Against:<br/>{againstVotes}<br/> VOTO</div>
         </div>   
       </div>
       :
@@ -171,13 +171,13 @@ const ApprovedProposal = ({title,
           {/*}
           <div className ="proposal-main">
             <div className="proposal-sub">Costo: {budget} pesos</div>
-            <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+            <div className="proposal-subaction">VOTO to vote:{requiredVotoToVote} VOTO</div>
           </div>
           */}
         <div class="author">Hecha por by {proposer}</div><br/>
         <div className="vote-grid">
-          <div class="prop-bgf2">Aprobada con:<br/>{forVotes}<br/>TARO</div>    
-          <div class="prop-bgw">Votos en contra:<br/>{againstVotes}<br/>TARO</div>
+          <div class="prop-bgf2">Aprobada con:<br/>{forVotes}<br/>VOTO</div>    
+          <div class="prop-bgw">Votos en contra:<br/>{againstVotes}<br/>VOTO</div>
         </div>
       </div>
       }

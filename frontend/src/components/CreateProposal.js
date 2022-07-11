@@ -8,12 +8,12 @@ import CreateProposalErrorModal from '../modals/CreateProposalErrorModal';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
-import { TaroContext } from '../contexts/TaroContext';
+import { VotoContext } from '../contexts/VotoContext';
 
 import prop from '../assets/prop.png';
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
@@ -29,7 +29,7 @@ const CreateProposal = () => {
 
   let [isEnglish] = useContext(LanguageContext);
   let {ethersSigner, setEthersSigner, provider, setProvider} = useContext(EthersContext);
-  let {taro, setTaro} = useContext(TaroContext);
+  let {voto, setVoto} = useContext(VotoContext);
   let {governorAlpha, setGovernorAlpha} = useContext(GovernorAlphaContext);
   
   useEffect(() => {
@@ -86,18 +86,18 @@ const CreateProposal = () => {
             let signer = await _ethersProvider.getSigner();
             setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let _signerAddress = await signer.getAddress();
             // console.log("signerAddress: ", _signerAddress);
             setSignerAddress(_signerAddress);
 
-            // let _userBalance = await _taro.balanceOf(signerAddress);
+            // let _userBalance = await _voto.balanceOf(signerAddress);
             // console.log('_userBalance in useEffect: ', _userBalance.toString());
             // if(_userBalance) {
             //   setUserBalance(_userBalance.toString());
@@ -139,7 +139,7 @@ const CreateProposal = () => {
       setErrorModalShow(true);
     };
   };
-  //expiration and requiredTaroToVote are hardcoded because these fields are needed for the smart contract.  The front end is not ready to use these fields.  Later, when the front end is ready, these inputs can be added back into the form inputs.
+  //expiration and requiredVotoToVote are hardcoded because these fields are needed for the smart contract.  The front end is not ready to use these fields.  Later, when the front end is ready, these inputs can be added back into the form inputs.
   const setField = (field, value) => {
     const date = new Date();
     const time = date.getTime();
@@ -149,7 +149,7 @@ const CreateProposal = () => {
       ...form,
       [field]: value,
       expiration: 0,
-      requiredTaroToVote: 0,
+      requiredVotoToVote: 0,
       proposalTime: timeAsBigNumber,
       proposer: signerAddress
     });
@@ -183,8 +183,8 @@ const CreateProposal = () => {
     setField('budget', e.target.value);
   };
 
-  // const handleOnChangeRequiredTaroToVote = e => {
-  //   setField('requiredTaroToVote', ethers.BigNumber.from(e.target.value));
+  // const handleOnChangeRequiredVotoToVote = e => {
+  //   setField('requiredVotoToVote', ethers.BigNumber.from(e.target.value));
   // };
 
   const handleOnLoadingModal = () => {
@@ -323,11 +323,11 @@ const CreateProposal = () => {
             </Form.Control>
           </Form.Group>
           {/*
-          <Form.Group as={Row} controlId="formRequiredTaroToVote">
+          <Form.Group as={Row} controlId="formRequiredVotoToVote">
             <Form.Label  >
-              Required TARO to vote
+              Required VOTO to vote
           </Form.Label>
-            <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
+            <Form.Control type="text" placeholder="required VOTO to vote" onChange={handleOnChangeRequiredVotoToVote}/>
           </Form.Group>
           */}
           <a class="about-bt" href="#proposal">Check your post before sending</a>
@@ -467,11 +467,11 @@ const CreateProposal = () => {
               </Form.Control>
             </Form.Group>
             {/*
-            <Form.Group as={Row} controlId="formRequiredTaroToVote">
+            <Form.Group as={Row} controlId="formRequiredVotoToVote">
               <Form.Label  >
-                Required TARO to vote
+                Required VOTO to vote
             </Form.Label>
-              <Form.Control type="text" placeholder="required TARO to vote" onChange={handleOnChangeRequiredTaroToVote}/>
+              <Form.Control type="text" placeholder="required VOTO to vote" onChange={handleOnChangeRequiredVotoToVote}/>
             </Form.Group>
             */}
             <a class="about-bt" href="#proposal">Revisa tu puesta antes de enviar</a>

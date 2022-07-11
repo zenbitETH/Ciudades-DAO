@@ -8,14 +8,15 @@ import PolygonButton from './buttons/PolygonButton';
 import PolygonSwitch from './buttons/PolygonSwitch';
 import SwitchPolygonAlert from './SwitchPolygonAlert';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
-import { TaroContext } from '../contexts/TaroContext';
+import { VotoContext } from '../contexts/VotoContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
+import logo from '../assets/Logoww.png'
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
@@ -36,7 +37,7 @@ const Header = () => {
   let [isConnectingToPolygon, setIsConnectingToPolygon] = useState();
 
   let {isValidated,setIsValidated} = useContext(ValidationRequiredContext);
-  let {setTaro} = useContext(TaroContext);
+  let {setVoto} = useContext(VotoContext);
   let {setGovernorAlpha} = useContext(GovernorAlphaContext);
   let {setEthersSigner, provider, setProvider} = useContext(EthersContext);
   let {isConnected, setIsConnected} = useContext(ConnectedContext);
@@ -100,17 +101,17 @@ const Header = () => {
             let signer = await _ethersProvider.getSigner();
             setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let signerAddress = await signer.getAddress();
             console.log("signerAddress: ", signerAddress);
 
-            let _userBalance = await _taro.balanceOf(signerAddress);
+            let _userBalance = await _voto.balanceOf(signerAddress);
                 _userBalance = _userBalance.div(Math.pow(10,18).toString());
               console.log('_userBalance in useEffect: ', _userBalance.toString());
             if(_userBalance) {
@@ -234,17 +235,17 @@ const Header = () => {
       let signer = await ethersProvider.getSigner();
       setEthersSigner(signer);
 
-      const _taro = new ethers.Contract(
-        taroAddress.Taro,
-        Taro.abi,
+      const _voto = new ethers.Contract(
+        votoAddress.Voto,
+        Voto.abi,
         signer
       );
-      setTaro(_taro);
+      setVoto(_voto);
 
       let signerAddress = await signer.getAddress();
       console.log("signerAddress in handleOnConnect: ", signerAddress);
 
-      let _userBalance = await _taro.balanceOf(signerAddress);
+      let _userBalance = await _voto.balanceOf(signerAddress);
           _userBalance = _userBalance.div(Math.pow(10,18).toString());
           console.log('_userBalance in useEffect: ', _userBalance.toString());
         if(_userBalance) {
@@ -273,9 +274,7 @@ const Header = () => {
             {isConnected ? 
             <div>
               <div class="topGrid">
-                <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-                <a href='/Home'><div class="hud1">0 ⚡</div></a>
-                <a href='/Home'><div class="hud2">0 💽</div></a>
+                <a href='/Home'><div class="hud0">{userBalance} VOTO</div></a>
                 <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the web3 test ⚠️</div></a>}</div>
               </div>
               <a href="https://zenbit.mx">
@@ -315,11 +314,9 @@ const Header = () => {
       <div class="center">
           <nav class="topHud">    
           {isConnected ? 
-          <div>
-            <div class="topGrid">
-              <a href='/Home'><div class="hud0">{userBalance} TARO</div></a>
-              <a href='/Home'><div class="hud1">0 ⚡</div></a>
-              <a href='/Home'><div class="hud2">0 💽</div></a>
+          <div>            
+            <div class="topGrid">  
+              <a href='/Home'><div class="hud0">{userBalance} VOTOs en Querévoto</div></a>
               <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la Prueba Web3 para validar ⚠️</div></a>}</div>
             </div>
             <a href="https://zenbit.mx">
@@ -328,6 +325,7 @@ const Header = () => {
               </div>
             </a>
             <a href='/Home'><div class="langb"onClick={handleOnClick}>🌐Eng</div></a>
+            <img class="hudlogo" src={logo}/>
          </div>
           : 
           <div>  
