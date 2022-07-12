@@ -421,12 +421,12 @@ const ProposalList = () => {
                 {list}
                 <div class="void-link">
                   <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="homevan"/> 
+                  <img src={past} class="ribvan"/> 
                     <div class="propsub">Past proposals</div>
                     <div class="propopt">Record</div>
                   </a></div>
                   <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="homevan"/> 
+                    <img src={prop} class="ribvan"/> 
                     <div class="propsub">Create a proposal</div>
                     <div class="propopt">Propose</div>
                   </a></div>
@@ -439,12 +439,12 @@ const ProposalList = () => {
       
                   <div class="void-link">
                   <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="homevan"/> 
+                  <img src={past} class="ribvan"/> 
                     <div class="propsub">Past proposals</div>
                     <div class="propopt">Record</div>
                   </a></div>
                   <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="homevan"/> 
+                    <img src={prop} class="ribvan"/> 
                     <div class="propsub">Create a proposal</div>
                     <div class="propopt">Propose</div>
                   </a></div>
@@ -464,43 +464,49 @@ const ProposalList = () => {
         {isConnected ?
             <span>{isValidated ? <div id="margin"><br/>
           {list.length > 0 ?
-            <div id="vote" className="props">
-              <h1><span >Propuestas por votar</span></h1><br/>
-              <img src={vote2} alt="Alert about key" class="prop-img"/>
-                <div class="floating">
-                  <h3>Usa tu VOTO para votar por propuestas de VoVOTO Ciudad DAO</h3>
-                  </div><h1>1 VOTO = 1 Voto</h1><br/>
-                {list}
+            <div class="App">
+              <div id="vote" className="props">
+                <h2>Propuestas por votar</h2><br/>
+                  {list}
+              </div>
+              <div class="history">
                 <div class="void-link">
-                  <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="homevan"/> 
-                    <div class="propsub">Propuestas pasadas</div>
-                    <div class="propopt">Historial</div>
-                  </a></div>
-                  <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="homevan"/> 
-                    <div class="propsub">Crear propuesta</div>
-                    <div class="propopt">Proponer</div>
-                  </a></div>
+                  <a href="/PastProposals">
+                    <div class="hudH" >
+                      <div class="propsub">Propuestas pasadas</div>
+                      <div class="propopt">Historial</div>
+                    </div>
+                  </a>
+                  <a href="/createProposal">
+                    <div class="hudH2">
+                      <div class="propsub">Crear propuesta</div>
+                      <div class="propopt">Proponer</div>
+                    </div>  
+                  </a>
                 </div>
+              </div>       
             </div>
            :
             <div><br/>
               <div class="center"><img src={vote2} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
               <h1><span  class="red">Sin propuestas por votar</span></h1><br/>
-          
-                  <div class="void-link">
-                  <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="homevan"/> 
-                    <div class="propsub">Propuestas pasadas</div>
-                    <div class="propopt">Historial</div>
-                  </a></div>
-                  <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="homevan"/> 
-                    <div class="propsub">Crear propuesta</div>
-                    <div class="propopt">Proponer</div>
-                  </a></div>
+              <div class="history">
+                <div class="void-link">
+                  <a href="/PastProposals">
+                    <div class="hudH" >
+                      
+                      <div class="propsub">Propuestas pasadas</div>
+                      <div class="propopt">Historial</div>
+                    </div>
+                  </a>
+                  <a href="/createProposal">
+                    <div class="hudH2">
+                      <div class="propsub">Crear propuesta</div>
+                      <div class="propopt">Proponer</div>
+                    </div>  
+                  </a>
                 </div>
+              </div>          
             </div>
           }
         </div> : <ValidationRequired />}</span>
