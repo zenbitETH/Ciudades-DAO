@@ -13,9 +13,9 @@ import { ConnectedContext } from '../contexts/ConnectedContext';
 
 import test from '../assets/testnet.svg';
 import wallet from '../assets/confirm.svg'
-import prop from '../assets/prop.png';
-import past from '../assets/past.png';
-import verify from '../assets/verify.png';
+import prop from '../assets/prop.svg';
+import past from '../assets/vote.svg';
+import verify from '../assets/verify.svg';
 import gas from '../assets/gas.svg';
 import logo from '../assets/Logoww.png';
 
@@ -273,12 +273,12 @@ function Home() {
             <section class="vertical">
               <div class="homegrid">
                 {isValidated ? '':
-                <a class="bg-reward"href="/Quiz">
+                <a class="bg-grid0" href="/Quiz">
                   <img src={verify} class="homevan"/>
                   <div class="propsub">Get up to 100 VOTO</div>
                   <div class="propopt">Validate</div>
                 </a>}
-                {isValidated ? <a class="bg-reward" href="/createProposal">
+                {isValidated ? <a class="bg-grid0" href="/createProposal">
                   <img src={prop} class="homevan"/> 
                   <div class="propsub">Get 10 VOTO per proposal</div>
                   <div class="propopt">Propose</div>
@@ -293,7 +293,7 @@ function Home() {
               <a class="bg-grid0" href="/ProposalList">
                   <img src={past} class="homevan"/> 
                   <div class="propsub">Vote with your VOTO</div>
-                  <div class="propopt">Qurévoto DAO</div>
+                  <div class="propopt">Qurétaro DAO</div>
                 </a>
                 :
                 <div class="bg-blocked" >
@@ -340,12 +340,12 @@ function Home() {
               <section id="">
                 <div class="homegrid">
                   {isValidated ? '':
-                  <a class="bg-reward"href="/Quiz">
+                  <a class="bg-grid0"href="/Quiz">
                     <img src={verify} class="homevan"/>
                     <div class="propsub">Obtén hasta 100 VOTOs</div>
                     <div class="propopt">Prueba Web3</div>
                   </a>}
-                  {isValidated ? <a class="bg-reward" href="/createProposal">
+                  {isValidated ? <a class="bg-grid0" href="/createProposal">
                     <img src={prop} class="homevan"/> 
                     <div class="propsub">Obtén 10 VOTOs por hacer</div>
                     <div class="propopt">Propuestas DAO</div>
@@ -359,7 +359,7 @@ function Home() {
                 <a class="bg-grid0" href="/ProposalList">
                     <img src={past} class="homevan"/> 
                     <div class="propsub">Usa tus VOTOs en</div>
-                    <div class="propopt">Querévoto DAO</div>
+                    <div class="propopt">Querétaro DAO</div>
                   </a>
                   :
                   <div class="bg-blocked" >

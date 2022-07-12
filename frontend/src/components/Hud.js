@@ -274,7 +274,7 @@ const Header = () => {
             {isConnected ? 
             <div>
               <div class="topGrid">
-                <a href='/Home'><div class="hud0">{userBalance} VOTO</div></a>
+                <a href='/'><div class="hud0">{userBalance} VOTO</div></a>
                 <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the web3 test ⚠️</div></a>}</div>
               </div>
               <a href="https://zenbit.mx">
@@ -282,7 +282,7 @@ const Header = () => {
                   zenbit.eth /<span> 2022</span>
                 </div>
               </a>
-              <a href='/Home'><div class="langb"onClick={handleOnClick}>🌐Esp</div></a>
+              <a href='/'><div class="langb"onClick={handleOnClick}>🌐Esp</div></a>
            </div>
             : 
             <div>  
@@ -317,7 +317,7 @@ const Header = () => {
           <div>            
             <div class="topHud">
               <div class="topGrid">
-                <a class="hud1" href='/Home'>
+                <a class="hud1" href='/'>
                   <div>🏠</div>
                 </a>
                 <a href='/CreateProposal' class="hud0">
@@ -332,7 +332,7 @@ const Header = () => {
                 zenbit.eth /<span> 2022</span>
               </div>
             </a>
-            <a href='/Home'><div class="langb"onClick={handleOnClick}>🌐Eng</div></a>
+            <a href='/'><div class="langb"onClick={handleOnClick}>🌐Eng</div></a>
             <img class="hudlogo" src={logo}/>
          </div>
           : 

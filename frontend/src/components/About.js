@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 import img from '../assets/about-img.svg';
-import vote from '../assets/vote.png';
+import vote from '../assets/vote.svg';
 
 import TAROrew from '../assets/TAROrew.png';
 import moon from '../assets/moon.svg'
@@ -30,14 +30,14 @@ const About = () => {
         </span>
 
         </a> </div>
-        <div class = "bg-reward2"> <a href="#step1">
+        <div class = "bg-grid02"> <a href="#step1">
          <div class = "about-hl"> 2. How te get VOTO </div> <br/>
         <img src={TAROrew} class="about-img"/>
         <span class = "ustext"> <div class = "center"> </div> <br/> <span class = "yellow"> Get 1,000 VOTO </span> when obtaining your crypto key and validating it.
           Once you have your crypto key validated <span class = "yellow"> you can get 50 VOTO for each one </span> of the first 20 proposals you make. <br/> <br/>
         <div class = "usgrid">
-          <a class="bg-reward3" href="/Quiz"> Validate <br/> (1000 VOTO) </a>
-          <a class="bg-reward3" href="/CreateProposal"> Propose <br/> (50 VOTO) </a>
+          <a class="bg-grid03" href="/Quiz"> Validate <br/> (1000 VOTO) </a>
+          <a class="bg-grid03" href="/CreateProposal"> Propose <br/> (50 VOTO) </a>
         </div>
         <br/>
         <div class = "center"> <a class="about-bt" href="/CreateProposal"> Read about VOTO token </a> </div>
@@ -88,14 +88,14 @@ const About = () => {
       </span>
        
       </a> </div>
-      <div class = "bg-reward2"> <a href="#step1">
+      <div class = "bg-grid02"> <a href="#step1">
        <div class = "about-hl"> 2. How te get VOTO </div> <br/>
       <img src={TAROrew} class="about-img"/>
       <span class = "ustext"> <div class = "center"> </div> <br/> <span class = "yellow"> Get 1,000 VOTO </span> when obtaining your crypto key and validating it.
         Once you have your crypto key validated <span class = "yellow"> you can get 50 VOTO for each one </span> of the first 20 proposals you make. <br/> <br/>
       <div class = "usgrid">
-        <a class="bg-reward3" href="/Quiz"> Validate <br/> (1000 VOTO) </a>
-        <a class="bg-reward3" href="/CreateProposal"> Propose <br/> (50 VOTO) </a>
+        <a class="bg-grid03" href="/Quiz"> Validate <br/> (1000 VOTO) </a>
+        <a class="bg-grid03" href="/CreateProposal"> Propose <br/> (50 VOTO) </a>
       </div>
       <br/>
       <div class = "center"> <a class="about-bt" href="/CreateProposal"> Read about VOTO token </a> </div>

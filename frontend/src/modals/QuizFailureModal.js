@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import { LanguageContext } from '../contexts/LanguageContext';
 import reward from '../assets/TAROrew.png';
-import verify from '../assets/verify.png';
+import verify from '../assets/verify.svg';
 
 const QuizFailureModal = (props) => {
   let [isEnglish] = useContext(LanguageContext);

@@ -17,13 +17,13 @@ import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-import prop from '../assets/prop.png';
+import prop from '../assets/prop.svg';
 import rprop from '../assets/rprop.png';
 import aprop from '../assets/aprop.png';
-import vote from '../assets/vote.png';
+import vote from '../assets/vote.svg';
 import vote2 from '../assets/vote2.svg';
 import reward from '../assets/TAROrew.png';
-import verify from '../assets/verify.png';
+import verify from '../assets/verify.svg';
 
 
 

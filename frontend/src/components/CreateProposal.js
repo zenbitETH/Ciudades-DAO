@@ -10,7 +10,7 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { VotoContext } from '../contexts/VotoContext';
 
-import prop from '../assets/prop.png';
+import prop from '../assets/prop.svg';
 
 import Voto from '../contracts/contracts/Voto.sol/Voto.json';
 import votoAddress from '../contracts/contracts/Voto/contract-address.json';
@@ -353,8 +353,7 @@ const CreateProposal = () => {
 
       <div id="proposal" class="newprop">
         
-        <h1><span  class="yellow">Nueva propuesta</span></h1><br/><br/>
-        <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
+        <h2><span  class="yellow">Nueva propuesta</span></h2><br/><br/>
           
         <Form autocomplete="off" id="margin">
             <Form.Group as={Row} controlId="formTitle">

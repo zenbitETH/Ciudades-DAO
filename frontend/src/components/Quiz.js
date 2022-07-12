@@ -14,7 +14,7 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { VotoContext } from '../contexts/VotoContext';
 
-import verify from '../assets/verify.png';
+import verify from '../assets/verify.svg';
 import key from '../assets/about-img.svg'
 
 import Voto from '../contracts/contracts/Voto.sol/Voto.json';
@@ -267,8 +267,7 @@ const Quiz = () => {
         <section>
           {isConnected ?
           <div >
-            <h1><span id="vote">Validate your account</span></h1><br/>
-            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            <h2><span id="vote">Validate your account</span></h2><br/>
             <div> 
             <br/><br/>
             <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
@@ -308,8 +307,7 @@ const Quiz = () => {
           {isConnected ?
           <div>
             <div> 
-            <h1><span id="vote">Prueba Web3</span></h1><br/>
-            <div class="center"><img src={verify} alt="Alert about verification" class="prop-img"/></div>
+            <h2><span id="vote">Prueba Web3</span></h2><br/>
             <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
               <div id="margin">{spanishQuestions}</div>
             </QuizContext.Provider>
