@@ -1,64 +1,18 @@
-.modal {
-    justify-content: center !important;
-    align-content: center !important;
-    align-items: center !important;
-    color: #01304E !important;
-    text-align: center !important;
-    font-family: 'Lexend Deca', sans-serif !important; 
-    border: none !important;
-  }
-  
+ 
   .yellow-modal {  
-    background-color: #119195 !important;
+    background-color: #36AE7C !important;
     border-radius: 20px !important;
-    background-image: linear-gradient(#119195, #ffc16b);
+    background-image: linear-gradient(#36AE7C, #ffc16b);
     font-family: 'Lexend Deca', sans-serif !important; 
     color: #ffffff !important;
-  }
-  
-  .modal-content {  
-    background-color: #01304Ef9 !important;
-    border-radius: 20px !important;
-    text-align: center !important;
-    background-image: linear-gradient(#00000068, #68686821);
-    font-family: 'Lexend Deca', sans-serif !important; 
-    color: #ffffff !important;
-    padding: 1em;
-    border: none;
   }
   
   .modal-2 .modal-content {  
     border-radius: 25px !important;
     text-align: center !important;
-    background: linear-gradient(90deg, #2b284a00, #2b284a00, #11919590, #11919590, #2b284a00, #2b284a00);
+    background: linear-gradient(90deg, #2b284a00, #2b284a00, #36AE7C90, #36AE7C90, #2b284a00, #2b284a00);
     background-size: 500% 500%;
     animation: gradient 2s ease infinite;
     font-family: 'Lexend Deca', sans-serif !important; 
     color: #ffffff !important;
-  }
-
-  .connect {
-    background: linear-gradient(90deg, #dc3840b5, #e26c72b5, #dc3840b5);
-    background-size: 200% 200%;
-    animation: gradient 2s ease infinite;
-    margin: -3em -1em 0em -1em !important;
-    padding: 12.5em 1em 12em 1em !important;
-  }
-
-  .connect2 {
-    background: linear-gradient(90deg, #dc3840b5, #e26c72b5, #dc3840b5);
-    background-size: 200% 200%;
-    animation: gradient 2s ease infinite;
-    margin: -6em 0em -6em 0em !important;
-    padding: 20em 1em 15em 1em !important;
-  }
-
-  @media only screen and (min-width: 1200px) { 
-    .connect{
-      padding: 20em 1em 25em 1em !important;
-    }
-
-    .connect2 {
-      padding: 25em 0em 25em 0em !important;
-    }
   }

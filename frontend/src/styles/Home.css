@@ -3,10 +3,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
+  
+.text-medium-left {
+  font-size: 1rem !important;
+  text-align: center !important;
+  display: inline-block !important;
+  justify-content: center !important;
+  align-content: center !important;
+  position: relative !important;
+  margin-bottom: 5%;
+}
+
+.text-large {
+  font-family: 'Lexend Deca', sans-serif !important;
+  text-align: center;
+  font-size: 2rem !important;
+  margin-top: 1% !important;
+  margin-bottom: 2%;
+}
+  
+.floating {
+  border-radius: 20px;
+  width:100%;
+  
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  color: #ffffff !important;
+}
+
+.proposal-details {
+  width: 100%;
+  text-align: left;
+  padding-left: 3%;
+  color: #ffffff;
+}
+
 .homelogo {
   display: block;
   width: 100%;
 }
+
 .lex {
   font-family: "Lexend Deca";
 }
@@ -21,12 +60,12 @@
 }
 
 .yellow-lex {
-  color: #F6AF55;
+  color: #F9D923;
   font-family: "Lexend Deca";
 }
 
 .yellow-jos {
-  color: #F6AF55;
+  color: #F9D923;
   font-family: "ABeeZee";
 }
 
@@ -47,31 +86,31 @@
 }
 
 .yollow-lex {
-  color: #F6AF55;
+  color: #F9D923;
   font-family: "Lexend Deca";
 }
 
 .yellow {
-  color: #F6AF55 !important;
+  color: #F9D923 !important;
 }
 
 
 
 .yellow-text {
-  color: #F6AF55 !important;
+  color: #F9D923 !important;
 }
 
 .yellow-lex {
-  color: #F6AF55;
+  color: #F9D923;
   font-family: "Lexend Deca";
 }
 
 .red {
-  color: #fb4c38  ;
+  color: #EB5353  ;
 }
 
 .red-lex {
-  color: #fb4c38;
+  color: #EB5353;
   font-family: "Lexend Deca";
 }
 
@@ -85,7 +124,7 @@
 
 .subt {
   text-align: justify !important;
-  color: #F6AF55;
+  color: #F9D923;
 }
 
 .center {
@@ -116,7 +155,7 @@ li {
 
  ol li::before {
   content: counter(li);
-  color: #119195;
+  color: #36AE7C;
   display: inline-block;
   width: 1em;
   margin-left: -1.5em;
@@ -136,8 +175,9 @@ li {
 }
 
 body {
-  background-color: #01304E;
-  background-image: linear-gradient(to top, #141e30 40%, #01304E 75%);
+  background-image: linear-gradient(to bottom, #0e4256 , #187498);
+  height: 100%;
+  overflow: auto;
   background-size: 200% 200%;
 }
 
@@ -146,7 +186,6 @@ body {
   margin-top: 4em;
   width: 100%;
   font-family: 'Lexend Deca', sans-serif !important;
-  color: #119195;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -198,7 +237,7 @@ font-size: clamp(1em, -0.975rem + 6.5vw, 1.6rem);
 margin-top: 0.5em;
 font-weight: 300;
 font-family: "ABeeZee";
-color: #F6AF55;
+color: #F9D923;
 }
 
 h1 {
@@ -217,76 +256,6 @@ h3 {
   text-align: justify;
 }
 
-/* Animations */
-
-.shake {
-  animation: shake 1s cubic-bezier(0.56, 0.47, .29, 0.77) both;
-  transform: translate3d(0, 0, 0);
-  animation-iteration-count: infinite;
-  backface-visibility: hidden;
-  perspective: 900px;
-  height: 200px;
-  top: -4.5em;
-  opacity: 50%;
-  position: relative;
-}
-
-.shake2 {
-  margin: 0.5em;
-  animation: none;
-  height: 200px;
-  top: -3em;
-  opacity: 50%;
-  position: relative;
-}
-
-.shake2:hover {
-  margin: 0.5em;
-  animation: shake 1s cubic-bezier(0.56, 0.47, .29, 0.77) both;
-  animation-iteration-count: infinite;
-}
-
-
-@keyframes shake {
-  10%,
-  90% {
-    transform: translate3d(-10px, auto, auto);
-  }
-
-  20%,
-  80% {
-    transform: translate3d(2px, auto, 0);
-  }
-
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-
-.jump{
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: jump;
-  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-}
-
-@keyframes jump {
-  0%   { transform: scale(1,1)      translateY(0); }
-  10%  { transform: scale(1.1,.9)   translateY(0); }
-  30%  { transform: scale(.9,1.1)   translateY(-50px); }
-  50%  { transform: scale(1.05,.95) translateY(0); }
-  57%  { transform: scale(1,1)      translateY(-7px); }
-  64%  { transform: scale(1,1)      translateY(0); }
-  100% { transform: scale(1,1)      translateY(0); }
-}
-
 /* Screen variants */
 
 @media only screen and (min-width: 1400px) {
@@ -295,7 +264,12 @@ h3 {
     height: auto;
     margin-top: 5em;
     justify-content: center;
-    
+  }
+
+  .homelogo {
+    position: relative;
+    width: 45%;
+    left: 50%; transform: translateX(-50%);
   }
 
   .main-grid {

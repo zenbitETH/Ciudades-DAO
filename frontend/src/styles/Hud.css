@@ -14,7 +14,7 @@
 }
 
 .zenbit:hover, .zenbitBTM:hover{
-  color: #F6AF55 ;
+  color: #F9D923 ;
 }
 
 Nav {
@@ -23,7 +23,7 @@ Nav {
 
 .hudWallet {
     color: #ffffff;
-    background: linear-gradient(45deg,  #057f8a70, #057f8a70,#00aebeb4, #00aebeb4);
+    background-color: #36AE7C;
     background-size: 200% 200%;
     animation: gradient 5s ease infinite;
     padding: 1em 0em 1em 0em ;
@@ -34,7 +34,7 @@ Nav {
   }
 
   .hudWallet:hover {
-    background: linear-gradient(45deg,  #F6AF55b4, #F6AF55b4,#F6AF55b4, #F6AF55b4);
+    background-color: #F9D923b4;
     background-size: 200% 200%;
     cursor: pointer;
   }
@@ -59,7 +59,7 @@ Nav {
   }
 
   .spinner-grow {
-    color: #F6AF55;
+    color: #F9D923;
     height: 40px !important;
     width: 40px !important;
     position: relative;
@@ -80,7 +80,7 @@ Nav {
 
   .bg-start:hover {
     border-color: transparent;
-    background: linear-gradient(-45deg,  #F6AF55, #F6AF55,#00aebeb4, #00aebeb4);
+    background: linear-gradient(-45deg,  #F9D923, #F9D923,#36AE7Cb4, #36AE7Cb4);
     background-size: 200% 200%;
     animation: gradient 5s ease infinite;
     color: #01304E !important;
@@ -178,7 +178,7 @@ Nav {
 
 
 .hud0:hover, .hud1:hover, .hud2:hover, .lang:hover, .langb:hover,.hudH:hover, .hudH2:hover{ 
-  background-color: #F6AF5575;
+  background-color: #F9D92375;
   color: #Fff;
   cursor: pointer;
 }
