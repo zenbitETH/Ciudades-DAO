@@ -312,11 +312,19 @@ const Header = () => {
       </div>
       :
       <div class="center">
-          <nav class="topHud">    
+          <nav>    
           {isConnected ? 
           <div>            
-            <div class="topGrid">  
-              <a href='/Home'><div class="hud0">{userBalance} VOTOs en Querétaro</div></a>
+            <div class="topHud">
+              <div class="topGrid">
+                <a class="hud1" href='/Home'>
+                  <div>🏠</div>
+                </a>
+                <a href='/CreateProposal' class="hud0">
+                  <div>Tienes {userBalance} VOTOs</div>
+                </a>
+               
+              </div>
               <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la Prueba Web3 para validar ⚠️</div></a>}</div>
             </div>
             <a href="https://zenbit.mx">
