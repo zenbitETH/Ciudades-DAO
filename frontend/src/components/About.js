@@ -47,7 +47,7 @@ const About = () => {
          <div class = "about-hl"> 3. Vote in City DAO </div> <br/>
         <img src = {vote} class = "about-img" />
         <span class = "ustext"> <div class = "center"></div> <br/> VoVOTO is a DAO (Decentralized Autonomous Organization)
-        with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "yellow"> Each VOTO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
+        with the aim of creating a decentralized fileURL and managing the decision-making of the city of Querétaro through smart contracts. <span class = "yellow"> Each VOTO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
         <div class = "usgrid">
           <a class="about-bt" href="/Quiz"> Proposals to vote </a>
           <a class="about-bt" href="/CreateProposal"> Read about City DAO </a>
@@ -107,7 +107,7 @@ const About = () => {
        <div class = "about-hl"> 3. Vote in City DAO </div> <br/>
       <img src = {vote} class = "about-img" />
       <span class = "ustext"> <div class = "center"></div> <br/> VoVOTO is a DAO (Decentralized Autonomous Organization)
-      with the aim of creating a decentralized budget and managing the decision-making of the city of Querétaro through smart contracts. <span class = "yellow"> Each VOTO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
+      with the aim of creating a decentralized fileURL and managing the decision-making of the city of Querétaro through smart contracts. <span class = "yellow"> Each VOTO you obtain is equivalent to one vote </span> and each proposal can be voted on for 15 days.
       <div class = "usgrid">
         <a class="about-bt" href="/Quiz"> Proposals to vote </a>
         <a class="about-bt" href="/CreateProposal"> Read about City DAO </a>

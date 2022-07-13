@@ -14,7 +14,7 @@ import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-const Proposal = ({title, typeOfAction, neighborhood, personInCharge, description, expiration, budget, requiredVotoToVote, forVotes, againstVotes, id, proposer, proposalTime, hasVoted, timeToExpiration}) => {
+const Proposal = ({title, typeOfAction, locationURL, web2URL, description, expiration, fileURL, requiredVotoToVote, forVotes, againstVotes, id, proposer, proposalTime, hasVoted, timeToExpiration}) => {
   let [governorAlpha, setGovernorAlpha] = useState();
   let [voto, setVoto] = useState();
   let [signerAddress, setSignerAddress] = useState();
@@ -140,14 +140,14 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
         <div class="prop-hl"> {title}</div><br/>
         <div class="grid-prop">      
           <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
-          <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
-          <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
-          <div class="minit-bg3">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
+          <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{web2URL}</div></div>      
+          <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{locationURL}</div></div>
+          <div class="minit-bg3">💸 Cost: <div className="prop-hl">{fileURL} pesos</div> </div>
         </div>  
         <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
       {/*}
       <div className ="proposal-main">
-        <div className="proposal-sub">Costo: {budget}</div>
+        <div className="proposal-sub">Costo: {fileURL}</div>
         <div className="proposal-subaction">VOTO to vote:{requiredVotoToVote} VOTO</div>
       </div>
       */}
@@ -175,15 +175,15 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
         <div class="prop-hl"> {title}</div><br/>
         <div class="grid-prop">      
         <div class="minit-bg">⚙️ Acción: <div class="prop-hl2">{typeOfAction}</div></div>
-            <div class="minit-bg2">🤳 Social Media: <a href={personInCharge}><div className="prop-hl">Ver publicación</div></a></div>      
-            <div class="minit-bg3"> 📍 Dónde: <a href={neighborhood}><div className="prop-hl">Ver Gooogle Maps</div></a></div>
-            <div class="minit-bg3">☁️ Archivo o Contenido: <a href={budget}><div className="prop-hl">Ver en la nube</div></a> </div>
+            <div class="minit-bg2">🤳 Social Media: <a href={web2URL}><div className="prop-hl">Ver publicación</div></a></div>      
+            <div class="minit-bg3"> 📍 Dónde: <a href={locationURL}><div className="prop-hl">Ver Gooogle Maps</div></a></div>
+            <div class="minit-bg3">☁️ Archivo o Contenido: <a href={fileURL}><div className="prop-hl">Ver en la nube</div></a> </div>
         </div>
         
         <div class="description-bg"><div>📑 Descripción:</div> <div class="prop-description">{description}</div></div>
         {/*}
         <div className ="proposal-main">
-          <div className="proposal-sub">Costo: {budget}</div>
+          <div className="proposal-sub">Costo: {fileURL}</div>
           <div className="proposal-subaction">VOTO to vote:{requiredVotoToVote} VOTO</div>
         </div>
         */}

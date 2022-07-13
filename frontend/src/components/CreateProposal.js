@@ -127,7 +127,7 @@ const CreateProposal = () => {
     console.log('form: ', form);
 
     try {
-      //form.budget = ethers.BigNumber.from(form.budget);
+      //form.fileURL = ethers.BigNumber.from(form.fileURL);
 
       let tx = await governorAlpha.propose(form);
       let txReceipt = await tx.wait(1);
@@ -163,12 +163,12 @@ const CreateProposal = () => {
     setField('typeOfAction', (e.target.value).toString());
   };
 
-  const handleOnChangeNeighborhood = e => {
-    setField('neighborhood', (e.target.value).toString());
+  const handleOnChangeLocationURL = e => {
+    setField('locationURL', (e.target.value).toString());
   };
 
-  const handleOnChangePersonInCharge = e => {
-    setField('personInCharge', (e.target.value).toString());
+  const handleOnChangeWeb2URL = e => {
+    setField('web2URL', (e.target.value).toString());
   };
 
   const handleOnChangeDescription = e => {
@@ -179,8 +179,8 @@ const CreateProposal = () => {
   //   setField('expiration', ethers.BigNumber.from(e.target.value));
   // };
 
-  const handleOnChangeBudget = e => {
-    setField('budget', (e.target.value).toString());
+  const handleOnChangeFileURL = e => {
+    setField('fileURL', (e.target.value).toString());
   };
 
   // const handleOnChangeRequiredVotoToVote = e => {
@@ -221,12 +221,12 @@ const CreateProposal = () => {
               onChange={handleOnChangeTitle}/>
           </Form.Group>
 
-          <Form.Group as={Row} controlId="formNeighborhood" >
+          <Form.Group as={Row} controlId="formLocationURL" >
             <Form.Label  >
             2. Location
             </Form.Label>
               <Form.Control as="select" data-live-search="true"
-                onChange={handleOnChangeNeighborhood}>
+                onChange={handleOnChangeLocationURL}>
                 <option disabled selected>📍 Where will the proposal take place</option>
                   <option>City Hall</option>
                   <option>Street</option>
@@ -268,12 +268,12 @@ const CreateProposal = () => {
             </Form.Control>
           </Form.Group>
 
-          <Form.Group as={Row} controlId="formPersonInCharge">    
+          <Form.Group as={Row} controlId="formWeb2URL">    
             <Form.Label  >
               4. Person in charge
             </Form.Label>
             <Form.Control as="select" class="selectpicker show-tick form-control"
-              onChange={handleOnChangePersonInCharge}>
+              onChange={handleOnChangeWeb2URL}>
               <option disabled selected>🦸 Who will do the proposal?</option>
               <option>Public Worker / Government</option>
               <option>Citizen</option>
@@ -309,13 +309,13 @@ const CreateProposal = () => {
           </Form.Group>
           */}
 
-          <Form.Group as={Row} controlId="formBudget">
+          <Form.Group as={Row} controlId="formFileURL">
             <Form.Label  >
               6. Cost
             </Form.Label>
             <Form.Control as="select"
-              onChange={handleOnChangeBudget}>
-              <option disabled selected>💸 Proposal budget range</option>
+              onChange={handleOnChangeFileURL}>
+              <option disabled selected>💸 Proposal fileURL range</option>
               <option value="0">0, voluntary, unknown</option>
               <option value="1000">Up to 1,000 pesos</option>  
               <option value="10000">Up to 10,0000 pesos</option>
@@ -419,23 +419,23 @@ const CreateProposal = () => {
               onChange={handleOnChangeDescription}/>
             </Form.Group>
 
-            <Form.Group as={Row} controlId="formNeighborhood" >
+            <Form.Group as={Row} controlId="formLocationURL" >
               <Form.Label  >
               4. Ubicación de la propuesta
               </Form.Label>
                 <Form.Control type="text"
                   placeholder="🗺️ Pega el URL de Google Maps de la ubicación."
-                  onChange={handleOnChangeNeighborhood}>
+                  onChange={handleOnChangeLocationURL}>
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group as={Row} controlId="formPersonInCharge">    
+            <Form.Group as={Row} controlId="formWeb2URL">    
               <Form.Label  >
                 5. Referencia en redes sociales
               </Form.Label>
               <Form.Control type="text"
                 placeholder="🤳 Pega el URL de la referencia en twitter, facebook, etc."
-                onChange={handleOnChangePersonInCharge}>
+                onChange={handleOnChangeWeb2URL}>
               </Form.Control>
             </Form.Group>
 
@@ -448,13 +448,13 @@ const CreateProposal = () => {
             </Form.Group>
             */}
  
-            <Form.Group as={Row} controlId="formBudget">
+            <Form.Group as={Row} controlId="formFileURL">
               <Form.Label  >
                 6. Archivo o contenido 
               </Form.Label>
               <Form.Control type="text"
                 placeholder="☁️ Pega el URL donde esté almacenado el archivo o contenido."
-                onChange={handleOnChangeBudget}/>
+                onChange={handleOnChangeFileURL}/>
             </Form.Group>
             {/*
             <Form.Group as={Row} controlId="formRequiredVotoToVote">

@@ -58,9 +58,9 @@ async function main() {
   // let expectedEvent = ethers.utils.keccak256(ethers.utils.toUtf8Bytes("this is the title"));
 
   // let titleAddedEvent = new Promise((res, rej) => {
-  //   votoSimple.on('TitleAdded', (title, budget, event) => {
+  //   votoSimple.on('TitleAdded', (title, fileURL, event) => {
   //     event.removeListener();
-  //     res({title, budget});
+  //     res({title, fileURL});
   //   });
   // });
 
@@ -69,10 +69,10 @@ async function main() {
   // let titleEvent = await titleAddedEvent;
   // console.log('titleEvent: ', titleEvent.title);
   // console.log('expectedEvent: ', expectedEvent);
-  // let num = titleEvent.budget.toString();
-  // // let num = ethers.BigNumber(titleEvent.budget);
+  // let num = titleEvent.fileURL.toString();
+  // // let num = ethers.BigNumber(titleEvent.fileURL);
   // // num = num.toString();
-  // console.log('budgetEvent: ', num);
+  // console.log('fileURLEvent: ', num);
 
   // setAddressInCompiledContracts(votoSimple, 'VotoSimple');
 };

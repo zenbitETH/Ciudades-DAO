@@ -343,11 +343,11 @@ const ProposalList = () => {
                   activeProposals.push({
                     title: proposal[9][0],
                     typeOfAction: proposal[9][1],
-                    neighborhood: proposal[9][2],
-                    personInCharge: proposal[9][3],
+                    locationURL: proposal[9][2],
+                    web2URL: proposal[9][3],
                     description: proposal[9][4],
                     expiration: proposal[9][5].toString(),
-                    budget: proposal[9][6].toString(),
+                    fileURL: proposal[9][6].toString(),
                     requiredVotoToVote: proposal[9][7].toString(),
                     forVotes: proposal.forVotes.div('1000000000000000000').toString(),
                     againstVotes: proposal.againstVotes.div('1000000000000000000').toString(),
@@ -378,11 +378,11 @@ const ProposalList = () => {
         <Proposal
           title={proposal.title}
           typeOfAction={proposal.typeOfAction}
-          neighborhood={proposal.neighborhood}
-          personInCharge={proposal.personInCharge}
+          locationURL={proposal.locationURL}
+          web2URL={proposal.web2URL}
           description={proposal.description}
           expiration={proposal.expiration}
-          budget={proposal.budget}
+          fileURL={proposal.fileURL}
           votoToVote={proposal.votoToVote}
           forVotes={proposal.forVotes}
           againstVotes={proposal.againstVotes}
