@@ -6,6 +6,8 @@
   padding: 1em;
   }
 
+  
+
 .grid-prop {
   display: grid;
   grid-template-columns: 1fr 1fr;

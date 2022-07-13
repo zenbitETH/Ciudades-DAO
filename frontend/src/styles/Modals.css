@@ -16,3 +16,14 @@
     font-family: 'Lexend Deca', sans-serif !important; 
     color: #ffffff !important;
   }
+
+  .modal-content {  
+    background-color: #36AE7C !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    background-image: linear-gradient(#00000068, #68686821);
+    font-family: 'Lexend Deca', sans-serif !important; 
+    color: #ffffff !important;
+    padding: 1em;
+    border: none;
+  }
