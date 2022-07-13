@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import { LanguageContext } from '../contexts/LanguageContext';
 import voidz from '../assets/void.png';
-import prop from '../assets/prop.png';
+import prop from '../assets/prop.svg';
 
 const CreateProposalErrorModal = (props) => {
   let [isEnglish] = useContext(LanguageContext);

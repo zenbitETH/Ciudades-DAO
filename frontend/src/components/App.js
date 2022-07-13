@@ -5,7 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
-import { TaroContext } from '../contexts/TaroContext';
+import { VotoContext } from '../contexts/VotoContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
@@ -22,7 +22,7 @@ import PastProposals from './PastProposals';
 
 function App() {
   let [isValidated, setIsValidated] = useState();
-  let [taro, setTaro] = useState();
+  let [voto, setVoto] = useState();
   // let [isEnglish, setIsEnglish] = useState();
   let [governorAlpha, setGovernorAlpha] = useState();
   let [ethersSigner, setEthersSigner] = useState();
@@ -35,7 +35,7 @@ function App() {
     <div>
       <LanguageContext.Provider value={[isEnglish, setLoc]}>
         <GovernorAlphaContext.Provider value={{governorAlpha, setGovernorAlpha}}>
-          <TaroContext.Provider value={{taro, setTaro}}>
+          <VotoContext.Provider value={{voto, setVoto}}>
             <EthersContext.Provider value={{ethersSigner, setEthersSigner, provider, setProvider}}>
               <ValidationRequiredContext.Provider value={{isValidated, setIsValidated}}>
                 <ConnectedContext.Provider value={{isConnected, setIsConnected}}>
@@ -53,7 +53,7 @@ function App() {
                 </ConnectedContext.Provider>
               </ValidationRequiredContext.Provider>
             </EthersContext.Provider>
-          </TaroContext.Provider>
+          </VotoContext.Provider>
         </GovernorAlphaContext.Provider>
       </LanguageContext.Provider>
     </div>

@@ -5,7 +5,7 @@ import PolygonButton from './buttons/PolygonButton';
 import PolygonSwitch from './buttons/PolygonSwitch';
 import SwitchPolygonAlert from './SwitchPolygonAlert';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
-import { TaroContext } from '../contexts/TaroContext';
+import { VotoContext } from '../contexts/VotoContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
@@ -13,14 +13,15 @@ import { ConnectedContext } from '../contexts/ConnectedContext';
 
 import test from '../assets/testnet.svg';
 import wallet from '../assets/confirm.svg'
-import prop from '../assets/prop.png';
-import past from '../assets/past.png';
-import verify from '../assets/verify.png';
+import prop from '../assets/prop.svg';
+import past from '../assets/vote.svg';
+import verify from '../assets/verify.svg';
 import gas from '../assets/gas.svg';
+import logo from '../assets/Logoww.png';
 
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
@@ -35,7 +36,7 @@ function Home() {
   let [isConnectingToPolygon, setIsConnectingToPolygon] = useState();
 
   let {setIsValidated,isValidated} = useContext(ValidationRequiredContext);
-  let {setTaro} = useContext(TaroContext);
+  let {setVoto} = useContext(VotoContext);
   let {setGovernorAlpha} = useContext(GovernorAlphaContext);
   let [isEnglish] = useContext(LanguageContext);
   let {setEthersSigner, provider, setProvider} = useContext(EthersContext);
@@ -100,17 +101,17 @@ function Home() {
             let signer = await _ethersProvider.getSigner();
             setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let signerAddress = await signer.getAddress();
             console.log("signerAddress: ", signerAddress);
 
-            let _userBalance = await _taro.balanceOf(signerAddress);
+            let _userBalance = await _voto.balanceOf(signerAddress);
                 _userBalance = _userBalance.div(Math.pow(10,18).toString());
               console.log('_userBalance in useEffect: ', _userBalance.toString());
             if(_userBalance) {
@@ -234,17 +235,17 @@ function Home() {
       let signer = await ethersProvider.getSigner();
       setEthersSigner(signer);
 
-      const _taro = new ethers.Contract(
-        taroAddress.Taro,
-        Taro.abi,
+      const _voto = new ethers.Contract(
+        votoAddress.Voto,
+        Voto.abi,
         signer
       );
-      setTaro(_taro);
+      setVoto(_voto);
 
       let signerAddress = await signer.getAddress();
       console.log("signerAddress in handleOnConnect: ", signerAddress);
 
-      let _userBalance = await _taro.balanceOf(signerAddress);
+      let _userBalance = await _voto.balanceOf(signerAddress);
           _userBalance = _userBalance.div(Math.pow(10,18).toString());
           console.log('_userBalance in useEffect: ', _userBalance.toString());
         if(_userBalance) {
@@ -269,19 +270,17 @@ function Home() {
         <div class="grid-block">
           <div>
             {isConnected ?
-            <section id="">
-              <h1 class="yellow">TARO Web3 Quest</h1>
-              <h2>Complete the task and get TARO!</h2>
+            <section class="vertical">
               <div class="homegrid">
                 {isValidated ? '':
-                <a class="bg-reward"href="/Quiz">
+                <a class="bg-grid0" href="/Quiz">
                   <img src={verify} class="homevan"/>
-                  <div class="propsub">Get up to 100 TARO</div>
+                  <div class="propsub">Get up to 100 VOTO</div>
                   <div class="propopt">Validate</div>
                 </a>}
-                {isValidated ? <a class="bg-reward" href="/createProposal">
+                {isValidated ? <a class="bg-grid0" href="/createProposal">
                   <img src={prop} class="homevan"/> 
-                  <div class="propsub">Get 10 TARO per proposal</div>
+                  <div class="propsub">Get 10 VOTO per proposal</div>
                   <div class="propopt">Propose</div>
                 </a>
                 :
@@ -293,14 +292,14 @@ function Home() {
                {isValidated ?
               <a class="bg-grid0" href="/ProposalList">
                   <img src={past} class="homevan"/> 
-                  <div class="propsub">Vote with your TARO</div>
+                  <div class="propsub">Vote with your VOTO</div>
                   <div class="propopt">Qurétaro DAO</div>
                 </a>
                 :
                 <div class="bg-blocked" >
                   <img src={past} class="homevan"/> 
                   <div class="propsub">Validate to unlock</div>
-                  <div class="propopt">Qurétaro DAO</div>
+                  <div class="propopt">Qurévoto DAO</div>
                 </div>}
               </div>
               
@@ -308,27 +307,25 @@ function Home() {
             :
             <section>
               <div class="headline">
-                  <h1 class="yellow">TARO Web3 Quest</h1>
-                  <h2>Are you ready to start?</h2>
+                  <img src={logo}/>
+                  <h2>Decentralized Governance for cities</h2>
                 </div>
                 <div class="grid-blocked">
-                  <div class="homegrid">
-                    <a href="/About" class="bg-grid0">
-                      <img src={wallet} class="homevan"/> 
-                      <div class="propsub">Do you have a web3 wallet</div>
-                      <div class="propopt">Go for Wallet</div>
-                    </a>
-                    <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
-                      <img src={test} class="homevan"/> 
-                      <div class="propsub">Are you on the right network?</div>
-                      <div class="propopt">Go to testnet </div>
-                    </a>
-                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
-                      <img src={gas} class="homevan"/> 
-                      <div class="propsub">Do you have gas? </div>
-                      <div class="propopt">Get Gas </div>
-                    </a>
-                  </div>
+                  <a href="/About" class="bg-grid0">
+                    <img src={wallet} class="homevan"/> 
+                    <div class="propsub">Do you have a web3 wallet</div>
+                    <div class="propopt">Go for Wallet</div>
+                  </a>
+                  <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
+                    <img src={test} class="homevan"/> 
+                    <div class="propsub">Are you on the right network?</div>
+                    <div class="propopt">Go to testnet </div>
+                  </a>
+                  <a class="bg-grid0" href="https://faucet.polygon.technology/">
+                    <img src={gas} class="homevan"/> 
+                    <div class="propsub">Do you have gas? </div>
+                    <div class="propopt">Get Gas </div>
+                  </a>
                 </div>
             </section>      
             }
@@ -341,20 +338,16 @@ function Home() {
             <div>
               {isConnected ?
               <section id="">
-                <div class="headline">
-                  <h1 class="yellow">Reto Querétaro Web3</h1>
-                  <h2>¡Copleta las tareas y gana TARO!</h2>
-                </div>
                 <div class="homegrid">
                   {isValidated ? '':
-                  <a class="bg-reward"href="/Quiz">
+                  <a class="bg-grid0"href="/Quiz">
                     <img src={verify} class="homevan"/>
-                    <div class="propsub">Obtén hasta 100 TARO</div>
+                    <div class="propsub">Obtén hasta 100 VOTOs</div>
                     <div class="propopt">Prueba Web3</div>
                   </a>}
-                  {isValidated ? <a class="bg-reward" href="/createProposal">
+                  {isValidated ? <a class="bg-grid0" href="/createProposal">
                     <img src={prop} class="homevan"/> 
-                    <div class="propsub">Obtén 10 TARO por</div>
+                    <div class="propsub">Obtén 10 VOTOs por hacer</div>
                     <div class="propopt">Propuestas DAO</div>
                   </a>
                    : <div class="bg-blocked" >
@@ -365,25 +358,25 @@ function Home() {
                  {isValidated ?
                 <a class="bg-grid0" href="/ProposalList">
                     <img src={past} class="homevan"/> 
-                    <div class="propsub">Vota con tu TARO</div>
+                    <div class="propsub">Usa tus VOTOs en</div>
                     <div class="propopt">Querétaro DAO</div>
                   </a>
                   :
                   <div class="bg-blocked" >
                     <img src={past} class="homevan"/> 
                     <div class="propsub">Valida para desbloquear</div>
-                    <div class="propopt">Qurétaro DAO</div>
+                    <div class="propopt">Qurévoto DAO</div>
                   </div>}
                 </div>
               </section>
               :
               <section>
                 <div class="headline">
-                  <h1 class="yellow">Reto Querétaro Web3</h1>
-                  <h2>¿Estas listo para empezar?</h2>
+                  <img src={logo} class="homelogo"/>
+                  <h2>Gobernanza descentralizada para ciudades</h2>
                 </div>
-                <div class="grid-blocked">
-                  <div class="homegrid">
+                
+                  <div class="grid-blocked">
                     <a href="/About" class="bg-grid0">
                       <img src={wallet} class="homevan"/> 
                       <div class="propsub">¿Tienes cómo conectarte?</div>
@@ -400,8 +393,6 @@ function Home() {
                       <div class="propopt">Conseguir Gas </div>
                     </a>
                   </div>
-                </div>
-              
               </section>      
               }
             </div>

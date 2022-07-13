@@ -27,9 +27,9 @@ Form {
 }
 
 .form-control:focus-visible {
-  border-color: #119195 !important;
+  border-color: #36AE7C !important;
   background-color: transparent !important;
-  color: #F6AF55 !important;
+  color: #F9D923 !important;
   box-shadow: none !important;
 }
 
@@ -91,7 +91,7 @@ select {
 }
 
 select option:checked {
-  background: #119195 -webkit-linear-gradient(bottom, #F6AF55 0%, #F6AF55 100%) !important;
+  background: #36AE7C -webkit-linear-gradient(bottom, #F9D923 0%, #F9D923 100%) !important;
   color: #fff !important;
 }
 
@@ -104,7 +104,6 @@ option:disabled {
   margin-left: -1em;
   position: fixed;
   top: 0;
-  z-index: 1;
   width: 110%;
   background-color: #cccccc59;
 }
@@ -139,10 +138,10 @@ option:disabled {
 
 .proplist {
   padding: 0.5em;
-  margin-top: 2.5em;
-  margin-bottom: 5em;
   text-align: center;
   font-family: 'Lexend Deca';
+  height: 100vh;
+  overflow: auto;
 }
 
 
@@ -160,7 +159,7 @@ option:disabled {
 }
 
 .prop-img {
-  height: 200px !important;
+  height: 100px !important;
 }
 
 
@@ -215,7 +214,7 @@ option:disabled {
 .prop-bg2:hover {
   cursor: pointer;
   border-color:linear-gradient(45deg, #ffffff, #ffffff);
-  background: linear-gradient(45deg, #2b284a00, #11919576, #11919576, #2b284a00);
+  background: linear-gradient(45deg, #2b284a00, #36AE7C76, #36AE7C76, #2b284a00);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -233,13 +232,11 @@ option:disabled {
 
 .bg-grid:hover {
   cursor: pointer;
-  background: linear-gradient(115deg,  #11919576, #11919576,#F6AF55d3, #F6AF55d3);
+  background: linear-gradient(115deg,  #36AE7C76, #36AE7C76,#F9D923d3, #F9D923d3);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
-  color: #119195 !important;
+  color: #36AE7C !important;
 }
-
-
 
 .bg-grid2 {
   padding: 1em;
@@ -261,7 +258,7 @@ option:disabled {
   border-width: 0.1em;
   border-style: solid;
   border-color:linear-gradient(45deg, #ffffff, #ffffff);
-  background: linear-gradient(-45deg, #2b284a00, #11919576, #11919576, #2b284a00);
+  background: linear-gradient(-45deg, #2b284a00, #36AE7C76, #36AE7C76, #2b284a00);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -286,7 +283,7 @@ option:disabled {
   border-width: 0.1em;
   border-style: solid;
   border-color:linear-gradient(45deg, #ffffff, #ffffff);
-  background: linear-gradient(45deg, #2b284a00, #11919576, #11919576, #2b284a00);
+  background: linear-gradient(45deg, #2b284a00, #36AE7C76, #36AE7C76, #2b284a00);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -303,7 +300,7 @@ option:disabled {
 
 .prop-bgh:hover {
   cursor: pointer;
-  background: linear-gradient(45deg, #b5342dac, #b5342dac, #395b2c, #395b2c);
+  background: linear-gradient(45deg, #EB5353ac, #EB5353ac, #36AE7Cb4, #36AE7Cb4);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -323,7 +320,7 @@ option:disabled {
 .prop-bgv:hover {
   border-width: 0.1em;
   border-style: solid;
-  background: linear-gradient(45deg, #2b284a00, #00aebea0, #00aebea0, #2b284a00);
+  background: linear-gradient(45deg, #2b284a00, #36AE7Ca0, #36AE7Ca0, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
 }
@@ -342,7 +339,7 @@ option:disabled {
 
 .prop-bgr:hover {
   border-color: transparent;
-  background: linear-gradient(-45deg,  #F6AF55, #F6AF55,#00aebeb4, #00aebeb4);
+  background: linear-gradient(-45deg,  #F9D923, #F9D923,#36AE7Cb4, #36AE7Cb4);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
   color: #e9e9e9 !important;
@@ -350,7 +347,7 @@ option:disabled {
 
 .prop-bgf {
   padding: 1em;
-  background: linear-gradient(90deg, #2b284a00,#4a7a37,#395b2c,#2b284a00);
+  background: linear-gradient(90deg, #2b284a00,#36AE7Cb4,#36AE7Cb4,#2b284a00);
   border-radius: 25px;
   height: 175px;
   width: 100%;
@@ -363,7 +360,7 @@ option:disabled {
 
 .prop-bgf2 {
   padding: 1em;
-  background: linear-gradient(90deg, #2b284a00,#4a7a37,#395b2c,#2b284a00);
+  background: linear-gradient(90deg, #2b284a00,#36AE7Cb4,#36AE7Cb4,#2b284a00);
   background-size: 200% 200%;
   animation: gradient 2s ease infinite;
   border-radius: 25px;
@@ -382,14 +379,14 @@ option:disabled {
   cursor: pointer;
   border-width: 0.1em;
   border-style: solid;
-  background: linear-gradient(90deg, #2b284a00,#4a7a37,#395b2c,#2b284a00);
+  background: linear-gradient(90deg, #2b284a00,#36AE7Cb4,#36AE7Cb4,#2b284a00);
   background-size: 200% 200%;
   animation: gradient 2s ease infinite;
 }
 
 .prop-bga {
   padding: 1em;
-  background: linear-gradient(90deg,  #2b284a00,#b5342dac, #b5342dac,#2b284a00);
+  background: linear-gradient(90deg,  #2b284a00,#EB5353ac, #EB5353ac,#2b284a00);
   border-radius: 25px;
   height: 175px;
   width: 100%;
@@ -402,7 +399,7 @@ option:disabled {
 
 .prop-bga2 {
   padding: 1em;
-  background: linear-gradient(90deg,  #2b284a00,#b5342dac, #b5342dac,#2b284a00);
+  background: linear-gradient(90deg,  #2b284a00,#EB5353ac, #EB5353ac,#2b284a00);
   background-size: 200% 200%;
   animation: gradient 2s ease infinite;
   border-radius: 25px;
@@ -422,7 +419,7 @@ option:disabled {
   cursor: pointer;
   border-width: 0.1em;
   border-style: solid;
-  background: linear-gradient(90deg,  #2b284a00,#b5342dac, #b5342dac,#2b284a00);
+  background: linear-gradient(90deg,  #2b284a00,#EB5353ac, #EB5353ac,#2b284a00);
   background-size: 200% 200%;
   animation: gradient 2s ease infinite;
 }
@@ -462,7 +459,7 @@ option:disabled {
   bottom: 0px;
   right:  0px;
   height: 75%;
-  z-index: 1 !important;
+
 }
 
 .ribvan {
@@ -470,7 +467,6 @@ option:disabled {
   bottom: 0px;
   right:  5px;
   height: 50%;
-  z-index: 1 !important;
 }
 
 /* Proposal */
@@ -489,7 +485,7 @@ option:disabled {
 
 .rproposal {
   width: auto;
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #EB5353b5, #EB5353b5, #2b284a00, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
   padding: 1em 1em;
@@ -500,7 +496,7 @@ option:disabled {
 
 .rproposal1 {
   width: auto;
-  background: linear-gradient(90deg, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #EB5353b5, #EB5353b5, #2b284a00);
   background-size: 100% 100%;
   padding: 1em 1em;
   margin: 0em -1em 0.5em -1em;
@@ -510,7 +506,7 @@ option:disabled {
 
 .aproposal {
   width: auto;
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #395b2c, #395b2c, #2b284a00, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #36AE7Cb4, #36AE7Cb4, #2b284a00, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
   padding: 1em 1em;
@@ -521,7 +517,7 @@ option:disabled {
 
 .aproposal1 {
   width: auto;
-  background: linear-gradient(90deg, #2b284a00, #395b2c, #395b2c, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #36AE7Cb4, #36AE7Cb4, #2b284a00);
   background-size: 100% 100%;
   padding: 1em 1em;
   margin: 0em -1em 0.5em -1em;
@@ -534,7 +530,6 @@ option:disabled {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   color: #fff;
-  
   text-align: left;
 }
 
@@ -544,21 +539,24 @@ option:disabled {
   color: #FAC91A !important;
 }
 
-.prop-hl {
+.prop-hl, .prop-hl2 {
   font-size: clamp(1em, -1.2em + 2.1vw, 2.5rem);
   margin-bottom: 0.5em;
   font-weight: 300;
   color: #ffffff;
   text-align: justify ;
   position: relative; 
-  font-family: 'Lexend Deca';
   text-align: justify;
   overflow-wrap: break-word;
  }
 
+ .prop-hl:hover {
+  color: #F9D923;
+ }
+
 .description-bg {
   text-align: justify;
-  color: #F6AF55;
+  color: #F9D923;
   font-family: "ABeeZee"; 
   font-size: clamp(1em, -1.2em + 2.1vw, 1rem);
   background-color: #ffffff26;
@@ -583,7 +581,7 @@ option:disabled {
 .prop-title {
   color: #01304E;
   text-align: left;  
-  background-color: #F6AF55;
+  background-color: #F9D923;
   padding: 1em;
   margin: -0.62em 0em 0 -.62em;
   border-radius: 20px 0 20px 0px;
@@ -594,7 +592,7 @@ option:disabled {
   color: #fff !important;
   text-align: right;
   vertical-align: middle;
-  background-color: #119195;
+  background-color: #36AE7C;
   padding: 1em;
   margin: -.62em -.62em 0 0em;
   border-radius: 0px 20px 0px 20px;
@@ -602,14 +600,14 @@ option:disabled {
 }
 
 .mini-title {
-  color: #119195;
+  color: #36AE7C;
   font-family: "ABeeZee"; 
   text-align: left;
   font-size: clamp(1.3em, -1.2em + 2.1vw, 2.55rem); 
 }
 
 .minit-bg {
-  color: #F6AF55;
+  color: #F9D923;
   font-family: "ABeeZee"; 
   background-color: #ffffff26;
   border-radius: 20px 0 0 0;
@@ -619,7 +617,7 @@ option:disabled {
 }
 
 .minit-bg2 {
-  color: #F6AF55;
+  color: #F9D923;
   font-family: "ABeeZee"; 
   background-color: #ffffff26;
   border-radius: 0 20px 0 0;
@@ -629,7 +627,7 @@ option:disabled {
 }
 
 .minit-bg3 {
-  color: #F6AF55;
+  color: #F9D923;
   font-family: "ABeeZee"; 
   background-color: #ffffff26;
   padding: 0.5em;
@@ -638,7 +636,7 @@ option:disabled {
 }
 
 .minit-bg4 {
-  color: #119195;
+  color: #36AE7C;
   font-family: "ABeeZee"; 
   background-color: #ffffff26;
   border-radius: 0 20px 0 0;
@@ -647,7 +645,7 @@ option:disabled {
 }
 
 .author {
-  color: #FAC91A;
+  color: #36AE7C;
 }
 
 .vote-grid {

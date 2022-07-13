@@ -50,31 +50,31 @@ async function main() {
   // setAddressInCompiledContracts(governorBravoInterfaces, 'GovernorBravoInterfaces');
 
 
-  // const TaroSimple = await ethers.getContractFactory('TaroSimple');
-  // const taroSimple = await TaroSimple.deploy();
+  // const VotoSimple = await ethers.getContractFactory('VotoSimple');
+  // const votoSimple = await VotoSimple.deploy();
   // //
-  // console.log(`TaroSimple address: ${taroSimple.address}`);
+  // console.log(`VotoSimple address: ${votoSimple.address}`);
 
   // let expectedEvent = ethers.utils.keccak256(ethers.utils.toUtf8Bytes("this is the title"));
 
   // let titleAddedEvent = new Promise((res, rej) => {
-  //   taroSimple.on('TitleAdded', (title, budget, event) => {
+  //   votoSimple.on('TitleAdded', (title, fileURL, event) => {
   //     event.removeListener();
-  //     res({title, budget});
+  //     res({title, fileURL});
   //   });
   // });
 
-  // let tx = await taroSimple.addUser('this is the title', ethers.BigNumber.from(100));
+  // let tx = await votoSimple.addUser('this is the title', ethers.BigNumber.from(100));
   // // await tx.wait(1);
   // let titleEvent = await titleAddedEvent;
   // console.log('titleEvent: ', titleEvent.title);
   // console.log('expectedEvent: ', expectedEvent);
-  // let num = titleEvent.budget.toString();
-  // // let num = ethers.BigNumber(titleEvent.budget);
+  // let num = titleEvent.fileURL.toString();
+  // // let num = ethers.BigNumber(titleEvent.fileURL);
   // // num = num.toString();
-  // console.log('budgetEvent: ', num);
+  // console.log('fileURLEvent: ', num);
 
-  // setAddressInCompiledContracts(taroSimple, 'TaroSimple');
+  // setAddressInCompiledContracts(votoSimple, 'VotoSimple');
 };
 
 main()

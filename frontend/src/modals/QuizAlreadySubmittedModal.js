@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 import confirm from '../assets/confirm.svg';
-import prop from '../assets/prop.png';
+import prop from '../assets/prop.svg';
 import vote2 from '../assets/vote2.svg';
 
 
@@ -49,7 +49,7 @@ const QuizAlreadySubmittedModal = (props) => {
       >
         <div class="center"><div><img src={confirm} alt="Alert about verification" class="prop-img"/></div></div>
         <h1><span>Tu cuenta ya está validada </span></h1><br/>
-        <h3> Ahora puedes crear y votar por propuestas de gobernanza urbana en Querétaro.</h3>
+        <h3> Ahora puedes crear y votar por propuestas de gobernanza urbana en Querévoto.</h3>
         <Modal.Body>
           <div class="void-link">
           <div class="prop-bg"><a href="/Createproposal">

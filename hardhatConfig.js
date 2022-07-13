@@ -50,7 +50,7 @@ module.exports = {
     //},
 
     mumbai: {
-      url: "https://speedy-nodes-nyc.moralis.io/729deaf43e7375d77367370e/polygon/mumbai",
+      url: "https://polygon-mumbai.infura.io/v3/6842d8c76d0943b2b5f9a4a269b62484",
       accounts: [`0x${process.env.PRIVATE_KEY}`]
       //accounts: {
       //  mnemonic: mnemonic(),

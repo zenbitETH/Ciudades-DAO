@@ -20,24 +20,24 @@ async function main() {
   // console.log('SafeMath address: ', safeMath.address);
   // setAddressInCompiledContracts(safeMath, 'SafeMath');
 
-  const Taro = await ethers.getContractFactory('Taro');
-  let taro = await Taro.deploy(deployer.address);
-  await taro.deployed();
-  console.log('Taro address: ', taro.address);
-  setAddressInCompiledContracts(taro, 'Taro');
+  const Voto = await ethers.getContractFactory('Voto');
+  let voto = await Voto.deploy(deployer.address);
+  await voto.deployed();
+  console.log('Voto address: ', voto.address);
+  setAddressInCompiledContracts(voto, 'Voto');
 
   const GovernorAlpha = await ethers.getContractFactory('contracts/GovernorAlpha.sol:GovernorAlpha');
-  // let governorAlpha = await GovernorAlpha.deploy(timelock.address, taro.address, deployer.address);
-  let governorAlpha = await GovernorAlpha.deploy(taro.address);
+  // let governorAlpha = await GovernorAlpha.deploy(timelock.address, voto.address, deployer.address);
+  let governorAlpha = await GovernorAlpha.deploy(voto.address);
   await governorAlpha.deployed();
   console.log('GovernorAlpha address: ', governorAlpha.address);
   setAddressInCompiledContracts(governorAlpha, 'GovernorAlpha');
 
-  //The initial balance is transfered from the Taro contract to the deployer.  Now it gets transfered to the governorAlpha address so that governorAlpha can transfer tokens to individual users when they get validated.
-  let deployerBalance = await taro.balanceOf(deployer.address);
-  let transfer = await taro.connect(deployer).transfer(governorAlpha.address, deployerBalance);
+  //The initial balance is transfered from the Voto contract to the deployer.  Now it gets transfered to the governorAlpha address so that governorAlpha can transfer tokens to individual users when they get validated.
+  let deployerBalance = await voto.balanceOf(deployer.address);
+  let transfer = await voto.connect(deployer).transfer(governorAlpha.address, deployerBalance);
   await transfer.wait(1);
-  let governorAlphaBalance = await taro.balanceOf(governorAlpha.address);
+  let governorAlphaBalance = await voto.balanceOf(governorAlpha.address);
   console.log('governorAlphaBalance: ', governorAlphaBalance.toString());
 };
 

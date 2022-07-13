@@ -8,14 +8,13 @@
 
 .zenbitBTM {
   position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
+  top: 3.5em;
+  right: 0;  
+  color: #ffffff50;
 }
 
 .zenbit:hover, .zenbitBTM:hover{
-  color: #F6AF55 ;
+  color: #F9D923 ;
 }
 
 Nav {
@@ -24,7 +23,7 @@ Nav {
 
 .hudWallet {
     color: #ffffff;
-    background: linear-gradient(45deg,  #057f8a70, #057f8a70,#00aebeb4, #00aebeb4);
+    background-color: #36AE7C;
     background-size: 200% 200%;
     animation: gradient 5s ease infinite;
     padding: 1em 0em 1em 0em ;
@@ -35,7 +34,7 @@ Nav {
   }
 
   .hudWallet:hover {
-    background: linear-gradient(45deg,  #F6AF55b4, #F6AF55b4,#F6AF55b4, #F6AF55b4);
+    background-color: #F9D923b4;
     background-size: 200% 200%;
     cursor: pointer;
   }
@@ -60,7 +59,7 @@ Nav {
   }
 
   .spinner-grow {
-    color: #F6AF55;
+    color: #F9D923;
     height: 40px !important;
     width: 40px !important;
     position: relative;
@@ -81,7 +80,7 @@ Nav {
 
   .bg-start:hover {
     border-color: transparent;
-    background: linear-gradient(-45deg,  #F6AF55, #F6AF55,#00aebeb4, #00aebeb4);
+    background: linear-gradient(-45deg,  #F9D923, #F9D923,#36AE7Cb4, #36AE7Cb4);
     background-size: 200% 200%;
     animation: gradient 5s ease infinite;
     color: #01304E !important;
@@ -97,13 +96,17 @@ Nav {
     padding-left: 2em;
   }
 
-.topGrid{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+.topHud{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .bottomHud{
@@ -111,7 +114,7 @@ Nav {
   position: fixed;
   bottom: 0;
   overflow: hidden;
-  
+  z-index: 20;  
 }
 
 .lang {
@@ -125,27 +128,53 @@ Nav {
 
 .langb {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 5em;
+  left: 0;
   background-color: #AAA6A150;
-  padding: 1em;
-  border-radius: 25px 0 0px 0px;
+  padding: 0.5em;
+  border-radius: 0px 25px 25px 0px;
 }
 
-.hud0, .hud1, .hud2{
+.hud0, .hud1, .hud2, .hudH, .hudH2, .hudH3 {
   background-size: 100% 100%;
   padding: 0.25em 1em 0.25em 1em;
   font-size: 1.5em;
   background-color: #AAA6A150;
 }
 
+.hudlogo {
+  position: fixed;
+  height: auto;
+  margin: 0.5em 0em 0em 1em;
+  width: 40%;
+  top: 3em;
+  left: 0;
+}
+
+.hislogo{
+  height: 50px;
+}
+
+.hudH {
+  border-radius:  0 25px 0px 0px;
+}
+
+.hudH2 {
+  border-radius:  25px 25px 0px 0px;
+}
+
+.hudH3 {
+  border-radius:  25px 0px 0px 0px;
+}
+
 
 .hud0 {
-  border-radius:  0px 0 0px 25px;
+  border-radius:  0px 0 25px 0px;
+  grid-column: span 3 / span 3;
 }
 
 .hud1 {
-  border-radius:  0 0 0px 0px;
+  border-radius:  0 0 0px 25px;
 }
 
 .hud2 {
@@ -153,9 +182,10 @@ Nav {
 }
 
 
-.hud0:hover, .hud1:hover, .hud2:hover, .lang:hover, .langb:hover{ 
-  background-color: #F6AF5575;
+.hud0:hover, .hud1:hover, .hud2:hover, .lang:hover, .langb:hover,.hudH:hover, .hudH2:hover, .hudH3:hover{ 
+  background-color: #F9D92375;
   color: #Fff;
+  cursor: pointer;
 }
 
 .hudBalance {
@@ -187,16 +217,7 @@ Nav {
 
   .double {
     grid-column: span 3 / span 3; 
-    z-index: 0;
   }
-
-  .hudLogo {
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-    opacity: 75%;
-  }
-
 
 
 
@@ -208,11 +229,52 @@ Nav {
       transform: translateX(-50%);
     }
 
-    .topGrid {
-      width: 40%;
+    .hudlogo {
+      top: 0;
+      bottom: auto;
+      width: 20%;
+    }
+
+    .hislogo{
+      height: 150px;
+      padding: 0.5em;
+    }
+
+    
+    .hudH {
+      border-radius:  0 25px 25px 0px;
+    }
+
+    .hudH2 {
+      border-radius:  0 25px 25px 0px;
+    }
+
+    .hudH3 {
+      border-radius:  0 25px 25px 0px;
+    }
+
+    .zenbitBTM {
+      left: 50%;
+      top: auto;
+      bottom:0;
+      transform: translateX(-50%);
+      z-index: 20;
+    }
+
+    .langb {
+      top: 0em;
+      right: 0;
+      left: auto;
+      bottom: auto;
+      border-radius: 0 0 0px 25px;
+    }
+
+    .topHud {
+      width: 20%;
       margin: 0 0em 0 0em;
       left: 50%;
       transform: translateX(-50%);
+      font-size: 1.1em
     }
     
     .bg-start {

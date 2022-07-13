@@ -1,18 +1,10 @@
 #quiz {
     color: #ffffff;
-    background: linear-gradient(#01304E,#11919592, #11919592);
+
     font-size: 0.9em;
     background-size: 200% 250%;
     padding: 8em 0 5em 0em;
     font-family: 'Lexend Deca', sans-serif;
-}
-
-.quiz-bg {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    align-self: center;
-    justify-self: center;
 }
 
 .quiz-grid {
@@ -21,14 +13,6 @@
     grid-template-rows: repeat(3, minmax(0, 1fr)); 
     position: relative;   
     gap: 3em;
-}
-
-.quiz-lb {
- position: relative;
- text-align: center;
- color: #2b284a;
- font-size: 0.8em;
- padding: 2em;
 }
 
 .question-card {
@@ -65,8 +49,6 @@
     user-select: none;
     font-size: 1.3em;
   }
-
-  
   
   /* Hide the browser's default radio button */
   .container input {
@@ -87,13 +69,13 @@
   
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
-    background-color: #F6AF55f1;
+    background-color: #F9D923f1;
     color: #01304E;
   }
   
   /* When the radio button is checked, add a background */
   .container input:checked ~ .checkmark {
-  background: linear-gradient(189deg, #2b284a00, #F6AF55d7, #F6AF55d7, #F6AF5569, #2b284a00);
+  background: linear-gradient(189deg, #2b284a00, #F9D923d7, #F9D923d7, #F9D92369, #2b284a00);
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
   }
@@ -104,10 +86,6 @@
     position: absolute;
     display: none;
   }
-  
-
-  
-
 
   @media only screen and (min-width: 1000px) {
     .quiz-q {

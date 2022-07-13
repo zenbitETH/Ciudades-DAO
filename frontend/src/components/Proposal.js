@@ -8,15 +8,15 @@ import { EthersContext } from '../contexts/EthersContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-const Proposal = ({title, typeOfAction, neighborhood, personInCharge, description, expiration, budget, requiredTaroToVote, forVotes, againstVotes, id, proposer, proposalTime, hasVoted, timeToExpiration}) => {
+const Proposal = ({title, typeOfAction, locationURL, web2URL, description, expiration, fileURL, requiredVotoToVote, forVotes, againstVotes, id, proposer, proposalTime, hasVoted, timeToExpiration}) => {
   let [governorAlpha, setGovernorAlpha] = useState();
-  let [taro, setTaro] = useState();
+  let [voto, setVoto] = useState();
   let [signerAddress, setSignerAddress] = useState();
 
   let [isEnglish] = useContext(LanguageContext);
@@ -77,18 +77,18 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
             let signer = await _ethersProvider.getSigner();
             // setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let _signerAddress = await signer.getAddress();
             // console.log("signerAddress: ", _signerAddress);
             setSignerAddress(_signerAddress);
 
-            // let _userBalance = await _taro.balanceOf(signerAddress);
+            // let _userBalance = await _voto.balanceOf(signerAddress);
             // console.log('_userBalance in useEffect: ', _userBalance.toString());
             // if(_userBalance) {
             //   setUserBalance(_userBalance.toString());
@@ -140,15 +140,15 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
         <div class="prop-hl"> {title}</div><br/>
         <div class="grid-prop">      
           <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
-          <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{personInCharge}</div></div>      
-          <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{neighborhood}</div></div>
-          <div class="minit-bg3">💸 Cost: <div className="prop-hl">{budget} pesos</div> </div>
+          <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{web2URL}</div></div>      
+          <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{locationURL}</div></div>
+          <div class="minit-bg3">💸 Cost: <div className="prop-hl">{fileURL} pesos</div> </div>
         </div>  
         <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
       {/*}
       <div className ="proposal-main">
-        <div className="proposal-sub">Costo: {budget}</div>
-        <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+        <div className="proposal-sub">Costo: {fileURL}</div>
+        <div className="proposal-subaction">VOTO to vote:{requiredVotoToVote} VOTO</div>
       </div>
       */}
       <div class="yellow">made by {proposer}</div><br/>
@@ -156,12 +156,12 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
         {!hasVoted?
         <a class="prop-bgf" onClick={handleOnClickFor}><h1 class="votef">Vote for</h1></a>
         :
-        <div class="prop-bgf2"><h2>For:<br/>{forVotes} TARO</h2></div>    
+        <div class="prop-bgf2"><h2>For:<br/>{forVotes} VOTO</h2></div>    
         }
         {!hasVoted ?
         <a class="prop-bga" onClick={handleOnClickAgainst}><h1 class="votef">Vote against</h1></a>
         : 
-        <div class="prop-bga2"><h2> Against:<br/>{againstVotes} TARO</h2></div>
+        <div class="prop-bga2"><h2> Against:<br/>{againstVotes} VOTO</h2></div>
         }
       </div>  
       </div>
@@ -174,17 +174,17 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
         <div class="mini-title">🎯 Objetivo:</div>
         <div class="prop-hl"> {title}</div><br/>
         <div class="grid-prop">      
-          <div class="minit-bg">⚙️ Acción: <div class="prop-hl">{typeOfAction}</div></div>
-          <div class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></div>      
-          <div class="minit-bg3"> 📍 Dónde: <div className="prop-hl">{neighborhood}</div></div>
-          <div class="minit-bg3">💸 Costo: <div className="prop-hl">{budget} pesos</div> </div>
+        <div class="minit-bg">⚙️ Acción: <div class="prop-hl2">{typeOfAction}</div></div>
+            <div class="minit-bg2">🤳 Social Media: <a href={web2URL}><div className="prop-hl">Ver publicación</div></a></div>      
+            <div class="minit-bg3"> 📍 Dónde: <a href={locationURL}><div className="prop-hl">Ver Gooogle Maps</div></a></div>
+            <div class="minit-bg3">☁️ Archivo o Contenido: <a href={fileURL}><div className="prop-hl">Ver en la nube</div></a> </div>
         </div>
         
         <div class="description-bg"><div>📑 Descripción:</div> <div class="prop-description">{description}</div></div>
         {/*}
         <div className ="proposal-main">
-          <div className="proposal-sub">Costo: {budget}</div>
-          <div className="proposal-subaction">TARO to vote:{requiredTaroToVote} TARO</div>
+          <div className="proposal-sub">Costo: {fileURL}</div>
+          <div className="proposal-subaction">VOTO to vote:{requiredVotoToVote} VOTO</div>
         </div>
         */}
         <div class="author">Hecha por {proposer}</div><br/>
@@ -192,12 +192,12 @@ const Proposal = ({title, typeOfAction, neighborhood, personInCharge, descriptio
           {!hasVoted?
           <a class="prop-bgf" onClick={handleOnClickFor}><h1 class="votef">Vota <br/>a favor</h1></a>
           :
-          <div class="prop-bgf2">A favor:<br/>{forVotes}<br/>TARO</div>    
+          <div class="prop-bgf2">A favor:<br/>{forVotes}<br/>VOTO</div>    
           }
           {!hasVoted ?
           <a class="prop-bga" onClick={handleOnClickAgainst}><h1 class="votef">Vota <br/>en contra</h1></a>
           : 
-          <div class="prop-bga2"> En contra:<br/>{againstVotes}<br/> TARO</div>
+          <div class="prop-bga2"> En contra:<br/>{againstVotes}<br/> VOTO</div>
           }
         </div>      
     </div>

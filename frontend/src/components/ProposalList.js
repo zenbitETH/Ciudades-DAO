@@ -10,13 +10,13 @@ import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-import prop from '../assets/prop.png';
+import prop from '../assets/prop.svg';
 import vote2 from '../assets/vote2.svg';
 import past from '../assets/past.png';
 import key from '../assets/about-img.svg'
@@ -24,7 +24,7 @@ import key from '../assets/about-img.svg'
 
 const ProposalList = () => {
   let [retrievedProposals, setRetrievedProposals] = useState([]);
-  let [taro, setTaro] = useState();
+  let [voto, setVoto] = useState();
   let [signerAddress, setSignerAddress] = useState();
   
 
@@ -102,17 +102,17 @@ const ProposalList = () => {
             let signer = await _ethersProvider.getSigner();
             setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let signerAddress = await signer.getAddress();
             console.log("signerAddress: ", signerAddress);
 
-            let _userBalance = await _taro.balanceOf(signerAddress);
+            let _userBalance = await _voto.balanceOf(signerAddress);
                 _userBalance = _userBalance.div(Math.pow(10,18).toString());
               console.log('_userBalance in useEffect: ', _userBalance.toString());
             if(_userBalance) {
@@ -188,17 +188,17 @@ const ProposalList = () => {
       let signer = await ethersProvider.getSigner();
       setEthersSigner(signer);
 
-      const _taro = new ethers.Contract(
-        taroAddress.Taro,
-        Taro.abi,
+      const _voto = new ethers.Contract(
+        votoAddress.Voto,
+        Voto.abi,
         signer
       );
-      setTaro(_taro);
+      setVoto(_voto);
 
       let signerAddress = await signer.getAddress();
       console.log("signerAddress in handleOnConnect: ", signerAddress);
 
-      let _userBalance = await _taro.balanceOf(signerAddress);
+      let _userBalance = await _voto.balanceOf(signerAddress);
           _userBalance = _userBalance.div(Math.pow(10,18).toString());
           console.log('_userBalance in useEffect: ', _userBalance.toString());
         if(_userBalance) {
@@ -270,18 +270,18 @@ const ProposalList = () => {
             let signer = await _ethersProvider.getSigner();
             // setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let _signerAddress = await signer.getAddress();
             // console.log("signerAddress: ", signerAddress);
             setSignerAddress(_signerAddress);
 
-            // let _userBalance = await _taro.balanceOf(signerAddress);
+            // let _userBalance = await _voto.balanceOf(signerAddress);
             // console.log('_userBalance in useEffect: ', _userBalance.toString());
             // if(_userBalance) {
             //   setUserBalance(_userBalance.toString());
@@ -343,12 +343,12 @@ const ProposalList = () => {
                   activeProposals.push({
                     title: proposal[9][0],
                     typeOfAction: proposal[9][1],
-                    neighborhood: proposal[9][2],
-                    personInCharge: proposal[9][3],
+                    locationURL: proposal[9][2],
+                    web2URL: proposal[9][3],
                     description: proposal[9][4],
                     expiration: proposal[9][5].toString(),
-                    budget: proposal[9][6].toString(),
-                    requiredTaroToVote: proposal[9][7].toString(),
+                    fileURL: proposal[9][6].toString(),
+                    requiredVotoToVote: proposal[9][7].toString(),
                     forVotes: proposal.forVotes.div('1000000000000000000').toString(),
                     againstVotes: proposal.againstVotes.div('1000000000000000000').toString(),
                     id: proposal.id.toString(),
@@ -378,12 +378,12 @@ const ProposalList = () => {
         <Proposal
           title={proposal.title}
           typeOfAction={proposal.typeOfAction}
-          neighborhood={proposal.neighborhood}
-          personInCharge={proposal.personInCharge}
+          locationURL={proposal.locationURL}
+          web2URL={proposal.web2URL}
           description={proposal.description}
           expiration={proposal.expiration}
-          budget={proposal.budget}
-          taroToVote={proposal.taroToVote}
+          fileURL={proposal.fileURL}
+          votoToVote={proposal.votoToVote}
           forVotes={proposal.forVotes}
           againstVotes={proposal.againstVotes}
           id={proposal.id}
@@ -397,7 +397,7 @@ const ProposalList = () => {
   });
   
   //const handleOnClickDelegate = async () => {
-  //  let delegate = await taro.delegate(signerAddress);
+  //  let delegate = await voto.delegate(signerAddress);
   //  let delegateReceipt = await delegate.wait(1);
   //  console.log('delegateReceipt: ', delegateReceipt);
   //}
@@ -415,18 +415,18 @@ const ProposalList = () => {
               <h1><span >Proposals to vote</span></h1><br/>
               <img src={vote2} alt="Alert about key" class="prop-img"/>
                 <div class="floating">
-                  <h3>Use the TARO you have earned to
-                   vote for governance proposals in the city of Querétaro.</h3>
-                  </div><h1>1 TARO = 1 Vote</h1><br/>
+                  <h3>Use the VOTO you have earned to
+                   vote for governance proposals in the city of Querévoto.</h3>
+                  </div><h1>1 VOTO = 1 Vote</h1><br/>
                 {list}
                 <div class="void-link">
                   <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="homevan"/> 
+                  <img src={past} class="ribvan"/> 
                     <div class="propsub">Past proposals</div>
                     <div class="propopt">Record</div>
                   </a></div>
                   <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="homevan"/> 
+                    <img src={prop} class="ribvan"/> 
                     <div class="propsub">Create a proposal</div>
                     <div class="propopt">Propose</div>
                   </a></div>
@@ -434,17 +434,17 @@ const ProposalList = () => {
             </div>
            :
             <div><br/>
-              <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+              <div class="center"><img src={vote2} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
               <h1><span  class="red">No proposals to vote</span></h1><br/>
       
                   <div class="void-link">
                   <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="homevan"/> 
+                  <img src={past} class="ribvan"/> 
                     <div class="propsub">Past proposals</div>
                     <div class="propopt">Record</div>
                   </a></div>
                   <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="homevan"/> 
+                    <img src={prop} class="ribvan"/> 
                     <div class="propsub">Create a proposal</div>
                     <div class="propopt">Propose</div>
                   </a></div>
@@ -454,7 +454,6 @@ const ProposalList = () => {
         </div> : <ValidationRequired />}</span>
         : 
         <div class="connect">
-          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
           <h1 class="white">Connect your web3 address</h1><br/>
         </div>
         }
@@ -464,49 +463,55 @@ const ProposalList = () => {
         {isConnected ?
             <span>{isValidated ? <div id="margin"><br/>
           {list.length > 0 ?
-            <div id="vote" className="props">
-              <h1><span >Propuestas por votar</span></h1><br/>
-              <img src={vote2} alt="Alert about key" class="prop-img"/>
-                <div class="floating">
-                  <h3>Usa tu TARO para votar por propuestas de VoTARO Ciudad DAO</h3>
-                  </div><h1>1 TARO = 1 Voto</h1><br/>
-                {list}
+            <div class="App">
+              <div id="vote" className="props">
+                <h2>Propuestas por votar</h2><br/>
+                  {list}
+              </div>
+              <div class="history">
                 <div class="void-link">
-                  <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="homevan"/> 
-                    <div class="propsub">Propuestas pasadas</div>
-                    <div class="propopt">Historial</div>
-                  </a></div>
-                  <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="homevan"/> 
-                    <div class="propsub">Crear propuesta</div>
-                    <div class="propopt">Proponer</div>
-                  </a></div>
+                  <a href="/PastProposals">
+                    <div class="hudH" >
+                      <div class="propsub">Historial</div>
+                      <div class="propopt">📅</div>
+                    </div>
+                  </a>
+                  <div/>
+                  <a href="/createProposal">
+                    <div class="hudH3">
+                      <div class="propsub">Proponer</div>
+                      <div class="propopt">💡</div>
+                    </div>  
+                  </a>
                 </div>
+              </div>       
             </div>
            :
-            <div><br/>
-              <div class="center"><img src={vote2} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-              <h1><span  class="red">Sin propuestas por votar</span></h1><br/>
-          
-                  <div class="void-link">
-                  <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="homevan"/> 
-                    <div class="propsub">Propuestas pasadas</div>
-                    <div class="propopt">Historial</div>
-                  </a></div>
-                  <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="homevan"/> 
-                    <div class="propsub">Crear propuesta</div>
-                    <div class="propopt">Proponer</div>
-                  </a></div>
+            <div class="App">
+              <h2><span  class="red">Sin propuestas por votar</span></h2><br/>
+              <div class="history">
+                <div class="void-link">
+                  <a href="/PastProposals">
+                    <div class="hudH" >
+                      <div class="propsub">Historial</div>
+                      <div class="propopt">📅</div>
+                    </div>
+                  </a>
+                  <div/>
+                  <a href="/createProposal">
+                    <div class="hudH3">
+                      <div class="propsub">Proponer</div>
+                      <div class="propopt">💡</div>
+                    </div>  
+                  </a>
                 </div>
+              </div>
             </div>
           }
         </div> : <ValidationRequired />}</span>
         : 
         <div class="connect">
-          <div class="center"><img src={key} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
           <h1 class="white">Conecta tu llave web3</h1>
         </div>
         }

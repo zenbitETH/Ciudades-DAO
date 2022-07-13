@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
-import verify from '../assets/verify.png';
+import verify from '../assets/verify.svg';
 
 const ValidationRequired = () => {
   let [isEnglish] = useContext(LanguageContext);

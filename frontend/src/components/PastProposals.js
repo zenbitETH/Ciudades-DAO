@@ -11,24 +11,24 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import ValidationRequired from '../alerts/ValidationRequired';
 import { EthersContext } from '../contexts/EthersContext';
 
-import Taro from '../contracts/contracts/Taro.sol/Taro.json';
-import taroAddress from '../contracts/contracts/Taro/contract-address.json';
+import Voto from '../contracts/contracts/Voto.sol/Voto.json';
+import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-import prop from '../assets/prop.png';
+import prop from '../assets/prop.svg';
 import rprop from '../assets/rprop.png';
 import aprop from '../assets/aprop.png';
-import vote from '../assets/vote.png';
+import vote from '../assets/vote.svg';
 import vote2 from '../assets/vote2.svg';
 import reward from '../assets/TAROrew.png';
-import verify from '../assets/verify.png';
+import verify from '../assets/verify.svg';
 
 
 
 const PastProposals = () => {
-  let [taro, setTaro] = useState();
+  let [voto, setVoto] = useState();
   let [signerAddress, setSignerAddress] = useState();
   let [approvedProposals, setApprovedProposals] = useState([]);
   let [rejectedProposals, setRejectedProposals] = useState([]);
@@ -93,18 +93,18 @@ const PastProposals = () => {
             let signer = await _ethersProvider.getSigner();
             // setEthersSigner(signer);
 
-            const _taro = new ethers.Contract(
-              taroAddress.Taro,
-              Taro.abi,
+            const _voto = new ethers.Contract(
+              votoAddress.Voto,
+              Voto.abi,
               signer
             );
-            setTaro(_taro);
+            setVoto(_voto);
 
             let _signerAddress = await signer.getAddress();
             // console.log("signerAddress: ", signerAddress);
             setSignerAddress(_signerAddress);
 
-            // let _userBalance = await _taro.balanceOf(signerAddress);
+            // let _userBalance = await _voto.balanceOf(signerAddress);
             // console.log('_userBalance in useEffect: ', _userBalance.toString());
             // if(_userBalance) {
             //   setUserBalance(_userBalance.toString());
@@ -149,12 +149,12 @@ const PastProposals = () => {
                   pastProposals.push({
                     title: proposal[9][0],
                     typeOfAction: proposal[9][1],
-                    neighborhood: proposal[9][2],
-                    personInCharge: proposal[9][3],
+                    locationURL: proposal[9][2],
+                    web2URL: proposal[9][3],
                     description: proposal[9][4],
                     expiration: proposal[9][5].toString(),
-                    budget: proposal[9][6].toString(),
-                    requiredTaroToVote: proposal[9][7].toString(),
+                    fileURL: proposal[9][6].toString(),
+                    requiredVotoToVote: proposal[9][7].toString(),
                     forVotes: proposal.forVotes.div('1000000000000000000').toString(),
                     againstVotes: proposal.againstVotes.div('1000000000000000000').toString(),
                     id: proposal.id.toString(),
@@ -199,12 +199,12 @@ const PastProposals = () => {
         <ApprovedProposal
           title={proposal.title}
           typeOfAction={proposal.typeOfAction}
-          neighborhood={proposal.neighborhood}
-          personInCharge={proposal.personInCharge}
+          locationURL={proposal.locationURL}
+          web2URL={proposal.web2URL}
           description={proposal.description}
           expiration={proposal.expiration}
-          budget={proposal.budget}
-          taroToVote={proposal.taroToVote}
+          fileURL={proposal.fileURL}
+          votoToVote={proposal.votoToVote}
           forVotes={proposal.forVotes}
           againstVotes={proposal.againstVotes}
           id={proposal.id}
@@ -223,12 +223,12 @@ const PastProposals = () => {
         <RejectedProposal
           title={proposal.title}
           typeOfAction={proposal.typeOfAction}
-          neighborhood={proposal.neighborhood}
-          personInCharge={proposal.personInCharge}
+          locationURL={proposal.locationURL}
+          web2URL={proposal.web2URL}
           description={proposal.description}
           expiration={proposal.expiration}
-          budget={proposal.budget}
-          taroToVote={proposal.taroToVote}
+          fileURL={proposal.fileURL}
+          votoToVote={proposal.votoToVote}
           forVotes={proposal.forVotes}
           againstVotes={proposal.againstVotes}
           id={proposal.id}
@@ -251,8 +251,8 @@ const PastProposals = () => {
         ?
         <section class="proplist">
           <br/><br/>
-          <h1><span class="yellow">Past Proposals</span></h1><br/><br/>
-          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
+          <h2><span class="yellow">Past Proposals</span></h2><br/><br/>
+          <div class="center"><img src={vote} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
         
           <div id="margin" className= "props">
             <div>
@@ -291,7 +291,7 @@ const PastProposals = () => {
                     </div>
                     :
                     <div className="void">                
-                    <h1><span class="red">There are no approved proposals</span></h1><br/>
+                    <h2><span class="red">There are no approved proposals</span></h2><br/>
                       <div class="floating">
                         <h3>Create a proposal or validate your account to participate.
                           You can also view the proposal history or learn more before you start.
@@ -329,7 +329,7 @@ const PastProposals = () => {
                           <div class="propopt">Vote</div></a>
                         </div>
                       </div><br/>
-                      <h1 class="rproposal1">Rejected Proposals</h1>
+                      <h2 class="rproposal1">Rejected Proposals</h2>
                       {rejectedList}
                       <div class="void-link">
                         <div class="prop-bgh"><a onClick={handleOnApprove}>
@@ -346,7 +346,7 @@ const PastProposals = () => {
                     </div>
                     :
                     <div className="void">                
-                    <h1><span class="red">There are no rejected proposals</span></h1><br/>
+                    <h2><span class="red">There are no rejected proposals</span></h2><br/>
                       <div class="floating">
                         <h3>Create a proposal or validate your account to participate.
                           You can also view the proposal history or learn more before you start.
@@ -374,9 +374,9 @@ const PastProposals = () => {
         :
         <section class="proplist">
           <br/><br/>
-          <h1><span class="yellow">Propuestas anteriores</span></h1><br/><br/>
-          <div class="center"><img src={vote} id="CityDAO" alt="Querétaro DAO" class="prop-img"/></div>
-          <div id="margin" className= "props" >
+          
+          <div id="margin" className= "props">
+            <h2><span class="yellow">Propuestas anteriores</span></h2>
             <div>
               {showApproved
                 ?
@@ -384,54 +384,54 @@ const PastProposals = () => {
                   {approvedList.length > 0
                     ?
                     <div className="space">
-                        <div id="margin">
+                      <div class="history">
                         <div class="void-link">
-                          <div class="prop-bgh"><a onClick={handleOnApprove}>
-                            <img src={rprop} class="ribvan"/> 
-                            <div class="propsub">Ver propuestas</div>
-                            <div class="propopt">Rechazadas </div>
-                            </a></div>
-                            <div class="prop-bg2"><a href="/ProposalList#vote">
-                            <img src={vote2} class="ribvan"/>
-                            <div class="propsub">Propuestas disponibles</div>
-                            <div class="propopt">Vota</div></a>
-                          </div>
+                          <a onClick={handleOnApprove} >
+                            <div class="hudH">
+                              <div class="propsub">Rechazadas</div>
+                              <div class="propopt">👎 </div>
+                            </div>
+                          </a>
+                          <a href="/ProposalList#vote">
+                            <div  class="hudH2">
+                              <div class="propsub">DAO</div>
+                              <div class="propopt">🗳️</div>
+                            </div>
+                          </a>
+                          <a href="/CreateProposal" class="hudH3">
+                            <div >
+                              <div class="propsub">Proponer</div>
+                              <div class="propopt">💡</div>
+                            </div>
+                          </a>
                         </div>
-                        <br/>
                       </div>
                        <div id="margin"><h1 class="aproposal1">Propuestas aprobadas</h1>{approvedList}</div>
-                      <div class="void-link">
-                        <div class="prop-bgh"><a onClick={handleOnApprove}>
-                          <img src={rprop} class="ribvan"/> 
-                          <div class="propsub">Ver propuestas</div>
-                          <div class="propopt">Rechazadas </div>
-                        </a></div>
-                        <div class="prop-bg"><a href="/createProposal">
-                          <img src={prop} class="ribvan"/> 
-                          <div class="propsub">Crea una propuesta</div>
-                          <div class="propopt">Proponer</div>
-                        </a></div>
-                      </div>
                     </div>
                     :
                     <div className="void">                
-                    <h1><span class="red">No hay propuestas aprobadas</span></h1><br/>
-                      <div class="floating">
-                        <h3>Crea una propuesta o valida tu cuenta para participar. 
-                          También puedes ver el historial de propuesta o conoce más antes de empezar.
-                        </h3>
-                      </div>
-                      <div class="void-link">
-                        <div class="bg-grid3"><a onClick={handleOnApprove}>
-                        <img src={rprop} class="ribvan"/> 
-                        <div class="propsub">Ver propuestas</div>
-                            <div class="propopt">Rechazadas </div>
-                        </a></div>
-                        <div class="bg-grid3"><a href="/createProposal">
-                          <img src={prop} class="ribvan"/> 
-                          <div class="propsub">Crea una propuesta</div>
-                          <div class="propopt">Proponer</div>
-                        </a></div>
+                    <h2><span class="red">No hay propuestas aprobadas</span></h2><br/>
+                      <div class="history">
+                        <div class="void-link">
+                          <a onClick={handleOnApprove} >
+                            <div class="hudH">
+                              <div class="propsub">Rechazadas</div>
+                              <div class="propopt">👎 </div>
+                            </div>
+                          </a>
+                          <a href="/ProposalList#vote">
+                            <div  class="hudH2">
+                              <div class="propsub">Propuestas disponibles</div>
+                              <div class="propopt">Vota</div>
+                            </div>
+                          </a>
+                          <a href="/CreateProposal" class="hudH3">
+                            <div >
+                              <div class="propsub">Crear propuesta</div>
+                              <div class="propopt">Proponer</div>
+                            </div>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   }
@@ -440,55 +440,58 @@ const PastProposals = () => {
                 <div>
                   {rejectedList.length > 0
                     ?
-                    <div className="space">
+                  <div className="space">
+                    <div class="history">
                       <div class="void-link">
-                        <div class="prop-bgh"><a onClick={handleOnApprove}>
-                          <img src={aprop} class="ribvan"/> 
-                          <div class="propsub">Ver propuestas</div>
-                          <div class="propopt">Aprobadas </div>
-                          </a></div>
-                          <div class="prop-bg2"><a href="/ProposalList#vote">
-                          <img src={vote2} class="ribvan"/>
-                          <div class="propsub">Propuestas disponibles</div>
-                          <div class="propopt">Vota</div></a>
-                        </div>
-                      </div><br/>
-                      <h1 class="rproposal1">Propuestas rechazadas</h1>
-                      {rejectedList}
-                      <div class="void-link">
-                        <div class="prop-bgh"><a onClick={handleOnApprove}>
-                          <img src={aprop} class="ribvan"/> 
-                          <div class="propsub">Ver propuestas</div>
-                          <div class="propopt">Aprobadas </div>
-                        </a></div>
-                        <div class="prop-bg"><a href="/createProposal">
-                          <img src={prop} class="ribvan"/> 
-                          <div class="propsub">Crea una propuesta</div>
-                          <div class="propopt">Proponer</div>
-                        </a></div>
+                        <a onClick={handleOnApprove} >
+                          <div class="hudH">
+                            <div class="propsub">Aprobadas</div>
+                            <div class="propopt">👍 </div>
+                          </div>
+                        </a>
+                        <a href="/ProposalList#vote">
+                          <div  class="hudH2">
+                            <div class="propsub">DAO</div>
+                            <div class="propopt">🗳️</div>
+                          </div>
+                        </a>
+                        <a href="/CreateProposal" class="hudH3">
+                          <div >
+                            <div class="propsub">Proponer</div>
+                            <div class="propopt">💡</div>
+                          </div>
+                        </a>
                       </div>
                     </div>
+                    <h1 class="rproposal1">Propuestas rechazadas</h1>
+                    {rejectedList}
+                  </div>
                     :
-                    <div className="void">                
-                    <h1><span class="red">No hay propuestas rechazadas</span></h1><br/>
-                      <div class="floating">
-                        <h3>Crea una propuesta o valida tu cuenta para participar. 
-                          También puedes ver el historial de propuesta o conoce más antes de empezar.
-                        </h3>
-                      </div>
+                    <div>                
+                    <h2><span class="red">No hay propuestas rechazadas</span></h2><br/>
+                    <div class="history">
                       <div class="void-link">
-                        <div class="bg-grid3"><a onClick={handleOnApprove}>
-                        <img src={aprop} class="ribvan"/> 
-                          <div class="propsub">Ver propuestas</div>
-                          <div class="propopt">Aprobadas </div>
-                        </a></div>
-                        <div class="bg-grid3"><a href="/createProposal">
-                          <img src={prop} class="ribvan"/> 
-                          <div class="propsub">Crea una propuesta</div>
-                          <div class="propopt">Proponer</div>
-                        </a></div>
+                        <a onClick={handleOnApprove} class="hudH">
+                          <div >
+                            <div class="propsub">Aprobadas</div>
+                            <div class="propopt">👍 </div>
+                          </div>
+                        </a>
+                        <a href="/ProposalList#vote" class="hudH2">
+                          <div >
+                            <div class="propsub">DAO</div>
+                            <div class="propopt">🗳️</div>
+                          </div>
+                        </a>
+                        <a href="/CreateProposal" class="hudH3">
+                          <div >
+                            <div class="propsub">Proponer</div>
+                            <div class="propopt">💡</div>
+                          </div>
+                        </a>
                       </div>
                     </div>
+                  </div>
                   }
                 </div>
               }
