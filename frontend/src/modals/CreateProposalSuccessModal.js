@@ -1,13 +1,10 @@
-import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
-import { LanguageContext } from '../contexts/LanguageContext';
 
 import prop from '../assets/prop.svg';
 import send from '../assets/sended.svg';
 import vote2 from '../assets/vote2.svg';
 
 const CreateProposalSuccessModal = (props) => {
-  let [isEnglish] = useContext(LanguageContext);
 
   return (
     <div >

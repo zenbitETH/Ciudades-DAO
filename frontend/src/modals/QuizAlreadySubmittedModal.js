@@ -1,6 +1,4 @@
-import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
-import { LanguageContext } from '../contexts/LanguageContext';
 
 import confirm from '../assets/confirm.svg';
 import prop from '../assets/prop.svg';
@@ -8,7 +6,6 @@ import vote2 from '../assets/vote2.svg';
 
 
 const QuizAlreadySubmittedModal = (props) => {
-  let [isEnglish] = useContext(LanguageContext);
 
   return (
     <div>

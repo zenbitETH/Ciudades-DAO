@@ -5,7 +5,6 @@ import ApprovedProposal from './ApprovedProposal';
 import RejectedProposal from './RejectedProposal';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
-import ValidationRequired from '../alerts/ValidationRequired';
 import { EthersContext } from '../contexts/EthersContext';
 
 import Voto from '../contracts/contracts/Voto.sol/Voto.json';

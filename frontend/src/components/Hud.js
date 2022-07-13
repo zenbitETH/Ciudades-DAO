@@ -280,7 +280,7 @@ const Header = () => {
                 zenbit.eth /<span> 2022</span>
               </div>
             </a>
-            <img class="hudlogo" src={logo}/>
+            <a href='/'><img class="hudlogo" src={logo}/></a>
          </div>
           : 
           <div>  

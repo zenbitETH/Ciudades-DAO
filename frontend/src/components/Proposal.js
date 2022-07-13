@@ -3,7 +3,6 @@ import { Card, Button } from 'react-bootstrap';
 import detectEthereumProvider from '@metamask/detect-provider';
 import { ethers } from 'ethers';
 import CountdownClock from './CountdownClock';
-import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 
@@ -19,7 +18,6 @@ const Proposal = ({title, typeOfAction, locationURL, web2URL, description, expir
   let [voto, setVoto] = useState();
   let [signerAddress, setSignerAddress] = useState();
 
-  let [isEnglish] = useContext(LanguageContext);
   // let {governorAlpha} = useContext(GovernorAlphaContext);
   let {provider} = useContext(EthersContext);
 

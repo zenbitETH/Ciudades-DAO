@@ -1,9 +1,6 @@
-import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
-import { LanguageContext } from '../contexts/LanguageContext';
 
 const IsLoadingModal = (props) => {
-  let [isEnglish] = useContext(LanguageContext);
 
   return (
     <div>

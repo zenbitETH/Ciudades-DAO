@@ -1,11 +1,8 @@
 import {Button } from 'react-bootstrap';
-import { useContext } from 'react';
-import { LanguageContext } from '../../contexts/LanguageContext';
 import '../../styles/Home.css';
 
 
 const PolygonButton = ({handleOnClick}) => {
-  let [isEnglish] = useContext(LanguageContext);
 
   return (
     <div>

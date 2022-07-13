@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from 'react';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import Question from './Question';
+import { englishQuiz } from '../REALQUIZ/englishQuiz';
 import { spanishQuiz } from '../REALQUIZ/spanishQuiz';
 import { QuizContext } from '../contexts/QuizContext';
 import QuizFailureModal from '../modals/QuizFailureModal';
@@ -13,6 +14,7 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { VotoContext } from '../contexts/VotoContext';
 
+import verify from '../assets/verify.svg';
 import key from '../assets/about-img.svg'
 
 import Voto from '../contracts/contracts/Voto.sol/Voto.json';
@@ -261,6 +263,46 @@ const Quiz = () => {
 
   return (
     <body id="quiz">
+      {isEnglish === 'english' ?
+        <section>
+          {isConnected ?
+          <div >
+            <h2><span id="vote">Validate your account</span></h2><br/>
+            <div> 
+            <br/><br/>
+            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
+            <div id="margin">{englishQuestions}</div>
+            </QuizContext.Provider>
+            <div className="floating">
+              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Validate</div>
+            </div>
+            </div>
+            
+            <QuizFailureModal
+              show={failureModalShow}
+              onHide={handleOnFailure}
+            />
+            <QuizSuccessModal
+              show={successModalShow}
+              onHide={handleOnSuccess}
+            />
+            <QuizAlreadySubmittedModal
+              show={alreadySubmittedModal}
+              onHide={handleOnAlreadySubmitted}
+            />
+              <IsLoadingModal
+                show={loadingModalShow}
+                onHide={handleOnLoadingModal}
+              />
+          </div>
+          :
+          <div class="connect2">
+          <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
+          <h1 class="white">Connect your web3 wallet</h1><br/>
+        </div>
+          }
+        </section>
+        :
         <section>
           {isConnected ?
           <div>
@@ -298,6 +340,7 @@ const Quiz = () => {
         </div>
         }
         </section>
+      }
     </body>
   );
 };

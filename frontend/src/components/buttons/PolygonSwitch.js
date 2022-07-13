@@ -1,9 +1,7 @@
 import { Button } from 'react-bootstrap';
 import '../../styles/Home.css';
 
-
 const PolygonSwitch = () => {
-
   return (
     <div>
     <Button variant="secondary" disabled>
@@ -13,5 +11,4 @@ const PolygonSwitch = () => {
     </div>
   );
 };
-
 export default PolygonSwitch;

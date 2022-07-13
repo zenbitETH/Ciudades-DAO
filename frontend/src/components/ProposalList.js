@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import Proposal from './Proposal';
-import { LanguageContext } from '../contexts/LanguageContext';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import ValidationRequired from '../alerts/ValidationRequired';
@@ -16,9 +15,6 @@ import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-import prop from '../assets/prop.svg';
-import vote2 from '../assets/vote2.svg';
-import past from '../assets/past.png';
 import key from '../assets/about-img.svg'
 
 
@@ -29,7 +25,6 @@ const ProposalList = () => {
   
 
   let {setIsValidated,isValidated} = useContext(ValidationRequiredContext);
-  let [isEnglish] = useContext(LanguageContext);
   let {setGovernorAlpha} = useContext(GovernorAlphaContext);
 
   let [ethersProvider, setEthersProvider] = useState();
