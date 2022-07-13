@@ -1,11 +1,9 @@
 import { useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import { QuizContext } from '../contexts/QuizContext';
-import { LanguageContext } from '../contexts/LanguageContext';
 
 const Question = ({question, answers, number}) => {
   let { userAnswers, setUserAnswers } = useContext(QuizContext);
-  let [isEnglish] = useContext(LanguageContext);
   const handleOnAnswer = e => {
     userAnswers.push(e.target.value);
     setUserAnswers(userAnswers);
@@ -25,21 +23,12 @@ const Question = ({question, answers, number}) => {
 ))
   return (
     <div>
-      {isEnglish === 'english' ?
       <Card className="question-card">
         <Card.Body className="main">
           <div class="quiz-q">{question}</div><br/>
           <div class="quiz-grid"> {answer} </div>
         </Card.Body>
       </Card>
-      :
-      <Card className="question-card">
-        <Card.Body className="main">
-          <div class="quiz-q">{question}</div><br/>
-          <div class="quiz-grid"> {answer} </div>
-        </Card.Body>
-      </Card>
-    }
     </div>
   );
 };

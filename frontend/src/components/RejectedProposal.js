@@ -1,8 +1,5 @@
-import { useContext } from 'react';
-import { Card } from 'react-bootstrap';
 // import detectEthereumProvider from '@metamask/detect-provider';
 // import { ethers } from 'ethers';
-import { LanguageContext } from '../contexts/LanguageContext';
 // import { EthersContext } from '../contexts/EthersContext';
 // import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 
@@ -16,8 +13,6 @@ const RejectedProposal = ({title, typeOfAction, locationURL, web2URL, descriptio
   // let [governorAlpha, setGovernorAlpha] = useState();
   // let [voto, setVoto] = useState();
   // let [signerAddress, setSignerAddress] = useState();
-
-  let [isEnglish] = useContext(LanguageContext);
   // let {governorAlpha} = useContext(GovernorAlphaContext);
   // let {provider} = useContext(EthersContext);
   //
@@ -109,36 +104,6 @@ const RejectedProposal = ({title, typeOfAction, locationURL, web2URL, descriptio
 
   return (
     <div>
-      {isEnglish === 'english'
-      ?
-      <div class="proposal">
-        <div class="proposal-expiration">
-          <div class="prop-title">💡 Proposal # {id}</div>
-          <span class="yellowr"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
-        </div>
-        <div class="rproposal">Rejected by {againstVotes} votes</div>
-        <div class="mini-title">🎯 Objetive:</div>
-        <div class="prop-hl"> {title}</div><br/><br/>
-        <div class="grid-prop">
-          <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
-          <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{web2URL}</div></div>      
-          <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{locationURL}</div></div>
-          <div class="minit-bg3">💸 Cost: <div className="prop-hl">{fileURL} pesos</div> </div>
-        </div>
-        <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
-          {/*}
-          <div className ="proposal-main">
-            <div className="proposal-sub">Costo: {fileURL}</div>
-            <div className="proposal-subaction">VOTO to vote:{requiredVotoToVote} VOTO</div>
-          </div>
-          */}
-        <div class="author">made by {proposer}</div><br/>
-        <div className="vote-grid">
-          <div class="prop-bgw">Supported by:<br/>{forVotes}<br/>VOTO</div>    
-          <div class="prop-bga2">Rejected by:<br/>{againstVotes}<br/> VOTO</div>
-        </div>
-      </div>  
-    :
     <div class="proposal">
       <div class="proposal-expiration">
           <div class="prop-title">💡 Propuesta # {id}</div>
@@ -161,13 +126,11 @@ const RejectedProposal = ({title, typeOfAction, locationURL, web2URL, descriptio
           </div>
           */}
       <div class="author"> Hecha por {proposer}</div><br/>
-      <div className="vote-grid">
-        <div class="prop-bgw">Votos a favor:<br/>{forVotes}<br/>VOTO</div>    
-        <div class="prop-bga2">Rechazada por:<br/>{againstVotes}<br/> VOTO</div>
+        <div className="vote-grid">
+          <div class="prop-bgw">Votos a favor:<br/>{forVotes}<br/>VOTO</div>    
+          <div class="prop-bga2">Rechazada por:<br/>{againstVotes}<br/> VOTO</div>
+        </div>
       </div>
-    </div>
-
-      }
     </div>
   );
 };

@@ -10,7 +10,6 @@ import SwitchPolygonAlert from './SwitchPolygonAlert';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { VotoContext } from '../contexts/VotoContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
-import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
@@ -22,7 +21,6 @@ import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlph
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
 const Header = () => {
-  let [isEnglish, setLoc] = useContext(LanguageContext);
 
   const handleOnClick = () => {
     setLoc();
@@ -265,54 +263,9 @@ const Header = () => {
 
 
   return (
-  <div>
-      {isEnglish === 'english' ?
+    <div>
       <div class="center">
-       
-        <nav class="topHud">
-            
-            {isConnected ? 
-            <div>
-              <div class="topGrid">
-                <a href='/'><div class="hud0">{userBalance} VOTO</div></a>
-                <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Complete the web3 test ⚠️</div></a>}</div>
-              </div>
-              <a href="https://zenbit.mx">
-                <div class="zenbitBTM">
-                  zenbit.eth /<span> 2022</span>
-                </div>
-              </a>
-              <a href='/'><div class="langb"onClick={handleOnClick}>🌐Esp</div></a>
-           </div>
-            : 
-            <div>  
-              <a href="https://zenbit.mx">
-                <div class="zenbit">
-                  zenbit.eth /<span> 2022</span>
-                </div>
-              </a>
-              <div class="bottomHud">
-                {!isMetamaskInstalled ?
-                  <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
-                  <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
-                }
-              </div>
-              <a href='/Home'><div class="lang"onClick={handleOnClick}>🌐Esp</div></a>
-            </div> }       
-            
-            {/*!IsPolygonSwitched ?
-              <div>
-                <SwitchPolygonAlert/> {isConnectingToPolygon ?
-                <PolygonSwitch /> : <PolygonButton handleOnClick={listPolygonInMetamask}/>}
-              </div>
-              : 
-              ''
-                */}         
-          </nav>
-      </div>
-      :
-      <div class="center">
-          <nav>    
+        <nav>    
           {isConnected ? 
           <div>            
             <div class="topHud">
@@ -362,7 +315,6 @@ const Header = () => {
               */}         
         </nav>          
       </div>
-      }
     </div>
   );
 };

@@ -263,46 +263,6 @@ const Quiz = () => {
 
   return (
     <body id="quiz">
-      {isEnglish === 'english' ?
-        <section>
-          {isConnected ?
-          <div >
-            <h2><span id="vote">Validate your account</span></h2><br/>
-            <div> 
-            <br/><br/>
-            <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
-            <div id="margin">{englishQuestions}</div>
-            </QuizContext.Provider>
-            <div className="floating">
-              <div className="verify-bt" onClick={handleOnSubmitAnswers}> Validate</div>
-            </div>
-            </div>
-            
-            <QuizFailureModal
-              show={failureModalShow}
-              onHide={handleOnFailure}
-            />
-            <QuizSuccessModal
-              show={successModalShow}
-              onHide={handleOnSuccess}
-            />
-            <QuizAlreadySubmittedModal
-              show={alreadySubmittedModal}
-              onHide={handleOnAlreadySubmitted}
-            />
-              <IsLoadingModal
-                show={loadingModalShow}
-                onHide={handleOnLoadingModal}
-              />
-          </div>
-          :
-          <div class="connect2">
-          <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
-          <h1 class="white">Connect your web3 wallet</h1><br/>
-        </div>
-          }
-        </section>
-        :
         <section>
           {isConnected ?
           <div>
@@ -340,7 +300,6 @@ const Quiz = () => {
         </div>
         }
         </section>
-      }
     </body>
   );
 };

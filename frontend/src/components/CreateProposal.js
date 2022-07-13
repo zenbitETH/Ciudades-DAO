@@ -1,16 +1,14 @@
 import { useState, useContext, useEffect } from 'react';
-import { Form, Button, Row} from 'react-bootstrap';
+import { Form, Row} from 'react-bootstrap';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import IsLoadingModal from '../modals/IsLoadingModal';
 import CreateProposalSuccessModal from '../modals/CreateProposalSuccessModal';
 import CreateProposalErrorModal from '../modals/CreateProposalErrorModal';
-import { LanguageContext } from '../contexts/LanguageContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { VotoContext } from '../contexts/VotoContext';
 
-import prop from '../assets/prop.svg';
 
 import Voto from '../contracts/contracts/Voto.sol/Voto.json';
 import votoAddress from '../contracts/contracts/Voto/contract-address.json';
@@ -27,7 +25,6 @@ const CreateProposal = () => {
   let [signerAddress, setSignerAddress] = useState();
   let [successModalShow, setSuccessModalShow] = useState();
 
-  let [isEnglish] = useContext(LanguageContext);
   let {ethersSigner, setEthersSigner, provider, setProvider} = useContext(EthersContext);
   let {voto, setVoto} = useContext(VotoContext);
   let {governorAlpha, setGovernorAlpha} = useContext(GovernorAlphaContext);
@@ -205,156 +202,8 @@ const CreateProposal = () => {
 
   return (
     <body id="quiz">
-      {isEnglish === 'english'
-      ?
       <div id="proposal" class="newprop">
-      <h1><span  class="yellow">New Proposal</span></h1>
-      <div class="center"><img src={prop} alt="New proposal" class="prop-img"/></div>
-      
-      <Form autocomplete="off" id="margin">
-          <Form.Group as={Row} controlId="formTitle">
-          <Form.Label>
-            1. Proposal Title
-            </Form.Label>
-            <Form.Control type="text"
-              placeholder="🎯 what needs to be done?"
-              onChange={handleOnChangeTitle}/>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="formLocationURL" >
-            <Form.Label  >
-            2. Location
-            </Form.Label>
-              <Form.Control as="select" data-live-search="true"
-                onChange={handleOnChangeLocationURL}>
-                <option disabled selected>📍 Where will the proposal take place</option>
-                  <option>City Hall</option>
-                  <option>Street</option>
-                  <option>Bus Stop</option>
-                  <option>Church</option>
-                  <option>Police Station</option>
-                  <option>Firemen Station</option>
-                  <option>University</option>
-                  <option>Parks</option>
-                  <option>Art Gallery</option>
-                  <option>Market</option>
-                  <option>Food place</option>
-                  <option>Industrial Park</option>
-                  <option>Co-working</option>
-                  <option>Police Station</option>
-                  <option>Web</option>
-                  <option>DAO</option>
-              </Form.Control>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="formTypeOfAction">
-          <Form.Label >
-            3. Type of activity
-            </Form.Label>
-            <Form.Control as="select" data-live-search="true"
-              onChange={handleOnChangeTypeOfAction}>
-                <option disabled selected>⚙️ Select the type of acitivity</option>
-                <option>Face-to-face event</option>
-                <option>Online event</option>
-                <option>Ask for maintainance</option>
-                <option>Buy</option>
-                <option>Sell</option>
-                <option>Offer service</option>
-                <option>Offer digital talent</option>
-                <option>Offer industrial talent</option>
-                <option>Create Art</option>
-                <option>Create digital Content</option>
-                <option>Mixed event</option>
-            </Form.Control>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="formWeb2URL">    
-            <Form.Label  >
-              4. Person in charge
-            </Form.Label>
-            <Form.Control as="select" class="selectpicker show-tick form-control"
-              onChange={handleOnChangeWeb2URL}>
-              <option disabled selected>🦸 Who will do the proposal?</option>
-              <option>Public Worker / Government</option>
-              <option>Citizen</option>
-              <option>Artist</option>
-              <option>Pet lover</option>
-              <option>Scholar</option>
-              <option>Athlete</option>
-              <option>Chef</option>
-              <option>Industrial Talent</option>
-              <option>Merchant</option>
-              <option>Digital Creator</option>
-              <option>Developer</option>
-              
-            </Form.Control>
-          </Form.Group>
-
-          <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
-            <Form.Label>
-             5. Description
-          </Form.Label>
-          <Form.Control className="description" as="textarea"
-            type="text" rows={3}
-            placeholder="📑Give details about your proposal"
-            onChange={handleOnChangeDescription}/>
-          </Form.Group>
-
-          {/*
-          <Form.Group as={Row} controlId="formExpiration">
-            <Form.Label  >
-              Expiration
-            </Form.Label>
-            <Form.Control type="text" placeholder="expiration" onChange={handleOnChangeExpiration}/>
-          </Form.Group>
-          */}
-
-          <Form.Group as={Row} controlId="formFileURL">
-            <Form.Label  >
-              6. Cost
-            </Form.Label>
-            <Form.Control as="select"
-              onChange={handleOnChangeFileURL}>
-              <option disabled selected>💸 Proposal fileURL range</option>
-              <option value="0">0, voluntary, unknown</option>
-              <option value="1000">Up to 1,000 pesos</option>  
-              <option value="10000">Up to 10,0000 pesos</option>
-              <option value="100000">Up to 100,000 pesos</option>
-            </Form.Control>
-          </Form.Group>
-          {/*
-          <Form.Group as={Row} controlId="formRequiredVotoToVote">
-            <Form.Label  >
-              Required VOTO to vote
-          </Form.Label>
-            <Form.Control type="text" placeholder="required VOTO to vote" onChange={handleOnChangeRequiredVotoToVote}/>
-          </Form.Group>
-          */}
-          <a class="about-bt" href="#proposal">Check your post before sending</a>
-          <div class="center"><div class="quiz-bt" classntype="submit" onClick={handleOnSubmit}>💡 Create Proposal</div></div>
-          </Form>
-        <IsLoadingModal
-          show={loadingModalShow}
-          onHide={handleOnLoadingModal}
-        />
-
-        <CreateProposalErrorModal
-          show={errorModalShow}
-          onHide={handleOnErrorModal}
-        />
-
-        <CreateProposalSuccessModal
-          show={successModalShow}
-          onHide={handleOnAlreadySubmitted}
-        />
-      </div>
-
-        :
-
-      <div id="proposal" class="newprop">
-        
         <h2><span  class="yellow">Nueva propuesta</span></h2><br/><br/>
-
         <div class="history">
           <div class="void-link">
             <a href="/ProposalList">
@@ -482,7 +331,6 @@ const CreateProposal = () => {
             onHide={handleOnAlreadySubmitted}
           />
         </div>
-        }
       </body>
       );
     };

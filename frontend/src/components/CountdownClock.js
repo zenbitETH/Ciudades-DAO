@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useContext} from 'react'
-import { LanguageContext } from '../contexts/LanguageContext';
   
 
 const CountdownClock = ({timeToExpiration}) => {
-  let [isEnglish, setLoc] = useContext(LanguageContext);
   let [days, setDays] = useState();
   let [hours, setHours] = useState();
   let [minutes, setMinutes] = useState();
@@ -60,15 +57,9 @@ const CountdownClock = ({timeToExpiration}) => {
 
     return (
       <div>
-        {isEnglish === 'english' ?
-        <div>
-          Expires in {days} days, {hours}:{minutes}:{seconds}  
-        </div>
-        :
         <div>
           Expira en {days} días, {hours}:{minutes}:{seconds}
         </div>  
-        }
       </div>
     );
   };
