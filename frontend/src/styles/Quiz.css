@@ -49,8 +49,6 @@
     user-select: none;
     font-size: 1.3em;
   }
-
-  
   
   /* Hide the browser's default radio button */
   .container input {
@@ -88,10 +86,6 @@
     position: absolute;
     display: none;
   }
-  
-
-  
-
 
   @media only screen and (min-width: 1000px) {
     .quiz-q {

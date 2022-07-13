@@ -42,13 +42,15 @@
   left: 0;
   bottom: 0;
   z-index: 20;
+  width: 100%;
 }
 
 .void-link {
+  
   border-radius: 20px;
   font-family: 'Lexend Deca', sans-serif;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0em 0em 0em 0em;
   gap: 1em;
 }
@@ -123,6 +125,7 @@
     position: fixed;
     left: 0;
     top: 20%;
+    width: auto;
   }
 
   .void-link {

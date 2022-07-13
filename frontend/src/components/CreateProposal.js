@@ -354,6 +354,25 @@ const CreateProposal = () => {
       <div id="proposal" class="newprop">
         
         <h2><span  class="yellow">Nueva propuesta</span></h2><br/><br/>
+
+        <div class="history">
+          <div class="void-link">
+            <a href="/ProposalList">
+              <div class="hudH" >
+                
+                <div class="propsub">DAO</div>
+                <div class="propopt">🗳️</div>
+              </div>
+            </a>
+            <div/>
+            <a href="/PastProposals">
+              <div class="hudH3">
+                <div class="propsub">Historial</div>
+                <div class="propopt">📅</div>
+              </div>  
+            </a>
+          </div>
+        </div>
           
         <Form autocomplete="off" id="margin">
             <Form.Group as={Row} controlId="formTitle">

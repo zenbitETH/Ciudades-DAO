@@ -135,7 +135,7 @@ Nav {
   border-radius: 0px 25px 25px 0px;
 }
 
-.hud0, .hud1, .hud2, .hudH, .hudH2 {
+.hud0, .hud1, .hud2, .hudH, .hudH2, .hudH3 {
   background-size: 100% 100%;
   padding: 0.25em 1em 0.25em 1em;
   font-size: 1.5em;
@@ -160,8 +160,13 @@ Nav {
 }
 
 .hudH2 {
+  border-radius:  25px 25px 0px 0px;
+}
+
+.hudH3 {
   border-radius:  25px 0px 0px 0px;
 }
+
 
 .hud0 {
   border-radius:  0px 0 25px 0px;
@@ -177,7 +182,7 @@ Nav {
 }
 
 
-.hud0:hover, .hud1:hover, .hud2:hover, .lang:hover, .langb:hover,.hudH:hover, .hudH2:hover{ 
+.hud0:hover, .hud1:hover, .hud2:hover, .lang:hover, .langb:hover,.hudH:hover, .hudH2:hover, .hudH3:hover{ 
   background-color: #F9D92375;
   color: #Fff;
   cursor: pointer;
@@ -241,6 +246,10 @@ Nav {
     }
 
     .hudH2 {
+      border-radius:  0 25px 25px 0px;
+    }
+
+    .hudH3 {
       border-radius:  0 25px 25px 0px;
     }
 

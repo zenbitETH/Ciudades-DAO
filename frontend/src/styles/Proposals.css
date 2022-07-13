@@ -138,9 +138,10 @@ option:disabled {
 
 .proplist {
   padding: 0.5em;
-  margin-bottom: 5em;
   text-align: center;
   font-family: 'Lexend Deca';
+  height: 100vh;
+  overflow: auto;
 }
 
 
@@ -299,7 +300,7 @@ option:disabled {
 
 .prop-bgh:hover {
   cursor: pointer;
-  background: linear-gradient(45deg, #b5342dac, #b5342dac, #395b2c, #395b2c);
+  background: linear-gradient(45deg, #EB5353ac, #EB5353ac, #36AE7Cb4, #36AE7Cb4);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -346,7 +347,7 @@ option:disabled {
 
 .prop-bgf {
   padding: 1em;
-  background: linear-gradient(90deg, #2b284a00,#4a7a37,#395b2c,#2b284a00);
+  background: linear-gradient(90deg, #2b284a00,#36AE7Cb4,#36AE7Cb4,#2b284a00);
   border-radius: 25px;
   height: 175px;
   width: 100%;
@@ -359,7 +360,7 @@ option:disabled {
 
 .prop-bgf2 {
   padding: 1em;
-  background: linear-gradient(90deg, #2b284a00,#4a7a37,#395b2c,#2b284a00);
+  background: linear-gradient(90deg, #2b284a00,#36AE7Cb4,#36AE7Cb4,#2b284a00);
   background-size: 200% 200%;
   animation: gradient 2s ease infinite;
   border-radius: 25px;
@@ -378,14 +379,14 @@ option:disabled {
   cursor: pointer;
   border-width: 0.1em;
   border-style: solid;
-  background: linear-gradient(90deg, #2b284a00,#4a7a37,#395b2c,#2b284a00);
+  background: linear-gradient(90deg, #2b284a00,#36AE7Cb4,#36AE7Cb4,#2b284a00);
   background-size: 200% 200%;
   animation: gradient 2s ease infinite;
 }
 
 .prop-bga {
   padding: 1em;
-  background: linear-gradient(90deg,  #2b284a00,#b5342dac, #b5342dac,#2b284a00);
+  background: linear-gradient(90deg,  #2b284a00,#EB5353ac, #EB5353ac,#2b284a00);
   border-radius: 25px;
   height: 175px;
   width: 100%;
@@ -398,7 +399,7 @@ option:disabled {
 
 .prop-bga2 {
   padding: 1em;
-  background: linear-gradient(90deg,  #2b284a00,#b5342dac, #b5342dac,#2b284a00);
+  background: linear-gradient(90deg,  #2b284a00,#EB5353ac, #EB5353ac,#2b284a00);
   background-size: 200% 200%;
   animation: gradient 2s ease infinite;
   border-radius: 25px;
@@ -418,7 +419,7 @@ option:disabled {
   cursor: pointer;
   border-width: 0.1em;
   border-style: solid;
-  background: linear-gradient(90deg,  #2b284a00,#b5342dac, #b5342dac,#2b284a00);
+  background: linear-gradient(90deg,  #2b284a00,#EB5353ac, #EB5353ac,#2b284a00);
   background-size: 200% 200%;
   animation: gradient 2s ease infinite;
 }
@@ -484,7 +485,7 @@ option:disabled {
 
 .rproposal {
   width: auto;
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #EB5353b5, #EB5353b5, #2b284a00, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
   padding: 1em 1em;
@@ -495,7 +496,7 @@ option:disabled {
 
 .rproposal1 {
   width: auto;
-  background: linear-gradient(90deg, #2b284a00, #dc3840b5, #e26c72b5, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #EB5353b5, #EB5353b5, #2b284a00);
   background-size: 100% 100%;
   padding: 1em 1em;
   margin: 0em -1em 0.5em -1em;
@@ -505,7 +506,7 @@ option:disabled {
 
 .aproposal {
   width: auto;
-  background: linear-gradient(90deg, #2b284a00, #2b284a00, #395b2c, #395b2c, #2b284a00, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #2b284a00, #36AE7Cb4, #36AE7Cb4, #2b284a00, #2b284a00);
   background-size: 500% 500%;
   animation: gradient 2s ease infinite;
   padding: 1em 1em;
@@ -516,7 +517,7 @@ option:disabled {
 
 .aproposal1 {
   width: auto;
-  background: linear-gradient(90deg, #2b284a00, #395b2c, #395b2c, #2b284a00);
+  background: linear-gradient(90deg, #2b284a00, #36AE7Cb4, #36AE7Cb4, #2b284a00);
   background-size: 100% 100%;
   padding: 1em 1em;
   margin: 0em -1em 0.5em -1em;
@@ -529,7 +530,6 @@ option:disabled {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   color: #fff;
-  
   text-align: left;
 }
 
@@ -539,16 +539,19 @@ option:disabled {
   color: #FAC91A !important;
 }
 
-.prop-hl {
+.prop-hl, .prop-hl2 {
   font-size: clamp(1em, -1.2em + 2.1vw, 2.5rem);
   margin-bottom: 0.5em;
   font-weight: 300;
   color: #ffffff;
   text-align: justify ;
   position: relative; 
-  font-family: 'Lexend Deca';
   text-align: justify;
   overflow-wrap: break-word;
+ }
+
+ .prop-hl:hover {
+  color: #F9D923;
  }
 
 .description-bg {
@@ -642,7 +645,7 @@ option:disabled {
 }
 
 .author {
-  color: #FAC91A;
+  color: #36AE7C;
 }
 
 .vote-grid {

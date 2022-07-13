@@ -160,12 +160,12 @@ const ApprovedProposal = ({title,
           </div>
           <div class="aproposal">Arobada por  {forVotes} votos</div>
           <div class="mini-title">🎯 Objetivo:</div>
-          <div class="prop-hl"> {title}</div>
+          <div class="prop-hl2"> {title}</div>
           <div class="grid-prop">      
-            <div class="minit-bg">⚙️ Actividad: <div class="prop-hl">{typeOfAction}</div></div>
-            <div class="minit-bg2">🦸 Responsable: <div className="prop-hl">{personInCharge}</div></div>      
-            <div class="minit-bg3"> 📍 Lugar: <div className="prop-hl">{neighborhood}</div></div>
-            <div class="minit-bg3">💸 Costo: <div className="prop-hl">{budget} pesos</div> </div>
+            <div class="minit-bg">⚙️ Acción: <div class="prop-hl2">{typeOfAction}</div></div>
+            <div class="minit-bg2">🤳 Social Media: <a href={personInCharge}><div className="prop-hl">Ver publicación</div></a></div>      
+            <div class="minit-bg3"> 📍 Dónde: <a href={neighborhood}><div className="prop-hl">Ver Gooogle Maps</div></a></div>
+            <div class="minit-bg3">☁️ Archivo o Contenido: <a href={budget}><div className="prop-hl">Ver en la nube</div></a> </div>
           </div>
           <div class="description-bg">📑 Descripción: <div class="prop-description">{description}</div></div>
           {/*}
