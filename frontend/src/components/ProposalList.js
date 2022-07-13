@@ -454,7 +454,6 @@ const ProposalList = () => {
         </div> : <ValidationRequired />}</span>
         : 
         <div class="connect">
-          <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
           <h1 class="white">Connect your web3 address</h1><br/>
         </div>
         }
@@ -473,40 +472,40 @@ const ProposalList = () => {
                 <div class="void-link">
                   <a href="/PastProposals">
                     <div class="hudH" >
-                      <div class="propsub">Propuestas pasadas</div>
-                      <div class="propopt">Historial</div>
+                      <div class="propsub">Historial</div>
+                      <div class="propopt">📅</div>
                     </div>
                   </a>
+                  <div/>
                   <a href="/createProposal">
-                    <div class="hudH2">
-                      <div class="propsub">Crear propuesta</div>
-                      <div class="propopt">Proponer</div>
+                    <div class="hudH3">
+                      <div class="propsub">Proponer</div>
+                      <div class="propopt">💡</div>
                     </div>  
                   </a>
                 </div>
               </div>       
             </div>
            :
-            <div><br/>
-              <div class="center"><img src={vote2} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
-              <h1><span  class="red">Sin propuestas por votar</span></h1><br/>
+            <div class="App">
+              <h2><span  class="red">Sin propuestas por votar</span></h2><br/>
               <div class="history">
                 <div class="void-link">
                   <a href="/PastProposals">
                     <div class="hudH" >
-                      
-                      <div class="propsub">Propuestas pasadas</div>
-                      <div class="propopt">Historial</div>
+                      <div class="propsub">Historial</div>
+                      <div class="propopt">📅</div>
                     </div>
                   </a>
+                  <div/>
                   <a href="/createProposal">
-                    <div class="hudH2">
-                      <div class="propsub">Crear propuesta</div>
-                      <div class="propopt">Proponer</div>
+                    <div class="hudH3">
+                      <div class="propsub">Proponer</div>
+                      <div class="propopt">💡</div>
                     </div>  
                   </a>
                 </div>
-              </div>          
+              </div>
             </div>
           }
         </div> : <ValidationRequired />}</span>

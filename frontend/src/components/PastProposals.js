@@ -251,7 +251,7 @@ const PastProposals = () => {
         ?
         <section class="proplist">
           <br/><br/>
-          <h1><span class="yellow">Past Proposals</span></h1><br/><br/>
+          <h2><span class="yellow">Past Proposals</span></h2><br/><br/>
           <div class="center"><img src={vote} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
         
           <div id="margin" className= "props">
@@ -291,7 +291,7 @@ const PastProposals = () => {
                     </div>
                     :
                     <div className="void">                
-                    <h1><span class="red">There are no approved proposals</span></h1><br/>
+                    <h2><span class="red">There are no approved proposals</span></h2><br/>
                       <div class="floating">
                         <h3>Create a proposal or validate your account to participate.
                           You can also view the proposal history or learn more before you start.
@@ -346,7 +346,7 @@ const PastProposals = () => {
                     </div>
                     :
                     <div className="void">                
-                    <h1><span class="red">There are no rejected proposals</span></h1><br/>
+                    <h2><span class="red">There are no rejected proposals</span></h2><br/>
                       <div class="floating">
                         <h3>Create a proposal or validate your account to participate.
                           You can also view the proposal history or learn more before you start.
@@ -388,14 +388,20 @@ const PastProposals = () => {
                         <div class="void-link">
                           <a onClick={handleOnApprove} >
                             <div class="hudH">
-                              <div class="propsub">Ver propuestas</div>
-                              <div class="propopt">Rechazadas </div>
+                              <div class="propsub">Rechazadas</div>
+                              <div class="propopt">👎 </div>
                             </div>
                           </a>
                           <a href="/ProposalList#vote">
                             <div  class="hudH2">
-                              <div class="propsub">Propuestas disponibles</div>
-                              <div class="propopt">Vota</div>
+                              <div class="propsub">DAO</div>
+                              <div class="propopt">🗳️</div>
+                            </div>
+                          </a>
+                          <a href="/CreateProposal" class="hudH3">
+                            <div >
+                              <div class="propsub">Proponer</div>
+                              <div class="propopt">💡</div>
                             </div>
                           </a>
                         </div>
@@ -404,19 +410,25 @@ const PastProposals = () => {
                     </div>
                     :
                     <div className="void">                
-                    <h1><span class="red">No hay propuestas aprobadas</span></h1><br/>
+                    <h2><span class="red">No hay propuestas aprobadas</span></h2><br/>
                       <div class="history">
                         <div class="void-link">
                           <a onClick={handleOnApprove} >
                             <div class="hudH">
-                              <div class="propsub">Ver propuestas</div>
-                              <div class="propopt">Rechazadas </div>
+                              <div class="propsub">Rechazadas</div>
+                              <div class="propopt">👎 </div>
                             </div>
                           </a>
                           <a href="/ProposalList#vote">
                             <div  class="hudH2">
                               <div class="propsub">Propuestas disponibles</div>
                               <div class="propopt">Vota</div>
+                            </div>
+                          </a>
+                          <a href="/CreateProposal" class="hudH3">
+                            <div >
+                              <div class="propsub">Crear propuesta</div>
+                              <div class="propopt">Proponer</div>
                             </div>
                           </a>
                         </div>
@@ -433,14 +445,20 @@ const PastProposals = () => {
                       <div class="void-link">
                         <a onClick={handleOnApprove} >
                           <div class="hudH">
-                            <div class="propsub">Ver propuestas</div>
-                            <div class="propopt">Rechazadas </div>
+                            <div class="propsub">Aprobadas</div>
+                            <div class="propopt">👍 </div>
                           </div>
                         </a>
                         <a href="/ProposalList#vote">
                           <div  class="hudH2">
-                            <div class="propsub">Propuestas disponibles</div>
-                            <div class="propopt">Vota</div>
+                            <div class="propsub">DAO</div>
+                            <div class="propopt">🗳️</div>
+                          </div>
+                        </a>
+                        <a href="/CreateProposal" class="hudH3">
+                          <div >
+                            <div class="propsub">Proponer</div>
+                            <div class="propopt">💡</div>
                           </div>
                         </a>
                       </div>
@@ -451,23 +469,29 @@ const PastProposals = () => {
                     :
                     <div>                
                     <h2><span class="red">No hay propuestas rechazadas</span></h2><br/>
-                      <div class="history">
+                    <div class="history">
                       <div class="void-link">
                         <a onClick={handleOnApprove} class="hudH">
                           <div >
-                            <div class="propsub">Ver propuestas</div>
-                            <div class="propopt">Aprobadas </div>
+                            <div class="propsub">Aprobadas</div>
+                            <div class="propopt">👍 </div>
                           </div>
                         </a>
                         <a href="/ProposalList#vote" class="hudH2">
                           <div >
-                            <div class="propsub">Propuestas disponibles</div>
-                            <div class="propopt">Vota</div>
+                            <div class="propsub">DAO</div>
+                            <div class="propopt">🗳️</div>
+                          </div>
+                        </a>
+                        <a href="/CreateProposal" class="hudH3">
+                          <div >
+                            <div class="propsub">Proponer</div>
+                            <div class="propopt">💡</div>
                           </div>
                         </a>
                       </div>
                     </div>
-                    </div>
+                  </div>
                   }
                 </div>
               }
