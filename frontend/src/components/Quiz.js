@@ -2,7 +2,6 @@ import { useState, useContext, useEffect } from 'react';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import Question from './Question';
-import { englishQuiz } from '../REALQUIZ/englishQuiz';
 import { spanishQuiz } from '../REALQUIZ/spanishQuiz';
 import { QuizContext } from '../contexts/QuizContext';
 import QuizFailureModal from '../modals/QuizFailureModal';
@@ -14,7 +13,6 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { VotoContext } from '../contexts/VotoContext';
 
-import verify from '../assets/verify.svg';
 import key from '../assets/about-img.svg'
 
 import Voto from '../contracts/contracts/Voto.sol/Voto.json';

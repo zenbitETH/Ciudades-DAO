@@ -21,11 +21,6 @@ import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlph
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
 const Header = () => {
-
-  const handleOnClick = () => {
-    setLoc();
-    window.location.reload();
-  };
   let [ethersProvider, setEthersProvider] = useState();
   let [isConnecting, setIsConnecting] = useState();
   let [isMetamaskInstalled, setIsMetamaskInstalled] = useState();
@@ -285,7 +280,6 @@ const Header = () => {
                 zenbit.eth /<span> 2022</span>
               </div>
             </a>
-            <a href='/'><div class="langb"onClick={handleOnClick}>🌐Eng</div></a>
             <img class="hudlogo" src={logo}/>
          </div>
           : 
@@ -301,7 +295,6 @@ const Header = () => {
                 <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
               }
             </div>
-            <a href='/Home'><div class="lang"onClick={handleOnClick}>🌐Eng</div></a>
             
           </div> }       
           
