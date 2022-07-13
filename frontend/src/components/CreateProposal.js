@@ -127,7 +127,7 @@ const CreateProposal = () => {
     console.log('form: ', form);
 
     try {
-      form.budget = ethers.BigNumber.from(form.budget);
+      //form.budget = ethers.BigNumber.from(form.budget);
 
       let tx = await governorAlpha.propose(form);
       let txReceipt = await tx.wait(1);
@@ -180,7 +180,7 @@ const CreateProposal = () => {
   // };
 
   const handleOnChangeBudget = e => {
-    setField('budget', e.target.value);
+    setField('budget', (e.target.value).toString());
   };
 
   // const handleOnChangeRequiredVotoToVote = e => {
@@ -365,35 +365,11 @@ const CreateProposal = () => {
                 onChange={handleOnChangeTitle}/>
             </Form.Group>
           
-            <Form.Group as={Row} controlId="formNeighborhood" >
-              <Form.Label  >
-              2. Lugar
-              </Form.Label>
-                <Form.Control as="select" data-live-search="true"
-                  onChange={handleOnChangeNeighborhood}>
-                  <option disabled selected>📍 ¿Dónde es la propuesta?</option>
-                  <option> Ayuntamiento </option>
-                  <option> Calle </option>
-                  <option> Parada de autobús </option>
-                  <option> Iglesia </option>
-                  <option> Estación de policia </option>
-                  <option> Estación de Bomberos </option>
-                  <option> Universidad </option>
-                  <option> Parque </option>
-                  <option> Galería de arte </option>
-                  <option> Mercado </option>
-                  <option> Lugar de comida </option>
-                  <option> Parque Industrial </option>
-                  <option> Co-working </option>
-                  <option> Comisaría </option>
-                  <option> Web </option>
-                  <option> DAO </option>
-                </Form.Control>
-            </Form.Group>
+
           
             <Form.Group as={Row} controlId="formTypeOfAction">
             <Form.Label >
-              3. Tipo de actividad 
+              2. Tipo de actividad 
               </Form.Label>
               <Form.Control as="select" data-live-search="true"
                 onChange={handleOnChangeTypeOfAction}>
@@ -412,37 +388,38 @@ const CreateProposal = () => {
               </Form.Control>
             </Form.Group>
           
-            <Form.Group as={Row} controlId="formPersonInCharge">    
-              <Form.Label  >
-                4. Responsable
-              </Form.Label>
-              <Form.Control as="select" class="selectpicker show-tick form-control"
-                onChange={handleOnChangePersonInCharge}>
-               <option disabled selected>🦸 ¿Quién tiene que hacerlo?</option>
-               <option> Trabajador público / Gobierno </option>
-               <option> Ciudadano </option>
-               <option> Artista </option>
-               <option> Amante de las mascotas </option>
-               <option> Académico </option>
-               <option> Atleta </option>
-               <option> Chef </option>
-               <option> Talento industrial </option>
-               <option> Comerciante </option>
-               <option> Creador digital </option>
-               <option> Desarrollador </option>
-              </Form.Control>
-            </Form.Group>
+            
           
             <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
               <Form.Label>
-               5. Descripción
+               3. Descripción
             </Form.Label>
             <Form.Control className="description" as="textarea"
               type="text" rows={3}
-              placeholder="📑Describe a detalle tu propuesta"
+              placeholder="📑Describe a detalle tu propuesta."
               onChange={handleOnChangeDescription}/>
             </Form.Group>
-          
+
+            <Form.Group as={Row} controlId="formNeighborhood" >
+              <Form.Label  >
+              4. Ubicación de la propuesta
+              </Form.Label>
+                <Form.Control type="text"
+                  placeholder="🗺️ Pega el URL de Google Maps de la ubicación."
+                  onChange={handleOnChangeNeighborhood}>
+                </Form.Control>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="formPersonInCharge">    
+              <Form.Label  >
+                5. Referencia en redes sociales
+              </Form.Label>
+              <Form.Control type="text"
+                placeholder="🤳 Pega el URL de la referencia en twitter, facebook, etc."
+                onChange={handleOnChangePersonInCharge}>
+              </Form.Control>
+            </Form.Group>
+
             {/*
             <Form.Group as={Row} controlId="formExpiration">
               <Form.Label  >
@@ -454,16 +431,11 @@ const CreateProposal = () => {
  
             <Form.Group as={Row} controlId="formBudget">
               <Form.Label  >
-                6. Costo
+                6. Archivo o contenido 
               </Form.Label>
-              <Form.Control as="select"
-                onChange={handleOnChangeBudget}>
-                <option disabled selected>💸 Presupuesto de la propuesta</option>
-                <option value="0">0, voluntario o desconocido</option>
-                <option value="1000">hasta 1,000 pesos</option>  
-                <option value="10000">hasta 10,0000 pesos</option>
-                <option value="100000">hasta 100,000 pesos</option>
-              </Form.Control>
+              <Form.Control type="text"
+                placeholder="☁️ Pega el URL donde esté almacenado el archivo o contenido."
+                onChange={handleOnChangeBudget}/>
             </Form.Group>
             {/*
             <Form.Group as={Row} controlId="formRequiredVotoToVote">
