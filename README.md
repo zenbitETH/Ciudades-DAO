@@ -1,11 +1,11 @@
 # 🗳️ Ciudades DAO - Manual de Uso
 
 ## Índice
-[1.🗳️ Descripción General](https://github.com/zenbitETH/Ciudades-DAO#descripci%C3%B3n-general)
-[2.🗺️ Proceso General](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-proceso-general)
-[3.🎩 Tipos de usuario](https://github.com/zenbitETH/Ciudades-DAO#-tipos-de-usuario-y-funci%C3%B3n-principal)
-[4.🕹️ Flujo para ciudadanos y representantes de gobierno](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-flujo-para-ciudadanos-y-representantes-de-gobierno)
-[5.🎮 Flujo para representantes de organizacionees urbanas y desarrolladores](https://github.com/zenbitETH/Ciudades-DAO#-flujo-para-representantes-de-organizacionees-urbanas-y-desarrolladores)
+[1.🗳️ Descripción General](https://github.com/zenbitETH/Ciudades-DAO#descripci%C3%B3n-general)  
+[2.🗺️ Proceso General](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-proceso-general)  
+[3.🎩 Tipos de usuario](https://github.com/zenbitETH/Ciudades-DAO#-tipos-de-usuario-y-funci%C3%B3n-principal)  
+[4.🕹️ Flujo para ciudadanos y representantes de gobierno](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-flujo-para-ciudadanos-y-representantes-de-gobierno)  
+[5.🎮 Flujo para representantes de organizacionees urbanas y desarrolladores](https://github.com/zenbitETH/Ciudades-DAO#-flujo-para-representantes-de-organizacionees-urbanas-y-desarrolladores)  
 [6.🌐 Atención a usuarios y colaboraciones](https://github.com/zenbitETH/Ciudades-DAO#-atenci%C3%B3n-a-usuarios-y-colaboraciones)
 
 ## 1. Descripción General
@@ -229,8 +229,8 @@ surge
 ```
 
 # 6🌐 Atención a usuarios y colaboraciones
-**-ciudadesdao@zenbit.mx**  
-**-Registra un issue en este repositorio**  
-**-Discord de ususarios Ciudades DAO**  
-**-Discord de desarrollo zenbit.eth**  
-**-Siguenos en redes sociales como @zenbit.eth
+-ciudadesdao@zenbit.mx  
+-Registra un issue en este repositorio  
+-Discord de ususarios Ciudades DAO  
+-Discord de desarrollo zenbit.eth  
+-Siguenos en redes sociales como @zenbit.eth
