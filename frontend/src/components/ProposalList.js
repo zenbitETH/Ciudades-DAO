@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import Proposal from './Proposal';
-import { LanguageContext } from '../contexts/LanguageContext';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import ValidationRequired from '../alerts/ValidationRequired';
@@ -16,9 +15,6 @@ import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json';
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
 
-import prop from '../assets/prop.svg';
-import vote2 from '../assets/vote2.svg';
-import past from '../assets/past.png';
 import key from '../assets/about-img.svg'
 
 
@@ -29,7 +25,6 @@ const ProposalList = () => {
   
 
   let {setIsValidated,isValidated} = useContext(ValidationRequiredContext);
-  let [isEnglish] = useContext(LanguageContext);
   let {setGovernorAlpha} = useContext(GovernorAlphaContext);
 
   let [ethersProvider, setEthersProvider] = useState();
@@ -405,60 +400,6 @@ const ProposalList = () => {
 
   return (
   <body id="">
-      {isEnglish === 'english'
-      ?
-      <section class="proplist">
-        {isConnected ?
-            <span>{isValidated ? <div id="margin"><br/>
-          {list.length > 0 ?
-            <div id="vote" className="props">
-              <h1><span >Proposals to vote</span></h1><br/>
-              <img src={vote2} alt="Alert about key" class="prop-img"/>
-                <div class="floating">
-                  <h3>Use the VOTO you have earned to
-                   vote for governance proposals in the city of Querévoto.</h3>
-                  </div><h1>1 VOTO = 1 Vote</h1><br/>
-                {list}
-                <div class="void-link">
-                  <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="ribvan"/> 
-                    <div class="propsub">Past proposals</div>
-                    <div class="propopt">Record</div>
-                  </a></div>
-                  <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="ribvan"/> 
-                    <div class="propsub">Create a proposal</div>
-                    <div class="propopt">Propose</div>
-                  </a></div>
-                </div>
-            </div>
-           :
-            <div><br/>
-              <div class="center"><img src={vote2} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
-              <h1><span  class="red">No proposals to vote</span></h1><br/>
-      
-                  <div class="void-link">
-                  <div class="bg-grid0"><a href="/PastProposals">
-                  <img src={past} class="ribvan"/> 
-                    <div class="propsub">Past proposals</div>
-                    <div class="propopt">Record</div>
-                  </a></div>
-                  <div class="bg-grid0"><a href="/createProposal">
-                    <img src={prop} class="ribvan"/> 
-                    <div class="propsub">Create a proposal</div>
-                    <div class="propopt">Propose</div>
-                  </a></div>
-                </div>
-            </div>
-          }
-        </div> : <ValidationRequired />}</span>
-        : 
-        <div class="connect">
-          <h1 class="white">Connect your web3 address</h1><br/>
-        </div>
-        }
-      </section>
-    :
     <section class="proplist">
         {isConnected ?
             <span>{isValidated ? <div id="margin"><br/>
@@ -516,8 +457,6 @@ const ProposalList = () => {
         </div>
         }
       </section>
-    
-    }
     </body>
   );
 };

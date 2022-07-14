@@ -17,9 +17,6 @@ const NewCountdownClock = ({blocksToExpiration}) => {
     setDays(_days);
   }, []);
 
-
-
-
   return (
     <div>
       <div>

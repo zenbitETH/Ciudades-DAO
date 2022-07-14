@@ -16,7 +16,7 @@ contract Voto {
     uint8 public constant decimals = 18;
 
     /// @notice Total number of tokens in circulation
-    uint public constant totalSupply = 1000000e18; // 1 million VOTO for Queretaro Web3 Workshop July 2022
+    uint public constant totalSupply = 1000000e18; // 1 millón de tokens VOTO para Ciudades DAO
 
     /// @notice Allowance amounts on behalf of others
     mapping (address => mapping (address => uint96)) internal allowances;

@@ -1,8 +1,5 @@
-import { useContext } from 'react';
-import { Card } from 'react-bootstrap';
 // import detectEthereumProvider from '@metamask/detect-provider';
 // import { ethers } from 'ethers';
-import { LanguageContext } from '../contexts/LanguageContext';
 // import { EthersContext } from '../contexts/EthersContext';
 // import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 
@@ -31,7 +28,6 @@ const ApprovedProposal = ({title,
   // let [voto, setVoto] = useState();
   // let [signerAddress, setSignerAddress] = useState();
   //
-  let [isEnglish] = useContext(LanguageContext);
   // // let {governorAlpha} = useContext(GovernorAlphaContext);
   // // let {provider} = useContext(EthersContext);
   //
@@ -123,36 +119,7 @@ const ApprovedProposal = ({title,
 
 
   return (
-      <div>
-      {isEnglish === 'english' ?
-      <div class="proposal">
-        <div class="proposal-expiration">
-            <div class="prop-title">💡 Proposal # {id}</div>
-            <span class="yellowr"> made on {proposalDay}/{proposalMonth}/{proposalYear}</span> 
-          </div>
-          <div class="aproposal">Approved by {forVotes} votes</div>
-          <div class="mini-title">🎯 Objetive:</div>
-          <div class="prop-hl"> {title}</div>
-          <div class="grid-prop">      
-            <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
-            <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{web2URL}</div></div>      
-            <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{locationURL}</div></div>
-            <div class="minit-bg3">💸 Cost: <div className="prop-hl">{fileURL} pesos</div> </div>
-          </div>
-          <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
-          {/*}
-          <div className ="proposal-main">
-            <div className="proposal-sub">Costo: {fileURL} pesos</div>
-            <div className="proposal-subaction">VOTO to vote:{requiredVotoToVote} VOTO</div>
-          </div>
-          */}
-        <div class="author">made by {proposer}</div><br/>
-        <div className="vote-grid">
-          <div class="prop-bgf2">Approved by:<br/>{forVotes}<br/>VOTO</div>    
-          <div class="prop-bgw"> Against:<br/>{againstVotes}<br/> VOTO</div>
-        </div>   
-      </div>
-      :
+    <div>
       <div class="proposal">
         <div class="proposal-expiration">
             <div class="prop-title">💡 Prouesta # {id}</div>
@@ -180,7 +147,6 @@ const ApprovedProposal = ({title,
           <div class="prop-bgw">Votos en contra:<br/>{againstVotes}<br/>VOTO</div>
         </div>
       </div>
-      }
     </div>
   );
 };

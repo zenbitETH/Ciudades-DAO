@@ -54,15 +54,4 @@ export const quizQuestions = [
     ],
     correctAnswer: 3
   },
-  {
-    number: 6,
-    question: 'Vitalik _______',
-    answers: [
-      'Koskinen',
-      'Abadi',
-      'Ganbaatar',
-      'Buterin'
-    ],
-    correctAnswer: 'Buterin'
-  },
 ];

@@ -3,7 +3,6 @@ import { Card, Button } from 'react-bootstrap';
 import detectEthereumProvider from '@metamask/detect-provider';
 import { ethers } from 'ethers';
 import CountdownClock from './CountdownClock';
-import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 
@@ -19,7 +18,6 @@ const Proposal = ({title, typeOfAction, locationURL, web2URL, description, expir
   let [voto, setVoto] = useState();
   let [signerAddress, setSignerAddress] = useState();
 
-  let [isEnglish] = useContext(LanguageContext);
   // let {governorAlpha} = useContext(GovernorAlphaContext);
   let {provider} = useContext(EthersContext);
 
@@ -129,43 +127,6 @@ const Proposal = ({title, typeOfAction, locationURL, web2URL, description, expir
 
   return (
     <div>
-      {isEnglish === 'english'
-      ?
-      <div class="proposal">    
-        <div class="proposal-expiration">
-          <h4 class="prop-title">💡 Proposal # {id} </h4>
-          <span class="yellowr"><CountdownClock timeToExpiration={timeToExpiration}></CountdownClock></span>
-        </div><br/>
-        <div class="mini-title">🎯 Objetive:</div>
-        <div class="prop-hl"> {title}</div><br/>
-        <div class="grid-prop">      
-          <div class="minit-bg">⚙️ Action: <div class="prop-hl">{typeOfAction}</div></div>
-          <div class="minit-bg2">🦸 In charge: <div className="prop-hl">{web2URL}</div></div>      
-          <div class="minit-bg3"> 📍 Where: <div className="prop-hl">{locationURL}</div></div>
-          <div class="minit-bg3">💸 Cost: <div className="prop-hl">{fileURL} pesos</div> </div>
-        </div>  
-        <div class="description-bg">📑 Description: <div class="prop-description">{description}</div></div>
-      {/*}
-      <div className ="proposal-main">
-        <div className="proposal-sub">Costo: {fileURL}</div>
-        <div className="proposal-subaction">VOTO to vote:{requiredVotoToVote} VOTO</div>
-      </div>
-      */}
-      <div class="yellow">made by {proposer}</div><br/>
-      <div class="vote-grid">
-        {!hasVoted?
-        <a class="prop-bgf" onClick={handleOnClickFor}><h1 class="votef">Vote for</h1></a>
-        :
-        <div class="prop-bgf2"><h2>For:<br/>{forVotes} VOTO</h2></div>    
-        }
-        {!hasVoted ?
-        <a class="prop-bga" onClick={handleOnClickAgainst}><h1 class="votef">Vote against</h1></a>
-        : 
-        <div class="prop-bga2"><h2> Against:<br/>{againstVotes} VOTO</h2></div>
-        }
-      </div>  
-      </div>
-      :
       <div class="proposal">
         <div class="proposal-expiration">
           <div class="prop-title">💡 Propuesta # {id} </div>
@@ -201,8 +162,6 @@ const Proposal = ({title, typeOfAction, locationURL, web2URL, description, expir
           }
         </div>      
     </div>
-     
-      }
 </div>
   );
 };

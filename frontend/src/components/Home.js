@@ -7,7 +7,6 @@ import SwitchPolygonAlert from './SwitchPolygonAlert';
 import { ValidationRequiredContext } from '../contexts/ValidationRequiredContext';
 import { VotoContext } from '../contexts/VotoContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
-import { LanguageContext } from '../contexts/LanguageContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
 
@@ -38,7 +37,6 @@ function Home() {
   let {setIsValidated,isValidated} = useContext(ValidationRequiredContext);
   let {setVoto} = useContext(VotoContext);
   let {setGovernorAlpha} = useContext(GovernorAlphaContext);
-  let [isEnglish] = useContext(LanguageContext);
   let {setEthersSigner, provider, setProvider} = useContext(EthersContext);
   let {isConnected, setIsConnected} = useContext(ConnectedContext);
 
@@ -265,143 +263,72 @@ function Home() {
 
   return (
     <div>
-      {isEnglish === 'english' ?
       <div class="App">
         <div class="grid-block">
           <div>
             {isConnected ?
-            <section class="vertical">
+            <section id="">
               <div class="homegrid">
                 {isValidated ? '':
-                <a class="bg-grid0" href="/Quiz">
+                <a class="bg-grid0"href="/Quiz">
                   <img src={verify} class="homevan"/>
-                  <div class="propsub">Get up to 100 VOTO</div>
-                  <div class="propopt">Validate</div>
+                  <div class="propsub">Obtén hasta 100 VOTOs</div>
+                  <div class="propopt">Prueba Web3</div>
                 </a>}
                 {isValidated ? <a class="bg-grid0" href="/createProposal">
                   <img src={prop} class="homevan"/> 
-                  <div class="propsub">Get 10 VOTO per proposal</div>
-                  <div class="propopt">Propose</div>
+                  <div class="propsub">Obtén 10 VOTOs por hacer</div>
+                  <div class="propopt">Propuestas DAO</div>
                 </a>
-                :
-                <div class="bg-blocked" >
+                 : <div class="bg-blocked" >
                  <img src={prop} class="homevan"/> 
-                 <div class="propsub">Validate to unlock</div>
-                 <div class="propopt">Propose</div>
+                 <div class="propsub">Valida para desbloquear</div>
+                 <div class="propopt">Propuestas DAO</div>
                </div>}
                {isValidated ?
               <a class="bg-grid0" href="/ProposalList">
                   <img src={past} class="homevan"/> 
-                  <div class="propsub">Vote with your VOTO</div>
-                  <div class="propopt">Qurétaro DAO</div>
+                  <div class="propsub">Usa tus VOTOs en</div>
+                  <div class="propopt">Querétaro DAO</div>
                 </a>
                 :
                 <div class="bg-blocked" >
                   <img src={past} class="homevan"/> 
-                  <div class="propsub">Validate to unlock</div>
+                  <div class="propsub">Valida para desbloquear</div>
                   <div class="propopt">Qurévoto DAO</div>
                 </div>}
               </div>
-              
             </section>
             :
             <section>
               <div class="headline">
-                  <img src={logo}/>
-                  <h2>Decentralized Governance for cities</h2>
-                </div>
+                <img src={logo} class="homelogo"/>
+                <h2>Gobernanza descentralizada para ciudades</h2>
+              </div>
+              
                 <div class="grid-blocked">
                   <a href="/About" class="bg-grid0">
                     <img src={wallet} class="homevan"/> 
-                    <div class="propsub">Do you have a web3 wallet</div>
-                    <div class="propopt">Go for Wallet</div>
+                    <div class="propsub">¿Tienes cómo conectarte?</div>
+                    <div class="propopt">Ir por Wallet web3</div>
                   </a>
                   <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
                     <img src={test} class="homevan"/> 
-                    <div class="propsub">Are you on the right network?</div>
-                    <div class="propopt">Go to testnet </div>
+                    <div class="propsub">¿Estas en la red correcta?</div>
+                    <div class="propopt">Ir a red de pruebas </div>
                   </a>
                   <a class="bg-grid0" href="https://faucet.polygon.technology/">
                     <img src={gas} class="homevan"/> 
-                    <div class="propsub">Do you have gas? </div>
-                    <div class="propopt">Get Gas </div>
+                    <div class="propsub">¿Tienes gas? </div>
+                    <div class="propopt">Conseguir Gas </div>
                   </a>
                 </div>
             </section>      
             }
           </div>
-          </div>
-      </div>
-      :
-      <div class="App">
-          <div class="grid-block">
-            <div>
-              {isConnected ?
-              <section id="">
-                <div class="homegrid">
-                  {isValidated ? '':
-                  <a class="bg-grid0"href="/Quiz">
-                    <img src={verify} class="homevan"/>
-                    <div class="propsub">Obtén hasta 100 VOTOs</div>
-                    <div class="propopt">Prueba Web3</div>
-                  </a>}
-                  {isValidated ? <a class="bg-grid0" href="/createProposal">
-                    <img src={prop} class="homevan"/> 
-                    <div class="propsub">Obtén 10 VOTOs por hacer</div>
-                    <div class="propopt">Propuestas DAO</div>
-                  </a>
-                   : <div class="bg-blocked" >
-                   <img src={prop} class="homevan"/> 
-                   <div class="propsub">Valida para desbloquear</div>
-                   <div class="propopt">Propuestas DAO</div>
-                 </div>}
-                 {isValidated ?
-                <a class="bg-grid0" href="/ProposalList">
-                    <img src={past} class="homevan"/> 
-                    <div class="propsub">Usa tus VOTOs en</div>
-                    <div class="propopt">Querétaro DAO</div>
-                  </a>
-                  :
-                  <div class="bg-blocked" >
-                    <img src={past} class="homevan"/> 
-                    <div class="propsub">Valida para desbloquear</div>
-                    <div class="propopt">Qurévoto DAO</div>
-                  </div>}
-                </div>
-              </section>
-              :
-              <section>
-                <div class="headline">
-                  <img src={logo} class="homelogo"/>
-                  <h2>Gobernanza descentralizada para ciudades</h2>
-                </div>
-                
-                  <div class="grid-blocked">
-                    <a href="/About" class="bg-grid0">
-                      <img src={wallet} class="homevan"/> 
-                      <div class="propsub">¿Tienes cómo conectarte?</div>
-                      <div class="propopt">Ir por Wallet web3</div>
-                    </a>
-                    <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
-                      <img src={test} class="homevan"/> 
-                      <div class="propsub">¿Estas en la red correcta?</div>
-                      <div class="propopt">Ir a red de pruebas </div>
-                    </a>
-                    <a class="bg-grid0" href="https://faucet.polygon.technology/">
-                      <img src={gas} class="homevan"/> 
-                      <div class="propsub">¿Tienes gas? </div>
-                      <div class="propopt">Conseguir Gas </div>
-                    </a>
-                  </div>
-              </section>      
-              }
-            </div>
-          </div>
         </div>
-      
-  }
-</div>
-    
+      </div>
+    </div> 
   );
 }
 

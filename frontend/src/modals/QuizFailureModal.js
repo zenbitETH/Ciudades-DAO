@@ -1,39 +1,11 @@
 import { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
-import { LanguageContext } from '../contexts/LanguageContext';
 import reward from '../assets/TAROrew.png';
 import verify from '../assets/verify.svg';
 
 const QuizFailureModal = (props) => {
-  let [isEnglish] = useContext(LanguageContext);
-
   return (
     <div>
-      {isEnglish === 'english' ?
-      <Modal
-      {...props}
-      size="lg"
-      centered
-      className="modal-2"
-      >
-        <h1><span>Wrong answers </span></h1><br/>
-        <h3 >You have failed the validation or some answer is missing, take a look to the about page and try again.</h3>
-        <Modal.Body>
-        <div class="void-link">
-          <a class="prop-bgr" href="/About">
-            <img src={reward} class="ribvan"/> 
-            <div class="propsub">Check the docs</div>
-            <div class="propopt">About</div>
-          </a>
-          <a class="prop-bgr" href="/Quiz">
-            <img src={verify} class="ribvan"/>
-            <div class="propsub">Review your ansers</div>
-            <div class="propopt">Try again</div>
-          </a>
-        </div>
-        </Modal.Body>
-      </Modal>
-      :
       <Modal
         {...props}
         size="lg"
@@ -57,7 +29,6 @@ const QuizFailureModal = (props) => {
         </div>
         </Modal.Body>
       </Modal>
-    }
     </div>
   );
 };
