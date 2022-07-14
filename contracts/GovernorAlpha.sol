@@ -15,8 +15,8 @@ contract GovernorAlpha {
     /// @notice The delay before voting on a proposal may take place, once proposed
     function votingDelay() public pure returns (uint) { return 1; } // 1 block
     //
-    // /// @notice The duration of voting on a proposal, in blocks
-    function votingPeriod() public pure returns (uint) { return 1296000; } // ~15 days in blocks (assuming 15s blocks) 1296000 blocks; 86400 blocks per day; 3600 per hour)
+    // @nota Duración del periodo para votar propuestas en bloques
+    function votingPeriod() public pure returns (uint) { return 1296000; } // ~15 dias en bloques (asumiendo bloques de 15segundos) 1296000 blocks; 86400 bloques por dia; 3600 por hora)
     // 
     // /// @notice The address of the Voto Protocol Timelock
     // TimelockInterface public timelock;
@@ -128,7 +128,7 @@ contract GovernorAlpha {
     }
 
     function propose(UserInputFields memory _userInputFields) public checkValidity returns (uint) {
-        //A user recieves 50 Voto for each of their first ten proposals
+        //Los usuarios reciben 10 VOTO por cada propuesta, durante las primeras 20 propuestas
         if(userProposals[msg.sender].count < 20) {
           bool transferred = voto.transferFrom(address(this), msg.sender, 10e18);
           require(transferred, "Tokens not transferred to msg.sender");
@@ -162,9 +162,9 @@ contract GovernorAlpha {
         return newProposal.id;
     }
 
-    //The front end will respond based on the uint value that is returned.
-    //The user cannot validate if the user is currently validated.
-    //The validation period lasts for one month.
+    //El frontend responderá si el usuario esta valido o no
+    //El usuario no se puede validar si ya esta validado.
+    //La validación tiene vigencia de 1 mes.
     function validate(uint _rewardedTokens) public returns(uint) {
       if(validations[msg.sender].expirationTime == 0) {
         validations[msg.sender] = Validation({
