@@ -151,6 +151,16 @@ Nav {
   left: 0;
 }
 
+.hudCIT {
+  position: fixed;
+  height: auto;
+  margin: 0.5em 0em 0em 1em;
+  width: 15%;
+  top: 1em;
+  right: 1em;
+}
+
+
 .hislogo{
   height: 50px;
 }
@@ -235,10 +245,15 @@ Nav {
       width: 20%;
     }
 
+    .hudCIT {
+      width: 10%;
+    }
+
     .hislogo{
       height: 150px;
       padding: 0.5em;
     }
+
 
     
     .hudH {

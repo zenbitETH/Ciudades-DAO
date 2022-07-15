@@ -67,7 +67,7 @@ Si tu interés se encuentra más en construir y conocer nuevas herramienas que l
 ## 4a. Cumplir requisitos mínimos
 Todos los usuarios deben cumplir con los requisitos de sistema para poder interactuar o personalizar el contenido de Ciudades DAO.
 ## 4b. Preparación de herramientas web3
-Para acceder a la aplicación pública visita https://ciudadesdao.org no necesitas tus datos personales para regisrarte, en su lugar ocuparás ocuparás 3 herramientas de la web3:  
+Para acceder a la aplicación pública visita https://ciudadesdao.zenbit.mx no necesitas tus datos personales para regisrarte, en su lugar ocuparás ocuparás 3 herramientas de la web3:  
 
 ### Cartera Web3. 
 Descarga e instala una cartera web3 en tu dispositivo móvil, pc o laptop. En el proceso deberás escribir y guardar las 12 palabras secretas de tu dirección para que puedas recuperar tu cuenta si cambias o extravias tu equipo o bien si deseas acceder desde diferentes equipo.
@@ -228,7 +228,7 @@ cp index.html 200.html
 surge
 ```
 
-# 6🌐 Atención a usuarios y colaboraciones
+# 6. 🌐 Atención a usuarios y colaboraciones
 -ciudadesdao@zenbit.mx  
 -Registra un issue en este repositorio  
 -Discord de ususarios Ciudades DAO  
