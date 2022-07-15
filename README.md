@@ -1,9 +1,17 @@
 # 🗳️ Ciudades DAO - Manual de Uso
 
-## Descripción General
+## Índice
+[1.🗳️ Descripción General](https://github.com/zenbitETH/Ciudades-DAO#descripci%C3%B3n-general)  
+[2.🗺️ Proceso General](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-proceso-general)  
+[3.🎩 Tipos de usuario](https://github.com/zenbitETH/Ciudades-DAO#-tipos-de-usuario-y-funci%C3%B3n-principal)  
+[4.🕹️ Flujo para ciudadanos y representantes de gobierno](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-flujo-para-ciudadanos-y-representantes-de-gobierno)  
+[5.🎮 Flujo para representantes de organizacionees urbanas y desarrolladores](https://github.com/zenbitETH/Ciudades-DAO#-flujo-para-representantes-de-organizacionees-urbanas-y-desarrolladores)  
+[6.🌐 Atención a usuarios y colaboraciones](https://github.com/zenbitETH/Ciudades-DAO#-atenci%C3%B3n-a-usuarios-y-colaboraciones)
+
+## 1. Descripción General
 Ciudades DAO es una bien publico digital desarrollado con herramientas Web3 que facilitan la descentralización, coordinación y consenso de organizaciones urbanas mediante una entidad de gobernanza digital que no puede ser censurado o alterado, el cual incentiva la participación en la gobernanza urbana para generar información sobre una colonia, ciudad o región. 
 
-## Requisitos minimos:
+## 1a Requisitos minimos:
 Para usar Ciudadades DAO debes tener acceso a los siguientes dispositivos, servicios y herramientas digitales.
 ### Requisitos de sistema:
 - Dispositivo movil, PC o Laptop
@@ -22,16 +30,16 @@ Además de los requisitos de sistema, para usar Ciudades DAO deberás contar con
 - Habilidades digiales en el uso de herramientas web3 de Ethereum
 - Habilidades digiales en el uso de herramientas web3 de IPFS
 
-## Componentes de la aplicación
+## 1b Componentes de la aplicación
 En este repositorio de código encontrarás todos los componentes necesarios para conectarte a Ciudad DAO desde tu dispositivo, o usarlo como plantilla para implementar el modelo de Gobernanza DAO en una organización urbana. Ciudades DAO se compone de:  
-- Contrato Inteligentep para "Gobernador Alfa para Ciudades DAO"
+- Contrato Inteligente para "Gobernador Alfa para Ciudades DAO"
     Contrato escrito en lenguaje de programación solidity para descentralizar la gobernanza de una ciudad u organización urbana mediante un gobernante digital incorruptible, transparente y que cuide de la privacidad de sus usuarios.
 - Contrato Inteligente para token de Gobernanza DAO "VOTO"
     Contrato escrito en lenguaje de programación solidity para generar activos digitales que funcionan como unidades de recompensas por el desarrollo de habilidades digitales y generación de propuestas en Ciudades DAO y como unidad para votar esas propuestas en la gobernanza DAO.
 - Interfaz de Usuarios
     Aplicación web desarrollada con React y funciones web3 para comunicar a los usuarios con los contratos inteligentes de Ciudades DAO.
 
-# 🗺️ Proceso general
+# 2.🗺️ Proceso general
 Para usar Ciudades DAO primero deberás cumplir los Requisitos del Sistema para conectarte a la aplicación pública en ciudadesdao.zenbit.mx, si no cuentas con ellos sigue este tutorial y sigue el paso a paso para tener todo listo.  
 
 ## Proceso de validación 
@@ -40,7 +48,7 @@ Una vez que tengas los Requisitos del sistema deberás conectarte a la aplicaci�
 ## Proceso de Gobernanza DAO  
 Una vez que Gobernador Alfa haya validado que cuentas con las habilidades digitales para usar Ciudades DAO podrás acceder a la gobernanza para realizar y votar propuestas que resuelvan  necesidades de tu ciudad o apoyar la causa de alguna organización urbana. Los tokens VOTO que hayas obtenido en la validación los podrás usar para votar las propuestas disponibles y por cada propuesta que realices obtendrás 10 VOTO adicionales. De modo cada usuario tendrá diferente poder de voto y decisión en las propuestas, dependiendo de su proactividad y creatividad para proponer soluciones urbanas.
 
-# 🎩 Tipos de usuario y función principal
+# 3.🎩 Tipos de usuario y función principal
 Se consideran 4 tipos de usuario para Ciudades DAO los cuales se definen dependiendo de las habilidades digitales y objetivos al usar la aplicación, se anticipa mientras menos habilidades digitales se requieran más abundante será el tipo de usuario, por lo que aquellos que requieren especialización o coordinación de grupos, serán menos frecuentes.
 
 ## 🦸🏽🦸🏻‍♀️ Ciudadanos / Propuestas de gobernanza urbana
@@ -55,50 +63,50 @@ Los representantes de organizaciones urbanas son el motor de la resolución de p
 ## 🧑🏽‍💻👩🏽‍💻 Desarrollador / Añadir funciones a la DAO  
 Si tu interés se encuentra más en construir y conocer nuevas herramienas que la participación ciudadana, también puedes participar como Desarrollador en el proceso implementación de Ciudads DAO y colaborar en la investigación y desarrollo colectivos para construir nuevas aplicaciones que complementen el funcionamiento de ciudades DAO. Puedes colaborar con el desarrollo conociendo el flujo para desarrolladores o escribenos en github desde el repositorio de Ciudades DAO.
 
-# 🕹️ Flujo para ciudadanos y representantes de gobierno
-## 1. Cumplir requisitos mínimos
+# 4.🕹️ Flujo para ciudadanos y representantes de gobierno
+## 4a. Cumplir requisitos mínimos
 Todos los usuarios deben cumplir con los requisitos de sistema para poder interactuar o personalizar el contenido de Ciudades DAO.
-## 2. Preparación de herramientas web3
-Para acceder a la aplicación pública visita https://ciudadesdao.org no necesitas tus datos personales para regisrarte, en su lugar ocuparás ocuparás 3 herramientas de la web3:  
+## 4b. Preparación de herramientas web3
+Para acceder a la aplicación pública visita https://ciudadesdao.zenbit.mx no necesitas tus datos personales para regisrarte, en su lugar ocuparás ocuparás 3 herramientas de la web3:  
 
-### 1. Cartera Web3. 
+### Cartera Web3. 
 Descarga e instala una cartera web3 en tu dispositivo móvil, pc o laptop. En el proceso deberás escribir y guardar las 12 palabras secretas de tu dirección para que puedas recuperar tu cuenta si cambias o extravias tu equipo o bien si deseas acceder desde diferentes equipo.
 
 ATENCIÓN
 Las 12 palabras secretas de tu cartera web3 es el único metodo para acceder o recuperar tu cuenta, SOLO TU tienes acceso a ellas en el momento que creas tu cartera. Ni Metamask, ni Ciudades DAO, ni zenbit.eth o ningún intermediario tiene acceso a las 12 palabras secretas.
 
 
-### 1a. Cambiar a Red de Pruebas Polygon Mumbai.
+### Cambiar a Red de Pruebas Polygon Mumbai.
 Ya que Ciudades DAO se encuentra en fase de desarrollo, todas las transacciones ocurren en una red de pruebas pública, la cual funciona de manera similar a una red principal de blockchain con la diferencia de que los activos y herramientas no tienen valor monetario por lo que las cuotas de gas son simbolicas y tienen un enfoque didactico. En la pantalla principal de Ciudades DAO toca el boton de en medio para conectar tu cartera a la red de pruebas con mayor facilidad.
 
-### 1b. Obtener Matic de prueba para las pagar las cuotas de gas.
+### Obtener Matic de prueba para las pagar las cuotas de gas.
 Una vez en la red de pruebas, accede al tercer enlace de la pantalla principal de Ciudades DAO para ir al expendio de Matic de prueba el cual te servirá para pagar las cuotas de gas que cambian el estado de los contratos inteligentes. Solo tendrás que copiar y pegar tu dirección pública en el campo de "Wallet Address", presionar el botón "Submit" y en unos cuantos segundos tu cuenta tendrás Matic de prueba.
   
 Una vez que tengas tu cartera conectada a la red de pruebas de Polygon Mumbai y lista con Matic de prueba que obtuviste del expendio, estas listo para conectar tu cartera y empezar a usar Ciudades DAO. Conectate presionando el botón azul en la parte inferior de la pantalla principal y acepta la conexión con Ciudades DAO desde tu Cartera web3 para desbloquear la aplicación.
 
-## 3. Validar habilidades digitales para web3
+## 4c. Validar habilidades digitales para web3
 Con tu cartera conectada a Ciudades DAO ahora podrás ver las 3 actividades a realizar en la aplicación: 1. Validar tu cuenta, 2. Generar propuestas y 3. Votar por las propuestas. Sin embargo notaras que la segunda y tercera están bloqueadas hasta que completes la validación de tu cuenta. Para validar tu cuenta deberas comprobarle a Gobernador Alfa que tienes las habilidades digitales para interactuar con herramientas web3 mediante un cuestionario de 5 preguntas relacionadas con su funcionamiento.  
   
 Por cada respuesta correcta obtendrás 20 tokens VOTO, por lo que podrás obtener hasta 100 tokens VOTO si contestas todas las preguntas correctamente. Los tokens VOTO que obtengas podrás usarlos para votar tus propuestas de gobernanza DAO o las propuestas de otros participantes. La validación con Gobernador Alfa tendrá duración de 30 días a partir de la fecha de validación,  tras este periodo deberás realizar la validación de nuevo la cual puede contener diferentes preguntas según la evolución o enfoque de los participantes.
 
-## 4. Gobernanza DAO
+## 4d. Gobernanza DAO
 Una vez validado se desbloquearán las 2 interacciones de gobernanza DAO: podras realizar propuestas de gobernanza sobre tu ciudad y también podrás usar tus tokens VOTO para votar tus propuestas o las de otros participantes.
 
-### 4a. Proponer
+### Proponer
 Para hacer una propuesta toca el botón de Proponer desde la pantalla desbloqueada de Ciudades DAO para acceder a la pantalla en la que podrás describir y detallar tu propuesta antes de enviarla al Gobernador Alfa para que sea votada por ti y los otros usuarios de la aplicación. Por cada propuesta publicada recibiras 10 tokens TARO adicionales, esto será valido durante las primeras 20 propuestas que realices mientras la dirección de tu cartera web3 este validada por el Gobernador Alfa.
 
-### 4b. Votar 
+### Votar 
  Las propuestas realizadas estarán disponibles para votar durante 15 días en la sección de DAO, con el total de tokens VOTO que tengas podrás votar a favor o en contra de las propuestas y trás los 15 días el contrato Gobernador Alfa determinará el resultado de la votación dependiendo de los votos a favor y en contra que reciba la propuesta y la archivará en el historial de propuestas según su resultado.
 
-## 5. Historial y resultados
+## 4e. Historial y resultados
 Las propuestas en las que haya expirado el tiempo de votación serán mostradas en la sección de Propuestas Anteriores y podrás consultar entre las que fueron aprobadas y las que fueron rechazadas. Si bien los resultados de las votaciones de estas propuestas no son vinculantes con la legislación municipal de las ciudades, establece un cambio de paradigma en cómo se registra y almacenan los datos urbanos y cómo las herramientas de la web3 ayudan a resolver las fallas de coordinación causadas por la centralización de gobiernos, servicios y bienes públicos. 
   
 Para continuar con la conversación generada por las propuestas realizadas en Ciudades DAO, te invitamos al servidor de Ciudades DAO en Discord, donde podrás conectar con otros ciudadanos, representantes y desarrolladores para retroalimentar ideas, comentar funcionalidades por implementar o para personalizar este repositorio e implementarlo en tu ciudad u organización urbana.
 
 También te invitamos a consultar la rama de Ciudades DAO "VoTARO Ciudad DAO" donde encontrarás el ejemplo de cómo los contratos y la interfaz de usuario puede ser personalizada para implementarse en una ciudad.
 
-# 🎮 Flujo para representantes de organizacionees urbanas y desarrolladores
-## 1. Dependencias
+# 5. 🎮 Flujo para representantes de organizacionees urbanas y desarrolladores
+## 5a. Dependencias
 Para usar personalizar y compilar el código de Ciudad DAO desde tu PC o laptop, deberás instalar en tu sistema operativo las siguientes dependencias:
 ```text
 1. Node.js
@@ -106,7 +114,7 @@ Para usar personalizar y compilar el código de Ciudad DAO desde tu PC o laptop,
 2. Entorno integrado de desarrollo (IDE)
 3. Navegador Web
 ```
-## 2. Comandos para iniciar
+## 5b. Comandos para iniciar
 Ejecuta estos comandos en la terminal desde la ubicación de carpeta que eligas para descargar el repositorio de Ciudades DAO.
 **2a. Descargar repositorio:**
 ```bash
@@ -142,7 +150,7 @@ Añade en la linea 53 el URL del nodo de Polygon Mumbai que obtengas en infura
 52 mumbai: {
 53      url: "https://polygon-mumbai.infura.io/v3/numerosdetuURL",
 ```
-## 3. Iniciar interfaz de usuario en servidor local 
+## 5c. Iniciar interfaz de usuario en servidor local 
 Con el entorno de desarrollo básico listo, ahora debes ir a la carpeta Frontend e iniciar la compilación de la aplicación en un servidor local para conectarte con los contratos inteligentes de Ciudades DAO desplegados en la red de pruebas Polygon Mumbai. 
 
 **Iniciar la interfaz de usuario:
@@ -153,7 +161,7 @@ Con el entorno de desarrollo básico listo, ahora debes ir a la carpeta Frontend
 A partir de este punto puedes personalizar la interfaz de usuario con los colores, textos e imagenes que tu prefieras, pero seguira conectada a los contratos de Ciudades DAO, si deseas personalizar y usar tus propios contratos, continua leyendo en el punto 4 Personalizar contratos. 
 
 
-## 4. Personalizar contrato Gobernador Alfa
+## 5d. Personalizar contrato Gobernador Alfa
 Para personalizar los contratos inteligentes de Ciudades DAO deberás añadir al entorno de desarrollo de la aplicación la llave privada de la dirección que desplegara tus conttratos inteligentes y la llave API de Polygonscan que obtienes al registrarte en ese explorador de bloques.
 **4a. Entorno de desarrollo avanzado**
 ```bash
@@ -188,12 +196,12 @@ Con el entorno de desarrollo avanzado listo ahora modifica las variables persona
 133 bool transferred = voto.transferFrom(address(this), msg.sender, 10e18);
 ```
 
-**4f Modifica la duración de la validación (1 mes en bloques por default)
+**4f Modifica la duración de la validación (1 mes en bloques por default)**
 ```bash
 171  expirationTime: block.timestamp + 2592000
 ```
 
-## 5. Personalizar contrato de token VOTO
+## 5e. Personalizar contrato de token VOTO
 **5a. Ve a la carpeta de contratos y accede al archivo del contrato del token VOTO:**
 ```bash
   ../contracts/Voto.sol  
@@ -204,13 +212,13 @@ Con el entorno de desarrollo avanzado listo ahora modifica las variables persona
 19  uint public constant totalSupply = 1000000e18; // 1 millón de tokens VOTO para Ciudades DAO
 ```
 
-## 6. Despliegue de contratos 
+## 5f. Despliegue de contratos 
 **Asegurate de tener Matic de prueba en la dirección que desplegará los contratos y ejecuta el siguiente comando desde la carpeta raiz para desplegar los contratos en red de pruebas Polygon Mumbai:**
 ```bash
   npx hardhat run scripts/deploy.js --network mumbai
 ```
 
-## 7. Publicación de interfaz
+## 5d. Publicación de interfaz
 **Personaliza la interfaz, despliega los contraos y ejectua los siguientes comandos para publicar gratuitamente tu interfaz personalizada (requiere registro con email en Surge desde la terminal)**
 ```bash
 cd frontend
@@ -220,9 +228,9 @@ cp index.html 200.html
 surge
 ```
 
-# 🌐 Atención a usuarios y colaboraciones
-**1. ciudadesdao@zenbit.mx**
-**2. Registra un issue en este repositorio**
-**3. Discord de ususarios Ciudades DAO**
-**4. Discord de desarrollo zenbit.eth**
-**5. Siguenos en redes sociales como @zenbit.eth
+# 6. 🌐 Atención a usuarios y colaboraciones
+-ciudadesdao@zenbit.mx  
+-Registra un issue en este repositorio  
+-Discord de ususarios Ciudades DAO  
+-Discord de desarrollo zenbit.eth  
+-Siguenos en redes sociales como @zenbit.eth
