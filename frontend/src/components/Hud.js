@@ -272,12 +272,21 @@ const Header = () => {
                
 
                 
-                <a href='/CreateProposal' class="hud0">
-                  <div>🗳️ {userBalance} VOTO</div>
-                </a>
+                
+                  
+                    {isValidated ? 
+                    <a href='/CreateProposal' class="hud0">
+                      <div>🗳️ {userBalance} VOTO</div>
+                    </a> 
+                    : 
+                    <a href='/Quiz' class="no-validation">
+                      <div >Realiza la Prueba Web3</div>
+                    </a>
+                    }
+                
                
               </div>
-              <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la Prueba Web3 para validar ⚠️</div></a>}</div>
+              <div class="double"></div>
             </div>
             <a href='/'>
               <img class="hudlogo" src={logo}/>

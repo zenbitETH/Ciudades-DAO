@@ -39,14 +39,25 @@ Nav {
     cursor: pointer;
   }
 
-  .no-wallet {
+  .no-wallet, .no-validation {
     background: linear-gradient(90deg, #dc3840b5, #e26c72b5, #dc3840b5);
     background-size: 200% 200%;
     animation: gradient 2s ease infinite;
-    padding: 0.5em 0em 0.5em 0em ;
+    
     margin: 0 0 0 0;
-    border-radius:  25px 25px 0px 0px;
+    
     font-size: 1em;
+  }
+
+  .no-wallet {
+    border-radius:  25px 25px 0px 0px;
+    padding: 0.5em 0em 0.5em 0em ;
+  }
+
+  .no-validation {
+    border-radius:  0px 0px 25px 0px;
+    grid-column: span 2 / span 2; 
+    padding: 1.25em 0em 0em 0em ;
   }
   
   .no-wallet:hover {
@@ -268,13 +279,13 @@ Nav {
 
 
   @media only screen and (min-width: 1200px) {
-    .hudlogo {
+    .hudlogo, .hudlogoL {
       top: 1em;
       bottom: auto;
       width: 20%;
     }
 
-    .hudCIT {
+    .hudCIT, .hudCITL {
       width: 12.5%;
       top: 1em;
       right: 1em;
