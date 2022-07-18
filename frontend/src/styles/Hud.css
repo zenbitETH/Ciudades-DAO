@@ -156,8 +156,8 @@ Nav {
   position: fixed;
   height: auto;
   margin: 0.5em 0em 0em 1em;
-  width: 40%;
-  top: 3em;
+  width: 50%;
+  top: 5em;
   left: 0;
 }
 
@@ -165,8 +165,8 @@ Nav {
   position: fixed;
   height: auto;
   margin: 0.5em 0em 0em 1em;
-  width: 15%;
-  top: 1em;
+  width: 35%;
+  top: 4em;
   right: 1em;
 }
 
@@ -251,13 +251,15 @@ Nav {
 
   @media only screen and (min-width: 1200px) {
     .hudlogo {
-      top: 0;
+      top: 1em;
       bottom: auto;
       width: 20%;
     }
 
     .hudCIT {
-      width: 10%;
+      width: 12.5%;
+      top: 1em;
+      right: 1em;
     }
 
     .hislogo{
