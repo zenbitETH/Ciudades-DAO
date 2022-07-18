@@ -267,21 +267,41 @@ const Header = () => {
             <div class="topHud">
               <div class="topGrid">
                 <a class="hud1" href='/'>
-                  <div>🏠</div>
+                  <div>🏠<div class="MiniTitle">Inicio</div></div>
                 </a>
+               
+
+                
                 <a href='/CreateProposal' class="hud0">
-                  <div>Tienes {userBalance} VOTOs</div>
+                  <div>🗳️ {userBalance} VOTO</div>
                 </a>
                
               </div>
               <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la Prueba Web3 para validar ⚠️</div></a>}</div>
             </div>
-            <a href='/'><img class="hudlogo" src={logo}/></a>
-            <a href='/'><img class="hudCIT" src={CIT}/></a>
+            <a href='/'>
+              <img class="hudlogo" src={logo}/>
+            </a>
+            <a href='https://certamentransparencia.org.mx/'>
+              <img class="hudCIT" src={CIT}/>
+            </a>
+            <div class="bottomHud">
+              <div class="bottomGrid">
+                <a class="hudB" href='https://github.com/zenbitETH/Ciudades-DAO#readme'>
+                  <div>📚<div class="MiniTitle">Documentación</div></div>
+                </a>
+                <a class="hudB1" href='https://discord.gg/mn8GhcPeEb'>
+                  <div>💬<div class="MiniTitle">Discord</div></div>
+                </a>
+                <a class="hudB2" href='/'>
+                  <div>👨‍🏫<div class="MiniTitle">Tutoriales</div></div>
+                </a>
+              </div>
+            </div> 
          </div>
           : 
           <div>  
-            <a href='/'><img class="hudCIT" src={CIT}/></a>
+            <a href='https://certamentransparencia.org.mx/'><img class="hudCIT" src={CIT}/></a>
             <div class="bottomHud">
               {!isMetamaskInstalled ?
                 <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
