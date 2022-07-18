@@ -1,7 +1,9 @@
 # 🗳️ Ciudades DAO - Manual de Uso
 
 ## Descripción General
-Ciudades DAO es una bien publico digital desarrollado con herramientas Web3 que facilitan la descentralización, coordinación y consenso de organizaciones urbanas mediante una entidad de gobernanza digital que no puede ser censurado o alterado, el cual incentiva la participación en la gobernanza urbana para generar información sobre una colonia, ciudad o región. 
+Ciudades DAO es una bien publico digital desarrollado con herramientas Web3 que facilitan la descentralización, coordinación y consenso de organizaciones urbanas mediante una entidad de gobernanza digital que no puede ser censurado o alterado, el cual incentiva la participación en la gobernanza urbana para generar información sobre una colonia, ciudad o región.
+
+[![Presentación en CIT 2022](https://img.youtube.com/vi/7LwOqEkJd-w/0.jpg)](https://www.youtube.com/watch?v=7LwOqEkJd-w)
 
 ## Requisitos minimos:
 Para usar Ciudadades DAO debes tener acceso a los siguientes dispositivos, servicios y herramientas digitales.
