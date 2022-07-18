@@ -1,22 +1,9 @@
 # 🗳️ Ciudades DAO - Manual de Uso
 
-<<<<<<< HEAD
 ## Descripción General
 Ciudades DAO es una bien publico digital desarrollado con herramientas Web3 que facilitan la descentralización, coordinación y consenso de organizaciones urbanas mediante una entidad de gobernanza digital que no puede ser censurado o alterado, el cual incentiva la participación en la gobernanza urbana para generar información sobre una colonia, ciudad o región.
 
 [![Presentación en CIT 2022](https://img.youtube.com/vi/7LwOqEkJd-w/0.jpg)](https://www.youtube.com/watch?v=7LwOqEkJd-w)
-=======
-## Índice
-[1.🗳️ Descripción General](https://github.com/zenbitETH/Ciudades-DAO#descripci%C3%B3n-general)  
-[2.🗺️ Proceso General](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-proceso-general)  
-[3.🎩 Tipos de usuario](https://github.com/zenbitETH/Ciudades-DAO#-tipos-de-usuario-y-funci%C3%B3n-principal)  
-[4.🕹️ Flujo para ciudadanos y representantes de gobierno](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-flujo-para-ciudadanos-y-representantes-de-gobierno)  
-[5.🎮 Flujo para representantes de organizacionees urbanas y desarrolladores](https://github.com/zenbitETH/Ciudades-DAO#-flujo-para-representantes-de-organizacionees-urbanas-y-desarrolladores)  
-[6.🌐 Atención a usuarios y colaboraciones](https://github.com/zenbitETH/Ciudades-DAO#-atenci%C3%B3n-a-usuarios-y-colaboraciones)
-
-## 1. Descripción General
-Ciudades DAO es una bien publico digital desarrollado con herramientas Web3 que facilitan la descentralización, coordinación y consenso de organizaciones urbanas mediante una entidad de gobernanza digital que no puede ser censurado o alterado, el cual incentiva la participación en la gobernanza urbana para generar información sobre una colonia, ciudad o región. 
->>>>>>> 2674df6e0b0d9b1b0fac9072cb58e7df36f4c2ee
 
 ## 1a Requisitos minimos:
 Para usar Ciudadades DAO debes tener acceso a los siguientes dispositivos, servicios y herramientas digitales.
