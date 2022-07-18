@@ -152,22 +152,40 @@ Nav {
   background-color: #AAA6A150;
 }
 
-.hudlogo {
+.hudlogo, .hudlogoL {
   position: fixed;
   height: auto;
   margin: 0.5em 0em 0em 1em;
   width: 50%;
-  top: 5em;
   left: 0;
 }
 
-.hudCIT {
+.hudlogo {
+  top: 5em;
+}
+
+.hudlogoL {
+  top: 2.5em;
+}
+
+
+
+.hudCIT, .hudCITL {
   position: fixed;
   height: auto;
   margin: 0.5em 0em 0em 1em;
   width: 35%;
-  top: 4em;
   right: 1em;
+}
+
+
+.hudCIT {
+  top: 4em;
+}
+
+
+.hudCITL {
+  top: 1em;
 }
 
 
@@ -210,7 +228,7 @@ Nav {
 }
 
 
-.hud0:hover, .hud1:hover, .hud2:hover, .lang:hover, .langb:hover,.hudH:hover, .hudH2:hover, .hudH3:hover{ 
+.hud0:hover, .hud1:hover, .hud2:hover, .lang:hover, .langb:hover,.hudH:hover, .hudH2:hover, .hudH3:hover, .hudB:hover, .hudB1:hover, .hudB2:hover{ 
   background-color: #F9D92375;
   color: #Fff;
   cursor: pointer;

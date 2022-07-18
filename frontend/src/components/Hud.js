@@ -301,7 +301,7 @@ const Header = () => {
          </div>
           : 
           <div>  
-            <a href='https://certamentransparencia.org.mx/'><img class="hudCIT" src={CIT}/></a>
+            <a href='https://certamentransparencia.org.mx/'><img class="hudCITL" src={CIT}/></a>
             <div class="bottomHud">
               {!isMetamaskInstalled ?
                 <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
