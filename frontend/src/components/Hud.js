@@ -16,6 +16,7 @@ import { ConnectedContext } from '../contexts/ConnectedContext';
 import Voto from '../contracts/contracts/Voto.sol/Voto.json';
 import votoAddress from '../contracts/contracts/Voto/contract-address.json';
 import logo from '../assets/Logoww.png'
+import CIT from '../assets/certamenIT.png'
 
 import GovernorAlpha from '../contracts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
 import governorAlphaAddress from '../contracts/contracts/GovernorAlpha/contract-address.json';
@@ -275,20 +276,12 @@ const Header = () => {
               </div>
               <div class="double">{isValidated ? <div>{}</div> : <a href='/Quiz'><div class="hudU">⚠️ Pasa la Prueba Web3 para validar ⚠️</div></a>}</div>
             </div>
-            <a href="https://zenbit.mx">
-              <div class="zenbitBTM">
-                zenbit.eth /<span> 2022</span>
-              </div>
-            </a>
             <a href='/'><img class="hudlogo" src={logo}/></a>
+            <a href='/'><img class="hudCIT" src={CIT}/></a>
          </div>
           : 
           <div>  
-            <a href="https://zenbit.mx">
-              <div class="zenbit">
-                zenbit.eth /<span> 2022</span>
-              </div>
-            </a>
+            <a href='/'><img class="hudCIT" src={CIT}/></a>
             <div class="bottomHud">
               {!isMetamaskInstalled ?
                 <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
