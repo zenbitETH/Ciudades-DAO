@@ -307,7 +307,7 @@ function Home() {
               </div>
               
                 <div class="grid-blocked">
-                  <a href="/About" class="bg-grid0">
+                  <a href="https://metamask.io/" class="bg-grid0">
                     <img src={wallet} class="homevan"/> 
                     <div class="propsub">¿Tienes cómo conectarte?</div>
                     <div class="propopt">Ir por Wallet web3</div>
