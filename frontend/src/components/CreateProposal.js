@@ -242,17 +242,11 @@ const CreateProposal = () => {
               <Form.Control as="select" data-live-search="true"
                 onChange={handleOnChangeTypeOfAction}>
                   <option disabled selected>⚙️ Selecciona el tipo de actividad</option>
-                 <option> Evento presencial </option>
-                 <option> Evento en línea </option>
-                 <option> Solicitar mantenimiento </option>
-                 <option> Comprar </option>
-                 <option> Vender </option>
-                 <option> Ofrecer servicio </option>
-                 <option> Ofrezca talento digital </option>
-                 <option> Ofrecer talento industrial </option>
-                 <option> Crear arte </option>
-                 <option> Crear contenido digital </option>
-                 <option> Evento mixto </option>
+                 <option> 🌳 Evento presencial </option>
+                 <option> 💻 Evento en línea </option>
+                 <option> ⚠️ Reporte de seguridad </option>
+                 <option> 👷 Solicitar obra o mantenimiento </option>
+                 <option> ⚙️ Añadir función en Ciudades DAO </option>
               </Form.Control>
             </Form.Group>
           
