@@ -1,9 +1,15 @@
 # 🗳️ Ciudades DAO - Manual de Uso
 
-## Descripción General
-Ciudades DAO es una bien publico digital desarrollado con herramientas Web3 que facilitan la descentralización, coordinación y consenso de organizaciones urbanas mediante una entidad de gobernanza digital que no puede ser censurado o alterado, el cual incentiva la participación en la gobernanza urbana para generar información sobre una colonia, ciudad o región.
+## Índice
+[1.🗳️ Descripción General](https://github.com/zenbitETH/Ciudades-DAO#descripci%C3%B3n-general)  
+[2.🗺️ Proceso General](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-proceso-general)  
+[3.🎩 Tipos de usuario](https://github.com/zenbitETH/Ciudades-DAO#-tipos-de-usuario-y-funci%C3%B3n-principal)  
+[4.🕹️ Flujo para ciudadanos y representantes de gobierno](https://github.com/zenbitETH/Ciudades-DAO#%EF%B8%8F-flujo-para-ciudadanos-y-representantes-de-gobierno)  
+[5.🎮 Flujo para representantes de organizacionees urbanas y desarrolladores](https://github.com/zenbitETH/Ciudades-DAO#-flujo-para-representantes-de-organizacionees-urbanas-y-desarrolladores)  
+[6.🌐 Atención a usuarios y colaboraciones](https://github.com/zenbitETH/Ciudades-DAO#-atenci%C3%B3n-a-usuarios-y-colaboraciones)
 
-[![Presentación en CIT 2022](https://img.youtube.com/vi/7LwOqEkJd-w/0.jpg)](https://www.youtube.com/watch?v=7LwOqEkJd-w)
+## 1. Descripción General
+Ciudades DAO es una bien publico digital desarrollado con herramientas Web3 que facilitan la descentralización, coordinación y consenso de organizaciones urbanas mediante una entidad de gobernanza digital que no puede ser censurado o alterado, el cual incentiva la participación en la gobernanza urbana para generar información sobre una colonia, ciudad o región. 
 
 ## 1a Requisitos minimos:
 Para usar Ciudadades DAO debes tener acceso a los siguientes dispositivos, servicios y herramientas digitales.
@@ -61,7 +67,7 @@ Si tu interés se encuentra más en construir y conocer nuevas herramienas que l
 ## 4a. Cumplir requisitos mínimos
 Todos los usuarios deben cumplir con los requisitos de sistema para poder interactuar o personalizar el contenido de Ciudades DAO.
 ## 4b. Preparación de herramientas web3
-Para acceder a la aplicación pública visita https://ciudadesdao.zenbit.mx no necesitas tus datos personales para regisrarte, en su lugar ocuparás ocuparás 3 herramientas de la web3:  
+Para acceder a la aplicación pública visita https://ciudadesdao.org no necesitas tus datos personales para regisrarte, en su lugar ocuparás ocuparás 3 herramientas de la web3:  
 
 ### Cartera Web3. 
 Descarga e instala una cartera web3 en tu dispositivo móvil, pc o laptop. En el proceso deberás escribir y guardar las 12 palabras secretas de tu dirección para que puedas recuperar tu cuenta si cambias o extravias tu equipo o bien si deseas acceder desde diferentes equipo.
@@ -223,7 +229,7 @@ surge
 ```
 
 # 6. 🌐 Atención a usuarios y colaboraciones
--ciudadesdao@zenbit.mx  
+-hola@ciudadesdao.org 
 -Registra un issue en este repositorio  
 -Discord de ususarios Ciudades DAO  
 -Discord de desarrollo zenbit.eth  
