@@ -327,7 +327,7 @@ const PastProposals = () => {
                     {rejectedList}
                   </div>
                     :
-                    <div>                
+                    <div className='props'>                
                     <h2><span class="red">No hay propuestas rechazadas</span></h2><br/>
                     <div class="history">
                       <div class="void-link">

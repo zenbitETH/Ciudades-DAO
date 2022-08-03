@@ -428,7 +428,7 @@ const ProposalList = () => {
               </div>       
             </div>
            :
-            <div class="App">
+            <div class="props">
               <h2><span  class="red">Sin propuestas por votar</span></h2><br/>
               <div class="history">
                 <div class="void-link">

@@ -2,6 +2,7 @@
 
 .newprop {
   padding: 1em;
+  padding-top: 7em;
   text-align: center;
   font-family: 'Lexend Deca';
 }
@@ -440,7 +441,7 @@ option:disabled {
 
 .props {
   padding: 1em;
-  margin-top: 3%;
+  margin-top: 13em;
   color: #ffffff !important;
   border-radius: 25px;
 
@@ -679,6 +680,12 @@ option:disabled {
 
   .author {
     font-size: 1.5em;
+  }
+  .newprop {
+    padding-top: 0em;
+  }
+  .props {
+    margin-top: 3em;
   }
 }
 

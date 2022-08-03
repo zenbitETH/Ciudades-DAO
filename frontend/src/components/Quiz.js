@@ -307,7 +307,7 @@ const Quiz = () => {
           {isConnected ?
           <div>
             <div> 
-            <h2><span id="vote">Prueba Web3</span></h2><br/>
+            <h2 class="center"><span id="vote">Prueba Web3</span></h2><br/>
             <QuizContext.Provider  value={{userAnswers, setUserAnswers}}>
               <div id="margin">{spanishQuestions}</div>
             </QuizContext.Provider>

@@ -42,7 +42,7 @@
 .history {
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 10em;
   z-index: 20;
   width: 100%;
 }

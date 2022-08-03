@@ -167,7 +167,7 @@ Nav {
   position: fixed;
   height: auto;
   margin: 0.5em 0em 0em 1em;
-  width: 50%;
+  width: 45%;
   left: 0;
 }
 
@@ -185,7 +185,7 @@ Nav {
   position: fixed;
   height: auto;
   margin: 0.5em 0em 0em 1em;
-  width: 35%;
+  width: 30%;
   right: 1em;
 }
 
@@ -205,15 +205,15 @@ Nav {
 }
 
 .hudH {
-  border-radius:  0 25px 0px 0px;
+  border-radius:  0 25px 25px 0px;
 }
 
 .hudH2 {
-  border-radius:  25px 25px 0px 0px;
+  border-radius:  25px;
 }
 
 .hudH3 {
-  border-radius:  25px 0px 0px 0px;
+  border-radius:  25px 0px 0px 25px;
 }
 
 .hudB {

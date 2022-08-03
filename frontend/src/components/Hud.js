@@ -269,22 +269,15 @@ const Header = () => {
                 <a class="hud1" href='/'>
                   <div>🏠<div class="MiniTitle">Inicio</div></div>
                 </a>
-               
-
-                
-                
-                  
-                    {isValidated ? 
-                    <a href='/CreateProposal' class="hud0">
-                      <div>🗳️ {userBalance} VOTO</div>
-                    </a> 
-                    : 
-                    <a href='/Quiz' class="no-validation">
-                      <div >Realiza la Prueba Web3</div>
-                    </a>
-                    }
-                
-               
+                  {isValidated ? 
+                  <a href='/CreateProposal' class="hud0">
+                    <div>🗳️ {userBalance} VOTO</div>
+                  </a> 
+                  : 
+                  <a href='/Quiz' class="no-validation">
+                    <div >Realiza la Prueba Web3</div>
+                  </a>
+                  }
               </div>
               <div class="double"></div>
             </div>
