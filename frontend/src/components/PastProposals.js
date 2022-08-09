@@ -240,58 +240,26 @@ const PastProposals = () => {
             <div>
               {showApproved
                 ?
-                <div className="space">
+                <div className="props">
                   {approvedList.length > 0
                     ?
-                    <div className="space">
-                      <div class="history">
-                        <div class="void-link">
-                          <a onClick={handleOnApprove} >
-                            <div class="hudH">
-                              <div class="propsub">Rechazadas</div>
-                              <div class="propopt">👎 </div>
-                            </div>
-                          </a>
-                          <a href="/ProposalList#vote">
-                            <div  class="hudH2">
-                              <div class="propsub">DAO</div>
-                              <div class="propopt">🗳️</div>
-                            </div>
-                          </a>
-                          <a href="/CreateProposal" class="hudH3">
-                            <div >
-                              <div class="propsub">Proponer</div>
-                              <div class="propopt">💡</div>
-                            </div>
-                          </a>
+                    <div className="">
+                      <a onClick={handleOnApprove} class="history">
+                        <div class="hudH2">
+                          <div class="propswitch">Ver rechazadas 👎</div>
                         </div>
-                      </div>
-                       <div id="margin"><h1 class="aproposal1">Propuestas aprobadas</h1>{approvedList}</div>
+                      </a>
+                      <div id="margin"><h1 class="aproposal1">Propuestas aprobadas</h1>{approvedList}</div>
                     </div>
                     :
-                    <div className="void">                
+                    <div className="">                
                     <h2><span class="red">No hay propuestas aprobadas</span></h2><br/>
-                      <div class="history">
-                        <div class="void-link">
-                          <a onClick={handleOnApprove} >
-                            <div class="hudH">
-                              <div class="propsub">Rechazadas</div>
-                              <div class="propopt">👎 </div>
+                      <div >
+                          <a onClick={handleOnApprove} class="history">
+                            <div class="hudH2">
+                              <div class="propswitch">Ver Rechazadas 👎</div>
                             </div>
                           </a>
-                          <a href="/ProposalList#vote">
-                            <div  class="hudH2">
-                              <div class="propsub">Propuestas disponibles</div>
-                              <div class="propopt">Vota</div>
-                            </div>
-                          </a>
-                          <a href="/CreateProposal" class="hudH3">
-                            <div >
-                              <div class="propsub">Crear propuesta</div>
-                              <div class="propopt">Proponer</div>
-                            </div>
-                          </a>
-                        </div>
                       </div>
                     </div>
                   }
@@ -300,28 +268,13 @@ const PastProposals = () => {
                 <div>
                   {rejectedList.length > 0
                     ?
-                  <div className="space">
-                    <div class="history">
-                      <div class="void-link">
-                        <a onClick={handleOnApprove} >
-                          <div class="hudH">
-                            <div class="propsub">Aprobadas</div>
-                            <div class="propopt">👍 </div>
-                          </div>
-                        </a>
-                        <a href="/ProposalList#vote">
-                          <div  class="hudH2">
-                            <div class="propsub">DAO</div>
-                            <div class="propopt">🗳️</div>
-                          </div>
-                        </a>
-                        <a href="/CreateProposal" class="hudH3">
-                          <div >
-                            <div class="propsub">Proponer</div>
-                            <div class="propopt">💡</div>
-                          </div>
-                        </a>
-                      </div>
+                  <div className="props">
+                    <div>
+                      <a onClick={handleOnApprove} class="history">
+                        <div class="hudH2">
+                          <div class="propswitch">Ver aprobadas 👍</div>
+                        </div>
+                      </a>
                     </div>
                     <h1 class="rproposal1">Propuestas rechazadas</h1>
                     {rejectedList}
@@ -329,27 +282,12 @@ const PastProposals = () => {
                     :
                     <div className='props'>                
                     <h2><span class="red">No hay propuestas rechazadas</span></h2><br/>
-                    <div class="history">
-                      <div class="void-link">
-                        <a onClick={handleOnApprove} class="hudH">
-                          <div >
-                            <div class="propsub">Aprobadas</div>
-                            <div class="propopt">👍 </div>
-                          </div>
-                        </a>
-                        <a href="/ProposalList#vote" class="hudH2">
-                          <div >
-                            <div class="propsub">DAO</div>
-                            <div class="propopt">🗳️</div>
-                          </div>
-                        </a>
-                        <a href="/CreateProposal" class="hudH3">
-                          <div >
-                            <div class="propsub">Proponer</div>
-                            <div class="propopt">💡</div>
-                          </div>
-                        </a>
-                      </div>
+                    <div>
+                      <a onClick={handleOnApprove} class="history">
+                        <div class="hudH2">
+                          <div class="propswitch">Ver aprobadas 👍</div>
+                        </div>
+                      </a>
                     </div>
                   </div>
                   }

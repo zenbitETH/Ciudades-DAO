@@ -401,52 +401,20 @@ const ProposalList = () => {
   return (
   <body id="">
     <section class="proplist">
+      <div className='proposalmargin'/>
         {isConnected ?
-            <span>{isValidated ? <div id="margin"><br/>
+            <span>{isValidated ? <div id="margin">
           {list.length > 0 ?
             <div class="App">
               <div id="vote" className="props">
                 <h2>Propuestas por votar</h2><br/>
                   {list}
               </div>
-              <div class="history">
-                <div class="void-link">
-                  <a href="/PastProposals">
-                    <div class="hudH" >
-                      <div class="propsub">Historial</div>
-                      <div class="propopt">📅</div>
-                    </div>
-                  </a>
-                  <div/>
-                  <a href="/createProposal">
-                    <div class="hudH3">
-                      <div class="propsub">Proponer</div>
-                      <div class="propopt">💡</div>
-                    </div>  
-                  </a>
-                </div>
-              </div>       
+  
             </div>
            :
             <div class="props">
               <h2><span  class="red">Sin propuestas por votar</span></h2><br/>
-              <div class="history">
-                <div class="void-link">
-                  <a href="/PastProposals">
-                    <div class="hudH" >
-                      <div class="propsub">Historial</div>
-                      <div class="propopt">📅</div>
-                    </div>
-                  </a>
-                  <div/>
-                  <a href="/createProposal">
-                    <div class="hudH3">
-                      <div class="propsub">Proponer</div>
-                      <div class="propopt">💡</div>
-                    </div>  
-                  </a>
-                </div>
-              </div>
             </div>
           }
         </div> : <ValidationRequired />}</span>
