@@ -17,6 +17,8 @@ import past from '../assets/vote.svg';
 import verify from '../assets/verify.svg';
 import gas from '../assets/gas.svg';
 import logo from '../assets/Logoww.png';
+import CIT from '../assets/certamenIT.png'
+import tuto from '../assets/tuto.svg'
 
 
 import Voto from '../contracts/contracts/Voto.sol/Voto.json';
@@ -265,10 +267,19 @@ function Home() {
     <div>
       <div class="App">
         <div class="grid-block">
-          <div>
+          <div className='homemargin'>
             {isConnected ?
             <section id="">
+              <div class="headline">
+                <h2>Actividades en Ciudades DAO</h2>
+              </div>
+              
               <div class="homegrid">
+                {/*<a class="bg-grid0"href="/About">
+                  <img src={tuto} class="homevan"/>
+                  <div class="propsub">¿Sin idea que hacer?</div>
+                  <div class="propopt">Ver tutoriales</div>
+                </a>*/}
                 {isValidated ? '':
                 <a class="bg-grid0"href="/Quiz">
                   <img src={verify} class="homevan"/>
@@ -301,9 +312,16 @@ function Home() {
             </section>
             :
             <section>
+                <div class="homemargin">
+                  <a href='/'>
+                    <img class="hudlogo" src={logo}/>
+                  </a>
+                  <a href='https://certamentransparencia.org.mx/'>
+                    <img class="hudCIT" src={CIT}/>
+                  </a>
+                </div>
               <div class="headline">
-                <img src={logo} class="hudlogoL"/>
-                <h2>Gobernanza descentralizada para ciudades</h2>
+                <h2>¿Ya tienes las herramienntas web3 necesarias?</h2>
               </div>
               
                 <div class="grid-blocked">

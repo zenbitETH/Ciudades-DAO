@@ -151,12 +151,11 @@ option:disabled {
   font-family: "ABeeZee";
   font-weight: 300;
   font-size: 0.8em;
+  padding: 0.3em 0 0.4em 0;
 }
 
-.propsub:hover {
-  text-align: left;
-  font-family: "ABeeZee";
-  font-weight: 300;
+.propswitch {
+  text-align: center;
 }
 
 .prop-img {
@@ -441,7 +440,6 @@ option:disabled {
 
 .props {
   padding: 1em;
-  margin-top: 13em;
   color: #ffffff !important;
   border-radius: 25px;
 
