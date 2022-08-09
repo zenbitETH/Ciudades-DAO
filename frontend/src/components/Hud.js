@@ -266,45 +266,43 @@ const Header = () => {
           <div>            
             <div class="topHud">
               <div class="topGrid">
-                <a class="hud1" href='/'>
-                  <div>🏠<div class="MiniTitle">Inicio</div></div>
-                </a>
-                  {isValidated ? 
-                  <a href='/CreateProposal' class="hud0">
-                    <div>🗳️ {userBalance} VOTO</div>
-                  </a> 
-                  : 
-                  <a href='/Quiz' class="no-validation">
-                    <div >Realiza la Prueba Web3</div>
-                  </a>
-                  }
+                <a href='/CreateProposal' class="hudH">
+                  <div>{userBalance} VOTO</div>
+                </a> 
               </div>
               <div class="double"></div>
             </div>
-            <a href='/'>
-              <img class="hudlogo" src={logo}/>
-            </a>
-            <a href='https://certamentransparencia.org.mx/'>
-              <img class="hudCIT" src={CIT}/>
-            </a>
             <div class="bottomHud">
               <div class="bottomGrid">
-                <a class="hudB" href='https://github.com/zenbitETH/Ciudades-DAO#readme'>
-                  <div>📚<div class="MiniTitle">Documentación</div></div>
+                <a class="hud0" href='/'>
+                  <div>🏠<div class="MiniTitle">Inicio</div></div>
                 </a>
-                <a class="hudB1" href='https://discord.gg/mn8GhcPeEb'>
-                  <div>💬<div class="MiniTitle">Discord</div></div>
+
+                {isValidated ? 
+                <>
+                  <a class="hud1" href='/PastProposal'>
+                    <div>💡<div class="MiniTitle">Proponer</div></div>
+                  </a>
+                  <a class="hud1" href='/ProposalList'>
+                    <div>🗳️<div class="MiniTitle">Por votar</div></div>
+                  </a>
+                  <a class="hud2" href='/PastProposals'>
+                    <div>📅<div class="MiniTitle">Historial</div></div>
+                  </a>
+                </>
+                : 
+                <a href='/Quiz' class="no-validation">
+                  <div >Realiza la Prueba Web3</div>
                 </a>
-                <a class="hudB2" href='/'>
-                  <div>👨‍🏫<div class="MiniTitle">Tutoriales</div></div>
-                </a>
+                }
+                
               </div>
             </div> 
          </div>
           : 
           <div>  
-            <a href='https://certamentransparencia.org.mx/'><img class="hudCITL" src={CIT}/></a>
-            <div class="bottomHud">
+            
+            <div class="walletHud">
               {!isMetamaskInstalled ?
                 <InstallMetamaskAlert /> : isConnected ?'' : isConnecting ?
                 <ConnectingButton /> : <ConnectButton handleOnConnect={handleOnConnect}/>
@@ -318,6 +316,16 @@ const Header = () => {
               <SwitchPolygonAlert/> {isConnectingToPolygon ?
               <PolygonSwitch /> : <PolygonButton handleOnClick={listPolygonInMetamask}/>}
             </div>
+
+            <a class="hudB" href='https://github.com/zenbitETH/Ciudades-DAO#readme'>
+                  <div>📚<div class="MiniTitle">Documentación</div></div>
+                </a>
+                <a class="hudB1" href='https://discord.gg/mn8GhcPeEb'>
+                  <div>💬<div class="MiniTitle">Discord</div></div>
+                </a>
+                <a class="hudB2" href='/'>
+                  <div>👨‍🏫<div class="MiniTitle">Tutoriales</div></div>
+                </a>
             : 
             ''
               */}         
