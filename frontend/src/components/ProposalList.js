@@ -421,7 +421,7 @@ const ProposalList = () => {
         : 
         <div class="connect">
           <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
-          <h1 class="white">Conecta tu llave web3</h1>
+          <h1 class="white">Conecta tu llave Web3</h1>
         </div>
         }
       </section>

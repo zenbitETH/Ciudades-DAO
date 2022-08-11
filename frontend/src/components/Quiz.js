@@ -298,7 +298,7 @@ const Quiz = () => {
           :
           <div class="connect2">
           <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
-          <h1 class="white">Connect your web3 wallet</h1><br/>
+          <h1 class="white">Connect your Web3 wallet</h1><br/>
         </div>
           }
         </section>
@@ -336,7 +336,7 @@ const Quiz = () => {
           :
           <div class="connect2">
           <div class="center"><img src={key} id="CityDAO" alt="Querévoto DAO" class="prop-img"/></div>
-          <h1 class="white">Conecta tu llave web3</h1><br/>
+          <h1 class="white">Conecta tu llave Web3</h1><br/>
         </div>
         }
         </section>

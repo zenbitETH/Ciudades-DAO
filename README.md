@@ -27,8 +27,8 @@ Además de los requisitos de sistema, para usar Ciudades DAO deberás contar con
 - Habilidades digitales en navegación en internet y búsqueda de información.
 - Habilidades digitales en el uso de redes sociales.
 - Habilidades digitales en el uso de Google Maps
-- Habilidades digiales en el uso de herramientas web3 de Ethereum
-- Habilidades digiales en el uso de herramientas web3 de IPFS
+- Habilidades digiales en el uso de herramientas Web3 de Ethereum
+- Habilidades digiales en el uso de herramientas Web3 de IPFS
 
 ## 1b Componentes de la aplicación
 En este repositorio de código encontrarás todos los componentes necesarios para conectarte a Ciudad DAO desde tu dispositivo, o usarlo como plantilla para implementar el modelo de Gobernanza DAO en una organización urbana. Ciudades DAO se compone de:  
@@ -37,13 +37,13 @@ En este repositorio de código encontrarás todos los componentes necesarios par
 - Contrato Inteligente para token de Gobernanza DAO "VOTO"
     Contrato escrito en lenguaje de programación solidity para generar activos digitales que funcionan como unidades de recompensas por el desarrollo de habilidades digitales y generación de propuestas en Ciudades DAO y como unidad para votar esas propuestas en la gobernanza DAO.
 - Interfaz de Usuarios
-    Aplicación web desarrollada con React y funciones web3 para comunicar a los usuarios con los contratos inteligentes de Ciudades DAO.
+    Aplicación web desarrollada con React y funciones Web3 para comunicar a los usuarios con los contratos inteligentes de Ciudades DAO.
 
 # 2.🗺️ Proceso general
 Para usar Ciudades DAO primero deberás cumplir los Requisitos del Sistema para conectarte a la aplicación pública en ciudadesdao.zenbit.mx, si no cuentas con ellos sigue este tutorial y sigue el paso a paso para tener todo listo.  
 
 ## Proceso de validación 
-Una vez que tengas los Requisitos del sistema deberás conectarte a la aplicación, asi podrás comunicarte con el contrato Gobernador Alfa con tu cartera web3 sin necesidad de darle ninguno de us datos personales. Una vez conectado, deberás validar con Gobernador Alfa que cuentas con las habilidades digitales para usar esta aplicación. Para ello puedes seguir este tutorial donde encontrarás lo necesario que pasar la prueba web3 contestando el cuestionario y comprobar que cuentas con las habilidades para usar Cuidades DAO. Por cada pregunta correcta obtendrás 20 tokens VOTO, por lo que si contestas las 5 preguntas correctamente podrás obtener hasta 100 tokens VOTO como recompensa.  
+Una vez que tengas los Requisitos del sistema deberás conectarte a la aplicación, asi podrás comunicarte con el contrato Gobernador Alfa con tu cartera Web3 sin necesidad de darle ninguno de us datos personales. Una vez conectado, deberás validar con Gobernador Alfa que cuentas con las habilidades digitales para usar esta aplicación. Para ello puedes seguir este tutorial donde encontrarás lo necesario que pasar la prueba Web3 contestando el cuestionario y comprobar que cuentas con las habilidades para usar Cuidades DAO. Por cada pregunta correcta obtendrás 20 tokens VOTO, por lo que si contestas las 5 preguntas correctamente podrás obtener hasta 100 tokens VOTO como recompensa.  
 
 ## Proceso de Gobernanza DAO  
 Una vez que Gobernador Alfa haya validado que cuentas con las habilidades digitales para usar Ciudades DAO podrás acceder a la gobernanza para realizar y votar propuestas que resuelvan  necesidades de tu ciudad o apoyar la causa de alguna organización urbana. Los tokens VOTO que hayas obtenido en la validación los podrás usar para votar las propuestas disponibles y por cada propuesta que realices obtendrás 10 VOTO adicionales. De modo cada usuario tendrá diferente poder de voto y decisión en las propuestas, dependiendo de su proactividad y creatividad para proponer soluciones urbanas.
@@ -55,7 +55,7 @@ Se consideran 4 tipos de usuario para Ciudades DAO los cuales se definen dependi
 Ciudad DAO tiene origen como organización urbana en Querétaro con la función de recopilar un sistema en web2 de datos para ciudadanos. Por lo que la mayoria de las interacciones de la aplicación se enfocan en la experiencia de usuario para estas personas. Las habilidades requeridas para este usuario son minimas y buscan incentivar la participación ciudadana en la resolución de problemas urbanos a través de propuestas que pueden ser votadas por otros participantes de la aplicación para su aceptación y seguimiento.  
 
 ## 👩‍💼👨‍💼 Representante de gobierno / Seguimiento de propuesta
-Si bien la descentralización que ofrece Ciudad DAO empodera la coordinación de ciudadanos y organizaciones urbanas, no pretende generar conflicto con la administración pública tradional, sino complementar los sistemas de participación ciudadana y las carencias generadas por la insuficiencia del presupuesto público en las administraciones gubernamentales de las ciudades. Para ello Ciudades DAO considera a los representantes de gobierno o servidores públicos como un rol fundamental para dar seguimiento a las propuestas realizadas en Ciudad DAO para cubrir el vacio legislativo entorno a la operación y regulación de Organizaciones Autónomasa Descentralizadas, tecnologías web3 y los nuevos modelos de negocio generados entorno a bienes públicos y economía regenerativa.  
+Si bien la descentralización que ofrece Ciudad DAO empodera la coordinación de ciudadanos y organizaciones urbanas, no pretende generar conflicto con la administración pública tradional, sino complementar los sistemas de participación ciudadana y las carencias generadas por la insuficiencia del presupuesto público en las administraciones gubernamentales de las ciudades. Para ello Ciudades DAO considera a los representantes de gobierno o servidores públicos como un rol fundamental para dar seguimiento a las propuestas realizadas en Ciudad DAO para cubrir el vacio legislativo entorno a la operación y regulación de Organizaciones Autónomasa Descentralizadas, tecnologías Web3 y los nuevos modelos de negocio generados entorno a bienes públicos y economía regenerativa.  
 
 ## ✊🌆Representante de organización urbana / Causas  
 Los representantes de organizaciones urbanas son el motor de la resolución de problemas en las ciuades, ya que son quienes dan pasos adicionales que los ciuadanos al establecer procesos, ideas y proyectos con mayor complejidad o que en conjunto pueden tener un mayor impacto para la ciudad que los esfuerzos individuales. El esfuerzo extra también requiere mayores habilidades para leer y escribir en javascript, solidity, HTML y CSS. Estas habilidades no son solo para producir contenido para la aplicación original sino también para que tomes Ciudades DAO como plantilla y puedas personalizarlo para tu ciudad o para una organización urbana en específico. En el flujo de usuarios encontrarás información detallada si tu interés como representan es tomar este repositorio para personalizarlo a la imagen y objetivos de la organización urbana que representes.
@@ -66,14 +66,14 @@ Si tu interés se encuentra más en construir y conocer nuevas herramienas que l
 # 4.🕹️ Flujo para ciudadanos y representantes de gobierno
 ## 4a. Cumplir requisitos mínimos
 Todos los usuarios deben cumplir con los requisitos de sistema para poder interactuar o personalizar el contenido de Ciudades DAO.
-## 4b. Preparación de herramientas web3
-Para acceder a la aplicación pública visita https://ciudadesdao.org no necesitas tus datos personales para regisrarte, en su lugar ocuparás ocuparás 3 herramientas de la web3:  
+## 4b. Preparación de herramientas Web3
+Para acceder a la aplicación pública visita https://ciudadesdao.org no necesitas tus datos personales para regisrarte, en su lugar ocuparás ocuparás 3 herramientas de la Web3:  
 
 ### Cartera Web3. 
-Descarga e instala una cartera web3 en tu dispositivo móvil, pc o laptop. En el proceso deberás escribir y guardar las 12 palabras secretas de tu dirección para que puedas recuperar tu cuenta si cambias o extravias tu equipo o bien si deseas acceder desde diferentes equipo.
+Descarga e instala una cartera Web3 en tu dispositivo móvil, pc o laptop. En el proceso deberás escribir y guardar las 12 palabras secretas de tu dirección para que puedas recuperar tu cuenta si cambias o extravias tu equipo o bien si deseas acceder desde diferentes equipo.
 
 ATENCIÓN
-Las 12 palabras secretas de tu cartera web3 es el único metodo para acceder o recuperar tu cuenta, SOLO TU tienes acceso a ellas en el momento que creas tu cartera. Ni Metamask, ni Ciudades DAO, ni zenbit.eth o ningún intermediario tiene acceso a las 12 palabras secretas.
+Las 12 palabras secretas de tu cartera Web3 es el único metodo para acceder o recuperar tu cuenta, SOLO TU tienes acceso a ellas en el momento que creas tu cartera. Ni Metamask, ni Ciudades DAO, ni zenbit.eth o ningún intermediario tiene acceso a las 12 palabras secretas.
 
 
 ### Cambiar a Red de Pruebas Polygon Mumbai.
@@ -82,10 +82,10 @@ Ya que Ciudades DAO se encuentra en fase de desarrollo, todas las transacciones 
 ### Obtener Matic de prueba para las pagar las cuotas de gas.
 Una vez en la red de pruebas, accede al tercer enlace de la pantalla principal de Ciudades DAO para ir al expendio de Matic de prueba el cual te servirá para pagar las cuotas de gas que cambian el estado de los contratos inteligentes. Solo tendrás que copiar y pegar tu dirección pública en el campo de "Wallet Address", presionar el botón "Submit" y en unos cuantos segundos tu cuenta tendrás Matic de prueba.
   
-Una vez que tengas tu cartera conectada a la red de pruebas de Polygon Mumbai y lista con Matic de prueba que obtuviste del expendio, estas listo para conectar tu cartera y empezar a usar Ciudades DAO. Conectate presionando el botón azul en la parte inferior de la pantalla principal y acepta la conexión con Ciudades DAO desde tu Cartera web3 para desbloquear la aplicación.
+Una vez que tengas tu cartera conectada a la red de pruebas de Polygon Mumbai y lista con Matic de prueba que obtuviste del expendio, estas listo para conectar tu cartera y empezar a usar Ciudades DAO. Conectate presionando el botón azul en la parte inferior de la pantalla principal y acepta la conexión con Ciudades DAO desde tu Cartera Web3 para desbloquear la aplicación.
 
-## 4c. Validar habilidades digitales para web3
-Con tu cartera conectada a Ciudades DAO ahora podrás ver las 3 actividades a realizar en la aplicación: 1. Validar tu cuenta, 2. Generar propuestas y 3. Votar por las propuestas. Sin embargo notaras que la segunda y tercera están bloqueadas hasta que completes la validación de tu cuenta. Para validar tu cuenta deberas comprobarle a Gobernador Alfa que tienes las habilidades digitales para interactuar con herramientas web3 mediante un cuestionario de 5 preguntas relacionadas con su funcionamiento.  
+## 4c. Validar habilidades digitales para Web3
+Con tu cartera conectada a Ciudades DAO ahora podrás ver las 3 actividades a realizar en la aplicación: 1. Validar tu cuenta, 2. Generar propuestas y 3. Votar por las propuestas. Sin embargo notaras que la segunda y tercera están bloqueadas hasta que completes la validación de tu cuenta. Para validar tu cuenta deberas comprobarle a Gobernador Alfa que tienes las habilidades digitales para interactuar con herramientas Web3 mediante un cuestionario de 5 preguntas relacionadas con su funcionamiento.  
   
 Por cada respuesta correcta obtendrás 20 tokens VOTO, por lo que podrás obtener hasta 100 tokens VOTO si contestas todas las preguntas correctamente. Los tokens VOTO que obtengas podrás usarlos para votar tus propuestas de gobernanza DAO o las propuestas de otros participantes. La validación con Gobernador Alfa tendrá duración de 30 días a partir de la fecha de validación,  tras este periodo deberás realizar la validación de nuevo la cual puede contener diferentes preguntas según la evolución o enfoque de los participantes.
 
@@ -93,13 +93,13 @@ Por cada respuesta correcta obtendrás 20 tokens VOTO, por lo que podrás obtene
 Una vez validado se desbloquearán las 2 interacciones de gobernanza DAO: podras realizar propuestas de gobernanza sobre tu ciudad y también podrás usar tus tokens VOTO para votar tus propuestas o las de otros participantes.
 
 ### Proponer
-Para hacer una propuesta toca el botón de Proponer desde la pantalla desbloqueada de Ciudades DAO para acceder a la pantalla en la que podrás describir y detallar tu propuesta antes de enviarla al Gobernador Alfa para que sea votada por ti y los otros usuarios de la aplicación. Por cada propuesta publicada recibiras 10 tokens TARO adicionales, esto será valido durante las primeras 20 propuestas que realices mientras la dirección de tu cartera web3 este validada por el Gobernador Alfa.
+Para hacer una propuesta toca el botón de Proponer desde la pantalla desbloqueada de Ciudades DAO para acceder a la pantalla en la que podrás describir y detallar tu propuesta antes de enviarla al Gobernador Alfa para que sea votada por ti y los otros usuarios de la aplicación. Por cada propuesta publicada recibiras 10 tokens TARO adicionales, esto será valido durante las primeras 20 propuestas que realices mientras la dirección de tu cartera Web3 este validada por el Gobernador Alfa.
 
 ### Votar 
  Las propuestas realizadas estarán disponibles para votar durante 15 días en la sección de DAO, con el total de tokens VOTO que tengas podrás votar a favor o en contra de las propuestas y trás los 15 días el contrato Gobernador Alfa determinará el resultado de la votación dependiendo de los votos a favor y en contra que reciba la propuesta y la archivará en el historial de propuestas según su resultado.
 
 ## 4e. Historial y resultados
-Las propuestas en las que haya expirado el tiempo de votación serán mostradas en la sección de Propuestas Anteriores y podrás consultar entre las que fueron aprobadas y las que fueron rechazadas. Si bien los resultados de las votaciones de estas propuestas no son vinculantes con la legislación municipal de las ciudades, establece un cambio de paradigma en cómo se registra y almacenan los datos urbanos y cómo las herramientas de la web3 ayudan a resolver las fallas de coordinación causadas por la centralización de gobiernos, servicios y bienes públicos. 
+Las propuestas en las que haya expirado el tiempo de votación serán mostradas en la sección de Propuestas Anteriores y podrás consultar entre las que fueron aprobadas y las que fueron rechazadas. Si bien los resultados de las votaciones de estas propuestas no son vinculantes con la legislación municipal de las ciudades, establece un cambio de paradigma en cómo se registra y almacenan los datos urbanos y cómo las herramientas de la Web3 ayudan a resolver las fallas de coordinación causadas por la centralización de gobiernos, servicios y bienes públicos. 
   
 Para continuar con la conversación generada por las propuestas realizadas en Ciudades DAO, te invitamos al servidor de Ciudades DAO en Discord, donde podrás conectar con otros ciudadanos, representantes y desarrolladores para retroalimentar ideas, comentar funcionalidades por implementar o para personalizar este repositorio e implementarlo en tu ciudad u organización urbana.
 

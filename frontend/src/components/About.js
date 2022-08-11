@@ -13,9 +13,9 @@ const About = () => {
 
         <div class = "about-grid">
           <div class = "bg-grid"> <a>
-           <div class = "about-hl"> 1. Obtén una llave web3 </div> <br/>
+           <div class = "about-hl"> 1. Obtén una llave Web3 </div> <br/>
           <img src = {img} class ="about-img"/>
-          <span class = "ustext"> <div class = "center"></div> <br/> Metamask es una wallet de ethereum con la que puedes <span class = "yellow"> crear una llave web3. </span> Esta cartera es descentralizada, por lo que solo tú tendrás acceso a ella y custodia total de los activos digitales que se depositan. Descárguela de su sitio en una computadora o dispositivo móvil:
+          <span class = "ustext"> <div class = "center"></div> <br/> Metamask es una wallet de ethereum con la que puedes <span class = "yellow"> crear una llave Web3. </span> Esta cartera es descentralizada, por lo que solo tú tendrás acceso a ella y custodia total de los activos digitales que se depositan. Descárguela de su sitio en una computadora o dispositivo móvil:
 
           <div class = "usgrid">
             <a class="about-bt" href="https://metamask.io"> Descargar Metamask </a>

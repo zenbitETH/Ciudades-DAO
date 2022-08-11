@@ -67,7 +67,7 @@
 
   
   .verify-bt {
-    padding: 4em 0 0 0;
+    padding: 2em 0 0 0;
     color: white;
     background-color: #00000068;
     border-radius: 100%;
@@ -75,7 +75,7 @@
     height: 200px;
     position: relative;
     border-color: transparent;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     margin: -1em 2em 0 2em;
   }

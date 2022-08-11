@@ -292,7 +292,7 @@ const Header = () => {
                 </>
                 : 
                 <a href='/Quiz' class="no-validation">
-                  <div >Realiza la Prueba Web3</div>
+                  <div >Realiza la certificación Web3</div>
                 </a>
                 }
                 

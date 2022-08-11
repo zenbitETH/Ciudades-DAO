@@ -284,7 +284,7 @@ function Home() {
                 <a class="bg-grid0"href="/Quiz">
                   <img src={verify} class="homevan"/>
                   <div class="propsub">Obtén hasta 100 VOTOs</div>
-                  <div class="propopt">Prueba Web3</div>
+                  <div class="propopt">Certificación Web3</div>
                 </a>}
                 {isValidated ? <a class="bg-grid0" href="/createProposal">
                   <img src={prop} class="homevan"/> 
@@ -293,7 +293,7 @@ function Home() {
                 </a>
                  : <div class="bg-blocked" >
                  <img src={prop} class="homevan"/> 
-                 <div class="propsub">Valida para desbloquear</div>
+                 <div class="propsub">Certificate para desbloquear</div>
                  <div class="propopt">Propuestas DAO</div>
                </div>}
                {isValidated ?
@@ -305,8 +305,8 @@ function Home() {
                 :
                 <div class="bg-blocked" >
                   <img src={past} class="homevan"/> 
-                  <div class="propsub">Valida para desbloquear</div>
-                  <div class="propopt">Qurévoto DAO</div>
+                  <div class="propsub">Certificate para desbloquear</div>
+                  <div class="propopt">Qurétaro DAO</div>
                 </div>}
               </div>
             </section>
@@ -321,14 +321,14 @@ function Home() {
                   </a>
                 </div>
               <div class="headline">
-                <h2>¿Ya tienes las herramienntas web3 necesarias?</h2>
+                <h2>¿Ya tienes las herramientas Web3 necesarias?</h2>
               </div>
               
                 <div class="grid-blocked">
                   <a href="https://metamask.io/" class="bg-grid0">
                     <img src={wallet} class="homevan"/> 
                     <div class="propsub">¿Tienes cómo conectarte?</div>
-                    <div class="propopt">Ir por Wallet web3</div>
+                    <div class="propopt">Ir por Wallet Web3</div>
                   </a>
                   <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
                     <img src={test} class="homevan"/> 
