@@ -332,7 +332,7 @@ function Home() {
                   </a>
                   <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
                     <img src={test} class="homevan"/> 
-                    <div class="propsub">¿Estas en la red correcta?</div>
+                    <div class="propsub">¿Estás en la red correcta?</div>
                     <div class="propopt">Ir a red de pruebas </div>
                   </a>
                   <a class="bg-grid0" href="https://faucet.polygon.technology/">
