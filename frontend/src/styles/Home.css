@@ -260,6 +260,22 @@ h3 {
   ;
 }
 
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 50.25%;
+  position: relative;
+  height: 0;
+  border-radius: 25px;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 /* Screen variants */
 
 @media only screen and (min-width: 1400px) {
@@ -294,6 +310,10 @@ h3 {
   .videoMargin {
     margin: 0 20em 0 20em;
     ;
+  }
+
+  .video-responsive {
+    padding-bottom: 25.25%;
   }
 }
 
