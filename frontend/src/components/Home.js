@@ -9,6 +9,7 @@ import { VotoContext } from '../contexts/VotoContext';
 import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { ConnectedContext } from '../contexts/ConnectedContext';
+import VideoEmbed from '../components/VideoEmbed'
 
 import test from '../assets/testnet.svg';
 import wallet from '../assets/confirm.svg'
@@ -320,6 +321,11 @@ function Home() {
                     <img class="hudCIT" src={CIT}/>
                   </a>
                 </div>
+                <div className='videoMargin'>
+                  <VideoEmbed
+                  embedId="Dn3ryqVLCvo" 
+                  />
+                </div>
               <div class="headline">
                 <h2>¿Ya tienes las herramientas Web3 necesarias?</h2>
               </div>
@@ -328,17 +334,17 @@ function Home() {
                   <a href="https://metamask.io/" class="bg-grid0">
                     <img src={wallet} class="homevan"/> 
                     <div class="propsub">¿Tienes cómo conectarte?</div>
-                    <div class="propopt">Ir por Wallet Web3</div>
+                    <div class="propopt">1. Ir por Wallet Web3</div>
                   </a>
                   <a class="bg-grid0" href="https://chainlist.org/chain/80001/">
                     <img src={test} class="homevan"/> 
                     <div class="propsub">¿Estás en la red correcta?</div>
-                    <div class="propopt">Ir a red de pruebas </div>
+                    <div class="propopt">2. Ir a red de pruebas </div>
                   </a>
                   <a class="bg-grid0" href="https://faucet.polygon.technology/">
                     <img src={gas} class="homevan"/> 
                     <div class="propsub">¿Tienes gas? </div>
-                    <div class="propopt">Conseguir Gas </div>
+                    <div class="propopt">3. Conseguir Gas </div>
                   </a>
                 </div>
             </section>      
