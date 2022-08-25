@@ -255,6 +255,11 @@ h3 {
   text-align: justify;
 }
 
+.videoMargin {
+   margin: 6em 0em 1em 0em;
+  ;
+}
+
 /* Screen variants */
 
 @media only screen and (min-width: 1400px) {
@@ -284,6 +289,11 @@ h3 {
 @media only screen and (min-width: 1000px) {
   .headline {
     margin: 0 5vh 0 5vh;
+  }
+
+  .videoMargin {
+    margin: 0 20em 0 20em;
+    ;
   }
 }
 

@@ -14,7 +14,6 @@ import { GovernorAlphaContext } from '../contexts/GovernorAlphaContext';
 import { EthersContext } from '../contexts/EthersContext';
 import { VotoContext } from '../contexts/VotoContext';
 
-import verify from '../assets/verify.svg';
 import key from '../assets/about-img.svg'
 
 import Voto from '../contracts/contracts/Voto.sol/Voto.json';
