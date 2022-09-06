@@ -665,11 +665,12 @@ option:disabled {
   }
 
   .homevan {
-    height: 60%;
+    height: 75%;
+    border-radius: 25px;
   }
 
   .propopt {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .ribvan {
