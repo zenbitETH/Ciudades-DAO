@@ -174,7 +174,7 @@ li {
 }
 
 body {
-  background-image: linear-gradient(to bottom, #0e4256 , #187498);
+  background-image: linear-gradient(to bottom, #187498 , #187498);
   height: 100%;
   overflow: auto;
   background-size: 200% 200%;
